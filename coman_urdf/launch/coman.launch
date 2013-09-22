@@ -1,0 +1,12 @@
+<launch>
+
+     <!-- send the coman robot XML to param server -->
+     <param name="robot_description" command="$(find xacro)/xacro.py '$(find coman_urdf)/urdf/coman_robot.urdf.xacro'" />   
+
+    <!-- start robot state publisher -->
+    <node pkg="robot_state_publisher" type="state_publisher" name="robot_state_publisher" output="screen" >
+        <remap from="joint_states" to="coman/joints_state"/>
+        <param name="publish_frequency" type="double" value="50.0" />
+    </node> 
+
+</launch>

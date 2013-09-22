@@ -1,0 +1,16 @@
+<package>
+  <description brief="coman_urdf">
+
+     coman_urdf contains the urdf description and meshes of COMAN
+
+  </description>
+  <author>Enrico Mingo</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/coman_urdf</url>
+  <depend package="roscpp"/>
+  <depend package="rospy"/>
+
+</package>
+
+

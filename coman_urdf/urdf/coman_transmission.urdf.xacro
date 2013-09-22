@@ -1,0 +1,223 @@
+<?xml version="1.0"?>
+<robot>
+<!-- TORSO TRANSMISSION -->
+<transmission name="WaistSag_simple_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="WaistSag"/>
+  <actuator name="WaistSag_motor">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>100</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="WaistLat_simple_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="WaistLat"/>
+  <actuator name="WaistLat_motor">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>100</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="WaistYaw_simple_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="WaistYaw"/>
+  <actuator name="WaistYaw_motor">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>100</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="WaistYaw_simple_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="WaistYaw"/>
+  <actuator name="WaistYaw_motor">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>100</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<!-- RIGHT LEG TRANSMISSION -->
+<transmission name="RHipSag_simple_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="RHipSag"/>
+  <actuator name="RHipSag_motor">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>100</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="RHipLat_simple_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="RHipLat"/>
+  <actuator name="RHipLat_motor">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>100</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="RHipYaw_simple_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="RHipYaw"/>
+  <actuator name="RHipYaw_motor">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>100</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="RKneeSag_simple_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="RKneeSag"/>
+  <actuator name="RKneeSag_motor">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>100</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="RAnkLat_simple_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="RAnkLat"/>
+  <actuator name="RAnkLat_motor">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>100</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="RAnkSag_simple_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="RAnkSag"/>
+  <actuator name="RAnkSag_motor">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>100</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<!-- LEFT LEG TRANSMISSION -->
+<transmission name="LHipSag_simple_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="LHipSag"/>
+  <actuator name="LHipSag_motor">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>100</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="LHipLat_simple_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="LHipLat"/>
+  <actuator name="LHipLat_motor">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>100</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="LHipYaw_simple_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="LHipYaw"/>
+  <actuator name="LHipYaw_motor">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>100</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="LKneeSag_simple_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="LKneeSag"/>
+  <actuator name="LKneeSag_motor">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>100</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="LAnkLat_simple_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="LAnkLat"/>
+  <actuator name="LAnkLat_motor">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>100</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="LAnkSag_simple_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="LAnkSag"/>
+  <actuator name="LAnkSag_motor">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>100</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<!-- RIGHT ARM TRANSMISSION -->
+<transmission name="RShSag_simple_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="RShSag"/>
+  <actuator name="RShSag_motor">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>100</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="RShLat_simple_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="RShLat"/>
+  <actuator name="RShLat_motor">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>100</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="RShYaw_simple_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="RShYaw"/>
+  <actuator name="RShYaw_motor">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>100</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="RElbj_simple_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="RElbj"/>
+  <actuator name="RElbj_motor">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>100</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<!-- LEFT ARM TRANSMISSION -->
+<transmission name="LShSag_simple_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="LShSag"/>
+  <actuator name="LShSag_motor">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>100</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="LShLat_simple_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="LShLat"/>
+  <actuator name="LShLat_motor">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>100</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="LShYaw_simple_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="LShYaw"/>
+  <actuator name="LShYaw_motor">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>100</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="LElbj_simple_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="LElbj"/>
+  <actuator name="LElbj_motor">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>100</mechanicalReduction>
+  </actuator>
+</transmission>
+</robot>

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro" name="COMAN">
+  <!--
+  ROS urdf definition of the COMAN humanoid robot by Istituto Italiano di Tecnologia
+  
+  Author: Enrico Mingo
+  
+  This file groups files to use COMAN in GAZEBO
+  
+  -->
+  <include filename="$(find coman_urdf)/urdf/coman.urdf.xacro" />
+  <include filename="$(find coman_urdf)/urdf/coman_transmission.urdf.xacro" />
+  <include filename="$(find coman_urdf)/urdf/coman.gazebo" />
+
+</robot>
+
