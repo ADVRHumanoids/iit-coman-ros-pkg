@@ -1,0 +1,19 @@
+<package>
+  <description brief="coman_msgs">
+
+     coman_msgs contains particular msgs for the COMAN:
+	ForceTorque.msg
+        JointExtraInformation.msg
+        PID.msg
+
+  </description>
+  <author>Enrico Mingo</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/coman_msgs</url>
+  <depend package="roscpp"/>
+  <depend package="rospy"/>
+
+</package>
+
+
