@@ -1,0 +1,17 @@
+<package>
+  <description brief="coman_state_publisher">
+
+     coman_state_publisher publish joints state data as position, velocity and torque and force/torque data. This data are acquired through x_ddp sockets from the COMAN.
+
+  </description>
+  <author>Enrico Mingo</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/coman_state_publisher</url>
+  <depend package="roscpp"/>
+  <depend package="rospy"/>
+  <depend package="coman_msgs"/>
+
+</package>
+
+
