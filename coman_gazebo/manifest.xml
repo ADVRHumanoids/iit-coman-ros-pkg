@@ -1,0 +1,20 @@
+<package>
+  <description brief="coman_gazebo">
+
+     coman_gazebo contains files needed to simulate COMAN in Gazebo.
+
+  </description>
+  <author>Enrico Mingo</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/coman_gazebo</url>
+  <depend package="rospy"/>
+  <depend package="roscpp"/>
+  <depend package="coman_urdf"/>
+  <depend package="xacro"/>
+  <depend package="gazebo_ros_control"/>
+  
+
+</package>
+
+

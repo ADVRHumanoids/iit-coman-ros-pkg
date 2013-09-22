@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<model>
+  <name>IIT COMAN</name>
+  <version>1.0</version>
+  <sdf version='1.4'>coman.sdf</sdf>
+
+  <author>
+   <name>Enrico Mingo</name>
+   <email>enrico.mingo@iit.it</email>
+  </author>
+
+  <description>
+    Simulation of the COMAN Humanoid Robot from IIT.
+  </description>
+</model>
