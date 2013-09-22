@@ -1,0 +1,39 @@
+<launch>
+
+  <!-- Load joint controller configurations from YAML file to parameter server -->
+  <rosparam file="$(find coman_control)/config/coman_control.yaml" command="load"/>
+
+  <!-- load the controllers -->
+  <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
+    output="screen" ns="/COMAN" args="WaistSag_position_controller 
+WaistLat_position_controller 
+WaistYaw_position_controller 
+RHipSag_position_controller 
+RHipLat_position_controller 
+RHipYaw_position_controller 
+RKneeSag_position_controller 
+RAnkLat_position_controller 
+RAnkSag_position_controller 
+LHipSag_position_controller 
+LHipLat_position_controller 
+LHipYaw_position_controller 
+LKneeSag_position_controller 
+LAnkLat_position_controller 
+LAnkSag_position_controller 
+RShSag_position_controller 
+RShLat_position_controller 
+RShYaw_position_controller 
+RElbj_position_controller 
+LShSag_position_controller 
+LShLat_position_controller 
+LShYaw_position_controller 
+LElbj_position_controller
+joint_state_controller"/>
+
+  <!-- convert joint states to TF transforms for rviz, etc -->
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"
+    respawn="false" output="screen">
+    <remap from="/joint_states" to="/COMAN/joint_states" />
+  </node>
+
+</launch>
