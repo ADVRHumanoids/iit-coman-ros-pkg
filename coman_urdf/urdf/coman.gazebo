@@ -30,4 +30,78 @@
      <cfmDamping>1</cfmDamping>
    </gazebo>
 
+   <gazebo reference="WaistSag">
+    <cfmDamping>1</cfmDamping>
+   </gazebo>
+   <gazebo reference="WaistLat">
+    <cfmDamping>1</cfmDamping>
+   </gazebo>
+   <gazebo reference="WaistYaw">
+    <cfmDamping>1</cfmDamping>
+   </gazebo>
+
+   <gazebo reference="RHipSag">
+    <cfmDamping>1</cfmDamping>
+   </gazebo>
+   <gazebo reference="RHipLat">
+    <cfmDamping>1</cfmDamping>
+   </gazebo>
+   <gazebo reference="RHipYaw">
+    <cfmDamping>1</cfmDamping>
+   </gazebo>
+   <gazebo reference="RKneeSag">
+    <cfmDamping>1</cfmDamping>
+   </gazebo>
+   <gazebo reference="RAnkLat">
+    <cfmDamping>1</cfmDamping>
+   </gazebo>
+   <gazebo reference="RAnkSag">
+    <cfmDamping>1</cfmDamping>
+   </gazebo>
+
+   <gazebo reference="LHipSag">
+    <cfmDamping>1</cfmDamping>
+   </gazebo>
+   <gazebo reference="LHipLat">
+    <cfmDamping>1</cfmDamping>
+   </gazebo>
+   <gazebo reference="LHipYaw">
+    <cfmDamping>1</cfmDamping>
+   </gazebo>
+   <gazebo reference="LKneeSag">
+    <cfmDamping>1</cfmDamping>
+   </gazebo>
+   <gazebo reference="LAnkLat">
+    <cfmDamping>1</cfmDamping>
+   </gazebo>
+   <gazebo reference="LAnkSag">
+    <cfmDamping>1</cfmDamping>
+   </gazebo>
+
+   <gazebo reference="RShSag">
+    <cfmDamping>1</cfmDamping>
+   </gazebo>
+   <gazebo reference="RShLat">
+    <cfmDamping>1</cfmDamping>
+   </gazebo>
+   <gazebo reference="RShYaw">
+    <cfmDamping>1</cfmDamping>
+   </gazebo>
+   <gazebo reference="RElbj">
+    <cfmDamping>1</cfmDamping>
+   </gazebo>
+
+   <gazebo reference="LShSag">
+    <cfmDamping>1</cfmDamping>
+   </gazebo>
+   <gazebo reference="LShLat">
+    <cfmDamping>1</cfmDamping>
+   </gazebo>
+   <gazebo reference="LShYaw">
+    <cfmDamping>1</cfmDamping>
+   </gazebo>
+   <gazebo reference="LElbj">
+    <cfmDamping>1</cfmDamping>
+   </gazebo>
+
 </robot>
