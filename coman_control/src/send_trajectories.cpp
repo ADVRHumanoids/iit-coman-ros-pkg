@@ -86,7 +86,7 @@ void copy_trj_to_joints(const string& line, vector<std_msgs::Float64>& desired_j
 
 int main(int argc, char **argv)
 {
-    ROS_INFO("SEND TRAJECTORIES NODE");
+    ROS_INFO("NODE TO SEND TRAJECTORIES...START!");
 
     //**** INITIALIZATION OF ROS, MSGS AND PUBLISHERS ****
     ros::init(argc, argv, "send_trajectories");
@@ -121,7 +121,7 @@ int main(int argc, char **argv)
         getline(trj_file,line);
         lines.push_back(line);
     }
-    ROS_INFO("Trajectory has %i lines!", lines.size());
+    ROS_INFO("Trajectory has %i lines!", lines.size()-2);
 
     ros::Rate loop_rate(freq);
     while(ros::ok())
