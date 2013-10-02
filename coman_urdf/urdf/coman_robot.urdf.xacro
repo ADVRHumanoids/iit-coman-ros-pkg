@@ -10,6 +10,7 @@
   -->
   <include filename="$(find coman_urdf)/urdf/coman.urdf.xacro" />
 
+<!-- IMU, needs to be checked effective position and orientation. For now it maches the same poisition/orientation of Waist link -->
   <link name="imu_link">
     <inertial>
       <mass value="0.01"/>

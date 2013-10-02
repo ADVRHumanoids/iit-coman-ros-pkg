@@ -2,17 +2,27 @@
 
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
-    <gazebo>
-      <plugin name="imu_controller" filename="libgazebo_ros_imu.so">
-        <alwaysOn>true</alwaysOn>
-        <updateRate>100.0</updateRate>
-        <bodyName>imu_link</bodyName>
-        <topicName>COMAN/imu</topicName>
-        <gaussianNoise>2.8900000000000004E-08</gaussianNoise>
-        <xyzOffset>0 0 0</xyzOffset> 
-        <rpyOffset>0 0 0</rpyOffset>
-        <serviceName>/default_imu</serviceName>
-      </plugin>
-    </gazebo>
-
+<!--
+  ROS urdf definition of the COMAN humanoid robot by Istituto Italiano di Tecnologia
+  
+  Author: Alessio Rocchi
+  
+  This file groups files to use COMAN in GAZEBO
+  
+  -->
+  <gazebo>
+    <plugin name="quadrotor_imu_sim" filename="libhector_gazebo_ros_imu.so">
+      <updateRate>100.0</updateRate>
+      <bodyName>imu_link</bodyName>
+      <topicName>COMAN/raw_imu</topicName>
+      <rpyOffsets>0 0 0</rpyOffsets> <!-- deprecated -->
+      <gaussianNoise>0</gaussianNoise>  <!-- deprecated -->
+      <accelDrift>0.5 0.5 0.5</accelDrift>
+      <accelGaussianNoise>0.35 0.35 0.3</accelGaussianNoise>
+      <rateDrift>0.1 0.1 0.1</rateDrift>
+      <rateGaussianNoise>0.05 0.05 0.015</rateGaussianNoise>
+      <headingDrift>0.1</headingDrift>
+      <headingGaussianNoise>0.05</headingGaussianNoise>
+    </plugin>
+  </gazebo>
 </robot>
