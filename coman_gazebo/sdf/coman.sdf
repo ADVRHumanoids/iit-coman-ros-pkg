@@ -3,15 +3,15 @@
     <link name='base_link'>
       <pose>0 0 0 0 -0 0</pose>
       <inertial>
-        <pose>-0.0263911 -0.000582164 0.0526323 0 -0 0</pose>
-        <mass>1.80087</mass>
+        <pose>-0.0262454 -0.000578949 0.0523417 0 -0 0</pose>
+        <mass>1.81087</mass>
         <inertia>
-          <ixx>0.0051033</ixx>
-          <ixy>-5.7171e-05</ixy>
-          <ixz>0.00169205</ixz>
-          <iyy>0.00624164</iyy>
-          <iyz>1.72259e-05</iyz>
-          <izz>0.00245178</izz>
+          <ixx>0.00513185</ixx>
+          <ixy>-5.73238e-05</ixy>
+          <ixz>0.00170587</ixz>
+          <iyy>0.00627711</iyy>
+          <iyz>1.75307e-05</iyz>
+          <izz>0.00245971</izz>
         </inertia>
       </inertial>
       <collision name='base_link_collision_Waist'>
@@ -30,6 +30,14 @@
             <scale>0.03937 0.03937 0.03937</scale>
             <uri>model://coman_urdf/meshes/collada/asm0001_collada_07_prt.dae</uri>
           </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_link_visual_imu_link'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.01 0.01 0.01</size>
+          </box>
         </geometry>
       </visual>
       <velocity_decay>
@@ -82,11 +90,20 @@
         <limit>
           <lower>-1.9199</lower>
           <upper>0.7854</upper>
-          <effort>30</effort>
-          <velocity>3</velocity>
+          <effort>50</effort>
+          <velocity>4</velocity>
         </limit>
         <dynamics/>
       </axis>
+      <physics>
+        <ode>
+          <cfm_damping>1</cfm_damping>
+          <limit>
+            <cfm>0</cfm>
+            <erp>0.2</erp>
+          </limit>
+        </ode>
+      </physics>
     </joint>
     <link name='LThighUpLeg'>
       <pose>0 0.0726 0 0 -0 0</pose>
@@ -133,11 +150,20 @@
         <limit>
           <lower>-0.4363</lower>
           <upper>1.0472</upper>
-          <effort>30</effort>
-          <velocity>3</velocity>
+          <effort>50</effort>
+          <velocity>4</velocity>
         </limit>
         <dynamics/>
       </axis>
+      <physics>
+        <ode>
+          <cfm_damping>1</cfm_damping>
+          <limit>
+            <cfm>0</cfm>
+            <erp>0.2</erp>
+          </limit>
+        </ode>
+      </physics>
     </joint>
     <link name='LThighLowLeg'>
       <pose>0 0.0726 -0.1024 0 -0 0</pose>
@@ -184,11 +210,20 @@
         <limit>
           <lower>-0.8727</lower>
           <upper>0.8727</upper>
-          <effort>30</effort>
-          <velocity>3</velocity>
+          <effort>50</effort>
+          <velocity>4</velocity>
         </limit>
         <dynamics/>
       </axis>
+      <physics>
+        <ode>
+          <cfm_damping>1</cfm_damping>
+          <limit>
+            <cfm>0</cfm>
+            <erp>0.2</erp>
+          </limit>
+        </ode>
+      </physics>
     </joint>
     <link name='LLowLeg'>
       <pose>0 0.0726 -0.2258 0 -0 0</pose>
@@ -235,11 +270,20 @@
         <limit>
           <lower>-0.1745</lower>
           <upper>1.9199</upper>
-          <effort>30</effort>
-          <velocity>3</velocity>
+          <effort>50</effort>
+          <velocity>4</velocity>
         </limit>
         <dynamics/>
       </axis>
+      <physics>
+        <ode>
+          <cfm_damping>1</cfm_damping>
+          <limit>
+            <cfm>0</cfm>
+            <erp>0.2</erp>
+          </limit>
+        </ode>
+      </physics>
     </joint>
     <link name='LFootmot'>
       <pose>0 0.0726 -0.4268 0 -0 0</pose>
@@ -286,11 +330,20 @@
         <limit>
           <lower>-0.6109</lower>
           <upper>0.6109</upper>
-          <effort>30</effort>
-          <velocity>3</velocity>
+          <effort>50</effort>
+          <velocity>4</velocity>
         </limit>
         <dynamics/>
       </axis>
+      <physics>
+        <ode>
+          <cfm_damping>1</cfm_damping>
+          <limit>
+            <cfm>0</cfm>
+            <erp>0.2</erp>
+          </limit>
+        </ode>
+      </physics>
     </joint>
     <link name='LFoot'>
       <pose>0 0.0726 -0.4268 0 -0 0</pose>
@@ -314,6 +367,23 @@
             <uri>model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_01_prt.dae</uri>
           </mesh>
         </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <kp>1e+06</kp>
+              <kd>100</kd>
+              <max_vel>1</max_vel>
+              <min_depth>0</min_depth>
+            </ode>
+          </contact>
+          <friction>
+            <ode>
+              <mu>1</mu>
+              <mu2>1</mu2>
+              <fdir1>1 0 0</fdir1>
+            </ode>
+          </friction>
+        </surface>
       </collision>
       <visual name='LFoot_visual'>
         <pose>0 -0.0726 -0.0932 0 -0 3.14159</pose>
@@ -324,10 +394,12 @@
           </mesh>
         </geometry>
       </visual>
+      <gravity>1</gravity>
       <velocity_decay>
         <linear>0</linear>
         <angular>0</angular>
       </velocity_decay>
+      <self_collide>0</self_collide>
     </link>
     <joint name='LAnkSag' type='revolute'>
       <child>LFoot</child>
@@ -337,11 +409,20 @@
         <limit>
           <lower>-1.2217</lower>
           <upper>1.2217</upper>
-          <effort>30</effort>
-          <velocity>3</velocity>
+          <effort>50</effort>
+          <velocity>4</velocity>
         </limit>
         <dynamics/>
       </axis>
+      <physics>
+        <ode>
+          <cfm_damping>1</cfm_damping>
+          <limit>
+            <cfm>0</cfm>
+            <erp>0.2</erp>
+          </limit>
+        </ode>
+      </physics>
     </joint>
     <link name='RHipMot'>
       <pose>0 -0.023 0 0 -0 0</pose>
@@ -388,11 +469,20 @@
         <limit>
           <lower>-1.9199</lower>
           <upper>0.7854</upper>
-          <effort>30</effort>
-          <velocity>3</velocity>
+          <effort>50</effort>
+          <velocity>4</velocity>
         </limit>
         <dynamics/>
       </axis>
+      <physics>
+        <ode>
+          <cfm_damping>1</cfm_damping>
+          <limit>
+            <cfm>0</cfm>
+            <erp>0.2</erp>
+          </limit>
+        </ode>
+      </physics>
     </joint>
     <link name='RThighUpLeg'>
       <pose>0 -0.0726 0 0 -0 0</pose>
@@ -439,11 +529,20 @@
         <limit>
           <lower>-1.0472</lower>
           <upper>0.4363</upper>
-          <effort>30</effort>
-          <velocity>3</velocity>
+          <effort>50</effort>
+          <velocity>4</velocity>
         </limit>
         <dynamics/>
       </axis>
+      <physics>
+        <ode>
+          <cfm_damping>1</cfm_damping>
+          <limit>
+            <cfm>0</cfm>
+            <erp>0.2</erp>
+          </limit>
+        </ode>
+      </physics>
     </joint>
     <link name='RThighLowLeg'>
       <pose>0 -0.0726 -0.1024 0 -0 0</pose>
@@ -490,11 +589,20 @@
         <limit>
           <lower>-0.8727</lower>
           <upper>0.8727</upper>
-          <effort>30</effort>
-          <velocity>3</velocity>
+          <effort>50</effort>
+          <velocity>4</velocity>
         </limit>
         <dynamics/>
       </axis>
+      <physics>
+        <ode>
+          <cfm_damping>1</cfm_damping>
+          <limit>
+            <cfm>0</cfm>
+            <erp>0.2</erp>
+          </limit>
+        </ode>
+      </physics>
     </joint>
     <link name='RLowLeg'>
       <pose>0 -0.0726 -0.2258 0 -0 0</pose>
@@ -541,11 +649,20 @@
         <limit>
           <lower>-0.1745</lower>
           <upper>1.9199</upper>
-          <effort>30</effort>
-          <velocity>3</velocity>
+          <effort>50</effort>
+          <velocity>4</velocity>
         </limit>
         <dynamics/>
       </axis>
+      <physics>
+        <ode>
+          <cfm_damping>1</cfm_damping>
+          <limit>
+            <cfm>0</cfm>
+            <erp>0.2</erp>
+          </limit>
+        </ode>
+      </physics>
     </joint>
     <link name='RFootmot'>
       <pose>0 -0.0726 -0.4268 0 -0 0</pose>
@@ -592,11 +709,20 @@
         <limit>
           <lower>-0.6109</lower>
           <upper>0.6109</upper>
-          <effort>30</effort>
-          <velocity>3</velocity>
+          <effort>50</effort>
+          <velocity>4</velocity>
         </limit>
         <dynamics/>
       </axis>
+      <physics>
+        <ode>
+          <cfm_damping>1</cfm_damping>
+          <limit>
+            <cfm>0</cfm>
+            <erp>0.2</erp>
+          </limit>
+        </ode>
+      </physics>
     </joint>
     <link name='RFoot'>
       <pose>0 -0.0726 -0.4268 0 -0 0</pose>
@@ -620,6 +746,23 @@
             <uri>model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_15_prt.dae</uri>
           </mesh>
         </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <kp>1e+06</kp>
+              <kd>100</kd>
+              <max_vel>1</max_vel>
+              <min_depth>0</min_depth>
+            </ode>
+          </contact>
+          <friction>
+            <ode>
+              <mu>1</mu>
+              <mu2>1</mu2>
+              <fdir1>1 0 0</fdir1>
+            </ode>
+          </friction>
+        </surface>
       </collision>
       <visual name='RFoot_visual'>
         <pose>0 0.0726 -0.0932 0 -0 3.14159</pose>
@@ -630,10 +773,12 @@
           </mesh>
         </geometry>
       </visual>
+      <gravity>1</gravity>
       <velocity_decay>
         <linear>0</linear>
         <angular>0</angular>
       </velocity_decay>
+      <self_collide>0</self_collide>
     </link>
     <joint name='RAnkSag' type='revolute'>
       <child>RFoot</child>
@@ -643,11 +788,20 @@
         <limit>
           <lower>-1.2217</lower>
           <upper>1.2217</upper>
-          <effort>30</effort>
-          <velocity>3</velocity>
+          <effort>50</effort>
+          <velocity>4</velocity>
         </limit>
         <dynamics/>
       </axis>
+      <physics>
+        <ode>
+          <cfm_damping>1</cfm_damping>
+          <limit>
+            <cfm>0</cfm>
+            <erp>0.2</erp>
+          </limit>
+        </ode>
+      </physics>
     </joint>
     <link name='DWS'>
       <pose>0.0202815 0 0.119121 0 -0 0</pose>
@@ -694,11 +848,20 @@
         <limit>
           <lower>-0.5236</lower>
           <upper>0.5235</upper>
-          <effort>30</effort>
-          <velocity>3</velocity>
+          <effort>50</effort>
+          <velocity>4</velocity>
         </limit>
         <dynamics/>
       </axis>
+      <physics>
+        <ode>
+          <cfm_damping>1</cfm_damping>
+          <limit>
+            <cfm>0</cfm>
+            <erp>0.2</erp>
+          </limit>
+        </ode>
+      </physics>
     </joint>
     <link name='DWL'>
       <pose>0.0202815 0 0.119121 0 -0 0</pose>
@@ -745,11 +908,20 @@
         <limit>
           <lower>-0.3491</lower>
           <upper>0.8727</upper>
-          <effort>30</effort>
-          <velocity>3</velocity>
+          <effort>50</effort>
+          <velocity>4</velocity>
         </limit>
         <dynamics/>
       </axis>
+      <physics>
+        <ode>
+          <cfm_damping>1</cfm_damping>
+          <limit>
+            <cfm>0</cfm>
+            <erp>0.2</erp>
+          </limit>
+        </ode>
+      </physics>
     </joint>
     <link name='DWYTorso'>
       <pose>0.0202815 0 0.166621 0 -0 0</pose>
@@ -796,11 +968,20 @@
         <limit>
           <lower>-1.3963</lower>
           <upper>1.3962</upper>
-          <effort>30</effort>
-          <velocity>3</velocity>
+          <effort>50</effort>
+          <velocity>4</velocity>
         </limit>
         <dynamics/>
       </axis>
+      <physics>
+        <ode>
+          <cfm_damping>1</cfm_damping>
+          <limit>
+            <cfm>0</cfm>
+            <erp>0.2</erp>
+          </limit>
+        </ode>
+      </physics>
     </joint>
     <link name='LShp'>
       <pose>0.005305 0.0825 0.324329 0 -0 0</pose>
@@ -847,11 +1028,20 @@
         <limit>
           <lower>-3.4034</lower>
           <upper>1.6581</upper>
-          <effort>30</effort>
-          <velocity>3</velocity>
+          <effort>50</effort>
+          <velocity>4</velocity>
         </limit>
         <dynamics/>
       </axis>
+      <physics>
+        <ode>
+          <cfm_damping>1</cfm_damping>
+          <limit>
+            <cfm>0</cfm>
+            <erp>0.2</erp>
+          </limit>
+        </ode>
+      </physics>
     </joint>
     <link name='LShr'>
       <pose>0.005305 0.1558 0.324329 0 -0 0</pose>
@@ -898,11 +1088,20 @@
         <limit>
           <lower>-0.31415</lower>
           <upper>2.094</upper>
-          <effort>30</effort>
-          <velocity>3</velocity>
+          <effort>50</effort>
+          <velocity>4</velocity>
         </limit>
         <dynamics/>
       </axis>
+      <physics>
+        <ode>
+          <cfm_damping>1</cfm_damping>
+          <limit>
+            <cfm>0</cfm>
+            <erp>0.2</erp>
+          </limit>
+        </ode>
+      </physics>
     </joint>
     <link name='LShy'>
       <pose>0.005305 0.1558 0.279521 0 -0 0</pose>
@@ -949,11 +1148,20 @@
         <limit>
           <lower>-1.5708</lower>
           <upper>1.5708</upper>
-          <effort>30</effort>
-          <velocity>3</velocity>
+          <effort>50</effort>
+          <velocity>4</velocity>
         </limit>
         <dynamics/>
       </axis>
+      <physics>
+        <ode>
+          <cfm_damping>1</cfm_damping>
+          <limit>
+            <cfm>0</cfm>
+            <erp>0.2</erp>
+          </limit>
+        </ode>
+      </physics>
     </joint>
     <link name='LElb'>
       <pose>0.005305 0.1558 0.144329 0 -0 0</pose>
@@ -1000,11 +1208,20 @@
         <limit>
           <lower>-2.3562</lower>
           <upper>0</upper>
-          <effort>30</effort>
-          <velocity>3</velocity>
+          <effort>50</effort>
+          <velocity>4</velocity>
         </limit>
         <dynamics/>
       </axis>
+      <physics>
+        <ode>
+          <cfm_damping>1</cfm_damping>
+          <limit>
+            <cfm>0</cfm>
+            <erp>0.2</erp>
+          </limit>
+        </ode>
+      </physics>
     </joint>
     <link name='RShp'>
       <pose>0.005305 -0.0825 0.324329 0 -0 0</pose>
@@ -1051,11 +1268,20 @@
         <limit>
           <lower>-3.4034</lower>
           <upper>1.6581</upper>
-          <effort>30</effort>
-          <velocity>3</velocity>
+          <effort>50</effort>
+          <velocity>4</velocity>
         </limit>
         <dynamics/>
       </axis>
+      <physics>
+        <ode>
+          <cfm_damping>1</cfm_damping>
+          <limit>
+            <cfm>0</cfm>
+            <erp>0.2</erp>
+          </limit>
+        </ode>
+      </physics>
     </joint>
     <link name='RShr'>
       <pose>0.005305 -0.1558 0.324329 0 -0 0</pose>
@@ -1102,11 +1328,20 @@
         <limit>
           <lower>-2.094</lower>
           <upper>0.31415</upper>
-          <effort>30</effort>
-          <velocity>3</velocity>
+          <effort>50</effort>
+          <velocity>4</velocity>
         </limit>
         <dynamics/>
       </axis>
+      <physics>
+        <ode>
+          <cfm_damping>1</cfm_damping>
+          <limit>
+            <cfm>0</cfm>
+            <erp>0.2</erp>
+          </limit>
+        </ode>
+      </physics>
     </joint>
     <link name='RShy'>
       <pose>0.005305 -0.1558 0.279521 0 -0 0</pose>
@@ -1153,11 +1388,20 @@
         <limit>
           <lower>-1.5708</lower>
           <upper>1.5708</upper>
-          <effort>30</effort>
-          <velocity>3</velocity>
+          <effort>50</effort>
+          <velocity>4</velocity>
         </limit>
         <dynamics/>
       </axis>
+      <physics>
+        <ode>
+          <cfm_damping>1</cfm_damping>
+          <limit>
+            <cfm>0</cfm>
+            <erp>0.2</erp>
+          </limit>
+        </ode>
+      </physics>
     </joint>
     <link name='RElb'>
       <pose>0.005305 -0.1558 0.144329 0 -0 0</pose>
@@ -1204,16 +1448,34 @@
         <limit>
           <lower>-2.3562</lower>
           <upper>0</upper>
-          <effort>30</effort>
-          <velocity>3</velocity>
+          <effort>50</effort>
+          <velocity>4</velocity>
         </limit>
         <dynamics/>
       </axis>
+      <physics>
+        <ode>
+          <cfm_damping>1</cfm_damping>
+          <limit>
+            <cfm>0</cfm>
+            <erp>0.2</erp>
+          </limit>
+        </ode>
+      </physics>
     </joint>
+    <plugin name='imu_controller' filename='libgazebo_ros_imu.so'>
+      <alwaysOn>true</alwaysOn>
+      <updateRate>100.0</updateRate>
+      <topicName>COMAN/imu</topicName>
+      <gaussianNoise>2.8900000000000004E-08</gaussianNoise>
+      <serviceName>/default_imu</serviceName>
+      <bodyName>base_link</bodyName>
+      <xyzOffset>0 0 0</xyzOffset>
+      <rpyOffset>0 -0 0</rpyOffset>
+    </plugin>
+    <static>0</static>
     <plugin name='gazebo_ros_control' filename='libgazebo_ros_control.so'>
       <robotNamespace>/COMAN</robotNamespace>
     </plugin>
-    <static>0</static>
-    <pose>0 0 0.525 0 -0 0</pose>
   </model>
 </sdf>
