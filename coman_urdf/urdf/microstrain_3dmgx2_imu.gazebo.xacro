@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+    <gazebo>
+      <plugin name="imu_controller" filename="libgazebo_ros_imu.so">
+        <alwaysOn>true</alwaysOn>
+        <updateRate>100.0</updateRate>
+        <bodyName>imu_link</bodyName>
+        <topicName>COMAN/imu</topicName>
+        <gaussianNoise>2.8900000000000004E-08</gaussianNoise>
+        <xyzOffset>0 0 0</xyzOffset> 
+        <rpyOffset>0 0 0</rpyOffset>
+        <serviceName>/default_imu</serviceName>
+      </plugin>
+    </gazebo>
+
+</robot>

@@ -30,6 +30,7 @@
      <cfmDamping>1</cfmDamping>
    </gazebo>
 
+<!-- Other parameters... -->
    <gazebo reference="WaistSag">
     <cfmDamping>1</cfmDamping>
    </gazebo>
@@ -103,5 +104,7 @@
    <gazebo reference="LElbj">
     <cfmDamping>1</cfmDamping>
    </gazebo>
+
+   
 
 </robot>

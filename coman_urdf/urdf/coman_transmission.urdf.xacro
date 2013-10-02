@@ -28,15 +28,6 @@
   </actuator>
 </transmission>
 
-<transmission name="WaistYaw_simple_trans">
-  <type>transmission_interface/SimpleTransmission</type>
-  <joint name="WaistYaw"/>
-  <actuator name="WaistYaw_motor">
-    <hardwareInterface>EffortJointInterface</hardwareInterface>
-    <mechanicalReduction>100</mechanicalReduction>
-  </actuator>
-</transmission>
-
 <!-- RIGHT LEG TRANSMISSION -->
 <transmission name="RHipSag_simple_trans">
   <type>transmission_interface/SimpleTransmission</type>
