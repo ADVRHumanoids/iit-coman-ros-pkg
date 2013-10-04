@@ -6,7 +6,15 @@ Repository for the compliant humanoid robot COMAN from the Italian Institute of 
 Package list:
 =================
 
-coman_urdf: contains the urdf.xacro description of COMAN as well as files that are needed in the simulation in GAZEBO. Every time one of these files are changed you have to use the script inside the script/ folder to copy that file in coman_gazebo/sdf and in your /home/user/.gazebo/models folders. The actual version of COMAN does not have springs and sensors.
+coman_urdf: contains the urdf.xacro description of COMAN as well as files that are needed in the simulation in GAZEBO. Every time one of these files are changed you have to use the script inside the script/ folder to copy that file in coman_gazebo/sdf and in your /home/user/.gazebo/models folders. 
+The script has to be called in script/ folder:
+./create_urdf_and_sdf.sh
+if called without any argument the coman_robot.urdf.xacro description will be parsed and copied. If the ROS independent version has to be parsed and copied then run:
+./create_urdf_and_sdf.sh coman_robot_plain.urdf.xacro
+TO DO: make this more general! 
+
+
+The actual version of COMAN does not have springs and sensors.
 
 coman_gazebo: contains files needed for the simulation as well as a launch file to start the simulation. 
 To start a simulation:
