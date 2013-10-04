@@ -17,6 +17,7 @@
      <maxVel>1.0</maxVel>
      <minDepth>0.00</minDepth>
      <cfmDamping>1</cfmDamping>
+     <provideFeedback>true</provideFeedback>
    </gazebo>
 
    <gazebo reference="RFoot">
@@ -28,6 +29,7 @@
      <maxVel>1.0</maxVel>
      <minDepth>0.00</minDepth>
      <cfmDamping>1</cfmDamping>
+     <provideFeedback>true</provideFeedback>
    </gazebo>
 
 <!-- Other parameters... -->
@@ -58,6 +60,7 @@
    </gazebo>
    <gazebo reference="RAnkSag">
     <cfmDamping>1</cfmDamping>
+    <provideFeedback>true</provideFeedback>
    </gazebo>
 
    <gazebo reference="LHipSag">
@@ -77,6 +80,7 @@
    </gazebo>
    <gazebo reference="LAnkSag">
     <cfmDamping>1</cfmDamping>
+    <provideFeedback>true</provideFeedback>
    </gazebo>
 
    <gazebo reference="RShSag">
@@ -90,6 +94,7 @@
    </gazebo>
    <gazebo reference="RElbj">
     <cfmDamping>1</cfmDamping>
+    <provideFeedback>true</provideFeedback><provideFeedback>true</provideFeedback>
    </gazebo>
 
    <gazebo reference="LShSag">
@@ -103,8 +108,6 @@
    </gazebo>
    <gazebo reference="LElbj">
     <cfmDamping>1</cfmDamping>
+    <provideFeedback>true</provideFeedback>
    </gazebo>
-
-   
-
 </robot>
