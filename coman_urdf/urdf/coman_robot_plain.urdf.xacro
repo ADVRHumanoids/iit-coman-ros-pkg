@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro" name="COMAN">
+  <!--
+  ROS urdf definition of the COMAN humanoid robot by Istituto Italiano di Tecnologia
+  
+  Author: Enrico Mingo
+  
+  This file groups files to use COMAN in GAZEBO
+  
+  -->
+  <include filename="$(find coman_urdf)/urdf/coman.urdf.xacro" />
+
+<!-- IMU, needs to be checked effective position and orientation. For now it maches the same poisition/orientation of Waist link -->
+<!--
+  <link name="imu_link">
+    <inertial>
+      <mass value="0.01"/>
+      <origin xyz="0 0 0"/>
+      <inertia ixx="1.0E-6" ixy="0" ixz="0" iyy="1.0E-6" iyz="0" izz="1.0E-6"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <box size="0.01 0.01 0.01"/>
+      </geometry>
+    </visual>
+  </link>
+
+  <joint name="imu_joint" type="fixed">
+    <parent link="Waist"/>
+    <child link="imu_link"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+  </joint>
+-->
+
+  <!-- Is this needed in the plain coman version??? --> 
+  <!-- include filename="$(find coman_urdf)/urdf/coman_transmission.urdf.xacro" / --> 
+
+  <include filename="$(find coman_urdf)/urdf/coman_plain.gazebo" />
+
+  <origin xyz="0.0 0.0 0.521" rpy="0 0 0" />
+</robot>
+

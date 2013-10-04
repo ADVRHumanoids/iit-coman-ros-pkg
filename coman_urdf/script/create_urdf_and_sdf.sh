@@ -1,9 +1,17 @@
 #!/bin/bash
+
+if [ $# -eq 0 ]
+  then
+    ROBOT="coman_robot.urdf.xacro"
+else
+    ROBOT=$1
+fi
+
   
 cd ../urdf
 
 echo "Creating urdf of coman_robot.urdf.xacro and coman.urdf.xacro..."
-rosrun xacro xacro.py coman_robot.urdf.xacro > coman_robot.urdf
+rosrun xacro xacro.py $ROBOT > coman_robot.urdf
 
 rosrun xacro xacro.py coman.urdf.xacro > coman.urdf
 echo "...urdf correctly created!"
