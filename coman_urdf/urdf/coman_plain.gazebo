@@ -57,6 +57,9 @@
 	<always_on>true</always_on>
 	<visualize>true</visualize>
 	<update_rate>1000</update_rate>
+        <plugin name="gazebo_RAnkSag_FT" filename="libFakebotForceTorquePlugin.so">
+	  <boardId>1</boardId>
+        </plugin>
     </sensor>
    </gazebo>
 
@@ -82,6 +85,9 @@
 	<always_on>true</always_on>
 	<visualize>true</visualize>
 	<update_rate>1000</update_rate>
+        <plugin name="gazebo_LAnkSag_FT" filename="libFakebotForceTorquePlugin.so">
+ 	  <boardId>2</boardId>
+        </plugin>
     </sensor>
    </gazebo>
 
@@ -101,6 +107,9 @@
 	<always_on>true</always_on>
 	<visualize>true</visualize>
 	<update_rate>1000</update_rate>
+        <plugin name="gazebo_RAnkSag_FT" filename="libFakebotForceTorquePlugin.so">
+	  <boardId>3</boardId>
+        </plugin>
     </sensor>
    </gazebo>
 
@@ -120,6 +129,9 @@
 	<always_on>true</always_on>
 	<visualize>true</visualize>
 	<update_rate>1000</update_rate>
+        <plugin name="gazebo_RAnkSag_FT" filename="libFakebotForceTorquePlugin.so">
+	  <boardId>4</boardId>
+        </plugin>
     </sensor>
    </gazebo>
 </robot>
