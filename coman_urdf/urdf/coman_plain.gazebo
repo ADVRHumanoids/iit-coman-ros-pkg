@@ -53,7 +53,7 @@
    <gazebo reference="RAnkSag">
     <cfmDamping>1</cfmDamping>
     <provideFeedback>true</provideFeedback>
-    <sensor type="force_torque" name="RElbj_FT">
+    <sensor type="force_torque" name="RAnkSag_FT">
 	<always_on>true</always_on>
 	<visualize>true</visualize>
 	<update_rate>1000</update_rate>
@@ -78,7 +78,7 @@
    <gazebo reference="LAnkSag">
     <cfmDamping>1</cfmDamping>
     <provideFeedback>true</provideFeedback>
-    <sensor type="force_torque" name="RElbj_FT">
+    <sensor type="force_torque" name="LAnkSag_FT">
 	<always_on>true</always_on>
 	<visualize>true</visualize>
 	<update_rate>1000</update_rate>
