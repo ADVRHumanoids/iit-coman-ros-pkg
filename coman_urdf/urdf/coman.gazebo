@@ -17,7 +17,6 @@
      <maxVel>1.0</maxVel>
      <minDepth>0.00</minDepth>
      <cfmDamping>1</cfmDamping>
-     <provideFeedback>true</provideFeedback>
    </gazebo>
 
    <gazebo reference="RFoot">
@@ -29,7 +28,6 @@
      <maxVel>1.0</maxVel>
      <minDepth>0.00</minDepth>
      <cfmDamping>1</cfmDamping>
-     <provideFeedback>true</provideFeedback>
    </gazebo>
 
 <!-- Other parameters... -->
@@ -60,7 +58,12 @@
    </gazebo>
    <gazebo reference="RAnkSag">
     <cfmDamping>1</cfmDamping>
-    <provideFeedback>true</provideFeedback>
+    <provideFeeback>true</provideFeedback>
+    <sensor type="force_torque" name="RElbj_FT">
+	<always_on>true</always_on>
+	<visualize>true</visualize>
+	<update_rate>1000</update_rate>
+    </sensor>
    </gazebo>
 
    <gazebo reference="LHipSag">
@@ -81,6 +84,11 @@
    <gazebo reference="LAnkSag">
     <cfmDamping>1</cfmDamping>
     <provideFeedback>true</provideFeedback>
+    <sensor type="force_torque" name="RElbj_FT">
+	<always_on>true</always_on>
+	<visualize>true</visualize>
+	<update_rate>1000</update_rate>
+    </sensor>
    </gazebo>
 
    <gazebo reference="RShSag">
@@ -94,7 +102,12 @@
    </gazebo>
    <gazebo reference="RElbj">
     <cfmDamping>1</cfmDamping>
-    <provideFeedback>true</provideFeedback><provideFeedback>true</provideFeedback>
+    <provideFeedback>true</provideFeedback>
+    <sensor type="force_torque" name="RElbj_FT">
+	<always_on>true</always_on>
+	<visualize>true</visualize>
+	<update_rate>1000</update_rate>
+    </sensor>
    </gazebo>
 
    <gazebo reference="LShSag">
@@ -109,5 +122,11 @@
    <gazebo reference="LElbj">
     <cfmDamping>1</cfmDamping>
     <provideFeedback>true</provideFeedback>
+    <sensor type="force_torque" name="LElbj_FT">
+	<always_on>true</always_on>
+	<visualize>true</visualize>
+	<update_rate>1000</update_rate>
+    </sensor>
    </gazebo>
+
 </robot>
