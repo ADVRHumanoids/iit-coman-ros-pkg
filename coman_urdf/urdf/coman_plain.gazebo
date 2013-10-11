@@ -52,7 +52,7 @@
    </gazebo>
    <gazebo reference="RAnkSag">
     <cfmDamping>1</cfmDamping>
-    <provideFeeback>true</provideFeedback>
+    <provideFeedback>true</provideFeedback>
     <sensor type="force_torque" name="RElbj_FT">
 	<always_on>true</always_on>
 	<visualize>true</visualize>
