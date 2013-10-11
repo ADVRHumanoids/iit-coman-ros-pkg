@@ -34,7 +34,7 @@
 -->
 
   <!-- Is this needed in the plain coman version??? --> 
-  <!-- include filename="$(find coman_urdf)/urdf/coman_transmission.urdf.xacro" / --> 
+  <include filename="$(find coman_urdf)/urdf/coman_transmission.urdf.xacro" /> 
 
   <include filename="$(find coman_urdf)/urdf/coman_plain.gazebo" />
 
