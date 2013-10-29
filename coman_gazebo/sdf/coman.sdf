@@ -407,7 +407,9 @@
         <dynamics/>
       </axis>
       <physics>
+        <provide_feedback>1</provide_feedback>
         <ode>
+          <provide_feedback>1</provide_feedback>
           <cfm_damping>1</cfm_damping>
           <limit>
             <cfm>0</cfm>
@@ -786,7 +788,9 @@
         <dynamics/>
       </axis>
       <physics>
+        <provide_feedback>1</provide_feedback>
         <ode>
+          <provide_feedback>1</provide_feedback>
           <cfm_damping>1</cfm_damping>
           <limit>
             <cfm>0</cfm>
@@ -1206,7 +1210,9 @@
         <dynamics/>
       </axis>
       <physics>
+        <provide_feedback>1</provide_feedback>
         <ode>
+          <provide_feedback>1</provide_feedback>
           <cfm_damping>1</cfm_damping>
           <limit>
             <cfm>0</cfm>
@@ -1446,7 +1452,9 @@
         <dynamics/>
       </axis>
       <physics>
+        <provide_feedback>1</provide_feedback>
         <ode>
+          <provide_feedback>1</provide_feedback>
           <cfm_damping>1</cfm_damping>
           <limit>
             <cfm>0</cfm>
