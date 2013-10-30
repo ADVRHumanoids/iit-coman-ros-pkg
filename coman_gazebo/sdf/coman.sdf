@@ -1191,7 +1191,7 @@
       </physics>
     </joint>
     <link name='LElb'>
-      <pose>0.005305 0.1558 0.144329 0 -0 0</pose>
+      <pose>0.020305 0.1558 0.144329 0 -0 0</pose>
       <inertial>
         <pose>-0.000655534 0.000934647 -0.000931013 0 -0 0</pose>
         <mass>0.633069</mass>
@@ -1205,7 +1205,7 @@
         </inertia>
       </inertial>
       <collision name='LElb_collision'>
-        <pose>-0.005305 -0.1558 -0.664329 0 -0 3.14159</pose>
+        <pose>-0.020305 -0.1558 -0.664329 0 -0 3.14159</pose>
         <geometry>
           <mesh>
             <scale>0.03937 0.03937 0.03937</scale>
@@ -1214,7 +1214,7 @@
         </geometry>
       </collision>
       <visual name='LElb_visual'>
-        <pose>-0.005305 -0.1558 -0.664329 0 -0 3.14159</pose>
+        <pose>-0.020305 -0.1558 -0.664329 0 -0 3.14159</pose>
         <geometry>
           <mesh>
             <scale>0.03937 0.03937 0.03937</scale>
@@ -1431,7 +1431,7 @@
       </physics>
     </joint>
     <link name='RElb'>
-      <pose>0.005305 -0.1558 0.144329 0 -0 0</pose>
+      <pose>0.020305 -0.1558 0.144329 0 -0 0</pose>
       <inertial>
         <pose>-0.000655534 -0.000934647 -0.000931013 0 -0 0</pose>
         <mass>0.633069</mass>
@@ -1445,20 +1445,20 @@
         </inertia>
       </inertial>
       <collision name='RElb_collision'>
-        <pose>-0.005305 0.1558 -0.664329 0 -0 3.14159</pose>
+        <pose>-0.020305 -0.1558 -0.664329 0 -0 3.14159</pose>
         <geometry>
           <mesh>
             <scale>0.03937 0.03937 0.03937</scale>
-            <uri>model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_21_prt.dae</uri>
+            <uri>model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_11_prt.dae</uri>
           </mesh>
         </geometry>
       </collision>
       <visual name='RElb_visual'>
-        <pose>-0.005305 0.1558 -0.664329 0 -0 3.14159</pose>
+        <pose>-0.020305 -0.1558 -0.664329 0 -0 3.14159</pose>
         <geometry>
           <mesh>
             <scale>0.03937 0.03937 0.03937</scale>
-            <uri>model://coman_urdf/meshes/collada/asm0001_collada_21_prt.dae</uri>
+            <uri>model://coman_urdf/meshes/collada/asm0001_collada_11_prt.dae</uri>
           </mesh>
         </geometry>
       </visual>
