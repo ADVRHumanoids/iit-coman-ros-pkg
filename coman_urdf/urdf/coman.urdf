@@ -407,15 +407,15 @@ and to define the end effectors of the robot -->
       <inertia ixx="2.2599075E-4" ixy="-2.6376470E-7" ixz="-9.8007285E-6" iyy="2.7781302E-4" iyz="-2.0435288E-6" izz="2.1878992E-4"/>
     </inertial>
     <visual>
-      <origin rpy="0 0 -3.14159265359" xyz="-0.005305 0.1558 -0.664329"/>
+      <origin rpy="0 0 -3.14159265359" xyz="-0.020305 -0.1558 -0.664329"/>
       <geometry name="RElb_visual">
-        <mesh filename="package://coman_urdf/meshes/collada/asm0001_collada_21_prt.dae" scale="0.03937 0.03937 0.03937"/>
+        <mesh filename="package://coman_urdf/meshes/collada/asm0001_collada_11_prt.dae" scale="0.03937 0.03937 0.03937"/>
       </geometry>
     </visual>
     <collision>
-      <origin rpy="0 0 -3.14159265359" xyz="-0.005305 0.1558 -0.664329"/>
+      <origin rpy="0 0 -3.14159265359" xyz="-0.020305 -0.1558 -0.664329"/>
       <geometry name="RElb_collision">
-        <mesh filename="package://coman_urdf/meshes/collada/simple/simple_asm0001_collada_21_prt.dae" scale="0.03937 0.03937 0.03937"/>
+        <mesh filename="package://coman_urdf/meshes/collada/simple/simple_asm0001_collada_11_prt.dae" scale="0.03937 0.03937 0.03937"/>
       </geometry>
     </collision>
   </link>
@@ -484,13 +484,13 @@ and to define the end effectors of the robot -->
       <inertia ixx="2.2599075E-4" ixy="2.637647E-7" ixz="-9.8007285E-6" iyy="2.7781302E-4" iyz="2.0435288E-6" izz="2.1878992E-4"/>
     </inertial>
     <visual>
-      <origin rpy="0 0 -3.14159265359" xyz="-0.005305 -0.1558 -0.664329"/>
+      <origin rpy="0 0 -3.14159265359" xyz="-0.020305 -0.1558 -0.664329"/>
       <geometry name="LElb_visual">
         <mesh filename="package://coman_urdf/meshes/collada/asm0001_collada_11_prt.dae" scale="0.03937 0.03937 0.03937"/>
       </geometry>
     </visual>
     <collision>
-      <origin rpy="0 0 -3.14159265359" xyz="-0.005305 -0.1558 -0.664329"/>
+      <origin rpy="0 0 -3.14159265359" xyz="-0.020305 -0.1558 -0.664329"/>
       <geometry name="LElb_collision">
         <mesh filename="package://coman_urdf/meshes/collada/simple/simple_asm0001_collada_11_prt.dae" scale="0.03937 0.03937 0.03937"/>
       </geometry>
@@ -505,12 +505,12 @@ and to define the end effectors of the robot -->
   <joint name="l_wrist_joint" type="fixed">
     <parent link="LElb"/>
     <child link="l_wrist"/>
-    <origin rpy="0 0 0" xyz="0 0 -0.22"/>
+    <origin rpy="0 0 0" xyz="-0.015 0 -0.22"/>
   </joint>
   <joint name="r_wrist_joint" type="fixed">
     <parent link="RElb"/>
     <child link="r_wrist"/>
-    <origin rpy="0 0 0" xyz="0 0 -0.22"/>
+    <origin rpy="0 0 0" xyz="-0.015 0 -0.22"/>
   </joint>
   <joint name="l_ankle_joint" type="fixed">
     <parent link="LHipMot"/>
@@ -682,7 +682,7 @@ and to define the end effectors of the robot -->
   <joint name="RElbj" type="revolute">
     <parent link="RShy"/>
     <child link="RElb"/>
-    <origin rpy="0 0 0" xyz="0.0 0.0 -0.13519152999999998"/>
+    <origin rpy="0 0 0" xyz="0.015 0.0 -0.13519152999999998"/>
     <axis xyz="0 1 0"/>
     <limit effort="50" lower="-2.3562" upper="0.0" velocity="4.0"/>
   </joint>
@@ -711,7 +711,7 @@ and to define the end effectors of the robot -->
   <joint name="LElbj" type="revolute">
     <parent link="LShy"/>
     <child link="LElb"/>
-    <origin rpy="0 0 0" xyz="0.0 0.0 -0.13519152999999998"/>
+    <origin rpy="0 0 0" xyz="0.015 0.0 -0.13519152999999998"/>
     <axis xyz="0 1 0"/>
     <limit effort="50" lower="-2.3562" upper="0.0" velocity="4.0"/>
   </joint>
