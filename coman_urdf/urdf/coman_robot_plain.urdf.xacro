@@ -11,7 +11,6 @@
   <include filename="$(find coman_urdf)/urdf/coman.urdf.xacro" />
 
 <!-- IMU, needs to be checked effective position and orientation. For now it maches the same poisition/orientation of Waist link -->
-<!--
   <link name="imu_link">
     <inertial>
       <mass value="0.01"/>
@@ -31,9 +30,7 @@
     <child link="imu_link"/>
     <origin xyz="0 0 0" rpy="0 0 0"/>
   </joint>
--->
 
-  <!-- Is this needed in the plain coman version??? --> 
   <include filename="$(find coman_urdf)/urdf/coman_transmission.urdf.xacro" /> 
 
   <include filename="$(find coman_urdf)/urdf/coman_plain.gazebo" />

@@ -3,15 +3,15 @@
     <link name='base_link'>
       <pose>0 0 0 0 -0 0</pose>
       <inertial>
-        <pose>-0.0263911 -0.000582164 0.0526323 0 -0 0</pose>
-        <mass>1.80087</mass>
+        <pose>-0.0262454 -0.000578949 0.0523417 0 -0 0</pose>
+        <mass>1.81087</mass>
         <inertia>
-          <ixx>0.0051033</ixx>
-          <ixy>-5.7171e-05</ixy>
-          <ixz>0.00169205</ixz>
-          <iyy>0.00624164</iyy>
-          <iyz>1.72259e-05</iyz>
-          <izz>0.00245178</izz>
+          <ixx>0.00513185</ixx>
+          <ixy>-5.73238e-05</ixy>
+          <ixz>0.00170587</ixz>
+          <iyy>0.00627711</iyy>
+          <iyz>1.75307e-05</iyz>
+          <izz>0.00245971</izz>
         </inertia>
       </inertial>
       <collision name='base_link_collision_Waist'>
@@ -32,10 +32,45 @@
           </mesh>
         </geometry>
       </visual>
+      <visual name='base_link_visual_imu_link'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.01 0.01 0.01</size>
+          </box>
+        </geometry>
+      </visual>
+      <gravity>1</gravity>
       <velocity_decay>
         <linear>0</linear>
         <angular>0</angular>
       </velocity_decay>
+      <self_collide>0</self_collide>
+      <sensor name='imu_sensor' type='imu'>
+        <always_on>1</always_on>
+        <update_rate>1000</update_rate>
+        <visualize>1</visualize>
+        <topic>__default_topic__</topic>
+        <imu>
+          <noise>
+            <type>gaussian</type>
+            <rate>
+              <mean>0</mean>
+              <stddev>0.0002</stddev>
+              <bias_mean>7.5e-06</bias_mean>
+              <bias_stddev>8e-07</bias_stddev>
+            </rate>
+            <accel>
+              <mean>0</mean>
+              <stddev>0.017</stddev>
+              <bias_mean>0.1</bias_mean>
+              <bias_stddev>0.001</bias_stddev>
+            </accel>
+          </noise>
+        </imu>
+        <plugin name='coman_yarp_gazebo_plugin_IMU' filename='libfakebotIMUplugin.so'/>
+        <pose>0 0 0 0 -0 0</pose>
+      </sensor>
     </link>
     <link name='LHipMot'>
       <pose>0 0.023 0 0 -0 0</pose>
@@ -407,9 +442,7 @@
         <dynamics/>
       </axis>
       <physics>
-        <provide_feedback>1</provide_feedback>
         <ode>
-          <provide_feedback>1</provide_feedback>
           <cfm_damping>1</cfm_damping>
           <limit>
             <cfm>0</cfm>
@@ -788,9 +821,7 @@
         <dynamics/>
       </axis>
       <physics>
-        <provide_feedback>1</provide_feedback>
         <ode>
-          <provide_feedback>1</provide_feedback>
           <cfm_damping>1</cfm_damping>
           <limit>
             <cfm>0</cfm>
@@ -1210,9 +1241,7 @@
         <dynamics/>
       </axis>
       <physics>
-        <provide_feedback>1</provide_feedback>
         <ode>
-          <provide_feedback>1</provide_feedback>
           <cfm_damping>1</cfm_damping>
           <limit>
             <cfm>0</cfm>
@@ -1452,9 +1481,7 @@
         <dynamics/>
       </axis>
       <physics>
-        <provide_feedback>1</provide_feedback>
         <ode>
-          <provide_feedback>1</provide_feedback>
           <cfm_damping>1</cfm_damping>
           <limit>
             <cfm>0</cfm>
