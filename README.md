@@ -15,9 +15,10 @@ The script has to be called in script/ folder:
 ./create_urdf_and_sdf.sh
 ```
 if called without any argument the coman_robot.urdf.xacro description will be parsed and copied. 
+Notice how the script needs python and the BeautifulSoup4 library to run (packaged as python-bs4 in recent Debian based systems)
 If the ROS independent version has to be parsed and copied then run:
 ```
-./create_urdf_and_sdf.sh coman_robot_plain.urdf.xacro
+./create_urdf_and_sdf.sh ros
 ```
 The actual version of COMAN does not have springs and sensors.
 

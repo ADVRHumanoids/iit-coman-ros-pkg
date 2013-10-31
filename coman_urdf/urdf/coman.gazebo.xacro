@@ -1,5 +1,13 @@
 <?xml version="1.0"?>
-<robot>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+    <xacro:if value="$(optenv GAZEBO_COMAN_USES_ROS false)">
+      <gazebo>
+        <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+          <robotNamespace>/COMAN</robotNamespace>
+        </plugin>
+      </gazebo>
+    </xacro:if>
 
 <!-- contact model for foot surface -->
    <gazebo reference="LFoot">
@@ -52,18 +60,8 @@
    </gazebo>
    <gazebo reference="RAnkSag">
     <cfmDamping>1</cfmDamping>
-<!--
     <provideFeedback>true</provideFeedback>
-    <sensor type="force_torque" name="RAnkSag_FT">
-	<always_on>true</always_on>
-	<visualize>true</visualize>
-	<update_rate>1000</update_rate>
-        <plugin name="gazebo_RAnkSag_FT" filename="libFakebotForceTorquePlugin.so">
-	  <boardId>1</boardId>
-        </plugin>
-    </sensor>
--->
-   </gazebo>
+  </gazebo>
 
    <gazebo reference="LHipSag">
     <cfmDamping>1</cfmDamping>
@@ -82,17 +80,7 @@
    </gazebo>
    <gazebo reference="LAnkSag">
     <cfmDamping>1</cfmDamping>
-<!--
     <provideFeedback>true</provideFeedback>
-    <sensor type="force_torque" name="LAnkSag_FT">
-	<always_on>true</always_on>
-	<visualize>true</visualize>
-	<update_rate>1000</update_rate>
-        <plugin name="gazebo_LAnkSag_FT" filename="libFakebotForceTorquePlugin.so">
- 	  <boardId>2</boardId>
-        </plugin>
-    </sensor>
--->
    </gazebo>
 
    <gazebo reference="RShSag">
@@ -106,17 +94,6 @@
    </gazebo>
    <gazebo reference="RElbj">
     <cfmDamping>1</cfmDamping>
-<!--
-    <provideFeedback>true</provideFeedback>
-    <sensor type="force_torque" name="RElbj_FT">
-	<always_on>true</always_on>
-	<visualize>true</visualize>
-	<update_rate>1000</update_rate>
-        <plugin name="gazebo_RAnkSag_FT" filename="libFakebotForceTorquePlugin.so">
-	  <boardId>3</boardId>
-        </plugin>
-    </sensor>
--->
    </gazebo>
 
    <gazebo reference="LShSag">
@@ -130,44 +107,6 @@
    </gazebo>
    <gazebo reference="LElbj">
     <cfmDamping>1</cfmDamping>
-<!--
-    <provideFeedback>true</provideFeedback>
-    <sensor type="force_torque" name="LElbj_FT">
-	<always_on>true</always_on>
-	<visualize>true</visualize>
-	<update_rate>1000</update_rate>
-        <plugin name="gazebo_RAnkSag_FT" filename="libFakebotForceTorquePlugin.so">
-	  <boardId>4</boardId>
-        </plugin>
-    </sensor>
--->
-   </gazebo>
-
-   <gazebo reference="imu_link">
-    <sensor name="imu_sensor" type="imu">
-     <always_on>1</always_on>
-     <update_rate>1000</update_rate>
-     <visualize>true</visualize>
-     <topic>__default_topic__</topic>
-     <imu>
-      <!--noise>
-       <type>gaussian</type>
-        <rate>
-         <mean>0.0</mean>
-         <stddev>2e-4</stddev>
-         <bias_mean>0.0000075</bias_mean>
-         <bias_stddev>0.0000008</bias_stddev> 
-        </rate>
-        <accel>
-         <mean>0.0</mean>
-         <stddev>1.7e-2</stddev>
-         <bias_mean>0.1</bias_mean>
-         <bias_stddev>0.001</bias_stddev>
-        </accel>
-      </noise-->
-     </imu>
-     <plugin name="coman_yarp_gazebo_plugin_IMU" filename="libfakebotIMUplugin.so"/>
-    </sensor>
    </gazebo>
 
 </robot>

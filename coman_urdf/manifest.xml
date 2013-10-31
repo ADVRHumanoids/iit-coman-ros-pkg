@@ -6,6 +6,7 @@
   </description>
   <author>Enrico Mingo</author>
   <license>BSD</license>
+  <version>13.10.31</version>
   <review status="unreviewed" notes=""/>
   <url>http://ros.org/wiki/coman_urdf</url>
   <depend package="roscpp"/>

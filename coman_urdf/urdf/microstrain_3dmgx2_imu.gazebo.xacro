@@ -10,19 +10,55 @@
   This file groups files to use COMAN in GAZEBO
   
   -->
-  <gazebo>
-    <plugin name="quadrotor_imu_sim" filename="libhector_gazebo_ros_imu.so">
-      <updateRate>100.0</updateRate>
-      <bodyName>imu_link</bodyName>
-      <topicName>COMAN/raw_imu</topicName>
-      <rpyOffsets>0 0 0</rpyOffsets> <!-- deprecated -->
-      <gaussianNoise>0</gaussianNoise>  <!-- deprecated -->
-      <accelDrift>0.5 0.5 0.5</accelDrift>
-      <accelGaussianNoise>0.35 0.35 0.3</accelGaussianNoise>
-      <rateDrift>0.1 0.1 0.1</rateDrift>
-      <rateGaussianNoise>0.05 0.05 0.015</rateGaussianNoise>
-      <headingDrift>0.1</headingDrift>
-      <headingGaussianNoise>0.05</headingGaussianNoise>
-    </plugin>
-  </gazebo>
+
+  <xacro:if value="$(optenv GAZEBO_COMAN_USES_ROS false)">
+    <gazebo>
+        <plugin name="quadrotor_imu_sim" filename="libhector_gazebo_ros_imu.so">
+          <updateRate>100.0</updateRate>
+          <bodyName>imu_link</bodyName>
+          <topicName>COMAN/raw_imu</topicName>
+          <rpyOffsets>0 0 0</rpyOffsets> <!-- deprecated -->
+          <gaussianNoise>0</gaussianNoise>  <!-- deprecated -->
+          <accelDrift>0.5 0.5 0.5</accelDrift>
+          <accelGaussianNoise>0.35 0.35 0.3</accelGaussianNoise>
+          <rateDrift>0.1 0.1 0.1</rateDrift>
+          <rateGaussianNoise>0.05 0.05 0.015</rateGaussianNoise>
+          <headingDrift>0.1</headingDrift>
+          <headingGaussianNoise>0.05</headingGaussianNoise>
+        </plugin>
+      </gazebo>  
+  </xacro:if>
+
+
+  <xacro:if value="$(optenv GAZEBO_COMAN_USES_YARP true)">
+    <gazebo reference="imu_link">
+        <sensor name="imu_sensor" type="imu">
+         <always_on>1</always_on>
+         <update_rate>1000</update_rate>
+         <visualize>true</visualize>
+         <topic>__default_topic__</topic>
+         <imu>
+          <!--
+          <noise>
+           <type>gaussian</type>
+            <rate>
+             <mean>0.0</mean>
+             <stddev>2e-4</stddev>
+             <bias_mean>0.0000075</bias_mean>
+             <bias_stddev>0.0000008</bias_stddev>
+            </rate>
+            <accel>
+             <mean>0.0</mean>
+             <stddev>1.7e-2</stddev>
+             <bias_mean>0.1</bias_mean>
+             <bias_stddev>0.001</bias_stddev>
+            </accel>
+          </noise>
+          -->
+         </imu>
+         <plugin name="coman_yarp_gazebo_plugin_IMU" filename="libfakebotIMUplugin.so"/>
+        </sensor>
+       </gazebo>
+  </xacro:if>
+
 </robot>

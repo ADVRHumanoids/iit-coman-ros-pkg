@@ -1,23 +1,32 @@
 #!/bin/bash
 
-if [ $# -eq 0 ]
+if [ $# == "ros" ]
   then
-    ROBOT="coman_robot.urdf.xacro"
-else
-    ROBOT=$1
+    GAZEBO_COMAN_USES_ROS=1
+    GAZEBO_COMAN_USES_YARP=0
+   else
+    GAZEBO_COMAN_USES_ROS=0
+    GAZEBO_COMAN_USES_YARP=1
 fi
 
   
 cd ../urdf
 
-echo "Creating urdf of $ROBOT and coman.urdf.xacro..."
-rosrun xacro xacro.py $ROBOT > coman_robot.urdf
+echo "Creating urdf of coman_robot.urdf.xacro and coman.urdf.xacro..."
+rosrun xacro xacro.py coman_robot.urdf.xacro > coman_robot.urdf
 
 rosrun xacro xacro.py coman.urdf.xacro > coman.urdf
 echo "...urdf correctly created!"
 
 echo "Creating sdf of coman_robot.urdf..."
 gzsdf print coman_robot.urdf > coman.sdf
+
+if [ $GAZEBO_COMAN_USES_YARP -eq 1 ]
+  then
+    python ../script/gazebowtf.py coman.gazebo.wtf > coman2.sdf
+    mv coman2.sdf coman.sdf
+fi
+
 echo "...sdf correctly created!"
 
 echo "Removing coman_robot.urdf."

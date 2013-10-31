@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+	<robot filename="coman.sdf">
+		<wtf reference="LAnkSag">
+		    <sensor type="force_torque" name="LAnkSag_FT">
+		    	<always_on>true</always_on>
+		    	<visualize>true</visualize>
+		    	<update_rate>1000</update_rate>
+		      
+		        <plugin name="LAnkSag_FT_plugin" filename="libfakebotFTsensor.so">
+		     	    <boardId>2</boardId>
+		        </plugin>
+		    </sensor>
+      	</wtf>
+
+		<wtf reference="RAnkSag">
+			<sensor type="force_torque" name="RAnkSag_FT">
+				<always_on>true</always_on>
+				<visualize>true</visualize>
+				<update_rate>1000</update_rate>
+
+				<plugin name="RAnkSag_FT_plugin" filename="libfakebotFTsensor.so">
+		     	    <boardId>1</boardId>
+		        </plugin>
+		    </sensor>
+		</wtf>
+	</robot>
+</xml>

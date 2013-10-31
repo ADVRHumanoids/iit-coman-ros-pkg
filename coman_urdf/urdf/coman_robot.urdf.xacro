@@ -8,7 +8,7 @@
   This file groups files to use COMAN in GAZEBO
   
   -->
-  <include filename="$(find coman_urdf)/urdf/coman.urdf.xacro" />
+  <xacro:include filename="$(find coman_urdf)/urdf/coman.urdf.xacro" />
 
 <!-- IMU, needs to be checked effective position and orientation. For now it maches the same poisition/orientation of Waist link -->
   <link name="imu_link">
@@ -31,8 +31,10 @@
     <origin xyz="0 0 0" rpy="0 0 0"/>
   </joint>
 
-  <include filename="$(find coman_urdf)/urdf/microstrain_3dmgx2_imu.gazebo.xacro" />
-  <include filename="$(find coman_urdf)/urdf/coman_transmission.urdf.xacro" /> 
-  <include filename="$(find coman_urdf)/urdf/coman.gazebo" />
+  <xacro:include filename="$(find coman_urdf)/urdf/microstrain_3dmgx2_imu.gazebo.xacro" />
+  <xacro:include filename="$(find coman_urdf)/urdf/coman_transmission.urdf.xacro" /> 
+  <xacro:include filename="$(find coman_urdf)/urdf/coman.gazebo.xacro" />
+
+  <origin xyz="0.0 0.0 0.521" rpy="0 0 0" />
 </robot>
 
