@@ -150,13 +150,13 @@
      <visualize>true</visualize>
      <topic>__default_topic__</topic>
      <imu>
-      <noise>
+      <!--noise>
        <type>gaussian</type>
         <rate>
          <mean>0.0</mean>
          <stddev>2e-4</stddev>
          <bias_mean>0.0000075</bias_mean>
-         <bias_stddev>0.0000008</bias_stddev>
+         <bias_stddev>0.0000008</bias_stddev> 
         </rate>
         <accel>
          <mean>0.0</mean>
@@ -164,7 +164,7 @@
          <bias_mean>0.1</bias_mean>
          <bias_stddev>0.001</bias_stddev>
         </accel>
-      </noise>
+      </noise-->
      </imu>
      <plugin name="coman_yarp_gazebo_plugin_IMU" filename="libfakebotIMUplugin.so"/>
     </sensor>
