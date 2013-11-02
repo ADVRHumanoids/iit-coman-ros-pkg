@@ -10,12 +10,15 @@ coman_urdf:
 contains the urdf.xacro description of COMAN as well as files that are needed in the simulation in GAZEBO. 
 Every time one of these files are changed you have to use the script inside the script/ folder to copy that file in 
 coman_gazebo/sdf and in your /home/user/.gazebo/models folders. 
+Before using the script check the dependency on BeautifulSoup4:
+```
+sudo apt-get install python-bs4
+```
 The script has to be called in script/ folder:
 ```
 ./create_urdf_and_sdf.sh
 ```
 if called without any argument the coman_robot.urdf.xacro description will be parsed and copied. 
-Notice how the script needs python and the BeautifulSoup4 library to run (packaged as python-bs4 in recent Debian based systems)
 If the ROS independent version has to be parsed and copied then run:
 ```
 ./create_urdf_and_sdf.sh ros
