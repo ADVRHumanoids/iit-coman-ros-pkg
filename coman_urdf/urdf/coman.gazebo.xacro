@@ -35,28 +35,36 @@
 <!-- Other parameters... -->
    <gazebo reference="WaistSag">
     <cfmDamping>1</cfmDamping>
+    <provide_feedback>true<provide_feedback>
    </gazebo>
    <gazebo reference="WaistLat">
     <cfmDamping>1</cfmDamping>
+    <provide_feedback>true<provide_feedback>
    </gazebo>
    <gazebo reference="WaistYaw">
     <cfmDamping>1</cfmDamping>
+    <provide_feedback>true<provide_feedback>
    </gazebo>
 
    <gazebo reference="RHipSag">
     <cfmDamping>1</cfmDamping>
+    <provide_feedback>true<provide_feedback>
    </gazebo>
    <gazebo reference="RHipLat">
     <cfmDamping>1</cfmDamping>
+    <provide_feedback>true<provide_feedback>
    </gazebo>
    <gazebo reference="RHipYaw">
     <cfmDamping>1</cfmDamping>
+    <provide_feedback>true<provide_feedback>
    </gazebo>
    <gazebo reference="RKneeSag">
     <cfmDamping>1</cfmDamping>
+    <provide_feedback>true<provide_feedback>
    </gazebo>
    <gazebo reference="RAnkLat">
     <cfmDamping>1</cfmDamping>
+    <provide_feedback>true<provide_feedback>
    </gazebo>
    <gazebo reference="RAnkSag">
     <cfmDamping>1</cfmDamping>
@@ -65,18 +73,23 @@
 
    <gazebo reference="LHipSag">
     <cfmDamping>1</cfmDamping>
+    <provide_feedback>true<provide_feedback>
    </gazebo>
    <gazebo reference="LHipLat">
     <cfmDamping>1</cfmDamping>
+    <provide_feedback>true<provide_feedback>
    </gazebo>
    <gazebo reference="LHipYaw">
     <cfmDamping>1</cfmDamping>
+    <provide_feedback>true<provide_feedback>
    </gazebo>
    <gazebo reference="LKneeSag">
     <cfmDamping>1</cfmDamping>
+    <provide_feedback>true<provide_feedback>
    </gazebo>
    <gazebo reference="LAnkLat">
     <cfmDamping>1</cfmDamping>
+    <provide_feedback>true<provide_feedback>
    </gazebo>
    <gazebo reference="LAnkSag">
     <cfmDamping>1</cfmDamping>
@@ -85,28 +98,36 @@
 
    <gazebo reference="RShSag">
     <cfmDamping>1</cfmDamping>
+    <provide_feedback>true<provide_feedback>
    </gazebo>
    <gazebo reference="RShLat">
     <cfmDamping>1</cfmDamping>
+    <provide_feedback>true<provide_feedback>
    </gazebo>
    <gazebo reference="RShYaw">
     <cfmDamping>1</cfmDamping>
+    <provide_feedback>true<provide_feedback>
    </gazebo>
    <gazebo reference="RElbj">
     <cfmDamping>1</cfmDamping>
+    <provide_feedback>true<provide_feedback>
    </gazebo>
 
    <gazebo reference="LShSag">
     <cfmDamping>1</cfmDamping>
+    <provide_feedback>true<provide_feedback>
    </gazebo>
    <gazebo reference="LShLat">
     <cfmDamping>1</cfmDamping>
+    <provide_feedback>true<provide_feedback>
    </gazebo>
    <gazebo reference="LShYaw">
     <cfmDamping>1</cfmDamping>
+    <provide_feedback>true<provide_feedback>
    </gazebo>
    <gazebo reference="LElbj">
     <cfmDamping>1</cfmDamping>
+    <provide_feedback>true<provide_feedback>
    </gazebo>
 
 </robot>
