@@ -7,29 +7,29 @@
    </pose>
    <inertial>
     <pose>
-     -0.0262454 -0.000578949 0.0523417 0 -0 0
+     -0.026643 -0.0006165 0.0525846 0 -0 0
     </pose>
     <mass>
      1.81087
     </mass>
     <inertia>
      <ixx>
-      0.00513185
+      0.00510542
      </ixx>
      <ixy>
-      -5.73238e-05
+      -5.99912e-05
      </ixy>
      <ixz>
-      0.00170587
+      0.00168814
      </ixz>
      <iyy>
-      0.00627711
+      0.00626406
      </iyy>
      <iyz>
-      1.75307e-05
+      1.66922e-05
      </iyz>
      <izz>
-      0.00245971
+      0.00247385
      </izz>
     </inertia>
    </inertial>
@@ -65,7 +65,7 @@
    </visual>
    <visual name="base_link_visual_imu_link">
     <pose>
-     0 0 0 0 -0 0
+     -0.072 -0.0068 0.044 0 -0 0
     </pose>
     <geometry>
      <box>
@@ -105,7 +105,7 @@
     <imu/>
     <plugin filename="libfakebotIMUplugin.so" name="coman_yarp_gazebo_plugin_IMU"/>
     <pose>
-     0 0 0 0 -0 0
+     -0.072 -0.0068 0.044 0 -0 0
     </pose>
    </sensor>
   </link>
@@ -208,7 +208,13 @@
     <dynamics/>
    </axis>
    <physics>
+    <provide_feedback>
+     1
+    </provide_feedback>
     <ode>
+     <provide_feedback>
+      1
+     </provide_feedback>
      <cfm_damping>
       1
      </cfm_damping>
@@ -322,7 +328,13 @@
     <dynamics/>
    </axis>
    <physics>
+    <provide_feedback>
+     1
+    </provide_feedback>
     <ode>
+     <provide_feedback>
+      1
+     </provide_feedback>
      <cfm_damping>
       1
      </cfm_damping>
@@ -436,7 +448,13 @@
     <dynamics/>
    </axis>
    <physics>
+    <provide_feedback>
+     1
+    </provide_feedback>
     <ode>
+     <provide_feedback>
+      1
+     </provide_feedback>
      <cfm_damping>
       1
      </cfm_damping>
@@ -550,7 +568,13 @@
     <dynamics/>
    </axis>
    <physics>
+    <provide_feedback>
+     1
+    </provide_feedback>
     <ode>
+     <provide_feedback>
+      1
+     </provide_feedback>
      <cfm_damping>
       1
      </cfm_damping>
@@ -664,7 +688,13 @@
     <dynamics/>
    </axis>
    <physics>
+    <provide_feedback>
+     1
+    </provide_feedback>
     <ode>
+     <provide_feedback>
+      1
+     </provide_feedback>
      <cfm_damping>
       1
      </cfm_damping>
@@ -951,7 +981,13 @@
     <dynamics/>
    </axis>
    <physics>
+    <provide_feedback>
+     1
+    </provide_feedback>
     <ode>
+     <provide_feedback>
+      1
+     </provide_feedback>
      <cfm_damping>
       1
      </cfm_damping>
@@ -1065,7 +1101,13 @@
     <dynamics/>
    </axis>
    <physics>
+    <provide_feedback>
+     1
+    </provide_feedback>
     <ode>
+     <provide_feedback>
+      1
+     </provide_feedback>
      <cfm_damping>
       1
      </cfm_damping>
@@ -1179,7 +1221,13 @@
     <dynamics/>
    </axis>
    <physics>
+    <provide_feedback>
+     1
+    </provide_feedback>
     <ode>
+     <provide_feedback>
+      1
+     </provide_feedback>
      <cfm_damping>
       1
      </cfm_damping>
@@ -1293,7 +1341,13 @@
     <dynamics/>
    </axis>
    <physics>
+    <provide_feedback>
+     1
+    </provide_feedback>
     <ode>
+     <provide_feedback>
+      1
+     </provide_feedback>
      <cfm_damping>
       1
      </cfm_damping>
@@ -1407,7 +1461,13 @@
     <dynamics/>
    </axis>
    <physics>
+    <provide_feedback>
+     1
+    </provide_feedback>
     <ode>
+     <provide_feedback>
+      1
+     </provide_feedback>
      <cfm_damping>
       1
      </cfm_damping>
@@ -1694,7 +1754,13 @@
     <dynamics/>
    </axis>
    <physics>
+    <provide_feedback>
+     1
+    </provide_feedback>
     <ode>
+     <provide_feedback>
+      1
+     </provide_feedback>
      <cfm_damping>
       1
      </cfm_damping>
@@ -1808,7 +1874,13 @@
     <dynamics/>
    </axis>
    <physics>
+    <provide_feedback>
+     1
+    </provide_feedback>
     <ode>
+     <provide_feedback>
+      1
+     </provide_feedback>
      <cfm_damping>
       1
      </cfm_damping>
@@ -1922,7 +1994,13 @@
     <dynamics/>
    </axis>
    <physics>
+    <provide_feedback>
+     1
+    </provide_feedback>
     <ode>
+     <provide_feedback>
+      1
+     </provide_feedback>
      <cfm_damping>
       1
      </cfm_damping>
@@ -2036,7 +2114,13 @@
     <dynamics/>
    </axis>
    <physics>
+    <provide_feedback>
+     1
+    </provide_feedback>
     <ode>
+     <provide_feedback>
+      1
+     </provide_feedback>
      <cfm_damping>
       1
      </cfm_damping>
@@ -2150,7 +2234,13 @@
     <dynamics/>
    </axis>
    <physics>
+    <provide_feedback>
+     1
+    </provide_feedback>
     <ode>
+     <provide_feedback>
+      1
+     </provide_feedback>
      <cfm_damping>
       1
      </cfm_damping>
@@ -2264,7 +2354,13 @@
     <dynamics/>
    </axis>
    <physics>
+    <provide_feedback>
+     1
+    </provide_feedback>
     <ode>
+     <provide_feedback>
+      1
+     </provide_feedback>
      <cfm_damping>
       1
      </cfm_damping>
@@ -2378,7 +2474,13 @@
     <dynamics/>
    </axis>
    <physics>
+    <provide_feedback>
+     1
+    </provide_feedback>
     <ode>
+     <provide_feedback>
+      1
+     </provide_feedback>
      <cfm_damping>
       1
      </cfm_damping>
@@ -2492,7 +2594,13 @@
     <dynamics/>
    </axis>
    <physics>
+    <provide_feedback>
+     1
+    </provide_feedback>
     <ode>
+     <provide_feedback>
+      1
+     </provide_feedback>
      <cfm_damping>
       1
      </cfm_damping>
@@ -2606,7 +2714,13 @@
     <dynamics/>
    </axis>
    <physics>
+    <provide_feedback>
+     1
+    </provide_feedback>
     <ode>
+     <provide_feedback>
+      1
+     </provide_feedback>
      <cfm_damping>
       1
      </cfm_damping>
@@ -2720,7 +2834,13 @@
     <dynamics/>
    </axis>
    <physics>
+    <provide_feedback>
+     1
+    </provide_feedback>
     <ode>
+     <provide_feedback>
+      1
+     </provide_feedback>
      <cfm_damping>
       1
      </cfm_damping>
@@ -2834,7 +2954,13 @@
     <dynamics/>
    </axis>
    <physics>
+    <provide_feedback>
+     1
+    </provide_feedback>
     <ode>
+     <provide_feedback>
+      1
+     </provide_feedback>
      <cfm_damping>
       1
      </cfm_damping>
