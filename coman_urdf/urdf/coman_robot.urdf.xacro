@@ -32,7 +32,9 @@
   </joint>
 
   <xacro:include filename="$(find coman_urdf)/urdf/microstrain_3dmgx2_imu.gazebo.xacro" />
-  <xacro:include filename="$(find coman_urdf)/urdf/coman_transmission.urdf.xacro" /> 
+  <xacro:if value="$(optenv GAZEBO_COMAN_USES_ROS true)">
+  	<xacro:include filename="$(find coman_urdf)/urdf/coman_transmission.urdf.xacro" /> 
+  </xacro:if>
   <xacro:include filename="$(find coman_urdf)/urdf/coman.gazebo.xacro" />
 
   <origin xyz="0.0 0.0 0.521" rpy="0 0 0" />
