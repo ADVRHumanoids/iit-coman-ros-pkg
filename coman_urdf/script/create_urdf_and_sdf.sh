@@ -1,21 +1,22 @@
 #!/bin/bash
 
+cd ../urdf
+
+echo "Creating bare urdf of coman.urdf.xacro"
+rosrun xacro xacro.py coman.urdf.xacro > coman.urdf
+echo "...urdf correctly created!"
+
 if [ $# == "ros" ]
   then
     GAZEBO_COMAN_USES_ROS=1
     GAZEBO_COMAN_USES_YARP=0
+    echo "Creating urdf of coman_robot.urdf.xacro with ROS plugins"
    else
     GAZEBO_COMAN_USES_ROS=0
     GAZEBO_COMAN_USES_YARP=1
+    echo "Creating urdf of coman_robot.urdf.xacro with YARP plugins"
 fi
-
-  
-cd ../urdf
-
-echo "Creating urdf of coman_robot.urdf.xacro and coman.urdf.xacro..."
 rosrun xacro xacro.py coman_robot.urdf.xacro > coman_robot.urdf
-
-rosrun xacro xacro.py coman.urdf.xacro > coman.urdf
 echo "...urdf correctly created!"
 
 echo "Creating sdf of coman_robot.urdf..."
