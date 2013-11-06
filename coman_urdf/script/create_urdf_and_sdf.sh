@@ -37,7 +37,7 @@ unset GAZEBO_COMAN_USES_ROS
 echo "...sdf correctly created!"
 
 echo "Removing coman_robot.urdf."
-#rm coman_robot.urdf
+rm coman_robot.urdf
 
 echo "Copying coman.sdf in coman_gazebo/sdf."
 cp coman.sdf ../../coman_gazebo/sdf
