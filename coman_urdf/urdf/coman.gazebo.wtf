@@ -5,10 +5,10 @@
 		    	<always_on>true</always_on>
 		    	<visualize>true</visualize>
 		    	<update_rate>1000</update_rate>
-		      
+				<pose>0 0 -0.065 0 0 0</pose>
+				
 		        <plugin name="LAnkSag_FT_plugin" filename="libfakebotFTsensor.so">
 		     	    <boardId>2</boardId>
-		     	    <pose>0 0 -0.065 0 0 0</pose>
 		     	    <!-- WARNING: the inertial properties are at the moment not used by libfakebotFTsensor.so -->
 		     	    <inertial>
 				    	<origin xyz="0.0 0.0 -0.0325" rpy="0 0 0"/>
@@ -24,10 +24,10 @@
 				<always_on>true</always_on>
 				<visualize>true</visualize>
 				<update_rate>1000</update_rate>
+				<pose>0 0 -0.065 0 0 0</pose>
 
 				<plugin name="RAnkSag_FT_plugin" filename="libfakebotFTsensor.so">
 		     	    <boardId>1</boardId>
-		     	    <pose>0 0 -0.065 0 0 0</pose>
 		     	    <!-- WARNING: the inertial properties are at the moment not used by libfakebotFTsensor.so -->
 		     	    <inertial>
 				    	<origin xyz="0.0 0.0 -0.0325" rpy="0 0 0"/>
