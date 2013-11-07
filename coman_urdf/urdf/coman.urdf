@@ -555,6 +555,7 @@ and to define the end effectors of the robot -->
     <origin rpy="0 0 0" xyz="0.020281504 0 0.11912053"/>
     <axis xyz="0.939692608 0 0.3420201433"/>
     <limit effort="50" lower="-0.5236" upper="0.5235" velocity="4.0"/>
+    <dynamics damping="0.3" friction="0"/>
   </joint>
   <joint name="WaistLat" type="revolute">
     <!-- Wrong name! need to fix this... -->
@@ -563,6 +564,7 @@ and to define the end effectors of the robot -->
     <origin rpy="0 0 0" xyz="0 0 0"/>
     <axis xyz="0 1 0"/>
     <limit effort="50" lower="-0.3491" upper="0.8727" velocity="4.0"/>
+    <dynamics damping="0.3" friction="0"/>
   </joint>
   <joint name="WaistYaw" type="revolute">
     <parent link="DWL"/>
@@ -570,6 +572,7 @@ and to define the end effectors of the robot -->
     <origin rpy="0 0 0" xyz="0 0 0.04749999"/>
     <axis xyz="0 0 1"/>
     <limit effort="50" lower="-1.3963" upper="1.3962" velocity="4.0"/>
+    <dynamics damping="0.3" friction="0"/>
   </joint>
   <!-- ********************RIGHT LEG******************** -->
   <joint name="RHipSag" type="revolute">
@@ -578,6 +581,7 @@ and to define the end effectors of the robot -->
     <origin rpy="0 0 0" xyz="0.0 -0.023 0.0"/>
     <axis xyz="0 1 0"/>
     <limit effort="50" lower="-1.9199" upper="0.7854" velocity="4.0"/>
+    <dynamics damping="0.3" friction="0"/>
   </joint>
   <joint name="RHipLat" type="revolute">
     <parent link="RHipMot"/>
@@ -585,6 +589,7 @@ and to define the end effectors of the robot -->
     <origin rpy="0 0 0" xyz="0.0 -0.0496 0.0"/>
     <axis xyz="1 0 0"/>
     <limit effort="50" lower="-1.0472" upper="0.4363" velocity="4.0"/>
+    <dynamics damping="0.3" friction="0"/>
   </joint>
   <joint name="RHipYaw" type="revolute">
     <parent link="RThighUpLeg"/>
@@ -592,6 +597,7 @@ and to define the end effectors of the robot -->
     <origin rpy="0 0 0" xyz="0.0 0.0 -0.1024"/>
     <axis xyz="0 0 1"/>
     <limit effort="50" lower="-0.8727" upper="0.8727" velocity="4.0"/>
+    <dynamics damping="0.3" friction="0"/>
   </joint>
   <joint name="RKneeSag" type="revolute">
     <parent link="RThighLowLeg"/>
@@ -599,6 +605,7 @@ and to define the end effectors of the robot -->
     <origin rpy="0 0 0" xyz="0.0 0.0 -0.1234"/>
     <axis xyz="0 1 0"/>
     <limit effort="50" lower="-0.1745" upper="1.9199" velocity="4.0"/>
+    <dynamics damping="0.3" friction="0"/>
   </joint>
   <joint name="RAnkLat" type="revolute">
     <parent link="RLowLeg"/>
@@ -606,6 +613,7 @@ and to define the end effectors of the robot -->
     <origin rpy="0 0 0" xyz="0.0 0.0 -0.201"/>
     <axis xyz="1 0 0"/>
     <limit effort="50" lower="-0.6109" upper="0.6109" velocity="4.0"/>
+    <dynamics damping="0.3" friction="0"/>
   </joint>
   <joint name="RAnkSag" type="revolute">
     <parent link="RFootmot"/>
@@ -613,6 +621,7 @@ and to define the end effectors of the robot -->
     <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
     <axis xyz="0 1 0"/>
     <limit effort="50" lower="-1.2217" upper="1.2217" velocity="4.0"/>
+    <dynamics damping="0.3" friction="0"/>
   </joint>
   <!-- ********************LEFT LEG******************** -->
   <joint name="LHipSag" type="revolute">
@@ -621,6 +630,7 @@ and to define the end effectors of the robot -->
     <origin rpy="0 0 0" xyz="0.0 0.023 0.0"/>
     <axis xyz="0 1 0"/>
     <limit effort="50" lower="-1.9199" upper="0.7854" velocity="4.0"/>
+    <dynamics damping="0.3" friction="0"/>
   </joint>
   <joint name="LHipLat" type="revolute">
     <parent link="LHipMot"/>
@@ -628,6 +638,7 @@ and to define the end effectors of the robot -->
     <origin rpy="0 0 0" xyz="0.0 0.0496 0.0"/>
     <axis xyz="1 0 0"/>
     <limit effort="50" lower="-0.4363" upper="1.0472" velocity="4.0"/>
+    <dynamics damping="0.3" friction="0"/>
   </joint>
   <joint name="LHipYaw" type="revolute">
     <parent link="LThighUpLeg"/>
@@ -635,6 +646,7 @@ and to define the end effectors of the robot -->
     <origin rpy="0 0 0" xyz="0.0 0.0 -0.1024"/>
     <axis xyz="0 0 1"/>
     <limit effort="50" lower="-0.8727" upper="0.8727" velocity="4.0"/>
+    <dynamics damping="0.3" friction="0"/>
   </joint>
   <joint name="LKneeSag" type="revolute">
     <parent link="LThighLowLeg"/>
@@ -642,6 +654,7 @@ and to define the end effectors of the robot -->
     <origin rpy="0 0 0" xyz="0.0 0.0 -0.1234"/>
     <axis xyz="0 1 0"/>
     <limit effort="50" lower="-0.1745" upper="1.9199" velocity="4.0"/>
+    <dynamics damping="0.3" friction="0"/>
   </joint>
   <joint name="LAnkLat" type="revolute">
     <parent link="LLowLeg"/>
@@ -649,6 +662,7 @@ and to define the end effectors of the robot -->
     <origin rpy="0 0 0" xyz="0.0 0.0 -0.201"/>
     <axis xyz="1 0 0"/>
     <limit effort="50" lower="-0.6109" upper="0.6109" velocity="4.0"/>
+    <dynamics damping="0.3" friction="0"/>
   </joint>
   <joint name="LAnkSag" type="revolute">
     <parent link="LFootmot"/>
@@ -656,6 +670,7 @@ and to define the end effectors of the robot -->
     <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
     <axis xyz="0 1 0"/>
     <limit effort="50" lower="-1.2217" upper="1.2217" velocity="4.0"/>
+    <dynamics damping="0.3" friction="0"/>
   </joint>
   <!-- ********************RIGHT ARM******************** -->
   <joint name="RShSag" type="revolute">
@@ -664,6 +679,7 @@ and to define the end effectors of the robot -->
     <origin rpy="0 0 0" xyz="-0.014976503999999998 -0.0825 0.15770847"/>
     <axis xyz="0 1 0"/>
     <limit effort="50" lower="-3.4034" upper="1.6581" velocity="4.0"/>
+    <dynamics damping="0.3" friction="0"/>
   </joint>
   <joint name="RShLat" type="revolute">
     <parent link="RShp"/>
@@ -671,6 +687,7 @@ and to define the end effectors of the robot -->
     <origin rpy="0 0 0" xyz="0.0 -0.07329999999999999 0.0"/>
     <axis xyz="1 0 0"/>
     <limit effort="50" lower="-2.094" upper="0.31415" velocity="4.0"/>
+    <dynamics damping="0.3" friction="0"/>
   </joint>
   <joint name="RShYaw" type="revolute">
     <parent link="RShr"/>
@@ -678,6 +695,7 @@ and to define the end effectors of the robot -->
     <origin rpy="0 0 0" xyz="0.0 0.0 -0.04480846999999999"/>
     <axis xyz="0 0 1"/>
     <limit effort="50" lower="-1.5708" upper="1.5708" velocity="4.0"/>
+    <dynamics damping="0.3" friction="0"/>
   </joint>
   <joint name="RElbj" type="revolute">
     <parent link="RShy"/>
@@ -685,6 +703,7 @@ and to define the end effectors of the robot -->
     <origin rpy="0 0 0" xyz="0.015 0.0 -0.13519152999999998"/>
     <axis xyz="0 1 0"/>
     <limit effort="50" lower="-2.3562" upper="0.0" velocity="4.0"/>
+    <dynamics damping="0.3" friction="0"/>
   </joint>
   <!-- ********************LEFT ARM******************** -->
   <joint name="LShSag" type="revolute">
@@ -693,6 +712,7 @@ and to define the end effectors of the robot -->
     <origin rpy="0 0 0" xyz="-0.014976503999999998 0.0825 0.15770847"/>
     <axis xyz="0 1 0"/>
     <limit effort="50" lower="-3.4034" upper="1.6581" velocity="4.0"/>
+    <dynamics damping="0.3" friction="0"/>
   </joint>
   <joint name="LShLat" type="revolute">
     <parent link="LShp"/>
@@ -700,6 +720,7 @@ and to define the end effectors of the robot -->
     <origin rpy="0 0 0" xyz="0.0 0.07329999999999999 0.0"/>
     <axis xyz="1 0 0"/>
     <limit effort="50" lower="-0.31415" upper="2.094" velocity="4.0"/>
+    <dynamics damping="0.3" friction="0"/>
   </joint>
   <joint name="LShYaw" type="revolute">
     <parent link="LShr"/>
@@ -707,6 +728,7 @@ and to define the end effectors of the robot -->
     <origin rpy="0 0 0" xyz="0.0 0.0 -0.04480846999999999"/>
     <axis xyz="0 0 1"/>
     <limit effort="50" lower="-1.5708" upper="1.5708" velocity="4.0"/>
+    <dynamics damping="0.3" friction="0"/>
   </joint>
   <joint name="LElbj" type="revolute">
     <parent link="LShy"/>
@@ -714,5 +736,6 @@ and to define the end effectors of the robot -->
     <origin rpy="0 0 0" xyz="0.015 0.0 -0.13519152999999998"/>
     <axis xyz="0 1 0"/>
     <limit effort="50" lower="-2.3562" upper="0.0" velocity="4.0"/>
+    <dynamics damping="0.3" friction="0"/>
   </joint>
 </robot>
