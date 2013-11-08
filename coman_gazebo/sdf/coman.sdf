@@ -1,7 +1,3 @@
-GAZEBO_COMAN_USES_ACCURATE_FT
-true
-GAZEBO_COMAN_USES_ACCURATE_FT
-true
 <?xml version="1.0" encoding="utf-8"?>
 <sdf version="1.4">
  <model name="COMAN">
@@ -799,7 +795,11 @@ true
       4
      </velocity>
     </limit>
-    <dynamics/>
+    <dynamics>
+     <damping>
+      0.3
+     </damping>
+    </dynamics>
    </axis>
    <physics>
     <provide_feedback>
@@ -976,13 +976,6 @@ true
      <boardId>
       2
      </boardId>
-     <!-- WARNING: the inertial properties are at the moment not used by libfakebotFTsensor.so
-			     	    <inertial>
-					    	<origin xyz="0.0 0.0 -0.0325" rpy="0 0 0"/>
-					        <mass value="0.280"/>
-					        <inertia ixx="0.0012944808"  ixy="-9.2387693E-5"  ixz="2.0080105E-4" iyy="0.0015851846" iyz="2.7599327E-4" izz="0.0013326766" />
-					    </inertial>
-					    -->
     </plugin>
    </sensor>
   </joint>
@@ -1672,7 +1665,11 @@ true
       4
      </velocity>
     </limit>
-    <dynamics/>
+    <dynamics>
+     <damping>
+      0.3
+     </damping>
+    </dynamics>
    </axis>
    <physics>
     <provide_feedback>
@@ -1849,13 +1846,6 @@ true
      <boardId>
       1
      </boardId>
-     <!-- WARNING: the inertial properties are at the moment not used by libfakebotFTsensor.so
-			     	    <inertial>
-					    	<origin xyz="0.0 0.0 -0.0325" rpy="0 0 0"/>
-					        <mass value="0.280"/>
-					        <inertia ixx="0.0012944808"  ixy="-9.2387693E-5"  ixz="2.0080105E-4" iyy="0.0015851846" iyz="2.7599327E-4" izz="0.0013326766" />
-					    </inertial>
-					    -->
     </plugin>
    </sensor>
   </joint>

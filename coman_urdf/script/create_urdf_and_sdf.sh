@@ -8,7 +8,7 @@ echo "...urdf correctly created!"
 
 if [ $# -gt 0 ]
   then
-  if [ -a $1 == "ros" ] 
+  if [ $1 == "ros" ] 
     then
       GAZEBO_COMAN_USES_ROS=true
       GAZEBO_COMAN_USES_YARP=false

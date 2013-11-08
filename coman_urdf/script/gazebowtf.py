@@ -23,9 +23,6 @@ if __name__ == '__main__':
   sdf_file = open(soup_wtf.robot['filename'])
   soup_sdf = BeautifulSoup(sdf_file,"xml")
   for wtf_el in soup_wtf.find_all('wtf'):
-    if wtf_el.has_attr('if'):
-      print wtf_el['if']
-      print os.getenv(wtf_el['if'])
     if (not wtf_el.has_attr('if') and not wtf_el.has_attr('unless')) or (wtf_el.has_attr('if') and a2b(os.getenv(wtf_el['if'], False)) or ((wtf_el.has_attr('unless') and not a2b(os.getenv(wtf_el['unless'], False))))):
       for wtf_cond_el in wtf_el.find_all('wtf_cond'):
         if (not wtf_cond_el.has_attr('if') and not wtf_cond_el.has_attr('unless')) or (wtf_cond_el.has_attr('if') and a2b(os.getenv(wtf_cond_el['if'], False))) or ((wtf_cond_el.has_attr('unless') and not a2b(os.getenv(wtf_cond_el['unless'], False)))):
