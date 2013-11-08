@@ -1,3 +1,7 @@
+GAZEBO_COMAN_USES_ACCURATE_FT
+true
+GAZEBO_COMAN_USES_ACCURATE_FT
+true
 <?xml version="1.0" encoding="utf-8"?>
 <sdf version="1.4">
  <model name="COMAN">
@@ -729,16 +733,106 @@
     </ode>
    </physics>
   </joint>
-  <link name="LFoot">
+  <link name="LFootFTSensor">
    <pose>
     0 0.0726 -0.4268 0 -0 0
    </pose>
    <inertial>
     <pose>
-     0.0096921 0.00904602 -0.0430623 0 -0 0
+     0 -0 -0.0325 0 -0 0
     </pose>
     <mass>
-     0.666467
+     0.28
+    </mass>
+    <inertia>
+     <ixx>
+      0.00129448
+     </ixx>
+     <ixy>
+      -9.23877e-05
+     </ixy>
+     <ixz>
+      0.000200801
+     </ixz>
+     <iyy>
+      0.00158518
+     </iyy>
+     <iyz>
+      0.000275993
+     </iyz>
+     <izz>
+      0.00133268
+     </izz>
+    </inertia>
+   </inertial>
+   <velocity_decay>
+    <linear>
+     0
+    </linear>
+    <angular>
+     0
+    </angular>
+   </velocity_decay>
+  </link>
+  <joint name="LAnkSag" type="revolute">
+   <child>
+    LFootFTSensor
+   </child>
+   <parent>
+    LFootmot
+   </parent>
+   <axis>
+    <xyz>
+     0 1 0
+    </xyz>
+    <limit>
+     <lower>
+      -1.2217
+     </lower>
+     <upper>
+      1.2217
+     </upper>
+     <effort>
+      50
+     </effort>
+     <velocity>
+      4
+     </velocity>
+    </limit>
+    <dynamics/>
+   </axis>
+   <physics>
+    <provide_feedback>
+     1
+    </provide_feedback>
+    <ode>
+     <provide_feedback>
+      1
+     </provide_feedback>
+     <cfm_damping>
+      1
+     </cfm_damping>
+     <limit>
+      <cfm>
+       0
+      </cfm>
+      <erp>
+       0.2
+      </erp>
+     </limit>
+    </ode>
+   </physics>
+  </joint>
+  <link name="LFoot">
+   <pose>
+    0 0.0726 -0.4918 0 -0 0
+   </pose>
+   <inertial>
+    <pose>
+     0.0096921 0.00904602 -0.0282 0 -0 0
+    </pose>
+    <mass>
+     0.404
     </mass>
     <inertia>
      <ixx>
@@ -763,7 +857,7 @@
    </inertial>
    <collision name="LFoot_collision">
     <pose>
-     0 -0.0726 -0.0932 0 -0 3.14159
+     0 -0.0726 -0.0282 0 -0 3.14159
     </pose>
     <geometry>
      <mesh>
@@ -809,7 +903,7 @@
    </collision>
    <visual name="LFoot_visual">
     <pose>
-     0 -0.0726 -0.0932 0 -0 3.14159
+     0 -0.0726 -0.0282 0 -0 3.14159
     </pose>
     <geometry>
      <mesh>
@@ -837,12 +931,12 @@
     0
    </self_collide>
   </link>
-  <joint name="LAnkSag" type="revolute">
+  <joint name="LAnkSagFT" type="revolute">
    <child>
     LFoot
    </child>
    <parent>
-    LFootmot
+    LFootFTSensor
    </parent>
    <axis>
     <xyz>
@@ -850,16 +944,16 @@
     </xyz>
     <limit>
      <lower>
-      -1.2217
+      -0
      </lower>
      <upper>
-      1.2217
+      0
      </upper>
      <effort>
-      50
+      0
      </effort>
      <velocity>
-      4
+      0
      </velocity>
     </limit>
     <dynamics>
@@ -868,27 +962,6 @@
      </damping>
     </dynamics>
    </axis>
-   <physics>
-    <provide_feedback>
-     1
-    </provide_feedback>
-    <ode>
-     <provide_feedback>
-      1
-     </provide_feedback>
-     <cfm_damping>
-      1
-     </cfm_damping>
-     <limit>
-      <cfm>
-       0
-      </cfm>
-      <erp>
-       0.2
-      </erp>
-     </limit>
-    </ode>
-   </physics>
    <sensor name="LAnkSag_FT" type="force_torque">
     <always_on>
      true
@@ -899,19 +972,17 @@
     <update_rate>
      1000
     </update_rate>
-    <pose>
-     0 0 -0.065 0 0 0
-    </pose>
     <plugin filename="libfakebotFTsensor.so" name="LAnkSag_FT_plugin">
      <boardId>
       2
      </boardId>
-     <!-- WARNING: the inertial properties are at the moment not used by libfakebotFTsensor.so -->
-     <inertial>
-      <origin rpy="0 0 0" xyz="0.0 0.0 -0.0325"/>
-      <mass value="0.280"/>
-      <inertia ixx="0.0012944808" ixy="-9.2387693E-5" ixz="2.0080105E-4" iyy="0.0015851846" iyz="2.7599327E-4" izz="0.0013326766"/>
-     </inertial>
+     <!-- WARNING: the inertial properties are at the moment not used by libfakebotFTsensor.so
+			     	    <inertial>
+					    	<origin xyz="0.0 0.0 -0.0325" rpy="0 0 0"/>
+					        <mass value="0.280"/>
+					        <inertia ixx="0.0012944808"  ixy="-9.2387693E-5"  ixz="2.0080105E-4" iyy="0.0015851846" iyz="2.7599327E-4" izz="0.0013326766" />
+					    </inertial>
+					    -->
     </plugin>
    </sensor>
   </joint>
@@ -1535,16 +1606,106 @@
     </ode>
    </physics>
   </joint>
-  <link name="RFoot">
+  <link name="RFootFTSensor">
    <pose>
     0 -0.0726 -0.4268 0 -0 0
    </pose>
    <inertial>
     <pose>
-     0.0096921 -0.00904602 -0.0430623 0 -0 0
+     0 -0 -0.0325 0 -0 0
     </pose>
     <mass>
-     0.666467
+     0.28
+    </mass>
+    <inertia>
+     <ixx>
+      0.00129448
+     </ixx>
+     <ixy>
+      0
+     </ixy>
+     <ixz>
+      0.000200801
+     </ixz>
+     <iyy>
+      0.00158518
+     </iyy>
+     <iyz>
+      0.000275993
+     </iyz>
+     <izz>
+      0.00133268
+     </izz>
+    </inertia>
+   </inertial>
+   <velocity_decay>
+    <linear>
+     0
+    </linear>
+    <angular>
+     0
+    </angular>
+   </velocity_decay>
+  </link>
+  <joint name="RAnkSag" type="revolute">
+   <child>
+    RFootFTSensor
+   </child>
+   <parent>
+    RFootmot
+   </parent>
+   <axis>
+    <xyz>
+     0 1 0
+    </xyz>
+    <limit>
+     <lower>
+      -1.2217
+     </lower>
+     <upper>
+      1.2217
+     </upper>
+     <effort>
+      50
+     </effort>
+     <velocity>
+      4
+     </velocity>
+    </limit>
+    <dynamics/>
+   </axis>
+   <physics>
+    <provide_feedback>
+     1
+    </provide_feedback>
+    <ode>
+     <provide_feedback>
+      1
+     </provide_feedback>
+     <cfm_damping>
+      1
+     </cfm_damping>
+     <limit>
+      <cfm>
+       0
+      </cfm>
+      <erp>
+       0.2
+      </erp>
+     </limit>
+    </ode>
+   </physics>
+  </joint>
+  <link name="RFoot">
+   <pose>
+    0 -0.0726 -0.4918 0 -0 0
+   </pose>
+   <inertial>
+    <pose>
+     0.0096921 -0.00904602 -0.0282 0 -0 0
+    </pose>
+    <mass>
+     0.404
     </mass>
     <inertia>
      <ixx>
@@ -1569,7 +1730,7 @@
    </inertial>
    <collision name="RFoot_collision">
     <pose>
-     0 0.0726 -0.0932 0 -0 3.14159
+     0 0.0726 -0.0282 0 -0 3.14159
     </pose>
     <geometry>
      <mesh>
@@ -1615,7 +1776,7 @@
    </collision>
    <visual name="RFoot_visual">
     <pose>
-     0 0.0726 -0.0932 0 -0 3.14159
+     0 0.0726 -0.0282 0 -0 3.14159
     </pose>
     <geometry>
      <mesh>
@@ -1643,12 +1804,12 @@
     0
    </self_collide>
   </link>
-  <joint name="RAnkSag" type="revolute">
+  <joint name="RAnkSagFT" type="revolute">
    <child>
     RFoot
    </child>
    <parent>
-    RFootmot
+    RFootFTSensor
    </parent>
    <axis>
     <xyz>
@@ -1656,16 +1817,16 @@
     </xyz>
     <limit>
      <lower>
-      -1.2217
+      -0
      </lower>
      <upper>
-      1.2217
+      0
      </upper>
      <effort>
-      50
+      0
      </effort>
      <velocity>
-      4
+      0
      </velocity>
     </limit>
     <dynamics>
@@ -1674,27 +1835,6 @@
      </damping>
     </dynamics>
    </axis>
-   <physics>
-    <provide_feedback>
-     1
-    </provide_feedback>
-    <ode>
-     <provide_feedback>
-      1
-     </provide_feedback>
-     <cfm_damping>
-      1
-     </cfm_damping>
-     <limit>
-      <cfm>
-       0
-      </cfm>
-      <erp>
-       0.2
-      </erp>
-     </limit>
-    </ode>
-   </physics>
    <sensor name="RAnkSag_FT" type="force_torque">
     <always_on>
      true
@@ -1705,19 +1845,17 @@
     <update_rate>
      1000
     </update_rate>
-    <pose>
-     0 0 -0.065 0 0 0
-    </pose>
     <plugin filename="libfakebotFTsensor.so" name="RAnkSag_FT_plugin">
      <boardId>
       1
      </boardId>
-     <!-- WARNING: the inertial properties are at the moment not used by libfakebotFTsensor.so -->
-     <inertial>
-      <origin rpy="0 0 0" xyz="0.0 0.0 -0.0325"/>
-      <mass value="0.280"/>
-      <inertia ixx="0.0012944808" ixy="-9.2387693E-5" ixz="2.0080105E-4" iyy="0.0015851846" iyz="2.7599327E-4" izz="0.0013326766"/>
-     </inertial>
+     <!-- WARNING: the inertial properties are at the moment not used by libfakebotFTsensor.so
+			     	    <inertial>
+					    	<origin xyz="0.0 0.0 -0.0325" rpy="0 0 0"/>
+					        <mass value="0.280"/>
+					        <inertia ixx="0.0012944808"  ixy="-9.2387693E-5"  ixz="2.0080105E-4" iyy="0.0015851846" iyz="2.7599327E-4" izz="0.0013326766" />
+					    </inertial>
+					    -->
     </plugin>
    </sensor>
   </joint>

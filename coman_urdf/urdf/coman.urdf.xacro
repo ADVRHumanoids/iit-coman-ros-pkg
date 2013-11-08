@@ -225,7 +225,7 @@ and to define the end effectors of the robot -->
     </collision>
   </link>
 
-  <xacro:unless value="$(optenv WIP_FT_ACCURATE_POSITIONING false)">
+  <xacro:unless value="$(optenv GAZEBO_COMAN_USES_ACCURATE_FT false)">
     <link name ="RFoot">
       <inertial>
         <origin xyz="0.00969210464 -0.0090460227 -0.043062308" rpy="0 0 0"/>
@@ -247,12 +247,12 @@ and to define the end effectors of the robot -->
     </link>
   </xacro:unless>
 
-  <xacro:if value="$(optenv WIP_FT_ACCURATE_POSITIONING false)">
+  <xacro:if value="$(optenv GAZEBO_COMAN_USES_ACCURATE_FT false)">
     <link name ="RFootFTSensor">
       <inertial>
         <origin xyz="0.0 -0.0 -0.0325" rpy="0 0 0"/>
         <mass value="0.280"/>
-        <inertia ixx="0.0012944808"  ixy="-9.2387693E-5"  ixz="2.0080105E-4" iyy="0.0015851846" iyz="2.7599327E-4" izz="0.0013326766" />
+        <inertia ixx="0.0012944808"  ixy="0.0"  ixz="2.0080105E-4" iyy="0.0015851846" iyz="2.7599327E-4" izz="0.0013326766" />
       </inertial>
     </link>
 
@@ -379,7 +379,7 @@ and to define the end effectors of the robot -->
     </collision>
   </link>
 
-  <xacro:unless value="$(optenv WIP_FT_ACCURATE_POSITIONING false)">  
+  <xacro:unless value="$(optenv GAZEBO_COMAN_USES_ACCURATE_FT false)">  
     <link name ="LFoot">
       <inertial>
         <origin xyz="0.0096921046 0.0090460227 -0.043062308" rpy="0 0 0"/>
@@ -401,7 +401,7 @@ and to define the end effectors of the robot -->
     </link>
   </xacro:unless>
 
-  <xacro:if value="$(optenv WIP_FT_ACCURATE_POSITIONING false)">
+  <xacro:if value="$(optenv GAZEBO_COMAN_USES_ACCURATE_FT false)">
     <link name ="LFootFTSensor">
       <inertial>
         <origin xyz="0.0 -0.0 -0.0325" rpy="0 0 0"/>
@@ -734,7 +734,7 @@ and to define the end effectors of the robot -->
     <dynamics friction="0" damping="0.3"/> 
   </joint>
 
-  <xacro:unless value="$(optenv WIP_FT_ACCURATE_POSITIONING false)">
+  <xacro:unless value="$(optenv GAZEBO_COMAN_USES_ACCURATE_FT false)">
     <joint name="RAnkSag" type="revolute">
       <parent link="RFootmot"/>
       <child link="RFoot"/>
@@ -745,7 +745,7 @@ and to define the end effectors of the robot -->
     </joint>
   </xacro:unless>
 
-  <xacro:if value="$(optenv WIP_FT_ACCURATE_POSITIONING false)">
+  <xacro:if value="$(optenv GAZEBO_COMAN_USES_ACCURATE_FT false)">
     <joint name="RAnkSag" type="revolute">
       <parent link="RFootmot"/>
       <child link="RFootFTSensor"/>
@@ -814,7 +814,7 @@ and to define the end effectors of the robot -->
     <dynamics friction="0" damping="0.3"/>
   </joint>
 
-  <xacro:unless value="$(optenv WIP_FT_ACCURATE_POSITIONING false)">
+  <xacro:unless value="$(optenv GAZEBO_COMAN_USES_ACCURATE_FT false)">
     <joint name="LAnkSag" type="revolute">
       <parent link="LFootmot"/>
       <child link="LFoot"/>
@@ -825,7 +825,7 @@ and to define the end effectors of the robot -->
     </joint>
   </xacro:unless>
 
-  <xacro:if value="$(optenv WIP_FT_ACCURATE_POSITIONING false)">
+  <xacro:if value="$(optenv GAZEBO_COMAN_USES_ACCURATE_FT false)">
     <joint name="LAnkSag" type="revolute">
       <parent link="LFootmot"/>
       <child link="LFootFTSensor"/>

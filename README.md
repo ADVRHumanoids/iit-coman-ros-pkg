@@ -18,12 +18,18 @@ The script has to be called in script/ folder:
 ```
 ./create_urdf_and_sdf.sh
 ```
-if called without any argument the coman_robot.urdf.xacro description will be parsed and copied. 
-If the ROS independent version has to be parsed and copied then run:
+if called without any argument the coman sdf with yarp plugins is generated. This version uses FT sensors that are defined as children of underactuated joints, added specifically to create a frame for accurate reading, and to take into account the bias given by the sensor's inertia. 
+If called with the ros argument
 ```
 ./create_urdf_and_sdf.sh ros
 ```
-The actual version of COMAN does not have springs and sensors.
+an sdf will be created that includes the ros plugins, and the FT sensor will be defined at the actuated joints nearest to the actual position of the FT sensor in the real robot, so that the frame of reading is not accurate and a bias exists given by the uncompensated inertia of the sensor.
+By running
+```
+./create_urdf_and_sdf.sh ros_accurate_ft
+```
+a sdf version of the robot is created containing ros plugins, and the FT sensor is placed in the correct pose by using the underactuated joint as in the case for the version of the sdf intended to be used with YARP. 
+A bare sdf is not generated, but a bare version of the COMAN urdf (coman.urdf), not containing plugins and sensors, is generated, which is intended for use with external libraries needing a kinematically and dinamically accurate description of the robot in urdf format.
 
 coman_gazebo:
 -------------
