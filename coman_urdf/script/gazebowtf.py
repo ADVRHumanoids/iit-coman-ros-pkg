@@ -25,7 +25,7 @@ if __name__ == '__main__':
   for wtf_el in soup_wtf.find_all('wtf'):
     if (not wtf_el.has_attr('if') and not wtf_el.has_attr('unless')) or (wtf_el.has_attr('if') and a2b(os.getenv(wtf_el['if'], False)) or ((wtf_el.has_attr('unless') and not a2b(os.getenv(wtf_el['unless'], False))))):
       for wtf_cond_el in wtf_el.find_all('wtf_cond'):
-        if (not wtf_cond_el.has_attr('if') and not wtf_cond_el.has_attr('unless')) or (wtf_cond_el.has_attr('if') and a2b(os.getenv(wtf_cond_el['if'], False))) or ((wtf_cond_el.has_attr('unless') and not a2b(os.getenv(wtf_cond_el['unless'], False)))):
+        if (wtf_cond_el.has_attr('if') and a2b(os.getenv(wtf_cond_el['if'], False))) or ((wtf_cond_el.has_attr('unless') and not a2b(os.getenv(wtf_cond_el['unless'], False))):
           wtf_cond_el.unwrap()
         else:
           wtf_cond_el.decompose()
