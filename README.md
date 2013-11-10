@@ -18,7 +18,12 @@ The script has to be called in script/ folder:
 ```
 ./create_urdf_and_sdf.sh
 ```
-if called without any argument the coman sdf with yarp plugins is generated. This version uses FT sensors that are defined as children of underactuated joints, added specifically to create a frame for accurate reading, and to take into account the bias given by the sensor's inertia. 
+if called without any argument the coman sdf with yarp plugins is generated. 
+If called with the yarp_accurate_ft
+```
+./create_urdf_and_sdf.sh yarp_accurate_ft
+```
+a sdf version of the robot is created containing yarp plugins, and FT sensors are defined as children of underactuated joints, added specifically to create a frame for accurate reading, and to take into account the bias given by the sensor's inertia. 
 If called with the ros argument
 ```
 ./create_urdf_and_sdf.sh ros

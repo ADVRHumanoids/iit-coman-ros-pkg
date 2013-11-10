@@ -729,23 +729,23 @@
     </ode>
    </physics>
   </joint>
-  <link name="LFootFTSensor">
+  <link name="LFoot">
    <pose>
     0 0.0726 -0.4268 0 -0 0
    </pose>
    <inertial>
     <pose>
-     0 -0 -0.0325 0 -0 0
+     0.0096921 0.00904602 -0.0430623 0 -0 0
     </pose>
     <mass>
-     0.28
+     0.666467
     </mass>
     <inertia>
      <ixx>
       0.00129448
      </ixx>
      <ixy>
-      -9.23877e-05
+      9.23877e-05
      </ixy>
      <ixz>
       0.000200801
@@ -754,13 +754,77 @@
       0.00158518
      </iyy>
      <iyz>
-      0.000275993
+      -0.000275993
      </iyz>
      <izz>
       0.00133268
      </izz>
     </inertia>
    </inertial>
+   <collision name="LFoot_collision">
+    <pose>
+     0 -0.0726 -0.0932 0 -0 3.14159
+    </pose>
+    <geometry>
+     <mesh>
+      <scale>
+       0.03937 0.03937 0.03937
+      </scale>
+      <uri>
+       model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_01_prt.dae
+      </uri>
+     </mesh>
+    </geometry>
+    <surface>
+     <contact>
+      <ode>
+       <kp>
+        1e+06
+       </kp>
+       <kd>
+        100
+       </kd>
+       <max_vel>
+        1
+       </max_vel>
+       <min_depth>
+        0
+       </min_depth>
+      </ode>
+     </contact>
+     <friction>
+      <ode>
+       <mu>
+        1
+       </mu>
+       <mu2>
+        1
+       </mu2>
+       <fdir1>
+        1 0 0
+       </fdir1>
+      </ode>
+     </friction>
+    </surface>
+   </collision>
+   <visual name="LFoot_visual">
+    <pose>
+     0 -0.0726 -0.0932 0 -0 3.14159
+    </pose>
+    <geometry>
+     <mesh>
+      <scale>
+       0.03937 0.03937 0.03937
+      </scale>
+      <uri>
+       model://coman_urdf/meshes/collada/asm0001_collada_01_prt.dae
+      </uri>
+     </mesh>
+    </geometry>
+   </visual>
+   <gravity>
+    1
+   </gravity>
    <velocity_decay>
     <linear>
      0
@@ -769,10 +833,13 @@
      0
     </angular>
    </velocity_decay>
+   <self_collide>
+    0
+   </self_collide>
   </link>
   <joint name="LAnkSag" type="revolute">
    <child>
-    LFootFTSensor
+    LFoot
    </child>
    <parent>
     LFootmot
@@ -822,146 +889,6 @@
      </limit>
     </ode>
    </physics>
-  </joint>
-  <link name="LFoot">
-   <pose>
-    0 0.0726 -0.4918 0 -0 0
-   </pose>
-   <inertial>
-    <pose>
-     0.0096921 0.00904602 -0.0282 0 -0 0
-    </pose>
-    <mass>
-     0.404
-    </mass>
-    <inertia>
-     <ixx>
-      0.00129448
-     </ixx>
-     <ixy>
-      9.23877e-05
-     </ixy>
-     <ixz>
-      0.000200801
-     </ixz>
-     <iyy>
-      0.00158518
-     </iyy>
-     <iyz>
-      -0.000275993
-     </iyz>
-     <izz>
-      0.00133268
-     </izz>
-    </inertia>
-   </inertial>
-   <collision name="LFoot_collision">
-    <pose>
-     0 -0.0726 -0.0282 0 -0 3.14159
-    </pose>
-    <geometry>
-     <mesh>
-      <scale>
-       0.03937 0.03937 0.03937
-      </scale>
-      <uri>
-       model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_01_prt.dae
-      </uri>
-     </mesh>
-    </geometry>
-    <surface>
-     <contact>
-      <ode>
-       <kp>
-        1e+06
-       </kp>
-       <kd>
-        100
-       </kd>
-       <max_vel>
-        1
-       </max_vel>
-       <min_depth>
-        0
-       </min_depth>
-      </ode>
-     </contact>
-     <friction>
-      <ode>
-       <mu>
-        1
-       </mu>
-       <mu2>
-        1
-       </mu2>
-       <fdir1>
-        1 0 0
-       </fdir1>
-      </ode>
-     </friction>
-    </surface>
-   </collision>
-   <visual name="LFoot_visual">
-    <pose>
-     0 -0.0726 -0.0282 0 -0 3.14159
-    </pose>
-    <geometry>
-     <mesh>
-      <scale>
-       0.03937 0.03937 0.03937
-      </scale>
-      <uri>
-       model://coman_urdf/meshes/collada/asm0001_collada_01_prt.dae
-      </uri>
-     </mesh>
-    </geometry>
-   </visual>
-   <gravity>
-    1
-   </gravity>
-   <velocity_decay>
-    <linear>
-     0
-    </linear>
-    <angular>
-     0
-    </angular>
-   </velocity_decay>
-   <self_collide>
-    0
-   </self_collide>
-  </link>
-  <joint name="LAnkSagFT" type="revolute">
-   <child>
-    LFoot
-   </child>
-   <parent>
-    LFootFTSensor
-   </parent>
-   <axis>
-    <xyz>
-     0 1 0
-    </xyz>
-    <limit>
-     <lower>
-      -0
-     </lower>
-     <upper>
-      0
-     </upper>
-     <effort>
-      0
-     </effort>
-     <velocity>
-      0
-     </velocity>
-    </limit>
-    <dynamics>
-     <damping>
-      0.3
-     </damping>
-    </dynamics>
-   </axis>
    <sensor name="LAnkSag_FT" type="force_torque">
     <always_on>
      true
@@ -972,6 +899,9 @@
     <update_rate>
      1000
     </update_rate>
+    <pose>
+     0 0 -0.065 0 0 0
+    </pose>
     <plugin filename="libfakebotFTsensor.so" name="LAnkSag_FT_plugin">
      <boardId>
       2
@@ -1599,23 +1529,23 @@
     </ode>
    </physics>
   </joint>
-  <link name="RFootFTSensor">
+  <link name="RFoot">
    <pose>
     0 -0.0726 -0.4268 0 -0 0
    </pose>
    <inertial>
     <pose>
-     0 -0 -0.0325 0 -0 0
+     0.0096921 -0.00904602 -0.0430623 0 -0 0
     </pose>
     <mass>
-     0.28
+     0.666467
     </mass>
     <inertia>
      <ixx>
       0.00129448
      </ixx>
      <ixy>
-      0
+      -9.23877e-05
      </ixy>
      <ixz>
       0.000200801
@@ -1631,6 +1561,70 @@
      </izz>
     </inertia>
    </inertial>
+   <collision name="RFoot_collision">
+    <pose>
+     0 0.0726 -0.0932 0 -0 3.14159
+    </pose>
+    <geometry>
+     <mesh>
+      <scale>
+       0.03937 0.03937 0.03937
+      </scale>
+      <uri>
+       model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_15_prt.dae
+      </uri>
+     </mesh>
+    </geometry>
+    <surface>
+     <contact>
+      <ode>
+       <kp>
+        1e+06
+       </kp>
+       <kd>
+        100
+       </kd>
+       <max_vel>
+        1
+       </max_vel>
+       <min_depth>
+        0
+       </min_depth>
+      </ode>
+     </contact>
+     <friction>
+      <ode>
+       <mu>
+        1
+       </mu>
+       <mu2>
+        1
+       </mu2>
+       <fdir1>
+        1 0 0
+       </fdir1>
+      </ode>
+     </friction>
+    </surface>
+   </collision>
+   <visual name="RFoot_visual">
+    <pose>
+     0 0.0726 -0.0932 0 -0 3.14159
+    </pose>
+    <geometry>
+     <mesh>
+      <scale>
+       0.03937 0.03937 0.03937
+      </scale>
+      <uri>
+       model://coman_urdf/meshes/collada/asm0001_collada_15_prt.dae
+      </uri>
+     </mesh>
+    </geometry>
+   </visual>
+   <gravity>
+    1
+   </gravity>
    <velocity_decay>
     <linear>
      0
@@ -1639,10 +1633,13 @@
      0
     </angular>
    </velocity_decay>
+   <self_collide>
+    0
+   </self_collide>
   </link>
   <joint name="RAnkSag" type="revolute">
    <child>
-    RFootFTSensor
+    RFoot
    </child>
    <parent>
     RFootmot
@@ -1692,146 +1689,6 @@
      </limit>
     </ode>
    </physics>
-  </joint>
-  <link name="RFoot">
-   <pose>
-    0 -0.0726 -0.4918 0 -0 0
-   </pose>
-   <inertial>
-    <pose>
-     0.0096921 -0.00904602 -0.0282 0 -0 0
-    </pose>
-    <mass>
-     0.404
-    </mass>
-    <inertia>
-     <ixx>
-      0.00129448
-     </ixx>
-     <ixy>
-      -9.23877e-05
-     </ixy>
-     <ixz>
-      0.000200801
-     </ixz>
-     <iyy>
-      0.00158518
-     </iyy>
-     <iyz>
-      0.000275993
-     </iyz>
-     <izz>
-      0.00133268
-     </izz>
-    </inertia>
-   </inertial>
-   <collision name="RFoot_collision">
-    <pose>
-     0 0.0726 -0.0282 0 -0 3.14159
-    </pose>
-    <geometry>
-     <mesh>
-      <scale>
-       0.03937 0.03937 0.03937
-      </scale>
-      <uri>
-       model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_15_prt.dae
-      </uri>
-     </mesh>
-    </geometry>
-    <surface>
-     <contact>
-      <ode>
-       <kp>
-        1e+06
-       </kp>
-       <kd>
-        100
-       </kd>
-       <max_vel>
-        1
-       </max_vel>
-       <min_depth>
-        0
-       </min_depth>
-      </ode>
-     </contact>
-     <friction>
-      <ode>
-       <mu>
-        1
-       </mu>
-       <mu2>
-        1
-       </mu2>
-       <fdir1>
-        1 0 0
-       </fdir1>
-      </ode>
-     </friction>
-    </surface>
-   </collision>
-   <visual name="RFoot_visual">
-    <pose>
-     0 0.0726 -0.0282 0 -0 3.14159
-    </pose>
-    <geometry>
-     <mesh>
-      <scale>
-       0.03937 0.03937 0.03937
-      </scale>
-      <uri>
-       model://coman_urdf/meshes/collada/asm0001_collada_15_prt.dae
-      </uri>
-     </mesh>
-    </geometry>
-   </visual>
-   <gravity>
-    1
-   </gravity>
-   <velocity_decay>
-    <linear>
-     0
-    </linear>
-    <angular>
-     0
-    </angular>
-   </velocity_decay>
-   <self_collide>
-    0
-   </self_collide>
-  </link>
-  <joint name="RAnkSagFT" type="revolute">
-   <child>
-    RFoot
-   </child>
-   <parent>
-    RFootFTSensor
-   </parent>
-   <axis>
-    <xyz>
-     0 1 0
-    </xyz>
-    <limit>
-     <lower>
-      -0
-     </lower>
-     <upper>
-      0
-     </upper>
-     <effort>
-      0
-     </effort>
-     <velocity>
-      0
-     </velocity>
-    </limit>
-    <dynamics>
-     <damping>
-      0.3
-     </damping>
-    </dynamics>
-   </axis>
    <sensor name="RAnkSag_FT" type="force_torque">
     <always_on>
      true
@@ -1842,6 +1699,9 @@
     <update_rate>
      1000
     </update_rate>
+    <pose>
+     0 0 -0.065 0 0 0
+    </pose>
     <plugin filename="libfakebotFTsensor.so" name="RAnkSag_FT_plugin">
      <boardId>
       1

@@ -20,11 +20,17 @@ if [ $# -gt 0 ]
       GAZEBO_COMAN_USES_YARP=false
       GAZEBO_COMAN_USES_ACCURATE_FT=true
       echo "Creating urdf of coman_robot.urdf.xacro with ROS plugins using accurate ft sensor description"
+  elif [ $1 == "yarp_accurate_ft" ] 
+    then
+      GAZEBO_COMAN_USES_ROS=false
+      GAZEBO_COMAN_USES_YARP=true
+      GAZEBO_COMAN_USES_ACCURATE_FT=true
+      echo "Creating urdf of coman_robot.urdf.xacro with YARP plugins using accurate ft sensor description"
   fi
 else
     GAZEBO_COMAN_USES_ROS=false
     GAZEBO_COMAN_USES_YARP=true
-    GAZEBO_COMAN_USES_ACCURATE_FT=true
+    GAZEBO_COMAN_USES_ACCURATE_FT=false
     echo "Creating urdf of coman_robot.urdf.xacro with YARP plugins"
 fi
 
