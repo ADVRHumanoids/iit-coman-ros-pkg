@@ -12,7 +12,7 @@ Every time one of these files are changed you have to use the script inside the 
 coman_gazebo/sdf and in your /home/user/.gazebo/models folders. 
 Before using the script check the dependency on BeautifulSoup4:
 ```
-sudo apt-get install python-bs4
+sudo easy_install beautifulsoup4
 ```
 The script has to be called in script/ folder:
 ```
