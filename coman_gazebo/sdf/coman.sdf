@@ -103,7 +103,7 @@
      __default_topic__
     </topic>
     <imu/>
-    <plugin filename="libfakebotIMUplugin.so" name="coman_yarp_gazebo_plugin_IMU"/>
+    <plugin filename="libgazebo_yarp_imu.so" name="coman_yarp_gazebo_plugin_IMU"/>
     <pose>
      -0.072 -0.0068 0.044 0 -0 0
     </pose>
@@ -902,7 +902,7 @@
     <pose>
      0 0 -0.065 0 0 0
     </pose>
-    <plugin filename="libfakebotFTsensor.so" name="LAnkSag_FT_plugin">
+    <plugin filename="libgazebo_yarp_forcetorque.so" name="LAnkSag_FT_plugin">
      <boardId>
       2
      </boardId>
@@ -1702,7 +1702,7 @@
     <pose>
      0 0 -0.065 0 0 0
     </pose>
-    <plugin filename="libfakebotFTsensor.so" name="RAnkSag_FT_plugin">
+    <plugin filename="libgazebo_yarp_forcetorque.so" name="RAnkSag_FT_plugin">
      <boardId>
       1
      </boardId>
