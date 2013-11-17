@@ -219,6 +219,9 @@
      <provide_feedback>
       1
      </provide_feedback>
+     <implicit_spring_damper>
+      1
+     </implicit_spring_damper>
      <cfm_damping>
       1
      </cfm_damping>
@@ -343,6 +346,9 @@
      <provide_feedback>
       1
      </provide_feedback>
+     <implicit_spring_damper>
+      1
+     </implicit_spring_damper>
      <cfm_damping>
       1
      </cfm_damping>
@@ -467,6 +473,9 @@
      <provide_feedback>
       1
      </provide_feedback>
+     <implicit_spring_damper>
+      1
+     </implicit_spring_damper>
      <cfm_damping>
       1
      </cfm_damping>
@@ -591,6 +600,9 @@
      <provide_feedback>
       1
      </provide_feedback>
+     <implicit_spring_damper>
+      1
+     </implicit_spring_damper>
      <cfm_damping>
       1
      </cfm_damping>
@@ -715,6 +727,9 @@
      <provide_feedback>
       1
      </provide_feedback>
+     <implicit_spring_damper>
+      1
+     </implicit_spring_damper>
      <cfm_damping>
       1
      </cfm_damping>
@@ -876,6 +891,9 @@
      <provide_feedback>
       1
      </provide_feedback>
+     <implicit_spring_damper>
+      1
+     </implicit_spring_damper>
      <cfm_damping>
       1
      </cfm_damping>
@@ -1019,6 +1037,9 @@
      <provide_feedback>
       1
      </provide_feedback>
+     <implicit_spring_damper>
+      1
+     </implicit_spring_damper>
      <cfm_damping>
       1
      </cfm_damping>
@@ -1143,6 +1164,9 @@
      <provide_feedback>
       1
      </provide_feedback>
+     <implicit_spring_damper>
+      1
+     </implicit_spring_damper>
      <cfm_damping>
       1
      </cfm_damping>
@@ -1267,6 +1291,9 @@
      <provide_feedback>
       1
      </provide_feedback>
+     <implicit_spring_damper>
+      1
+     </implicit_spring_damper>
      <cfm_damping>
       1
      </cfm_damping>
@@ -1391,6 +1418,9 @@
      <provide_feedback>
       1
      </provide_feedback>
+     <implicit_spring_damper>
+      1
+     </implicit_spring_damper>
      <cfm_damping>
       1
      </cfm_damping>
@@ -1515,6 +1545,9 @@
      <provide_feedback>
       1
      </provide_feedback>
+     <implicit_spring_damper>
+      1
+     </implicit_spring_damper>
      <cfm_damping>
       1
      </cfm_damping>
@@ -1676,6 +1709,9 @@
      <provide_feedback>
       1
      </provide_feedback>
+     <implicit_spring_damper>
+      1
+     </implicit_spring_damper>
      <cfm_damping>
       1
      </cfm_damping>
@@ -1819,6 +1855,9 @@
      <provide_feedback>
       1
      </provide_feedback>
+     <implicit_spring_damper>
+      1
+     </implicit_spring_damper>
      <cfm_damping>
       1
      </cfm_damping>
@@ -1943,6 +1982,9 @@
      <provide_feedback>
       1
      </provide_feedback>
+     <implicit_spring_damper>
+      1
+     </implicit_spring_damper>
      <cfm_damping>
       1
      </cfm_damping>
@@ -2067,6 +2109,9 @@
      <provide_feedback>
       1
      </provide_feedback>
+     <implicit_spring_damper>
+      1
+     </implicit_spring_damper>
      <cfm_damping>
       1
      </cfm_damping>
@@ -2191,6 +2236,9 @@
      <provide_feedback>
       1
      </provide_feedback>
+     <implicit_spring_damper>
+      1
+     </implicit_spring_damper>
      <cfm_damping>
       1
      </cfm_damping>
@@ -2315,6 +2363,9 @@
      <provide_feedback>
       1
      </provide_feedback>
+     <implicit_spring_damper>
+      1
+     </implicit_spring_damper>
      <cfm_damping>
       1
      </cfm_damping>
@@ -2439,6 +2490,9 @@
      <provide_feedback>
       1
      </provide_feedback>
+     <implicit_spring_damper>
+      1
+     </implicit_spring_damper>
      <cfm_damping>
       1
      </cfm_damping>
@@ -2459,29 +2513,29 @@
    </pose>
    <inertial>
     <pose>
-     -0.000655534 0.000934647 -0.000931013 0 -0 0
+     -0.00486569 0.000660325 -0.0402808 0 -0 0
     </pose>
     <mass>
-     0.633069
+     0.896069
     </mass>
     <inertia>
      <ixx>
-      0.000225991
+      0.00425727
      </ixx>
      <ixy>
-      2.63765e-07
+      -2.22737e-06
      </ixy>
      <ixz>
-      -9.80073e-06
+      -0.000367138
      </ixz>
      <iyy>
-      0.000277813
+      0.00434716
      </iyy>
      <iyz>
-      2.04353e-06
+      -2.12396e-05
      </iyz>
      <izz>
-      0.00021879
+      0.00029761
      </izz>
     </inertia>
    </inertial>
@@ -2563,6 +2617,9 @@
      <provide_feedback>
       1
      </provide_feedback>
+     <implicit_spring_damper>
+      1
+     </implicit_spring_damper>
      <cfm_damping>
       1
      </cfm_damping>
@@ -2687,6 +2744,9 @@
      <provide_feedback>
       1
      </provide_feedback>
+     <implicit_spring_damper>
+      1
+     </implicit_spring_damper>
      <cfm_damping>
       1
      </cfm_damping>
@@ -2811,6 +2871,9 @@
      <provide_feedback>
       1
      </provide_feedback>
+     <implicit_spring_damper>
+      1
+     </implicit_spring_damper>
      <cfm_damping>
       1
      </cfm_damping>
@@ -2935,6 +2998,9 @@
      <provide_feedback>
       1
      </provide_feedback>
+     <implicit_spring_damper>
+      1
+     </implicit_spring_damper>
      <cfm_damping>
       1
      </cfm_damping>
@@ -2955,29 +3021,29 @@
    </pose>
    <inertial>
     <pose>
-     -0.000655534 -0.000934647 -0.000931013 0 -0 0
+     -0.00486569 -0.000660325 -0.0402808 0 -0 0
     </pose>
     <mass>
-     0.633069
+     0.896069
     </mass>
     <inertia>
      <ixx>
-      0.000225991
+      0.00425727
      </ixx>
      <ixy>
-      -2.63765e-07
+      2.22737e-06
      </ixy>
      <ixz>
-      -9.80073e-06
+      -0.000367138
      </ixz>
      <iyy>
-      0.000277813
+      0.00434716
      </iyy>
      <iyz>
-      -2.04353e-06
+      2.12396e-05
      </iyz>
      <izz>
-      0.00021879
+      0.00029761
      </izz>
     </inertia>
    </inertial>
@@ -3059,6 +3125,9 @@
      <provide_feedback>
       1
      </provide_feedback>
+     <implicit_spring_damper>
+      1
+     </implicit_spring_damper>
      <cfm_damping>
       1
      </cfm_damping>

@@ -419,6 +419,13 @@ and to define the end effectors of the robot -->
       </geometry>
     </collision>
   </link>
+  <link name="RForearm">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 -0.085"/>
+      <mass value="0.263"/>
+      <inertia ixx="6.913E-4" ixy="0.0" ixz="0.0" iyy="6.913E-4" iyz="0.0" izz="4.0425E-5"/>
+    </inertial>
+  </link>
   <!-- ********************LEFT ARM******************** -->
   <link name="LShp">
     <inertial>
@@ -495,6 +502,13 @@ and to define the end effectors of the robot -->
         <mesh filename="package://coman_urdf/meshes/collada/simple/simple_asm0001_collada_11_prt.dae" scale="0.03937 0.03937 0.03937"/>
       </geometry>
     </collision>
+  </link>
+  <link name="LForearm">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 -0.085"/>
+      <mass value="0.263"/>
+      <inertia ixx="6.913E-4" ixy="0.0" ixz="0.0" iyy="6.913E-4" iyz="0.0" izz="4.0425E-5"/>
+    </inertial>
   </link>
   <!-- ********************JOINTS******************** -->
   <joint name="base_joint" type="fixed">
@@ -705,6 +719,11 @@ and to define the end effectors of the robot -->
     <limit effort="50" lower="-2.3562" upper="0.0" velocity="4.0"/>
     <dynamics damping="0.3" friction="0"/>
   </joint>
+  <joint name="RForearmPlate" type="fixed">
+    <parent link="RElb"/>
+    <child link="RForearm"/>
+    <origin rpy="0 0 0" xyz="-0.015 0.0 -0.05"/>
+  </joint>
   <!-- ********************LEFT ARM******************** -->
   <joint name="LShSag" type="revolute">
     <parent link="DWYTorso"/>
@@ -737,5 +756,10 @@ and to define the end effectors of the robot -->
     <axis xyz="0 1 0"/>
     <limit effort="50" lower="-2.3562" upper="0.0" velocity="4.0"/>
     <dynamics damping="0.3" friction="0"/>
+  </joint>
+  <joint name="LForearmPlate" type="fixed">
+    <parent link="LElb"/>
+    <child link="LForearm"/>
+    <origin rpy="0 0 0" xyz="-0.015 0.0 -0.05"/>
   </joint>
 </robot>
