@@ -207,7 +207,7 @@
     </limit>
     <dynamics>
      <damping>
-      0.3
+      3
      </damping>
     </dynamics>
    </axis>
@@ -334,7 +334,7 @@
     </limit>
     <dynamics>
      <damping>
-      0.3
+      3
      </damping>
     </dynamics>
    </axis>
@@ -461,7 +461,7 @@
     </limit>
     <dynamics>
      <damping>
-      0.3
+      3
      </damping>
     </dynamics>
    </axis>
@@ -588,7 +588,7 @@
     </limit>
     <dynamics>
      <damping>
-      0.3
+      3
      </damping>
     </dynamics>
    </axis>
@@ -715,7 +715,7 @@
     </limit>
     <dynamics>
      <damping>
-      0.3
+      3
      </damping>
     </dynamics>
    </axis>
@@ -879,7 +879,7 @@
     </limit>
     <dynamics>
      <damping>
-      0.3
+      3
      </damping>
     </dynamics>
    </axis>
@@ -1025,7 +1025,7 @@
     </limit>
     <dynamics>
      <damping>
-      0.3
+      3
      </damping>
     </dynamics>
    </axis>
@@ -1152,7 +1152,7 @@
     </limit>
     <dynamics>
      <damping>
-      0.3
+      3
      </damping>
     </dynamics>
    </axis>
@@ -1279,7 +1279,7 @@
     </limit>
     <dynamics>
      <damping>
-      0.3
+      3
      </damping>
     </dynamics>
    </axis>
@@ -1406,7 +1406,7 @@
     </limit>
     <dynamics>
      <damping>
-      0.3
+      3
      </damping>
     </dynamics>
    </axis>
@@ -1533,7 +1533,7 @@
     </limit>
     <dynamics>
      <damping>
-      0.3
+      3
      </damping>
     </dynamics>
    </axis>
@@ -1697,7 +1697,7 @@
     </limit>
     <dynamics>
      <damping>
-      0.3
+      3
      </damping>
     </dynamics>
    </axis>
@@ -1843,7 +1843,7 @@
     </limit>
     <dynamics>
      <damping>
-      0.3
+      3
      </damping>
     </dynamics>
    </axis>
@@ -1970,7 +1970,7 @@
     </limit>
     <dynamics>
      <damping>
-      0.3
+      3
      </damping>
     </dynamics>
    </axis>
@@ -2097,7 +2097,7 @@
     </limit>
     <dynamics>
      <damping>
-      0.3
+      3
      </damping>
     </dynamics>
    </axis>
@@ -2224,7 +2224,7 @@
     </limit>
     <dynamics>
      <damping>
-      0.3
+      3
      </damping>
     </dynamics>
    </axis>
@@ -2351,7 +2351,7 @@
     </limit>
     <dynamics>
      <damping>
-      0.3
+      3
      </damping>
     </dynamics>
    </axis>
@@ -2478,7 +2478,7 @@
     </limit>
     <dynamics>
      <damping>
-      0.3
+      3
      </damping>
     </dynamics>
    </axis>
@@ -2605,7 +2605,7 @@
     </limit>
     <dynamics>
      <damping>
-      0.3
+      3
      </damping>
     </dynamics>
    </axis>
@@ -2732,7 +2732,7 @@
     </limit>
     <dynamics>
      <damping>
-      0.3
+      3
      </damping>
     </dynamics>
    </axis>
@@ -2859,7 +2859,7 @@
     </limit>
     <dynamics>
      <damping>
-      0.3
+      3
      </damping>
     </dynamics>
    </axis>
@@ -2986,7 +2986,7 @@
     </limit>
     <dynamics>
      <damping>
-      0.3
+      3
      </damping>
     </dynamics>
    </axis>
@@ -3113,7 +3113,7 @@
     </limit>
     <dynamics>
      <damping>
-      0.3
+      3
      </damping>
     </dynamics>
    </axis>
