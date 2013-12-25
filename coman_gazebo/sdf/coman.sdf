@@ -2513,29 +2513,29 @@
    </pose>
    <inertial>
     <pose>
-     -0.00486569 0.000660325 -0.0402808 0 -0 0
+     -0.000655534 0.000934647 -0.000931013 0 -0 0
     </pose>
     <mass>
-     0.896069
+     0.633069
     </mass>
     <inertia>
      <ixx>
-      0.00425727
+      0.000225991
      </ixx>
      <ixy>
-      -2.22737e-06
+      2.63765e-07
      </ixy>
      <ixz>
-      -0.000367138
+      -9.80073e-06
      </ixz>
      <iyy>
-      0.00434716
+      0.000277813
      </iyy>
      <iyz>
-      -2.12396e-05
+      2.04353e-06
      </iyz>
      <izz>
-      0.00029761
+      0.00021879
      </izz>
     </inertia>
    </inertial>
@@ -2554,21 +2554,6 @@
      </mesh>
     </geometry>
    </collision>
-   <collision name="LElb_collision_LForearm">
-    <pose>
-     -0.015 0 -0.035 -3.14159 -2.06823e-13 -1.5708
-    </pose>
-    <geometry>
-     <mesh>
-      <scale>
-       1 1 1
-      </scale>
-      <uri>
-       model://coman_urdf/meshes/collada/simple/forearms/forearm.dae
-      </uri>
-     </mesh>
-    </geometry>
-   </collision>
    <visual name="LElb_visual">
     <pose>
      0 0 0 -1.57079 1.57079 -2.65359e-06
@@ -2580,21 +2565,6 @@
       </scale>
       <uri>
        model://coman_urdf/meshes/collada/forearms/elbow.dae
-      </uri>
-     </mesh>
-    </geometry>
-   </visual>
-   <visual name="LElb_visual_LForearm">
-    <pose>
-     -0.015 0 -0.035 -3.14159 -2.06823e-13 -1.5708
-    </pose>
-    <geometry>
-     <mesh>
-      <scale>
-       1 1 1
-      </scale>
-      <uri>
-       model://coman_urdf/meshes/collada/forearms/forearm.dae
       </uri>
      </mesh>
     </geometry>
@@ -2663,6 +2633,109 @@
      </limit>
     </ode>
    </physics>
+  </joint>
+  <link name="LForearm">
+   <pose>
+    0.005305 0.1558 0.094329 0 -0 0
+   </pose>
+   <inertial>
+    <pose>
+     0 0 -0.085 0 -0 0
+    </pose>
+    <mass>
+     0.263
+    </mass>
+    <inertia>
+     <ixx>
+      0.0006913
+     </ixx>
+     <ixy>
+      0
+     </ixy>
+     <ixz>
+      0
+     </ixz>
+     <iyy>
+      0.0006913
+     </iyy>
+     <iyz>
+      0
+     </iyz>
+     <izz>
+      4.0425e-05
+     </izz>
+    </inertia>
+   </inertial>
+   <collision name="LForearm_collision">
+    <pose>
+     0 0 0.015 -3.14159 -2.06823e-13 -1.5708
+    </pose>
+    <geometry>
+     <mesh>
+      <scale>
+       1 1 1
+      </scale>
+      <uri>
+       model://coman_urdf/meshes/collada/simple/forearms/forearm.dae
+      </uri>
+     </mesh>
+    </geometry>
+   </collision>
+   <visual name="LForearm_visual">
+    <pose>
+     0 0 0.015 -3.14159 -2.06823e-13 -1.5708
+    </pose>
+    <geometry>
+     <mesh>
+      <scale>
+       1 1 1
+      </scale>
+      <uri>
+       model://coman_urdf/meshes/collada/forearms/forearm.dae
+      </uri>
+     </mesh>
+    </geometry>
+   </visual>
+   <velocity_decay>
+    <linear>
+     0
+    </linear>
+    <angular>
+     0
+    </angular>
+   </velocity_decay>
+  </link>
+  <joint name="LForearmPlate" type="revolute">
+   <child>
+    LForearm
+   </child>
+   <parent>
+    LElb
+   </parent>
+   <axis>
+    <xyz>
+     0 0 1
+    </xyz>
+    <limit>
+     <lower>
+      -1.5708
+     </lower>
+     <upper>
+      1.5708
+     </upper>
+     <effort>
+      50
+     </effort>
+     <velocity>
+      4
+     </velocity>
+    </limit>
+    <dynamics>
+     <damping>
+      3
+     </damping>
+    </dynamics>
+   </axis>
   </joint>
   <link name="RShp">
    <pose>
@@ -3051,29 +3124,29 @@
    </pose>
    <inertial>
     <pose>
-     -0.00486569 -0.000660325 -0.0402808 0 -0 0
+     -0.000655534 -0.000934647 -0.000931013 0 -0 0
     </pose>
     <mass>
-     0.896069
+     0.633069
     </mass>
     <inertia>
      <ixx>
-      0.00425727
+      0.000225991
      </ixx>
      <ixy>
-      2.22737e-06
+      -2.63765e-07
      </ixy>
      <ixz>
-      -0.000367138
+      -9.80073e-06
      </ixz>
      <iyy>
-      0.00434716
+      0.000277813
      </iyy>
      <iyz>
-      2.12396e-05
+      -2.04353e-06
      </iyz>
      <izz>
-      0.00029761
+      0.00021879
      </izz>
     </inertia>
    </inertial>
@@ -3092,21 +3165,6 @@
      </mesh>
     </geometry>
    </collision>
-   <collision name="RElb_collision_RForearm">
-    <pose>
-     -0.015 0 -0.035 -3.14159 -2.06823e-13 -1.5708
-    </pose>
-    <geometry>
-     <mesh>
-      <scale>
-       1 1 1
-      </scale>
-      <uri>
-       model://coman_urdf/meshes/collada/simple/forearms/forearm.dae
-      </uri>
-     </mesh>
-    </geometry>
-   </collision>
    <visual name="RElb_visual">
     <pose>
      0 0 0 -1.57079 1.57079 -2.65359e-06
@@ -3118,21 +3176,6 @@
       </scale>
       <uri>
        model://coman_urdf/meshes/collada/forearms/elbow.dae
-      </uri>
-     </mesh>
-    </geometry>
-   </visual>
-   <visual name="RElb_visual_RForearm">
-    <pose>
-     -0.015 0 -0.035 -3.14159 -2.06823e-13 -1.5708
-    </pose>
-    <geometry>
-     <mesh>
-      <scale>
-       1 1 1
-      </scale>
-      <uri>
-       model://coman_urdf/meshes/collada/forearms/forearm.dae
       </uri>
      </mesh>
     </geometry>
@@ -3201,6 +3244,109 @@
      </limit>
     </ode>
    </physics>
+  </joint>
+  <link name="RForearm">
+   <pose>
+    0.005305 -0.1558 0.094329 0 -0 0
+   </pose>
+   <inertial>
+    <pose>
+     0 0 -0.085 0 -0 0
+    </pose>
+    <mass>
+     0.263
+    </mass>
+    <inertia>
+     <ixx>
+      0.0006913
+     </ixx>
+     <ixy>
+      0
+     </ixy>
+     <ixz>
+      0
+     </ixz>
+     <iyy>
+      0.0006913
+     </iyy>
+     <iyz>
+      0
+     </iyz>
+     <izz>
+      4.0425e-05
+     </izz>
+    </inertia>
+   </inertial>
+   <collision name="RForearm_collision">
+    <pose>
+     0 0 0.015 -3.14159 -2.06823e-13 -1.5708
+    </pose>
+    <geometry>
+     <mesh>
+      <scale>
+       1 1 1
+      </scale>
+      <uri>
+       model://coman_urdf/meshes/collada/simple/forearms/forearm.dae
+      </uri>
+     </mesh>
+    </geometry>
+   </collision>
+   <visual name="RForearm_visual">
+    <pose>
+     0 0 0.015 -3.14159 -2.06823e-13 -1.5708
+    </pose>
+    <geometry>
+     <mesh>
+      <scale>
+       1 1 1
+      </scale>
+      <uri>
+       model://coman_urdf/meshes/collada/forearms/forearm.dae
+      </uri>
+     </mesh>
+    </geometry>
+   </visual>
+   <velocity_decay>
+    <linear>
+     0
+    </linear>
+    <angular>
+     0
+    </angular>
+   </velocity_decay>
+  </link>
+  <joint name="RForearmPlate" type="revolute">
+   <child>
+    RForearm
+   </child>
+   <parent>
+    RElb
+   </parent>
+   <axis>
+    <xyz>
+     0 0 1
+    </xyz>
+    <limit>
+     <lower>
+      -1.5708
+     </lower>
+     <upper>
+      1.5708
+     </upper>
+     <effort>
+      50
+     </effort>
+     <velocity>
+      4
+     </velocity>
+    </limit>
+    <dynamics>
+     <damping>
+      3
+     </damping>
+    </dynamics>
+   </axis>
   </joint>
   <pose>
    0 0 0.521 0 -0 0
