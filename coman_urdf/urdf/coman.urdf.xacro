@@ -986,10 +986,10 @@ and to define the end effectors of the robot -->
   <joint name="RForearmPlate" type="revolute">
     <parent link="RElb"/>
     <child link="RForearm"/>
-    <origin xyz="-0.015 0.0 -0.05" rpy="0 0 0"/>
+    <origin xyz="-0.015 0.0 -0.051" rpy="0 0 0"/>
     <axis xyz="0 0 1" />
     <limit velocity="4.0" effort="50" lower="-1.5708" upper="1.5708" />
-    <dynamics friction="0" damping="3.0"/>
+    <dynamics friction="0" damping="0.03"/>
   </joint>
  
   <!--joint name="RForearmPlate" type="fixed">
@@ -1036,13 +1036,13 @@ and to define the end effectors of the robot -->
     <dynamics friction="0" damping="3.0"/>
   </joint>
 
-    <joint name="LForearmPlate" type="revolute">
+  <joint name="LForearmPlate" type="revolute">
     <parent link="LElb"/>
     <child link="LForearm"/>
-    <origin xyz="-0.015 0.0 -0.05" rpy="0 0 0"/>
+    <origin xyz="-0.015 0.0 -0.051" rpy="0 0 0"/>
     <axis xyz="0 0 1" />
     <limit velocity="4.0" effort="50" lower="-1.5708" upper="1.5708" />
-    <dynamics friction="0" damping="3.0"/>
+    <dynamics friction="0" damping="0.03"/>
   </joint>
 
   <!--joint name="LForearmPlate" type="fixed">
