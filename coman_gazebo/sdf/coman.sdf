@@ -2636,7 +2636,7 @@
   </joint>
   <link name="LForearm">
    <pose>
-    0.005305 0.1558 0.094329 0 -0 0
+    0.005305 0.1558 0.093329 0 -0 0
    </pose>
    <inertial>
     <pose>
@@ -2732,7 +2732,7 @@
     </limit>
     <dynamics>
      <damping>
-      3
+      0.03
      </damping>
     </dynamics>
    </axis>
@@ -3247,7 +3247,7 @@
   </joint>
   <link name="RForearm">
    <pose>
-    0.005305 -0.1558 0.094329 0 -0 0
+    0.005305 -0.1558 0.093329 0 -0 0
    </pose>
    <inertial>
     <pose>
@@ -3343,7 +3343,7 @@
     </limit>
     <dynamics>
      <damping>
-      3
+      0.03
      </damping>
     </dynamics>
    </axis>
