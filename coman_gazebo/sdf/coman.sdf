@@ -2680,6 +2680,37 @@
       </uri>
      </mesh>
     </geometry>
+    <surface>
+     <contact>
+      <ode>
+       <kp>
+        1e+06
+       </kp>
+       <kd>
+        100
+       </kd>
+       <max_vel>
+        1
+       </max_vel>
+       <min_depth>
+        0
+       </min_depth>
+      </ode>
+     </contact>
+     <friction>
+      <ode>
+       <mu>
+        1
+       </mu>
+       <mu2>
+        1
+       </mu2>
+       <fdir1>
+        1 0 0
+       </fdir1>
+      </ode>
+     </friction>
+    </surface>
    </collision>
    <visual name="LForearm_visual">
     <pose>
@@ -2696,6 +2727,9 @@
      </mesh>
     </geometry>
    </visual>
+   <gravity>
+    1
+   </gravity>
    <velocity_decay>
     <linear>
      0
@@ -2704,6 +2738,9 @@
      0
     </angular>
    </velocity_decay>
+   <self_collide>
+    0
+   </self_collide>
   </link>
   <joint name="LForearmPlate" type="revolute">
    <child>
@@ -3291,6 +3328,37 @@
       </uri>
      </mesh>
     </geometry>
+    <surface>
+     <contact>
+      <ode>
+       <kp>
+        1e+06
+       </kp>
+       <kd>
+        100
+       </kd>
+       <max_vel>
+        1
+       </max_vel>
+       <min_depth>
+        0
+       </min_depth>
+      </ode>
+     </contact>
+     <friction>
+      <ode>
+       <mu>
+        1
+       </mu>
+       <mu2>
+        1
+       </mu2>
+       <fdir1>
+        1 0 0
+       </fdir1>
+      </ode>
+     </friction>
+    </surface>
    </collision>
    <visual name="RForearm_visual">
     <pose>
@@ -3307,6 +3375,9 @@
      </mesh>
     </geometry>
    </visual>
+   <gravity>
+    1
+   </gravity>
    <velocity_decay>
     <linear>
      0
@@ -3315,6 +3386,9 @@
      0
     </angular>
    </velocity_decay>
+   <self_collide>
+    0
+   </self_collide>
   </link>
   <joint name="RForearmPlate" type="revolute">
    <child>
