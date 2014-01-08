@@ -715,13 +715,13 @@ and to define the end effectors of the robot -->
   </joint>
 
   <joint name="l_ankle_joint" type="fixed">
-    <parent link="LHipMot"/>
+    <parent link="LFoot"/>
     <child link="l_ankle"/>
     <origin xyz="0 0 0" rpy="0 0 0" />
   </joint>
 
   <joint name="r_ankle_joint" type="fixed">
-    <parent link="RHipMot"/>
+    <parent link="RFoot"/>
     <child link="r_ankle"/>
     <origin xyz="0 0 0" rpy="0 0 0" />
   </joint>

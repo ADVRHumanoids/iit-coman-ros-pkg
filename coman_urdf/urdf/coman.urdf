@@ -607,12 +607,12 @@ and to define the end effectors of the robot -->
     <origin rpy="0 0 0" xyz="-0.015 0 -0.22"/>
   </joint>
   <joint name="l_ankle_joint" type="fixed">
-    <parent link="LHipMot"/>
+    <parent link="LFoot"/>
     <child link="l_ankle"/>
     <origin rpy="0 0 0" xyz="0 0 0"/>
   </joint>
   <joint name="r_ankle_joint" type="fixed">
-    <parent link="RHipMot"/>
+    <parent link="RFoot"/>
     <child link="r_ankle"/>
     <origin rpy="0 0 0" xyz="0 0 0"/>
   </joint>
