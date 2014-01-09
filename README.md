@@ -14,6 +14,13 @@ Before using the script check the dependency on BeautifulSoup4:
 ```
 sudo easy_install beautifulsoup4
 ```
+If you have problems with this command maybe you have to install python or the package easy_install.
+After this, you have to be sure that coman_urdf is inside your ros path.
+Either put it in your ros package path or do something like this:
+```
+export ROS_PACKAGE_PATH=${ROS_PACKAGE_PATH}:/home/your name/projects/walkman/iit-coman-ros-pkg
+```
+
 The script has to be called in script/ folder:
 ```
 ./create_urdf_and_sdf.sh
