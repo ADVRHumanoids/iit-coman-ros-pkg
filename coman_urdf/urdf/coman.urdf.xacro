@@ -39,6 +39,9 @@ and to define the end effectors of the robot -->
 <!-- The coordinate frame called torso is attached to the lowest body of the model which is a parent of l_gripper, r_gripper and gaze. -->
  <link name="torso"/>
 
+<!-- Head -->
+ <link name="gaze"/>
+
 <!-- ********************TORSO******************** -->
 
 <!-- first real link of the robot, inertial reference frame -->
@@ -845,7 +848,13 @@ and to define the end effectors of the robot -->
   <joint name="torso_joint" type="fixed">
     <parent link="DWYTorso"/>
     <child link="torso"/>
-    <origin xyz="0 0 0" rpy="0 0 0" />
+    <origin xyz="-0.014976503999999998 0 0.15770847" rpy="0 0 0" />
+  </joint>
+
+  <joint name="gaze_joint" type="fixed">
+    <parent link="torso"/>
+    <child link="gaze"/>
+    <origin xyz="0 0 0.1" rpy="0 0 0" />
   </joint>
 
 <!-- ********************TORSO******************** -->
