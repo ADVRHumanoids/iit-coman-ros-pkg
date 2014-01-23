@@ -907,7 +907,8 @@
      </limit>
     </ode>
    </physics>
-   <sensor name="LAnkSag_FT" type="force_torque">
+   <sensor name="left_leg" type="force_torque">
+    <!--<sensor type="force_torque" name="LAnkSag_FT">-->
     <always_on>
      true
     </always_on>
@@ -1725,7 +1726,8 @@
      </limit>
     </ode>
    </physics>
-   <sensor name="RAnkSag_FT" type="force_torque">
+   <sensor name="right_leg" type="force_torque">
+    <!--<sensor type="force_torque" name="RAnkSag_FT">-->
     <always_on>
      true
     </always_on>

@@ -2,7 +2,8 @@
 	<!-- note the wtf format is a hack ATM. Check gazebowtf.py and readme for details -->
 	<robot filename="coman.sdf">
 		<wtf if="GAZEBO_COMAN_USES_ACCURATE_FT" reference="LAnkSagFT">
-			<sensor type="force_torque" name="LAnkSag_FT">
+			<sensor type="force_torque" name="left_leg">
+			<!--<sensor type="force_torque" name="LAnkSag_FT">-->
 				<always_on>true</always_on>
 				<visualize>true</visualize>
 				<update_rate>1000</update_rate>
@@ -15,7 +16,8 @@
 		</wtf>
 
 		<wtf unless="GAZEBO_COMAN_USES_ACCURATE_FT" reference="LAnkSag">
-			<sensor type="force_torque" name="LAnkSag_FT">
+			<sensor type="force_torque" name="left_leg">
+                        <!--<sensor type="force_torque" name="LAnkSag_FT">-->
 				<always_on>true</always_on>
 				<visualize>true</visualize>
 				<update_rate>1000</update_rate>
@@ -29,7 +31,8 @@
 		</wtf>
 
 		<wtf if="GAZEBO_COMAN_USES_ACCURATE_FT" reference="RAnkSagFT">
-			<sensor type="force_torque" name="RAnkSag_FT">
+			<sensor type="force_torque" name="right_leg">
+  			<!--<sensor type="force_torque" name="RAnkSag_FT">-->
 				<always_on>true</always_on>
 				<visualize>true</visualize>
 				<update_rate>1000</update_rate>
@@ -42,7 +45,8 @@
 		</wtf>
 
 		<wtf unless="GAZEBO_COMAN_USES_ACCURATE_FT" reference="RAnkSag">
-			<sensor type="force_torque" name="RAnkSag_FT">
+			<sensor type="force_torque" name="right_leg">
+			<!--<sensor type="force_torque" name="RAnkSag_FT">-->
 				<always_on>true</always_on>
 				<visualize>true</visualize>
 				<update_rate>1000</update_rate>
