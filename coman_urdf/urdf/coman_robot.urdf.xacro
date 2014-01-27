@@ -10,7 +10,22 @@
   -->
   <xacro:include filename="$(find coman_urdf)/urdf/coman.urdf.xacro" />
 
-<!-- IMU, needs to be checked effective position and orientation. For now it maches the same poisition/orientation of Waist link -->
+<!-- Hands! -->
+  <xacro:include filename="$(find coman_urdf)/urdf/soft_hand.urdf.xacro" />
+
+  <joint name="r_handj" type="fixed">
+    <parent link="r_wrist"/>
+    <child link="RSoftHand"/>
+    <origin xyz="0 0 -0.04" rpy="0 0 0"/>
+  </joint>
+  
+  <joint name="l_handj" type="fixed">
+    <parent link="l_wrist"/>
+    <child link="LSoftHand"/>
+    <origin xyz="0 0 -0.04" rpy="0 0 0"/>
+  </joint>
+
+<!-- IMU -->
   <link name="imu_link">
     <inertial>
       <mass value="0.01"/>

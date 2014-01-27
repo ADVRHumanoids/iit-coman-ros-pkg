@@ -39,6 +39,9 @@ and to define the end effectors of the robot -->
 <!-- The coordinate frame called torso is attached to the lowest body of the model which is a parent of l_gripper, r_gripper and gaze. -->
  <link name="torso"/>
 
+<!-- Head -->
+ <link name="gaze"/>
+
 <!-- ********************TORSO******************** -->
 
 <!-- first real link of the robot, inertial reference frame -->
@@ -501,6 +504,48 @@ and to define the end effectors of the robot -->
       <inertia ixx="2.2599075E-4"  ixy="-2.6376470E-7"  ixz="-9.8007285E-6" iyy="2.7781302E-4" iyz="-2.0435288E-6" izz="2.1878992E-4" />
     </inertial>
     <visual>
+      <origin xyz="0 0 0" rpy="-1.570796326795 1.570796326795 0"/>
+      <geometry name="RElb_visual">
+        <mesh filename="package://coman_urdf/meshes/collada/forearms/elbow.dae" scale="1.0 1.0 1.0" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="-1.570796326795 1.570796326795 0"/>
+      <geometry name="RElb_collision">
+        <mesh filename="package://coman_urdf/meshes/collada/simple/forearms/elbow.dae" scale="1.0 1.0 1.0" />
+      </geometry>             
+    </collision>
+  </link>
+
+  <!-- ## WRONG NUMBERS FOR INERTIAL!!! FIX THEM!! ## -->
+  <!-- In ROBOTRAN this link is named RFArm -->
+  <link name ="RForearm">
+    <inertial>
+      <origin xyz="0 0 -0.085" rpy="0 0 0"/>
+      <mass value="0.93351655"/>
+      <inertia ixx="0.001"  ixy="0.0"  ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0.015" rpy="-1.570796326795 0 1.570796326795"/>
+      <geometry name="RForearm_visual">
+        <mesh filename="package://coman_urdf/meshes/collada/forearms/forearm.dae" scale="0.001 0.001 0.001" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0.015" rpy="0 3.14159265359 1.570796326795"/>
+      <geometry name="RForearm_collision">
+        <mesh filename="package://coman_urdf/meshes/collada/simple/forearms/forearm.dae" scale="1.0 1.0 1.0" />
+      </geometry>             
+    </collision>
+  </link>
+
+  <!--link name ="RElb">
+    <inertial>
+      <origin xyz="-6.5553403E-4 -9.3464748E-4 -9.3101289E-4" rpy="0 0 0"/>
+      <mass value="0.63306933"/>
+      <inertia ixx="2.2599075E-4"  ixy="-2.6376470E-7"  ixz="-9.8007285E-6" iyy="2.7781302E-4" iyz="-2.0435288E-6" izz="2.1878992E-4" />
+    </inertial>
+    <visual>
       <origin xyz="-0.020305 -0.1558 -0.664329" rpy="0 0 -3.14159265359"/>
       <geometry name="RElb_visual">
         <mesh filename="package://coman_urdf/meshes/collada/asm0001_collada_11_prt.dae" scale="0.03937 0.03937 0.03937" />
@@ -520,7 +565,51 @@ and to define the end effectors of the robot -->
       <mass value="0.263"/>
       <inertia ixx="6.913E-4"  ixy="0.0"  ixz="0.0" iyy="6.913E-4" iyz="0.0" izz="4.0425E-5" />
     </inertial>
+  </link-->
+
+  <!-- ## WRONG NUMBERS FOR INERTIAL!!! FIX THEM!! ## -->
+  <!-- Here I have used the inertia of a full cylinder with r = 0.02 [m] and h = 0.07 [m] -->
+  <link name="RWrMot2">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.26070556"/>
+      <inertia ixx="0.000132"  ixy="0"  ixz="0" iyy="0.000132" iyz="0" izz="5.213E-5" />
+    </inertial>
+    <visual>
+      <origin xyz="0.025 0 0" rpy="0 1.570796326795 3.14159265359"/>
+      <geometry name="RWrMot2_visual">
+        <mesh filename="package://coman_urdf/meshes/collada/forearms/fa_asm_3_right_sw0001.dae" scale="0.001 0.001 0.001" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0.025 0 0" rpy="0 1.570796326795 3.14159265359"/>
+      <geometry name="RWrMot2_collision">
+        <mesh filename="package://coman_urdf/meshes/collada/simple/forearms/simple_fa_asm_3_right_sw0001.dae" scale="0.001 0.001 0.001" />
+      </geometry>             
+    </collision>
   </link>
+
+  <!-- ## WRONG NUMBERS FOR INERTIAL!!! FIX THEM!! ## -->
+  <!-- Here I have used the inertia of a concave cylinder with r = 0.02 [m] -->
+  <link name="RWrMot3">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.054007518"/>
+      <inertia ixx="2.16E-5"  ixy="0"  ixz="0" iyy="2.16E-5" iyz="0" izz="2.16E-5" />
+    </inertial>
+    <visual>
+      <origin xyz="0.025 -0.012 -0.02" rpy="0 3.14159265359 1.570796326795"/>
+      <geometry name="RWrMot3_visual">
+        <mesh filename="package://coman_urdf/meshes/collada/forearms/fa_hand_interface_rig_sw0001.dae" scale="0.001 0.001 0.001" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0.025 -0.012 -0.02" rpy="0 3.14159265359 1.570796326795"/>
+      <geometry name="RWrMot3_collision">
+        <mesh filename="package://coman_urdf/meshes/collada/simple/forearms/simple_fa_hand_interface_rig_sw0001.dae" scale="0.001 0.001 0.001" />
+      </geometry>             
+    </collision>
+  </link> 
 
 <!-- ********************LEFT ARM******************** -->
 
@@ -588,6 +677,48 @@ and to define the end effectors of the robot -->
     <inertial>
       <origin xyz="-6.5553403E-4 9.3464748E-4 -9.3101289E-4" rpy="0 0 0"/>
       <mass value="0.63306933"/>
+      <inertia ixx="2.2599075E-4"  ixy="2.6376470E-7"  ixz="-9.8007285E-6" iyy="2.7781302E-4" iyz="2.0435288E-6" izz="2.1878992E-4" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="-1.570796326795 1.570796326795 0"/>
+      <geometry name="LElb_visual">
+        <mesh filename="package://coman_urdf/meshes/collada/forearms/elbow.dae" scale="1.0 1.0 1.0" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="-1.570796326795 1.570796326795 0"/>
+      <geometry name="LElb_collision">
+        <mesh filename="package://coman_urdf/meshes/collada/simple/forearms/elbow.dae" scale="1.0 1.0 1.0" />
+      </geometry>             
+    </collision>
+  </link>
+
+  <!-- ## WRONG NUMBERS FOR INERTIAL!!! FIX THEM!! ## -->
+  <!-- In ROBOTRAN this link is named LFARM -->
+  <link name ="LForearm">
+    <inertial>
+      <origin xyz="0 0 -0.085" rpy="0 0 0"/>
+      <mass value="0.93351655"/>
+      <inertia ixx="0.001"  ixy="0.0"  ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0.015" rpy="-1.570796326795 0 1.570796326795"/>
+      <geometry name="LForearm_visual">
+        <mesh filename="package://coman_urdf/meshes/collada/forearms/forearm.dae" scale="0.001 0.001 0.001" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0.015" rpy="0 3.14159265359 1.570796326795"/>
+      <geometry name="LForearm_collision">
+        <mesh filename="package://coman_urdf/meshes/collada/simple/forearms/forearm.dae" scale="1.0 1.0 1.0" />
+      </geometry>             
+    </collision>
+  </link>
+
+  <!--link name ="LElb">
+    <inertial>
+      <origin xyz="-6.5553403E-4 9.3464748E-4 -9.3101289E-4" rpy="0 0 0"/>
+      <mass value="0.63306933"/>
       <inertia ixx="2.2599075E-4"  ixy="2.637647E-7"  ixz="-9.8007285E-6" iyy="2.7781302E-4" iyz="2.0435288E-6" izz="2.1878992E-4" />
     </inertial>
     <visual>
@@ -610,7 +741,53 @@ and to define the end effectors of the robot -->
       <mass value="0.263"/>
       <inertia ixx="6.913E-4"  ixy="0.0"  ixz="0.0" iyy="6.913E-4" iyz="0.0" izz="4.0425E-5" />
     </inertial>
+  </link-->
+
+  <!-- ## WRONG NUMBERS FOR INERTIAL!!! FIX THEM!! ## -->
+  <!-- Here I have used the inertia of a full cylinder with r = 0.02 [m] and h = 0.07 [m] -->
+  <link name="LWrMot2">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.26070556"/>
+      <inertia ixx="0.000132"  ixy="0"  ixz="0" iyy="0.000132" iyz="0" izz="5.213E-5" />
+    </inertial>
+    <visual>
+      <origin xyz="0.025 0 0" rpy="0 1.570796326795 3.14159265359"/>
+      <geometry name="LWrMot2_visual">
+        <mesh filename="package://coman_urdf/meshes/collada/forearms/fa_asm_3_right_sw0001.dae" scale="0.001 0.001 0.001" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0.025 0 0" rpy="0 1.570796326795 3.14159265359"/>
+      <geometry name="LWrMot2_collision">
+        <mesh filename="package://coman_urdf/meshes/collada/simple/forearms/simple_fa_asm_3_right_sw0001.dae" scale="0.001 0.001 0.001" />
+      </geometry>             
+    </collision>
   </link>
+
+  <!-- ## WRONG NUMBERS FOR INERTIAL!!! FIX THEM!! ## -->
+  <!-- Here I have used the inertia of a concave cylinder with r = 0.02 [m] -->
+  <link name="LWrMot3">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.054007518"/>
+      <inertia ixx="2.16E-5"  ixy="0"  ixz="0" iyy="2.16E-5" iyz="0" izz="2.16E-5" />
+    </inertial>
+    <visual>
+      <origin xyz="0.025 -0.012 -0.02" rpy="0 3.14159265359 1.570796326795"/>
+      <geometry name="LWrMot3_visual">
+        <mesh filename="package://coman_urdf/meshes/collada/forearms/fa_hand_interface_rig_sw0001.dae" scale="0.001 0.001 0.001" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0.025 -0.012 -0.02" rpy="0 3.14159265359 1.570796326795"/>
+      <geometry name="LWrMot3_collision">
+        <mesh filename="package://coman_urdf/meshes/collada/simple/forearms/simple_fa_hand_interface_rig_sw0001.dae" scale="0.001 0.001 0.001" />
+      </geometry>             
+    </collision>
+  </link> 
+
+
 
 <!-- ********************JOINTS******************** -->
 
@@ -621,25 +798,25 @@ and to define the end effectors of the robot -->
   </joint>
 
   <joint name="l_wrist_joint" type="fixed">
-    <parent link="LElb"/>
+    <parent link="LWrMot3"/>
     <child link="l_wrist"/>
-    <origin xyz="-0.015 0 -0.22" rpy="0 0 0" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
   </joint>
 
   <joint name="r_wrist_joint" type="fixed">
-    <parent link="RElb"/>
+    <parent link="RWrMot3"/>
     <child link="r_wrist"/>
-    <origin xyz="-0.015 0 -0.22" rpy="0 0 0" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
   </joint>
 
   <joint name="l_ankle_joint" type="fixed">
-    <parent link="LHipMot"/>
+    <parent link="LFoot"/>
     <child link="l_ankle"/>
     <origin xyz="0 0 0" rpy="0 0 0" />
   </joint>
 
   <joint name="r_ankle_joint" type="fixed">
-    <parent link="RHipMot"/>
+    <parent link="RFoot"/>
     <child link="r_ankle"/>
     <origin xyz="0 0 0" rpy="0 0 0" />
   </joint>
@@ -671,7 +848,13 @@ and to define the end effectors of the robot -->
   <joint name="torso_joint" type="fixed">
     <parent link="DWYTorso"/>
     <child link="torso"/>
-    <origin xyz="0 0 0" rpy="0 0 0" />
+    <origin xyz="-0.014976503999999998 0 0.15770847" rpy="0 0 0" />
+  </joint>
+
+  <joint name="gaze_joint" type="fixed">
+    <parent link="torso"/>
+    <child link="gaze"/>
+    <origin xyz="0 0 0.1" rpy="0 0 0" />
   </joint>
 
 <!-- ********************TORSO******************** -->
@@ -901,10 +1084,37 @@ and to define the end effectors of the robot -->
     <dynamics friction="0" damping="3.0"/>
   </joint>
 
-  <joint name="RForearmPlate" type="fixed">
+  <joint name="RForearmPlate" type="revolute">
+    <parent link="RElb"/>
+    <child link="RForearm"/>
+    <origin xyz="-0.015 0.0 -0.051" rpy="0 0 0"/>
+    <axis xyz="0 0 1" />
+    <limit velocity="4.0" effort="50" lower="-1.5708" upper="1.5708" />
+    <dynamics friction="0" damping="0.03"/>
+  </joint>
+ 
+  <!--joint name="RForearmPlate" type="fixed">
     <parent link="RElb"/>
     <child link="RForearm"/>
     <origin xyz="-0.015 0.0 -0.05" rpy="0 0 0"/>
+  </joint-->
+
+  <joint name="RWrj1" type="revolute">
+    <parent link="RForearm"/>
+    <child link="RWrMot2"/>
+    <origin xyz="0 0 -0.14368" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <limit velocity="4.0" effort="50" lower="-0.524" upper="0.524" />
+    <dynamics friction="0" damping="0.03"/>
+  </joint>
+
+  <joint name="RWrj2" type="revolute">
+    <parent link="RWrMot2"/>
+    <child link="RWrMot3"/>
+    <origin xyz="0 0 0.0" rpy="0 0 0"/>
+    <axis xyz="1 0 0"/>
+    <limit velocity="4.0" effort="50" lower="-1.395" upper="0.785375" />
+    <dynamics friction="0" damping="0.03"/>
   </joint>
 
 <!-- ********************LEFT ARM******************** -->
@@ -945,10 +1155,37 @@ and to define the end effectors of the robot -->
     <dynamics friction="0" damping="3.0"/>
   </joint>
 
-  <joint name="LForearmPlate" type="fixed">
+  <joint name="LForearmPlate" type="revolute">
+    <parent link="LElb"/>
+    <child link="LForearm"/>
+    <origin xyz="-0.015 0.0 -0.051" rpy="0 0 0"/>
+    <axis xyz="0 0 1" />
+    <limit velocity="4.0" effort="50" lower="-1.5708" upper="1.5708" />
+    <dynamics friction="0" damping="0.03"/>
+  </joint>
+
+  <!--joint name="LForearmPlate" type="fixed">
     <parent link="LElb"/>
     <child link="LForearm"/>
     <origin xyz="-0.015 0.0 -0.05" rpy="0 0 0"/>
+  </joint-->
+
+  <joint name="LWrj1" type="revolute">
+    <parent link="LForearm"/>
+    <child link="LWrMot2"/>
+    <origin xyz="0 0 -0.14368" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <limit velocity="4.0" effort="50" lower="-0.524" upper="0.524" />
+    <dynamics friction="0" damping="0.03"/>
+  </joint>
+
+  <joint name="LWrj2" type="revolute">
+    <parent link="LWrMot2"/>
+    <child link="LWrMot3"/>
+    <origin xyz="0 0 0.0" rpy="0 0 0"/>
+    <axis xyz="1 0 0"/>
+    <limit velocity="4.0" effort="50" lower="-0.785375" upper="1.395" />
+    <dynamics friction="0" damping="0.03"/>
   </joint>
 
 </robot>
