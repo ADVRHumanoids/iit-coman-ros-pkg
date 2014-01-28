@@ -2543,7 +2543,7 @@
    </inertial>
    <collision name="LElb_collision">
     <pose>
-     0 0 0 -1.57079 1.57079 -2.65359e-06
+     0 0 0 -1.57079 1.57079 -2.65361e-06
     </pose>
     <geometry>
      <mesh>
@@ -2558,7 +2558,7 @@
    </collision>
    <visual name="LElb_visual">
     <pose>
-     0 0 0 -1.57079 1.57079 -2.65359e-06
+     0 0 0 -1.57079 1.57079 -2.65361e-06
     </pose>
     <geometry>
      <mesh>
@@ -2682,41 +2682,10 @@
       </uri>
      </mesh>
     </geometry>
-    <surface>
-     <contact>
-      <ode>
-       <kp>
-        1e+06
-       </kp>
-       <kd>
-        100
-       </kd>
-       <max_vel>
-        1
-       </max_vel>
-       <min_depth>
-        0
-       </min_depth>
-      </ode>
-     </contact>
-     <friction>
-      <ode>
-       <mu>
-        1
-       </mu>
-       <mu2>
-        1
-       </mu2>
-       <fdir1>
-        1 0 0
-       </fdir1>
-      </ode>
-     </friction>
-    </surface>
    </collision>
    <visual name="LForearm_visual">
     <pose>
-     0 0 0.015 -1.5708 1.14194e-16 1.5708
+     0 0 0.015 -1.5708 5.55112e-17 1.5708
     </pose>
     <geometry>
      <mesh>
@@ -2729,9 +2698,6 @@
      </mesh>
     </geometry>
    </visual>
-   <gravity>
-    1
-   </gravity>
    <velocity_decay>
     <linear>
      0
@@ -2740,9 +2706,6 @@
      0
     </angular>
    </velocity_decay>
-   <self_collide>
-    0
-   </self_collide>
   </link>
   <joint name="LForearmPlate" type="revolute">
    <child>
@@ -2775,6 +2738,30 @@
      </damping>
     </dynamics>
    </axis>
+   <physics>
+    <provide_feedback>
+     1
+    </provide_feedback>
+    <ode>
+     <provide_feedback>
+      1
+     </provide_feedback>
+     <implicit_spring_damper>
+      1
+     </implicit_spring_damper>
+     <cfm_damping>
+      1
+     </cfm_damping>
+     <limit>
+      <cfm>
+       0
+      </cfm>
+      <erp>
+       0.2
+      </erp>
+     </limit>
+    </ode>
+   </physics>
   </joint>
   <link name="LWrMot2">
    <pose>
@@ -2878,6 +2865,30 @@
      </damping>
     </dynamics>
    </axis>
+   <physics>
+    <provide_feedback>
+     1
+    </provide_feedback>
+    <ode>
+     <provide_feedback>
+      1
+     </provide_feedback>
+     <implicit_spring_damper>
+      1
+     </implicit_spring_damper>
+     <cfm_damping>
+      1
+     </cfm_damping>
+     <limit>
+      <cfm>
+       0
+      </cfm>
+      <erp>
+       0.2
+      </erp>
+     </limit>
+    </ode>
+   </physics>
   </joint>
   <link name="LWrMot3">
    <pose>
@@ -2937,6 +2948,37 @@
       </size>
      </box>
     </geometry>
+    <surface>
+     <contact>
+      <ode>
+       <kp>
+        1e+06
+       </kp>
+       <kd>
+        100
+       </kd>
+       <max_vel>
+        1
+       </max_vel>
+       <min_depth>
+        0
+       </min_depth>
+      </ode>
+     </contact>
+     <friction>
+      <ode>
+       <mu>
+        1
+       </mu>
+       <mu2>
+        1
+       </mu2>
+       <fdir1>
+        1 0 0
+       </fdir1>
+      </ode>
+     </friction>
+    </surface>
    </collision>
    <visual name="LWrMot3_visual">
     <pose>
@@ -2965,6 +3007,9 @@
      </box>
     </geometry>
    </visual>
+   <gravity>
+    1
+   </gravity>
    <velocity_decay>
     <linear>
      0
@@ -2973,6 +3018,9 @@
      0
     </angular>
    </velocity_decay>
+   <self_collide>
+    0
+   </self_collide>
   </link>
   <joint name="LWrj2" type="revolute">
    <child>
@@ -3005,6 +3053,30 @@
      </damping>
     </dynamics>
    </axis>
+   <physics>
+    <provide_feedback>
+     1
+    </provide_feedback>
+    <ode>
+     <provide_feedback>
+      1
+     </provide_feedback>
+     <implicit_spring_damper>
+      1
+     </implicit_spring_damper>
+     <cfm_damping>
+      1
+     </cfm_damping>
+     <limit>
+      <cfm>
+       0
+      </cfm>
+      <erp>
+       0.2
+      </erp>
+     </limit>
+    </ode>
+   </physics>
   </joint>
   <link name="RShp">
    <pose>
@@ -3421,7 +3493,7 @@
    </inertial>
    <collision name="RElb_collision">
     <pose>
-     0 0 0 -1.57079 1.57079 -2.65359e-06
+     0 0 0 -1.57079 1.57079 -2.65361e-06
     </pose>
     <geometry>
      <mesh>
@@ -3436,7 +3508,7 @@
    </collision>
    <visual name="RElb_visual">
     <pose>
-     0 0 0 -1.57079 1.57079 -2.65359e-06
+     0 0 0 -1.57079 1.57079 -2.65361e-06
     </pose>
     <geometry>
      <mesh>
@@ -3560,41 +3632,10 @@
       </uri>
      </mesh>
     </geometry>
-    <surface>
-     <contact>
-      <ode>
-       <kp>
-        1e+06
-       </kp>
-       <kd>
-        100
-       </kd>
-       <max_vel>
-        1
-       </max_vel>
-       <min_depth>
-        0
-       </min_depth>
-      </ode>
-     </contact>
-     <friction>
-      <ode>
-       <mu>
-        1
-       </mu>
-       <mu2>
-        1
-       </mu2>
-       <fdir1>
-        1 0 0
-       </fdir1>
-      </ode>
-     </friction>
-    </surface>
    </collision>
    <visual name="RForearm_visual">
     <pose>
-     0 0 0.015 -1.5708 1.14194e-16 1.5708
+     0 0 0.015 -1.5708 5.55112e-17 1.5708
     </pose>
     <geometry>
      <mesh>
@@ -3607,9 +3648,6 @@
      </mesh>
     </geometry>
    </visual>
-   <gravity>
-    1
-   </gravity>
    <velocity_decay>
     <linear>
      0
@@ -3618,9 +3656,6 @@
      0
     </angular>
    </velocity_decay>
-   <self_collide>
-    0
-   </self_collide>
   </link>
   <joint name="RForearmPlate" type="revolute">
    <child>
@@ -3653,6 +3688,30 @@
      </damping>
     </dynamics>
    </axis>
+   <physics>
+    <provide_feedback>
+     1
+    </provide_feedback>
+    <ode>
+     <provide_feedback>
+      1
+     </provide_feedback>
+     <implicit_spring_damper>
+      1
+     </implicit_spring_damper>
+     <cfm_damping>
+      1
+     </cfm_damping>
+     <limit>
+      <cfm>
+       0
+      </cfm>
+      <erp>
+       0.2
+      </erp>
+     </limit>
+    </ode>
+   </physics>
   </joint>
   <link name="RWrMot2">
    <pose>
@@ -3756,6 +3815,30 @@
      </damping>
     </dynamics>
    </axis>
+   <physics>
+    <provide_feedback>
+     1
+    </provide_feedback>
+    <ode>
+     <provide_feedback>
+      1
+     </provide_feedback>
+     <implicit_spring_damper>
+      1
+     </implicit_spring_damper>
+     <cfm_damping>
+      1
+     </cfm_damping>
+     <limit>
+      <cfm>
+       0
+      </cfm>
+      <erp>
+       0.2
+      </erp>
+     </limit>
+    </ode>
+   </physics>
   </joint>
   <link name="RWrMot3">
    <pose>
@@ -3815,6 +3898,37 @@
       </size>
      </box>
     </geometry>
+    <surface>
+     <contact>
+      <ode>
+       <kp>
+        1e+06
+       </kp>
+       <kd>
+        100
+       </kd>
+       <max_vel>
+        1
+       </max_vel>
+       <min_depth>
+        0
+       </min_depth>
+      </ode>
+     </contact>
+     <friction>
+      <ode>
+       <mu>
+        1
+       </mu>
+       <mu2>
+        1
+       </mu2>
+       <fdir1>
+        1 0 0
+       </fdir1>
+      </ode>
+     </friction>
+    </surface>
    </collision>
    <visual name="RWrMot3_visual">
     <pose>
@@ -3843,6 +3957,9 @@
      </box>
     </geometry>
    </visual>
+   <gravity>
+    1
+   </gravity>
    <velocity_decay>
     <linear>
      0
@@ -3851,6 +3968,9 @@
      0
     </angular>
    </velocity_decay>
+   <self_collide>
+    0
+   </self_collide>
   </link>
   <joint name="RWrj2" type="revolute">
    <child>
@@ -3883,6 +4003,30 @@
      </damping>
     </dynamics>
    </axis>
+   <physics>
+    <provide_feedback>
+     1
+    </provide_feedback>
+    <ode>
+     <provide_feedback>
+      1
+     </provide_feedback>
+     <implicit_spring_damper>
+      1
+     </implicit_spring_damper>
+     <cfm_damping>
+      1
+     </cfm_damping>
+     <limit>
+      <cfm>
+       0
+      </cfm>
+      <erp>
+       0.2
+      </erp>
+     </limit>
+    </ode>
+   </physics>
   </joint>
   <pose>
    0 0 0.521 0 -0 0
