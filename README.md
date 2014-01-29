@@ -9,8 +9,8 @@ coman_urdf:
 -----------
 contains the urdf.xacro description of COMAN as well as files that are needed in the simulation in GAZEBO. 
 Every time one of these files are changed you have to use the script inside the script/ folder to copy that file in 
-coman_gazebo/sdf and in your /home/user/.gazebo/models folders. 
-Before using the script check the dependency on BeautifulSoup4:
+coman_gazebo/sdf and in your /home/user/.gazebo/models folders. Running this script requires ROS and some python dependencies. You can just install a precompiled version of the urdf and sdf, though. Instructions are in the coman_gazebo section of this readme.
+After installing ros (tested on ros hydro),  make sure the dependency on BeautifulSoup4 is satisfied before using the script:
 ```
 sudo easy_install beautifulsoup4
 ```
@@ -18,7 +18,7 @@ If you have problems with this command maybe you have to install python or the p
 After this, you have to be sure that coman_urdf is inside your ros path.
 Either put it in your ros package path or do something like this:
 ```
-export ROS_PACKAGE_PATH=${ROS_PACKAGE_PATH}:/home/your name/projects/walkman/iit-coman-ros-pkg
+export ROS_PACKAGE_PATH=${ROS_PACKAGE_PATH}:/home/your_name/projects/walkman/iit-coman-ros-pkg
 ```
 
 The script has to be called in script/ folder:
@@ -45,11 +45,22 @@ A bare sdf is not generated, but a bare version of the COMAN urdf (coman.urdf), 
 
 coman_gazebo:
 -------------
-contains files needed for the simulation as well as a launch file to start the simulation. 
-To start a simulation:
+contains files needed for the simulation as well as a launch file to start the simulation.
+The coman_gazebo folder includes precompiled sdf and urdf files for coman, as well as many initialization files for the setting of the control parameters for the simulated robot.
+To install these models files, you should first remove the version you already have installed (make sure to make a backup if you manually modified the configuration files)
+```
+rm -r ~/.gazebo/model/coman_urdf
+```
+And to install the new version, from the coman_gazebo folder, run
+```
+mkdir ~/.gazebo/models/coman_urdf
+cp -R sdf/* ~/.gazebo/models/coman_urdf/
+```
+To start a simulation using roslaunch:
 ```
 roslaunch coman_gazebo coman_world.launch
 ```
+
 coman_control:
 --------------
 contains the files needed to control the robot. For now the available controller is the effort_controllers/JointPositionController. 
