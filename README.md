@@ -2,6 +2,7 @@ iit-coman-ros-pkg
 =================
 
 Repository for the compliant humanoid robot COMAN from the Italian Institute of Technology.
+This repository can be used with ROS, and with a limited set of functionalities, without ROS. For installation instructions in the the latter case, jump to the coman_gazebo section.
 
 #Package list:
 
