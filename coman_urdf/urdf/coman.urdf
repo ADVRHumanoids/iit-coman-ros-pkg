@@ -15,6 +15,7 @@
 
   Velocity and effort limits are fake!
 -->
+  <!-- Adding macros for feet-->
   <!-- ********************LINKS******************** -->
   <!-- This links are defined in order to be compliant with http://www.ros.org/reps/rep-0120.html#coordinate-frames
 and to define the end effectors of the robot -->
@@ -210,6 +211,23 @@ and to define the end effectors of the robot -->
       </geometry>
     </collision>
   </link>
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.00969210464 -0.0090460227 -0.043062308"/>
+    <mass value="0.66646684"/>
+    <inertia ixx="0.0012944808" ixy="-9.2387693E-5" ixz="2.0080105E-4" iyy="0.0015851846" iyz="2.7599327E-4" izz="0.0013326766"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 -3.14159265359" xyz="0.0 0.0726 -0.0932"/>
+    <geometry name="RFoot_visual">
+      <mesh filename="package://coman_urdf/meshes/collada/asm0001_collada_15_prt.dae" scale="0.03937 0.03937 0.03937"/>
+    </geometry>
+  </visual>
+  <collision>
+    <origin rpy="0 0 -3.14159265359" xyz="0.0 0.0726 -0.0932"/>
+    <geometry name="RFoot_collision">
+      <mesh filename="package://coman_urdf/meshes/collada/simple/simple_asm0001_collada_15_prt.dae" scale="0.03937 0.03937 0.03937"/>
+    </geometry>
+  </collision>
   <link name="RFoot">
     <inertial>
       <origin rpy="0 0 0" xyz="0.00969210464 -0.0090460227 -0.043062308"/>
@@ -217,15 +235,18 @@ and to define the end effectors of the robot -->
       <inertia ixx="0.0012944808" ixy="-9.2387693E-5" ixz="2.0080105E-4" iyy="0.0015851846" iyz="2.7599327E-4" izz="0.0013326766"/>
     </inertial>
     <visual>
-      <origin rpy="0 0 -3.14159265359" xyz="0.0 0.0726 -0.0932"/>
-      <geometry name="RFoot_visual">
-        <mesh filename="package://coman_urdf/meshes/collada/asm0001_collada_15_prt.dae" scale="0.03937 0.03937 0.03937"/>
+      <origin rpy="0 0 0" xyz="0.03 0 -0.09"/>
+      <geometry>
+        <box size="0.2 0.12 0.04"/>
       </geometry>
+      <material name="Cyan">
+        <color rgba="0 1.0 1.0 1.0"/>
+      </material>
     </visual>
     <collision>
-      <origin rpy="0 0 -3.14159265359" xyz="0.0 0.0726 -0.0932"/>
-      <geometry name="RFoot_collision">
-        <mesh filename="package://coman_urdf/meshes/collada/simple/simple_asm0001_collada_15_prt.dae" scale="0.03937 0.03937 0.03937"/>
+      <origin rpy="0 0 0" xyz="0.03 0 -0.09"/>
+      <geometry>
+        <box size="0.2 0.12 0.04"/>
       </geometry>
     </collision>
   </link>
@@ -325,6 +346,23 @@ and to define the end effectors of the robot -->
       </geometry>
     </collision>
   </link>
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.0096921046 0.0090460227 -0.043062308"/>
+    <mass value="0.66646684"/>
+    <inertia ixx="0.0012944808" ixy="9.2387693E-5" ixz="2.0080105E-4" iyy="0.0015851846" iyz="-2.7599327E-4" izz="0.0013326766"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 -3.14159265359" xyz="0.0 -0.0726 -0.0932"/>
+    <geometry name="LFoot_visual">
+      <mesh filename="package://coman_urdf/meshes/collada/asm0001_collada_01_prt.dae" scale="0.03937 0.03937 0.03937"/>
+    </geometry>
+  </visual>
+  <collision>
+    <origin rpy="0 0 -3.14159265359" xyz="0.0 -0.0726 -0.0932"/>
+    <geometry name="LFoot_collision">
+      <mesh filename="package://coman_urdf/meshes/collada/simple/simple_asm0001_collada_01_prt.dae" scale="0.03937 0.03937 0.03937"/>
+    </geometry>
+  </collision>
   <link name="LFoot">
     <inertial>
       <origin rpy="0 0 0" xyz="0.0096921046 0.0090460227 -0.043062308"/>
@@ -332,15 +370,18 @@ and to define the end effectors of the robot -->
       <inertia ixx="0.0012944808" ixy="9.2387693E-5" ixz="2.0080105E-4" iyy="0.0015851846" iyz="-2.7599327E-4" izz="0.0013326766"/>
     </inertial>
     <visual>
-      <origin rpy="0 0 -3.14159265359" xyz="0.0 -0.0726 -0.0932"/>
-      <geometry name="LFoot_visual">
-        <mesh filename="package://coman_urdf/meshes/collada/asm0001_collada_01_prt.dae" scale="0.03937 0.03937 0.03937"/>
+      <origin rpy="0 0 0" xyz="0.03 0 -0.09"/>
+      <geometry>
+        <box size="0.2 0.12 0.04"/>
       </geometry>
+      <material name="Cyan">
+        <color rgba="0 1.0 1.0 1.0"/>
+      </material>
     </visual>
     <collision>
-      <origin rpy="0 0 -3.14159265359" xyz="0.0 -0.0726 -0.0932"/>
-      <geometry name="LFoot_collision">
-        <mesh filename="package://coman_urdf/meshes/collada/simple/simple_asm0001_collada_01_prt.dae" scale="0.03937 0.03937 0.03937"/>
+      <origin rpy="0 0 0" xyz="0.03 0 -0.09"/>
+      <geometry>
+        <box size="0.2 0.12 0.04"/>
       </geometry>
     </collision>
   </link>
@@ -421,8 +462,6 @@ and to define the end effectors of the robot -->
       </geometry>
     </collision>
   </link>
-  <!-- ## WRONG NUMBERS FOR INERTIAL!!! FIX THEM!! ## -->
-  <!-- In ROBOTRAN this link is named RFArm -->
   <link name="RForearm">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 -0.085"/>
@@ -442,35 +481,6 @@ and to define the end effectors of the robot -->
       </geometry>
     </collision>
   </link>
-  <!--link name ="RElb">
-    <inertial>
-      <origin xyz="-6.5553403E-4 -9.3464748E-4 -9.3101289E-4" rpy="0 0 0"/>
-      <mass value="0.63306933"/>
-      <inertia ixx="2.2599075E-4"  ixy="-2.6376470E-7"  ixz="-9.8007285E-6" iyy="2.7781302E-4" iyz="-2.0435288E-6" izz="2.1878992E-4" />
-    </inertial>
-    <visual>
-      <origin xyz="-0.020305 -0.1558 -0.664329" rpy="0 0 -3.14159265359"/>
-      <geometry name="RElb_visual">
-        <mesh filename="package://coman_urdf/meshes/collada/asm0001_collada_11_prt.dae" scale="0.03937 0.03937 0.03937" />
-      </geometry>
-    </visual>
-    <collision>
-      <origin xyz="-0.020305 -0.1558 -0.664329" rpy="0 0 -3.14159265359"/>
-      <geometry name="RElb_collision">
-        <mesh filename="package://coman_urdf/meshes/collada/simple/simple_asm0001_collada_11_prt.dae" scale="0.03937 0.03937 0.03937" />
-      </geometry>             
-    </collision>
-  </link>
-
-  <link name ="RForearm">
-    <inertial>
-      <origin xyz="0 0 -0.085" rpy="0 0 0"/>
-      <mass value="0.263"/>
-      <inertia ixx="6.913E-4"  ixy="0.0"  ixz="0.0" iyy="6.913E-4" iyz="0.0" izz="4.0425E-5" />
-    </inertial>
-  </link-->
-  <!-- ## WRONG NUMBERS FOR INERTIAL!!! FIX THEM!! ## -->
-  <!-- Here I have used the inertia of a full cylinder with r = 0.02 [m] and h = 0.07 [m] -->
   <link name="RWrMot2">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -490,8 +500,6 @@ and to define the end effectors of the robot -->
       </geometry>
     </collision>
   </link>
-  <!-- ## WRONG NUMBERS FOR INERTIAL!!! FIX THEM!! ## -->
-  <!-- Here I have used the inertia of a concave cylinder with r = 0.02 [m] -->
   <link name="RWrMot3">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -588,8 +596,6 @@ and to define the end effectors of the robot -->
       </geometry>
     </collision>
   </link>
-  <!-- ## WRONG NUMBERS FOR INERTIAL!!! FIX THEM!! ## -->
-  <!-- In ROBOTRAN this link is named LFARM -->
   <link name="LForearm">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 -0.085"/>
@@ -609,35 +615,6 @@ and to define the end effectors of the robot -->
       </geometry>
     </collision>
   </link>
-  <!--link name ="LElb">
-    <inertial>
-      <origin xyz="-6.5553403E-4 9.3464748E-4 -9.3101289E-4" rpy="0 0 0"/>
-      <mass value="0.63306933"/>
-      <inertia ixx="2.2599075E-4"  ixy="2.637647E-7"  ixz="-9.8007285E-6" iyy="2.7781302E-4" iyz="2.0435288E-6" izz="2.1878992E-4" />
-    </inertial>
-    <visual>
-      <origin xyz="-0.020305 -0.1558 -0.664329" rpy="0 0 -3.14159265359"/>
-      <geometry name="LElb_visual">
-        <mesh filename="package://coman_urdf/meshes/collada/asm0001_collada_11_prt.dae" scale="0.03937 0.03937 0.03937" />
-      </geometry>
-    </visual>
-    <collision>
-      <origin xyz="-0.020305 -0.1558 -0.664329" rpy="0 0 -3.14159265359"/>
-      <geometry name="LElb_collision">
-        <mesh filename="package://coman_urdf/meshes/collada/simple/simple_asm0001_collada_11_prt.dae" scale="0.03937 0.03937 0.03937" />
-      </geometry>             
-    </collision>
-  </link>
-
-  <link name ="LForearm">
-    <inertial>
-      <origin xyz="0 0 -0.085" rpy="0 0 0"/>
-      <mass value="0.263"/>
-      <inertia ixx="6.913E-4"  ixy="0.0"  ixz="0.0" iyy="6.913E-4" iyz="0.0" izz="4.0425E-5" />
-    </inertial>
-  </link-->
-  <!-- ## WRONG NUMBERS FOR INERTIAL!!! FIX THEM!! ## -->
-  <!-- Here I have used the inertia of a full cylinder with r = 0.02 [m] and h = 0.07 [m] -->
   <link name="LWrMot2">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -657,8 +634,6 @@ and to define the end effectors of the robot -->
       </geometry>
     </collision>
   </link>
-  <!-- ## WRONG NUMBERS FOR INERTIAL!!! FIX THEM!! ## -->
-  <!-- Here I have used the inertia of a concave cylinder with r = 0.02 [m] -->
   <link name="LWrMot3">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -901,11 +876,6 @@ and to define the end effectors of the robot -->
     <limit effort="50" lower="-1.5708" upper="1.5708" velocity="4.0"/>
     <dynamics damping="0.03" friction="0"/>
   </joint>
-  <!--joint name="RForearmPlate" type="fixed">
-    <parent link="RElb"/>
-    <child link="RForearm"/>
-    <origin xyz="-0.015 0.0 -0.05" rpy="0 0 0"/>
-  </joint-->
   <joint name="RWrj1" type="revolute">
     <parent link="RForearm"/>
     <child link="RWrMot2"/>
@@ -963,11 +933,6 @@ and to define the end effectors of the robot -->
     <limit effort="50" lower="-1.5708" upper="1.5708" velocity="4.0"/>
     <dynamics damping="0.03" friction="0"/>
   </joint>
-  <!--joint name="LForearmPlate" type="fixed">
-    <parent link="LElb"/>
-    <child link="LForearm"/>
-    <origin xyz="-0.015 0.0 -0.05" rpy="0 0 0"/>
-  </joint-->
   <joint name="LWrj1" type="revolute">
     <parent link="LForearm"/>
     <child link="LWrMot2"/>

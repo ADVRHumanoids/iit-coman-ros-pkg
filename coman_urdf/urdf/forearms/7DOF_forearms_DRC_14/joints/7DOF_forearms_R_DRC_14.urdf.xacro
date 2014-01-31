@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <joint name="RForearmPlate" type="revolute">
+    <parent link="RElb"/>
+    <child link="RForearm"/>
+    <origin xyz="-0.015 0.0 -0.051" rpy="0 0 0"/>
+    <axis xyz="0 0 1" />
+    <limit velocity="4.0" effort="50" lower="-1.5708" upper="1.5708" />
+    <dynamics friction="0" damping="0.03"/>
+  </joint>
+
+  <joint name="RWrj1" type="revolute">
+    <parent link="RForearm"/>
+    <child link="RWrMot2"/>
+    <origin xyz="0 0 -0.14368" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <limit velocity="4.0" effort="50" lower="-0.524" upper="0.524" />
+    <dynamics friction="0" damping="0.03"/>
+  </joint>
+
+  <joint name="RWrj2" type="revolute">
+    <parent link="RWrMot2"/>
+    <child link="RWrMot3"/>
+    <origin xyz="0 0 0.0" rpy="0 0 0"/>
+    <axis xyz="1 0 0"/>
+    <limit velocity="4.0" effort="50" lower="-1.395" upper="0.785375" />
+    <dynamics friction="0" damping="0.03"/>
+  </joint>
+
+</robot>

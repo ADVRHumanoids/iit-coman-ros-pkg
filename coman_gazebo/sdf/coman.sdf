@@ -778,17 +778,14 @@
    </inertial>
    <collision name="LFoot_collision">
     <pose>
-     0 -0.0726 -0.0932 0 -0 3.14159
+     0.03 0 -0.09 0 -0 0
     </pose>
     <geometry>
-     <mesh>
-      <scale>
-       0.03937 0.03937 0.03937
-      </scale>
-      <uri>
-       model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_01_prt.dae
-      </uri>
-     </mesh>
+     <box>
+      <size>
+       0.2 0.12 0.04
+      </size>
+     </box>
     </geometry>
     <surface>
      <contact>
@@ -824,17 +821,14 @@
    </collision>
    <visual name="LFoot_visual">
     <pose>
-     0 -0.0726 -0.0932 0 -0 3.14159
+     0.03 0 -0.09 0 -0 0
     </pose>
     <geometry>
-     <mesh>
-      <scale>
-       0.03937 0.03937 0.03937
-      </scale>
-      <uri>
-       model://coman_urdf/meshes/collada/asm0001_collada_01_prt.dae
-      </uri>
-     </mesh>
+     <box>
+      <size>
+       0.2 0.12 0.04
+      </size>
+     </box>
     </geometry>
    </visual>
    <gravity>
@@ -1597,17 +1591,14 @@
    </inertial>
    <collision name="RFoot_collision">
     <pose>
-     0 0.0726 -0.0932 0 -0 3.14159
+     0.03 0 -0.09 0 -0 0
     </pose>
     <geometry>
-     <mesh>
-      <scale>
-       0.03937 0.03937 0.03937
-      </scale>
-      <uri>
-       model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_15_prt.dae
-      </uri>
-     </mesh>
+     <box>
+      <size>
+       0.2 0.12 0.04
+      </size>
+     </box>
     </geometry>
     <surface>
      <contact>
@@ -1643,17 +1634,14 @@
    </collision>
    <visual name="RFoot_visual">
     <pose>
-     0 0.0726 -0.0932 0 -0 3.14159
+     0.03 0 -0.09 0 -0 0
     </pose>
     <geometry>
-     <mesh>
-      <scale>
-       0.03937 0.03937 0.03937
-      </scale>
-      <uri>
-       model://coman_urdf/meshes/collada/asm0001_collada_15_prt.dae
-      </uri>
-     </mesh>
+     <box>
+      <size>
+       0.2 0.12 0.04
+      </size>
+     </box>
     </geometry>
    </visual>
    <gravity>
@@ -2543,7 +2531,7 @@
    </inertial>
    <collision name="LElb_collision">
     <pose>
-     0 0 0 -1.57079 1.57079 -2.65359e-06
+     0 0 0 -1.57079 1.57079 -2.65361e-06
     </pose>
     <geometry>
      <mesh>
@@ -2558,7 +2546,7 @@
    </collision>
    <visual name="LElb_visual">
     <pose>
-     0 0 0 -1.57079 1.57079 -2.65359e-06
+     0 0 0 -1.57079 1.57079 -2.65361e-06
     </pose>
     <geometry>
      <mesh>
@@ -2685,7 +2673,7 @@
    </collision>
    <visual name="LForearm_visual">
     <pose>
-     0 0 0.015 -1.5708 1.14194e-16 1.5708
+     0 0 0.015 -1.5708 5.55112e-17 1.5708
     </pose>
     <geometry>
      <mesh>
@@ -3493,7 +3481,7 @@
    </inertial>
    <collision name="RElb_collision">
     <pose>
-     0 0 0 -1.57079 1.57079 -2.65359e-06
+     0 0 0 -1.57079 1.57079 -2.65361e-06
     </pose>
     <geometry>
      <mesh>
@@ -3508,7 +3496,7 @@
    </collision>
    <visual name="RElb_visual">
     <pose>
-     0 0 0 -1.57079 1.57079 -2.65359e-06
+     0 0 0 -1.57079 1.57079 -2.65361e-06
     </pose>
     <geometry>
      <mesh>
@@ -3635,7 +3623,7 @@
    </collision>
    <visual name="RForearm_visual">
     <pose>
-     0 0 0.015 -1.5708 1.14194e-16 1.5708
+     0 0 0.015 -1.5708 5.55112e-17 1.5708
     </pose>
     <geometry>
      <mesh>

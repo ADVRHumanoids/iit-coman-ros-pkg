@@ -12,6 +12,8 @@
   Velocity and effort limits are fake!
 -->
 
+<!-- Adding macros for feet-->
+
 <!-- ********************LINKS******************** -->
 
 <!-- This links are defined in order to be compliant with http://www.ros.org/reps/rep-0120.html#coordinate-frames
@@ -229,25 +231,12 @@ and to define the end effectors of the robot -->
   </link>
 
   <xacro:unless value="$(optenv GAZEBO_COMAN_USES_ACCURATE_FT false)">
-    <link name ="RFoot">
-      <inertial>
-        <origin xyz="0.00969210464 -0.0090460227 -0.043062308" rpy="0 0 0"/>
-        <mass value="0.66646684"/>
-        <inertia ixx="0.0012944808"  ixy="-9.2387693E-5"  ixz="2.0080105E-4" iyy="0.0015851846" iyz="2.7599327E-4" izz="0.0013326766" />
-      </inertial>
-      <visual>
-        <origin xyz="0.0 0.0726 -0.0932" rpy="0 0 -3.14159265359"/>
-        <geometry name="RFoot_visual">
-          <mesh filename="package://coman_urdf/meshes/collada/asm0001_collada_15_prt.dae" scale="0.03937 0.03937 0.03937" />
-        </geometry>
-      </visual>
-      <collision>
-        <origin xyz="0.0 0.0726 -0.0932" rpy="0 0 -3.14159265359"/>
-        <geometry name="RFoot_collision">
-          <mesh filename="package://coman_urdf/meshes/collada/simple/simple_asm0001_collada_15_prt.dae" scale="0.03937 0.03937 0.03937" />
-        </geometry>             
-      </collision>
-    </link>
+    <xacro:if value="$(optenv GAZEBO_COMAN_USES_ROUND_FEET_13 true)">
+      <xacro:include filename="$(find coman_urdf)/urdf/feet/round_feet_13/round_foot_R_13.urdf.xacro" />
+    </xacro:if>
+    <xacro:if value="$(optenv GAZEBO_COMAN_USES_SIMPLE_FEET_DRC_sw1_14 false)">
+      <xacro:include filename="$(find coman_urdf)/urdf/feet/simple_feet_DRC_sw1_14/simple_foot_R_DRC_sw1_14.urdf.xacro" />
+    </xacro:if>
   </xacro:unless>
 
   <xacro:if value="$(optenv GAZEBO_COMAN_USES_ACCURATE_FT false)">
@@ -259,25 +248,12 @@ and to define the end effectors of the robot -->
       </inertial>
     </link>
 
-    <link name ="RFoot">
-      <inertial>
-        <origin xyz="0.00969210464 -0.0090460227 -0.0282" rpy="0 0 0"/>
-        <mass value="0.404"/>
-        <inertia ixx="0.0012944808"  ixy="-9.2387693E-5"  ixz="2.0080105E-4" iyy="0.0015851846" iyz="2.7599327E-4" izz="0.0013326766" />
-      </inertial>
-      <visual>
-        <origin xyz="0.0 0.0726 -0.0282" rpy="0 0 -3.14159265359"/>
-        <geometry name="RFoot_visual">
-          <mesh filename="package://coman_urdf/meshes/collada/asm0001_collada_15_prt.dae" scale="0.03937 0.03937 0.03937" />
-        </geometry>
-      </visual>
-      <collision>
-        <origin xyz="0.0 0.0726 -0.0282" rpy="0 0 -3.14159265359"/>
-        <geometry name="RFoot_collision">
-          <mesh filename="package://coman_urdf/meshes/collada/simple/simple_asm0001_collada_15_prt.dae" scale="0.03937 0.03937 0.03937" />
-        </geometry>             
-      </collision>
-    </link>
+    <xacro:if value="$(optenv GAZEBO_COMAN_USES_ROUND_FEET_13 true)">
+      <xacro:include filename="$(find coman_urdf)/urdf/feet/round_feet_13/accurate_FT_round_foot_R_13.urdf.xacro" />
+    </xacro:if>
+    <xacro:if value="$(optenv GAZEBO_COMAN_USES_SIMPLE_FEET_DRC_sw1_14 false)">
+      <xacro:include filename="$(find coman_urdf)/urdf/feet/simple_feet_DRC_sw1_14/accurate_FT_simple_foot_R_DRC_sw1_14.urdf.xacro" />
+    </xacro:if>
   </xacro:if>
 
 
@@ -383,25 +359,12 @@ and to define the end effectors of the robot -->
   </link>
 
   <xacro:unless value="$(optenv GAZEBO_COMAN_USES_ACCURATE_FT false)">  
-    <link name ="LFoot">
-      <inertial>
-        <origin xyz="0.0096921046 0.0090460227 -0.043062308" rpy="0 0 0"/>
-        <mass value="0.66646684"/>
-        <inertia ixx="0.0012944808"  ixy="9.2387693E-5"  ixz="2.0080105E-4" iyy="0.0015851846" iyz="-2.7599327E-4" izz="0.0013326766" />
-      </inertial>
-      <visual>
-        <origin xyz="0.0 -0.0726 -0.0932" rpy="0 0 -3.14159265359"/>
-        <geometry name="LFoot_visual">
-          <mesh filename="package://coman_urdf/meshes/collada/asm0001_collada_01_prt.dae" scale="0.03937 0.03937 0.03937" />
-        </geometry>
-      </visual>
-      <collision>
-        <origin xyz="0.0 -0.0726 -0.0932" rpy="0 0 -3.14159265359"/>
-        <geometry name="LFoot_collision">
-          <mesh filename="package://coman_urdf/meshes/collada/simple/simple_asm0001_collada_01_prt.dae" scale="0.03937 0.03937 0.03937" />
-        </geometry>             
-      </collision>
-    </link>
+    <xacro:if value="$(optenv GAZEBO_COMAN_USES_ROUND_FEET_13 true)">
+      <xacro:include filename="$(find coman_urdf)/urdf/feet/round_feet_13/round_foot_L_13.urdf.xacro" />
+    </xacro:if>
+    <xacro:if value="$(optenv GAZEBO_COMAN_USES_SIMPLE_FEET_DRC_sw1_14 false)">
+      <xacro:include filename="$(find coman_urdf)/urdf/feet/simple_feet_DRC_sw1_14/simple_foot_L_DRC_sw1_14.urdf.xacro" />
+    </xacro:if>
   </xacro:unless>
 
   <xacro:if value="$(optenv GAZEBO_COMAN_USES_ACCURATE_FT false)">
@@ -413,25 +376,12 @@ and to define the end effectors of the robot -->
       </inertial>
     </link>
 
-    <link name ="LFoot">
-      <inertial>
-        <origin xyz="0.0096921046 0.0090460227 -0.0282" rpy="0 0 0"/>
-        <mass value="0.404"/>
-        <inertia ixx="0.0012944808"  ixy="9.2387693E-5"  ixz="2.0080105E-4" iyy="0.0015851846" iyz="-2.7599327E-4" izz="0.0013326766" />
-      </inertial>
-      <visual>
-        <origin xyz="0.0 -0.0726 -0.0282" rpy="0 0 -3.14159265359"/>
-        <geometry name="LFoot_visual">
-          <mesh filename="package://coman_urdf/meshes/collada/asm0001_collada_01_prt.dae" scale="0.03937 0.03937 0.03937" />
-        </geometry>
-      </visual>
-      <collision>
-        <origin xyz="0.0 -0.0726 -0.0282" rpy="0 0 -3.14159265359"/>
-        <geometry name="LFoot_collision">
-          <mesh filename="package://coman_urdf/meshes/collada/simple/simple_asm0001_collada_01_prt.dae" scale="0.03937 0.03937 0.03937" />
-        </geometry>             
-      </collision>
-    </link>
+    <xacro:if value="$(optenv GAZEBO_COMAN_USES_ROUND_FEET_13 true)">
+      <xacro:include filename="$(find coman_urdf)/urdf/feet/round_feet_13/accurate_FT_round_foot_L_13.urdf.xacro" />
+    </xacro:if>
+    <xacro:if value="$(optenv GAZEBO_COMAN_USES_SIMPLE_FEET_DRC_sw1_14 false)">
+      <xacro:include filename="$(find coman_urdf)/urdf/feet/simple_feet_DRC_sw1_14/accurate_FT_simple_foot_L_DRC_sw1_14.urdf.xacro" />
+    </xacro:if>
   </xacro:if>
 
 
@@ -497,119 +447,13 @@ and to define the end effectors of the robot -->
     </collision>
   </link>
 
-  <link name ="RElb">
-    <inertial>
-      <origin xyz="-6.5553403E-4 -9.3464748E-4 -9.3101289E-4" rpy="0 0 0"/>
-      <mass value="0.63306933"/>
-      <inertia ixx="2.2599075E-4"  ixy="-2.6376470E-7"  ixz="-9.8007285E-6" iyy="2.7781302E-4" iyz="-2.0435288E-6" izz="2.1878992E-4" />
-    </inertial>
-    <visual>
-      <origin xyz="0 0 0" rpy="-1.570796326795 1.570796326795 0"/>
-      <geometry name="RElb_visual">
-        <mesh filename="package://coman_urdf/meshes/collada/forearms/elbow.dae" scale="1.0 1.0 1.0" />
-      </geometry>
-    </visual>
-    <collision>
-      <origin xyz="0 0 0" rpy="-1.570796326795 1.570796326795 0"/>
-      <geometry name="RElb_collision">
-        <mesh filename="package://coman_urdf/meshes/collada/simple/forearms/elbow.dae" scale="1.0 1.0 1.0" />
-      </geometry>             
-    </collision>
-  </link>
+  <xacro:if value="$(optenv GAZEBO_COMAN_USES_NO_FOREARMS true)">
+      <xacro:include filename="$(find coman_urdf)/urdf/forearms/no_forearms/links/no_forearms_R.urdf.xacro" />
+  </xacro:if>
 
-  <!-- ## WRONG NUMBERS FOR INERTIAL!!! FIX THEM!! ## -->
-  <!-- In ROBOTRAN this link is named RFArm -->
-  <link name ="RForearm">
-    <inertial>
-      <origin xyz="0 0 -0.085" rpy="0 0 0"/>
-      <mass value="0.93351655"/>
-      <inertia ixx="0.001"  ixy="0.0"  ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001" />
-    </inertial>
-    <visual>
-      <origin xyz="0 0 0.015" rpy="-1.570796326795 0 1.570796326795"/>
-      <geometry name="RForearm_visual">
-        <mesh filename="package://coman_urdf/meshes/collada/forearms/forearm.dae" scale="0.001 0.001 0.001" />
-      </geometry>
-    </visual>
-    <collision>
-      <origin xyz="0 0 0.015" rpy="0 3.14159265359 1.570796326795"/>
-      <geometry name="RForearm_collision">
-        <mesh filename="package://coman_urdf/meshes/collada/simple/forearms/forearm.dae" scale="1.0 1.0 1.0" />
-      </geometry>             
-    </collision>
-  </link>
-
-  <!--link name ="RElb">
-    <inertial>
-      <origin xyz="-6.5553403E-4 -9.3464748E-4 -9.3101289E-4" rpy="0 0 0"/>
-      <mass value="0.63306933"/>
-      <inertia ixx="2.2599075E-4"  ixy="-2.6376470E-7"  ixz="-9.8007285E-6" iyy="2.7781302E-4" iyz="-2.0435288E-6" izz="2.1878992E-4" />
-    </inertial>
-    <visual>
-      <origin xyz="-0.020305 -0.1558 -0.664329" rpy="0 0 -3.14159265359"/>
-      <geometry name="RElb_visual">
-        <mesh filename="package://coman_urdf/meshes/collada/asm0001_collada_11_prt.dae" scale="0.03937 0.03937 0.03937" />
-      </geometry>
-    </visual>
-    <collision>
-      <origin xyz="-0.020305 -0.1558 -0.664329" rpy="0 0 -3.14159265359"/>
-      <geometry name="RElb_collision">
-        <mesh filename="package://coman_urdf/meshes/collada/simple/simple_asm0001_collada_11_prt.dae" scale="0.03937 0.03937 0.03937" />
-      </geometry>             
-    </collision>
-  </link>
-
-  <link name ="RForearm">
-    <inertial>
-      <origin xyz="0 0 -0.085" rpy="0 0 0"/>
-      <mass value="0.263"/>
-      <inertia ixx="6.913E-4"  ixy="0.0"  ixz="0.0" iyy="6.913E-4" iyz="0.0" izz="4.0425E-5" />
-    </inertial>
-  </link-->
-
-  <!-- ## WRONG NUMBERS FOR INERTIAL!!! FIX THEM!! ## -->
-  <!-- Here I have used the inertia of a full cylinder with r = 0.02 [m] and h = 0.07 [m] -->
-  <link name="RWrMot2">
-    <inertial>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
-      <mass value="0.26070556"/>
-      <inertia ixx="0.000132"  ixy="0"  ixz="0" iyy="0.000132" iyz="0" izz="5.213E-5" />
-    </inertial>
-    <visual>
-      <origin xyz="0.025 0 0" rpy="0 1.570796326795 3.14159265359"/>
-      <geometry name="RWrMot2_visual">
-        <mesh filename="package://coman_urdf/meshes/collada/forearms/fa_asm_3_right_sw0001.dae" scale="0.001 0.001 0.001" />
-      </geometry>
-    </visual>
-    <collision>
-      <origin xyz="0.025 0 0" rpy="0 1.570796326795 3.14159265359"/>
-      <geometry name="RWrMot2_collision">
-        <mesh filename="package://coman_urdf/meshes/collada/simple/forearms/simple_fa_asm_3_right_sw0001.dae" scale="0.001 0.001 0.001" />
-      </geometry>             
-    </collision>
-  </link>
-
-  <!-- ## WRONG NUMBERS FOR INERTIAL!!! FIX THEM!! ## -->
-  <!-- Here I have used the inertia of a concave cylinder with r = 0.02 [m] -->
-  <link name="RWrMot3">
-    <inertial>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
-      <mass value="0.054007518"/>
-      <inertia ixx="2.16E-5"  ixy="0"  ixz="0" iyy="2.16E-5" iyz="0" izz="2.16E-5" />
-    </inertial>
-    <visual>
-      <origin xyz="0.025 -0.012 -0.02" rpy="0 3.14159265359 1.570796326795"/>
-      <geometry name="RWrMot3_visual">
-        <mesh filename="package://coman_urdf/meshes/collada/forearms/fa_hand_interface_rig_sw0001.dae" scale="0.001 0.001 0.001" />
-      </geometry>
-    </visual>
-    <collision>
-      <origin xyz="0.025 -0.012 -0.02" rpy="0 3.14159265359 1.570796326795"/>
-      <geometry name="RWrMot3_collision">
-        <mesh filename="package://coman_urdf/meshes/collada/simple/forearms/simple_fa_hand_interface_rig_sw0001.dae" scale="0.001 0.001 0.001" />
-      </geometry>             
-    </collision>
-  </link> 
+  <xacro:if value="$(optenv GAZEBO_COMAN_USES_7DOF_FOREARMS_DRC_14 false)">
+      <xacro:include filename="$(find coman_urdf)/urdf/forearms/7DOF_forearms_DRC_14/links/7DOF_forearms_R_DRC_14.urdf.xacro" />
+  </xacro:if>
 
 <!-- ********************LEFT ARM******************** -->
 
@@ -673,121 +517,13 @@ and to define the end effectors of the robot -->
     </collision>
   </link>
 
-  <link name ="LElb">
-    <inertial>
-      <origin xyz="-6.5553403E-4 9.3464748E-4 -9.3101289E-4" rpy="0 0 0"/>
-      <mass value="0.63306933"/>
-      <inertia ixx="2.2599075E-4"  ixy="2.6376470E-7"  ixz="-9.8007285E-6" iyy="2.7781302E-4" iyz="2.0435288E-6" izz="2.1878992E-4" />
-    </inertial>
-    <visual>
-      <origin xyz="0 0 0" rpy="-1.570796326795 1.570796326795 0"/>
-      <geometry name="LElb_visual">
-        <mesh filename="package://coman_urdf/meshes/collada/forearms/elbow.dae" scale="1.0 1.0 1.0" />
-      </geometry>
-    </visual>
-    <collision>
-      <origin xyz="0 0 0" rpy="-1.570796326795 1.570796326795 0"/>
-      <geometry name="LElb_collision">
-        <mesh filename="package://coman_urdf/meshes/collada/simple/forearms/elbow.dae" scale="1.0 1.0 1.0" />
-      </geometry>             
-    </collision>
-  </link>
+  <xacro:if value="$(optenv GAZEBO_COMAN_USES_NO_FOREARMS true)">
+      <xacro:include filename="$(find coman_urdf)/urdf/forearms/no_forearms/links/no_forearms_L.urdf.xacro" />
+  </xacro:if>
 
-  <!-- ## WRONG NUMBERS FOR INERTIAL!!! FIX THEM!! ## -->
-  <!-- In ROBOTRAN this link is named LFARM -->
-  <link name ="LForearm">
-    <inertial>
-      <origin xyz="0 0 -0.085" rpy="0 0 0"/>
-      <mass value="0.93351655"/>
-      <inertia ixx="0.001"  ixy="0.0"  ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001" />
-    </inertial>
-    <visual>
-      <origin xyz="0 0 0.015" rpy="-1.570796326795 0 1.570796326795"/>
-      <geometry name="LForearm_visual">
-        <mesh filename="package://coman_urdf/meshes/collada/forearms/forearm.dae" scale="0.001 0.001 0.001" />
-      </geometry>
-    </visual>
-    <collision>
-      <origin xyz="0 0 0.015" rpy="0 3.14159265359 1.570796326795"/>
-      <geometry name="LForearm_collision">
-        <mesh filename="package://coman_urdf/meshes/collada/simple/forearms/forearm.dae" scale="1.0 1.0 1.0" />
-      </geometry>             
-    </collision>
-  </link>
-
-  <!--link name ="LElb">
-    <inertial>
-      <origin xyz="-6.5553403E-4 9.3464748E-4 -9.3101289E-4" rpy="0 0 0"/>
-      <mass value="0.63306933"/>
-      <inertia ixx="2.2599075E-4"  ixy="2.637647E-7"  ixz="-9.8007285E-6" iyy="2.7781302E-4" iyz="2.0435288E-6" izz="2.1878992E-4" />
-    </inertial>
-    <visual>
-      <origin xyz="-0.020305 -0.1558 -0.664329" rpy="0 0 -3.14159265359"/>
-      <geometry name="LElb_visual">
-        <mesh filename="package://coman_urdf/meshes/collada/asm0001_collada_11_prt.dae" scale="0.03937 0.03937 0.03937" />
-      </geometry>
-    </visual>
-    <collision>
-      <origin xyz="-0.020305 -0.1558 -0.664329" rpy="0 0 -3.14159265359"/>
-      <geometry name="LElb_collision">
-        <mesh filename="package://coman_urdf/meshes/collada/simple/simple_asm0001_collada_11_prt.dae" scale="0.03937 0.03937 0.03937" />
-      </geometry>             
-    </collision>
-  </link>
-
-  <link name ="LForearm">
-    <inertial>
-      <origin xyz="0 0 -0.085" rpy="0 0 0"/>
-      <mass value="0.263"/>
-      <inertia ixx="6.913E-4"  ixy="0.0"  ixz="0.0" iyy="6.913E-4" iyz="0.0" izz="4.0425E-5" />
-    </inertial>
-  </link-->
-
-  <!-- ## WRONG NUMBERS FOR INERTIAL!!! FIX THEM!! ## -->
-  <!-- Here I have used the inertia of a full cylinder with r = 0.02 [m] and h = 0.07 [m] -->
-  <link name="LWrMot2">
-    <inertial>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
-      <mass value="0.26070556"/>
-      <inertia ixx="0.000132"  ixy="0"  ixz="0" iyy="0.000132" iyz="0" izz="5.213E-5" />
-    </inertial>
-    <visual>
-      <origin xyz="0.025 0 0" rpy="0 1.570796326795 3.14159265359"/>
-      <geometry name="LWrMot2_visual">
-        <mesh filename="package://coman_urdf/meshes/collada/forearms/fa_asm_3_right_sw0001.dae" scale="0.001 0.001 0.001" />
-      </geometry>
-    </visual>
-    <collision>
-      <origin xyz="0.025 0 0" rpy="0 1.570796326795 3.14159265359"/>
-      <geometry name="LWrMot2_collision">
-        <mesh filename="package://coman_urdf/meshes/collada/simple/forearms/simple_fa_asm_3_right_sw0001.dae" scale="0.001 0.001 0.001" />
-      </geometry>             
-    </collision>
-  </link>
-
-  <!-- ## WRONG NUMBERS FOR INERTIAL!!! FIX THEM!! ## -->
-  <!-- Here I have used the inertia of a concave cylinder with r = 0.02 [m] -->
-  <link name="LWrMot3">
-    <inertial>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
-      <mass value="0.054007518"/>
-      <inertia ixx="2.16E-5"  ixy="0"  ixz="0" iyy="2.16E-5" iyz="0" izz="2.16E-5" />
-    </inertial>
-    <visual>
-      <origin xyz="0.025 -0.012 -0.02" rpy="0 3.14159265359 1.570796326795"/>
-      <geometry name="LWrMot3_visual">
-        <mesh filename="package://coman_urdf/meshes/collada/forearms/fa_hand_interface_rig_sw0001.dae" scale="0.001 0.001 0.001" />
-      </geometry>
-    </visual>
-    <collision>
-      <origin xyz="0.025 -0.012 -0.02" rpy="0 3.14159265359 1.570796326795"/>
-      <geometry name="LWrMot3_collision">
-        <mesh filename="package://coman_urdf/meshes/collada/simple/forearms/simple_fa_hand_interface_rig_sw0001.dae" scale="0.001 0.001 0.001" />
-      </geometry>             
-    </collision>
-  </link> 
-
-
+  <xacro:if value="$(optenv GAZEBO_COMAN_USES_7DOF_FOREARMS_DRC_14 false)">
+      <xacro:include filename="$(find coman_urdf)/urdf/forearms/7DOF_forearms_DRC_14/links/7DOF_forearms_L_DRC_14.urdf.xacro" />
+  </xacro:if>
 
 <!-- ********************JOINTS******************** -->
 
@@ -803,17 +539,19 @@ and to define the end effectors of the robot -->
     <origin xyz="0 0 0" rpy="0 0 0" />
   </joint>
 
-  <joint name="r_wrist_joint" type="fixed">
-    <parent link="RWrMot3"/>
-    <child link="r_wrist"/>
-    <origin xyz="0 0 0" rpy="0 0 0" />
-  </joint>
+  <xacro:if value="$(optenv GAZEBO_COMAN_USES_7DOF_FOREARMS_DRC_14 false)">
+    <joint name="r_wrist_joint" type="fixed">
+      <parent link="RWrMot3"/>
+      <child link="r_wrist"/>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </joint>
 
-  <joint name="l_ankle_joint" type="fixed">
-    <parent link="LFoot"/>
-    <child link="l_ankle"/>
-    <origin xyz="0 0 0" rpy="0 0 0" />
-  </joint>
+    <joint name="l_ankle_joint" type="fixed">
+      <parent link="LFoot"/>
+      <child link="l_ankle"/>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </joint>
+  </xacro:if>
 
   <joint name="r_ankle_joint" type="fixed">
     <parent link="RFoot"/>
@@ -1084,38 +822,13 @@ and to define the end effectors of the robot -->
     <dynamics friction="0" damping="3.0"/>
   </joint>
 
-  <joint name="RForearmPlate" type="revolute">
-    <parent link="RElb"/>
-    <child link="RForearm"/>
-    <origin xyz="-0.015 0.0 -0.051" rpy="0 0 0"/>
-    <axis xyz="0 0 1" />
-    <limit velocity="4.0" effort="50" lower="-1.5708" upper="1.5708" />
-    <dynamics friction="0" damping="0.03"/>
-  </joint>
- 
-  <!--joint name="RForearmPlate" type="fixed">
-    <parent link="RElb"/>
-    <child link="RForearm"/>
-    <origin xyz="-0.015 0.0 -0.05" rpy="0 0 0"/>
-  </joint-->
+  <xacro:if value="$(optenv GAZEBO_COMAN_USES_NO_FOREARMS true)">
+      <xacro:include filename="$(find coman_urdf)/urdf/forearms/no_forearms/joints/no_forearms_R.urdf.xacro" />
+  </xacro:if>
 
-  <joint name="RWrj1" type="revolute">
-    <parent link="RForearm"/>
-    <child link="RWrMot2"/>
-    <origin xyz="0 0 -0.14368" rpy="0 0 0"/>
-    <axis xyz="0 1 0"/>
-    <limit velocity="4.0" effort="50" lower="-0.524" upper="0.524" />
-    <dynamics friction="0" damping="0.03"/>
-  </joint>
-
-  <joint name="RWrj2" type="revolute">
-    <parent link="RWrMot2"/>
-    <child link="RWrMot3"/>
-    <origin xyz="0 0 0.0" rpy="0 0 0"/>
-    <axis xyz="1 0 0"/>
-    <limit velocity="4.0" effort="50" lower="-1.395" upper="0.785375" />
-    <dynamics friction="0" damping="0.03"/>
-  </joint>
+  <xacro:if value="$(optenv GAZEBO_COMAN_USES_7DOF_FOREARMS_DRC_14 false)">
+      <xacro:include filename="$(find coman_urdf)/urdf/forearms/7DOF_forearms_DRC_14/joints/7DOF_forearms_R_DRC_14.urdf.xacro" />
+  </xacro:if>
 
 <!-- ********************LEFT ARM******************** -->
 
@@ -1155,38 +868,14 @@ and to define the end effectors of the robot -->
     <dynamics friction="0" damping="3.0"/>
   </joint>
 
-  <joint name="LForearmPlate" type="revolute">
-    <parent link="LElb"/>
-    <child link="LForearm"/>
-    <origin xyz="-0.015 0.0 -0.051" rpy="0 0 0"/>
-    <axis xyz="0 0 1" />
-    <limit velocity="4.0" effort="50" lower="-1.5708" upper="1.5708" />
-    <dynamics friction="0" damping="0.03"/>
-  </joint>
 
-  <!--joint name="LForearmPlate" type="fixed">
-    <parent link="LElb"/>
-    <child link="LForearm"/>
-    <origin xyz="-0.015 0.0 -0.05" rpy="0 0 0"/>
-  </joint-->
+  <xacro:if value="$(optenv GAZEBO_COMAN_USES_NO_FOREARMS true)">
+      <xacro:include filename="$(find coman_urdf)/urdf/forearms/no_forearms/joints/no_forearms_L.urdf.xacro" />
+  </xacro:if>
 
-  <joint name="LWrj1" type="revolute">
-    <parent link="LForearm"/>
-    <child link="LWrMot2"/>
-    <origin xyz="0 0 -0.14368" rpy="0 0 0"/>
-    <axis xyz="0 1 0"/>
-    <limit velocity="4.0" effort="50" lower="-0.524" upper="0.524" />
-    <dynamics friction="0" damping="0.03"/>
-  </joint>
-
-  <joint name="LWrj2" type="revolute">
-    <parent link="LWrMot2"/>
-    <child link="LWrMot3"/>
-    <origin xyz="0 0 0.0" rpy="0 0 0"/>
-    <axis xyz="1 0 0"/>
-    <limit velocity="4.0" effort="50" lower="-0.785375" upper="1.395" />
-    <dynamics friction="0" damping="0.03"/>
-  </joint>
+  <xacro:if value="$(optenv GAZEBO_COMAN_USES_7DOF_FOREARMS_DRC_14 false)">
+      <xacro:include filename="$(find coman_urdf)/urdf/forearms/7DOF_forearms_DRC_14/joints/7DOF_forearms_L_DRC_14.urdf.xacro" />
+  </xacro:if>
 
 </robot>
 
