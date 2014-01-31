@@ -5,7 +5,7 @@
 
     <!-- start robot state publisher -->
     <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" output="screen" >
-        <remap from="joint_states" to="coman/joints_state"/>
+        <!--remap from="joint_states" to="coman/joints_state"/-->
         <param name="publish_frequency" type="double" value="50.0" />
     </node> 
 
