@@ -447,11 +447,11 @@ and to define the end effectors of the robot -->
     </collision>
   </link>
 
-  <xacro:if value="$(optenv GAZEBO_COMAN_USES_NO_FOREARMS true)">
+  <xacro:if value="$(optenv GAZEBO_COMAN_USES_NO_FOREARMS false)">
       <xacro:include filename="$(find coman_urdf)/urdf/forearms/no_forearms/links/no_forearms_R.urdf.xacro" />
   </xacro:if>
 
-  <xacro:if value="$(optenv GAZEBO_COMAN_USES_7DOF_FOREARMS_DRC_14 false)">
+  <xacro:if value="$(optenv GAZEBO_COMAN_USES_7DOF_FOREARMS_DRC_14 true)">
       <xacro:include filename="$(find coman_urdf)/urdf/forearms/7DOF_forearms_DRC_14/links/7DOF_forearms_R_DRC_14.urdf.xacro" />
   </xacro:if>
 
@@ -517,11 +517,11 @@ and to define the end effectors of the robot -->
     </collision>
   </link>
 
-  <xacro:if value="$(optenv GAZEBO_COMAN_USES_NO_FOREARMS true)">
+  <xacro:if value="$(optenv GAZEBO_COMAN_USES_NO_FOREARMS false)">
       <xacro:include filename="$(find coman_urdf)/urdf/forearms/no_forearms/links/no_forearms_L.urdf.xacro" />
   </xacro:if>
 
-  <xacro:if value="$(optenv GAZEBO_COMAN_USES_7DOF_FOREARMS_DRC_14 false)">
+  <xacro:if value="$(optenv GAZEBO_COMAN_USES_7DOF_FOREARMS_DRC_14 true)">
       <xacro:include filename="$(find coman_urdf)/urdf/forearms/7DOF_forearms_DRC_14/links/7DOF_forearms_L_DRC_14.urdf.xacro" />
   </xacro:if>
 
@@ -533,25 +533,39 @@ and to define the end effectors of the robot -->
     <origin xyz="0 0 0" rpy="0 0 0" />
   </joint>
 
-  <joint name="l_wrist_joint" type="fixed">
-    <parent link="LWrMot3"/>
-    <child link="l_wrist"/>
-    <origin xyz="0 0 0" rpy="0 0 0" />
-  </joint>
+<xacro:if value="$(optenv GAZEBO_COMAN_USES_7DOF_FOREARMS_DRC_14 true)">
+   <joint name="l_wrist_joint" type="fixed">
+     <parent link="LWrMot3"/>
+     <child link="l_wrist"/>
+     <origin xyz="0 0 0" rpy="0 0 0" />
+   </joint>
 
-  <xacro:if value="$(optenv GAZEBO_COMAN_USES_7DOF_FOREARMS_DRC_14 false)">
     <joint name="r_wrist_joint" type="fixed">
       <parent link="RWrMot3"/>
       <child link="r_wrist"/>
       <origin xyz="0 0 0" rpy="0 0 0" />
     </joint>
+</xacro:if>
+
+<xacro:if value="$(optenv GAZEBO_COMAN_USES_NO_FOREARMS false)">
+	<joint name="l_wrist_joint" type="fixed">
+	  <parent link="LElb"/>
+	  <child link="l_wrist"/>
+	  <origin xyz="-0.015 0 -0.22" rpy="0 0 0" />
+	</joint>
+
+        <joint name="r_wrist_joint" type="fixed">
+	  <parent link="RElb"/>
+	  <child link="r_wrist"/>
+	  <origin xyz="-0.015 0 -0.22" rpy="0 0 0" />
+	</joint>
+</xacro:if>
 
     <joint name="l_ankle_joint" type="fixed">
       <parent link="LFoot"/>
       <child link="l_ankle"/>
       <origin xyz="0 0 0" rpy="0 0 0" />
     </joint>
-  </xacro:if>
 
   <joint name="r_ankle_joint" type="fixed">
     <parent link="RFoot"/>
@@ -822,11 +836,11 @@ and to define the end effectors of the robot -->
     <dynamics friction="0" damping="3.0"/>
   </joint>
 
-  <xacro:if value="$(optenv GAZEBO_COMAN_USES_NO_FOREARMS true)">
+  <xacro:if value="$(optenv GAZEBO_COMAN_USES_NO_FOREARMS false)">
       <xacro:include filename="$(find coman_urdf)/urdf/forearms/no_forearms/joints/no_forearms_R.urdf.xacro" />
   </xacro:if>
 
-  <xacro:if value="$(optenv GAZEBO_COMAN_USES_7DOF_FOREARMS_DRC_14 false)">
+  <xacro:if value="$(optenv GAZEBO_COMAN_USES_7DOF_FOREARMS_DRC_14 true)">
       <xacro:include filename="$(find coman_urdf)/urdf/forearms/7DOF_forearms_DRC_14/joints/7DOF_forearms_R_DRC_14.urdf.xacro" />
   </xacro:if>
 
@@ -869,11 +883,11 @@ and to define the end effectors of the robot -->
   </joint>
 
 
-  <xacro:if value="$(optenv GAZEBO_COMAN_USES_NO_FOREARMS true)">
+  <xacro:if value="$(optenv GAZEBO_COMAN_USES_NO_FOREARMS false)">
       <xacro:include filename="$(find coman_urdf)/urdf/forearms/no_forearms/joints/no_forearms_L.urdf.xacro" />
   </xacro:if>
 
-  <xacro:if value="$(optenv GAZEBO_COMAN_USES_7DOF_FOREARMS_DRC_14 false)">
+  <xacro:if value="$(optenv GAZEBO_COMAN_USES_7DOF_FOREARMS_DRC_14 true)">
       <xacro:include filename="$(find coman_urdf)/urdf/forearms/7DOF_forearms_DRC_14/joints/7DOF_forearms_L_DRC_14.urdf.xacro" />
   </xacro:if>
 
