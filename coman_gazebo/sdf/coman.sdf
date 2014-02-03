@@ -2531,7 +2531,7 @@
    </inertial>
    <collision name="LElb_collision">
     <pose>
-     0 0 0 -1.57079 1.57079 -2.65361e-06
+     0 0 0 -1.57079 1.57079 -2.65359e-06
     </pose>
     <geometry>
      <mesh>
@@ -2546,7 +2546,7 @@
    </collision>
    <visual name="LElb_visual">
     <pose>
-     0 0 0 -1.57079 1.57079 -2.65361e-06
+     0 0 0 -1.57079 1.57079 -2.65359e-06
     </pose>
     <geometry>
      <mesh>
@@ -2673,7 +2673,7 @@
    </collision>
    <visual name="LForearm_visual">
     <pose>
-     0 0 0.015 -1.5708 5.55112e-17 1.5708
+     0 0 0.015 -1.5708 1.14194e-16 1.5708
     </pose>
     <geometry>
      <mesh>
@@ -3481,7 +3481,7 @@
    </inertial>
    <collision name="RElb_collision">
     <pose>
-     0 0 0 -1.57079 1.57079 -2.65361e-06
+     0 0 0 -1.57079 1.57079 -2.65359e-06
     </pose>
     <geometry>
      <mesh>
@@ -3496,7 +3496,7 @@
    </collision>
    <visual name="RElb_visual">
     <pose>
-     0 0 0 -1.57079 1.57079 -2.65361e-06
+     0 0 0 -1.57079 1.57079 -2.65359e-06
     </pose>
     <geometry>
      <mesh>
@@ -3623,7 +3623,7 @@
    </collision>
    <visual name="RForearm_visual">
     <pose>
-     0 0 0.015 -1.5708 5.55112e-17 1.5708
+     0 0 0.015 -1.5708 1.14194e-16 1.5708
     </pose>
     <geometry>
      <mesh>
