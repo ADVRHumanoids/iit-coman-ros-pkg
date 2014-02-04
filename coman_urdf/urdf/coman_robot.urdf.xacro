@@ -11,8 +11,8 @@
   <xacro:include filename="$(find coman_urdf)/urdf/coman.urdf.xacro" />
 
 <!-- Hands! -->
-  <xacro:if value="$(optenv GAZEBO_COMAN_USES_7DOF_FOREARMS_DRC_14 false)">
-    <xacro:if value="$(optenv GAZEBO_COMAN_USES_SOFTHANDS_DRC_sw1_14 false)">
+  <xacro:if value="$(optenv GAZEBO_COMAN_USES_7DOF_FOREARMS_DRC_14 true)">
+    <xacro:if value="$(optenv GAZEBO_COMAN_USES_SOFTHANDS_DRC_sw1_14 true)">
       <xacro:include filename="$(find coman_urdf)/urdf/soft_hand.urdf.xacro" />
 
       <joint name="r_handj" type="fixed">
@@ -51,7 +51,7 @@
   </joint>
 
   <xacro:include filename="$(find coman_urdf)/urdf/microstrain_3dmgx2_imu.gazebo.xacro" />
-  <xacro:if value="$(optenv GAZEBO_COMAN_USES_ROS true)">
+  <xacro:if value="$(optenv GAZEBO_COMAN_USES_ROS false)">
   	<xacro:include filename="$(find coman_urdf)/urdf/coman_transmission.urdf.xacro" /> 
   </xacro:if>
   <xacro:include filename="$(find coman_urdf)/urdf/coman.gazebo.xacro" />

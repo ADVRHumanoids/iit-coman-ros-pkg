@@ -24,7 +24,7 @@ export ROS_PACKAGE_PATH=${ROS_PACKAGE_PATH}:/home/your_name/projects/walkman/iit
 
 The script has to be called in script/ folder:
 ```
-./create_urdf_and_sdf.sh
+. create_urdf_and_sdf.sh
 ```
 It can create the coman urdf and sdf models, and it accepts parameters as specified in the model_config.sh
 Refer to model_config.sh for the available options.
