@@ -15,7 +15,7 @@
 
   Velocity and effort limits are fake!
 -->
-  <!-- Adding macros for feet-->
+  <!-- ************ MODEL CONFIGURATION ************ -->
   <!-- ********************LINKS******************** -->
   <!-- This links are defined in order to be compliant with http://www.ros.org/reps/rep-0120.html#coordinate-frames
 and to define the end effectors of the robot -->
