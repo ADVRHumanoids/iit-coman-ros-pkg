@@ -22,7 +22,15 @@ if __name__ == '__main__':
   soup_wtf = BeautifulSoup(wtf_file,"xml")
   sdf_file = open(soup_wtf.robot['filename'])
   soup_sdf = BeautifulSoup(sdf_file,"xml")
+  coman_config_file = open(sys.argv[2])
+  soup_coman_config = BeautifulSoup(coman_config_file,"xml")
+
   try:
+    for config_el in soup_coman_config.find_all('property'):
+      if(config_el.has_attr('name') and config_el.has_attr('value')):
+        os.putenv(config_el['name'],config_el['value'])
+        os.environ[config_el['name']] = config_el['value']
+
     for wtf_el in soup_wtf.find_all('wtf'):
       if (not wtf_el.has_attr('if') and not wtf_el.has_attr('unless')) or (wtf_el.has_attr('if') and a2b(os.getenv(wtf_el['if'], False)) or ((wtf_el.has_attr('unless') and not a2b(os.getenv(wtf_el['unless'], False))))):
         for wtf_cond_el in wtf_el.find_all('wtf_cond'):

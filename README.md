@@ -29,6 +29,11 @@ The script has to be called in script/ folder:
 It can create the coman urdf and sdf models, and it accepts parameters as specified in the model_config.sh
 Refer to model_config.sh for the available options.
 
+After modifications to the .xacro files you can check the results directly by running
+```
+roslaunch coman_urdf coman_slider.launch
+rosrun rviz rviz
+```
 coman_gazebo:
 -------------
 contains files needed for the simulation as well as a launch file to start the simulation.
