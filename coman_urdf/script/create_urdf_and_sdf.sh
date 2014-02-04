@@ -1,7 +1,5 @@
 #!/bin/bash
 
-source model_config.sh
-
 cd ../urdf
 
 echo "Creating bare urdf of coman.urdf.xacro"
