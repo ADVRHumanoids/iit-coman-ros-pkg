@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://ros.org/wiki/xacro" name="COMAN">
+
 <!-- 
   ROS urdf definition of the COMAN humanoid robot by Istituto Italiano di Tecnologia
   
@@ -12,7 +13,9 @@
   Velocity and effort limits are fake!
 -->
 
-<!-- Adding macros for feet-->
+
+<!-- ************ MODEL CONFIGURATION ************ -->
+<xacro:include filename="$(find coman_urdf)/urdf/coman_config.urdf.xacro" />
 
 <!-- ********************LINKS******************** -->
 

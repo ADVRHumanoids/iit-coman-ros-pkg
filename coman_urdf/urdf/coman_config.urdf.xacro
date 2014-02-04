@@ -1,5 +1,7 @@
-#!/usr/bin/env bash
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro" name="COMAN">
 
+<!--
 ####################################################
 ##
 ##  FEET SELECTION
@@ -11,14 +13,16 @@
 ##
 ####################################################
 # TODO checks (must be mutually exclusive)
-#
-# 1) round feet
-export GAZEBO_COMAN_USES_ROUND_FEET_13=false
-# 2) simple feet
-export GAZEBO_COMAN_USES_SIMPLE_FEET_DRC_sw1_14=true
+-->
+
+<!-- 1) round feet -->
+<xacro:property name="GAZEBO_COMAN_USES_ROUND_FEET_13" value="false" />
+
+<!-- 2) simple feet -->
+<xacro:property name="GAZEBO_COMAN_USES_SIMPLE_FEET_DRC_sw1_14" value="true" />
 
 
-
+<!--
 ####################################################
 ##
 ##  FOREARMS SELECTION
@@ -34,19 +38,20 @@ export GAZEBO_COMAN_USES_SIMPLE_FEET_DRC_sw1_14=true
 # 
 # 1) NO_FOREARMS + NO_HANDS
 #
-#export GAZEBO_COMAN_USES_NO_FOREARMS=true
-#export GAZEBO_COMAN_USES_NO_HANDS=true
-#export GAZEBO_COMAN_USES_7DOF_FOREARMS_DRC_14=false
-#export GAZEBO_COMAN_USES_SOFTHANDS_DRC_sw1_14=false
-#
+
+<xacro:property name="GAZEBO_COMAN_USES_NO_FOREARMS" value="true" />
+<xacro:property name="GAZEBO_COMAN_USES_NO_HANDS" value="false" />
+<xacro:property name="GAZEBO_COMAN_USES_7DOF_FOREARMS_DRC_14" value="true" />
+<xacro:property name="GAZEBO_COMAN_USES_SOFTHANDS_DRC_sw1_14" value="false" />
+
 # 2) 7DOFS_FOREARMS + SOFTHANDS
-#
-export GAZEBO_COMAN_USES_NO_FOREARMS=false
-export GAZEBO_COMAN_USES_NO_HANDS=false
-export GAZEBO_COMAN_USES_7DOF_FOREARMS_DRC_14=true
-export GAZEBO_COMAN_USES_SOFTHANDS_DRC_sw1_14=true
+-->
+<xacro:property name="GAZEBO_COMAN_USES_NO_FOREARMS" value="false" />
+<xacro:property name="GAZEBO_COMAN_USES_NO_HANDS" value="false" />
+<xacro:property name="GAZEBO_COMAN_USES_7DOF_FOREARMS_DRC_14" value="true" />
+<xacro:property name="GAZEBO_COMAN_USES_SOFTHANDS_DRC_sw1_14" value="true" />
 
-
+<!--
 ####################################################
 ##
 ##  MIDDLEWARE SELECTION
@@ -72,12 +77,17 @@ export GAZEBO_COMAN_USES_SOFTHANDS_DRC_sw1_14=true
 #
 # 1) yarp
 #
-export GAZEBO_COMAN_USES_ROS=false
+-->
+<xacro:property name="GAZEBO_COMAN_USES_ROS" value="false" />
+
+<!--
 #
 # 2) ros
 #
-export GAZEBO_COMAN_USES_YARP=true
+-->
+<xacro:property name="GAZEBO_COMAN_USES_YARP" value="true" />
 
+<!--
 ####################################################
 ##
 ##  F/T SELECTION
@@ -96,5 +106,7 @@ export GAZEBO_COMAN_USES_YARP=true
 #
 # 1/2 (true/false) 
 #
-export GAZEBO_COMAN_USES_ACCURATE_FT=false
+-->
+<xacro:property name="GAZEBO_COMAN_USES_ACCURATE_FT" value="false" />
 
+</robot>
