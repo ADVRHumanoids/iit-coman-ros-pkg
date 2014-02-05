@@ -905,7 +905,7 @@ and to define the end effectors of the robot -->
   </joint>
   <!-- ********************RIGHT HAND****************** -->
   <joint name="r_handj" type="revolute">
-    <parent link="r_wrist"/>
+    <parent link="RWrMot3"/>
     <child link="RSoftHand"/>
     <origin rpy="0 0 0" xyz="0 0 -0.04"/>
     <axis xyz="1 0 0"/>
@@ -971,7 +971,7 @@ and to define the end effectors of the robot -->
   </joint>
   <!-- ********************LEFT HAND******************** -->
   <joint name="l_handj" type="revolute">
-    <parent link="l_wrist"/>
+    <parent link="LWrMot3"/>
     <child link="LSoftHand"/>
     <origin rpy="0 0 0" xyz="0 0 -0.04"/>
     <axis xyz="1 0 0"/>

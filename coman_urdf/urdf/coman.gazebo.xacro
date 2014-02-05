@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
-    <xacro:if value="$(optenv GAZEBO_COMAN_USES_ROS false)">
+    <xacro:if value="${GAZEBO_COMAN_USES_ROS}">
       <gazebo>
         <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
           <robotNamespace>/COMAN</robotNamespace>
@@ -33,6 +33,8 @@
    </gazebo>
 
 <!-- contact model for hand surface -->
+<xacro:if value="${GAZEBO_COMAN_USES_7DOF_FOREARMS_DRC_14}">
+    <xacro:if value="${GAZEBO_COMAN_USES_SOFTHANDS_DRC_sw1_14}">
    <gazebo reference="LSoftHand">
      <kp>1000000.0</kp>
      <kd>100.0</kd>
@@ -54,6 +56,8 @@
      <minDepth>0.00</minDepth>
      <cfmDamping>1</cfmDamping>
    </gazebo>
+  </xacro:if>
+</xacro:if> 
 
 <!-- Other parameters... -->
    <gazebo reference="WaistSag">
@@ -135,6 +139,7 @@
     <cfmDamping>1</cfmDamping>
     <provideFeedback>true</provideFeedback>
    </gazebo>
+<xacro:if value="${GAZEBO_COMAN_USES_7DOF_FOREARMS_DRC_14}">
    <gazebo reference="RForearmPlate">
     <cfmDamping>1</cfmDamping>
     <provideFeedback>true</provideFeedback>
@@ -147,6 +152,15 @@
     <cfmDamping>1</cfmDamping>
     <provideFeedback>true</provideFeedback>
    </gazebo>
+</xacro:if>
+<xacro:if value="${GAZEBO_COMAN_USES_7DOF_FOREARMS_DRC_14}">
+    <xacro:if value="${GAZEBO_COMAN_USES_SOFTHANDS_DRC_sw1_14}">
+      <gazebo reference="r_handj">
+        <cfmDamping>1</cfmDamping>
+        <provideFeedback>true</provideFeedback>
+      </gazebo>
+    </xacro:if>
+</xacro:if>
 
 
    <gazebo reference="LShSag">
@@ -165,6 +179,7 @@
     <cfmDamping>1</cfmDamping>
     <provideFeedback>true</provideFeedback>
    </gazebo>
+<xacro:if value="${GAZEBO_COMAN_USES_7DOF_FOREARMS_DRC_14}">
    <gazebo reference="LForearmPlate">
     <cfmDamping>1</cfmDamping>
     <provideFeedback>true</provideFeedback>
@@ -177,5 +192,15 @@
     <cfmDamping>1</cfmDamping>
     <provideFeedback>true</provideFeedback>
    </gazebo>
+</xacro:if>
+<xacro:if value="${GAZEBO_COMAN_USES_7DOF_FOREARMS_DRC_14}">
+    <xacro:if value="${GAZEBO_COMAN_USES_SOFTHANDS_DRC_sw1_14}">
+      <gazebo reference="l_handj">
+        <cfmDamping>1</cfmDamping>
+        <provideFeedback>true</provideFeedback>
+      </gazebo>
+    </xacro:if>
+</xacro:if>
+
 
 </robot>

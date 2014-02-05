@@ -29,6 +29,7 @@ and to define the end effectors of the robot -->
   <link name="l_wrist"/>
   <link name="r_wrist"/>
 
+
 <!--  position and orientation of the leg regardless of the support body geometry -->
   <link name="l_ankle"/>
   <link name="r_ankle"/>
@@ -529,8 +530,8 @@ and to define the end effectors of the robot -->
   </xacro:if>
 
 <!-- ********************HANDS********************* -->
-  <xacro:if value="$(optenv GAZEBO_COMAN_USES_7DOF_FOREARMS_DRC_14 true)">
-    <xacro:if value="$(optenv GAZEBO_COMAN_USES_SOFTHANDS_DRC_sw1_14 true)">
+  <xacro:if value="${GAZEBO_COMAN_USES_7DOF_FOREARMS_DRC_14}">
+    <xacro:if value="${GAZEBO_COMAN_USES_SOFTHANDS_DRC_sw1_14}">
 
       <xacro:include filename="$(find coman_urdf)/urdf/soft_hand.urdf.xacro" />
 
@@ -858,11 +859,11 @@ and to define the end effectors of the robot -->
   </xacro:if>
 
 <!-- ********************RIGHT HAND****************** -->
-  <xacro:if value="$(optenv GAZEBO_COMAN_USES_7DOF_FOREARMS_DRC_14 true)">
-    <xacro:if value="$(optenv GAZEBO_COMAN_USES_SOFTHANDS_DRC_sw1_14 true)">
+  <xacro:if value="${GAZEBO_COMAN_USES_7DOF_FOREARMS_DRC_14}">
+    <xacro:if value="${GAZEBO_COMAN_USES_SOFTHANDS_DRC_sw1_14}">
       
       <joint name="r_handj" type="revolute">
-        <parent link="r_wrist"/>
+        <parent link="RWrMot3"/>
         <child link="RSoftHand"/>
         <origin xyz="0 0 -0.04" rpy="0 0 0"/>
         <axis xyz="1 0 0" />
@@ -921,11 +922,11 @@ and to define the end effectors of the robot -->
   </xacro:if>
 
 <!-- ********************LEFT HAND******************** -->
-  <xacro:if value="$(optenv GAZEBO_COMAN_USES_7DOF_FOREARMS_DRC_14 true)">
-    <xacro:if value="$(optenv GAZEBO_COMAN_USES_SOFTHANDS_DRC_sw1_14 true)">
+  <xacro:if value="${GAZEBO_COMAN_USES_7DOF_FOREARMS_DRC_14}">
+    <xacro:if value="${GAZEBO_COMAN_USES_SOFTHANDS_DRC_sw1_14}">
 
       <joint name="l_handj" type="revolute">
-        <parent link="l_wrist"/>
+        <parent link="LWrMot3"/>
         <child link="LSoftHand"/>
         <origin xyz="0 0 -0.04" rpy="0 0 0"/>
         <axis xyz="1 0 0" />
