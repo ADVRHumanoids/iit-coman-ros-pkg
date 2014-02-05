@@ -56,7 +56,9 @@
           </noise>
           -->
          </imu>
-         <plugin name="coman_yarp_gazebo_plugin_IMU" filename="libgazebo_yarp_imu.so"/>
+         <plugin name="coman_yarp_gazebo_plugin_IMU" filename="libgazebo_yarp_imu.so">
+           <yarpConfigurationFile>model://coman_urdf/conf/coman/coman_gazebo_inertial.ini</yarpConfigurationFile>
+         </plugin>
         </sensor>
        </gazebo>
   </xacro:if>

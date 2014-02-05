@@ -103,7 +103,11 @@
      __default_topic__
     </topic>
     <imu/>
-    <plugin filename="libgazebo_yarp_imu.so" name="coman_yarp_gazebo_plugin_IMU"/>
+    <plugin filename="libgazebo_yarp_imu.so" name="coman_yarp_gazebo_plugin_IMU">
+     <yarpConfigurationFile>
+      model://coman_urdf/conf/coman/coman_gazebo_inertial.ini
+     </yarpConfigurationFile>
+    </plugin>
     <pose>
      -0.072 -0.0068 0.044 0 -0 0
     </pose>
