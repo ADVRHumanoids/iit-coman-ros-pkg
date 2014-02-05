@@ -10,25 +10,6 @@
   -->
   <xacro:include filename="$(find coman_urdf)/urdf/coman.urdf.xacro" />
 
-<!-- Hands! -->
-  <xacro:if value="$(optenv GAZEBO_COMAN_USES_7DOF_FOREARMS_DRC_14 true)">
-    <xacro:if value="$(optenv GAZEBO_COMAN_USES_SOFTHANDS_DRC_sw1_14 true)">
-      <xacro:include filename="$(find coman_urdf)/urdf/soft_hand.urdf.xacro" />
-
-      <joint name="r_handj" type="fixed">
-        <parent link="r_wrist"/>
-        <child link="RSoftHand"/>
-        <origin xyz="0 0 -0.04" rpy="0 0 0"/>
-      </joint>
-      
-      <joint name="l_handj" type="fixed">
-        <parent link="l_wrist"/>
-        <child link="LSoftHand"/>
-        <origin xyz="0 0 -0.04" rpy="0 0 0"/>
-      </joint>
-    </xacro:if>
-  </xacro:if>
-
 <!-- IMU -->
   <link name="imu_link">
     <inertial>

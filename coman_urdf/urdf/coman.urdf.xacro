@@ -528,6 +528,16 @@ and to define the end effectors of the robot -->
       <xacro:include filename="$(find coman_urdf)/urdf/forearms/7DOF_forearms_DRC_14/links/7DOF_forearms_L_DRC_14.urdf.xacro" />
   </xacro:if>
 
+<!-- ********************HANDS********************* -->
+  <xacro:if value="$(optenv GAZEBO_COMAN_USES_7DOF_FOREARMS_DRC_14 true)">
+    <xacro:if value="$(optenv GAZEBO_COMAN_USES_SOFTHANDS_DRC_sw1_14 true)">
+
+      <xacro:include filename="$(find coman_urdf)/urdf/soft_hand.urdf.xacro" />
+
+    </xacro:if>
+  </xacro:if>
+
+
 <!-- ********************JOINTS******************** -->
 
   <joint name="base_joint" type="fixed">
@@ -847,6 +857,22 @@ and to define the end effectors of the robot -->
       <xacro:include filename="$(find coman_urdf)/urdf/forearms/7DOF_forearms_DRC_14/joints/7DOF_forearms_R_DRC_14.urdf.xacro" />
   </xacro:if>
 
+<!-- ********************RIGHT HAND****************** -->
+  <xacro:if value="$(optenv GAZEBO_COMAN_USES_7DOF_FOREARMS_DRC_14 true)">
+    <xacro:if value="$(optenv GAZEBO_COMAN_USES_SOFTHANDS_DRC_sw1_14 true)">
+      
+      <joint name="r_handj" type="revolute">
+        <parent link="r_wrist"/>
+        <child link="RSoftHand"/>
+        <origin xyz="0 0 -0.04" rpy="0 0 0"/>
+        <axis xyz="1 0 0" />
+        <limit velocity="4.0" effort="5" lower="0.0" upper="1.57075" />
+        <dynamics friction="0" damping="3.0"/>
+      </joint>
+      
+      </xacro:if>
+  </xacro:if>
+
 <!-- ********************LEFT ARM******************** -->
 
   <joint name="LShSag" type="revolute">
@@ -892,6 +918,22 @@ and to define the end effectors of the robot -->
 
   <xacro:if value="${GAZEBO_COMAN_USES_7DOF_FOREARMS_DRC_14}">
       <xacro:include filename="$(find coman_urdf)/urdf/forearms/7DOF_forearms_DRC_14/joints/7DOF_forearms_L_DRC_14.urdf.xacro" />
+  </xacro:if>
+
+<!-- ********************LEFT HAND******************** -->
+  <xacro:if value="$(optenv GAZEBO_COMAN_USES_7DOF_FOREARMS_DRC_14 true)">
+    <xacro:if value="$(optenv GAZEBO_COMAN_USES_SOFTHANDS_DRC_sw1_14 true)">
+
+      <joint name="l_handj" type="revolute">
+        <parent link="l_wrist"/>
+        <child link="LSoftHand"/>
+        <origin xyz="0 0 -0.04" rpy="0 0 0"/>
+        <axis xyz="1 0 0" />
+        <limit velocity="4.0" effort="5" lower="-1.57075" upper="0.0" />
+        <dynamics friction="0" damping="3.0"/>
+      </joint>
+
+    </xacro:if>
   </xacro:if>
 
 </robot>

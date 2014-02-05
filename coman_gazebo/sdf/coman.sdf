@@ -2531,7 +2531,7 @@
    </inertial>
    <collision name="LElb_collision">
     <pose>
-     0 0 0 -1.57079 1.57079 -2.65361e-06
+     0 0 0 -1.57079 1.57079 -2.65359e-06
     </pose>
     <geometry>
      <mesh>
@@ -2546,7 +2546,7 @@
    </collision>
    <visual name="LElb_visual">
     <pose>
-     0 0 0 -1.57079 1.57079 -2.65361e-06
+     0 0 0 -1.57079 1.57079 -2.65359e-06
     </pose>
     <geometry>
      <mesh>
@@ -2673,7 +2673,7 @@
    </collision>
    <visual name="LForearm_visual">
     <pose>
-     0 0 0.015 -1.5708 5.55112e-17 1.5708
+     0 0 0.015 -1.5708 1.14194e-16 1.5708
     </pose>
     <geometry>
      <mesh>
@@ -2884,14 +2884,14 @@
    </pose>
    <inertial>
     <pose>
-     0 0 -0.0314951 0 -0 0
+     0 0 0 0 -0 0
     </pose>
     <mass>
-     0.254008
+     0.0540075
     </mass>
     <inertia>
      <ixx>
-      0.00108964
+      2.16e-05
      </ixx>
      <ixy>
       0
@@ -2900,13 +2900,13 @@
       0
      </ixz>
      <iyy>
-      0.00108964
+      2.16e-05
      </iyy>
      <iyz>
       0
      </iyz>
      <izz>
-      0.0010216
+      2.16e-05
      </izz>
     </inertia>
    </inertial>
@@ -2925,49 +2925,6 @@
      </mesh>
     </geometry>
    </collision>
-   <collision name="LWrMot3_collision_LSoftHand">
-    <pose>
-     0 0 -0.04 0 -0 0
-    </pose>
-    <geometry>
-     <box>
-      <size>
-       0.07 0.07 0.07
-      </size>
-     </box>
-    </geometry>
-    <surface>
-     <contact>
-      <ode>
-       <kp>
-        1e+06
-       </kp>
-       <kd>
-        100
-       </kd>
-       <max_vel>
-        1
-       </max_vel>
-       <min_depth>
-        0
-       </min_depth>
-      </ode>
-     </contact>
-     <friction>
-      <ode>
-       <mu>
-        1
-       </mu>
-       <mu2>
-        1
-       </mu2>
-       <fdir1>
-        1 0 0
-       </fdir1>
-      </ode>
-     </friction>
-    </surface>
-   </collision>
    <visual name="LWrMot3_visual">
     <pose>
      0.025 -0.012 -0.02 -3.14159 -2.06823e-13 -1.5708
@@ -2983,21 +2940,6 @@
      </mesh>
     </geometry>
    </visual>
-   <visual name="LWrMot3_visual_LSoftHand">
-    <pose>
-     0 0 -0.04 0 -0 0
-    </pose>
-    <geometry>
-     <box>
-      <size>
-       0.07 0.07 0.07
-      </size>
-     </box>
-    </geometry>
-   </visual>
-   <gravity>
-    1
-   </gravity>
    <velocity_decay>
     <linear>
      0
@@ -3006,9 +2948,6 @@
      0
     </angular>
    </velocity_decay>
-   <self_collide>
-    0
-   </self_collide>
   </link>
   <joint name="LWrj2" type="revolute">
    <child>
@@ -3481,7 +3420,7 @@
    </inertial>
    <collision name="RElb_collision">
     <pose>
-     0 0 0 -1.57079 1.57079 -2.65361e-06
+     0 0 0 -1.57079 1.57079 -2.65359e-06
     </pose>
     <geometry>
      <mesh>
@@ -3496,7 +3435,7 @@
    </collision>
    <visual name="RElb_visual">
     <pose>
-     0 0 0 -1.57079 1.57079 -2.65361e-06
+     0 0 0 -1.57079 1.57079 -2.65359e-06
     </pose>
     <geometry>
      <mesh>
@@ -3623,7 +3562,7 @@
    </collision>
    <visual name="RForearm_visual">
     <pose>
-     0 0 0.015 -1.5708 5.55112e-17 1.5708
+     0 0 0.015 -1.5708 1.14194e-16 1.5708
     </pose>
     <geometry>
      <mesh>
@@ -3834,14 +3773,14 @@
    </pose>
    <inertial>
     <pose>
-     0 0 -0.0314951 0 -0 0
+     0 0 0 0 -0 0
     </pose>
     <mass>
-     0.254008
+     0.0540075
     </mass>
     <inertia>
      <ixx>
-      0.00108964
+      2.16e-05
      </ixx>
      <ixy>
       0
@@ -3850,13 +3789,13 @@
       0
      </ixz>
      <iyy>
-      0.00108964
+      2.16e-05
      </iyy>
      <iyz>
       0
      </iyz>
      <izz>
-      0.0010216
+      2.16e-05
      </izz>
     </inertia>
    </inertial>
@@ -3875,49 +3814,6 @@
      </mesh>
     </geometry>
    </collision>
-   <collision name="RWrMot3_collision_RSoftHand">
-    <pose>
-     0 0 -0.04 0 -0 0
-    </pose>
-    <geometry>
-     <box>
-      <size>
-       0.07 0.07 0.07
-      </size>
-     </box>
-    </geometry>
-    <surface>
-     <contact>
-      <ode>
-       <kp>
-        1e+06
-       </kp>
-       <kd>
-        100
-       </kd>
-       <max_vel>
-        1
-       </max_vel>
-       <min_depth>
-        0
-       </min_depth>
-      </ode>
-     </contact>
-     <friction>
-      <ode>
-       <mu>
-        1
-       </mu>
-       <mu2>
-        1
-       </mu2>
-       <fdir1>
-        1 0 0
-       </fdir1>
-      </ode>
-     </friction>
-    </surface>
-   </collision>
    <visual name="RWrMot3_visual">
     <pose>
      0.025 -0.012 -0.02 -3.14159 -2.06823e-13 -1.5708
@@ -3933,21 +3829,6 @@
      </mesh>
     </geometry>
    </visual>
-   <visual name="RWrMot3_visual_RSoftHand">
-    <pose>
-     0 0 -0.04 0 -0 0
-    </pose>
-    <geometry>
-     <box>
-      <size>
-       0.07 0.07 0.07
-      </size>
-     </box>
-    </geometry>
-   </visual>
-   <gravity>
-    1
-   </gravity>
    <velocity_decay>
     <linear>
      0
@@ -3956,9 +3837,6 @@
      0
     </angular>
    </velocity_decay>
-   <self_collide>
-    0
-   </self_collide>
   </link>
   <joint name="RWrj2" type="revolute">
    <child>
