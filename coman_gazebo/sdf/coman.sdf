@@ -916,9 +916,9 @@
      0 0 -0.065 0 0 0
     </pose>
     <plugin filename="libgazebo_yarp_forcetorque.so" name="LAnkSag_FT_plugin">
-     <boardId>
-      2
-     </boardId>
+     <yarpConfigurationFile>
+      model://coman_urdf/conf/coman/coman_gazebo_left_leg_ft.ini
+     </yarpConfigurationFile>
     </plugin>
    </sensor>
   </joint>
@@ -1729,9 +1729,9 @@
      0 0 -0.065 0 0 0
     </pose>
     <plugin filename="libgazebo_yarp_forcetorque.so" name="RAnkSag_FT_plugin">
-     <boardId>
-      1
-     </boardId>
+     <yarpConfigurationFile>
+      model://coman_urdf/conf/coman/coman_gazebo_right_leg_ft.ini
+     </yarpConfigurationFile>
     </plugin>
    </sensor>
   </joint>

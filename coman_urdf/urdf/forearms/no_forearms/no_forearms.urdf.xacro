@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+<!-- ***********LINKS*********** -->
+<!-- ***********LEFT FOREARM***********-->
+<link name ="LElb">
+      <inertial>
+        <origin xyz="-6.5553403E-4 9.3464748E-4 -9.3101289E-4" rpy="0 0 0"/>
+        <mass value="0.63306933"/>
+        <inertia ixx="2.2599075E-4"  ixy="2.637647E-7"  ixz="-9.8007285E-6" iyy="2.7781302E-4" iyz="2.0435288E-6" izz="2.1878992E-4" />
+      </inertial>
+      <visual>
+        <origin xyz="-0.020305 -0.1558 -0.664329" rpy="0 0 -3.14159265359"/>
+        <geometry name="LElb_visual">
+          <mesh filename="package://coman_urdf/meshes/collada/asm0001_collada_11_prt.dae" scale="0.03937 0.03937 0.03937" />
+        </geometry>
+      </visual>
+      <collision>
+        <origin xyz="-0.020305 -0.1558 -0.664329" rpy="0 0 -3.14159265359"/>
+        <geometry name="LElb_collision">
+          <mesh filename="package://coman_urdf/meshes/collada/simple/simple_asm0001_collada_11_prt.dae" scale="0.03937 0.03937 0.03937" />
+        </geometry>             
+      </collision>
+    </link>
+
+    <link name ="LForearm">
+      <inertial>
+        <origin xyz="0 0 -0.085" rpy="0 0 0"/>
+        <mass value="0.263"/>
+        <inertia ixx="6.913E-4"  ixy="0.0"  ixz="0.0" iyy="6.913E-4" iyz="0.0" izz="4.0425E-5" />
+      </inertial>
+    </link>
+<!-- ***********RIGHT FOREARM***********-->
+ <link name ="RElb">
+    <inertial>
+      <origin xyz="-6.5553403E-4 -9.3464748E-4 -9.3101289E-4" rpy="0 0 0"/>
+      <mass value="0.63306933"/>
+      <inertia ixx="2.2599075E-4"  ixy="-2.6376470E-7"  ixz="-9.8007285E-6" iyy="2.7781302E-4" iyz="-2.0435288E-6" izz="2.1878992E-4" />
+    </inertial>
+    <visual>
+      <origin xyz="-0.020305 -0.1558 -0.664329" rpy="0 0 -3.14159265359"/>
+      <geometry name="RElb_visual">
+        <mesh filename="package://coman_urdf/meshes/collada/asm0001_collada_11_prt.dae" scale="0.03937 0.03937 0.03937" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="-0.020305 -0.1558 -0.664329" rpy="0 0 -3.14159265359"/>
+      <geometry name="RElb_collision">
+        <mesh filename="package://coman_urdf/meshes/collada/simple/simple_asm0001_collada_11_prt.dae" scale="0.03937 0.03937 0.03937" />
+      </geometry>             
+    </collision>
+  </link>
+
+  <link name ="RForearm">
+    <inertial>
+      <origin xyz="0 0 -0.085" rpy="0 0 0"/>
+      <mass value="0.263"/>
+      <inertia ixx="6.913E-4"  ixy="0.0"  ixz="0.0" iyy="6.913E-4" iyz="0.0" izz="4.0425E-5" />
+    </inertial>
+  </link>
+
+<!-- ***********JOINTS*********** -->
+<!-- ***********LEFT FOREARM***********-->
+<joint name="LForearmPlate" type="fixed">
+        <parent link="LElb"/>
+        <child link="LForearm"/>
+        <origin xyz="-0.015 0.0 -0.05" rpy="0 0 0"/>
+      </joint>
+<!-- ***********RIGHT FOREARM***********-->
+<joint name="RForearmPlate" type="fixed">
+      <parent link="RElb"/>
+      <child link="RForearm"/>
+      <origin xyz="-0.015 0.0 -0.05" rpy="0 0 0"/>
+    </joint>
+
+
+</robot>

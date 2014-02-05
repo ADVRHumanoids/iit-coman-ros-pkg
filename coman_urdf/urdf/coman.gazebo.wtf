@@ -9,7 +9,7 @@
 				<update_rate>1000</update_rate>
 				<wtf_cond if="GAZEBO_COMAN_USES_YARP">
 					<plugin name="LAnkSag_FT_plugin" filename="libgazebo_yarp_forcetorque.so">
-						<boardId>2</boardId>
+						<yarpConfigurationFile>model://coman_urdf/conf/coman/coman_gazebo_left_leg_ft.ini</yarpConfigurationFile>
 					</plugin>
 				</wtf_cond>
 			</sensor>
@@ -24,7 +24,7 @@
 				<pose>0 0 -0.065 0 0 0</pose>
 				<wtf_cond if="GAZEBO_COMAN_USES_YARP">
 					<plugin name="LAnkSag_FT_plugin" filename="libgazebo_yarp_forcetorque.so">
-						<boardId>2</boardId>
+						<yarpConfigurationFile>model://coman_urdf/conf/coman/coman_gazebo_left_leg_ft.ini</yarpConfigurationFile>
 					</plugin>
 				</wtf_cond>
 			</sensor>
@@ -38,7 +38,7 @@
 				<update_rate>1000</update_rate>
 				<wtf_cond if="GAZEBO_COMAN_USES_YARP">
 					<plugin name="RAnkSag_FT_plugin" filename="libgazebo_yarp_forcetorque.so">
-			     	    		<boardId>1</boardId>
+			     	    		<yarpConfigurationFile>model://coman_urdf/conf/coman/coman_gazebo_right_leg_ft.ini</yarpConfigurationFile>
 			        	</plugin>
 				</wtf_cond>
 			</sensor>
@@ -53,7 +53,7 @@
 				<pose>0 0 -0.065 0 0 0</pose>
 				<wtf_cond if="GAZEBO_COMAN_USES_YARP">
 					<plugin name="RAnkSag_FT_plugin" filename="libgazebo_yarp_forcetorque.so">
-						<boardId>1</boardId>
+						<yarpConfigurationFile>model://coman_urdf/conf/coman/coman_gazebo_right_leg_ft.ini</yarpConfigurationFile>
 			        	</plugin>
 				</wtf_cond>
 			</sensor>
