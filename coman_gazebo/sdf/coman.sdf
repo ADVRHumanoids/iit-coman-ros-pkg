@@ -2754,6 +2754,23 @@
      </limit>
     </ode>
    </physics>
+   <sensor name="left_arm" type="force_torque">
+    <!--<sensor type="force_torque" name="LAnkSag_FT">-->
+    <always_on>
+     true
+    </always_on>
+    <visualize>
+     true
+    </visualize>
+    <update_rate>
+     1000
+    </update_rate>
+    <plugin filename="libgazebo_yarp_forcetorque.so" name="LForearmPlate_FT_plugin">
+     <yarpConfigurationFile>
+      model://coman_urdf/conf/coman/coman_gazebo_left_arm_ft.ini
+     </yarpConfigurationFile>
+    </plugin>
+   </sensor>
   </joint>
   <link name="LWrMot2">
    <pose>
@@ -3801,6 +3818,23 @@
      </limit>
     </ode>
    </physics>
+   <sensor name="right_arm" type="force_torque">
+    <!--<sensor type="force_torque" name="LAnkSag_FT">-->
+    <always_on>
+     true
+    </always_on>
+    <visualize>
+     true
+    </visualize>
+    <update_rate>
+     1000
+    </update_rate>
+    <plugin filename="libgazebo_yarp_forcetorque.so" name="RForearmPlate_FT_plugin">
+     <yarpConfigurationFile>
+      model://coman_urdf/conf/coman/coman_gazebo_right_arm_ft.ini
+     </yarpConfigurationFile>
+    </plugin>
+   </sensor>
   </joint>
   <link name="RWrMot2">
    <pose>
