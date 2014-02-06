@@ -1,6 +1,12 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
   
+<!-- distance from last motor to FT sensor 
+		The value needs to be subtracted to the *FOrearmPlate joint z origin,
+		and in order to be compensated in the following joint and link,
+		it neeeds to be added in return to the following joint (*Wrj1) z origin
+		and to the z displacement of mass, visual and collision of *Forearm -->
+<xacro:property name="Wrj1_to_FT" value="0.0568" />
 <!-- ****************LINKS**************** -->
 <!-- ****************LEFT FOREARM**************** -->
     <link name ="LElb">
@@ -27,18 +33,18 @@
       <!-- In ROBOTRAN this link is named LFARM -->
       <link name ="LForearm">
         <inertial>
-          <origin xyz="0 0 -0.085" rpy="0 0 0"/>
+          <origin xyz="0 0 ${-0.085 + Wrj1_to_FT}" rpy="0 0 0"/>
           <mass value="0.93351655"/>
           <inertia ixx="0.001"  ixy="0.0"  ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001" />
         </inertial>
         <visual>
-          <origin xyz="0 0 0.015" rpy="-1.570796326795 0 1.570796326795"/>
+          <origin xyz="0 0 ${0.015 + Wrj1_to_FT}" rpy="-1.570796326795 0 1.570796326795"/>
           <geometry name="LForearm_visual">
             <mesh filename="package://coman_urdf/meshes/collada/forearms/forearm.dae" scale="0.001 0.001 0.001" />
           </geometry>
         </visual>
         <collision>
-          <origin xyz="0 0 0.015" rpy="0 3.14159265359 1.570796326795"/>
+          <origin xyz="0 0 ${0.015 + Wrj1_to_FT}" rpy="0 3.14159265359 1.570796326795"/>
           <geometry name="LForearm_collision">
             <mesh filename="package://coman_urdf/meshes/collada/simple/forearms/forearm.dae" scale="1.0 1.0 1.0" />
           </geometry>             
@@ -114,18 +120,18 @@
       <!-- In ROBOTRAN this link is named RFArm -->
       <link name ="RForearm">
         <inertial>
-          <origin xyz="0 0 -0.085" rpy="0 0 0"/>
+          <origin xyz="0 0 ${-0.085 + Wrj1_to_FT}" rpy="0 0 0"/>
           <mass value="0.93351655"/>
           <inertia ixx="0.001"  ixy="0.0"  ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001" />
         </inertial>
         <visual>
-          <origin xyz="0 0 0.015" rpy="-1.570796326795 0 1.570796326795"/>
+          <origin xyz="0 0 ${0.015 + Wrj1_to_FT}" rpy="-1.570796326795 0 1.570796326795"/>
           <geometry name="RForearm_visual">
             <mesh filename="package://coman_urdf/meshes/collada/forearms/forearm.dae" scale="0.001 0.001 0.001" />
           </geometry>
         </visual>
         <collision>
-          <origin xyz="0 0 0.015" rpy="0 3.14159265359 1.570796326795"/>
+          <origin xyz="0 0 ${0.015 + Wrj1_to_FT}" rpy="0 3.14159265359 1.570796326795"/>
           <geometry name="RForearm_collision">
             <mesh filename="package://coman_urdf/meshes/collada/simple/forearms/forearm.dae" scale="1.0 1.0 1.0" />
           </geometry>             
@@ -181,7 +187,7 @@
 <joint name="LForearmPlate" type="revolute">
     <parent link="LElb"/>
     <child link="LForearm"/>
-    <origin xyz="-0.015 0.0 -0.051" rpy="0 0 0"/>
+    <origin xyz="-0.015 0.0 ${-0.051 - Wrj1_to_FT}" rpy="0 0 0"/>
     <axis xyz="0 0 1" />
     <limit velocity="4.0" effort="50" lower="-1.5708" upper="1.5708" />
     <dynamics friction="0" damping="0.03"/>
@@ -190,7 +196,7 @@
   <joint name="LWrj1" type="revolute">
     <parent link="LForearm"/>
     <child link="LWrMot2"/>
-    <origin xyz="0 0 -0.14368" rpy="0 0 0"/>
+    <origin xyz="0 0 ${-0.14368 + Wrj1_to_FT}" rpy="0 0 0"/>
     <axis xyz="0 1 0"/>
     <limit velocity="4.0" effort="50" lower="-0.524" upper="0.524" />
     <dynamics friction="0" damping="0.03"/>
@@ -209,7 +215,7 @@
 <joint name="RForearmPlate" type="revolute">
     <parent link="RElb"/>
     <child link="RForearm"/>
-    <origin xyz="-0.015 0.0 -0.051" rpy="0 0 0"/>
+    <origin xyz="-0.015 0.0 ${-0.051 - Wrj1_to_FT}" rpy="0 0 0"/>
     <axis xyz="0 0 1" />
     <limit velocity="4.0" effort="50" lower="-1.5708" upper="1.5708" />
     <dynamics friction="0" damping="0.03"/>
@@ -218,7 +224,7 @@
   <joint name="RWrj1" type="revolute">
     <parent link="RForearm"/>
     <child link="RWrMot2"/>
-    <origin xyz="0 0 -0.14368" rpy="0 0 0"/>
+    <origin xyz="0 0 ${-0.14368 + Wrj1_to_FT}" rpy="0 0 0"/>
     <axis xyz="0 1 0"/>
     <limit velocity="4.0" effort="50" lower="-0.524" upper="0.524" />
     <dynamics friction="0" damping="0.03"/>

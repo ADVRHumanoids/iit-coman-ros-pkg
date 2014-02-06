@@ -2535,7 +2535,7 @@
    </inertial>
    <collision name="LElb_collision">
     <pose>
-     0 0 0 -1.57079 1.57079 -2.65359e-06
+     0 0 0 -1.57079 1.57079 -2.65361e-06
     </pose>
     <geometry>
      <mesh>
@@ -2550,7 +2550,7 @@
    </collision>
    <visual name="LElb_visual">
     <pose>
-     0 0 0 -1.57079 1.57079 -2.65359e-06
+     0 0 0 -1.57079 1.57079 -2.65361e-06
     </pose>
     <geometry>
      <mesh>
@@ -2630,11 +2630,11 @@
   </joint>
   <link name="LForearm">
    <pose>
-    0.005305 0.1558 0.093329 0 -0 0
+    0.005305 0.1558 0.036529 0 -0 0
    </pose>
    <inertial>
     <pose>
-     0 0 -0.085 0 -0 0
+     0 0 -0.0282 0 -0 0
     </pose>
     <mass>
      0.933517
@@ -2662,7 +2662,7 @@
    </inertial>
    <collision name="LForearm_collision">
     <pose>
-     0 0 0.015 -3.14159 -2.06823e-13 -1.5708
+     0 0 0.0718 -3.14159 -2.06823e-13 -1.5708
     </pose>
     <geometry>
      <mesh>
@@ -2677,7 +2677,7 @@
    </collision>
    <visual name="LForearm_visual">
     <pose>
-     0 0 0.015 -1.5708 1.14194e-16 1.5708
+     0 0 0.0718 -1.5708 5.55112e-17 1.5708
     </pose>
     <geometry>
      <mesh>
@@ -3582,7 +3582,7 @@
    </inertial>
    <collision name="RElb_collision">
     <pose>
-     0 0 0 -1.57079 1.57079 -2.65359e-06
+     0 0 0 -1.57079 1.57079 -2.65361e-06
     </pose>
     <geometry>
      <mesh>
@@ -3597,7 +3597,7 @@
    </collision>
    <visual name="RElb_visual">
     <pose>
-     0 0 0 -1.57079 1.57079 -2.65359e-06
+     0 0 0 -1.57079 1.57079 -2.65361e-06
     </pose>
     <geometry>
      <mesh>
@@ -3677,11 +3677,11 @@
   </joint>
   <link name="RForearm">
    <pose>
-    0.005305 -0.1558 0.093329 0 -0 0
+    0.005305 -0.1558 0.036529 0 -0 0
    </pose>
    <inertial>
     <pose>
-     0 0 -0.085 0 -0 0
+     0 0 -0.0282 0 -0 0
     </pose>
     <mass>
      0.933517
@@ -3709,7 +3709,7 @@
    </inertial>
    <collision name="RForearm_collision">
     <pose>
-     0 0 0.015 -3.14159 -2.06823e-13 -1.5708
+     0 0 0.0718 -3.14159 -2.06823e-13 -1.5708
     </pose>
     <geometry>
      <mesh>
@@ -3724,7 +3724,7 @@
    </collision>
    <visual name="RForearm_visual">
     <pose>
-     0 0 0.015 -1.5708 1.14194e-16 1.5708
+     0 0 0.0718 -1.5708 5.55112e-17 1.5708
     </pose>
     <geometry>
      <mesh>
