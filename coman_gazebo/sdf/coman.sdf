@@ -1999,29 +1999,29 @@
    </pose>
    <inertial>
     <pose>
-     -0.0358501 1.8286e-05 0.117557 0 -0 0
+     -0.0225113 1.42792e-05 0.174562 0 -0 0
     </pose>
     <mass>
-     6.36172
+     8.14688
     </mass>
     <inertia>
      <ixx>
-      0.0340893
+      0.215035
      </ixx>
      <ixy>
-      -9.83086e-06
+      -8.27915e-06
      </ixy>
      <ixz>
-      -0.000756493
+      -0.0385417
      </ixz>
      <iyy>
-      0.0301174
+      0.219085
      </iyy>
      <iyz>
-      6.24438e-06
+      1.28758e-05
      </iyz>
      <izz>
-      0.0252966
+      0.0335184
      </izz>
     </inertia>
    </inertial>
@@ -2040,6 +2040,36 @@
      </mesh>
     </geometry>
    </collision>
+   <collision name="DWYTorso_collision_Xtion_body">
+    <pose>
+     -0.0202815 0 -0.686621 0 -0 3.14159
+    </pose>
+    <geometry>
+     <mesh>
+      <scale>
+       0.03937 0.03937 0.03937
+      </scale>
+      <uri>
+       model://coman_urdf/meshes/collada/simple/Xtion/xtion_base.dae
+      </uri>
+     </mesh>
+    </geometry>
+   </collision>
+   <collision name="DWYTorso_collision_Xtion_cam_body">
+    <pose>
+     -0.0202815 0 -0.686621 0 -0 3.14159
+    </pose>
+    <geometry>
+     <mesh>
+      <scale>
+       0.001 0.001 0.001
+      </scale>
+      <uri>
+       model://coman_urdf/meshes/collada/Xtion/xtion_cam_body.dae
+      </uri>
+     </mesh>
+    </geometry>
+   </collision>
    <visual name="DWYTorso_visual">
     <pose>
      -0.0202815 0 -0.686621 0 -0 3.14159
@@ -2051,6 +2081,36 @@
       </scale>
       <uri>
        model://coman_urdf/meshes/collada/asm0001_collada_10_prt.dae
+      </uri>
+     </mesh>
+    </geometry>
+   </visual>
+   <visual name="DWYTorso_visual_Xtion_body">
+    <pose>
+     -0.0202815 0 -0.686621 0 -0 3.14159
+    </pose>
+    <geometry>
+     <mesh>
+      <scale>
+       0.03937 0.03937 0.03937
+      </scale>
+      <uri>
+       model://coman_urdf/meshes/collada/Xtion/xtion_base.dae
+      </uri>
+     </mesh>
+    </geometry>
+   </visual>
+   <visual name="DWYTorso_visual_Xtion_cam_body">
+    <pose>
+     -0.0202815 0 -0.686621 0 -0 3.14159
+    </pose>
+    <geometry>
+     <mesh>
+      <scale>
+       0.001 0.001 0.001
+      </scale>
+      <uri>
+       model://coman_urdf/meshes/collada/Xtion/xtion_cam_body.dae
       </uri>
      </mesh>
     </geometry>
@@ -2535,7 +2595,7 @@
    </inertial>
    <collision name="LElb_collision">
     <pose>
-     0 0 0 -1.57079 1.57079 -2.65361e-06
+     0 0 0 -1.57079 1.57079 -2.65359e-06
     </pose>
     <geometry>
      <mesh>
@@ -2550,7 +2610,7 @@
    </collision>
    <visual name="LElb_visual">
     <pose>
-     0 0 0 -1.57079 1.57079 -2.65361e-06
+     0 0 0 -1.57079 1.57079 -2.65359e-06
     </pose>
     <geometry>
      <mesh>
@@ -2677,7 +2737,7 @@
    </collision>
    <visual name="LForearm_visual">
     <pose>
-     0 0 0.0718 -1.5708 5.55112e-17 1.5708
+     0 0 0.0718 -1.5708 1.14194e-16 1.5708
     </pose>
     <geometry>
      <mesh>
@@ -3599,7 +3659,7 @@
    </inertial>
    <collision name="RElb_collision">
     <pose>
-     0 0 0 -1.57079 1.57079 -2.65361e-06
+     0 0 0 -1.57079 1.57079 -2.65359e-06
     </pose>
     <geometry>
      <mesh>
@@ -3614,7 +3674,7 @@
    </collision>
    <visual name="RElb_visual">
     <pose>
-     0 0 0 -1.57079 1.57079 -2.65361e-06
+     0 0 0 -1.57079 1.57079 -2.65359e-06
     </pose>
     <geometry>
      <mesh>
@@ -3741,7 +3801,7 @@
    </collision>
    <visual name="RForearm_visual">
     <pose>
-     0 0 0.0718 -1.5708 5.55112e-17 1.5708
+     0 0 0.0718 -1.5708 1.14194e-16 1.5708
     </pose>
     <geometry>
      <mesh>
