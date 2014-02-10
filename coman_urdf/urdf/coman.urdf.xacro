@@ -46,7 +46,50 @@ and to define the end effectors of the robot -->
  <link name="torso"/>
 
 <!-- Head -->
- <link name="gaze"/>
+<xacro:if value="${GAZEBO_COMAN_USES_XTION}">
+	<link name ="Xtion_body">
+    <inertial>
+      <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+      <mass value="0.89258227"/>
+      <inertia ixx="0.0001"  ixy="0.0"  ixz="0.0" iyy="0.0001" iyz="0.0" izz="0.0001" />
+    </inertial>
+    <visual>
+      <origin xyz="-0.005305004 0.0 -0.844329" rpy="0 0 -3.14159265359"/>
+      <geometry name="Xtion_body_visual">
+        <mesh filename="package://coman_urdf/meshes/collada/Xtion/xtion_base.dae" scale="0.03937 0.03937 0.03937" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="-0.005305004 0.0 -0.844329" rpy="0 0 -3.14159265359"/>
+      <geometry name="Xtion_body_collision">
+        <mesh filename="package://coman_urdf/meshes/collada/simple/Xtion/xtion_base.dae" scale="0.03937 0.03937 0.03937" />
+      </geometry>             
+    </collision>
+  </link>
+
+  <link name ="Xtion_cam_body">
+    <inertial>
+      <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+      <mass value="0.89258227"/>
+      <inertia ixx="0.0001"  ixy="0.0"  ixz="0.0" iyy="0.0001" iyz="0.0" izz="0.0001" />
+    </inertial>
+    <visual>
+      <origin xyz="-0.085305004 0.0 -1.284329" rpy="0 0 -3.14159265359"/>
+      <geometry name="Xtion_cam_body_visual">
+        <mesh filename="package://coman_urdf/meshes/collada/Xtion/xtion_cam_body.dae" scale="0.001 0.001 0.001" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="-0.085305004 0.0 -1.284329" rpy="0 0 -3.14159265359"/>
+      <geometry name="Xtion_cam_body_collision">
+        <mesh filename="package://coman_urdf/meshes/collada/Xtion/xtion_cam_body.dae" scale="0.001 0.001 0.001" />
+      </geometry>             
+    </collision>
+  </link>
+
+</xacro:if>
+
+<link name="gaze"/>  
 
 <!-- ************ COMAN BASE ************** -->
 <xacro:include filename="$(find coman_urdf)//urdf/coman_base.urdf.xacro"/>

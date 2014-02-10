@@ -109,4 +109,23 @@
 -->
 <xacro:property name="GAZEBO_COMAN_USES_ACCURATE_FT" value="false" />
 
+<!--
+####################################################
+##
+##  Xtion SELECTION
+##
+##
+## options:
+## 1) COMAN classic without the staff to carry the sensor. 
+##      Torso frame is connected to gaze link through a gaze_joint "fixed"
+## 2) COMAN with staff and xtion sensor. Torso frame is connected to a xtion_staff_link through
+##      a xtion_staff_joint "fixed". Xtion_staff_link is then connected to gaze_link through gaze_joint "fixed". 
+##
+####################################################
+#
+# 1/2 (true/false) 
+#
+-->
+<xacro:property name="GAZEBO_COMAN_USES_XTION" value="true" />
+
 </robot>
