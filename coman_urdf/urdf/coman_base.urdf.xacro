@@ -530,7 +530,7 @@
 
 <xacro:if value="${GAZEBO_COMAN_USES_XTION}">
         <joint name="Xtion_body_joint" type="fixed">
-    		<parent link="torso"/>
+    		<parent link="DWYTorso"/>
     		<child link="Xtion_body"/>
     		<origin xyz="0 0 0" rpy="0 0 0" />
   	</joint>
@@ -538,13 +538,16 @@
         <joint name="Xtion_cam_body_joint" type="fixed">
     		<parent link="Xtion_body"/>
     		<child link="Xtion_cam_body"/>
-    		<origin xyz="0.08 0 0.44" rpy="0 0 0" />
+		<origin xyz="0.071 0 0.591" rpy="0 1.396 0" />
+		<!--axis xyz="0 1 0" />
+    		<limit velocity="4.0" effort="5" lower="-0.4145" upper="1.57075" />
+    		<dynamics friction="0" damping="3.0"/-->
   	</joint>
 
         <joint name="gaze_joint" type="fixed">
     		<parent link="Xtion_cam_body"/>
     		<child link="gaze"/>
-    		<origin xyz="0 0 0.0" rpy="0 0 0" />
+    		<origin xyz="0.015 0 0.022" rpy="0 0 0" />
   	</joint>
 
 </xacro:if>

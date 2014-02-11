@@ -38,18 +38,18 @@ and to define the end effectors of the robot -->
   <!-- Head -->
   <link name="Xtion_body">
     <inertial>
-      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
-      <mass value="0.89258227"/>
-      <inertia ixx="0.0001" ixy="0.0" ixz="0.0" iyy="0.0001" iyz="0.0" izz="0.0001"/>
+      <origin rpy="0 0 0" xyz="0.047 0.0 0.40"/>
+      <mass value="0.39"/>
+      <inertia ixx="0.01" ixy="3.34E-7" ixz="-2.66E-4" iyy="0.009" iyz="1.97E-6" izz="5.1E-4"/>
     </inertial>
     <visual>
-      <origin rpy="0 0 -3.14159265359" xyz="-0.005305004 0.0 -0.844329"/>
+      <origin rpy="0 0 -3.14159265359" xyz="-0.020281504 0.0 -0.68662053"/>
       <geometry name="Xtion_body_visual">
         <mesh filename="package://coman_urdf/meshes/collada/Xtion/xtion_base.dae" scale="0.03937 0.03937 0.03937"/>
       </geometry>
     </visual>
     <collision>
-      <origin rpy="0 0 -3.14159265359" xyz="-0.005305004 0.0 -0.844329"/>
+      <origin rpy="0 0 -3.14159265359" xyz="-0.020281504 0.0 -0.68662053"/>
       <geometry name="Xtion_body_collision">
         <mesh filename="package://coman_urdf/meshes/collada/simple/Xtion/xtion_base.dae" scale="0.03937 0.03937 0.03937"/>
       </geometry>
@@ -57,18 +57,18 @@ and to define the end effectors of the robot -->
   </link>
   <link name="Xtion_cam_body">
     <inertial>
-      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
-      <mass value="0.89258227"/>
-      <inertia ixx="0.0001" ixy="0.0" ixz="0.0" iyy="0.0001" iyz="0.0" izz="0.0001"/>
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.0225"/>
+      <mass value="0.2"/>
+      <inertia ixx="0.00053" ixy="0.0" ixz="0.0" iyy="0.00008" iyz="0.0" izz="0.00053"/>
     </inertial>
     <visual>
-      <origin rpy="0 0 -3.14159265359" xyz="-0.085305004 0.0 -1.284329"/>
+      <origin rpy="0 0 -3.14159265359" xyz="-0.0915 0.0 -1.2778"/>
       <geometry name="Xtion_cam_body_visual">
         <mesh filename="package://coman_urdf/meshes/collada/Xtion/xtion_cam_body.dae" scale="0.001 0.001 0.001"/>
       </geometry>
     </visual>
     <collision>
-      <origin rpy="0 0 -3.14159265359" xyz="-0.085305004 0.0 -1.284329"/>
+      <origin rpy="0 0 -3.14159265359" xyz="-0.0915 0.0 -1.2778"/>
       <geometry name="Xtion_cam_body_collision">
         <mesh filename="package://coman_urdf/meshes/collada/Xtion/xtion_cam_body.dae" scale="0.001 0.001 0.001"/>
       </geometry>
@@ -541,19 +541,22 @@ and to define the end effectors of the robot -->
     <origin rpy="0 0 0" xyz="-0.014976503999999998 0 0.15770847"/>
   </joint>
   <joint name="Xtion_body_joint" type="fixed">
-    <parent link="torso"/>
+    <parent link="DWYTorso"/>
     <child link="Xtion_body"/>
     <origin rpy="0 0 0" xyz="0 0 0"/>
   </joint>
   <joint name="Xtion_cam_body_joint" type="fixed">
     <parent link="Xtion_body"/>
     <child link="Xtion_cam_body"/>
-    <origin rpy="0 0 0" xyz="0.08 0 0.44"/>
+    <origin rpy="0 1.396 0" xyz="0.071 0 0.591"/>
+    <!--axis xyz="0 1 0" />
+    		<limit velocity="4.0" effort="5" lower="-0.4145" upper="1.57075" />
+    		<dynamics friction="0" damping="3.0"/-->
   </joint>
   <joint name="gaze_joint" type="fixed">
     <parent link="Xtion_cam_body"/>
     <child link="gaze"/>
-    <origin rpy="0 0 0" xyz="0 0 0.0"/>
+    <origin rpy="0 0 0" xyz="0.015 0 0.022"/>
   </joint>
   <joint name="WaistSag" type="revolute">
     <!-- Wrong name! need to fix this... -->

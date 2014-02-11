@@ -1999,29 +1999,29 @@
    </pose>
    <inertial>
     <pose>
-     -0.0225113 1.42792e-05 0.174562 0 -0 0
+     -0.0274906 1.67341e-05 0.147136 0 -0 0
     </pose>
     <mass>
-     8.14688
+     6.95172
     </mass>
     <inertia>
      <ixx>
-      0.215035
+      0.115223
      </ixx>
      <ixy>
-      -8.27915e-06
+      -8.52439e-06
      </ixy>
      <ixz>
-      -0.0385417
+      -0.0207462
      </ixz>
      <iyy>
-      0.219085
+      0.115321
      </iyy>
      <iyz>
-      1.28758e-05
+      1.16553e-05
      </iyz>
      <izz>
-      0.0335184
+      0.0318564
      </izz>
     </inertia>
    </inertial>
@@ -2057,7 +2057,7 @@
    </collision>
    <collision name="DWYTorso_collision_Xtion_cam_body">
     <pose>
-     -0.0202815 0 -0.686621 0 -0 3.14159
+     -1.20324 0 0.458887 1.17115e-12 -1.396 3.14159
     </pose>
     <geometry>
      <mesh>
@@ -2102,7 +2102,7 @@
    </visual>
    <visual name="DWYTorso_visual_Xtion_cam_body">
     <pose>
-     -0.0202815 0 -0.686621 0 -0 3.14159
+     -1.20324 0 0.458887 1.17115e-12 -1.396 3.14159
     </pose>
     <geometry>
      <mesh>

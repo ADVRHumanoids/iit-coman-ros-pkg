@@ -49,18 +49,18 @@ and to define the end effectors of the robot -->
 <xacro:if value="${GAZEBO_COMAN_USES_XTION}">
 	<link name ="Xtion_body">
     <inertial>
-      <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
-      <mass value="0.89258227"/>
-      <inertia ixx="0.0001"  ixy="0.0"  ixz="0.0" iyy="0.0001" iyz="0.0" izz="0.0001" />
+      <origin xyz="0.047 0.0 0.40" rpy="0 0 0"/>
+      <mass value="0.39"/>
+      <inertia ixx="0.01"  ixy="3.34E-7"  ixz="-2.66E-4" iyy="0.009" iyz="1.97E-6" izz="5.1E-4" />
     </inertial>
     <visual>
-      <origin xyz="-0.005305004 0.0 -0.844329" rpy="0 0 -3.14159265359"/>
+      <origin xyz="-0.020281504 0.0 -0.68662053" rpy="0 0 -3.14159265359"/>
       <geometry name="Xtion_body_visual">
         <mesh filename="package://coman_urdf/meshes/collada/Xtion/xtion_base.dae" scale="0.03937 0.03937 0.03937" />
       </geometry>
     </visual>
     <collision>
-      <origin xyz="-0.005305004 0.0 -0.844329" rpy="0 0 -3.14159265359"/>
+      <origin xyz="-0.020281504 0.0 -0.68662053" rpy="0 0 -3.14159265359"/>
       <geometry name="Xtion_body_collision">
         <mesh filename="package://coman_urdf/meshes/collada/simple/Xtion/xtion_base.dae" scale="0.03937 0.03937 0.03937" />
       </geometry>             
@@ -69,18 +69,18 @@ and to define the end effectors of the robot -->
 
   <link name ="Xtion_cam_body">
     <inertial>
-      <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
-      <mass value="0.89258227"/>
-      <inertia ixx="0.0001"  ixy="0.0"  ixz="0.0" iyy="0.0001" iyz="0.0" izz="0.0001" />
+      <origin xyz="0.0 0.0 0.0225" rpy="0 0 0"/>
+      <mass value="0.2"/>
+      <inertia ixx="0.00053"  ixy="0.0"  ixz="0.0" iyy="0.00008" iyz="0.0" izz="0.00053" />
     </inertial>
     <visual>
-      <origin xyz="-0.085305004 0.0 -1.284329" rpy="0 0 -3.14159265359"/>
+      <origin xyz="-0.0915 0.0 -1.2778" rpy="0 0 -3.14159265359"/>
       <geometry name="Xtion_cam_body_visual">
         <mesh filename="package://coman_urdf/meshes/collada/Xtion/xtion_cam_body.dae" scale="0.001 0.001 0.001" />
       </geometry>
     </visual>
     <collision>
-      <origin xyz="-0.085305004 0.0 -1.284329" rpy="0 0 -3.14159265359"/>
+      <origin xyz="-0.0915 0.0 -1.2778" rpy="0 0 -3.14159265359"/>
       <geometry name="Xtion_cam_body_collision">
         <mesh filename="package://coman_urdf/meshes/collada/Xtion/xtion_cam_body.dae" scale="0.001 0.001 0.001" />
       </geometry>             
