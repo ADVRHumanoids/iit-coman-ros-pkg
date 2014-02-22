@@ -40,16 +40,14 @@
 #
 
 <xacro:property name="GAZEBO_COMAN_USES_NO_FOREARMS" value="true" />
-<xacro:property name="GAZEBO_COMAN_USES_NO_HANDS" value="false" />
 <xacro:property name="GAZEBO_COMAN_USES_7DOF_FOREARMS_DRC_14" value="true" />
 <xacro:property name="GAZEBO_COMAN_USES_SOFTHANDS_DRC_sw1_14" value="false" />
 
 # 2) 7DOFS_FOREARMS + SOFTHANDS
 -->
 <xacro:property name="GAZEBO_COMAN_USES_NO_FOREARMS" value="false" />
-<xacro:property name="GAZEBO_COMAN_USES_NO_HANDS" value="false" />
 <xacro:property name="GAZEBO_COMAN_USES_7DOF_FOREARMS_DRC_14" value="true" />
-<xacro:property name="GAZEBO_COMAN_USES_SOFTHANDS_DRC_sw1_14" value="true" />
+<xacro:property name="GAZEBO_COMAN_USES_SOFTHANDS_DRC_sw1_14" value="false" />
 
 <!--
 ####################################################
