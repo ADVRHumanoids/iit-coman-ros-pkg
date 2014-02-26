@@ -4052,6 +4052,49 @@
     </ode>
    </physics>
   </joint>
+  <static>
+   0
+  </static>
+  <plugin filename="libgazebo_yarp_controlboard.so" name="coman_yarp_gazebo_plugin_torso">
+   <yarpConfigurationFile>
+    model://coman_urdf/conf/coman/coman_gazebo_torso.ini
+   </yarpConfigurationFile>
+   <initialConfiguration>
+    0.0 0.0 0.0
+   </initialConfiguration>
+  </plugin>
+  <plugin filename="libgazebo_yarp_controlboard.so" name="coman_yarp_gazebo_plugin_left_leg">
+   <yarpConfigurationFile>
+    model://coman_urdf/conf/coman/coman_gazebo_left_leg.ini
+   </yarpConfigurationFile>
+   <initialConfiguration>
+    0.0 0.0 0.0 0.0 0.0 0.0
+   </initialConfiguration>
+  </plugin>
+  <plugin filename="libgazebo_yarp_controlboard.so" name="coman_yarp_gazebo_plugin_right_leg">
+   <yarpConfigurationFile>
+    model://coman_urdf/conf/coman/coman_gazebo_right_leg.ini
+   </yarpConfigurationFile>
+   <initialConfiguration>
+    0.0 0.0 0.0 0.0 0.0 0.0
+   </initialConfiguration>
+  </plugin>
+  <plugin filename="libgazebo_yarp_controlboard.so" name="coman_yarp_gazebo_plugin_left_arm">
+   <yarpConfigurationFile>
+    model://coman_urdf/conf/coman/coman_gazebo_left_arm.ini
+   </yarpConfigurationFile>
+   <initialConfiguration>
+    0.0 0.17 0.0 0.0 0.0 0.0 0.0
+   </initialConfiguration>
+  </plugin>
+  <plugin filename="libgazebo_yarp_controlboard.so" name="coman_yarp_gazebo_plugin_right_arm">
+   <yarpConfigurationFile>
+    model://coman_urdf/conf/coman/coman_gazebo_right_arm.ini
+   </yarpConfigurationFile>
+   <initialConfiguration>
+    0.0 -0.17 0.0 0.0 0.0 0.0 0.0
+   </initialConfiguration>
+  </plugin>
   <pose>
    0 0 0.521 0 -0 0
   </pose>

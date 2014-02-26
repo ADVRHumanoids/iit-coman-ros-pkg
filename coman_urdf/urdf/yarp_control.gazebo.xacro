@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+<gazebo>
+<!-- TORSO -->
+<plugin name="coman_yarp_gazebo_plugin_torso" filename="libgazebo_yarp_controlboard.so">
+	<yarpConfigurationFile>model://coman_urdf/conf/coman/coman_gazebo_torso.ini</yarpConfigurationFile>
+	<initialConfiguration>0.0 0.0 0.0</initialConfiguration>
+</plugin>
+
+<!-- LEGS -->
+<plugin name="coman_yarp_gazebo_plugin_left_leg" filename="libgazebo_yarp_controlboard.so">
+	<yarpConfigurationFile>model://coman_urdf/conf/coman/coman_gazebo_left_leg.ini</yarpConfigurationFile>
+        <initialConfiguration>0.0 0.0 0.0 0.0 0.0 0.0</initialConfiguration>
+</plugin>
+<plugin name="coman_yarp_gazebo_plugin_right_leg" filename="libgazebo_yarp_controlboard.so">
+	<yarpConfigurationFile>model://coman_urdf/conf/coman/coman_gazebo_right_leg.ini</yarpConfigurationFile>
+        <initialConfiguration>0.0 0.0 0.0 0.0 0.0 0.0</initialConfiguration>
+</plugin>
+
+<!-- ARMS -->
+<xacro:if value="${GAZEBO_COMAN_USES_7DOF_FOREARMS_DRC_14}">
+	<plugin name="coman_yarp_gazebo_plugin_left_arm" filename="libgazebo_yarp_controlboard.so">
+		<yarpConfigurationFile>model://coman_urdf/conf/coman/coman_gazebo_left_arm.ini</yarpConfigurationFile>
+		<initialConfiguration>0.0 0.17 0.0 0.0 0.0 0.0 0.0</initialConfiguration>
+	</plugin>
+	<plugin name="coman_yarp_gazebo_plugin_right_arm" filename="libgazebo_yarp_controlboard.so">
+		<yarpConfigurationFile>model://coman_urdf/conf/coman/coman_gazebo_right_arm.ini</yarpConfigurationFile>
+		<initialConfiguration>0.0 -0.17 0.0 0.0 0.0 0.0 0.0</initialConfiguration>
+	</plugin>
+
+
+	<!-- HANDS -->
+	<xacro:if value="${GAZEBO_COMAN_USES_SOFTHANDS_DRC_sw1_14}">
+		<plugin name="coman_yarp_gazebo_plugin_left_hand" filename="libgazebo_yarp_controlboard.so">
+			<yarpConfigurationFile>model://coman_urdf/conf/coman/coman_gazebo_left_hand.ini</yarpConfigurationFile>
+			<initialConfiguration>0.0</initialConfiguration>
+		</plugin>
+		<plugin name="coman_yarp_gazebo_plugin_right_hand" filename="libgazebo_yarp_controlboard.so">
+			<yarpConfigurationFile>model://coman_urdf/conf/coman/coman_gazebo_right_hand.ini</yarpConfigurationFile>
+			<initialConfiguration>0.0</initialConfiguration>
+		</plugin>
+	</xacro:if>
+</xacro:if>
+
+<xacro:if value="${GAZEBO_COMAN_USES_NO_FOREARMS}">
+	<plugin name="coman_yarp_gazebo_plugin_left_arm" filename="libgazebo_yarp_controlboard.so">
+		<yarpConfigurationFile>model://coman_urdf/conf/coman_no_forearms/coman_gazebo_left_arm.ini</yarpConfigurationFile>
+		<initialConfiguration>0.0 0.17 0.0 0.0</initialConfiguration>
+	</plugin>
+	<plugin name="coman_yarp_gazebo_plugin_right_arm" filename="libgazebo_yarp_controlboard.so">
+		<yarpConfigurationFile>model://coman_urdf/conf/coman_no_forearms/coman_gazebo_right_arm.ini</yarpConfigurationFile>
+		<initialConfiguration>0.0 -0.17 0.0 0.0</initialConfiguration>
+	</plugin>
+</xacro:if>
+
+</gazebo>
+
+</robot>
