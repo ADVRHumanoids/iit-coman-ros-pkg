@@ -6,6 +6,7 @@ echo "Creating bare urdf of coman.urdf.xacro"
 rosrun xacro xacro.py coman.urdf.xacro > coman.urdf
 echo "...urdf correctly created!"
 
+echo "Creating urdf of coman_robot.urdf.xacro"
 rosrun xacro xacro.py coman_robot.urdf.xacro > coman_robot.urdf
 echo "...urdf correctly created!"
 
@@ -57,5 +58,11 @@ rm -rf ~/.gazebo/models/coman_urdf
 cp -r coman_urdf ~/.gazebo/models
 
 rm -rf coman_urdf
+
+echo "Creating srdf from coman.srdf.xacro"
+cd ../coman_srdf/srdf
+rosrun xacro xacro.py coman.srdf.xacro > coman.srdf 
+echo "...created coman.srdf!"
+ 
 echo "Finish! Enjoy COMAN in GAZEBO!"
 

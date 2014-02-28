@@ -1,0 +1,70 @@
+<?xml version="1.0" ?>
+<!--This does not replace URDF, and is not an extension of URDF.
+    This is a format for representing semantic information about the robot structure.
+    A URDF file must exist for this robot as well, where the joints and the links that are referenced are defined
+-->
+<robot xmlns:xacro="http://ros.org/wiki/xacro" name="COMAN">
+    
+    <xacro:include filename="$(find coman_urdf)/urdf/coman_config.urdf.xacro" />
+    
+    <!--GROUPS: Representation of a set of joints and links. This can be useful for specifying DOF to plan for, defining arms, end effectors, etc-->
+    <!--LINKS: When a link is specified, the parent joint of that link (if it exists) is automatically included-->
+    <!--JOINTS: When a joint is specified, the child link of that joint (which will always exist) is automatically included-->
+    <!--CHAINS: When a chain is specified, all the links along the chain (including endpoints) are included in the group. Additionally, all the joints that are parents to included links are also included. This means that joints along the chain and the parent joint of the base link are included in the group-->
+    <!--SUBGROUPS: Groups can also be formed by referencing to already defined group names-->
+<xacro:if value="${GAZEBO_COMAN_USES_7DOF_FOREARMS_DRC_14}">
+    <group name="left_arm">
+        <joint name="LShSag" />
+        <joint name="LShLat" />
+        <joint name="LShYaw" />
+        <joint name="LElbj" />
+        <joint name="LForearmPlate" />
+        <joint name="LWrj1" />
+        <joint name="LWrj2" />
+    </group>
+    <group name="right_arm">
+        <joint name="RShSag" />
+        <joint name="RShLat" />
+        <joint name="RShYaw" />
+        <joint name="RElbj" />
+        <joint name="RForearmPlate" />
+        <joint name="RWrj1" />
+        <joint name="RWrj2" />
+    </group>
+</xacro:if>
+<xacro:unless value="${GAZEBO_COMAN_USES_7DOF_FOREARMS_DRC_14}">
+    <group name="left_arm">
+        <joint name="LShSag" />
+        <joint name="LShLat" />
+        <joint name="LShYaw" />
+        <joint name="LElbj" />
+    </group>
+    <group name="right_arm">
+        <joint name="RShSag" />
+        <joint name="RShLat" />
+        <joint name="RShYaw" />
+        <joint name="RElbj" />
+    </group>
+</xacro:unless>
+    <group name="left_leg">
+        <joint name="LHipSag" />
+        <joint name="LHipLat" />
+        <joint name="LHipYaw" />
+        <joint name="LKneeSag" />
+        <joint name="LAnkLat" />
+        <joint name="LAnkSag" />
+    </group>
+    <group name="right_leg">
+        <joint name="RHipSag" />
+        <joint name="RHipLat" />
+        <joint name="RHipYaw" />
+        <joint name="RKneeSag" />
+        <joint name="RAnkLat" />
+        <joint name="RAnkSag" />
+    </group>
+    <group name="torso">
+        <joint name="WaistSag" />
+        <joint name="WaistLat" />
+        <joint name="WaistYaw" />
+    </group>
+</robot>
