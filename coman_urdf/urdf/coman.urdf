@@ -548,7 +548,8 @@ and to define the end effectors of the robot -->
   <joint name="Xtion_cam_body_joint" type="fixed">
     <parent link="Xtion_body"/>
     <child link="Xtion_cam_body"/>
-    <origin rpy="0 1.396 0" xyz="0.071 0 0.591"/>
+    <!-- origin xyz="0.071 0 0.591" rpy="0 1.396 0" / -->
+    <origin rpy="0 0 0" xyz="0.071 0 0.591"/>
     <!--axis xyz="0 1 0" />
     		<limit velocity="4.0" effort="5" lower="-0.4145" upper="1.57075" />
     		<dynamics friction="0" damping="3.0"/-->
@@ -964,18 +965,15 @@ and to define the end effectors of the robot -->
       <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
     </inertial>
     <visual>
-      <origin rpy="0 0 0" xyz="0 0 0"/>
-      <geometry>
-        <box size="0.07 0.07 0.07"/>
+      <origin rpy="0 0 3.14159265359" xyz="0 0.01 -0.04"/>
+      <geometry name="RSoftHand_visual">
+        <mesh filename="package://coman_urdf/meshes/collada/forearms/R_soft_hand_open.dae" scale="1E-3 1E-3 1E-3"/>
       </geometry>
-      <material name="Cyan">
-        <color rgba="0 1.0 1.0 1.0"/>
-      </material>
     </visual>
     <collision>
-      <origin rpy="0 0 0" xyz="0 0 0"/>
-      <geometry>
-        <box size="0.07 0.07 0.07"/>
+      <origin rpy="0 0 3.14159265359" xyz="0 0.01 -0.04"/>
+      <geometry name="RSoftHand_collision">
+        <mesh filename="package://coman_urdf/meshes/collada/simple/forearms/R_soft_hand_open.dae" scale="1E-3 1E-3 1E-3"/>
       </geometry>
     </collision>
   </link>
@@ -986,35 +984,26 @@ and to define the end effectors of the robot -->
       <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
     </inertial>
     <visual>
-      <origin rpy="0 0 0" xyz="0 0 0"/>
-      <geometry>
-        <box size="0.07 0.07 0.07"/>
+      <origin rpy="0 0 1.5707963268" xyz="0.007 -0.012 -0.04"/>
+      <geometry name="LSoftHand_visual">
+        <mesh filename="package://coman_urdf/meshes/collada/forearms/L_soft_hand_open.dae" scale="1E-3 1E-3 1E-3"/>
       </geometry>
-      <material name="Cyan">
-        <color rgba="0 1.0 1.0 1.0"/>
-      </material>
     </visual>
     <collision>
-      <origin rpy="0 0 0" xyz="0 0 0"/>
-      <geometry>
-        <box size="0.07 0.07 0.07"/>
+      <origin rpy="0 0 1.5707963268" xyz="0.007 -0.012 -0.04"/>
+      <geometry name="LSoftHand_collision">
+        <mesh filename="package://coman_urdf/meshes/collada/simple/forearms/L_soft_hand_open.dae" scale="1E-3 1E-3 1E-3"/>
       </geometry>
     </collision>
   </link>
-  <joint name="r_handj" type="revolute">
+  <joint name="r_handj" type="fixed">
     <parent link="RWrMot3"/>
     <child link="RSoftHand"/>
-    <origin rpy="0 0 0" xyz="0 0 -0.04"/>
-    <axis xyz="1 0 0"/>
-    <limit effort="5" lower="0.0" upper="1.57075" velocity="4.0"/>
-    <dynamics damping="3.0" friction="0"/>
+    <origin rpy="0 0 0" xyz="0 0 -0.064"/>
   </joint>
-  <joint name="l_handj" type="revolute">
+  <joint name="l_handj" type="fixed">
     <parent link="LWrMot3"/>
     <child link="LSoftHand"/>
-    <origin rpy="0 0 0" xyz="0 0 -0.04"/>
-    <axis xyz="1 0 0"/>
-    <limit effort="5" lower="-1.57075" upper="0.0" velocity="4.0"/>
-    <dynamics damping="3.0" friction="0"/>
+    <origin rpy="0 0 0" xyz="0 0 -0.064"/>
   </joint>
 </robot>

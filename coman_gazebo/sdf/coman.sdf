@@ -1999,29 +1999,29 @@
    </pose>
    <inertial>
     <pose>
-     -0.0274906 1.67341e-05 0.147136 0 -0 0
+     -0.028128 1.67341e-05 0.147671 0 -0 0
     </pose>
     <mass>
      6.95172
     </mass>
     <inertia>
      <ixx>
-      0.115223
+      0.118619
      </ixx>
      <ixy>
-      -8.52439e-06
+      -8.59855e-06
      </ixy>
      <ixz>
-      -0.0207462
+      -0.0191304
      </ixz>
      <iyy>
-      0.115321
+      0.117743
      </iyy>
      <iyz>
-      1.16553e-05
+      1.17175e-05
      </iyz>
      <izz>
-      0.0318564
+      0.0308825
      </izz>
     </inertia>
    </inertial>
@@ -2057,7 +2057,7 @@
    </collision>
    <collision name="DWYTorso_collision_Xtion_cam_body">
     <pose>
-     -1.20324 0 0.458887 1.17115e-12 -1.396 3.14159
+     -0.0205 0 -0.6868 0 -0 3.14159
     </pose>
     <geometry>
      <mesh>
@@ -2102,7 +2102,7 @@
    </visual>
    <visual name="DWYTorso_visual_Xtion_cam_body">
     <pose>
-     -1.20324 0 0.458887 1.17115e-12 -1.396 3.14159
+     -0.0205 0 -0.6868 0 -0 3.14159
     </pose>
     <geometry>
      <mesh>
@@ -2965,14 +2965,14 @@
    </pose>
    <inertial>
     <pose>
-     0 0 0 0 -0 0
+     0 0 -0.0542361 0 -0 0
     </pose>
     <mass>
-     0.0540075
+     0.354008
     </mass>
     <inertia>
      <ixx>
-      2.16e-05
+      0.00120907
      </ixx>
      <ixy>
       0
@@ -2981,13 +2981,13 @@
       0
      </ixz>
      <iyy>
-      2.16e-05
+      0.00120907
      </iyy>
      <iyz>
       0
      </iyz>
      <izz>
-      2.16e-05
+      0.0010216
      </izz>
     </inertia>
    </inertial>
@@ -3006,6 +3006,21 @@
      </mesh>
     </geometry>
    </collision>
+   <collision name="LWrMot3_collision_LSoftHand">
+    <pose>
+     0.007 -0.012 -0.104 0 -0 1.5708
+    </pose>
+    <geometry>
+     <mesh>
+      <scale>
+       0.001 0.001 0.001
+      </scale>
+      <uri>
+       model://coman_urdf/meshes/collada/simple/forearms/L_soft_hand_open.dae
+      </uri>
+     </mesh>
+    </geometry>
+   </collision>
    <visual name="LWrMot3_visual">
     <pose>
      0.025 -0.012 -0.02 -3.14159 -2.06823e-13 -1.5708
@@ -3017,6 +3032,21 @@
       </scale>
       <uri>
        model://coman_urdf/meshes/collada/forearms/fa_hand_interface_rig_sw0001.dae
+      </uri>
+     </mesh>
+    </geometry>
+   </visual>
+   <visual name="LWrMot3_visual_LSoftHand">
+    <pose>
+     0.007 -0.012 -0.104 0 -0 1.5708
+    </pose>
+    <geometry>
+     <mesh>
+      <scale>
+       0.001 0.001 0.001
+      </scale>
+      <uri>
+       model://coman_urdf/meshes/collada/forearms/L_soft_hand_open.dae
       </uri>
      </mesh>
     </geometry>
@@ -3058,164 +3088,6 @@
     <dynamics>
      <damping>
       0.03
-     </damping>
-    </dynamics>
-   </axis>
-   <physics>
-    <provide_feedback>
-     1
-    </provide_feedback>
-    <ode>
-     <provide_feedback>
-      1
-     </provide_feedback>
-     <implicit_spring_damper>
-      1
-     </implicit_spring_damper>
-     <cfm_damping>
-      1
-     </cfm_damping>
-     <limit>
-      <cfm>
-       0
-      </cfm>
-      <erp>
-       0.2
-      </erp>
-     </limit>
-    </ode>
-   </physics>
-  </joint>
-  <link name="LSoftHand">
-   <pose>
-    0.005305 0.1558 -0.090351 0 -0 0
-   </pose>
-   <inertial>
-    <pose>
-     0 0 0 0 -0 0
-    </pose>
-    <mass>
-     0.3
-    </mass>
-    <inertia>
-     <ixx>
-      0.001
-     </ixx>
-     <ixy>
-      0
-     </ixy>
-     <ixz>
-      0
-     </ixz>
-     <iyy>
-      0.001
-     </iyy>
-     <iyz>
-      0
-     </iyz>
-     <izz>
-      0.001
-     </izz>
-    </inertia>
-   </inertial>
-   <collision name="LSoftHand_collision">
-    <pose>
-     0 0 0 0 -0 0
-    </pose>
-    <geometry>
-     <box>
-      <size>
-       0.07 0.07 0.07
-      </size>
-     </box>
-    </geometry>
-    <surface>
-     <contact>
-      <ode>
-       <kp>
-        1e+06
-       </kp>
-       <kd>
-        100
-       </kd>
-       <max_vel>
-        1
-       </max_vel>
-       <min_depth>
-        0
-       </min_depth>
-      </ode>
-     </contact>
-     <friction>
-      <ode>
-       <mu>
-        1
-       </mu>
-       <mu2>
-        1
-       </mu2>
-       <fdir1>
-        1 0 0
-       </fdir1>
-      </ode>
-     </friction>
-    </surface>
-   </collision>
-   <visual name="LSoftHand_visual">
-    <pose>
-     0 0 0 0 -0 0
-    </pose>
-    <geometry>
-     <box>
-      <size>
-       0.07 0.07 0.07
-      </size>
-     </box>
-    </geometry>
-   </visual>
-   <gravity>
-    1
-   </gravity>
-   <velocity_decay>
-    <linear>
-     0
-    </linear>
-    <angular>
-     0
-    </angular>
-   </velocity_decay>
-   <self_collide>
-    0
-   </self_collide>
-  </link>
-  <joint name="l_handj" type="revolute">
-   <child>
-    LSoftHand
-   </child>
-   <parent>
-    LWrMot3
-   </parent>
-   <axis>
-    <xyz>
-     1 0 0
-    </xyz>
-    <limit>
-     <lower>
-      -1.57075
-     </lower>
-     <upper>
-      0
-     </upper>
-     <effort>
-      5
-     </effort>
-     <velocity>
-      4
-     </velocity>
-    </limit>
-    <dynamics>
-     <damping>
-      3
      </damping>
     </dynamics>
    </axis>
@@ -4029,14 +3901,14 @@
    </pose>
    <inertial>
     <pose>
-     0 0 0 0 -0 0
+     0 0 -0.0542361 0 -0 0
     </pose>
     <mass>
-     0.0540075
+     0.354008
     </mass>
     <inertia>
      <ixx>
-      2.16e-05
+      0.00120907
      </ixx>
      <ixy>
       0
@@ -4045,13 +3917,13 @@
       0
      </ixz>
      <iyy>
-      2.16e-05
+      0.00120907
      </iyy>
      <iyz>
       0
      </iyz>
      <izz>
-      2.16e-05
+      0.0010216
      </izz>
     </inertia>
    </inertial>
@@ -4070,6 +3942,21 @@
      </mesh>
     </geometry>
    </collision>
+   <collision name="RWrMot3_collision_RSoftHand">
+    <pose>
+     0 0.01 -0.104 0 -0 -3.14159
+    </pose>
+    <geometry>
+     <mesh>
+      <scale>
+       0.001 0.001 0.001
+      </scale>
+      <uri>
+       model://coman_urdf/meshes/collada/simple/forearms/R_soft_hand_open.dae
+      </uri>
+     </mesh>
+    </geometry>
+   </collision>
    <visual name="RWrMot3_visual">
     <pose>
      0.025 -0.012 -0.02 -3.14159 -2.06823e-13 -1.5708
@@ -4081,6 +3968,21 @@
       </scale>
       <uri>
        model://coman_urdf/meshes/collada/forearms/fa_hand_interface_rig_sw0001.dae
+      </uri>
+     </mesh>
+    </geometry>
+   </visual>
+   <visual name="RWrMot3_visual_RSoftHand">
+    <pose>
+     0 0.01 -0.104 0 -0 -3.14159
+    </pose>
+    <geometry>
+     <mesh>
+      <scale>
+       0.001 0.001 0.001
+      </scale>
+      <uri>
+       model://coman_urdf/meshes/collada/forearms/R_soft_hand_open.dae
       </uri>
      </mesh>
     </geometry>
@@ -4150,164 +4052,6 @@
     </ode>
    </physics>
   </joint>
-  <link name="RSoftHand">
-   <pose>
-    0.005305 -0.1558 -0.090351 0 -0 0
-   </pose>
-   <inertial>
-    <pose>
-     0 0 0 0 -0 0
-    </pose>
-    <mass>
-     0.3
-    </mass>
-    <inertia>
-     <ixx>
-      0.001
-     </ixx>
-     <ixy>
-      0
-     </ixy>
-     <ixz>
-      0
-     </ixz>
-     <iyy>
-      0.001
-     </iyy>
-     <iyz>
-      0
-     </iyz>
-     <izz>
-      0.001
-     </izz>
-    </inertia>
-   </inertial>
-   <collision name="RSoftHand_collision">
-    <pose>
-     0 0 0 0 -0 0
-    </pose>
-    <geometry>
-     <box>
-      <size>
-       0.07 0.07 0.07
-      </size>
-     </box>
-    </geometry>
-    <surface>
-     <contact>
-      <ode>
-       <kp>
-        1e+06
-       </kp>
-       <kd>
-        100
-       </kd>
-       <max_vel>
-        1
-       </max_vel>
-       <min_depth>
-        0
-       </min_depth>
-      </ode>
-     </contact>
-     <friction>
-      <ode>
-       <mu>
-        1
-       </mu>
-       <mu2>
-        1
-       </mu2>
-       <fdir1>
-        1 0 0
-       </fdir1>
-      </ode>
-     </friction>
-    </surface>
-   </collision>
-   <visual name="RSoftHand_visual">
-    <pose>
-     0 0 0 0 -0 0
-    </pose>
-    <geometry>
-     <box>
-      <size>
-       0.07 0.07 0.07
-      </size>
-     </box>
-    </geometry>
-   </visual>
-   <gravity>
-    1
-   </gravity>
-   <velocity_decay>
-    <linear>
-     0
-    </linear>
-    <angular>
-     0
-    </angular>
-   </velocity_decay>
-   <self_collide>
-    0
-   </self_collide>
-  </link>
-  <joint name="r_handj" type="revolute">
-   <child>
-    RSoftHand
-   </child>
-   <parent>
-    RWrMot3
-   </parent>
-   <axis>
-    <xyz>
-     1 0 0
-    </xyz>
-    <limit>
-     <lower>
-      0
-     </lower>
-     <upper>
-      1.57075
-     </upper>
-     <effort>
-      5
-     </effort>
-     <velocity>
-      4
-     </velocity>
-    </limit>
-    <dynamics>
-     <damping>
-      3
-     </damping>
-    </dynamics>
-   </axis>
-   <physics>
-    <provide_feedback>
-     1
-    </provide_feedback>
-    <ode>
-     <provide_feedback>
-      1
-     </provide_feedback>
-     <implicit_spring_damper>
-      1
-     </implicit_spring_damper>
-     <cfm_damping>
-      1
-     </cfm_damping>
-     <limit>
-      <cfm>
-       0
-      </cfm>
-      <erp>
-       0.2
-      </erp>
-     </limit>
-    </ode>
-   </physics>
-  </joint>
   <static>
    0
   </static>
@@ -4349,22 +4093,6 @@
    </yarpConfigurationFile>
    <initialConfiguration>
     0.0 -0.17 0.0 0.0 0.0 0.0 0.0
-   </initialConfiguration>
-  </plugin>
-  <plugin filename="libgazebo_yarp_controlboard.so" name="coman_yarp_gazebo_plugin_left_hand">
-   <yarpConfigurationFile>
-    model://coman_urdf/conf/coman/coman_gazebo_left_hand.ini
-   </yarpConfigurationFile>
-   <initialConfiguration>
-    0.0
-   </initialConfiguration>
-  </plugin>
-  <plugin filename="libgazebo_yarp_controlboard.so" name="coman_yarp_gazebo_plugin_right_hand">
-   <yarpConfigurationFile>
-    model://coman_urdf/conf/coman/coman_gazebo_right_hand.ini
-   </yarpConfigurationFile>
-   <initialConfiguration>
-    0.0
    </initialConfiguration>
   </plugin>
   <pose>
