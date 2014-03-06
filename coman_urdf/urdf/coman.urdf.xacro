@@ -125,13 +125,13 @@ and to define the end effectors of the robot -->
       <joint name="r_handj" type="fixed">
         <parent link="RWrMot3"/>
         <child link="RSoftHand"/>
-        <origin xyz="0 0 -0.064" rpy="0 0 0"/>
+        <origin xyz="0 0 -0.07" rpy="0 0 0"/>
       </joint>
 
       <joint name="l_handj" type="fixed">
         <parent link="LWrMot3"/>
         <child link="LSoftHand"/>
-        <origin xyz="0 0 -0.064" rpy="0 0 0"/>
+        <origin xyz="0 0 -0.07" rpy="0 0 0"/>
       </joint>
     </xacro:unless>
 

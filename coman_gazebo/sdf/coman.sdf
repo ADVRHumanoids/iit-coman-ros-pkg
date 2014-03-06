@@ -2965,14 +2965,14 @@
    </pose>
    <inertial>
     <pose>
-     0 0 -0.0542361 0 -0 0
+     0 0 -0.0593208 0 -0 0
     </pose>
     <mass>
      0.354008
     </mass>
     <inertia>
      <ixx>
-      0.00120907
+      0.00124586
      </ixx>
      <ixy>
       0
@@ -2981,7 +2981,7 @@
       0
      </ixz>
      <iyy>
-      0.00120907
+      0.00124586
      </iyy>
      <iyz>
       0
@@ -3008,7 +3008,7 @@
    </collision>
    <collision name="LWrMot3_collision_LSoftHand">
     <pose>
-     0.007 -0.012 -0.104 0 -0 1.5708
+     0.007 -0.012 -0.11 0 -0 1.5708
     </pose>
     <geometry>
      <mesh>
@@ -3038,7 +3038,7 @@
    </visual>
    <visual name="LWrMot3_visual_LSoftHand">
     <pose>
-     0.007 -0.012 -0.104 0 -0 1.5708
+     0.007 -0.012 -0.11 0 -0 1.5708
     </pose>
     <geometry>
      <mesh>
@@ -3901,14 +3901,14 @@
    </pose>
    <inertial>
     <pose>
-     0 0 -0.0542361 0 -0 0
+     0 0 -0.0593208 0 -0 0
     </pose>
     <mass>
      0.354008
     </mass>
     <inertia>
      <ixx>
-      0.00120907
+      0.00124586
      </ixx>
      <ixy>
       0
@@ -3917,7 +3917,7 @@
       0
      </ixz>
      <iyy>
-      0.00120907
+      0.00124586
      </iyy>
      <iyz>
       0
@@ -3944,7 +3944,7 @@
    </collision>
    <collision name="RWrMot3_collision_RSoftHand">
     <pose>
-     0 0.01 -0.104 0 -0 -3.14159
+     0 0.01 -0.11 0 -0 -3.14159
     </pose>
     <geometry>
      <mesh>
@@ -3974,7 +3974,7 @@
    </visual>
    <visual name="RWrMot3_visual_RSoftHand">
     <pose>
-     0 0.01 -0.104 0 -0 -3.14159
+     0 0.01 -0.11 0 -0 -3.14159
     </pose>
     <geometry>
      <mesh>
