@@ -154,12 +154,12 @@
    </gazebo>
 </xacro:if>
 <xacro:if value="${GAZEBO_COMAN_USES_7DOF_FOREARMS_DRC_14}">
-    <xacro:if value="${GAZEBO_COMAN_USES_SOFTHANDS_DRC_sw1_14}">
+    <xacro:unless value="${GAZEBO_COMAN_USES_SOFTHANDS_DRC_sw1_14}">
       <gazebo reference="r_handj">
         <cfmDamping>1</cfmDamping>
         <provideFeedback>true</provideFeedback>
       </gazebo>
-    </xacro:if>
+    </xacro:unless>
 </xacro:if>
 
 
@@ -194,12 +194,12 @@
    </gazebo>
 </xacro:if>
 <xacro:if value="${GAZEBO_COMAN_USES_7DOF_FOREARMS_DRC_14}">
-    <xacro:if value="${GAZEBO_COMAN_USES_SOFTHANDS_DRC_sw1_14}">
+    <xacro:unless value="${GAZEBO_COMAN_USES_SOFTHANDS_DRC_sw1_14}">
       <gazebo reference="l_handj">
         <cfmDamping>1</cfmDamping>
         <provideFeedback>true</provideFeedback>
       </gazebo>
-    </xacro:if>
+    </xacro:unless>
 </xacro:if>
 
 
