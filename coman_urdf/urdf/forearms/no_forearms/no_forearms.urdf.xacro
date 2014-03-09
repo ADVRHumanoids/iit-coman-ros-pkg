@@ -12,13 +12,13 @@
       <visual>
         <origin xyz="-0.020305 -0.1558 -0.664329" rpy="0 0 -3.14159265359"/>
         <geometry name="LElb_visual">
-          <mesh filename="package://coman_urdf/meshes/collada/asm0001_collada_11_prt.dae" scale="0.03937 0.03937 0.03937" />
+          <mesh filename="package://coman/meshes/collada/asm0001_collada_11_prt.dae" scale="0.03937 0.03937 0.03937" />
         </geometry>
       </visual>
       <collision>
         <origin xyz="-0.020305 -0.1558 -0.664329" rpy="0 0 -3.14159265359"/>
         <geometry name="LElb_collision">
-          <mesh filename="package://coman_urdf/meshes/collada/simple/simple_asm0001_collada_11_prt.dae" scale="0.03937 0.03937 0.03937" />
+          <mesh filename="package://coman/meshes/collada/simple/simple_asm0001_collada_11_prt.dae" scale="0.03937 0.03937 0.03937" />
         </geometry>             
       </collision>
     </link>
@@ -40,13 +40,13 @@
     <visual>
       <origin xyz="-0.020305 -0.1558 -0.664329" rpy="0 0 -3.14159265359"/>
       <geometry name="RElb_visual">
-        <mesh filename="package://coman_urdf/meshes/collada/asm0001_collada_11_prt.dae" scale="0.03937 0.03937 0.03937" />
+        <mesh filename="package://coman/meshes/collada/asm0001_collada_11_prt.dae" scale="0.03937 0.03937 0.03937" />
       </geometry>
     </visual>
     <collision>
       <origin xyz="-0.020305 -0.1558 -0.664329" rpy="0 0 -3.14159265359"/>
       <geometry name="RElb_collision">
-        <mesh filename="package://coman_urdf/meshes/collada/simple/simple_asm0001_collada_11_prt.dae" scale="0.03937 0.03937 0.03937" />
+        <mesh filename="package://coman/meshes/collada/simple/simple_asm0001_collada_11_prt.dae" scale="0.03937 0.03937 0.03937" />
       </geometry>             
     </collision>
   </link>
