@@ -56,13 +56,13 @@ and to define the end effectors of the robot -->
     <visual>
       <origin xyz="-0.020281504 0.0 -0.68662053" rpy="0 0 -3.14159265359"/>
       <geometry name="Xtion_body_visual">
-        <mesh filename="package://coman_urdf/meshes/collada/Xtion/xtion_base.dae" scale="0.03937 0.03937 0.03937" />
+        <mesh filename="package://coman/meshes/collada/Xtion/xtion_base.dae" scale="0.03937 0.03937 0.03937" />
       </geometry>
     </visual>
     <collision>
       <origin xyz="-0.020281504 0.0 -0.68662053" rpy="0 0 -3.14159265359"/>
       <geometry name="Xtion_body_collision">
-        <mesh filename="package://coman_urdf/meshes/collada/simple/Xtion/xtion_base.dae" scale="0.03937 0.03937 0.03937" />
+        <mesh filename="package://coman/meshes/collada/simple/Xtion/xtion_base.dae" scale="0.03937 0.03937 0.03937" />
       </geometry>             
     </collision>
   </link>
@@ -76,13 +76,13 @@ and to define the end effectors of the robot -->
     <visual>
       <origin xyz="-0.0915 0.0 -1.2778" rpy="0 0 -3.14159265359"/>
       <geometry name="Xtion_cam_body_visual">
-        <mesh filename="package://coman_urdf/meshes/collada/Xtion/xtion_cam_body.dae" scale="0.001 0.001 0.001" />
+        <mesh filename="package://coman/meshes/collada/Xtion/xtion_cam_body.dae" scale="0.001 0.001 0.001" />
       </geometry>
     </visual>
     <collision>
       <origin xyz="-0.0915 0.0 -1.2778" rpy="0 0 -3.14159265359"/>
       <geometry name="Xtion_cam_body_collision">
-        <mesh filename="package://coman_urdf/meshes/collada/Xtion/xtion_cam_body.dae" scale="0.001 0.001 0.001" />
+        <mesh filename="package://coman/meshes/collada/Xtion/xtion_cam_body.dae" scale="0.001 0.001 0.001" />
       </geometry>             
     </collision>
   </link>
