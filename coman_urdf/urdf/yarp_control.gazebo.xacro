@@ -32,7 +32,7 @@
 
 
 	<!-- HANDS -->
-	<xacro:if value="${GAZEBO_COMAN_USES_SOFTHANDS_DRC_sw1_14}">
+	<xacro:unless value="${GAZEBO_COMAN_USES_SOFTHANDS_DRC_sw1_14}">
 		<plugin name="coman_yarp_gazebo_plugin_left_hand" filename="libgazebo_yarp_controlboard.so">
 			<yarpConfigurationFile>model://coman/conf/coman/coman_gazebo_left_hand.ini</yarpConfigurationFile>
 			<initialConfiguration>0.0</initialConfiguration>
@@ -41,7 +41,7 @@
 			<yarpConfigurationFile>model://coman/conf/coman/coman_gazebo_right_hand.ini</yarpConfigurationFile>
 			<initialConfiguration>0.0</initialConfiguration>
 		</plugin>
-	</xacro:if>
+	</xacro:unless>
 </xacro:if>
 
 <xacro:if value="${GAZEBO_COMAN_USES_NO_FOREARMS}">

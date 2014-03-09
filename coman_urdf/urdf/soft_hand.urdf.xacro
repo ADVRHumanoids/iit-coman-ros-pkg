@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://ros.org/wiki/xacro" name="SoftHand">
 
-<xacro:unless value="${GAZEBO_COMAN_USES_SOFTHANDS_DRC_sw1_14}">
+<xacro:if value="${GAZEBO_COMAN_USES_SOFTHANDS_DRC_sw1_14}">
 <link name="RSoftHand">
     <inertial>
       <origin xyz="0 0 0" rpy="0 0 0"/>
@@ -41,9 +41,9 @@
       </geometry>
    </collision>
   </link>
-</xacro:unless>
+</xacro:if>
 
-<xacro:if value="${GAZEBO_COMAN_USES_SOFTHANDS_DRC_sw1_14}">
+<xacro:unless value="${GAZEBO_COMAN_USES_SOFTHANDS_DRC_sw1_14}">
 <!-- ## WRONG NUMBERS FOR... ok lasciamo perde... FIX THEM!! ## -->
   <link name="RSoftHand">
     <inertial>
@@ -90,6 +90,6 @@
      </geometry>
    </collision>
   </link>
-</xacro:if>
+</xacro:unless>
 
 </robot>
