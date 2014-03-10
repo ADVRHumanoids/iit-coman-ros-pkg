@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://ros.org/wiki/xacro" name="COMAN">
 
-<xacro:property name="model_name" value="IIT Coman w/ Softhand" />
-<xacro:property name="model_version" value="0.1" />
+<xacro:property name="model_name" value="IIT Coman" />
+<xacro:property name="model_version" value="1.0" />
 
 <!--
 ####################################################
@@ -48,17 +48,18 @@
 -->
 
 <!-- 2) 7DOFS_FOREARMS -->
-<!--
+
 <xacro:property name="GAZEBO_COMAN_USES_NO_FOREARMS" value="false" />
 <xacro:property name="GAZEBO_COMAN_USES_7DOF_FOREARMS_DRC_14" value="true" />
 <xacro:property name="GAZEBO_COMAN_USES_SOFTHANDS_DRC_sw1_14" value="false" />
--->
+
 
 <!-- 3) 7DOFS_FOREARMS + SOFT_HANDS -->
-
+<!--
 <xacro:property name="GAZEBO_COMAN_USES_NO_FOREARMS" value="false" />
 <xacro:property name="GAZEBO_COMAN_USES_7DOF_FOREARMS_DRC_14" value="true" />
 <xacro:property name="GAZEBO_COMAN_USES_SOFTHANDS_DRC_sw1_14" value="true" />
+-->
 
 <!--
 ####################################################
