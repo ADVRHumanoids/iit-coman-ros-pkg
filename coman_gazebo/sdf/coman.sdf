@@ -2595,7 +2595,7 @@
    </inertial>
    <collision name="LElb_collision">
     <pose>
-     0 0 0 -1.57079 1.57079 -2.65359e-06
+     0 0 0 -1.57079 1.57079 -2.65361e-06
     </pose>
     <geometry>
      <mesh>
@@ -2610,7 +2610,7 @@
    </collision>
    <visual name="LElb_visual">
     <pose>
-     0 0 0 -1.57079 1.57079 -2.65359e-06
+     0 0 0 -1.57079 1.57079 -2.65361e-06
     </pose>
     <geometry>
      <mesh>
@@ -2722,7 +2722,7 @@
    </inertial>
    <collision name="LForearm_collision">
     <pose>
-     0 0 0.0718 -3.14159 -2.06823e-13 -1.5708
+     0 0 0.0718 3.14159 -2.06823e-13 -1.5708
     </pose>
     <geometry>
      <mesh>
@@ -2737,7 +2737,7 @@
    </collision>
    <visual name="LForearm_visual">
     <pose>
-     0 0 0.0718 -1.5708 1.14194e-16 1.5708
+     0 0 0.0718 -1.5708 5.55112e-17 1.5708
     </pose>
     <geometry>
      <mesh>
@@ -2866,7 +2866,7 @@
    </inertial>
    <collision name="LWrMot2_collision">
     <pose>
-     0.025 0 0 2.65359e-06 1.57079 -3.14159
+     0.025 0 0 -2.65359e-06 1.57079 -3.14159
     </pose>
     <geometry>
      <mesh>
@@ -2881,7 +2881,7 @@
    </collision>
    <visual name="LWrMot2_visual">
     <pose>
-     0.025 0 0 2.65359e-06 1.57079 -3.14159
+     0.025 0 0 -2.65359e-06 1.57079 -3.14159
     </pose>
     <geometry>
      <mesh>
@@ -2993,7 +2993,7 @@
    </inertial>
    <collision name="LWrMot3_collision">
     <pose>
-     0.025 -0.012 -0.02 -3.14159 -2.06823e-13 -1.5708
+     0.025 -0.012 -0.02 3.14159 -2.06823e-13 -1.5708
     </pose>
     <geometry>
      <mesh>
@@ -3008,7 +3008,7 @@
    </collision>
    <visual name="LWrMot3_visual">
     <pose>
-     0.025 -0.012 -0.02 -3.14159 -2.06823e-13 -1.5708
+     0.025 -0.012 -0.02 3.14159 -2.06823e-13 -1.5708
     </pose>
     <geometry>
      <mesh>
@@ -3622,7 +3622,7 @@
    </inertial>
    <collision name="RElb_collision">
     <pose>
-     0 0 0 -1.57079 1.57079 -2.65359e-06
+     0 0 0 -1.57079 1.57079 -2.65361e-06
     </pose>
     <geometry>
      <mesh>
@@ -3637,7 +3637,7 @@
    </collision>
    <visual name="RElb_visual">
     <pose>
-     0 0 0 -1.57079 1.57079 -2.65359e-06
+     0 0 0 -1.57079 1.57079 -2.65361e-06
     </pose>
     <geometry>
      <mesh>
@@ -3749,7 +3749,7 @@
    </inertial>
    <collision name="RForearm_collision">
     <pose>
-     0 0 0.0718 -3.14159 -2.06823e-13 -1.5708
+     0 0 0.0718 3.14159 -2.06823e-13 -1.5708
     </pose>
     <geometry>
      <mesh>
@@ -3764,7 +3764,7 @@
    </collision>
    <visual name="RForearm_visual">
     <pose>
-     0 0 0.0718 -1.5708 1.14194e-16 1.5708
+     0 0 0.0718 -1.5708 5.55112e-17 1.5708
     </pose>
     <geometry>
      <mesh>
@@ -3893,7 +3893,7 @@
    </inertial>
    <collision name="RWrMot2_collision">
     <pose>
-     0.025 0 0 2.65359e-06 1.57079 -3.14159
+     0.025 0 0 -2.65359e-06 1.57079 -3.14159
     </pose>
     <geometry>
      <mesh>
@@ -3908,7 +3908,7 @@
    </collision>
    <visual name="RWrMot2_visual">
     <pose>
-     0.025 0 0 2.65359e-06 1.57079 -3.14159
+     0.025 0 0 -2.65359e-06 1.57079 -3.14159
     </pose>
     <geometry>
      <mesh>
@@ -4020,7 +4020,7 @@
    </inertial>
    <collision name="RWrMot3_collision">
     <pose>
-     0.025 -0.012 -0.02 -3.14159 -2.06823e-13 -1.5708
+     0.025 -0.012 -0.02 3.14159 -2.06823e-13 -1.5708
     </pose>
     <geometry>
      <mesh>
@@ -4035,7 +4035,7 @@
    </collision>
    <visual name="RWrMot3_visual">
     <pose>
-     0.025 -0.012 -0.02 -3.14159 -2.06823e-13 -1.5708
+     0.025 -0.012 -0.02 3.14159 -2.06823e-13 -1.5708
     </pose>
     <geometry>
      <mesh>
