@@ -29,7 +29,7 @@ EOF
                     echo "Processing file $i"
                     model_name="`python ../script/get_model_params.py ${i} model_name`"
                     model_version="`python ../script/get_model_params.py ${i} model_version`"
-                    model_filename=$(basename -s ".urdf.xacro" $i)
+                    model_filename=$(basename $i ".urdf.xacro")
                     echo "${model_filename} configures model ${model_name}, version ${model_version}"
 
                     cp $i coman_config.urdf.xacro
