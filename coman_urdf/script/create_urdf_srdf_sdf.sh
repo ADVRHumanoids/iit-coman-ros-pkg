@@ -151,3 +151,7 @@ else
     echo "Finish! Enjoy COMAN in GAZEBO!"
 
 fi
+
+cd $SCRIPT_ROOT
+cd ../urdf
+cp config/coman.urdf.xacro coman_config.urdf.xacro
