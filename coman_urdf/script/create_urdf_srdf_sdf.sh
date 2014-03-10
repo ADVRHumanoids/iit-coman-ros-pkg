@@ -97,7 +97,9 @@ EOF
             unset i
             
             rm coman_config.urdf.xacro
-            cp -r ../meshes/ ../../coman_gazebo/database/coman/
+            mkdir -p ../../coman_gazebo/database/coman_urdf/
+            cp -r ../meshes/ ../../coman_gazebo/database/coman_urdf/
+            cp -r ../../coman_gazebo/database/coman/conf/ ../../coman_gazebo/database/coman_urdf/
         fi
     fi
 else
@@ -137,7 +139,11 @@ else
 
     rm -rf ~/.gazebo/models/coman_urdf
     rm -rf ~/.gazebo/models/coman
+    mkdir -p ~/.gazebo/models/coman_urdf
     cp -r sdf ~/.gazebo/models/coman
+    cp -r sdf/meshes ~/.gazebo/models/coman/meshes
+    cp -r sdf/meshes ~/.gazebo/models/coman_urdf/meshes
+    cp -r sdf/conf ~/.gazebo/models/coman_urdf/conf
 
     echo "Creating srdf from coman.srdf.xacro"
     cd ../coman_srdf/srdf
