@@ -43,7 +43,7 @@
        0.03937 0.03937 0.03937
       </scale>
       <uri>
-       model://coman/meshes/collada/simple/simple_asm0001_collada_07_prt.dae
+       model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_07_prt.dae
       </uri>
      </mesh>
     </geometry>
@@ -58,7 +58,7 @@
        0.03937 0.03937 0.03937
       </scale>
       <uri>
-       model://coman/meshes/collada/asm0001_collada_07_prt.dae
+       model://coman_urdf/meshes/collada/asm0001_collada_07_prt.dae
       </uri>
      </mesh>
     </geometry>
@@ -105,7 +105,7 @@
     <imu/>
     <plugin filename="libgazebo_yarp_imu.so" name="coman_yarp_gazebo_plugin_IMU">
      <yarpConfigurationFile>
-      model://coman/conf/coman/coman_gazebo_inertial.ini
+      model://coman_urdf/conf/coman/coman_gazebo_inertial.ini
      </yarpConfigurationFile>
     </plugin>
     <pose>
@@ -155,7 +155,7 @@
        0.03937 0.03937 0.03937
       </scale>
       <uri>
-       model://coman/meshes/collada/simple/simple_asm0001_collada_06_prt.dae
+       model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_06_prt.dae
       </uri>
      </mesh>
     </geometry>
@@ -170,7 +170,7 @@
        0.03937 0.03937 0.03937
       </scale>
       <uri>
-       model://coman/meshes/collada/asm0001_collada_06_prt.dae
+       model://coman_urdf/meshes/collada/asm0001_collada_06_prt.dae
       </uri>
      </mesh>
     </geometry>
@@ -282,7 +282,7 @@
        0.03937 0.03937 0.03937
       </scale>
       <uri>
-       model://coman/meshes/collada/simple/simple_asm0001_collada_05_prt.dae
+       model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_05_prt.dae
       </uri>
      </mesh>
     </geometry>
@@ -297,7 +297,7 @@
        0.03937 0.03937 0.03937
       </scale>
       <uri>
-       model://coman/meshes/collada/asm0001_collada_05_prt.dae
+       model://coman_urdf/meshes/collada/asm0001_collada_05_prt.dae
       </uri>
      </mesh>
     </geometry>
@@ -409,7 +409,7 @@
        0.03937 0.03937 0.03937
       </scale>
       <uri>
-       model://coman/meshes/collada/simple/simple_asm0001_collada_04_prt.dae
+       model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_04_prt.dae
       </uri>
      </mesh>
     </geometry>
@@ -424,7 +424,7 @@
        0.03937 0.03937 0.03937
       </scale>
       <uri>
-       model://coman/meshes/collada/asm0001_collada_04_prt.dae
+       model://coman_urdf/meshes/collada/asm0001_collada_04_prt.dae
       </uri>
      </mesh>
     </geometry>
@@ -536,7 +536,7 @@
        0.03937 0.03937 0.03937
       </scale>
       <uri>
-       model://coman/meshes/collada/simple/simple_asm0001_collada_03_prt.dae
+       model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_03_prt.dae
       </uri>
      </mesh>
     </geometry>
@@ -551,7 +551,7 @@
        0.03937 0.03937 0.03937
       </scale>
       <uri>
-       model://coman/meshes/collada/asm0001_collada_03_prt.dae
+       model://coman_urdf/meshes/collada/asm0001_collada_03_prt.dae
       </uri>
      </mesh>
     </geometry>
@@ -663,7 +663,7 @@
        0.03937 0.03937 0.03937
       </scale>
       <uri>
-       model://coman/meshes/collada/simple/simple_asm0001_collada_02_prt.dae
+       model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_02_prt.dae
       </uri>
      </mesh>
     </geometry>
@@ -678,7 +678,7 @@
        0.03937 0.03937 0.03937
       </scale>
       <uri>
-       model://coman/meshes/collada/asm0001_collada_02_prt.dae
+       model://coman_urdf/meshes/collada/asm0001_collada_02_prt.dae
       </uri>
      </mesh>
     </geometry>
@@ -790,7 +790,7 @@
        0.03937 0.03937 0.03937
       </scale>
       <uri>
-       model://coman/meshes/collada/simple/simple_asm0001_collada_01_prt.dae
+       model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_01_prt.dae
       </uri>
      </mesh>
     </geometry>
@@ -836,7 +836,7 @@
        0.03937 0.03937 0.03937
       </scale>
       <uri>
-       model://coman/meshes/collada/asm0001_collada_01_prt.dae
+       model://coman_urdf/meshes/collada/asm0001_collada_01_prt.dae
       </uri>
      </mesh>
     </geometry>
@@ -927,7 +927,7 @@
     </pose>
     <plugin filename="libgazebo_yarp_forcetorque.so" name="LAnkSag_FT_plugin">
      <yarpConfigurationFile>
-      model://coman/conf/coman/coman_gazebo_left_leg_ft.ini
+      model://coman_urdf/conf/coman/coman_gazebo_left_leg_ft.ini
      </yarpConfigurationFile>
     </plugin>
    </sensor>
@@ -974,7 +974,7 @@
        0.03937 0.03937 0.03937
       </scale>
       <uri>
-       model://coman/meshes/collada/simple/simple_asm0001_collada_20_prt.dae
+       model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_20_prt.dae
       </uri>
      </mesh>
     </geometry>
@@ -989,7 +989,7 @@
        0.03937 0.03937 0.03937
       </scale>
       <uri>
-       model://coman/meshes/collada/asm0001_collada_20_prt.dae
+       model://coman_urdf/meshes/collada/asm0001_collada_20_prt.dae
       </uri>
      </mesh>
     </geometry>
@@ -1101,7 +1101,7 @@
        0.03937 0.03937 0.03937
       </scale>
       <uri>
-       model://coman/meshes/collada/simple/simple_asm0001_collada_19_prt.dae
+       model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_19_prt.dae
       </uri>
      </mesh>
     </geometry>
@@ -1116,7 +1116,7 @@
        0.03937 0.03937 0.03937
       </scale>
       <uri>
-       model://coman/meshes/collada/asm0001_collada_19_prt.dae
+       model://coman_urdf/meshes/collada/asm0001_collada_19_prt.dae
       </uri>
      </mesh>
     </geometry>
@@ -1228,7 +1228,7 @@
        0.03937 0.03937 0.03937
       </scale>
       <uri>
-       model://coman/meshes/collada/simple/simple_asm0001_collada_18_prt.dae
+       model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_18_prt.dae
       </uri>
      </mesh>
     </geometry>
@@ -1243,7 +1243,7 @@
        0.03937 0.03937 0.03937
       </scale>
       <uri>
-       model://coman/meshes/collada/asm0001_collada_18_prt.dae
+       model://coman_urdf/meshes/collada/asm0001_collada_18_prt.dae
       </uri>
      </mesh>
     </geometry>
@@ -1355,7 +1355,7 @@
        0.03937 0.03937 0.03937
       </scale>
       <uri>
-       model://coman/meshes/collada/simple/simple_asm0001_collada_17_prt.dae
+       model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_17_prt.dae
       </uri>
      </mesh>
     </geometry>
@@ -1370,7 +1370,7 @@
        0.03937 0.03937 0.03937
       </scale>
       <uri>
-       model://coman/meshes/collada/asm0001_collada_17_prt.dae
+       model://coman_urdf/meshes/collada/asm0001_collada_17_prt.dae
       </uri>
      </mesh>
     </geometry>
@@ -1482,7 +1482,7 @@
        0.03937 0.03937 0.03937
       </scale>
       <uri>
-       model://coman/meshes/collada/simple/simple_asm0001_collada_16_prt.dae
+       model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_16_prt.dae
       </uri>
      </mesh>
     </geometry>
@@ -1497,7 +1497,7 @@
        0.03937 0.03937 0.03937
       </scale>
       <uri>
-       model://coman/meshes/collada/asm0001_collada_16_prt.dae
+       model://coman_urdf/meshes/collada/asm0001_collada_16_prt.dae
       </uri>
      </mesh>
     </geometry>
@@ -1609,7 +1609,7 @@
        0.03937 0.03937 0.03937
       </scale>
       <uri>
-       model://coman/meshes/collada/simple/simple_asm0001_collada_15_prt.dae
+       model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_15_prt.dae
       </uri>
      </mesh>
     </geometry>
@@ -1655,7 +1655,7 @@
        0.03937 0.03937 0.03937
       </scale>
       <uri>
-       model://coman/meshes/collada/asm0001_collada_15_prt.dae
+       model://coman_urdf/meshes/collada/asm0001_collada_15_prt.dae
       </uri>
      </mesh>
     </geometry>
@@ -1746,7 +1746,7 @@
     </pose>
     <plugin filename="libgazebo_yarp_forcetorque.so" name="RAnkSag_FT_plugin">
      <yarpConfigurationFile>
-      model://coman/conf/coman/coman_gazebo_right_leg_ft.ini
+      model://coman_urdf/conf/coman/coman_gazebo_right_leg_ft.ini
      </yarpConfigurationFile>
     </plugin>
    </sensor>
@@ -1793,7 +1793,7 @@
        0.03937 0.03937 0.03937
       </scale>
       <uri>
-       model://coman/meshes/collada/simple/simple_asm0001_collada_09_prt.dae
+       model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_09_prt.dae
       </uri>
      </mesh>
     </geometry>
@@ -1808,7 +1808,7 @@
        0.03937 0.03937 0.03937
       </scale>
       <uri>
-       model://coman/meshes/collada/asm0001_collada_09_prt.dae
+       model://coman_urdf/meshes/collada/asm0001_collada_09_prt.dae
       </uri>
      </mesh>
     </geometry>
@@ -1920,7 +1920,7 @@
        0.03937 0.03937 0.03937
       </scale>
       <uri>
-       model://coman/meshes/collada/simple/simple_asm0001_collada_08_prt.dae
+       model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_08_prt.dae
       </uri>
      </mesh>
     </geometry>
@@ -1935,7 +1935,7 @@
        0.03937 0.03937 0.03937
       </scale>
       <uri>
-       model://coman/meshes/collada/asm0001_collada_08_prt.dae
+       model://coman_urdf/meshes/collada/asm0001_collada_08_prt.dae
       </uri>
      </mesh>
     </geometry>
@@ -2047,7 +2047,7 @@
        0.03937 0.03937 0.03937
       </scale>
       <uri>
-       model://coman/meshes/collada/simple/simple_asm0001_collada_10_prt.dae
+       model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_10_prt.dae
       </uri>
      </mesh>
     </geometry>
@@ -2062,7 +2062,7 @@
        0.03937 0.03937 0.03937
       </scale>
       <uri>
-       model://coman/meshes/collada/asm0001_collada_10_prt.dae
+       model://coman_urdf/meshes/collada/asm0001_collada_10_prt.dae
       </uri>
      </mesh>
     </geometry>
@@ -2174,7 +2174,7 @@
        0.03937 0.03937 0.03937
       </scale>
       <uri>
-       model://coman/meshes/collada/simple/simple_asm0001_collada_14_prt.dae
+       model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_14_prt.dae
       </uri>
      </mesh>
     </geometry>
@@ -2189,7 +2189,7 @@
        0.03937 0.03937 0.03937
       </scale>
       <uri>
-       model://coman/meshes/collada/asm0001_collada_14_prt.dae
+       model://coman_urdf/meshes/collada/asm0001_collada_14_prt.dae
       </uri>
      </mesh>
     </geometry>
@@ -2301,7 +2301,7 @@
        0.03937 0.03937 0.03937
       </scale>
       <uri>
-       model://coman/meshes/collada/simple/simple_asm0001_collada_13_prt.dae
+       model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_13_prt.dae
       </uri>
      </mesh>
     </geometry>
@@ -2316,7 +2316,7 @@
        0.03937 0.03937 0.03937
       </scale>
       <uri>
-       model://coman/meshes/collada/asm0001_collada_13_prt.dae
+       model://coman_urdf/meshes/collada/asm0001_collada_13_prt.dae
       </uri>
      </mesh>
     </geometry>
@@ -2428,7 +2428,7 @@
        0.03937 0.03937 0.03937
       </scale>
       <uri>
-       model://coman/meshes/collada/simple/simple_asm0001_collada_12_prt.dae
+       model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_12_prt.dae
       </uri>
      </mesh>
     </geometry>
@@ -2443,7 +2443,7 @@
        0.03937 0.03937 0.03937
       </scale>
       <uri>
-       model://coman/meshes/collada/asm0001_collada_12_prt.dae
+       model://coman_urdf/meshes/collada/asm0001_collada_12_prt.dae
       </uri>
      </mesh>
     </geometry>
@@ -2555,7 +2555,7 @@
        0.03937 0.03937 0.03937
       </scale>
       <uri>
-       model://coman/meshes/collada/simple/simple_asm0001_collada_11_prt.dae
+       model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_11_prt.dae
       </uri>
      </mesh>
     </geometry>
@@ -2570,7 +2570,7 @@
        0.03937 0.03937 0.03937
       </scale>
       <uri>
-       model://coman/meshes/collada/asm0001_collada_11_prt.dae
+       model://coman_urdf/meshes/collada/asm0001_collada_11_prt.dae
       </uri>
      </mesh>
     </geometry>
@@ -2682,7 +2682,7 @@
        0.03937 0.03937 0.03937
       </scale>
       <uri>
-       model://coman/meshes/collada/simple/simple_asm0001_collada_24_prt.dae
+       model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_24_prt.dae
       </uri>
      </mesh>
     </geometry>
@@ -2697,7 +2697,7 @@
        0.03937 0.03937 0.03937
       </scale>
       <uri>
-       model://coman/meshes/collada/asm0001_collada_24_prt.dae
+       model://coman_urdf/meshes/collada/asm0001_collada_24_prt.dae
       </uri>
      </mesh>
     </geometry>
@@ -2809,7 +2809,7 @@
        0.03937 0.03937 0.03937
       </scale>
       <uri>
-       model://coman/meshes/collada/simple/simple_asm0001_collada_23_prt.dae
+       model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_23_prt.dae
       </uri>
      </mesh>
     </geometry>
@@ -2824,7 +2824,7 @@
        0.03937 0.03937 0.03937
       </scale>
       <uri>
-       model://coman/meshes/collada/asm0001_collada_23_prt.dae
+       model://coman_urdf/meshes/collada/asm0001_collada_23_prt.dae
       </uri>
      </mesh>
     </geometry>
@@ -2936,7 +2936,7 @@
        0.03937 0.03937 0.03937
       </scale>
       <uri>
-       model://coman/meshes/collada/simple/simple_asm0001_collada_22_prt.dae
+       model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_22_prt.dae
       </uri>
      </mesh>
     </geometry>
@@ -2951,7 +2951,7 @@
        0.03937 0.03937 0.03937
       </scale>
       <uri>
-       model://coman/meshes/collada/asm0001_collada_22_prt.dae
+       model://coman_urdf/meshes/collada/asm0001_collada_22_prt.dae
       </uri>
      </mesh>
     </geometry>
@@ -3063,7 +3063,7 @@
        0.03937 0.03937 0.03937
       </scale>
       <uri>
-       model://coman/meshes/collada/simple/simple_asm0001_collada_11_prt.dae
+       model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_11_prt.dae
       </uri>
      </mesh>
     </geometry>
@@ -3078,7 +3078,7 @@
        0.03937 0.03937 0.03937
       </scale>
       <uri>
-       model://coman/meshes/collada/asm0001_collada_11_prt.dae
+       model://coman_urdf/meshes/collada/asm0001_collada_11_prt.dae
       </uri>
      </mesh>
     </geometry>
@@ -3153,7 +3153,7 @@
   </static>
   <plugin filename="libgazebo_yarp_controlboard.so" name="coman_yarp_gazebo_plugin_torso">
    <yarpConfigurationFile>
-    model://coman/conf/coman/coman_gazebo_torso.ini
+    model://coman_urdf/conf/coman/coman_gazebo_torso.ini
    </yarpConfigurationFile>
    <initialConfiguration>
     0.0 0.0 0.0
@@ -3161,7 +3161,7 @@
   </plugin>
   <plugin filename="libgazebo_yarp_controlboard.so" name="coman_yarp_gazebo_plugin_left_leg">
    <yarpConfigurationFile>
-    model://coman/conf/coman/coman_gazebo_left_leg.ini
+    model://coman_urdf/conf/coman/coman_gazebo_left_leg.ini
    </yarpConfigurationFile>
    <initialConfiguration>
     0.0 0.0 0.0 0.0 0.0 0.0
@@ -3169,7 +3169,7 @@
   </plugin>
   <plugin filename="libgazebo_yarp_controlboard.so" name="coman_yarp_gazebo_plugin_right_leg">
    <yarpConfigurationFile>
-    model://coman/conf/coman/coman_gazebo_right_leg.ini
+    model://coman_urdf/conf/coman/coman_gazebo_right_leg.ini
    </yarpConfigurationFile>
    <initialConfiguration>
     0.0 0.0 0.0 0.0 0.0 0.0
@@ -3177,7 +3177,7 @@
   </plugin>
   <plugin filename="libgazebo_yarp_controlboard.so" name="coman_yarp_gazebo_plugin_left_arm">
    <yarpConfigurationFile>
-    model://coman/conf/coman_no_forearms/coman_gazebo_left_arm.ini
+    model://coman_urdf/conf/coman_no_forearms/coman_gazebo_left_arm.ini
    </yarpConfigurationFile>
    <initialConfiguration>
     0.0 0.17 0.0 0.0
@@ -3185,7 +3185,7 @@
   </plugin>
   <plugin filename="libgazebo_yarp_controlboard.so" name="coman_yarp_gazebo_plugin_right_arm">
    <yarpConfigurationFile>
-    model://coman/conf/coman_no_forearms/coman_gazebo_right_arm.ini
+    model://coman_urdf/conf/coman_no_forearms/coman_gazebo_right_arm.ini
    </yarpConfigurationFile>
    <initialConfiguration>
     0.0 -0.17 0.0 0.0

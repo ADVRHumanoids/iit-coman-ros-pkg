@@ -45,13 +45,13 @@ and to define the end effectors of the robot -->
     <visual>
       <origin rpy="0 0 -3.14159265359" xyz="-0.020281504 0.0 -0.68662053"/>
       <geometry name="Xtion_body_visual">
-        <mesh filename="package://coman/meshes/collada/Xtion/xtion_base.dae" scale="0.03937 0.03937 0.03937"/>
+        <mesh filename="package://coman_urdf/meshes/collada/Xtion/xtion_base.dae" scale="0.03937 0.03937 0.03937"/>
       </geometry>
     </visual>
     <collision>
       <origin rpy="0 0 -3.14159265359" xyz="-0.020281504 0.0 -0.68662053"/>
       <geometry name="Xtion_body_collision">
-        <mesh filename="package://coman/meshes/collada/simple/Xtion/xtion_base.dae" scale="0.03937 0.03937 0.03937"/>
+        <mesh filename="package://coman_urdf/meshes/collada/simple/Xtion/xtion_base.dae" scale="0.03937 0.03937 0.03937"/>
       </geometry>
     </collision>
   </link>
@@ -64,13 +64,13 @@ and to define the end effectors of the robot -->
     <visual>
       <origin rpy="0 0 -3.14159265359" xyz="-0.0915 0.0 -1.2778"/>
       <geometry name="Xtion_cam_body_visual">
-        <mesh filename="package://coman/meshes/collada/Xtion/xtion_cam_body.dae" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://coman_urdf/meshes/collada/Xtion/xtion_cam_body.dae" scale="0.001 0.001 0.001"/>
       </geometry>
     </visual>
     <collision>
       <origin rpy="0 0 -3.14159265359" xyz="-0.0915 0.0 -1.2778"/>
       <geometry name="Xtion_cam_body_collision">
-        <mesh filename="package://coman/meshes/collada/Xtion/xtion_cam_body.dae" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://coman_urdf/meshes/collada/Xtion/xtion_cam_body.dae" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
   </link>
@@ -85,13 +85,13 @@ and to define the end effectors of the robot -->
     <visual>
       <origin rpy="0 0 -3.14159265359" xyz="0 0 -0.52"/>
       <geometry name="Waist_visual">
-        <mesh filename="package://coman/meshes/collada/asm0001_collada_07_prt.dae" scale="0.03937 0.03937 0.03937"/>
+        <mesh filename="package://coman_urdf/meshes/collada/asm0001_collada_07_prt.dae" scale="0.03937 0.03937 0.03937"/>
       </geometry>
     </visual>
     <collision>
       <origin rpy="0 0 -3.14159265359" xyz="0 0 -0.52"/>
       <geometry name="Waist_collision">
-        <mesh filename="package://coman/meshes/collada/simple/simple_asm0001_collada_07_prt.dae" scale="0.03937 0.03937 0.03937"/>
+        <mesh filename="package://coman_urdf/meshes/collada/simple/simple_asm0001_collada_07_prt.dae" scale="0.03937 0.03937 0.03937"/>
       </geometry>
     </collision>
   </link>
@@ -104,13 +104,13 @@ and to define the end effectors of the robot -->
     <visual>
       <origin rpy="0 0 -3.14159265359" xyz="-0.020281504 0 -0.63912053"/>
       <geometry name="DWS_visual">
-        <mesh filename="package://coman/meshes/collada/asm0001_collada_09_prt.dae" scale="0.03937 0.03937 0.03937"/>
+        <mesh filename="package://coman_urdf/meshes/collada/asm0001_collada_09_prt.dae" scale="0.03937 0.03937 0.03937"/>
       </geometry>
     </visual>
     <collision>
       <origin rpy="0 0 -3.14159265359" xyz="-0.020281504 0 -0.63912053"/>
       <geometry name="DWS_collision">
-        <mesh filename="package://coman/meshes/collada/simple/simple_asm0001_collada_09_prt.dae" scale="0.03937 0.03937 0.03937"/>
+        <mesh filename="package://coman_urdf/meshes/collada/simple/simple_asm0001_collada_09_prt.dae" scale="0.03937 0.03937 0.03937"/>
       </geometry>
     </collision>
   </link>
@@ -123,13 +123,13 @@ and to define the end effectors of the robot -->
     <visual>
       <origin rpy="0 0 -3.14159265359" xyz="-0.020281504 0 -0.63912053"/>
       <geometry name="DWL_visual">
-        <mesh filename="package://coman/meshes/collada/asm0001_collada_08_prt.dae" scale="0.03937 0.03937 0.03937"/>
+        <mesh filename="package://coman_urdf/meshes/collada/asm0001_collada_08_prt.dae" scale="0.03937 0.03937 0.03937"/>
       </geometry>
     </visual>
     <collision>
       <origin rpy="0 0 -3.14159265359" xyz="-0.020281504 0 -0.63912053"/>
       <geometry name="DWL_collision">
-        <mesh filename="package://coman/meshes/collada/simple/simple_asm0001_collada_08_prt.dae" scale="0.03937 0.03937 0.03937"/>
+        <mesh filename="package://coman_urdf/meshes/collada/simple/simple_asm0001_collada_08_prt.dae" scale="0.03937 0.03937 0.03937"/>
       </geometry>
     </collision>
   </link>
@@ -142,13 +142,13 @@ and to define the end effectors of the robot -->
     <visual>
       <origin rpy="0 0 -3.14159265359" xyz="-0.020281504 0.0 -0.68662053"/>
       <geometry name="DWYTorso_visual">
-        <mesh filename="package://coman/meshes/collada/asm0001_collada_10_prt.dae" scale="0.03937 0.03937 0.03937"/>
+        <mesh filename="package://coman_urdf/meshes/collada/asm0001_collada_10_prt.dae" scale="0.03937 0.03937 0.03937"/>
       </geometry>
     </visual>
     <collision>
       <origin rpy="0 0 -3.14159265359" xyz="-0.020281504 0.0 -0.68662053"/>
       <geometry name="DWYTorso_collision">
-        <mesh filename="package://coman/meshes/collada/simple/simple_asm0001_collada_10_prt.dae" scale="0.03937 0.03937 0.03937"/>
+        <mesh filename="package://coman_urdf/meshes/collada/simple/simple_asm0001_collada_10_prt.dae" scale="0.03937 0.03937 0.03937"/>
       </geometry>
     </collision>
   </link>
@@ -161,13 +161,13 @@ and to define the end effectors of the robot -->
     <visual>
       <origin rpy="0 0 -3.14159265359" xyz="0.0 0.023 -0.52"/>
       <geometry name="RHipMot_visual">
-        <mesh filename="package://coman/meshes/collada/asm0001_collada_20_prt.dae" scale="0.03937 0.03937 0.03937"/>
+        <mesh filename="package://coman_urdf/meshes/collada/asm0001_collada_20_prt.dae" scale="0.03937 0.03937 0.03937"/>
       </geometry>
     </visual>
     <collision>
       <origin rpy="0 0 -3.14159265359" xyz="0.0 0.023 -0.52"/>
       <geometry name="RHipMot_collision">
-        <mesh filename="package://coman/meshes/collada/simple/simple_asm0001_collada_20_prt.dae" scale="0.03937 0.03937 0.03937"/>
+        <mesh filename="package://coman_urdf/meshes/collada/simple/simple_asm0001_collada_20_prt.dae" scale="0.03937 0.03937 0.03937"/>
       </geometry>
     </collision>
   </link>
@@ -180,13 +180,13 @@ and to define the end effectors of the robot -->
     <visual>
       <origin rpy="0 0 -3.14159265359" xyz="0.0 0.0726 -0.52"/>
       <geometry name="RThighUpLeg_visual">
-        <mesh filename="package://coman/meshes/collada/asm0001_collada_19_prt.dae" scale="0.03937 0.03937 0.03937"/>
+        <mesh filename="package://coman_urdf/meshes/collada/asm0001_collada_19_prt.dae" scale="0.03937 0.03937 0.03937"/>
       </geometry>
     </visual>
     <collision>
       <origin rpy="0 0 -3.14159265359" xyz="0.0 0.0726 -0.52"/>
       <geometry name="RThighUpLeg_collision">
-        <mesh filename="package://coman/meshes/collada/simple/simple_asm0001_collada_19_prt.dae" scale="0.03937 0.03937 0.03937"/>
+        <mesh filename="package://coman_urdf/meshes/collada/simple/simple_asm0001_collada_19_prt.dae" scale="0.03937 0.03937 0.03937"/>
       </geometry>
     </collision>
   </link>
@@ -199,13 +199,13 @@ and to define the end effectors of the robot -->
     <visual>
       <origin rpy="0 0 -3.14159265359" xyz="0.0 0.0726 -0.4176"/>
       <geometry name="RThighLowLeg_visual">
-        <mesh filename="package://coman/meshes/collada/asm0001_collada_18_prt.dae" scale="0.03937 0.03937 0.03937"/>
+        <mesh filename="package://coman_urdf/meshes/collada/asm0001_collada_18_prt.dae" scale="0.03937 0.03937 0.03937"/>
       </geometry>
     </visual>
     <collision>
       <origin rpy="0 0 -3.14159265359" xyz="0.0 0.0726 -0.4176"/>
       <geometry name="RThighLowLeg_collision">
-        <mesh filename="package://coman/meshes/collada/simple/simple_asm0001_collada_18_prt.dae" scale="0.03937 0.03937 0.03937"/>
+        <mesh filename="package://coman_urdf/meshes/collada/simple/simple_asm0001_collada_18_prt.dae" scale="0.03937 0.03937 0.03937"/>
       </geometry>
     </collision>
   </link>
@@ -218,13 +218,13 @@ and to define the end effectors of the robot -->
     <visual>
       <origin rpy="0 0 -3.14159265359" xyz="0.0 0.0726 -0.2942"/>
       <geometry name="RLowLeg_visual">
-        <mesh filename="package://coman/meshes/collada/asm0001_collada_17_prt.dae" scale="0.03937 0.03937 0.03937"/>
+        <mesh filename="package://coman_urdf/meshes/collada/asm0001_collada_17_prt.dae" scale="0.03937 0.03937 0.03937"/>
       </geometry>
     </visual>
     <collision>
       <origin rpy="0 0 -3.14159265359" xyz="0.0 0.0726 -0.2942"/>
       <geometry name="RLowLeg_collision">
-        <mesh filename="package://coman/meshes/collada/simple/simple_asm0001_collada_17_prt.dae" scale="0.03937 0.03937 0.03937"/>
+        <mesh filename="package://coman_urdf/meshes/collada/simple/simple_asm0001_collada_17_prt.dae" scale="0.03937 0.03937 0.03937"/>
       </geometry>
     </collision>
   </link>
@@ -237,13 +237,13 @@ and to define the end effectors of the robot -->
     <visual>
       <origin rpy="0 0 -3.14159265359" xyz="0.0 0.0726 -0.0932"/>
       <geometry name="RFootmot_visual">
-        <mesh filename="package://coman/meshes/collada/asm0001_collada_16_prt.dae" scale="0.03937 0.03937 0.03937"/>
+        <mesh filename="package://coman_urdf/meshes/collada/asm0001_collada_16_prt.dae" scale="0.03937 0.03937 0.03937"/>
       </geometry>
     </visual>
     <collision>
       <origin rpy="0 0 -3.14159265359" xyz="0.0 0.0726 -0.0932"/>
       <geometry name="RFootmot_collision">
-        <mesh filename="package://coman/meshes/collada/simple/simple_asm0001_collada_16_prt.dae" scale="0.03937 0.03937 0.03937"/>
+        <mesh filename="package://coman_urdf/meshes/collada/simple/simple_asm0001_collada_16_prt.dae" scale="0.03937 0.03937 0.03937"/>
       </geometry>
     </collision>
   </link>
@@ -278,13 +278,13 @@ and to define the end effectors of the robot -->
     <visual>
       <origin rpy="0 0 -3.14159265359" xyz="0.0 -0.023 -0.52"/>
       <geometry name="RHipMot_visual">
-        <mesh filename="package://coman/meshes/collada/asm0001_collada_06_prt.dae" scale="0.03937 0.03937 0.03937"/>
+        <mesh filename="package://coman_urdf/meshes/collada/asm0001_collada_06_prt.dae" scale="0.03937 0.03937 0.03937"/>
       </geometry>
     </visual>
     <collision>
       <origin rpy="0 0 -3.14159265359" xyz="0.0 -0.023 -0.52"/>
       <geometry name="RHipMot_collision">
-        <mesh filename="package://coman/meshes/collada/simple/simple_asm0001_collada_06_prt.dae" scale="0.03937 0.03937 0.03937"/>
+        <mesh filename="package://coman_urdf/meshes/collada/simple/simple_asm0001_collada_06_prt.dae" scale="0.03937 0.03937 0.03937"/>
       </geometry>
     </collision>
   </link>
@@ -297,13 +297,13 @@ and to define the end effectors of the robot -->
     <visual>
       <origin rpy="0 0 -3.14159265359" xyz="0.0 -0.0726 -0.52"/>
       <geometry name="LThighUpLeg_visual">
-        <mesh filename="package://coman/meshes/collada/asm0001_collada_05_prt.dae" scale="0.03937 0.03937 0.03937"/>
+        <mesh filename="package://coman_urdf/meshes/collada/asm0001_collada_05_prt.dae" scale="0.03937 0.03937 0.03937"/>
       </geometry>
     </visual>
     <collision>
       <origin rpy="0 0 -3.14159265359" xyz="0.0 -0.0726 -0.52"/>
       <geometry name="LThighUpLeg_collision">
-        <mesh filename="package://coman/meshes/collada/simple/simple_asm0001_collada_05_prt.dae" scale="0.03937 0.03937 0.03937"/>
+        <mesh filename="package://coman_urdf/meshes/collada/simple/simple_asm0001_collada_05_prt.dae" scale="0.03937 0.03937 0.03937"/>
       </geometry>
     </collision>
   </link>
@@ -316,13 +316,13 @@ and to define the end effectors of the robot -->
     <visual>
       <origin rpy="0 0 -3.14159265359" xyz="0.0 -0.0726 -0.4176"/>
       <geometry name="LThighLowLeg_visual">
-        <mesh filename="package://coman/meshes/collada/asm0001_collada_04_prt.dae" scale="0.03937 0.03937 0.03937"/>
+        <mesh filename="package://coman_urdf/meshes/collada/asm0001_collada_04_prt.dae" scale="0.03937 0.03937 0.03937"/>
       </geometry>
     </visual>
     <collision>
       <origin rpy="0 0 -3.14159265359" xyz="0.0 -0.0726 -0.4176"/>
       <geometry name="LThighLowLeg_collision">
-        <mesh filename="package://coman/meshes/collada/simple/simple_asm0001_collada_04_prt.dae" scale="0.03937 0.03937 0.03937"/>
+        <mesh filename="package://coman_urdf/meshes/collada/simple/simple_asm0001_collada_04_prt.dae" scale="0.03937 0.03937 0.03937"/>
       </geometry>
     </collision>
   </link>
@@ -335,13 +335,13 @@ and to define the end effectors of the robot -->
     <visual>
       <origin rpy="0 0 -3.14159265359" xyz="0.0 -0.0726 -0.2942"/>
       <geometry name="LLowLeg_visual">
-        <mesh filename="package://coman/meshes/collada/asm0001_collada_03_prt.dae" scale="0.03937 0.03937 0.03937"/>
+        <mesh filename="package://coman_urdf/meshes/collada/asm0001_collada_03_prt.dae" scale="0.03937 0.03937 0.03937"/>
       </geometry>
     </visual>
     <collision>
       <origin rpy="0 0 -3.14159265359" xyz="0.0 -0.0726 -0.2942"/>
       <geometry name="LLowLeg_collision">
-        <mesh filename="package://coman/meshes/collada/simple/simple_asm0001_collada_03_prt.dae" scale="0.03937 0.03937 0.03937"/>
+        <mesh filename="package://coman_urdf/meshes/collada/simple/simple_asm0001_collada_03_prt.dae" scale="0.03937 0.03937 0.03937"/>
       </geometry>
     </collision>
   </link>
@@ -354,13 +354,13 @@ and to define the end effectors of the robot -->
     <visual>
       <origin rpy="0 0 -3.14159265359" xyz="0.0 -0.0726 -0.0932"/>
       <geometry name="LFootmot_visual">
-        <mesh filename="package://coman/meshes/collada/asm0001_collada_02_prt.dae" scale="0.03937 0.03937 0.03937"/>
+        <mesh filename="package://coman_urdf/meshes/collada/asm0001_collada_02_prt.dae" scale="0.03937 0.03937 0.03937"/>
       </geometry>
     </visual>
     <collision>
       <origin rpy="0 0 -3.14159265359" xyz="0.0 -0.0726 -0.0932"/>
       <geometry name="LFootmot_collision">
-        <mesh filename="package://coman/meshes/collada/simple/simple_asm0001_collada_02_prt.dae" scale="0.03937 0.03937 0.03937"/>
+        <mesh filename="package://coman_urdf/meshes/collada/simple/simple_asm0001_collada_02_prt.dae" scale="0.03937 0.03937 0.03937"/>
       </geometry>
     </collision>
   </link>
@@ -395,13 +395,13 @@ and to define the end effectors of the robot -->
     <visual>
       <origin rpy="0 0 -3.14159265359" xyz="-0.005305 0.0825 -0.844329"/>
       <geometry name="RShp_visual">
-        <mesh filename="package://coman/meshes/collada/asm0001_collada_24_prt.dae" scale="0.03937 0.03937 0.03937"/>
+        <mesh filename="package://coman_urdf/meshes/collada/asm0001_collada_24_prt.dae" scale="0.03937 0.03937 0.03937"/>
       </geometry>
     </visual>
     <collision>
       <origin rpy="0 0 -3.14159265359" xyz="-0.005305 0.0825 -0.844329"/>
       <geometry name="RShp_collision">
-        <mesh filename="package://coman/meshes/collada/simple/simple_asm0001_collada_24_prt.dae" scale="0.03937 0.03937 0.03937"/>
+        <mesh filename="package://coman_urdf/meshes/collada/simple/simple_asm0001_collada_24_prt.dae" scale="0.03937 0.03937 0.03937"/>
       </geometry>
     </collision>
   </link>
@@ -414,13 +414,13 @@ and to define the end effectors of the robot -->
     <visual>
       <origin rpy="0 0 -3.14159265359" xyz="-0.005305 0.1558 -0.844329"/>
       <geometry name="RShr_visual">
-        <mesh filename="package://coman/meshes/collada/asm0001_collada_23_prt.dae" scale="0.03937 0.03937 0.03937"/>
+        <mesh filename="package://coman_urdf/meshes/collada/asm0001_collada_23_prt.dae" scale="0.03937 0.03937 0.03937"/>
       </geometry>
     </visual>
     <collision>
       <origin rpy="0 0 -3.14159265359" xyz="-0.005305 0.1558 -0.844329"/>
       <geometry name="RShr_collision">
-        <mesh filename="package://coman/meshes/collada/simple/simple_asm0001_collada_23_prt.dae" scale="0.03937 0.03937 0.03937"/>
+        <mesh filename="package://coman_urdf/meshes/collada/simple/simple_asm0001_collada_23_prt.dae" scale="0.03937 0.03937 0.03937"/>
       </geometry>
     </collision>
   </link>
@@ -433,13 +433,13 @@ and to define the end effectors of the robot -->
     <visual>
       <origin rpy="0 0 -3.14159265359" xyz="-0.005305 0.1558 -0.79952053"/>
       <geometry name="RShy_visual">
-        <mesh filename="package://coman/meshes/collada/asm0001_collada_22_prt.dae" scale="0.03937 0.03937 0.03937"/>
+        <mesh filename="package://coman_urdf/meshes/collada/asm0001_collada_22_prt.dae" scale="0.03937 0.03937 0.03937"/>
       </geometry>
     </visual>
     <collision>
       <origin rpy="0 0 -3.14159265359" xyz="-0.005305 0.1558 -0.79952053"/>
       <geometry name="RShy_collision">
-        <mesh filename="package://coman/meshes/collada/simple/simple_asm0001_collada_22_prt.dae" scale="0.03937 0.03937 0.03937"/>
+        <mesh filename="package://coman_urdf/meshes/collada/simple/simple_asm0001_collada_22_prt.dae" scale="0.03937 0.03937 0.03937"/>
       </geometry>
     </collision>
   </link>
@@ -452,13 +452,13 @@ and to define the end effectors of the robot -->
     <visual>
       <origin rpy="0 0 -3.14159265359" xyz="-0.005305 -0.0825 -0.844329"/>
       <geometry name="LShp_visual">
-        <mesh filename="package://coman/meshes/collada/asm0001_collada_14_prt.dae" scale="0.03937 0.03937 0.03937"/>
+        <mesh filename="package://coman_urdf/meshes/collada/asm0001_collada_14_prt.dae" scale="0.03937 0.03937 0.03937"/>
       </geometry>
     </visual>
     <collision>
       <origin rpy="0 0 -3.14159265359" xyz="-0.005305 -0.0825 -0.844329"/>
       <geometry name="LShp_collision">
-        <mesh filename="package://coman/meshes/collada/simple/simple_asm0001_collada_14_prt.dae" scale="0.03937 0.03937 0.03937"/>
+        <mesh filename="package://coman_urdf/meshes/collada/simple/simple_asm0001_collada_14_prt.dae" scale="0.03937 0.03937 0.03937"/>
       </geometry>
     </collision>
   </link>
@@ -471,13 +471,13 @@ and to define the end effectors of the robot -->
     <visual>
       <origin rpy="0 0 -3.14159265359" xyz="-0.005305 -0.1558 -0.844329"/>
       <geometry name="LShr_visual">
-        <mesh filename="package://coman/meshes/collada/asm0001_collada_13_prt.dae" scale="0.03937 0.03937 0.03937"/>
+        <mesh filename="package://coman_urdf/meshes/collada/asm0001_collada_13_prt.dae" scale="0.03937 0.03937 0.03937"/>
       </geometry>
     </visual>
     <collision>
       <origin rpy="0 0 -3.14159265359" xyz="-0.005305 -0.1558 -0.844329"/>
       <geometry name="LShr_collision">
-        <mesh filename="package://coman/meshes/collada/simple/simple_asm0001_collada_13_prt.dae" scale="0.03937 0.03937 0.03937"/>
+        <mesh filename="package://coman_urdf/meshes/collada/simple/simple_asm0001_collada_13_prt.dae" scale="0.03937 0.03937 0.03937"/>
       </geometry>
     </collision>
   </link>
@@ -490,13 +490,13 @@ and to define the end effectors of the robot -->
     <visual>
       <origin rpy="0 0 -3.14159265359" xyz="-0.005305 -0.1558 -0.79952053"/>
       <geometry name="LShy_visual">
-        <mesh filename="package://coman/meshes/collada/asm0001_collada_12_prt.dae" scale="0.03937 0.03937 0.03937"/>
+        <mesh filename="package://coman_urdf/meshes/collada/asm0001_collada_12_prt.dae" scale="0.03937 0.03937 0.03937"/>
       </geometry>
     </visual>
     <collision>
       <origin rpy="0 0 -3.14159265359" xyz="-0.005305 -0.1558 -0.79952053"/>
       <geometry name="LShy_collision">
-        <mesh filename="package://coman/meshes/collada/simple/simple_asm0001_collada_12_prt.dae" scale="0.03937 0.03937 0.03937"/>
+        <mesh filename="package://coman_urdf/meshes/collada/simple/simple_asm0001_collada_12_prt.dae" scale="0.03937 0.03937 0.03937"/>
       </geometry>
     </collision>
   </link>
@@ -756,13 +756,13 @@ and to define the end effectors of the robot -->
     <visual>
       <origin rpy="-1.570796326795 1.570796326795 0" xyz="0 0 0"/>
       <geometry name="LElb_visual">
-        <mesh filename="package://coman/meshes/collada/forearms/elbow.dae" scale="1.0 1.0 1.0"/>
+        <mesh filename="package://coman_urdf/meshes/collada/forearms/elbow.dae" scale="1.0 1.0 1.0"/>
       </geometry>
     </visual>
     <collision>
       <origin rpy="-1.570796326795 1.570796326795 0" xyz="0 0 0"/>
       <geometry name="LElb_collision">
-        <mesh filename="package://coman/meshes/collada/simple/forearms/elbow.dae" scale="1.0 1.0 1.0"/>
+        <mesh filename="package://coman_urdf/meshes/collada/simple/forearms/elbow.dae" scale="1.0 1.0 1.0"/>
       </geometry>
     </collision>
   </link>
@@ -775,13 +775,13 @@ and to define the end effectors of the robot -->
     <visual>
       <origin rpy="-1.570796326795 0 1.570796326795" xyz="0 0 0.0718"/>
       <geometry name="LForearm_visual">
-        <mesh filename="package://coman/meshes/collada/forearms/forearm.dae" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://coman_urdf/meshes/collada/forearms/forearm.dae" scale="0.001 0.001 0.001"/>
       </geometry>
     </visual>
     <collision>
       <origin rpy="0 3.14159265359 1.570796326795" xyz="0 0 0.0718"/>
       <geometry name="LForearm_collision">
-        <mesh filename="package://coman/meshes/collada/simple/forearms/forearm.dae" scale="1.0 1.0 1.0"/>
+        <mesh filename="package://coman_urdf/meshes/collada/simple/forearms/forearm.dae" scale="1.0 1.0 1.0"/>
       </geometry>
     </collision>
   </link>
@@ -794,13 +794,13 @@ and to define the end effectors of the robot -->
     <visual>
       <origin rpy="0 1.570796326795 3.14159265359" xyz="0.025 0 0"/>
       <geometry name="LWrMot2_visual">
-        <mesh filename="package://coman/meshes/collada/forearms/fa_asm_3_right_sw0001.dae" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://coman_urdf/meshes/collada/forearms/fa_asm_3_right_sw0001.dae" scale="0.001 0.001 0.001"/>
       </geometry>
     </visual>
     <collision>
       <origin rpy="0 1.570796326795 3.14159265359" xyz="0.025 0 0"/>
       <geometry name="LWrMot2_collision">
-        <mesh filename="package://coman/meshes/collada/simple/forearms/simple_fa_asm_3_right_sw0001.dae" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://coman_urdf/meshes/collada/simple/forearms/simple_fa_asm_3_right_sw0001.dae" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
   </link>
@@ -813,13 +813,13 @@ and to define the end effectors of the robot -->
     <visual>
       <origin rpy="0 3.14159265359 1.570796326795" xyz="0.025 -0.012 -0.02"/>
       <geometry name="LWrMot3_visual">
-        <mesh filename="package://coman/meshes/collada/forearms/fa_hand_interface_rig_sw0001.dae" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://coman_urdf/meshes/collada/forearms/fa_hand_interface_rig_sw0001.dae" scale="0.001 0.001 0.001"/>
       </geometry>
     </visual>
     <collision>
       <origin rpy="0 3.14159265359 1.570796326795" xyz="0.025 -0.012 -0.02"/>
       <geometry name="LWrMot3_collision">
-        <mesh filename="package://coman/meshes/collada/simple/forearms/simple_fa_hand_interface_rig_sw0001.dae" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://coman_urdf/meshes/collada/simple/forearms/simple_fa_hand_interface_rig_sw0001.dae" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
   </link>
@@ -832,13 +832,13 @@ and to define the end effectors of the robot -->
     <visual>
       <origin rpy="-1.570796326795 1.570796326795 0" xyz="0 0 0"/>
       <geometry name="RElb_visual">
-        <mesh filename="package://coman/meshes/collada/forearms/elbow.dae" scale="1.0 1.0 1.0"/>
+        <mesh filename="package://coman_urdf/meshes/collada/forearms/elbow.dae" scale="1.0 1.0 1.0"/>
       </geometry>
     </visual>
     <collision>
       <origin rpy="-1.570796326795 1.570796326795 0" xyz="0 0 0"/>
       <geometry name="RElb_collision">
-        <mesh filename="package://coman/meshes/collada/simple/forearms/elbow.dae" scale="1.0 1.0 1.0"/>
+        <mesh filename="package://coman_urdf/meshes/collada/simple/forearms/elbow.dae" scale="1.0 1.0 1.0"/>
       </geometry>
     </collision>
   </link>
@@ -851,13 +851,13 @@ and to define the end effectors of the robot -->
     <visual>
       <origin rpy="-1.570796326795 0 1.570796326795" xyz="0 0 0.0718"/>
       <geometry name="RForearm_visual">
-        <mesh filename="package://coman/meshes/collada/forearms/forearm.dae" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://coman_urdf/meshes/collada/forearms/forearm.dae" scale="0.001 0.001 0.001"/>
       </geometry>
     </visual>
     <collision>
       <origin rpy="0 3.14159265359 1.570796326795" xyz="0 0 0.0718"/>
       <geometry name="RForearm_collision">
-        <mesh filename="package://coman/meshes/collada/simple/forearms/forearm.dae" scale="1.0 1.0 1.0"/>
+        <mesh filename="package://coman_urdf/meshes/collada/simple/forearms/forearm.dae" scale="1.0 1.0 1.0"/>
       </geometry>
     </collision>
   </link>
@@ -870,13 +870,13 @@ and to define the end effectors of the robot -->
     <visual>
       <origin rpy="0 1.570796326795 3.14159265359" xyz="0.025 0 0"/>
       <geometry name="RWrMot2_visual">
-        <mesh filename="package://coman/meshes/collada/forearms/fa_asm_3_right_sw0001.dae" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://coman_urdf/meshes/collada/forearms/fa_asm_3_right_sw0001.dae" scale="0.001 0.001 0.001"/>
       </geometry>
     </visual>
     <collision>
       <origin rpy="0 1.570796326795 3.14159265359" xyz="0.025 0 0"/>
       <geometry name="RWrMot2_collision">
-        <mesh filename="package://coman/meshes/collada/simple/forearms/simple_fa_asm_3_right_sw0001.dae" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://coman_urdf/meshes/collada/simple/forearms/simple_fa_asm_3_right_sw0001.dae" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
   </link>
@@ -889,13 +889,13 @@ and to define the end effectors of the robot -->
     <visual>
       <origin rpy="0 3.14159265359 1.570796326795" xyz="0.025 -0.012 -0.02"/>
       <geometry name="RWrMot3_visual">
-        <mesh filename="package://coman/meshes/collada/forearms/fa_hand_interface_rig_sw0001.dae" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://coman_urdf/meshes/collada/forearms/fa_hand_interface_rig_sw0001.dae" scale="0.001 0.001 0.001"/>
       </geometry>
     </visual>
     <collision>
       <origin rpy="0 3.14159265359 1.570796326795" xyz="0.025 -0.012 -0.02"/>
       <geometry name="RWrMot3_collision">
-        <mesh filename="package://coman/meshes/collada/simple/forearms/simple_fa_hand_interface_rig_sw0001.dae" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://coman_urdf/meshes/collada/simple/forearms/simple_fa_hand_interface_rig_sw0001.dae" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
   </link>
@@ -967,13 +967,13 @@ and to define the end effectors of the robot -->
     <visual>
       <origin rpy="0 0 3.14159265359" xyz="0 0.01 -0.04"/>
       <geometry name="RSoftHand_visual">
-        <mesh filename="package://coman/meshes/collada/forearms/R_soft_hand_open.dae" scale="1E-3 1E-3 1E-3"/>
+        <mesh filename="package://coman_urdf/meshes/collada/forearms/R_soft_hand_open.dae" scale="1E-3 1E-3 1E-3"/>
       </geometry>
     </visual>
     <collision>
       <origin rpy="0 0 3.14159265359" xyz="0 0.01 -0.04"/>
       <geometry name="RSoftHand_collision">
-        <mesh filename="package://coman/meshes/collada/simple/forearms/R_soft_hand_open.dae" scale="1E-3 1E-3 1E-3"/>
+        <mesh filename="package://coman_urdf/meshes/collada/simple/forearms/R_soft_hand_open.dae" scale="1E-3 1E-3 1E-3"/>
       </geometry>
     </collision>
   </link>
@@ -986,13 +986,13 @@ and to define the end effectors of the robot -->
     <visual>
       <origin rpy="0 0 1.5707963268" xyz="0.007 -0.012 -0.04"/>
       <geometry name="LSoftHand_visual">
-        <mesh filename="package://coman/meshes/collada/forearms/L_soft_hand_open.dae" scale="1E-3 1E-3 1E-3"/>
+        <mesh filename="package://coman_urdf/meshes/collada/forearms/L_soft_hand_open.dae" scale="1E-3 1E-3 1E-3"/>
       </geometry>
     </visual>
     <collision>
       <origin rpy="0 0 1.5707963268" xyz="0.007 -0.012 -0.04"/>
       <geometry name="LSoftHand_collision">
-        <mesh filename="package://coman/meshes/collada/simple/forearms/L_soft_hand_open.dae" scale="1E-3 1E-3 1E-3"/>
+        <mesh filename="package://coman_urdf/meshes/collada/simple/forearms/L_soft_hand_open.dae" scale="1E-3 1E-3 1E-3"/>
       </geometry>
     </collision>
   </link>
