@@ -9,8 +9,6 @@ if [ $# -gt 0 ] ; then
     if [ "$1" = '--all' ]; then
         if [ -d config ]; then
 
-            rm -rf ~/.gazebo/models/coman_urdf
-
             echo "Regenerating database.config for coman_gazebo"
 
 cat > ../../coman_gazebo/database/database.config << EOF
