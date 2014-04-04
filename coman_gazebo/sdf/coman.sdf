@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<sdf version="1.4">
+<sdf version="1.5">
  <model name="COMAN">
   <link name="base_link">
    <pose>
@@ -214,6 +214,9 @@
       3
      </damping>
     </dynamics>
+    <use_parent_model_frame>
+     0
+    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -341,6 +344,9 @@
       3
      </damping>
     </dynamics>
+    <use_parent_model_frame>
+     0
+    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -468,6 +474,9 @@
       3
      </damping>
     </dynamics>
+    <use_parent_model_frame>
+     0
+    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -595,6 +604,9 @@
       3
      </damping>
     </dynamics>
+    <use_parent_model_frame>
+     0
+    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -722,6 +734,9 @@
       3
      </damping>
     </dynamics>
+    <use_parent_model_frame>
+     0
+    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -880,6 +895,9 @@
       3
      </damping>
     </dynamics>
+    <use_parent_model_frame>
+     0
+    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -1027,6 +1045,9 @@
       3
      </damping>
     </dynamics>
+    <use_parent_model_frame>
+     0
+    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -1154,6 +1175,9 @@
       3
      </damping>
     </dynamics>
+    <use_parent_model_frame>
+     0
+    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -1281,6 +1305,9 @@
       3
      </damping>
     </dynamics>
+    <use_parent_model_frame>
+     0
+    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -1408,6 +1435,9 @@
       3
      </damping>
     </dynamics>
+    <use_parent_model_frame>
+     0
+    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -1535,6 +1565,9 @@
       3
      </damping>
     </dynamics>
+    <use_parent_model_frame>
+     0
+    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -1693,6 +1726,9 @@
       3
      </damping>
     </dynamics>
+    <use_parent_model_frame>
+     0
+    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -1840,6 +1876,9 @@
       3
      </damping>
     </dynamics>
+    <use_parent_model_frame>
+     0
+    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -1967,6 +2006,9 @@
       3
      </damping>
     </dynamics>
+    <use_parent_model_frame>
+     0
+    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -2154,6 +2196,9 @@
       3
      </damping>
     </dynamics>
+    <use_parent_model_frame>
+     0
+    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -2281,6 +2326,9 @@
       3
      </damping>
     </dynamics>
+    <use_parent_model_frame>
+     0
+    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -2408,6 +2456,9 @@
       3
      </damping>
     </dynamics>
+    <use_parent_model_frame>
+     0
+    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -2535,6 +2586,9 @@
       3
      </damping>
     </dynamics>
+    <use_parent_model_frame>
+     0
+    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -2595,7 +2649,7 @@
    </inertial>
    <collision name="LElb_collision">
     <pose>
-     0 0 0 -1.57079 1.57079 -2.65359e-06
+     0 0 0 -1.57079 1.57079 -2.65361e-06
     </pose>
     <geometry>
      <mesh>
@@ -2610,7 +2664,7 @@
    </collision>
    <visual name="LElb_visual">
     <pose>
-     0 0 0 -1.57079 1.57079 -2.65359e-06
+     0 0 0 -1.57079 1.57079 -2.65361e-06
     </pose>
     <geometry>
      <mesh>
@@ -2662,6 +2716,9 @@
       3
      </damping>
     </dynamics>
+    <use_parent_model_frame>
+     0
+    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -2722,7 +2779,7 @@
    </inertial>
    <collision name="LForearm_collision">
     <pose>
-     0 0 0.0718 -3.14159 -2.06823e-13 -1.5708
+     0 0 0.0718 3.14159 -2.06823e-13 -1.5708
     </pose>
     <geometry>
      <mesh>
@@ -2737,7 +2794,7 @@
    </collision>
    <visual name="LForearm_visual">
     <pose>
-     0 0 0.0718 -1.5708 1.14194e-16 1.5708
+     0 0 0.0718 -1.5708 5.55112e-17 1.5708
     </pose>
     <geometry>
      <mesh>
@@ -2789,6 +2846,9 @@
       0.03
      </damping>
     </dynamics>
+    <use_parent_model_frame>
+     0
+    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -2866,7 +2926,7 @@
    </inertial>
    <collision name="LWrMot2_collision">
     <pose>
-     0.025 0 0 2.65359e-06 1.57079 -3.14159
+     0.025 0 0 -2.65359e-06 1.57079 -3.14159
     </pose>
     <geometry>
      <mesh>
@@ -2881,7 +2941,7 @@
    </collision>
    <visual name="LWrMot2_visual">
     <pose>
-     0.025 0 0 2.65359e-06 1.57079 -3.14159
+     0.025 0 0 -2.65359e-06 1.57079 -3.14159
     </pose>
     <geometry>
      <mesh>
@@ -2933,6 +2993,9 @@
       0.03
      </damping>
     </dynamics>
+    <use_parent_model_frame>
+     0
+    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -2993,7 +3056,7 @@
    </inertial>
    <collision name="LWrMot3_collision">
     <pose>
-     0.025 -0.012 -0.02 -3.14159 -2.06823e-13 -1.5708
+     0.025 -0.012 -0.02 3.14159 -2.06823e-13 -1.5708
     </pose>
     <geometry>
      <mesh>
@@ -3054,7 +3117,7 @@
    </collision>
    <visual name="LWrMot3_visual">
     <pose>
-     0.025 -0.012 -0.02 -3.14159 -2.06823e-13 -1.5708
+     0.025 -0.012 -0.02 3.14159 -2.06823e-13 -1.5708
     </pose>
     <geometry>
      <mesh>
@@ -3127,6 +3190,9 @@
       0.03
      </damping>
     </dynamics>
+    <use_parent_model_frame>
+     0
+    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -3254,6 +3320,9 @@
       3
      </damping>
     </dynamics>
+    <use_parent_model_frame>
+     0
+    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -3381,6 +3450,9 @@
       3
      </damping>
     </dynamics>
+    <use_parent_model_frame>
+     0
+    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -3508,6 +3580,9 @@
       3
      </damping>
     </dynamics>
+    <use_parent_model_frame>
+     0
+    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -3568,7 +3643,7 @@
    </inertial>
    <collision name="RElb_collision">
     <pose>
-     0 0 0 -1.57079 1.57079 -2.65359e-06
+     0 0 0 -1.57079 1.57079 -2.65361e-06
     </pose>
     <geometry>
      <mesh>
@@ -3583,7 +3658,7 @@
    </collision>
    <visual name="RElb_visual">
     <pose>
-     0 0 0 -1.57079 1.57079 -2.65359e-06
+     0 0 0 -1.57079 1.57079 -2.65361e-06
     </pose>
     <geometry>
      <mesh>
@@ -3635,6 +3710,9 @@
       3
      </damping>
     </dynamics>
+    <use_parent_model_frame>
+     0
+    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -3695,7 +3773,7 @@
    </inertial>
    <collision name="RForearm_collision">
     <pose>
-     0 0 0.0718 -3.14159 -2.06823e-13 -1.5708
+     0 0 0.0718 3.14159 -2.06823e-13 -1.5708
     </pose>
     <geometry>
      <mesh>
@@ -3710,7 +3788,7 @@
    </collision>
    <visual name="RForearm_visual">
     <pose>
-     0 0 0.0718 -1.5708 1.14194e-16 1.5708
+     0 0 0.0718 -1.5708 5.55112e-17 1.5708
     </pose>
     <geometry>
      <mesh>
@@ -3762,6 +3840,9 @@
       0.03
      </damping>
     </dynamics>
+    <use_parent_model_frame>
+     0
+    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -3839,7 +3920,7 @@
    </inertial>
    <collision name="RWrMot2_collision">
     <pose>
-     0.025 0 0 2.65359e-06 1.57079 -3.14159
+     0.025 0 0 -2.65359e-06 1.57079 -3.14159
     </pose>
     <geometry>
      <mesh>
@@ -3854,7 +3935,7 @@
    </collision>
    <visual name="RWrMot2_visual">
     <pose>
-     0.025 0 0 2.65359e-06 1.57079 -3.14159
+     0.025 0 0 -2.65359e-06 1.57079 -3.14159
     </pose>
     <geometry>
      <mesh>
@@ -3906,6 +3987,9 @@
       0.03
      </damping>
     </dynamics>
+    <use_parent_model_frame>
+     0
+    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -3966,7 +4050,7 @@
    </inertial>
    <collision name="RWrMot3_collision">
     <pose>
-     0.025 -0.012 -0.02 -3.14159 -2.06823e-13 -1.5708
+     0.025 -0.012 -0.02 3.14159 -2.06823e-13 -1.5708
     </pose>
     <geometry>
      <mesh>
@@ -4027,7 +4111,7 @@
    </collision>
    <visual name="RWrMot3_visual">
     <pose>
-     0.025 -0.012 -0.02 -3.14159 -2.06823e-13 -1.5708
+     0.025 -0.012 -0.02 3.14159 -2.06823e-13 -1.5708
     </pose>
     <geometry>
      <mesh>
@@ -4100,6 +4184,9 @@
       0.03
      </damping>
     </dynamics>
+    <use_parent_model_frame>
+     0
+    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
