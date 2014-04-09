@@ -4145,6 +4145,16 @@
     0.0 0.0 0.0 0.0 0.0 0.0
    </initialConfiguration>
   </plugin>
+  <plugin filename="libgazebo_yarp_jointsensors.so" name="coman_yarp_gazebo_plugin_left_leg_speed">
+   <yarpConfigurationFile>
+    model://coman_urdf/conf/coman/coman_gazebo_left_leg_speed.ini
+   </yarpConfigurationFile>
+  </plugin>
+  <plugin filename="libgazebo_yarp_jointsensors.so" name="coman_yarp_gazebo_plugin_left_leg_torque">
+   <yarpConfigurationFile>
+    model://coman_urdf/conf/coman/coman_gazebo_left_leg_torque.ini
+   </yarpConfigurationFile>
+  </plugin>
   <plugin filename="libgazebo_yarp_controlboard.so" name="coman_yarp_gazebo_plugin_right_leg">
    <yarpConfigurationFile>
     model://coman_urdf/conf/coman/coman_gazebo_right_leg.ini
@@ -4152,6 +4162,16 @@
    <initialConfiguration>
     0.0 0.0 0.0 0.0 0.0 0.0
    </initialConfiguration>
+  </plugin>
+  <plugin filename="libgazebo_yarp_jointsensors.so" name="coman_yarp_gazebo_plugin_right_leg_speed">
+   <yarpConfigurationFile>
+    model://coman_urdf/conf/coman/coman_gazebo_right_leg_speed.ini
+   </yarpConfigurationFile>
+  </plugin>
+  <plugin filename="libgazebo_yarp_jointsensors.so" name="coman_yarp_gazebo_plugin_right_leg_torque">
+   <yarpConfigurationFile>
+    model://coman_urdf/conf/coman/coman_gazebo_right_leg_torque.ini
+   </yarpConfigurationFile>
   </plugin>
   <plugin filename="libgazebo_yarp_controlboard.so" name="coman_yarp_gazebo_plugin_left_arm">
    <yarpConfigurationFile>
@@ -4161,6 +4181,16 @@
     0.0 0.17 0.0 0.0 0.0 0.0 0.0
    </initialConfiguration>
   </plugin>
+  <plugin filename="libgazebo_yarp_jointsensors.so" name="coman_yarp_gazebo_plugin_left_arm_speed">
+   <yarpConfigurationFile>
+    model://coman_urdf/conf/coman/coman_gazebo_left_arm_speed.ini
+   </yarpConfigurationFile>
+  </plugin>
+  <plugin filename="libgazebo_yarp_jointsensors.so" name="coman_yarp_gazebo_plugin_left_arm_torque">
+   <yarpConfigurationFile>
+    model://coman_urdf/conf/coman/coman_gazebo_left_arm_torque.ini
+   </yarpConfigurationFile>
+  </plugin>
   <plugin filename="libgazebo_yarp_controlboard.so" name="coman_yarp_gazebo_plugin_right_arm">
    <yarpConfigurationFile>
     model://coman_urdf/conf/coman/coman_gazebo_right_arm.ini
@@ -4168,6 +4198,16 @@
    <initialConfiguration>
     0.0 -0.17 0.0 0.0 0.0 0.0 0.0
    </initialConfiguration>
+  </plugin>
+  <plugin filename="libgazebo_yarp_jointsensors.so" name="coman_yarp_gazebo_plugin_right_arm_speed">
+   <yarpConfigurationFile>
+    model://coman_urdf/conf/coman/coman_gazebo_right_arm_speed.ini
+   </yarpConfigurationFile>
+  </plugin>
+  <plugin filename="libgazebo_yarp_jointsensors.so" name="coman_yarp_gazebo_plugin_right_arm_torque">
+   <yarpConfigurationFile>
+    model://coman_urdf/conf/coman/coman_gazebo_right_arm_torque.ini
+   </yarpConfigurationFile>
   </plugin>
   <pose>
    0 0 0.521 0 -0 0
