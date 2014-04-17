@@ -189,7 +189,7 @@
     <child link="LForearm"/>
     <origin xyz="-0.015 0.0 ${-0.051 - Wrj1_to_FT}" rpy="0 0 0"/>
     <axis xyz="0 0 1" />
-    <limit velocity="4.0" effort="50" lower="-1.5708" upper="1.5708" />
+    <limit velocity="4.0" effort="5" lower="-1.5708" upper="1.5708" />
     <dynamics friction="0" damping="0.03"/>
   </joint>
 
@@ -198,7 +198,7 @@
     <child link="LWrMot2"/>
     <origin xyz="0 0 ${-0.14368 + Wrj1_to_FT}" rpy="0 0 0"/>
     <axis xyz="0 1 0"/>
-    <limit velocity="4.0" effort="50" lower="-0.524" upper="0.524" />
+    <limit velocity="4.0" effort="5" lower="-0.524" upper="0.524" />
     <dynamics friction="0" damping="0.03"/>
   </joint>
 
@@ -207,7 +207,7 @@
     <child link="LWrMot3"/>
     <origin xyz="0 0 0.0" rpy="0 0 0"/>
     <axis xyz="1 0 0"/>
-    <limit velocity="4.0" effort="50" lower="-0.785375" upper="1.395" />
+    <limit velocity="4.0" effort="5" lower="-0.785375" upper="1.395" />
     <dynamics friction="0" damping="0.03"/>
   </joint>
 
@@ -217,7 +217,7 @@
     <child link="RForearm"/>
     <origin xyz="-0.015 0.0 ${-0.051 - Wrj1_to_FT}" rpy="0 0 0"/>
     <axis xyz="0 0 1" />
-    <limit velocity="4.0" effort="50" lower="-1.5708" upper="1.5708" />
+    <limit velocity="4.0" effort="5" lower="-1.5708" upper="1.5708" />
     <dynamics friction="0" damping="0.03"/>
   </joint>
 
@@ -226,7 +226,7 @@
     <child link="RWrMot2"/>
     <origin xyz="0 0 ${-0.14368 + Wrj1_to_FT}" rpy="0 0 0"/>
     <axis xyz="0 1 0"/>
-    <limit velocity="4.0" effort="50" lower="-0.524" upper="0.524" />
+    <limit velocity="4.0" effort="5" lower="-0.524" upper="0.524" />
     <dynamics friction="0" damping="0.03"/>
   </joint>
 
@@ -235,7 +235,7 @@
     <child link="RWrMot3"/>
     <origin xyz="0 0 0.0" rpy="0 0 0"/>
     <axis xyz="1 0 0"/>
-    <limit velocity="4.0" effort="50" lower="-1.395" upper="0.785375" />
+    <limit velocity="4.0" effort="5" lower="-1.395" upper="0.785375" />
     <dynamics friction="0" damping="0.03"/>
   </joint>
 </robot>
