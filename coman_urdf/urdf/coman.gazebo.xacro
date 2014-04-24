@@ -33,6 +33,7 @@
    </gazebo>
 
 <!-- contact model for hand surface -->
+<!--
 <xacro:if value="${GAZEBO_COMAN_USES_7DOF_FOREARMS_DRC_14}">
     <xacro:if value="${GAZEBO_COMAN_USES_SOFTHANDS_DRC_sw1_14}">
    <gazebo reference="LSoftHand">
@@ -58,6 +59,7 @@
    </gazebo>
   </xacro:if>
 </xacro:if> 
+-->
 
 <!-- Other parameters... -->
    <gazebo reference="WaistSag">

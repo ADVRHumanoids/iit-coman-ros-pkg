@@ -904,7 +904,7 @@ and to define the end effectors of the robot -->
     <child link="LForearm"/>
     <origin rpy="0 0 0" xyz="-0.015 0.0 -0.1078"/>
     <axis xyz="0 0 1"/>
-    <limit effort="50" lower="-1.5708" upper="1.5708" velocity="4.0"/>
+    <limit effort="5" lower="-1.5708" upper="1.5708" velocity="4.0"/>
     <dynamics damping="0.03" friction="0"/>
   </joint>
   <joint name="LWrj1" type="revolute">
@@ -912,7 +912,7 @@ and to define the end effectors of the robot -->
     <child link="LWrMot2"/>
     <origin rpy="0 0 0" xyz="0 0 -0.08688"/>
     <axis xyz="0 1 0"/>
-    <limit effort="50" lower="-0.524" upper="0.524" velocity="4.0"/>
+    <limit effort="5" lower="-0.524" upper="0.524" velocity="4.0"/>
     <dynamics damping="0.03" friction="0"/>
   </joint>
   <joint name="LWrj2" type="revolute">
@@ -920,7 +920,7 @@ and to define the end effectors of the robot -->
     <child link="LWrMot3"/>
     <origin rpy="0 0 0" xyz="0 0 0.0"/>
     <axis xyz="1 0 0"/>
-    <limit effort="50" lower="-0.785375" upper="1.395" velocity="4.0"/>
+    <limit effort="5" lower="-0.785375" upper="1.395" velocity="4.0"/>
     <dynamics damping="0.03" friction="0"/>
   </joint>
   <joint name="RForearmPlate" type="revolute">
@@ -928,7 +928,7 @@ and to define the end effectors of the robot -->
     <child link="RForearm"/>
     <origin rpy="0 0 0" xyz="-0.015 0.0 -0.1078"/>
     <axis xyz="0 0 1"/>
-    <limit effort="50" lower="-1.5708" upper="1.5708" velocity="4.0"/>
+    <limit effort="5" lower="-1.5708" upper="1.5708" velocity="4.0"/>
     <dynamics damping="0.03" friction="0"/>
   </joint>
   <joint name="RWrj1" type="revolute">
@@ -936,7 +936,7 @@ and to define the end effectors of the robot -->
     <child link="RWrMot2"/>
     <origin rpy="0 0 0" xyz="0 0 -0.08688"/>
     <axis xyz="0 1 0"/>
-    <limit effort="50" lower="-0.524" upper="0.524" velocity="4.0"/>
+    <limit effort="5" lower="-0.524" upper="0.524" velocity="4.0"/>
     <dynamics damping="0.03" friction="0"/>
   </joint>
   <joint name="RWrj2" type="revolute">
@@ -944,7 +944,7 @@ and to define the end effectors of the robot -->
     <child link="RWrMot3"/>
     <origin rpy="0 0 0" xyz="0 0 0.0"/>
     <axis xyz="1 0 0"/>
-    <limit effort="50" lower="-1.395" upper="0.785375" velocity="4.0"/>
+    <limit effort="5" lower="-1.395" upper="0.785375" velocity="4.0"/>
     <dynamics damping="0.03" friction="0"/>
   </joint>
   <!-- ************ HANDS ************ -->
