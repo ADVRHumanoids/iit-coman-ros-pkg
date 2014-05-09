@@ -16,7 +16,7 @@
       <collision>
         <origin xyz="0.0 -0.0726 -0.0932" rpy="0 0 -3.14159265359"/>
         <geometry name="LFoot_collision">
-          <mesh filename="package://coman_urdf/meshes/collada/simple/simple_asm0001_collada_01_prt.dae" scale="0.03937 0.03937 0.03937" />
+          <mesh filename="package://coman_urdf/meshes/collada/simple/simple_asm0001_collada_01_prt.stl" scale="0.03937 0.03937 0.03937" />
         </geometry>             
       </collision>
     </link>

@@ -32,7 +32,7 @@
     <collision>
       <origin xyz="0 0 -0.52" rpy="0 0 -3.14159265359"/>
       <geometry name="Waist_collision">
-        <mesh filename="package://coman_urdf/meshes/collada/simple/simple_asm0001_collada_07_prt.dae" scale="0.03937 0.03937 0.03937"/>
+        <mesh filename="package://coman_urdf/meshes/collada/simple/simple_asm0001_collada_07_prt.stl" scale="0.03937 0.03937 0.03937"/>
       </geometry>             
     </collision>   
   </link>
@@ -52,7 +52,7 @@
     <collision>
       <origin xyz="-0.020281504 0 -0.63912053" rpy="0 0 -3.14159265359"/>
       <geometry name="DWS_collision">
-        <mesh filename="package://coman_urdf/meshes/collada/simple/simple_asm0001_collada_09_prt.dae" scale="0.03937 0.03937 0.03937" />
+        <mesh filename="package://coman_urdf/meshes/collada/simple/simple_asm0001_collada_09_prt.stl" scale="0.03937 0.03937 0.03937" />
       </geometry>             
     </collision>
   </link>
@@ -72,7 +72,7 @@
     <collision>
       <origin xyz="-0.020281504 0 -0.63912053" rpy="0 0 -3.14159265359"/>
       <geometry name="DWL_collision">
-        <mesh filename="package://coman_urdf/meshes/collada/simple/simple_asm0001_collada_08_prt.dae" scale="0.03937 0.03937 0.03937" />
+        <mesh filename="package://coman_urdf/meshes/collada/simple/simple_asm0001_collada_08_prt.stl" scale="0.03937 0.03937 0.03937" />
       </geometry>             
     </collision>
   </link>
@@ -92,7 +92,7 @@
     <collision>
       <origin xyz="-0.020281504 0.0 -0.68662053" rpy="0 0 -3.14159265359"/>
       <geometry name="DWYTorso_collision">
-        <mesh filename="package://coman_urdf/meshes/collada/simple/simple_asm0001_collada_10_prt.dae" scale="0.03937 0.03937 0.03937" />
+        <mesh filename="package://coman_urdf/meshes/collada/simple/simple_asm0001_collada_10_prt.stl" scale="0.03937 0.03937 0.03937" />
       </geometry>             
     </collision>
   </link>
@@ -114,7 +114,7 @@
     <collision>
       <origin xyz="0.0 0.023 -0.52" rpy="0 0 -3.14159265359"/>
       <geometry name="RHipMot_collision">
-        <mesh filename="package://coman_urdf/meshes/collada/simple/simple_asm0001_collada_20_prt.dae" scale="0.03937 0.03937 0.03937" />
+        <mesh filename="package://coman_urdf/meshes/collada/simple/simple_asm0001_collada_20_prt.stl" scale="0.03937 0.03937 0.03937" />
       </geometry>             
     </collision>
   </link>
@@ -134,7 +134,7 @@
     <collision>
       <origin xyz="0.0 0.0726 -0.52" rpy="0 0 -3.14159265359"/>
       <geometry name="RThighUpLeg_collision">
-        <mesh filename="package://coman_urdf/meshes/collada/simple/simple_asm0001_collada_19_prt.dae" scale="0.03937 0.03937 0.03937" />
+        <mesh filename="package://coman_urdf/meshes/collada/simple/simple_asm0001_collada_19_prt.stl" scale="0.03937 0.03937 0.03937" />
       </geometry>             
     </collision>
   </link>
@@ -154,7 +154,7 @@
     <collision>
       <origin xyz="0.0 0.0726 -0.4176" rpy="0 0 -3.14159265359"/>
       <geometry name="RThighLowLeg_collision">
-        <mesh filename="package://coman_urdf/meshes/collada/simple/simple_asm0001_collada_18_prt.dae" scale="0.03937 0.03937 0.03937" />
+        <mesh filename="package://coman_urdf/meshes/collada/simple/simple_asm0001_collada_18_prt.stl" scale="0.03937 0.03937 0.03937" />
       </geometry>             
     </collision>
   </link>
@@ -174,7 +174,7 @@
     <collision>
       <origin xyz="0.0 0.0726 -0.2942" rpy="0 0 -3.14159265359"/>
       <geometry name="RLowLeg_collision">
-        <mesh filename="package://coman_urdf/meshes/collada/simple/simple_asm0001_collada_17_prt.dae" scale="0.03937 0.03937 0.03937" />
+        <mesh filename="package://coman_urdf/meshes/collada/simple/simple_asm0001_collada_17_prt.stl" scale="0.03937 0.03937 0.03937" />
       </geometry>             
     </collision>
   </link>
@@ -194,7 +194,7 @@
     <collision>
       <origin xyz="0.0 0.0726 -0.0932" rpy="0 0 -3.14159265359"/>
       <geometry name="RFootmot_collision">
-        <mesh filename="package://coman_urdf/meshes/collada/simple/simple_asm0001_collada_16_prt.dae" scale="0.03937 0.03937 0.03937" />
+        <mesh filename="package://coman_urdf/meshes/collada/simple/simple_asm0001_collada_16_prt.stl" scale="0.03937 0.03937 0.03937" />
       </geometry>             
     </collision>
   </link>
@@ -242,7 +242,7 @@
     <collision>
       <origin xyz="0.0 -0.023 -0.52" rpy="0 0 -3.14159265359"/>
       <geometry name="RHipMot_collision">
-        <mesh filename="package://coman_urdf/meshes/collada/simple/simple_asm0001_collada_06_prt.dae" scale="0.03937 0.03937 0.03937" />
+        <mesh filename="package://coman_urdf/meshes/collada/simple/simple_asm0001_collada_06_prt.stl" scale="0.03937 0.03937 0.03937" />
       </geometry>             
     </collision>
   </link>
@@ -262,7 +262,7 @@
     <collision>
       <origin xyz="0.0 -0.0726 -0.52" rpy="0 0 -3.14159265359"/>
       <geometry name="LThighUpLeg_collision">
-        <mesh filename="package://coman_urdf/meshes/collada/simple/simple_asm0001_collada_05_prt.dae" scale="0.03937 0.03937 0.03937" />
+        <mesh filename="package://coman_urdf/meshes/collada/simple/simple_asm0001_collada_05_prt.stl" scale="0.03937 0.03937 0.03937" />
       </geometry>             
     </collision>
   </link>
@@ -282,7 +282,7 @@
     <collision>
       <origin xyz="0.0 -0.0726 -0.4176" rpy="0 0 -3.14159265359"/>
       <geometry name="LThighLowLeg_collision">
-        <mesh filename="package://coman_urdf/meshes/collada/simple/simple_asm0001_collada_04_prt.dae" scale="0.03937 0.03937 0.03937" />
+        <mesh filename="package://coman_urdf/meshes/collada/simple/simple_asm0001_collada_04_prt.stl" scale="0.03937 0.03937 0.03937" />
       </geometry>             
     </collision>
   </link>
@@ -302,7 +302,7 @@
     <collision>
       <origin xyz="0.0 -0.0726 -0.2942" rpy="0 0 -3.14159265359"/>
       <geometry name="LLowLeg_collision">
-        <mesh filename="package://coman_urdf/meshes/collada/simple/simple_asm0001_collada_03_prt.dae" scale="0.03937 0.03937 0.03937" />
+        <mesh filename="package://coman_urdf/meshes/collada/simple/simple_asm0001_collada_03_prt.stl" scale="0.03937 0.03937 0.03937" />
       </geometry>             
     </collision>
   </link>
@@ -322,7 +322,7 @@
     <collision>
       <origin xyz="0.0 -0.0726 -0.0932" rpy="0 0 -3.14159265359"/>
       <geometry name="LFootmot_collision">
-        <mesh filename="package://coman_urdf/meshes/collada/simple/simple_asm0001_collada_02_prt.dae" scale="0.03937 0.03937 0.03937" />
+        <mesh filename="package://coman_urdf/meshes/collada/simple/simple_asm0001_collada_02_prt.stl" scale="0.03937 0.03937 0.03937" />
       </geometry>             
     </collision>
   </link>
@@ -371,7 +371,7 @@
     <collision>
       <origin xyz="-0.005305 0.0825 -0.844329" rpy="0 0 -3.14159265359"/>
       <geometry name="RShp_collision">
-        <mesh filename="package://coman_urdf/meshes/collada/simple/simple_asm0001_collada_24_prt.dae" scale="0.03937 0.03937 0.03937" />
+        <mesh filename="package://coman_urdf/meshes/collada/simple/simple_asm0001_collada_24_prt.stl" scale="0.03937 0.03937 0.03937" />
       </geometry>             
     </collision>
   </link>
@@ -391,7 +391,7 @@
     <collision>
       <origin xyz="-0.005305 0.1558 -0.844329" rpy="0 0 -3.14159265359"/>
       <geometry name="RShr_collision">
-        <mesh filename="package://coman_urdf/meshes/collada/simple/simple_asm0001_collada_23_prt.dae" scale="0.03937 0.03937 0.03937" />
+        <mesh filename="package://coman_urdf/meshes/collada/simple/simple_asm0001_collada_23_prt.stl" scale="0.03937 0.03937 0.03937" />
       </geometry>             
     </collision>
   </link>
@@ -411,7 +411,7 @@
     <collision>
       <origin xyz="-0.005305 0.1558 -0.79952053" rpy="0 0 -3.14159265359"/>
       <geometry name="RShy_collision">
-        <mesh filename="package://coman_urdf/meshes/collada/simple/simple_asm0001_collada_22_prt.dae" scale="0.03937 0.03937 0.03937" />
+        <mesh filename="package://coman_urdf/meshes/collada/simple/simple_asm0001_collada_22_prt.stl" scale="0.03937 0.03937 0.03937" />
       </geometry>             
     </collision>
   </link>
@@ -433,7 +433,7 @@
     <collision>
       <origin xyz="-0.005305 -0.0825 -0.844329" rpy="0 0 -3.14159265359"/>
       <geometry name="LShp_collision">
-        <mesh filename="package://coman_urdf/meshes/collada/simple/simple_asm0001_collada_14_prt.dae" scale="0.03937 0.03937 0.03937" />
+        <mesh filename="package://coman_urdf/meshes/collada/simple/simple_asm0001_collada_14_prt.stl" scale="0.03937 0.03937 0.03937" />
       </geometry>             
     </collision>
   </link>
@@ -453,7 +453,7 @@
     <collision>
       <origin xyz="-0.005305 -0.1558 -0.844329" rpy="0 0 -3.14159265359"/>
       <geometry name="LShr_collision">
-        <mesh filename="package://coman_urdf/meshes/collada/simple/simple_asm0001_collada_13_prt.dae" scale="0.03937 0.03937 0.03937" />
+        <mesh filename="package://coman_urdf/meshes/collada/simple/simple_asm0001_collada_13_prt.stl" scale="0.03937 0.03937 0.03937" />
       </geometry>             
     </collision>
   </link>
@@ -473,7 +473,7 @@
     <collision>
       <origin xyz="-0.005305 -0.1558 -0.79952053" rpy="0 0 -3.14159265359"/>
       <geometry name="LShy_collision">
-        <mesh filename="package://coman_urdf/meshes/collada/simple/simple_asm0001_collada_12_prt.dae" scale="0.03937 0.03937 0.03937" />
+        <mesh filename="package://coman_urdf/meshes/collada/simple/simple_asm0001_collada_12_prt.stl" scale="0.03937 0.03937 0.03937" />
       </geometry>             
     </collision>
   </link>

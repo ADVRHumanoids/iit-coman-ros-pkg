@@ -17,7 +17,7 @@
    <collision>
       <origin xyz="0 0.01 -0.04" rpy="0 0 3.14159265359"/>
       <geometry name="RSoftHand_collision">
-        <mesh filename="package://coman_urdf/meshes/collada/simple/forearms/R_soft_hand_open.dae" scale="1E-3 1E-3 1E-3" />
+        <mesh filename="package://coman_urdf/meshes/collada/simple/forearms/R_soft_hand_open.stl" scale="1E-3 1E-3 1E-3" />
       </geometry>
    </collision>
   </link>
@@ -37,7 +37,7 @@
    <collision>
      <origin xyz="0.007 -0.012 -0.04" rpy="0 0 ${3.14159265359/2}"/>
       <geometry name="LSoftHand_collision">
-        <mesh filename="package://coman_urdf/meshes/collada/simple/forearms/L_soft_hand_open.dae" scale="1E-3 1E-3 1E-3" />
+        <mesh filename="package://coman_urdf/meshes/collada/simple/forearms/L_soft_hand_open.stl" scale="1E-3 1E-3 1E-3" />
       </geometry>
    </collision>
   </link>
