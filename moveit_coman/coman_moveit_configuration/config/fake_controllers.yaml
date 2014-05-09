@@ -1,0 +1,10 @@
+controller_list:
+  - name: fake_right_arm_controller
+    joints:
+      - RShSag
+      - RShLat
+      - RShYaw
+      - RElbj
+      - RForearmPlate
+      - RWrj1
+      - RWrj2

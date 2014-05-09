@@ -1,0 +1,302 @@
+<?xml version="1.0" ?>
+<!--This does not replace URDF, and is not an extension of URDF.
+    This is a format for representing semantic information about the robot structure.
+    A URDF file must exist for this robot as well, where the joints and the links that are referenced are defined
+-->
+<robot name="COMAN">
+    <!--GROUPS: Representation of a set of joints and links. This can be useful for specifying DOF to plan for, defining arms, end effectors, etc-->
+    <!--LINKS: When a link is specified, the parent joint of that link (if it exists) is automatically included-->
+    <!--JOINTS: When a joint is specified, the child link of that joint (which will always exist) is automatically included-->
+    <!--CHAINS: When a chain is specified, all the links along the chain (including endpoints) are included in the group. Additionally, all the joints that are parents to included links are also included. This means that joints along the chain and the parent joint of the base link are included in the group-->
+    <!--SUBGROUPS: Groups can also be formed by referencing to already defined group names-->
+    <group name="right_arm">
+        <joint name="RShSag" />
+        <joint name="RShLat" />
+        <joint name="RShYaw" />
+        <joint name="RElbj" />
+        <joint name="RForearmPlate" />
+        <joint name="RWrj1" />
+        <joint name="RWrj2" />
+        <joint name="r_handj" />
+        <chain base_link="RShp" tip_link="RSoftHand" />
+    </group>
+    <!--GROUP STATES: Purpose: Define a named state for a particular group, in terms of joint values. This is useful to define states like 'folded arms'-->
+    <group_state name="prova" group="right_arm">
+        <joint name="RWrj1" value="0" />
+        <joint name="RWrj2" value="0" />
+    </group_state>
+    <!--END EFFECTOR: Purpose: Represent information about an end effector.-->
+    <end_effector name="r_handj" parent_link="RWrMot3" group="right_arm" />
+    <!--DISABLE COLLISIONS: By default it is assumed that any link of the robot could potentially come into collision with any other link in the robot. This tag disables collision checking between a specified pair of links. -->
+    <disable_collisions link1="DWL" link2="DWS" reason="Adjacent" />
+    <disable_collisions link1="DWL" link2="DWYTorso" reason="Adjacent" />
+    <disable_collisions link1="DWL" link2="LFoot" reason="Never" />
+    <disable_collisions link1="DWL" link2="LFootmot" reason="Never" />
+    <disable_collisions link1="DWL" link2="LHipMot" reason="Never" />
+    <disable_collisions link1="DWL" link2="LLowLeg" reason="Never" />
+    <disable_collisions link1="DWL" link2="LShp" reason="Never" />
+    <disable_collisions link1="DWL" link2="LShr" reason="Never" />
+    <disable_collisions link1="DWL" link2="LThighLowLeg" reason="Never" />
+    <disable_collisions link1="DWL" link2="LThighUpLeg" reason="Never" />
+    <disable_collisions link1="DWL" link2="RFoot" reason="Never" />
+    <disable_collisions link1="DWL" link2="RFootmot" reason="Never" />
+    <disable_collisions link1="DWL" link2="RHipMot" reason="Never" />
+    <disable_collisions link1="DWL" link2="RLowLeg" reason="Never" />
+    <disable_collisions link1="DWL" link2="RShp" reason="Never" />
+    <disable_collisions link1="DWL" link2="RShr" reason="Never" />
+    <disable_collisions link1="DWL" link2="RThighLowLeg" reason="Never" />
+    <disable_collisions link1="DWL" link2="RThighUpLeg" reason="Never" />
+    <disable_collisions link1="DWL" link2="Waist" reason="Default" />
+    <disable_collisions link1="DWL" link2="Xtion_body" reason="Never" />
+    <disable_collisions link1="DWL" link2="Xtion_cam_body" reason="Never" />
+    <disable_collisions link1="DWS" link2="DWYTorso" reason="Default" />
+    <disable_collisions link1="DWS" link2="LFoot" reason="Never" />
+    <disable_collisions link1="DWS" link2="LFootmot" reason="Never" />
+    <disable_collisions link1="DWS" link2="LHipMot" reason="Never" />
+    <disable_collisions link1="DWS" link2="LLowLeg" reason="Never" />
+    <disable_collisions link1="DWS" link2="LShp" reason="Never" />
+    <disable_collisions link1="DWS" link2="LShr" reason="Never" />
+    <disable_collisions link1="DWS" link2="LShy" reason="Never" />
+    <disable_collisions link1="DWS" link2="LThighLowLeg" reason="Never" />
+    <disable_collisions link1="DWS" link2="LThighUpLeg" reason="Never" />
+    <disable_collisions link1="DWS" link2="RFoot" reason="Never" />
+    <disable_collisions link1="DWS" link2="RFootmot" reason="Never" />
+    <disable_collisions link1="DWS" link2="RHipMot" reason="Never" />
+    <disable_collisions link1="DWS" link2="RLowLeg" reason="Never" />
+    <disable_collisions link1="DWS" link2="RShp" reason="Never" />
+    <disable_collisions link1="DWS" link2="RShr" reason="Never" />
+    <disable_collisions link1="DWS" link2="RShy" reason="Never" />
+    <disable_collisions link1="DWS" link2="RThighLowLeg" reason="Never" />
+    <disable_collisions link1="DWS" link2="RThighUpLeg" reason="Never" />
+    <disable_collisions link1="DWS" link2="Waist" reason="Adjacent" />
+    <disable_collisions link1="DWS" link2="Xtion_body" reason="Never" />
+    <disable_collisions link1="DWS" link2="Xtion_cam_body" reason="Never" />
+    <disable_collisions link1="DWYTorso" link2="LFoot" reason="Never" />
+    <disable_collisions link1="DWYTorso" link2="LFootmot" reason="Never" />
+    <disable_collisions link1="DWYTorso" link2="LHipMot" reason="Never" />
+    <disable_collisions link1="DWYTorso" link2="LLowLeg" reason="Never" />
+    <disable_collisions link1="DWYTorso" link2="LShp" reason="Adjacent" />
+    <disable_collisions link1="DWYTorso" link2="LShr" reason="Never" />
+    <disable_collisions link1="DWYTorso" link2="LThighLowLeg" reason="Never" />
+    <disable_collisions link1="DWYTorso" link2="LThighUpLeg" reason="Never" />
+    <disable_collisions link1="DWYTorso" link2="RFoot" reason="Never" />
+    <disable_collisions link1="DWYTorso" link2="RFootmot" reason="Never" />
+    <disable_collisions link1="DWYTorso" link2="RHipMot" reason="Never" />
+    <disable_collisions link1="DWYTorso" link2="RLowLeg" reason="Never" />
+    <disable_collisions link1="DWYTorso" link2="RShp" reason="Adjacent" />
+    <disable_collisions link1="DWYTorso" link2="RShr" reason="Never" />
+    <disable_collisions link1="DWYTorso" link2="RThighUpLeg" reason="Never" />
+    <disable_collisions link1="DWYTorso" link2="Xtion_body" reason="Adjacent" />
+    <disable_collisions link1="DWYTorso" link2="Xtion_cam_body" reason="Never" />
+    <disable_collisions link1="LElb" link2="LForearm" reason="Adjacent" />
+    <disable_collisions link1="LElb" link2="LShp" reason="Never" />
+    <disable_collisions link1="LElb" link2="LShr" reason="Never" />
+    <disable_collisions link1="LElb" link2="LShy" reason="Adjacent" />
+    <disable_collisions link1="LElb" link2="LSoftHand" reason="Never" />
+    <disable_collisions link1="LElb" link2="LWrMot2" reason="Never" />
+    <disable_collisions link1="LElb" link2="LWrMot3" reason="Never" />
+    <disable_collisions link1="LElb" link2="RElb" reason="Never" />
+    <disable_collisions link1="LElb" link2="RHipMot" reason="Never" />
+    <disable_collisions link1="LElb" link2="RShp" reason="Never" />
+    <disable_collisions link1="LElb" link2="RShr" reason="Never" />
+    <disable_collisions link1="LElb" link2="RShy" reason="Never" />
+    <disable_collisions link1="LElb" link2="Xtion_body" reason="Never" />
+    <disable_collisions link1="LElb" link2="Xtion_cam_body" reason="Never" />
+    <disable_collisions link1="LFoot" link2="LFootmot" reason="Adjacent" />
+    <disable_collisions link1="LFoot" link2="LHipMot" reason="Never" />
+    <disable_collisions link1="LFoot" link2="LLowLeg" reason="Never" />
+    <disable_collisions link1="LFoot" link2="LThighLowLeg" reason="Never" />
+    <disable_collisions link1="LFoot" link2="LThighUpLeg" reason="Never" />
+    <disable_collisions link1="LFoot" link2="Xtion_body" reason="Never" />
+    <disable_collisions link1="LFoot" link2="Xtion_cam_body" reason="Never" />
+    <disable_collisions link1="LFootmot" link2="LHipMot" reason="Never" />
+    <disable_collisions link1="LFootmot" link2="LLowLeg" reason="Adjacent" />
+    <disable_collisions link1="LFootmot" link2="LShp" reason="Never" />
+    <disable_collisions link1="LFootmot" link2="LShr" reason="Never" />
+    <disable_collisions link1="LFootmot" link2="LThighLowLeg" reason="Never" />
+    <disable_collisions link1="LFootmot" link2="LThighUpLeg" reason="Never" />
+    <disable_collisions link1="LFootmot" link2="RHipMot" reason="Never" />
+    <disable_collisions link1="LFootmot" link2="RShp" reason="Never" />
+    <disable_collisions link1="LFootmot" link2="RShr" reason="Never" />
+    <disable_collisions link1="LFootmot" link2="RThighUpLeg" reason="Never" />
+    <disable_collisions link1="LFootmot" link2="Waist" reason="Never" />
+    <disable_collisions link1="LFootmot" link2="Xtion_body" reason="Never" />
+    <disable_collisions link1="LFootmot" link2="Xtion_cam_body" reason="Never" />
+    <disable_collisions link1="LForearm" link2="LHipMot" reason="Default" />
+    <disable_collisions link1="LForearm" link2="LShp" reason="Never" />
+    <disable_collisions link1="LForearm" link2="LShr" reason="Never" />
+    <disable_collisions link1="LForearm" link2="LWrMot2" reason="Adjacent" />
+    <disable_collisions link1="LForearm" link2="LWrMot3" reason="Default" />
+    <disable_collisions link1="LForearm" link2="RShp" reason="Never" />
+    <disable_collisions link1="LForearm" link2="RShr" reason="Never" />
+    <disable_collisions link1="LForearm" link2="Xtion_cam_body" reason="Never" />
+    <disable_collisions link1="LHipMot" link2="LLowLeg" reason="Never" />
+    <disable_collisions link1="LHipMot" link2="LShp" reason="Never" />
+    <disable_collisions link1="LHipMot" link2="LShr" reason="Never" />
+    <disable_collisions link1="LHipMot" link2="LThighLowLeg" reason="Never" />
+    <disable_collisions link1="LHipMot" link2="LThighUpLeg" reason="Adjacent" />
+    <disable_collisions link1="LHipMot" link2="RElb" reason="Never" />
+    <disable_collisions link1="LHipMot" link2="RFootmot" reason="Never" />
+    <disable_collisions link1="LHipMot" link2="RHipMot" reason="Never" />
+    <disable_collisions link1="LHipMot" link2="RLowLeg" reason="Never" />
+    <disable_collisions link1="LHipMot" link2="RShp" reason="Never" />
+    <disable_collisions link1="LHipMot" link2="RShr" reason="Never" />
+    <disable_collisions link1="LHipMot" link2="RShy" reason="Never" />
+    <disable_collisions link1="LHipMot" link2="RThighLowLeg" reason="Never" />
+    <disable_collisions link1="LHipMot" link2="RThighUpLeg" reason="Never" />
+    <disable_collisions link1="LHipMot" link2="Waist" reason="Adjacent" />
+    <disable_collisions link1="LHipMot" link2="Xtion_body" reason="Never" />
+    <disable_collisions link1="LHipMot" link2="Xtion_cam_body" reason="Never" />
+    <disable_collisions link1="LLowLeg" link2="LThighLowLeg" reason="Adjacent" />
+    <disable_collisions link1="LLowLeg" link2="LThighUpLeg" reason="Never" />
+    <disable_collisions link1="LLowLeg" link2="RHipMot" reason="Never" />
+    <disable_collisions link1="LLowLeg" link2="Waist" reason="Never" />
+    <disable_collisions link1="LLowLeg" link2="Xtion_body" reason="Never" />
+    <disable_collisions link1="LLowLeg" link2="Xtion_cam_body" reason="Never" />
+    <disable_collisions link1="LShp" link2="LShr" reason="Adjacent" />
+    <disable_collisions link1="LShp" link2="LShy" reason="Default" />
+    <disable_collisions link1="LShp" link2="LThighUpLeg" reason="Never" />
+    <disable_collisions link1="LShp" link2="LWrMot2" reason="Never" />
+    <disable_collisions link1="LShp" link2="LWrMot3" reason="Never" />
+    <disable_collisions link1="LShp" link2="RElb" reason="Never" />
+    <disable_collisions link1="LShp" link2="RFootmot" reason="Never" />
+    <disable_collisions link1="LShp" link2="RForearm" reason="Never" />
+    <disable_collisions link1="LShp" link2="RHipMot" reason="Never" />
+    <disable_collisions link1="LShp" link2="RShp" reason="Never" />
+    <disable_collisions link1="LShp" link2="RShr" reason="Never" />
+    <disable_collisions link1="LShp" link2="RShy" reason="Never" />
+    <disable_collisions link1="LShp" link2="RThighUpLeg" reason="Never" />
+    <disable_collisions link1="LShp" link2="Waist" reason="Never" />
+    <disable_collisions link1="LShp" link2="Xtion_body" reason="Never" />
+    <disable_collisions link1="LShp" link2="Xtion_cam_body" reason="Never" />
+    <disable_collisions link1="LShr" link2="LShy" reason="Adjacent" />
+    <disable_collisions link1="LShr" link2="LSoftHand" reason="Never" />
+    <disable_collisions link1="LShr" link2="LThighUpLeg" reason="Never" />
+    <disable_collisions link1="LShr" link2="LWrMot2" reason="Never" />
+    <disable_collisions link1="LShr" link2="LWrMot3" reason="Never" />
+    <disable_collisions link1="LShr" link2="RElb" reason="Never" />
+    <disable_collisions link1="LShr" link2="RFootmot" reason="Never" />
+    <disable_collisions link1="LShr" link2="RForearm" reason="Never" />
+    <disable_collisions link1="LShr" link2="RHipMot" reason="Never" />
+    <disable_collisions link1="LShr" link2="RShp" reason="Never" />
+    <disable_collisions link1="LShr" link2="RShr" reason="Never" />
+    <disable_collisions link1="LShr" link2="RShy" reason="Never" />
+    <disable_collisions link1="LShr" link2="RThighLowLeg" reason="Never" />
+    <disable_collisions link1="LShr" link2="RThighUpLeg" reason="Never" />
+    <disable_collisions link1="LShr" link2="RWrMot2" reason="Never" />
+    <disable_collisions link1="LShr" link2="RWrMot3" reason="Never" />
+    <disable_collisions link1="LShr" link2="Waist" reason="Never" />
+    <disable_collisions link1="LShr" link2="Xtion_body" reason="Never" />
+    <disable_collisions link1="LShr" link2="Xtion_cam_body" reason="Never" />
+    <disable_collisions link1="LShy" link2="LSoftHand" reason="Never" />
+    <disable_collisions link1="LShy" link2="LWrMot2" reason="Never" />
+    <disable_collisions link1="LShy" link2="LWrMot3" reason="Never" />
+    <disable_collisions link1="LShy" link2="RElb" reason="Never" />
+    <disable_collisions link1="LShy" link2="RHipMot" reason="Never" />
+    <disable_collisions link1="LShy" link2="RShp" reason="Never" />
+    <disable_collisions link1="LShy" link2="RShr" reason="Never" />
+    <disable_collisions link1="LShy" link2="RShy" reason="Never" />
+    <disable_collisions link1="LShy" link2="RThighUpLeg" reason="Never" />
+    <disable_collisions link1="LShy" link2="Xtion_body" reason="Never" />
+    <disable_collisions link1="LShy" link2="Xtion_cam_body" reason="Never" />
+    <disable_collisions link1="LSoftHand" link2="LWrMot2" reason="Never" />
+    <disable_collisions link1="LSoftHand" link2="LWrMot3" reason="Adjacent" />
+    <disable_collisions link1="LThighLowLeg" link2="LThighUpLeg" reason="Adjacent" />
+    <disable_collisions link1="LThighLowLeg" link2="RHipMot" reason="Never" />
+    <disable_collisions link1="LThighLowLeg" link2="RShr" reason="Never" />
+    <disable_collisions link1="LThighLowLeg" link2="Waist" reason="Never" />
+    <disable_collisions link1="LThighLowLeg" link2="Xtion_body" reason="Never" />
+    <disable_collisions link1="LThighLowLeg" link2="Xtion_cam_body" reason="Never" />
+    <disable_collisions link1="LThighUpLeg" link2="RFootmot" reason="Never" />
+    <disable_collisions link1="LThighUpLeg" link2="RHipMot" reason="Never" />
+    <disable_collisions link1="LThighUpLeg" link2="RShp" reason="Never" />
+    <disable_collisions link1="LThighUpLeg" link2="RShr" reason="Never" />
+    <disable_collisions link1="LThighUpLeg" link2="RShy" reason="Never" />
+    <disable_collisions link1="LThighUpLeg" link2="Waist" reason="Default" />
+    <disable_collisions link1="LThighUpLeg" link2="Xtion_body" reason="Never" />
+    <disable_collisions link1="LThighUpLeg" link2="Xtion_cam_body" reason="Never" />
+    <disable_collisions link1="LWrMot2" link2="LWrMot3" reason="Adjacent" />
+    <disable_collisions link1="LWrMot2" link2="RShr" reason="Never" />
+    <disable_collisions link1="LWrMot2" link2="Xtion_cam_body" reason="Never" />
+    <disable_collisions link1="LWrMot3" link2="RShr" reason="Never" />
+    <disable_collisions link1="LWrMot3" link2="Xtion_cam_body" reason="Never" />
+    <disable_collisions link1="RElb" link2="RForearm" reason="Adjacent" />
+    <disable_collisions link1="RElb" link2="RShp" reason="Never" />
+    <disable_collisions link1="RElb" link2="RShr" reason="Never" />
+    <disable_collisions link1="RElb" link2="RShy" reason="Adjacent" />
+    <disable_collisions link1="RElb" link2="RSoftHand" reason="Never" />
+    <disable_collisions link1="RElb" link2="RWrMot2" reason="Never" />
+    <disable_collisions link1="RElb" link2="RWrMot3" reason="Never" />
+    <disable_collisions link1="RElb" link2="Xtion_body" reason="Never" />
+    <disable_collisions link1="RElb" link2="Xtion_cam_body" reason="Never" />
+    <disable_collisions link1="RFoot" link2="RFootmot" reason="Adjacent" />
+    <disable_collisions link1="RFoot" link2="RHipMot" reason="Never" />
+    <disable_collisions link1="RFoot" link2="RLowLeg" reason="Never" />
+    <disable_collisions link1="RFoot" link2="RThighLowLeg" reason="Never" />
+    <disable_collisions link1="RFoot" link2="RThighUpLeg" reason="Never" />
+    <disable_collisions link1="RFoot" link2="Xtion_cam_body" reason="Never" />
+    <disable_collisions link1="RFootmot" link2="RHipMot" reason="Never" />
+    <disable_collisions link1="RFootmot" link2="RLowLeg" reason="Adjacent" />
+    <disable_collisions link1="RFootmot" link2="RShp" reason="Never" />
+    <disable_collisions link1="RFootmot" link2="RShr" reason="Never" />
+    <disable_collisions link1="RFootmot" link2="RThighLowLeg" reason="Never" />
+    <disable_collisions link1="RFootmot" link2="RThighUpLeg" reason="Never" />
+    <disable_collisions link1="RFootmot" link2="Waist" reason="Never" />
+    <disable_collisions link1="RFootmot" link2="Xtion_body" reason="Never" />
+    <disable_collisions link1="RFootmot" link2="Xtion_cam_body" reason="Never" />
+    <disable_collisions link1="RForearm" link2="RHipMot" reason="Default" />
+    <disable_collisions link1="RForearm" link2="RShp" reason="Never" />
+    <disable_collisions link1="RForearm" link2="RShr" reason="Never" />
+    <disable_collisions link1="RForearm" link2="RWrMot2" reason="Adjacent" />
+    <disable_collisions link1="RForearm" link2="RWrMot3" reason="Default" />
+    <disable_collisions link1="RForearm" link2="Xtion_cam_body" reason="Never" />
+    <disable_collisions link1="RHipMot" link2="RLowLeg" reason="Never" />
+    <disable_collisions link1="RHipMot" link2="RShp" reason="Never" />
+    <disable_collisions link1="RHipMot" link2="RShr" reason="Never" />
+    <disable_collisions link1="RHipMot" link2="RThighLowLeg" reason="Never" />
+    <disable_collisions link1="RHipMot" link2="RThighUpLeg" reason="Adjacent" />
+    <disable_collisions link1="RHipMot" link2="Waist" reason="Adjacent" />
+    <disable_collisions link1="RHipMot" link2="Xtion_body" reason="Never" />
+    <disable_collisions link1="RHipMot" link2="Xtion_cam_body" reason="Never" />
+    <disable_collisions link1="RLowLeg" link2="RThighLowLeg" reason="Adjacent" />
+    <disable_collisions link1="RLowLeg" link2="RThighUpLeg" reason="Never" />
+    <disable_collisions link1="RLowLeg" link2="Waist" reason="Never" />
+    <disable_collisions link1="RLowLeg" link2="Xtion_body" reason="Never" />
+    <disable_collisions link1="RLowLeg" link2="Xtion_cam_body" reason="Never" />
+    <disable_collisions link1="RShp" link2="RShr" reason="Adjacent" />
+    <disable_collisions link1="RShp" link2="RShy" reason="Default" />
+    <disable_collisions link1="RShp" link2="RThighUpLeg" reason="Never" />
+    <disable_collisions link1="RShp" link2="RWrMot2" reason="Never" />
+    <disable_collisions link1="RShp" link2="RWrMot3" reason="Never" />
+    <disable_collisions link1="RShp" link2="Waist" reason="Never" />
+    <disable_collisions link1="RShp" link2="Xtion_body" reason="Never" />
+    <disable_collisions link1="RShp" link2="Xtion_cam_body" reason="Never" />
+    <disable_collisions link1="RShr" link2="RShy" reason="Adjacent" />
+    <disable_collisions link1="RShr" link2="RThighUpLeg" reason="Never" />
+    <disable_collisions link1="RShr" link2="RWrMot2" reason="Never" />
+    <disable_collisions link1="RShr" link2="RWrMot3" reason="Never" />
+    <disable_collisions link1="RShr" link2="Waist" reason="Never" />
+    <disable_collisions link1="RShr" link2="Xtion_body" reason="Never" />
+    <disable_collisions link1="RShr" link2="Xtion_cam_body" reason="Never" />
+    <disable_collisions link1="RShy" link2="RSoftHand" reason="Never" />
+    <disable_collisions link1="RShy" link2="RWrMot2" reason="Never" />
+    <disable_collisions link1="RShy" link2="RWrMot3" reason="Never" />
+    <disable_collisions link1="RShy" link2="Xtion_body" reason="Never" />
+    <disable_collisions link1="RShy" link2="Xtion_cam_body" reason="Never" />
+    <disable_collisions link1="RSoftHand" link2="RWrMot2" reason="Never" />
+    <disable_collisions link1="RSoftHand" link2="RWrMot3" reason="Adjacent" />
+    <disable_collisions link1="RThighLowLeg" link2="RThighUpLeg" reason="Adjacent" />
+    <disable_collisions link1="RThighLowLeg" link2="Waist" reason="Never" />
+    <disable_collisions link1="RThighLowLeg" link2="Xtion_body" reason="Never" />
+    <disable_collisions link1="RThighLowLeg" link2="Xtion_cam_body" reason="Never" />
+    <disable_collisions link1="RThighUpLeg" link2="RWrMot2" reason="Default" />
+    <disable_collisions link1="RThighUpLeg" link2="Waist" reason="Default" />
+    <disable_collisions link1="RThighUpLeg" link2="Xtion_body" reason="Never" />
+    <disable_collisions link1="RThighUpLeg" link2="Xtion_cam_body" reason="Never" />
+    <disable_collisions link1="RWrMot2" link2="RWrMot3" reason="Adjacent" />
+    <disable_collisions link1="RWrMot2" link2="Xtion_cam_body" reason="Never" />
+    <disable_collisions link1="RWrMot3" link2="Xtion_cam_body" reason="Never" />
+    <disable_collisions link1="Waist" link2="Xtion_body" reason="Never" />
+    <disable_collisions link1="Waist" link2="Xtion_cam_body" reason="Never" />
+    <disable_collisions link1="Xtion_body" link2="Xtion_cam_body" reason="Adjacent" />
+</robot>
