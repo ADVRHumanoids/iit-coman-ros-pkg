@@ -38,9 +38,9 @@
           <inertia ixx="0.001"  ixy="0.0"  ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001" />
         </inertial>
         <visual>
-          <origin xyz="0 0 ${0.015 + Wrj1_to_FT}" rpy="-1.570796326795 0 1.570796326795"/>
+          <origin xyz="0 0 ${0.015 + Wrj1_to_FT}" rpy="3.14159265359 0 1.570796326795"/>
           <geometry name="LForearm_visual">
-            <mesh filename="package://coman_urdf/meshes/collada/forearms/forearm.dae" scale="0.001 0.001 0.001" />
+            <mesh filename="package://coman_urdf/meshes/collada/forearms/forearm_lowpoly.dae" scale="0.1 0.1 0.1" />
           </geometry>
         </visual>
         <collision>
@@ -125,9 +125,9 @@
           <inertia ixx="0.001"  ixy="0.0"  ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001" />
         </inertial>
         <visual>
-          <origin xyz="0 0 ${0.015 + Wrj1_to_FT}" rpy="-1.570796326795 0 1.570796326795"/>
+          <origin xyz="0 0 ${0.015 + Wrj1_to_FT}" rpy="3.14159265359 0 1.570796326795"/>
           <geometry name="RForearm_visual">
-            <mesh filename="package://coman_urdf/meshes/collada/forearms/forearm.dae" scale="0.001 0.001 0.001" />
+            <mesh filename="package://coman_urdf/meshes/collada/forearms/forearm_lowpoly.dae" scale="0.1 0.1 0.1" />
           </geometry>
         </visual>
         <collision>

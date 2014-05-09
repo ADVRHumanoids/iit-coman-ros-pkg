@@ -9,9 +9,9 @@
       <inertia ixx="0.001"  ixy="0"  ixz="0" iyy="0.001" iyz="0" izz="0.001" />
     </inertial>
     <visual>
-      <origin xyz="0 0.01 -0.04" rpy="0 0 3.14159265359"/>
+      <origin xyz="0.007 0.01 -0.04" rpy="${-3.14159265359/2} 0 ${3.14159265359}"/>
       <geometry name="RSoftHand_visual">
-        <mesh filename="package://coman_urdf/meshes/collada/forearms/R_soft_hand_open.dae" scale="1E-3 1E-3 1E-3" />
+        <mesh filename="package://coman_urdf/meshes/collada/forearms/R_soft_hand_open_lowpoly.dae" scale="0.1 0.1 0.1" />
       </geometry>
    </visual>
    <collision>
@@ -29,9 +29,9 @@
       <inertia ixx="0.001"  ixy="0"  ixz="0" iyy="0.001" iyz="0" izz="0.001" />
     </inertial>
     <visual>
-      <origin xyz="0.007 -0.012 -0.04" rpy="0 0 ${3.14159265359/2}"/>
+      <origin xyz="0.007 -0.012 -0.04" rpy="${-3.14159265359/2} 0 ${3.14159265359/2}"/>
       <geometry name="LSoftHand_visual">
-        <mesh filename="package://coman_urdf/meshes/collada/forearms/L_soft_hand_open.dae" scale="1E-3 1E-3 1E-3" />
+        <mesh filename="package://coman_urdf/meshes/collada/forearms/L_soft_hand_open_lowpoly.dae" scale="0.1 0.1 0.1" />
       </geometry>
    </visual>
    <collision>
