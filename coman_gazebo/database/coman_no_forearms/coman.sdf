@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<sdf version="1.5">
+<sdf version="1.4">
  <model name="COMAN">
   <link name="base_link">
    <pose>
@@ -43,7 +43,7 @@
        0.03937 0.03937 0.03937
       </scale>
       <uri>
-       model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_07_prt.dae
+       model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_07_prt.stl
       </uri>
      </mesh>
     </geometry>
@@ -65,7 +65,7 @@
    </visual>
    <visual name="base_link_visual_imu_link">
     <pose>
-     -0.072 -0.0068 0.044 0 -0 0
+     -0.072 -0.0068 0.044 3.14159 2.65359e-06 3.14159
     </pose>
     <geometry>
      <box>
@@ -109,7 +109,7 @@
      </yarpConfigurationFile>
     </plugin>
     <pose>
-     -0.072 -0.0068 0.044 0 -0 0
+     -0.072 -0.0068 0.044 3.14159 2.65359e-06 3.14159
     </pose>
    </sensor>
   </link>
@@ -155,7 +155,7 @@
        0.03937 0.03937 0.03937
       </scale>
       <uri>
-       model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_06_prt.dae
+       model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_06_prt.stl
       </uri>
      </mesh>
     </geometry>
@@ -214,9 +214,6 @@
       3
      </damping>
     </dynamics>
-    <use_parent_model_frame>
-     1
-    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -285,7 +282,7 @@
        0.03937 0.03937 0.03937
       </scale>
       <uri>
-       model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_05_prt.dae
+       model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_05_prt.stl
       </uri>
      </mesh>
     </geometry>
@@ -344,9 +341,6 @@
       3
      </damping>
     </dynamics>
-    <use_parent_model_frame>
-     1
-    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -415,7 +409,7 @@
        0.03937 0.03937 0.03937
       </scale>
       <uri>
-       model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_04_prt.dae
+       model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_04_prt.stl
       </uri>
      </mesh>
     </geometry>
@@ -474,9 +468,6 @@
       3
      </damping>
     </dynamics>
-    <use_parent_model_frame>
-     1
-    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -545,7 +536,7 @@
        0.03937 0.03937 0.03937
       </scale>
       <uri>
-       model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_03_prt.dae
+       model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_03_prt.stl
       </uri>
      </mesh>
     </geometry>
@@ -604,9 +595,6 @@
       3
      </damping>
     </dynamics>
-    <use_parent_model_frame>
-     1
-    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -675,7 +663,7 @@
        0.03937 0.03937 0.03937
       </scale>
       <uri>
-       model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_02_prt.dae
+       model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_02_prt.stl
       </uri>
      </mesh>
     </geometry>
@@ -734,9 +722,6 @@
       3
      </damping>
     </dynamics>
-    <use_parent_model_frame>
-     1
-    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -805,7 +790,7 @@
        0.03937 0.03937 0.03937
       </scale>
       <uri>
-       model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_01_prt.dae
+       model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_01_prt.stl
       </uri>
      </mesh>
     </geometry>
@@ -901,9 +886,6 @@
       3
      </damping>
     </dynamics>
-    <use_parent_model_frame>
-     1
-    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -992,7 +974,7 @@
        0.03937 0.03937 0.03937
       </scale>
       <uri>
-       model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_20_prt.dae
+       model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_20_prt.stl
       </uri>
      </mesh>
     </geometry>
@@ -1051,9 +1033,6 @@
       3
      </damping>
     </dynamics>
-    <use_parent_model_frame>
-     1
-    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -1122,7 +1101,7 @@
        0.03937 0.03937 0.03937
       </scale>
       <uri>
-       model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_19_prt.dae
+       model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_19_prt.stl
       </uri>
      </mesh>
     </geometry>
@@ -1181,9 +1160,6 @@
       3
      </damping>
     </dynamics>
-    <use_parent_model_frame>
-     1
-    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -1252,7 +1228,7 @@
        0.03937 0.03937 0.03937
       </scale>
       <uri>
-       model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_18_prt.dae
+       model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_18_prt.stl
       </uri>
      </mesh>
     </geometry>
@@ -1311,9 +1287,6 @@
       3
      </damping>
     </dynamics>
-    <use_parent_model_frame>
-     1
-    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -1382,7 +1355,7 @@
        0.03937 0.03937 0.03937
       </scale>
       <uri>
-       model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_17_prt.dae
+       model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_17_prt.stl
       </uri>
      </mesh>
     </geometry>
@@ -1441,9 +1414,6 @@
       3
      </damping>
     </dynamics>
-    <use_parent_model_frame>
-     1
-    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -1512,7 +1482,7 @@
        0.03937 0.03937 0.03937
       </scale>
       <uri>
-       model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_16_prt.dae
+       model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_16_prt.stl
       </uri>
      </mesh>
     </geometry>
@@ -1571,9 +1541,6 @@
       3
      </damping>
     </dynamics>
-    <use_parent_model_frame>
-     1
-    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -1642,7 +1609,7 @@
        0.03937 0.03937 0.03937
       </scale>
       <uri>
-       model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_15_prt.dae
+       model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_15_prt.stl
       </uri>
      </mesh>
     </geometry>
@@ -1738,9 +1705,6 @@
       3
      </damping>
     </dynamics>
-    <use_parent_model_frame>
-     1
-    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -1829,7 +1793,7 @@
        0.03937 0.03937 0.03937
       </scale>
       <uri>
-       model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_09_prt.dae
+       model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_09_prt.stl
       </uri>
      </mesh>
     </geometry>
@@ -1888,9 +1852,6 @@
       3
      </damping>
     </dynamics>
-    <use_parent_model_frame>
-     1
-    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -1959,7 +1920,7 @@
        0.03937 0.03937 0.03937
       </scale>
       <uri>
-       model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_08_prt.dae
+       model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_08_prt.stl
       </uri>
      </mesh>
     </geometry>
@@ -2018,9 +1979,6 @@
       3
      </damping>
     </dynamics>
-    <use_parent_model_frame>
-     1
-    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -2089,7 +2047,7 @@
        0.03937 0.03937 0.03937
       </scale>
       <uri>
-       model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_10_prt.dae
+       model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_10_prt.stl
       </uri>
      </mesh>
     </geometry>
@@ -2148,9 +2106,6 @@
       3
      </damping>
     </dynamics>
-    <use_parent_model_frame>
-     1
-    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -2219,7 +2174,7 @@
        0.03937 0.03937 0.03937
       </scale>
       <uri>
-       model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_14_prt.dae
+       model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_14_prt.stl
       </uri>
      </mesh>
     </geometry>
@@ -2278,9 +2233,6 @@
       3
      </damping>
     </dynamics>
-    <use_parent_model_frame>
-     1
-    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -2349,7 +2301,7 @@
        0.03937 0.03937 0.03937
       </scale>
       <uri>
-       model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_13_prt.dae
+       model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_13_prt.stl
       </uri>
      </mesh>
     </geometry>
@@ -2408,9 +2360,6 @@
       3
      </damping>
     </dynamics>
-    <use_parent_model_frame>
-     1
-    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -2479,7 +2428,7 @@
        0.03937 0.03937 0.03937
       </scale>
       <uri>
-       model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_12_prt.dae
+       model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_12_prt.stl
       </uri>
      </mesh>
     </geometry>
@@ -2538,9 +2487,6 @@
       3
      </damping>
     </dynamics>
-    <use_parent_model_frame>
-     1
-    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -2609,7 +2555,7 @@
        0.03937 0.03937 0.03937
       </scale>
       <uri>
-       model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_11_prt.dae
+       model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_11_prt.stl
       </uri>
      </mesh>
     </geometry>
@@ -2668,9 +2614,6 @@
       3
      </damping>
     </dynamics>
-    <use_parent_model_frame>
-     1
-    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -2739,7 +2682,7 @@
        0.03937 0.03937 0.03937
       </scale>
       <uri>
-       model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_24_prt.dae
+       model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_24_prt.stl
       </uri>
      </mesh>
     </geometry>
@@ -2798,9 +2741,6 @@
       3
      </damping>
     </dynamics>
-    <use_parent_model_frame>
-     1
-    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -2869,7 +2809,7 @@
        0.03937 0.03937 0.03937
       </scale>
       <uri>
-       model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_23_prt.dae
+       model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_23_prt.stl
       </uri>
      </mesh>
     </geometry>
@@ -2928,9 +2868,6 @@
       3
      </damping>
     </dynamics>
-    <use_parent_model_frame>
-     1
-    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -2999,7 +2936,7 @@
        0.03937 0.03937 0.03937
       </scale>
       <uri>
-       model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_22_prt.dae
+       model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_22_prt.stl
       </uri>
      </mesh>
     </geometry>
@@ -3058,9 +2995,6 @@
       3
      </damping>
     </dynamics>
-    <use_parent_model_frame>
-     1
-    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -3129,7 +3063,7 @@
        0.03937 0.03937 0.03937
       </scale>
       <uri>
-       model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_11_prt.dae
+       model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_11_prt.stl
       </uri>
      </mesh>
     </geometry>
@@ -3188,9 +3122,6 @@
       3
      </damping>
     </dynamics>
-    <use_parent_model_frame>
-     1
-    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
