@@ -36,3 +36,18 @@ right_arm:
     - PRMstarkConfigDefault
   projection_evaluator: joints(RShSag,RShLat)
   longest_valid_segment_fraction: 0.05
+left_arm:
+  planner_configs:
+    - SBLkConfigDefault
+    - ESTkConfigDefault
+    - LBKPIECEkConfigDefault
+    - BKPIECEkConfigDefault
+    - KPIECEkConfigDefault
+    - RRTkConfigDefault
+    - RRTConnectkConfigDefault
+    - RRTstarkConfigDefault
+    - TRRTkConfigDefault
+    - PRMkConfigDefault
+    - PRMstarkConfigDefault
+  projection_evaluator: joints(LShSag,LShLat)
+  longest_valid_segment_fraction: 0.05

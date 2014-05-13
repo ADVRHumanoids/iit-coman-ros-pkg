@@ -1,20 +1,5 @@
 joint_limits:
-  RShSag:
-    has_velocity_limits: true
-    max_velocity: 4
-    has_acceleration_limits: false
-    max_acceleration: 0
-  RElbj:
-    has_velocity_limits: true
-    max_velocity: 4
-    has_acceleration_limits: false
-    max_acceleration: 0
-  RShLat:
-    has_velocity_limits: true
-    max_velocity: 4
-    has_acceleration_limits: false
-    max_acceleration: 0
-  RWrj2:
+  LWrj2:
     has_velocity_limits: true
     max_velocity: 4
     has_acceleration_limits: false
@@ -24,12 +9,62 @@ joint_limits:
     max_velocity: 4
     has_acceleration_limits: false
     max_acceleration: 0
-  RShYaw:
+  LForearmPlate:
+    has_velocity_limits: true
+    max_velocity: 4
+    has_acceleration_limits: false
+    max_acceleration: 0
+  LShLat:
+    has_velocity_limits: true
+    max_velocity: 4
+    has_acceleration_limits: false
+    max_acceleration: 0
+  LElbj:
+    has_velocity_limits: true
+    max_velocity: 4
+    has_acceleration_limits: false
+    max_acceleration: 0
+  LWrj1:
     has_velocity_limits: true
     max_velocity: 4
     has_acceleration_limits: false
     max_acceleration: 0
   RForearmPlate:
+    has_velocity_limits: true
+    max_velocity: 4
+    has_acceleration_limits: false
+    max_acceleration: 0
+  RShSag:
+    has_velocity_limits: true
+    max_velocity: 4
+    has_acceleration_limits: false
+    max_acceleration: 0
+  RShYaw:
+    has_velocity_limits: true
+    max_velocity: 4
+    has_acceleration_limits: false
+    max_acceleration: 0
+  RElbj:
+    has_velocity_limits: true
+    max_velocity: 4
+    has_acceleration_limits: false
+    max_acceleration: 0
+  LShYaw:
+    has_velocity_limits: true
+    max_velocity: 4
+    has_acceleration_limits: false
+    max_acceleration: 0
+  LShSag:
+    has_velocity_limits: true
+    max_velocity: 4
+    has_acceleration_limits: false
+    max_acceleration: 0
+  RWrj2:
+    has_velocity_limits: true
+    max_velocity: 4
+    has_acceleration_limits: false
+    max_acceleration: 0
+  RShLat:
     has_velocity_limits: true
     max_velocity: 4
     has_acceleration_limits: false
