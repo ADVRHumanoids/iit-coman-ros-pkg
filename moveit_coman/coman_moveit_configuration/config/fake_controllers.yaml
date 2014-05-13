@@ -17,3 +17,19 @@ controller_list:
       - LForearmPlate
       - LWrj1
       - LWrj2
+  - name: fake_right_leg_controller
+    joints:
+      - RHipSag
+      - RHipLat
+      - RHipYaw
+      - RKneeSag
+      - RAnkLat
+      - RAnkSag
+  - name: fake_left_leg_controller
+    joints:
+      - LHipSag
+      - LHipLat
+      - LHipYaw
+      - LKneeSag
+      - LAnkLat
+      - LAnkSag
