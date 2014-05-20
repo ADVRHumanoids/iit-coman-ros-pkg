@@ -42,8 +42,8 @@
     <joint name="RAnkSag"/>
   </group>
   <group name="torso">
-    <joint name="WaistSag"/>
     <joint name="WaistLat"/>
+    <joint name="WaistSag"/>
     <joint name="WaistYaw"/>
   </group>
 </robot>
