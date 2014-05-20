@@ -37,7 +37,7 @@
     </collision>   
   </link>
 
-  <link name ="DWS">
+  <link name ="DWL">
     <inertial>
       <origin xyz="4.2999707E-4 -0.0097650317 0.033011157" rpy="0 0 0"/>
       <mass value="0.54588774"/>
@@ -45,19 +45,19 @@
     </inertial>
     <visual>
       <origin xyz="-0.020281504 0 -0.63912053" rpy="0 0 -3.14159265359"/>
-      <geometry name="DWS_visual">
+      <geometry name="DWL_visual">
         <mesh filename="package://coman_urdf/meshes/collada/asm0001_collada_09_prt.dae" scale="0.03937 0.03937 0.03937" />
       </geometry>
     </visual>
     <collision>
       <origin xyz="-0.020281504 0 -0.63912053" rpy="0 0 -3.14159265359"/>
-      <geometry name="DWS_collision">
+      <geometry name="DWL_collision">
         <mesh filename="package://coman_urdf/meshes/collada/simple/simple_asm0001_collada_09_prt.stl" scale="0.03937 0.03937 0.03937" />
       </geometry>             
     </collision>
   </link>
 
-  <link name ="DWL">
+  <link name ="DWS">
     <inertial>
       <origin xyz="-0.0021273416 0.0033575235 -0.0010076896" rpy="0 0 0"/>
       <mass value="0.75398402"/>
@@ -65,13 +65,13 @@
     </inertial>
     <visual>
       <origin xyz="-0.020281504 0 -0.63912053" rpy="0 0 -3.14159265359"/>
-      <geometry name="DWL_visual">
+      <geometry name="DWS_visual">
         <mesh filename="package://coman_urdf/meshes/collada/asm0001_collada_08_prt.dae" scale="0.03937 0.03937 0.03937" />
       </geometry>
     </visual>
     <collision>
       <origin xyz="-0.020281504 0 -0.63912053" rpy="0 0 -3.14159265359"/>
-      <geometry name="DWL_collision">
+      <geometry name="DWS_collision">
         <mesh filename="package://coman_urdf/meshes/collada/simple/simple_asm0001_collada_08_prt.stl" scale="0.03937 0.03937 0.03937" />
       </geometry>             
     </collision>
@@ -563,9 +563,9 @@
 
 <!-- ********************TORSO******************** -->
 
-  <joint name="WaistSag" type="revolute"> <!-- Wrong name! need to fix this... -->
+  <joint name="WaistLat" type="revolute"> <!-- Wrong name! need to fix this... -->
     <parent link="Waist"/>
-    <child link="DWS"/>
+    <child link="DWL"/>
     <origin xyz="0.020281504 0 0.11912053" rpy="0 0 0" />
     <axis xyz="0.939692608 0 0.3420201433" />
     <limit velocity="4.0" effort="50" lower="-0.5236" upper="0.5235" />
@@ -573,9 +573,9 @@
     <dynamics friction="0" damping="3.0"/> 
   </joint>
 
-  <joint name="WaistLat" type="revolute"> <!-- Wrong name! need to fix this... -->
-    <parent link="DWS"/>
-    <child link="DWL"/>
+  <joint name="WaistSag" type="revolute"> <!-- Wrong name! need to fix this... -->
+    <parent link="DWL"/>
+    <child link="DWS"/>
     <origin xyz="0 0 0" rpy="0 0 0" />
     <axis xyz="0 1 0" />
     <limit velocity="4.0" effort="50" lower="-0.3491" upper="0.8727" />
@@ -583,7 +583,7 @@
   </joint>
 
   <joint name="WaistYaw" type="revolute">
-    <parent link="DWL"/>
+    <parent link="DWS"/>
     <child link="DWYTorso"/>
     <origin xyz="0 0 0.04749999" rpy="0 0 0" />
     <axis xyz="0 0 1" />

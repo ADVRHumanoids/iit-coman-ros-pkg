@@ -1739,7 +1739,7 @@
     </plugin>
    </sensor>
   </joint>
-  <link name="DWS">
+  <link name="DWL">
    <pose>
     0.0202815 0 0.119121 0 -0 0
    </pose>
@@ -1771,7 +1771,7 @@
      </izz>
     </inertia>
    </inertial>
-   <collision name="DWS_collision">
+   <collision name="DWL_collision">
     <pose>
      -0.0202815 0 -0.639121 0 -0 3.14159
     </pose>
@@ -1786,7 +1786,7 @@
      </mesh>
     </geometry>
    </collision>
-   <visual name="DWS_visual">
+   <visual name="DWL_visual">
     <pose>
      -0.0202815 0 -0.639121 0 -0 3.14159
     </pose>
@@ -1810,9 +1810,9 @@
     </angular>
    </velocity_decay>
   </link>
-  <joint name="WaistSag" type="revolute">
+  <joint name="WaistLat" type="revolute">
    <child>
-    DWS
+    DWL
    </child>
    <parent>
     base_link
@@ -1866,7 +1866,7 @@
     </ode>
    </physics>
   </joint>
-  <link name="DWL">
+  <link name="DWS">
    <pose>
     0.0202815 0 0.119121 0 -0 0
    </pose>
@@ -1898,7 +1898,7 @@
      </izz>
     </inertia>
    </inertial>
-   <collision name="DWL_collision">
+   <collision name="DWS_collision">
     <pose>
      -0.0202815 0 -0.639121 0 -0 3.14159
     </pose>
@@ -1913,7 +1913,7 @@
      </mesh>
     </geometry>
    </collision>
-   <visual name="DWL_visual">
+   <visual name="DWS_visual">
     <pose>
      -0.0202815 0 -0.639121 0 -0 3.14159
     </pose>
@@ -1937,12 +1937,12 @@
     </angular>
    </velocity_decay>
   </link>
-  <joint name="WaistLat" type="revolute">
+  <joint name="WaistSag" type="revolute">
    <child>
-    DWL
+    DWS
    </child>
    <parent>
-    DWS
+    DWL
    </parent>
    <axis>
     <xyz>
@@ -2129,7 +2129,7 @@
     DWYTorso
    </child>
    <parent>
-    DWL
+    DWS
    </parent>
    <axis>
     <xyz>
