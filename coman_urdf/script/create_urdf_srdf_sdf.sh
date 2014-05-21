@@ -95,7 +95,7 @@ EOF
     rm coman_config.urdf.xacro
     mkdir -p ../../coman_gazebo/database/coman_urdf/
     cp -r ../meshes/ ../../coman_gazebo/database/coman_urdf/
-    cp -r ../../coman_gazebo/sdf/conf ../../coman_gazebo/database/coman_urdf/conf
+    cp -r ../../coman_gazebo/sdf/conf ../../coman_gazebo/database/coman_urdf
 else
     echo "Error: could not find config folder in the urdf path"
 fi
