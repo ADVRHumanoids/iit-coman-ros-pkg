@@ -1007,4 +1007,3 @@ and to define the end effectors of the robot -->
     <origin rpy="0 0 0" xyz="0 0 -0.07"/>
   </joint>
 </robot>
-

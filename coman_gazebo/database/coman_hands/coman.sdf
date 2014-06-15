@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<sdf version="1.4">
+<sdf version="1.5">
  <model name="COMAN">
   <link name="base_link">
    <pose>
@@ -214,6 +214,9 @@
       3
      </damping>
     </dynamics>
+    <use_parent_model_frame>
+     1
+    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -341,6 +344,9 @@
       3
      </damping>
     </dynamics>
+    <use_parent_model_frame>
+     1
+    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -468,6 +474,9 @@
       3
      </damping>
     </dynamics>
+    <use_parent_model_frame>
+     1
+    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -595,6 +604,9 @@
       3
      </damping>
     </dynamics>
+    <use_parent_model_frame>
+     1
+    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -722,6 +734,9 @@
       3
      </damping>
     </dynamics>
+    <use_parent_model_frame>
+     1
+    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -880,6 +895,9 @@
       3
      </damping>
     </dynamics>
+    <use_parent_model_frame>
+     1
+    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -1027,6 +1045,9 @@
       3
      </damping>
     </dynamics>
+    <use_parent_model_frame>
+     1
+    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -1154,6 +1175,9 @@
       3
      </damping>
     </dynamics>
+    <use_parent_model_frame>
+     1
+    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -1281,6 +1305,9 @@
       3
      </damping>
     </dynamics>
+    <use_parent_model_frame>
+     1
+    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -1408,6 +1435,9 @@
       3
      </damping>
     </dynamics>
+    <use_parent_model_frame>
+     1
+    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -1535,6 +1565,9 @@
       3
      </damping>
     </dynamics>
+    <use_parent_model_frame>
+     1
+    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -1693,6 +1726,9 @@
       3
      </damping>
     </dynamics>
+    <use_parent_model_frame>
+     1
+    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -1840,6 +1876,9 @@
       3
      </damping>
     </dynamics>
+    <use_parent_model_frame>
+     1
+    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -1967,6 +2006,9 @@
       3
      </damping>
     </dynamics>
+    <use_parent_model_frame>
+     1
+    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -2154,6 +2196,9 @@
       3
      </damping>
     </dynamics>
+    <use_parent_model_frame>
+     1
+    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -2281,6 +2326,9 @@
       3
      </damping>
     </dynamics>
+    <use_parent_model_frame>
+     1
+    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -2408,6 +2456,9 @@
       3
      </damping>
     </dynamics>
+    <use_parent_model_frame>
+     1
+    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -2535,6 +2586,9 @@
       3
      </damping>
     </dynamics>
+    <use_parent_model_frame>
+     1
+    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -2662,6 +2716,9 @@
       3
      </damping>
     </dynamics>
+    <use_parent_model_frame>
+     1
+    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -2789,6 +2846,9 @@
       0.03
      </damping>
     </dynamics>
+    <use_parent_model_frame>
+     1
+    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -2933,6 +2993,9 @@
       0.03
      </damping>
     </dynamics>
+    <use_parent_model_frame>
+     1
+    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -3060,6 +3123,9 @@
       0.03
      </damping>
     </dynamics>
+    <use_parent_model_frame>
+     1
+    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -3181,6 +3247,9 @@
       3
      </damping>
     </dynamics>
+    <use_parent_model_frame>
+     1
+    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -3308,6 +3377,9 @@
       3
      </damping>
     </dynamics>
+    <use_parent_model_frame>
+     1
+    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -3435,6 +3507,9 @@
       3
      </damping>
     </dynamics>
+    <use_parent_model_frame>
+     1
+    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -3562,6 +3637,9 @@
       3
      </damping>
     </dynamics>
+    <use_parent_model_frame>
+     1
+    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -3689,6 +3767,9 @@
       3
      </damping>
     </dynamics>
+    <use_parent_model_frame>
+     1
+    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -3816,6 +3897,9 @@
       0.03
      </damping>
     </dynamics>
+    <use_parent_model_frame>
+     1
+    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -3960,6 +4044,9 @@
       0.03
      </damping>
     </dynamics>
+    <use_parent_model_frame>
+     1
+    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -3992,14 +4079,14 @@
    </pose>
    <inertial>
     <pose>
-     0 0 0 0 -0 0
+     0 0 -0.000727173 0 -0 0
     </pose>
     <mass>
-     0.0540075
+     0.0550075
     </mass>
     <inertia>
      <ixx>
-      2.16e-05
+      0.000123171
      </ixx>
      <ixy>
       0
@@ -4008,13 +4095,13 @@
       0
      </ixz>
      <iyy>
-      2.16e-05
+      0.000123171
      </iyy>
      <iyz>
       0
      </iyz>
      <izz>
-      2.16e-05
+      0.0001216
      </izz>
     </inertia>
    </inertial>
@@ -4033,6 +4120,18 @@
      </mesh>
     </geometry>
    </collision>
+   <collision name="RWrMot3_collision_RSoftHand">
+    <pose>
+     0 0 -0.04 -3.1415 0 0
+    </pose>
+    <geometry>
+     <box>
+      <size>
+       0.001 0.001 0.001
+      </size>
+     </box>
+    </geometry>
+   </collision>
    <visual name="RWrMot3_visual">
     <pose>
      0.025 -0.012 -0.02 3.14159 -2.06823e-13 -1.5708
@@ -4044,6 +4143,33 @@
       </scale>
       <uri>
        model://coman_urdf/meshes/collada/forearms/fa_hand_interface_rig_sw0001.dae
+      </uri>
+     </mesh>
+    </geometry>
+   </visual>
+   <visual name="RWrMot3_visual_RSoftHand">
+    <pose>
+     0 0 -0.04 -3.1415 0 0
+    </pose>
+    <geometry>
+     <box>
+      <size>
+       0.001 0.001 0.001
+      </size>
+     </box>
+    </geometry>
+   </visual>
+   <visual name="RWrMot3_visual_Rhand_palm_link">
+    <pose>
+     0 0 -0.04 -3.1415 0 0
+    </pose>
+    <geometry>
+     <mesh>
+      <scale>
+       0.001 0.001 0.001
+      </scale>
+      <uri>
+       model://complete_soft_hand/meshes/palm_hand2.stl
       </uri>
      </mesh>
     </geometry>
@@ -4087,127 +4213,9 @@
       0.03
      </damping>
     </dynamics>
-   </axis>
-   <physics>
-    <provide_feedback>
+    <use_parent_model_frame>
      1
-    </provide_feedback>
-    <ode>
-     <provide_feedback>
-      1
-     </provide_feedback>
-     <implicit_spring_damper>
-      1
-     </implicit_spring_damper>
-     <cfm_damping>
-      1
-     </cfm_damping>
-     <limit>
-      <cfm>
-       0
-      </cfm>
-      <erp>
-       0.2
-      </erp>
-     </limit>
-    </ode>
-   </physics>
-  </joint>
-  <link name="RSoftHand">
-   <pose>
-    0.005305 -0.1558 -0.090351 0 -0 0
-   </pose>
-   <inertial>
-    <pose>
-     0 0 0 0 -0 0
-    </pose>
-    <mass>
-     0.3
-    </mass>
-    <inertia>
-     <ixx>
-      0.001
-     </ixx>
-     <ixy>
-      0
-     </ixy>
-     <ixz>
-      0
-     </ixz>
-     <iyy>
-      0.001
-     </iyy>
-     <iyz>
-      0
-     </iyz>
-     <izz>
-      0.001
-     </izz>
-    </inertia>
-   </inertial>
-   <collision name="RSoftHand_collision">
-    <pose>
-     0 0 0 0 -0 0
-    </pose>
-    <geometry>
-     <box>
-      <size>
-       0.07 0.07 0.07
-      </size>
-     </box>
-    </geometry>
-   </collision>
-   <visual name="RSoftHand_visual">
-    <pose>
-     0 0 0 0 -0 0
-    </pose>
-    <geometry>
-     <box>
-      <size>
-       0.07 0.07 0.07
-      </size>
-     </box>
-    </geometry>
-   </visual>
-   <velocity_decay>
-    <linear>
-     0
-    </linear>
-    <angular>
-     0
-    </angular>
-   </velocity_decay>
-  </link>
-  <joint name="r_handj" type="revolute">
-   <child>
-    RSoftHand
-   </child>
-   <parent>
-    RWrMot3
-   </parent>
-   <axis>
-    <xyz>
-     1 0 0
-    </xyz>
-    <limit>
-     <lower>
-      0
-     </lower>
-     <upper>
-      1.57075
-     </upper>
-     <effort>
-      5
-     </effort>
-     <velocity>
-      4
-     </velocity>
-    </limit>
-    <dynamics>
-     <damping>
-      3
-     </damping>
-    </dynamics>
+    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
