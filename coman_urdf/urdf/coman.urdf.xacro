@@ -45,6 +45,10 @@ and to define the end effectors of the robot -->
 <!-- The coordinate frame called torso is attached to the lowest body of the model which is a parent of l_gripper, r_gripper and gaze. -->
  <link name="torso"/>
 
+
+<!-- Reference frames in feet -->
+<xacro:include filename="$(find coman_urdf)/urdf/foot_reference_frame.urdf.xacro" />
+
 <!-- Head -->
 <xacro:if value="${GAZEBO_COMAN_USES_XTION}">
 	<link name ="Xtion_body">
@@ -92,7 +96,7 @@ and to define the end effectors of the robot -->
 <link name="gaze"/>  
 
 <!-- ************ COMAN BASE ************** -->
-<xacro:include filename="$(find coman_urdf)//urdf/coman_base.urdf.xacro"/>
+<xacro:include filename="$(find coman_urdf)/urdf/coman_base.urdf.xacro"/>
 
 <!-- ************ FOREARMS ************ -->
 <xacro:if value="${GAZEBO_COMAN_USES_NO_FOREARMS}">
