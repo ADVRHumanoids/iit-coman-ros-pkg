@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<sdf version="1.4">
+<sdf version="1.5">
  <model name="COMAN">
   <link name="base_link">
    <pose>
@@ -214,6 +214,9 @@
       3
      </damping>
     </dynamics>
+    <use_parent_model_frame>
+     1
+    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -341,6 +344,9 @@
       3
      </damping>
     </dynamics>
+    <use_parent_model_frame>
+     1
+    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -468,6 +474,9 @@
       3
      </damping>
     </dynamics>
+    <use_parent_model_frame>
+     1
+    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -595,6 +604,9 @@
       3
      </damping>
     </dynamics>
+    <use_parent_model_frame>
+     1
+    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -722,6 +734,9 @@
       3
      </damping>
     </dynamics>
+    <use_parent_model_frame>
+     1
+    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -880,6 +895,9 @@
       3
      </damping>
     </dynamics>
+    <use_parent_model_frame>
+     1
+    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -1027,6 +1045,9 @@
       3
      </damping>
     </dynamics>
+    <use_parent_model_frame>
+     1
+    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -1154,6 +1175,9 @@
       3
      </damping>
     </dynamics>
+    <use_parent_model_frame>
+     1
+    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -1281,6 +1305,9 @@
       3
      </damping>
     </dynamics>
+    <use_parent_model_frame>
+     1
+    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -1408,6 +1435,9 @@
       3
      </damping>
     </dynamics>
+    <use_parent_model_frame>
+     1
+    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -1535,6 +1565,9 @@
       3
      </damping>
     </dynamics>
+    <use_parent_model_frame>
+     1
+    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -1693,6 +1726,9 @@
       3
      </damping>
     </dynamics>
+    <use_parent_model_frame>
+     1
+    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -1840,6 +1876,9 @@
       3
      </damping>
     </dynamics>
+    <use_parent_model_frame>
+     1
+    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -1967,6 +2006,9 @@
       3
      </damping>
     </dynamics>
+    <use_parent_model_frame>
+     1
+    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -2154,6 +2196,9 @@
       3
      </damping>
     </dynamics>
+    <use_parent_model_frame>
+     1
+    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -2281,6 +2326,9 @@
       3
      </damping>
     </dynamics>
+    <use_parent_model_frame>
+     1
+    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -2408,6 +2456,9 @@
       3
      </damping>
     </dynamics>
+    <use_parent_model_frame>
+     1
+    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -2535,6 +2586,9 @@
       3
      </damping>
     </dynamics>
+    <use_parent_model_frame>
+     1
+    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -2662,6 +2716,9 @@
       3
      </damping>
     </dynamics>
+    <use_parent_model_frame>
+     1
+    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -2789,6 +2846,9 @@
       0.03
      </damping>
     </dynamics>
+    <use_parent_model_frame>
+     1
+    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -2933,6 +2993,9 @@
       0.03
      </damping>
     </dynamics>
+    <use_parent_model_frame>
+     1
+    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -3060,6 +3123,9 @@
       0.03
      </damping>
     </dynamics>
+    <use_parent_model_frame>
+     1
+    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -3181,6 +3247,9 @@
       3
      </damping>
     </dynamics>
+    <use_parent_model_frame>
+     1
+    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -3308,6 +3377,9 @@
       3
      </damping>
     </dynamics>
+    <use_parent_model_frame>
+     1
+    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -3435,6 +3507,9 @@
       3
      </damping>
     </dynamics>
+    <use_parent_model_frame>
+     1
+    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -3562,6 +3637,9 @@
       3
      </damping>
     </dynamics>
+    <use_parent_model_frame>
+     1
+    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -3689,6 +3767,9 @@
       3
      </damping>
     </dynamics>
+    <use_parent_model_frame>
+     1
+    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -3816,6 +3897,9 @@
       0.03
      </damping>
     </dynamics>
+    <use_parent_model_frame>
+     1
+    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -3960,6 +4044,9 @@
       0.03
      </damping>
     </dynamics>
+    <use_parent_model_frame>
+     1
+    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -4087,6 +4174,9 @@
       0.03
      </damping>
     </dynamics>
+    <use_parent_model_frame>
+     1
+    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
@@ -4208,6 +4298,9 @@
       3
      </damping>
     </dynamics>
+    <use_parent_model_frame>
+     1
+    </use_parent_model_frame>
    </axis>
    <physics>
     <provide_feedback>
