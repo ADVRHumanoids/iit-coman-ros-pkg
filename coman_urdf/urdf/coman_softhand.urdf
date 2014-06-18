@@ -38,49 +38,49 @@ and to define the end effectors of the robot -->
   <!-- Reference frames in feet -->
   <link name="l_foot_upper_right_link"/>
   <joint name="l_foot_upper_right_joint" type="fixed">
-    <origin rpy="0 0 0" xyz="0.13 0.05 0"/>
+    <origin rpy="0 0 0" xyz="0.13 -0.05 0"/>
     <parent link="l_sole"/>
     <child link="l_foot_upper_right_link"/>
   </joint>
   <link name="l_foot_upper_left_link"/>
   <joint name="l_foot_upper_left_joint" type="fixed">
-    <origin rpy="0 0 0" xyz="0.13 -0.05 0"/>
+    <origin rpy="0 0 0" xyz="0.13 0.05 0"/>
     <parent link="l_sole"/>
     <child link="l_foot_upper_left_link"/>
   </joint>
   <link name="l_foot_lower_right_link"/>
   <joint name="l_foot_lower_right_joint" type="fixed">
-    <origin rpy="0 0 0" xyz="-0.07 0.05 0"/>
+    <origin rpy="0 0 0" xyz="-0.07 -0.05 0"/>
     <parent link="l_sole"/>
     <child link="l_foot_lower_right_link"/>
   </joint>
   <link name="l_foot_lower_left_link"/>
   <joint name="l_foot_lower_left_joint" type="fixed">
-    <origin rpy="0 0 0" xyz="-0.07 -0.05 0"/>
+    <origin rpy="0 0 0" xyz="-0.07 0.05 0"/>
     <parent link="l_sole"/>
     <child link="l_foot_lower_left_link"/>
   </joint>
   <link name="r_foot_upper_right_link"/>
   <joint name="r_foot_upper_right_joint" type="fixed">
-    <origin rpy="0 0 0" xyz="0.13 0.05 0"/>
+    <origin rpy="0 0 0" xyz="0.13 -0.05 0"/>
     <parent link="r_sole"/>
     <child link="r_foot_upper_right_link"/>
   </joint>
   <link name="r_foot_upper_left_link"/>
   <joint name="r_foot_upper_left_joint" type="fixed">
-    <origin rpy="0 0 0" xyz="0.13 -0.05 0"/>
+    <origin rpy="0 0 0" xyz="0.13 0.05 0"/>
     <parent link="r_sole"/>
     <child link="r_foot_upper_left_link"/>
   </joint>
   <link name="r_foot_lower_right_link"/>
   <joint name="r_foot_lower_right_joint" type="fixed">
-    <origin rpy="0 0 0" xyz="-0.07 0.05 0"/>
+    <origin rpy="0 0 0" xyz="-0.07 -0.05 0"/>
     <parent link="r_sole"/>
     <child link="r_foot_lower_right_link"/>
   </joint>
   <link name="r_foot_lower_left_link"/>
   <joint name="r_foot_lower_left_joint" type="fixed">
-    <origin rpy="0 0 0" xyz="-0.07 -0.05 0"/>
+    <origin rpy="0 0 0" xyz="-0.07 0.05 0"/>
     <parent link="r_sole"/>
     <child link="r_foot_lower_left_link"/>
   </joint>
@@ -1055,4 +1055,24 @@ and to define the end effectors of the robot -->
     <child link="LSoftHand"/>
     <origin rpy="0 0 0" xyz="0 0 -0.07"/>
   </joint>
+  <!-- IMU -->
+  <link name="imu_link">
+    <inertial>
+      <mass value="0.01"/>
+      <origin xyz="0 0 0"/>
+      <inertia ixx="1.0E-6" ixy="0" ixz="0" iyy="1.0E-6" iyz="0" izz="1.0E-6"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <box size="0.01 0.01 0.01"/>
+      </geometry>
+    </visual>
+  </link>
+  <joint name="imu_joint" type="fixed">
+    <parent link="Waist"/>
+    <child link="imu_link"/>
+    <origin rpy="0 3.14159 0" xyz="-0.072 -0.0068 0.044"/>
+  </joint>
 </robot>
+

@@ -2,7 +2,7 @@
      <arg name="gui" default="true" />
 
      <!-- send the coman robot XML to param server -->
-     <param name="robot_description" command="$(find xacro)/xacro.py '$(find coman_urdf)/urdf/coman_robot.urdf.xacro'" />
+     <param name="robot_description" command="$(find xacro)/xacro.py '$(find coman_urdf)/urdf/coman.urdf.xacro'" />
      <param name="use_gui" value="$(arg gui)"/>
         
      <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />

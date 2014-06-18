@@ -19,10 +19,10 @@
 
 	<xacro:macro name="references_frame_foot" params="parent name">
 	<!-- macro for reference frames in foot -->
-		<xacro:reference_frame_foot parent="${parent}" name="${name}_upper_right" x="${x_positive}" y="${y_positive}" />
-		<xacro:reference_frame_foot parent="${parent}" name="${name}_upper_left" x="${x_positive}" y="${y_negative}" />
-		<xacro:reference_frame_foot parent="${parent}" name="${name}_lower_right" x="${x_negative}" y="${y_positive}" />
-		<xacro:reference_frame_foot parent="${parent}" name="${name}_lower_left" x="${x_negative}" y="${y_negative}" />	
+		<xacro:reference_frame_foot parent="${parent}" name="${name}_upper_right" x="${x_positive}" y="${y_negative}" />
+		<xacro:reference_frame_foot parent="${parent}" name="${name}_upper_left" x="${x_positive}" y="${y_positive}" />
+		<xacro:reference_frame_foot parent="${parent}" name="${name}_lower_right" x="${x_negative}" y="${y_negative}" />
+		<xacro:reference_frame_foot parent="${parent}" name="${name}_lower_left" x="${x_negative}" y="${y_positive}" />	
 	</xacro:macro>
 
 	<xacro:references_frame_foot parent="l_sole" name="l_foot"/>
