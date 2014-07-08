@@ -129,7 +129,7 @@ and to define the end effectors of the robot -->
             <alwaysOn>true</alwaysOn>
             <updateRate>10.0</updateRate>
             <cameraName>camera</cameraName>
-            <frameName>camera_link</frameName>
+            <frameName>gaze</frameName>
             <imageTopicName>rgb/image_raw</imageTopicName>
             <depthImageTopicName>depth/image_raw</depthImageTopicName>
             <pointCloudTopicName>depth/points</pointCloudTopicName>
