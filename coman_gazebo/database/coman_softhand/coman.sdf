@@ -4232,6 +4232,7 @@
     model://coman_urdf/conf/coman/coman_gazebo_right_arm_torque.ini
    </yarpConfigurationFile>
   </plugin>
+  <plugin filename="libgazebo_yarp_externalwrench.so" name="coman_yarp_gazebo_plugin_external_wrench"/>
   <pose>
    0 0 0.521 0 -0 0
   </pose>
