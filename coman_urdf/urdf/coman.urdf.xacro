@@ -90,26 +90,15 @@ and to define the end effectors of the robot -->
       </geometry>             
     </collision>
   </link>
-    <gazebo reference="Xtion_cam_body">
-        <sensor name="camera" type="depth">
-          <update_rate>20</update_rate>
-          <camera name="__default__">
-            <horizontal_fov>1.0472</horizontal_fov>
-            <image>
-              <width>640</width>
-              <height>480</height>
-              <format>R8G8B8</format>
-            </image>
-            <clip>
-              <near>0.05</near>
-              <far>3</far>
-            </clip>
-          </camera>
-        </sensor>
 
+  <link name="gaze"/>
+  <!--link name="camera_link"/-->
+
+    <gazebo reference="gaze">
         <sensor name="openni_camera_camera" type="depth">
           <always_on>1</always_on>
           <visualize>1</visualize>
+
           <camera name="__default__">
             <horizontal_fov>1.047</horizontal_fov>
             <image>
@@ -125,11 +114,12 @@ and to define the end effectors of the robot -->
               <far>100</far>
             </clip>
           </camera>
+
           <plugin name="camera_controller" filename="libgazebo_ros_openni_kinect.so">
             <alwaysOn>true</alwaysOn>
             <updateRate>10.0</updateRate>
             <cameraName>camera</cameraName>
-            <frameName>camera_link_sim</frameName>
+            <frameName>camera_link</frameName>
             <imageTopicName>rgb/image_raw</imageTopicName>
             <depthImageTopicName>depth/image_raw</depthImageTopicName>
             <pointCloudTopicName>depth/points</pointCloudTopicName>
@@ -147,22 +137,13 @@ and to define the end effectors of the robot -->
             <Cy>0.0</Cy>
             <focalLength>0.0</focalLength>
           </plugin>
-        </sensor>
 
-        <velocity_decay>
-          <linear>0</linear>
-          <angular>0</angular>
-        </velocity_decay>
-        <pose>0.1 0 0.8 0 -0 0</pose>
-        <self_collide>0</self_collide>
-        <kinematic>0</kinematic>
-        <gravity>1</gravity>
+        </sensor>
     </gazebo>
     
 </xacro:if>
 
-<link name="gaze"/>  
-<link name="gaze_sim"/> 
+  
 
 <!-- ************ COMAN BASE ************** -->
 <xacro:include filename="$(find coman_urdf)/urdf/coman_base.urdf.xacro"/>
