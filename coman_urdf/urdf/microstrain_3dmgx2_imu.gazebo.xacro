@@ -37,7 +37,7 @@
          <update_rate>1000</update_rate>
          <visualize>true</visualize>
          <topic>__default_topic__</topic>
-         <imu>
+	 <imu>
           <!--
           <noise>
            <type>gaussian</type>

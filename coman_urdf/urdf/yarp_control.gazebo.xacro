@@ -114,6 +114,9 @@
     </plugin>
 </xacro:if>
 
+<!-- Plugin to apply external wrenches to the robot -->
+<plugin name="coman_yarp_gazebo_plugin_external_wrench" filename="libgazebo_yarp_externalwrench.so"/>
+
 </gazebo>
 
 </robot>

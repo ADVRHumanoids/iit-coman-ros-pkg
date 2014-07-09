@@ -19,7 +19,6 @@
 <!-- YARP PLUGINS for GAZEBO SIMULATION -->
   <xacro:include filename="$(find coman_urdf)/urdf/yarp_control.gazebo.xacro" />
 
-
   <origin xyz="0.0 0.0 0.521" rpy="0 0 0" />
 </robot>
 
