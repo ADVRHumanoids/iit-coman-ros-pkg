@@ -50,6 +50,9 @@ and to define the end effectors of the robot -->
 <xacro:include filename="$(find coman_urdf)/urdf/foot_reference_frame.urdf.xacro" />
 
 <!-- Head -->
+
+<link name="gaze"/>
+
 <xacro:if value="${GAZEBO_COMAN_USES_XTION}">
 	<link name ="Xtion_body">
     <inertial>
@@ -71,7 +74,7 @@ and to define the end effectors of the robot -->
     </collision>
   </link>
 
-  <link name ="Xtion_cam_body">
+  <link name="Xtion_cam_body">
     <inertial>
       <origin xyz="0.0 0.0 0.0225" rpy="0 0 0"/>
       <mass value="0.2"/>
@@ -90,9 +93,6 @@ and to define the end effectors of the robot -->
       </geometry>             
     </collision>
   </link>
-
-  <link name="gaze"/>
-  <!--link name="camera_link"/-->
 
     <gazebo reference="gaze">
         <sensor name="openni_camera_camera" type="depth">
