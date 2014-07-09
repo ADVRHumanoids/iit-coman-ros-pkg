@@ -129,7 +129,7 @@ and to define the end effectors of the robot -->
             <alwaysOn>true</alwaysOn>
             <updateRate>10.0</updateRate>
             <cameraName>camera</cameraName>
-            <frameName>gaze</frameName>
+            <frameName>camera_link_sim</frameName>
             <imageTopicName>rgb/image_raw</imageTopicName>
             <depthImageTopicName>depth/image_raw</depthImageTopicName>
             <pointCloudTopicName>depth/points</pointCloudTopicName>
@@ -162,6 +162,7 @@ and to define the end effectors of the robot -->
 </xacro:if>
 
 <link name="gaze"/>  
+<link name="gaze_sim"/> 
 
 <!-- ************ COMAN BASE ************** -->
 <xacro:include filename="$(find coman_urdf)/urdf/coman_base.urdf.xacro"/>

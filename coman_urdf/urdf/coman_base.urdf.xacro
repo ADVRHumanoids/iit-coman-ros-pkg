@@ -548,6 +548,12 @@
         <joint name="gaze_joint" type="fixed">
     		<parent link="Xtion_cam_body"/>
     		<child link="gaze"/>
+    		<origin xyz="0.015 0 0.022" rpy="0 0 0" />
+  	</joint>
+
+ 	<joint name="gaze_joint_sim" type="fixed">
+    		<parent link="Xtion_cam_body"/>
+    		<child link="gaze_sim"/>
     		<origin xyz="0.015 0 0.022" rpy="-1.57075 0 -1.57075" />
   	</joint>
 
