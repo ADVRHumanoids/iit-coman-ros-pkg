@@ -16,6 +16,9 @@ and to define the end effectors of the robot
 The coordinate frame called base_link is rigidly attached to the robot root body. It is recommended to choose the robot waist as its root body. The base_link can be attached to the root in any arbitrary position or orientation; for every hardware platform there will be a different place on the base that provides an obvious point of reference. Note that REP 103 [1] specifies a preferred orientation for frames. -->
 <link name="base_link"/>
 
+<!-- The coordinate frame called torso is attached to the lowest body of the model which is a parent of l_gripper, r_gripper and gaze. -->
+ <link name="torso"/>
+
 <link name="Waist">
     <inertial>
       <origin xyz="-0.026391145 -5.8216364E-4 0.052632312" rpy="0.0 0.0 0.0"/>
@@ -101,6 +104,12 @@ The coordinate frame called base_link is rigidly attached to the robot root body
     <parent link="base_link"/>
     <child link="Waist"/>
     <origin xyz="0 0 0" rpy="0 0 0" />
+</joint>
+
+<joint name="torso_joint" type="fixed">
+    <parent link="DWYTorso"/>
+    <child link="torso"/>
+    <origin xyz="-0.014976503999999998 0 0.15770847" rpy="0 0 0" /> 
 </joint>
 
 <joint name="WaistLat" type="revolute"> 

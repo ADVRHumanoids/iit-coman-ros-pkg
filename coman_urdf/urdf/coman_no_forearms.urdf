@@ -31,8 +31,6 @@ and to define the end effectors of the robot -->
   <!--  position and orientation of the leg toe body. The (X,Y) plan of this frame must be coplanar with the toe body contact surface. It is recommended to choose the origin as the projection of the body center on the contact surface. -->
   <link name="l_toe"/>
   <link name="r_toe"/>
-  <!-- The coordinate frame called torso is attached to the lowest body of the model which is a parent of l_gripper, r_gripper and gaze. -->
-  <link name="torso"/>
   <!-- Reference frames in feet -->
   <link name="l_foot_upper_right_link"/>
   <joint name="l_foot_upper_right_joint" type="fixed">
@@ -86,6 +84,7 @@ and to define the end effectors of the robot -->
   <link name="gaze"/>
   <!-- ************ COMAN BASE ************** -->
   <link name="base_link"/>
+  <link name="torso"/>
   <link name="Waist">
     <inertial>
       <origin rpy="0.0 0.0 0.0" xyz="-0.026391145 -5.8216364E-4 0.052632312"/>
@@ -166,6 +165,11 @@ and to define the end effectors of the robot -->
     <parent link="base_link"/>
     <child link="Waist"/>
     <origin rpy="0 0 0" xyz="0 0 0"/>
+  </joint>
+  <joint name="torso_joint" type="fixed">
+    <parent link="DWYTorso"/>
+    <child link="torso"/>
+    <origin rpy="0 0 0" xyz="-0.014976503999999998 0 0.15770847"/>
   </joint>
   <joint name="WaistLat" type="revolute">
     <parent link="Waist"/>
@@ -563,11 +567,6 @@ and to define the end effectors of the robot -->
     <parent link="r_sole"/>
     <child link="r_toe"/>
     <origin rpy="0 0 0" xyz="0.13 0 0"/>
-  </joint>
-  <joint name="torso_joint" type="fixed">
-    <parent link="DWYTorso"/>
-    <child link="torso"/>
-    <origin rpy="0 0 0" xyz="-0.014976503999999998 0 0.15770847"/>
   </joint>
   <joint name="gaze_joint" type="fixed">
     <parent link="torso"/>

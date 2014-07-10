@@ -40,8 +40,7 @@ and to define the end effectors of the robot -->
   <link name="l_toe"/>
   <link name="r_toe"/>
 
-<!-- The coordinate frame called torso is attached to the lowest body of the model which is a parent of l_gripper, r_gripper and gaze. -->
- <link name="torso"/>
+
 
 
 <!-- Reference frames in feet -->

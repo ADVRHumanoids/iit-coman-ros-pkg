@@ -437,11 +437,7 @@
     <origin xyz="0.13 0 0" rpy="0 0 0" />
   </joint>
 
-  <joint name="torso_joint" type="fixed">
-    <parent link="DWYTorso"/>
-    <child link="torso"/>
-    <origin xyz="-0.014976503999999998 0 0.15770847" rpy="0 0 0" /> 
-  </joint>
+
 
 <xacro:if value="${GAZEBO_COMAN_USES_XTION}">
         <joint name="Xtion_body_joint" type="fixed">
