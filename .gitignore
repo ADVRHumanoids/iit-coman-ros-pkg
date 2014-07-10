@@ -2,3 +2,4 @@
 *.sdf
 *.srdf
 *.~
+./coman_gazebo/database/coman_urdf/meshes/*
