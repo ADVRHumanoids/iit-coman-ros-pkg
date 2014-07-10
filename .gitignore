@@ -3,4 +3,3 @@
 *.srdf
 *.~
 coman_gazebo/database/*
-coman_gazebo/sdf/meshes/*
