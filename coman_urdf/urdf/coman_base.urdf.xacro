@@ -16,87 +16,8 @@
 <!-- ********************TORSO******************** -->
 
 <!-- first real link of the robot, inertial reference frame -->
-
-  <link name="Waist">
-    <inertial>
-      <origin xyz="-0.026391145 -5.8216364E-4 0.052632312" rpy="0 0 0"/>
-      <mass value="1.8008695"/>
-      <inertia ixx="0.0051032982"  ixy="-5.7170981E-5"  ixz="0.0016920543" iyy="0.006241636" iyz="1.7225949E-5" izz="0.0024517762" />
-    </inertial>
-    <visual>
-      <origin xyz="0 0 -0.52" rpy="0 0 -3.14159265359"/>
-      <geometry name="Waist_visual">
-        <mesh filename="package://coman_urdf/meshes/collada/asm0001_collada_07_prt.dae" scale="0.03937 0.03937 0.03937"/>
-      </geometry>
-    </visual> 
-    <collision>
-      <origin xyz="0 0 -0.52" rpy="0 0 -3.14159265359"/>
-      <geometry name="Waist_collision">
-        <mesh filename="package://coman_urdf/meshes/collada/simple/simple_asm0001_collada_07_prt.stl" scale="0.03937 0.03937 0.03937"/>
-      </geometry>             
-    </collision>   
-  </link>
-
-  <link name ="DWL">
-    <inertial>
-      <origin xyz="4.2999707E-4 -0.0097650317 0.033011157" rpy="0 0 0"/>
-      <mass value="0.54588774"/>
-      <inertia ixx="9.7126578E-4"  ixy="-7.2101244E-7"  ixz="1.1440119E-6" iyy="7.4686706E-4" iyz="-1.7450917E-4" izz="6.2196235E-4" />
-    </inertial>
-    <visual>
-      <origin xyz="-0.020281504 0 -0.63912053" rpy="0 0 -3.14159265359"/>
-      <geometry name="DWL_visual">
-        <mesh filename="package://coman_urdf/meshes/collada/asm0001_collada_09_prt.dae" scale="0.03937 0.03937 0.03937" />
-      </geometry>
-    </visual>
-    <collision>
-      <origin xyz="-0.020281504 0 -0.63912053" rpy="0 0 -3.14159265359"/>
-      <geometry name="DWL_collision">
-        <mesh filename="package://coman_urdf/meshes/collada/simple/simple_asm0001_collada_09_prt.stl" scale="0.03937 0.03937 0.03937" />
-      </geometry>             
-    </collision>
-  </link>
-
-  <link name ="DWS">
-    <inertial>
-      <origin xyz="-0.0021273416 0.0033575235 -0.0010076896" rpy="0 0 0"/>
-      <mass value="0.75398402"/>
-      <inertia ixx="3.4093348E-4"  ixy="-6.2120042E-6"  ixz="-1.3863473E-6" iyy="3.9581916E-4" iyz="1.443019E-6" izz="3.7449753E-4" />
-    </inertial>
-    <visual>
-      <origin xyz="-0.020281504 0 -0.63912053" rpy="0 0 -3.14159265359"/>
-      <geometry name="DWS_visual">
-        <mesh filename="package://coman_urdf/meshes/collada/asm0001_collada_08_prt.dae" scale="0.03937 0.03937 0.03937" />
-      </geometry>
-    </visual>
-    <collision>
-      <origin xyz="-0.020281504 0 -0.63912053" rpy="0 0 -3.14159265359"/>
-      <geometry name="DWS_collision">
-        <mesh filename="package://coman_urdf/meshes/collada/simple/simple_asm0001_collada_08_prt.stl" scale="0.03937 0.03937 0.03937" />
-      </geometry>             
-    </collision>
-  </link>
-
-  <link name ="DWYTorso">
-    <inertial>
-      <origin xyz="-0.0358501 1.8286043E-5 0.117557148" rpy="0 0 0"/>
-      <mass value="6.3617175"/>
-      <inertia ixx="0.034089342"  ixy="-9.8308572E-6"  ixz="-7.5649290E-4" iyy="0.030117357" iyz="6.2443771E-6" izz="0.025296582" />
-    </inertial>
-    <visual>
-      <origin xyz="-0.020281504 0.0 -0.68662053" rpy="0 0 -3.14159265359"/>
-      <geometry name="DWYTorso_visual">
-        <mesh filename="package://coman_urdf/meshes/collada/asm0001_collada_10_prt.dae" scale="0.03937 0.03937 0.03937" />
-      </geometry>
-    </visual>
-    <collision>
-      <origin xyz="-0.020281504 0.0 -0.68662053" rpy="0 0 -3.14159265359"/>
-      <geometry name="DWYTorso_collision">
-        <mesh filename="package://coman_urdf/meshes/collada/simple/simple_asm0001_collada_10_prt.stl" scale="0.03937 0.03937 0.03937" />
-      </geometry>             
-    </collision>
-  </link>
-
+<xacro:include filename="$(find coman_urdf)/urdf/parts/torso.urdf.xacro" />
+  
 <!-- ********************RIGHT LEG******************** -->
 
   <link name ="RHipMot">
@@ -480,12 +401,6 @@
 
 <!-- ********************JOINTS******************** -->
 
-  <joint name="base_joint" type="fixed">
-    <parent link="base_link"/>
-    <child link="Waist"/>
-    <origin xyz="0 0 0" rpy="0 0 0" />
-  </joint>
-
     <joint name="l_ankle_joint" type="fixed">
       <parent link="LFoot"/>
       <child link="l_ankle"/>
@@ -567,37 +482,6 @@
   	</joint>
 </xacro:unless>
  
-
-<!-- ********************TORSO******************** -->
-
-  <joint name="WaistLat" type="revolute"> <!-- Wrong name! need to fix this... -->
-    <parent link="Waist"/>
-    <child link="DWL"/>
-    <origin xyz="0.020281504 0 0.11912053" rpy="0 0 0" />
-    <axis xyz="0.939692608 0 0.3420201433" />
-    <limit velocity="4.0" effort="50" lower="-0.5236" upper="0.5235" />
-    <!-- dynamics friction="0" damping="0.3"/ -->
-    <dynamics friction="0" damping="3.0"/> 
-  </joint>
-
-  <joint name="WaistSag" type="revolute"> <!-- Wrong name! need to fix this... -->
-    <parent link="DWL"/>
-    <child link="DWS"/>
-    <origin xyz="0 0 0" rpy="0 0 0" />
-    <axis xyz="0 1 0" />
-    <limit velocity="4.0" effort="50" lower="-0.3491" upper="0.8727" />
-    <dynamics friction="0" damping="3.0"/>
-  </joint>
-
-  <joint name="WaistYaw" type="revolute">
-    <parent link="DWS"/>
-    <child link="DWYTorso"/>
-    <origin xyz="0 0 0.04749999" rpy="0 0 0" />
-    <axis xyz="0 0 1" />
-    <limit velocity="4.0" effort="50" lower="-1.3963" upper="1.3962" />
-    <dynamics friction="0" damping="3.0"/>
-  </joint>
-
 <!-- ********************RIGHT LEG******************** -->
 
   <joint name="RHipSag" type="revolute">

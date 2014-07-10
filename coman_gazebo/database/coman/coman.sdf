@@ -35,7 +35,7 @@
    </inertial>
    <collision name="base_link_collision_Waist">
     <pose>
-     0 0 -0.52 0 -0 3.14159
+     0 0 -0.52 0 -0 -3.14159
     </pose>
     <geometry>
      <mesh>
@@ -50,7 +50,7 @@
    </collision>
    <visual name="base_link_visual_Waist">
     <pose>
-     0 0 -0.52 0 -0 3.14159
+     0 0 -0.52 0 -0 -3.14159
     </pose>
     <geometry>
      <mesh>
@@ -1809,7 +1809,7 @@
    </inertial>
    <collision name="DWL_collision">
     <pose>
-     -0.0202815 0 -0.639121 0 -0 3.14159
+     -0.0202815 0 -0.639121 0 -0 -3.14159
     </pose>
     <geometry>
      <mesh>
@@ -1824,7 +1824,7 @@
    </collision>
    <visual name="DWL_visual">
     <pose>
-     -0.0202815 0 -0.639121 0 -0 3.14159
+     -0.0202815 0 -0.639121 0 -0 -3.14159
     </pose>
     <geometry>
      <mesh>
@@ -1939,7 +1939,7 @@
    </inertial>
    <collision name="DWS_collision">
     <pose>
-     -0.0202815 0 -0.639121 0 -0 3.14159
+     -0.0202815 0 -0.639121 0 -0 -3.14159
     </pose>
     <geometry>
      <mesh>
@@ -1954,7 +1954,7 @@
    </collision>
    <visual name="DWS_visual">
     <pose>
-     -0.0202815 0 -0.639121 0 -0 3.14159
+     -0.0202815 0 -0.639121 0 -0 -3.14159
     </pose>
     <geometry>
      <mesh>
@@ -2069,7 +2069,7 @@
    </inertial>
    <collision name="DWYTorso_collision">
     <pose>
-     -0.0202815 0 -0.686621 0 -0 3.14159
+     -0.0202815 0 -0.686621 0 -0 -3.14159
     </pose>
     <geometry>
      <mesh>
@@ -2114,7 +2114,7 @@
    </collision>
    <visual name="DWYTorso_visual">
     <pose>
-     -0.0202815 0 -0.686621 0 -0 3.14159
+     -0.0202815 0 -0.686621 0 -0 -3.14159
     </pose>
     <geometry>
      <mesh>
@@ -2157,6 +2157,9 @@
      </mesh>
     </geometry>
    </visual>
+   <gravity>
+    1
+   </gravity>
    <velocity_decay>
     <linear>
      0
@@ -2165,6 +2168,111 @@
      0
     </angular>
    </velocity_decay>
+   <self_collide>
+    0
+   </self_collide>
+   <sensor name="openni_camera_camera" type="depth">
+    <always_on>
+     1
+    </always_on>
+    <visualize>
+     1
+    </visualize>
+    <camera name="__default__">
+     <horizontal_fov>
+      1.047
+     </horizontal_fov>
+     <image>
+      <width>
+       640
+      </width>
+      <height>
+       480
+      </height>
+      <format>
+       R8G8B8
+      </format>
+     </image>
+     <depth_camera>
+      <output>
+       depths
+      </output>
+     </depth_camera>
+     <clip>
+      <near>
+       0.1
+      </near>
+      <far>
+       100
+      </far>
+     </clip>
+    </camera>
+    <plugin filename="libgazebo_ros_openni_kinect.so" name="camera_controller">
+     <alwaysOn>
+      true
+     </alwaysOn>
+     <updateRate>
+      10.0
+     </updateRate>
+     <cameraName>
+      camera
+     </cameraName>
+     <frameName>
+      camera_link
+     </frameName>
+     <imageTopicName>
+      rgb/image_raw
+     </imageTopicName>
+     <depthImageTopicName>
+      depth/image_raw
+     </depthImageTopicName>
+     <pointCloudTopicName>
+      depth/points
+     </pointCloudTopicName>
+     <cameraInfoTopicName>
+      rgb/camera_info
+     </cameraInfoTopicName>
+     <depthImageCameraInfoTopicName>
+      depth/camera_info
+     </depthImageCameraInfoTopicName>
+     <pointCloudCutoff>
+      0.4
+     </pointCloudCutoff>
+     <hackBaseline>
+      0.07
+     </hackBaseline>
+     <distortionK1>
+      0.0
+     </distortionK1>
+     <distortionK2>
+      0.0
+     </distortionK2>
+     <distortionK3>
+      0.0
+     </distortionK3>
+     <distortionT1>
+      0.0
+     </distortionT1>
+     <distortionT2>
+      0.0
+     </distortionT2>
+     <CxPrime>
+      0.0
+     </CxPrime>
+     <Cx>
+      0.0
+     </Cx>
+     <Cy>
+      0.0
+     </Cy>
+     <focalLength>
+      0.0
+     </focalLength>
+    </plugin>
+    <pose>
+     0.086 0 0.613 0 -0 0
+    </pose>
+   </sensor>
   </link>
   <joint name="WaistYaw" type="revolute">
    <child>

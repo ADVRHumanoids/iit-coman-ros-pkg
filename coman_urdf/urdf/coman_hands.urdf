@@ -19,8 +19,6 @@
   <!-- ******************** FAKE LINKS ******************** -->
   <!-- This links are defined in order to be compliant with http://www.ros.org/reps/rep-0120.html#coordinate-frames
 and to define the end effectors of the robot -->
-  <!-- The coordinate frame called base_link is rigidly attached to the robot root body. It is recommended to choose the robot waist as its root body. The base_link can be attached to the root in any arbitrary position or orientation; for every hardware platform there will be a different place on the base that provides an obvious point of reference. Note that REP 103 [1] specifies a preferred orientation for frames. -->
-  <link name="base_link"/>
   <!-- position and orientation of the arm regardless of the tool (grasping device for instance) attached to it -->
   <link name="l_wrist"/>
   <link name="r_wrist"/>
@@ -85,6 +83,7 @@ and to define the end effectors of the robot -->
     <child link="r_foot_lower_left_link"/>
   </joint>
   <!-- Head -->
+  <link name="gaze"/>
   <link name="Xtion_body">
     <inertial>
       <origin rpy="0 0 0" xyz="0.047 0.0 0.40"/>
@@ -123,22 +122,65 @@ and to define the end effectors of the robot -->
       </geometry>
     </collision>
   </link>
-  <link name="gaze"/>
+  <gazebo reference="gaze">
+    <sensor name="openni_camera_camera" type="depth">
+      <always_on>1</always_on>
+      <visualize>1</visualize>
+      <camera name="__default__">
+        <horizontal_fov>1.047</horizontal_fov>
+        <image>
+          <width>640</width>
+          <height>480</height>
+          <format>R8G8B8</format>
+        </image>
+        <depth_camera>
+          <output>depths</output>
+        </depth_camera>
+        <clip>
+          <near>0.1</near>
+          <far>100</far>
+        </clip>
+      </camera>
+      <plugin filename="libgazebo_ros_openni_kinect.so" name="camera_controller">
+        <alwaysOn>true</alwaysOn>
+        <updateRate>10.0</updateRate>
+        <cameraName>camera</cameraName>
+        <frameName>camera_link</frameName>
+        <imageTopicName>rgb/image_raw</imageTopicName>
+        <depthImageTopicName>depth/image_raw</depthImageTopicName>
+        <pointCloudTopicName>depth/points</pointCloudTopicName>
+        <cameraInfoTopicName>rgb/camera_info</cameraInfoTopicName>
+        <depthImageCameraInfoTopicName>depth/camera_info</depthImageCameraInfoTopicName>
+        <pointCloudCutoff>0.4</pointCloudCutoff>
+        <hackBaseline>0.07</hackBaseline>
+        <distortionK1>0.0</distortionK1>
+        <distortionK2>0.0</distortionK2>
+        <distortionK3>0.0</distortionK3>
+        <distortionT1>0.0</distortionT1>
+        <distortionT2>0.0</distortionT2>
+        <CxPrime>0.0</CxPrime>
+        <Cx>0.0</Cx>
+        <Cy>0.0</Cy>
+        <focalLength>0.0</focalLength>
+      </plugin>
+    </sensor>
+  </gazebo>
   <!-- ************ COMAN BASE ************** -->
+  <link name="base_link"/>
   <link name="Waist">
     <inertial>
-      <origin rpy="0 0 0" xyz="-0.026391145 -5.8216364E-4 0.052632312"/>
+      <origin rpy="0.0 0.0 0.0" xyz="-0.026391145 -5.8216364E-4 0.052632312"/>
       <mass value="1.8008695"/>
       <inertia ixx="0.0051032982" ixy="-5.7170981E-5" ixz="0.0016920543" iyy="0.006241636" iyz="1.7225949E-5" izz="0.0024517762"/>
     </inertial>
     <visual>
-      <origin rpy="0 0 -3.14159265359" xyz="0 0 -0.52"/>
+      <origin rpy="0 0 3.14159265359" xyz="0 0 -0.52"/>
       <geometry name="Waist_visual">
         <mesh filename="package://coman_urdf/meshes/collada/asm0001_collada_07_prt.dae" scale="0.03937 0.03937 0.03937"/>
       </geometry>
     </visual>
     <collision>
-      <origin rpy="0 0 -3.14159265359" xyz="0 0 -0.52"/>
+      <origin rpy="0 0 3.14159265359" xyz="0 0 -0.52"/>
       <geometry name="Waist_collision">
         <mesh filename="package://coman_urdf/meshes/collada/simple/simple_asm0001_collada_07_prt.stl" scale="0.03937 0.03937 0.03937"/>
       </geometry>
@@ -151,13 +193,13 @@ and to define the end effectors of the robot -->
       <inertia ixx="9.7126578E-4" ixy="-7.2101244E-7" ixz="1.1440119E-6" iyy="7.4686706E-4" iyz="-1.7450917E-4" izz="6.2196235E-4"/>
     </inertial>
     <visual>
-      <origin rpy="0 0 -3.14159265359" xyz="-0.020281504 0 -0.63912053"/>
+      <origin rpy="0 0 3.14159265359" xyz="-0.020281504 0 -0.63912053"/>
       <geometry name="DWL_visual">
         <mesh filename="package://coman_urdf/meshes/collada/asm0001_collada_09_prt.dae" scale="0.03937 0.03937 0.03937"/>
       </geometry>
     </visual>
     <collision>
-      <origin rpy="0 0 -3.14159265359" xyz="-0.020281504 0 -0.63912053"/>
+      <origin rpy="0 0 3.14159265359" xyz="-0.020281504 0 -0.63912053"/>
       <geometry name="DWL_collision">
         <mesh filename="package://coman_urdf/meshes/collada/simple/simple_asm0001_collada_09_prt.stl" scale="0.03937 0.03937 0.03937"/>
       </geometry>
@@ -170,13 +212,13 @@ and to define the end effectors of the robot -->
       <inertia ixx="3.4093348E-4" ixy="-6.2120042E-6" ixz="-1.3863473E-6" iyy="3.9581916E-4" iyz="1.443019E-6" izz="3.7449753E-4"/>
     </inertial>
     <visual>
-      <origin rpy="0 0 -3.14159265359" xyz="-0.020281504 0 -0.63912053"/>
+      <origin rpy="0 0 3.14159265359" xyz="-0.020281504 0 -0.63912053"/>
       <geometry name="DWS_visual">
         <mesh filename="package://coman_urdf/meshes/collada/asm0001_collada_08_prt.dae" scale="0.03937 0.03937 0.03937"/>
       </geometry>
     </visual>
     <collision>
-      <origin rpy="0 0 -3.14159265359" xyz="-0.020281504 0 -0.63912053"/>
+      <origin rpy="0 0 3.14159265359" xyz="-0.020281504 0 -0.63912053"/>
       <geometry name="DWS_collision">
         <mesh filename="package://coman_urdf/meshes/collada/simple/simple_asm0001_collada_08_prt.stl" scale="0.03937 0.03937 0.03937"/>
       </geometry>
@@ -189,18 +231,48 @@ and to define the end effectors of the robot -->
       <inertia ixx="0.034089342" ixy="-9.8308572E-6" ixz="-7.5649290E-4" iyy="0.030117357" iyz="6.2443771E-6" izz="0.025296582"/>
     </inertial>
     <visual>
-      <origin rpy="0 0 -3.14159265359" xyz="-0.020281504 0.0 -0.68662053"/>
+      <origin rpy="0 0 3.14159265359" xyz="-0.020281504 0.0 -0.68662053"/>
       <geometry name="DWYTorso_visual">
         <mesh filename="package://coman_urdf/meshes/collada/asm0001_collada_10_prt.dae" scale="0.03937 0.03937 0.03937"/>
       </geometry>
     </visual>
     <collision>
-      <origin rpy="0 0 -3.14159265359" xyz="-0.020281504 0.0 -0.68662053"/>
+      <origin rpy="0 0 3.14159265359" xyz="-0.020281504 0.0 -0.68662053"/>
       <geometry name="DWYTorso_collision">
         <mesh filename="package://coman_urdf/meshes/collada/simple/simple_asm0001_collada_10_prt.stl" scale="0.03937 0.03937 0.03937"/>
       </geometry>
     </collision>
   </link>
+  <joint name="base_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="Waist"/>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+  </joint>
+  <joint name="WaistLat" type="revolute">
+    <parent link="Waist"/>
+    <child link="DWL"/>
+    <origin rpy="0 0 0" xyz="0.020281504 0 0.11912053"/>
+    <axis xyz="0.93969262078 0 0.34202014332"/>
+    <limit effort="50" lower="-0.5236" upper="0.5235" velocity="4.0"/>
+    <!-- dynamics friction="0" damping="0.3"/ -->
+    <dynamics damping="3.0" friction="0"/>
+  </joint>
+  <joint name="WaistSag" type="revolute">
+    <parent link="DWL"/>
+    <child link="DWS"/>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <limit effort="50" lower="-0.3491" upper="0.8727" velocity="4.0"/>
+    <dynamics damping="3.0" friction="0"/>
+  </joint>
+  <joint name="WaistYaw" type="revolute">
+    <parent link="DWS"/>
+    <child link="DWYTorso"/>
+    <origin rpy="0 0 0" xyz="0 0 0.04749999"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="50" lower="-1.3963" upper="1.3962" velocity="4.0"/>
+    <dynamics damping="3.0" friction="0"/>
+  </joint>
   <link name="RHipMot">
     <inertial>
       <origin rpy="0 0 0" xyz="-3.269678E-4 -0.023587321 -2.6496509E-4"/>
@@ -549,11 +621,6 @@ and to define the end effectors of the robot -->
       </geometry>
     </collision>
   </link>
-  <joint name="base_joint" type="fixed">
-    <parent link="base_link"/>
-    <child link="Waist"/>
-    <origin rpy="0 0 0" xyz="0 0 0"/>
-  </joint>
   <joint name="l_ankle_joint" type="fixed">
     <parent link="LFoot"/>
     <child link="l_ankle"/>
@@ -607,33 +674,6 @@ and to define the end effectors of the robot -->
     <parent link="Xtion_cam_body"/>
     <child link="gaze"/>
     <origin rpy="0 0 0" xyz="0.015 0 0.022"/>
-  </joint>
-  <joint name="WaistLat" type="revolute">
-    <!-- Wrong name! need to fix this... -->
-    <parent link="Waist"/>
-    <child link="DWL"/>
-    <origin rpy="0 0 0" xyz="0.020281504 0 0.11912053"/>
-    <axis xyz="0.939692608 0 0.3420201433"/>
-    <limit effort="50" lower="-0.5236" upper="0.5235" velocity="4.0"/>
-    <!-- dynamics friction="0" damping="0.3"/ -->
-    <dynamics damping="3.0" friction="0"/>
-  </joint>
-  <joint name="WaistSag" type="revolute">
-    <!-- Wrong name! need to fix this... -->
-    <parent link="DWL"/>
-    <child link="DWS"/>
-    <origin rpy="0 0 0" xyz="0 0 0"/>
-    <axis xyz="0 1 0"/>
-    <limit effort="50" lower="-0.3491" upper="0.8727" velocity="4.0"/>
-    <dynamics damping="3.0" friction="0"/>
-  </joint>
-  <joint name="WaistYaw" type="revolute">
-    <parent link="DWS"/>
-    <child link="DWYTorso"/>
-    <origin rpy="0 0 0" xyz="0 0 0.04749999"/>
-    <axis xyz="0 0 1"/>
-    <limit effort="50" lower="-1.3963" upper="1.3962" velocity="4.0"/>
-    <dynamics damping="3.0" friction="0"/>
   </joint>
   <joint name="RHipSag" type="revolute">
     <parent link="Waist"/>
