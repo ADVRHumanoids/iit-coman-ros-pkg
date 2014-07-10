@@ -1,55 +1,5 @@
 joint_limits:
-  RElbj:
-    has_velocity_limits: true
-    max_velocity: 4
-    has_acceleration_limits: false
-    max_acceleration: 0
-  LWrj1:
-    has_velocity_limits: true
-    max_velocity: 4
-    has_acceleration_limits: false
-    max_acceleration: 0
-  LKneeSag:
-    has_velocity_limits: true
-    max_velocity: 4
-    has_acceleration_limits: false
-    max_acceleration: 0
-  LShLat:
-    has_velocity_limits: true
-    max_velocity: 4
-    has_acceleration_limits: false
-    max_acceleration: 0
-  RWrj2:
-    has_velocity_limits: true
-    max_velocity: 4
-    has_acceleration_limits: false
-    max_acceleration: 0
-  RHipYaw:
-    has_velocity_limits: true
-    max_velocity: 4
-    has_acceleration_limits: false
-    max_acceleration: 0
-  LShYaw:
-    has_velocity_limits: true
-    max_velocity: 4
-    has_acceleration_limits: false
-    max_acceleration: 0
-  LHipLat:
-    has_velocity_limits: true
-    max_velocity: 4
-    has_acceleration_limits: false
-    max_acceleration: 0
   LHipSag:
-    has_velocity_limits: true
-    max_velocity: 4
-    has_acceleration_limits: false
-    max_acceleration: 0
-  RForearmPlate:
-    has_velocity_limits: true
-    max_velocity: 4
-    has_acceleration_limits: false
-    max_acceleration: 0
-  RKneeSag:
     has_velocity_limits: true
     max_velocity: 4
     has_acceleration_limits: false
@@ -59,7 +9,17 @@ joint_limits:
     max_velocity: 4
     has_acceleration_limits: false
     max_acceleration: 0
-  LShSag:
+  RAnkSag:
+    has_velocity_limits: true
+    max_velocity: 4
+    has_acceleration_limits: false
+    max_acceleration: 0
+  LAnkSag:
+    has_velocity_limits: true
+    max_velocity: 4
+    has_acceleration_limits: false
+    max_acceleration: 0
+  LKneeSag:
     has_velocity_limits: true
     max_velocity: 4
     has_acceleration_limits: false
@@ -69,7 +29,32 @@ joint_limits:
     max_velocity: 4
     has_acceleration_limits: false
     max_acceleration: 0
-  LWrj2:
+  RWrj2:
+    has_velocity_limits: true
+    max_velocity: 4
+    has_acceleration_limits: false
+    max_acceleration: 0
+  RHipSag:
+    has_velocity_limits: true
+    max_velocity: 4
+    has_acceleration_limits: false
+    max_acceleration: 0
+  LShSag:
+    has_velocity_limits: true
+    max_velocity: 4
+    has_acceleration_limits: false
+    max_acceleration: 0
+  LHipLat:
+    has_velocity_limits: true
+    max_velocity: 4
+    has_acceleration_limits: false
+    max_acceleration: 0
+  RHipYaw:
+    has_velocity_limits: true
+    max_velocity: 4
+    has_acceleration_limits: false
+    max_acceleration: 0
+  RKneeSag:
     has_velocity_limits: true
     max_velocity: 4
     has_acceleration_limits: false
@@ -84,37 +69,7 @@ joint_limits:
     max_velocity: 4
     has_acceleration_limits: false
     max_acceleration: 0
-  LAnkSag:
-    has_velocity_limits: true
-    max_velocity: 4
-    has_acceleration_limits: false
-    max_acceleration: 0
-  RHipSag:
-    has_velocity_limits: true
-    max_velocity: 4
-    has_acceleration_limits: false
-    max_acceleration: 0
-  RAnkSag:
-    has_velocity_limits: true
-    max_velocity: 4
-    has_acceleration_limits: false
-    max_acceleration: 0
-  LForearmPlate:
-    has_velocity_limits: true
-    max_velocity: 4
-    has_acceleration_limits: false
-    max_acceleration: 0
   LAnkLat:
-    has_velocity_limits: true
-    max_velocity: 4
-    has_acceleration_limits: false
-    max_acceleration: 0
-  RShSag:
-    has_velocity_limits: true
-    max_velocity: 4
-    has_acceleration_limits: false
-    max_acceleration: 0
-  RShYaw:
     has_velocity_limits: true
     max_velocity: 4
     has_acceleration_limits: false
@@ -124,7 +79,52 @@ joint_limits:
     max_velocity: 4
     has_acceleration_limits: false
     max_acceleration: 0
+  LShLat:
+    has_velocity_limits: true
+    max_velocity: 4
+    has_acceleration_limits: false
+    max_acceleration: 0
+  LWrj1:
+    has_velocity_limits: true
+    max_velocity: 4
+    has_acceleration_limits: false
+    max_acceleration: 0
+  LWrj2:
+    has_velocity_limits: true
+    max_velocity: 4
+    has_acceleration_limits: false
+    max_acceleration: 0
+  LShYaw:
+    has_velocity_limits: true
+    max_velocity: 4
+    has_acceleration_limits: false
+    max_acceleration: 0
+  RShYaw:
+    has_velocity_limits: true
+    max_velocity: 4
+    has_acceleration_limits: false
+    max_acceleration: 0
+  RElbj:
+    has_velocity_limits: true
+    max_velocity: 4
+    has_acceleration_limits: false
+    max_acceleration: 0
+  RShSag:
+    has_velocity_limits: true
+    max_velocity: 4
+    has_acceleration_limits: false
+    max_acceleration: 0
   RShLat:
+    has_velocity_limits: true
+    max_velocity: 4
+    has_acceleration_limits: false
+    max_acceleration: 0
+  LForearmPlate:
+    has_velocity_limits: true
+    max_velocity: 4
+    has_acceleration_limits: false
+    max_acceleration: 0
+  RForearmPlate:
     has_velocity_limits: true
     max_velocity: 4
     has_acceleration_limits: false
