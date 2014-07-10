@@ -52,7 +52,6 @@
     <group_state name="home" group="right_arm">
         <joint name="RElbj" value="0" />
         <joint name="RForearmPlate" value="0" />
-        <joint name="RShLat" value="-1,57" />
         <joint name="RShSag" value="0" />
         <joint name="RShYaw" value="0" />
         <joint name="RWrj1" value="0" />
