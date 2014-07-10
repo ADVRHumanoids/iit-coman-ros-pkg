@@ -2367,7 +2367,7 @@
    </inertial>
    <collision name="LShp_collision">
     <pose>
-     -0.005305 -0.0825 -0.844329 0 -0 3.14159
+     -0.005305 -0.0825 -0.844329 0 -0 -3.14159
     </pose>
     <geometry>
      <mesh>
@@ -2382,7 +2382,7 @@
    </collision>
    <visual name="LShp_visual">
     <pose>
-     -0.005305 -0.0825 -0.844329 0 -0 3.14159
+     -0.005305 -0.0825 -0.844329 0 -0 -3.14159
     </pose>
     <geometry>
      <mesh>
@@ -2497,7 +2497,7 @@
    </inertial>
    <collision name="LShr_collision">
     <pose>
-     -0.005305 -0.1558 -0.844329 0 -0 3.14159
+     -0.005305 -0.1558 -0.844329 0 -0 -3.14159
     </pose>
     <geometry>
      <mesh>
@@ -2512,7 +2512,7 @@
    </collision>
    <visual name="LShr_visual">
     <pose>
-     -0.005305 -0.1558 -0.844329 0 -0 3.14159
+     -0.005305 -0.1558 -0.844329 0 -0 -3.14159
     </pose>
     <geometry>
      <mesh>
@@ -2627,7 +2627,7 @@
    </inertial>
    <collision name="LShy_collision">
     <pose>
-     -0.005305 -0.1558 -0.799521 0 -0 3.14159
+     -0.005305 -0.1558 -0.799521 0 -0 -3.14159
     </pose>
     <geometry>
      <mesh>
@@ -2642,7 +2642,7 @@
    </collision>
    <visual name="LShy_visual">
     <pose>
-     -0.005305 -0.1558 -0.799521 0 -0 3.14159
+     -0.005305 -0.1558 -0.799521 0 -0 -3.14159
     </pose>
     <geometry>
      <mesh>
@@ -3324,7 +3324,7 @@
    </inertial>
    <collision name="RShp_collision">
     <pose>
-     -0.005305 0.0825 -0.844329 0 -0 3.14159
+     -0.005305 0.0825 -0.844329 0 -0 -3.14159
     </pose>
     <geometry>
      <mesh>
@@ -3339,7 +3339,7 @@
    </collision>
    <visual name="RShp_visual">
     <pose>
-     -0.005305 0.0825 -0.844329 0 -0 3.14159
+     -0.005305 0.0825 -0.844329 0 -0 -3.14159
     </pose>
     <geometry>
      <mesh>
@@ -3454,7 +3454,7 @@
    </inertial>
    <collision name="RShr_collision">
     <pose>
-     -0.005305 0.1558 -0.844329 0 -0 3.14159
+     -0.005305 0.1558 -0.844329 0 -0 -3.14159
     </pose>
     <geometry>
      <mesh>
@@ -3469,7 +3469,7 @@
    </collision>
    <visual name="RShr_visual">
     <pose>
-     -0.005305 0.1558 -0.844329 0 -0 3.14159
+     -0.005305 0.1558 -0.844329 0 -0 -3.14159
     </pose>
     <geometry>
      <mesh>
@@ -3584,7 +3584,7 @@
    </inertial>
    <collision name="RShy_collision">
     <pose>
-     -0.005305 0.1558 -0.799521 0 -0 3.14159
+     -0.005305 0.1558 -0.799521 0 -0 -3.14159
     </pose>
     <geometry>
      <mesh>
@@ -3599,7 +3599,7 @@
    </collision>
    <visual name="RShy_visual">
     <pose>
-     -0.005305 0.1558 -0.799521 0 -0 3.14159
+     -0.005305 0.1558 -0.799521 0 -0 -3.14159
     </pose>
     <geometry>
      <mesh>
