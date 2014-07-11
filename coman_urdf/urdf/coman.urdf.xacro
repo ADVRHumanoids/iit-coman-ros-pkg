@@ -147,11 +147,11 @@ and to define the end effectors of the robot -->
 
 <!-- ************ FOREARMS ************ -->
 <xacro:if value="${GAZEBO_COMAN_USES_NO_FOREARMS}">
-      <xacro:include filename="$(find coman_urdf)/urdf/forearms/no_forearms/no_forearms.urdf.xacro" />
+      <xacro:include filename="$(find coman_urdf)/urdf/parts/no_forearms.urdf.xacro" />
   </xacro:if>
 
   <xacro:if value="${GAZEBO_COMAN_USES_7DOF_FOREARMS_DRC_14}">
-      <xacro:include filename="$(find coman_urdf)/urdf/forearms/7DOF_forearms_DRC_14/7DOF_forearms_DRC_14.urdf.xacro" />
+      <xacro:include filename="$(find coman_urdf)/urdf/parts/7DOF_forearms_DRC_14.urdf.xacro" />
   </xacro:if>
 
 <!-- ************ HANDS ************ -->
