@@ -23,11 +23,6 @@
 and to define the end effectors of the robot -->
 
 
-<!-- position and orientation of the arm regardless of the tool (grasping device for instance) attached to it -->
-  <link name="l_wrist"/>
-  <link name="r_wrist"/>
-
-
 <!--  position and orientation of the leg regardless of the support body geometry -->
   <link name="l_ankle"/>
   <link name="r_ankle"/>
@@ -146,29 +141,24 @@ and to define the end effectors of the robot -->
 <xacro:include filename="$(find coman_urdf)/urdf/coman_base.urdf.xacro"/>
 
 <!-- ************ FOREARMS ************ -->
-<xacro:if value="${GAZEBO_COMAN_USES_NO_FOREARMS}">
-      <xacro:include filename="$(find coman_urdf)/urdf/parts/no_forearms.urdf.xacro" />
-  </xacro:if>
+<!-- This links are defined in order to be compliant with http://www.ros.org/reps/rep-0120.html#coordinate-frames
+and to define the end effectors of the robot -->
 
-  <xacro:if value="${GAZEBO_COMAN_USES_7DOF_FOREARMS_DRC_14}">
-      <xacro:include filename="$(find coman_urdf)/urdf/parts/7DOF_forearms_DRC_14.urdf.xacro" />
-  </xacro:if>
+<!-- position and orientation of the arm regardless of the tool (grasping device for instance) attached to it -->
+<link name="l_wrist"/>
+<link name="r_wrist"/>
+
+<xacro:if value="${GAZEBO_COMAN_USES_NO_FOREARMS}">
+    <xacro:include filename="$(find coman_urdf)/urdf/parts/no_forearms.urdf.xacro" />
+</xacro:if>
+
+<xacro:if value="${GAZEBO_COMAN_USES_7DOF_FOREARMS_DRC_14}">
+    <xacro:include filename="$(find coman_urdf)/urdf/parts/7DOF_forearms_DRC_14.urdf.xacro" />
+</xacro:if>
 
 <!-- ************ HANDS ************ -->
 
   <xacro:if value="${GAZEBO_COMAN_USES_7DOF_FOREARMS_DRC_14}">
-
-   <joint name="l_wrist_joint" type="fixed">
-     <parent link="LWrMot3"/>
-     <child link="l_wrist"/>
-     <origin xyz="0 0 0" rpy="0 0 0" />
-   </joint>
-
-    <joint name="r_wrist_joint" type="fixed">
-      <parent link="RWrMot3"/>
-      <child link="r_wrist"/>
-      <origin xyz="0 0 0" rpy="0 0 0" />
-    </joint>
 
     <xacro:include filename="$(find coman_urdf)/urdf/soft_hand.urdf.xacro" />	
 
@@ -207,20 +197,6 @@ and to define the end effectors of the robot -->
     </xacro:unless>
 
   </xacro:if>
-
-<xacro:if value="${GAZEBO_COMAN_USES_NO_FOREARMS}">
-	<joint name="l_wrist_joint" type="fixed">
-	  <parent link="LElb"/>
-	  <child link="l_wrist"/>
-	  <origin xyz="-0.015 0 -0.22" rpy="0 0 0" />
-	</joint>
-
-        <joint name="r_wrist_joint" type="fixed">
-	  <parent link="RElb"/>
-	  <child link="r_wrist"/>
-	  <origin xyz="-0.015 0 -0.22" rpy="0 0 0" />
-	</joint>
-</xacro:if>
 
 <!-- IMU -->
   <link name="imu_link">

@@ -19,9 +19,6 @@
   <!-- ******************** FAKE LINKS ******************** -->
   <!-- This links are defined in order to be compliant with http://www.ros.org/reps/rep-0120.html#coordinate-frames
 and to define the end effectors of the robot -->
-  <!-- position and orientation of the arm regardless of the tool (grasping device for instance) attached to it -->
-  <link name="l_wrist"/>
-  <link name="r_wrist"/>
   <!--  position and orientation of the leg regardless of the support body geometry -->
   <link name="l_ankle"/>
   <link name="r_ankle"/>
@@ -772,6 +769,11 @@ and to define the end effectors of the robot -->
     <dynamics damping="3.0" friction="0"/>
   </joint>
   <!-- ************ FOREARMS ************ -->
+  <!-- This links are defined in order to be compliant with http://www.ros.org/reps/rep-0120.html#coordinate-frames
+and to define the end effectors of the robot -->
+  <!-- position and orientation of the arm regardless of the tool (grasping device for instance) attached to it -->
+  <link name="l_wrist"/>
+  <link name="r_wrist"/>
   <link name="LForearm">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 -0.085"/>
@@ -815,22 +817,22 @@ and to define the end effectors of the robot -->
     <child link="LForearm"/>
     <origin rpy="0 0 0" xyz="-0.015 0.0 -0.05"/>
   </joint>
-  <joint name="RForearmPlate" type="fixed">
-    <parent link="RElb"/>
-    <child link="RForearm"/>
-    <origin rpy="0 0 0" xyz="-0.015 0.0 -0.05"/>
-  </joint>
-  <!-- ************ HANDS ************ -->
   <joint name="l_wrist_joint" type="fixed">
     <parent link="LElb"/>
     <child link="l_wrist"/>
     <origin rpy="0 0 0" xyz="-0.015 0 -0.22"/>
+  </joint>
+  <joint name="RForearmPlate" type="fixed">
+    <parent link="RElb"/>
+    <child link="RForearm"/>
+    <origin rpy="0 0 0" xyz="-0.015 0.0 -0.05"/>
   </joint>
   <joint name="r_wrist_joint" type="fixed">
     <parent link="RElb"/>
     <child link="r_wrist"/>
     <origin rpy="0 0 0" xyz="-0.015 0 -0.22"/>
   </joint>
+  <!-- ************ HANDS ************ -->
   <!-- IMU -->
   <link name="imu_link">
     <inertial>

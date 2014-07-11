@@ -54,13 +54,25 @@
         <parent link="LElb"/>
         <child link="LForearm"/>
         <origin xyz="-0.015 0.0 -0.05" rpy="0 0 0"/>
-      </joint>
+</joint>
+
+<joint name="l_wrist_joint" type="fixed">
+	  <parent link="LElb"/>
+	  <child link="l_wrist"/>
+	  <origin xyz="-0.015 0 -0.22" rpy="0 0 0" />
+</joint>
+
 <!-- ***********RIGHT FOREARM***********-->
 <joint name="RForearmPlate" type="fixed">
       <parent link="RElb"/>
       <child link="RForearm"/>
       <origin xyz="-0.015 0.0 -0.05" rpy="0 0 0"/>
-    </joint>
+</joint>
 
+<joint name="r_wrist_joint" type="fixed">
+	<parent link="RElb"/>
+	<child link="r_wrist"/>
+	<origin xyz="-0.015 0 -0.22" rpy="0 0 0" />
+</joint>
 
 </robot>
