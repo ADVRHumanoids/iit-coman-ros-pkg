@@ -2601,7 +2601,22 @@
    </inertial>
    <collision name="LElb_collision">
     <pose>
-     -0.020305 -0.1558 -0.664329 0 -0 3.14159
+     0 0 0 -1.57079 1.57079 -2.65361e-06
+    </pose>
+    <geometry>
+     <mesh>
+      <scale>
+       1 1 1
+      </scale>
+      <uri>
+       model://coman_urdf/meshes/collada/simple/forearms/elbow.stl
+      </uri>
+     </mesh>
+    </geometry>
+   </collision>
+   <collision name="LElb_collision_LForearm">
+    <pose>
+     -0.0205 -0.1558 -0.6675 0 -0 -3.14159
     </pose>
     <geometry>
      <mesh>
@@ -2609,14 +2624,29 @@
        0.03937 0.03937 0.03937
       </scale>
       <uri>
-       model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_11_prt.stl
+       model://coman_urdf/meshes/collada/simple/forearm_old.dae
       </uri>
      </mesh>
     </geometry>
    </collision>
    <visual name="LElb_visual">
     <pose>
-     -0.020305 -0.1558 -0.664329 0 -0 3.14159
+     0 0 0 -1.57079 1.57079 -2.65361e-06
+    </pose>
+    <geometry>
+     <mesh>
+      <scale>
+       1 1 1
+      </scale>
+      <uri>
+       model://coman_urdf/meshes/collada/forearms/elbow.dae
+      </uri>
+     </mesh>
+    </geometry>
+   </visual>
+   <visual name="LElb_visual_LForearm">
+    <pose>
+     -0.0205 -0.1558 -0.6675 0 -0 -3.14159
     </pose>
     <geometry>
      <mesh>
@@ -2624,7 +2654,7 @@
        0.03937 0.03937 0.03937
       </scale>
       <uri>
-       model://coman_urdf/meshes/collada/asm0001_collada_11_prt.dae
+       model://coman_urdf/meshes/collada/forearm_old.dae
       </uri>
      </mesh>
     </geometry>
@@ -3121,7 +3151,22 @@
    </inertial>
    <collision name="RElb_collision">
     <pose>
-     -0.020305 -0.1558 -0.664329 0 -0 3.14159
+     0 0 0 -1.57079 1.57079 -2.65361e-06
+    </pose>
+    <geometry>
+     <mesh>
+      <scale>
+       1 1 1
+      </scale>
+      <uri>
+       model://coman_urdf/meshes/collada/simple/forearms/elbow.stl
+      </uri>
+     </mesh>
+    </geometry>
+   </collision>
+   <collision name="RElb_collision_RForearm">
+    <pose>
+     -0.0205 -0.1558 -0.6675 0 -0 -3.14159
     </pose>
     <geometry>
      <mesh>
@@ -3129,14 +3174,29 @@
        0.03937 0.03937 0.03937
       </scale>
       <uri>
-       model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_11_prt.stl
+       model://coman_urdf/meshes/collada/simple/forearm_old.dae
       </uri>
      </mesh>
     </geometry>
    </collision>
    <visual name="RElb_visual">
     <pose>
-     -0.020305 -0.1558 -0.664329 0 -0 3.14159
+     0 0 0 -1.57079 1.57079 -2.65361e-06
+    </pose>
+    <geometry>
+     <mesh>
+      <scale>
+       1 1 1
+      </scale>
+      <uri>
+       model://coman_urdf/meshes/collada/forearms/elbow.dae
+      </uri>
+     </mesh>
+    </geometry>
+   </visual>
+   <visual name="RElb_visual_RForearm">
+    <pose>
+     -0.0205 -0.1558 -0.6675 0 -0 -3.14159
     </pose>
     <geometry>
      <mesh>
@@ -3144,7 +3204,7 @@
        0.03937 0.03937 0.03937
       </scale>
       <uri>
-       model://coman_urdf/meshes/collada/asm0001_collada_11_prt.dae
+       model://coman_urdf/meshes/collada/forearm_old.dae
       </uri>
      </mesh>
     </geometry>
