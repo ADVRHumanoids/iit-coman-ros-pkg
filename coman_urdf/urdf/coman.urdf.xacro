@@ -199,26 +199,8 @@ and to define the end effectors of the robot -->
   </xacro:if>
 
 <!-- IMU -->
-  <link name="imu_link">
-    <inertial>
-      <mass value="0.01"/>
-      <origin xyz="0 0 0"/>
-      <inertia ixx="1.0E-6" ixy="0" ixz="0" iyy="1.0E-6" iyz="0" izz="1.0E-6"/>
-    </inertial>
-    <visual>
-      <origin rpy="0 0 0" xyz="0 0 0"/>
-      <geometry>
-        <box size="0.01 0.01 0.01"/>
-      </geometry>
-    </visual>
-  </link>
-
-  <joint name="imu_joint" type="fixed">
-    <parent link="Waist"/>
-    <child link="imu_link"/>
-    <origin xyz="-0.072 -0.0068 0.044" rpy="0 3.14159 0"/>
-  </joint>
-
+<xacro:include filename="$(find coman_urdf)/urdf/sensors/imu.urdf.xacro"/>
+  
 </robot>
 
 
