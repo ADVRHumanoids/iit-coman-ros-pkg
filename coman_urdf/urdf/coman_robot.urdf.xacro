@@ -11,9 +11,7 @@
   <xacro:include filename="$(find coman_urdf)/urdf/coman.urdf.xacro" />
 
   <xacro:include filename="$(find coman_urdf)/urdf/microstrain_3dmgx2_imu.gazebo.xacro" />
-  <xacro:if value="$(optenv GAZEBO_COMAN_USES_ROS false)">
-  	<xacro:include filename="$(find coman_urdf)/urdf/coman_transmission.urdf.xacro" /> 
-  </xacro:if>
+
   <xacro:include filename="$(find coman_urdf)/urdf/coman.gazebo.xacro" />
 
 <!-- YARP PLUGINS for GAZEBO SIMULATION -->
