@@ -9,6 +9,9 @@ add_custom_target(  remove_old_coman_gazebo ALL
                     COMMAND ${CMAKE_COMMAND} -E remove_directory 
                     "~/.gazebo/models/coman/")
 
+add_custom_target(  compile_urdf_sdf ALL
+                    COMMAND ${CMAKE_SOURCE_DIR}/coman_urdf/script/create_urdf_srdf_sdf.sh)
+
 if(CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT)
     add_custom_target(	copy_coman_gazebo ALL
         				COMMAND ${CMAKE_COMMAND} -E copy_directory 
