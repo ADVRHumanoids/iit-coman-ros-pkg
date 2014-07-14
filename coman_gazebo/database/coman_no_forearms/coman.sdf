@@ -147,7 +147,7 @@
    </inertial>
    <collision name="LHipMot_collision">
     <pose>
-     0 -0.023 -0.52 0 -0 3.14159
+     0 -0.023 -0.52 0 -0 -3.14159
     </pose>
     <geometry>
      <mesh>
@@ -162,7 +162,7 @@
    </collision>
    <visual name="LHipMot_visual">
     <pose>
-     0 -0.023 -0.52 0 -0 3.14159
+     0 -0.023 -0.52 0 -0 -3.14159
     </pose>
     <geometry>
      <mesh>
@@ -277,7 +277,7 @@
    </inertial>
    <collision name="LThighUpLeg_collision">
     <pose>
-     0 -0.0726 -0.52 0 -0 3.14159
+     0 -0.0726 -0.52 0 -0 -3.14159
     </pose>
     <geometry>
      <mesh>
@@ -292,7 +292,7 @@
    </collision>
    <visual name="LThighUpLeg_visual">
     <pose>
-     0 -0.0726 -0.52 0 -0 3.14159
+     0 -0.0726 -0.52 0 -0 -3.14159
     </pose>
     <geometry>
      <mesh>
@@ -407,7 +407,7 @@
    </inertial>
    <collision name="LThighLowLeg_collision">
     <pose>
-     0 -0.0726 -0.4176 0 -0 3.14159
+     0 -0.0726 -0.4176 0 -0 -3.14159
     </pose>
     <geometry>
      <mesh>
@@ -422,7 +422,7 @@
    </collision>
    <visual name="LThighLowLeg_visual">
     <pose>
-     0 -0.0726 -0.4176 0 -0 3.14159
+     0 -0.0726 -0.4176 0 -0 -3.14159
     </pose>
     <geometry>
      <mesh>
@@ -537,7 +537,7 @@
    </inertial>
    <collision name="LLowLeg_collision">
     <pose>
-     0 -0.0726 -0.2942 0 -0 3.14159
+     0 -0.0726 -0.2942 0 -0 -3.14159
     </pose>
     <geometry>
      <mesh>
@@ -552,7 +552,7 @@
    </collision>
    <visual name="LLowLeg_visual">
     <pose>
-     0 -0.0726 -0.2942 0 -0 3.14159
+     0 -0.0726 -0.2942 0 -0 -3.14159
     </pose>
     <geometry>
      <mesh>
@@ -667,7 +667,7 @@
    </inertial>
    <collision name="LFootmot_collision">
     <pose>
-     0 -0.0726 -0.0932 0 -0 3.14159
+     0 -0.0726 -0.0932 0 -0 -3.14159
     </pose>
     <geometry>
      <mesh>
@@ -682,7 +682,7 @@
    </collision>
    <visual name="LFootmot_visual">
     <pose>
-     0 -0.0726 -0.0932 0 -0 3.14159
+     0 -0.0726 -0.0932 0 -0 -3.14159
     </pose>
     <geometry>
      <mesh>
@@ -984,7 +984,7 @@
    </inertial>
    <collision name="RHipMot_collision">
     <pose>
-     0 0.023 -0.52 0 -0 3.14159
+     0 0.023 -0.52 0 -0 -3.14159
     </pose>
     <geometry>
      <mesh>
@@ -999,7 +999,7 @@
    </collision>
    <visual name="RHipMot_visual">
     <pose>
-     0 0.023 -0.52 0 -0 3.14159
+     0 0.023 -0.52 0 -0 -3.14159
     </pose>
     <geometry>
      <mesh>
@@ -1114,7 +1114,7 @@
    </inertial>
    <collision name="RThighUpLeg_collision">
     <pose>
-     0 0.0726 -0.52 0 -0 3.14159
+     0 0.0726 -0.52 0 -0 -3.14159
     </pose>
     <geometry>
      <mesh>
@@ -1129,7 +1129,7 @@
    </collision>
    <visual name="RThighUpLeg_visual">
     <pose>
-     0 0.0726 -0.52 0 -0 3.14159
+     0 0.0726 -0.52 0 -0 -3.14159
     </pose>
     <geometry>
      <mesh>
@@ -1244,7 +1244,7 @@
    </inertial>
    <collision name="RThighLowLeg_collision">
     <pose>
-     0 0.0726 -0.4176 0 -0 3.14159
+     0 0.0726 -0.4176 0 -0 -3.14159
     </pose>
     <geometry>
      <mesh>
@@ -1259,7 +1259,7 @@
    </collision>
    <visual name="RThighLowLeg_visual">
     <pose>
-     0 0.0726 -0.4176 0 -0 3.14159
+     0 0.0726 -0.4176 0 -0 -3.14159
     </pose>
     <geometry>
      <mesh>
@@ -1374,7 +1374,7 @@
    </inertial>
    <collision name="RLowLeg_collision">
     <pose>
-     0 0.0726 -0.2942 0 -0 3.14159
+     0 0.0726 -0.2942 0 -0 -3.14159
     </pose>
     <geometry>
      <mesh>
@@ -1389,7 +1389,7 @@
    </collision>
    <visual name="RLowLeg_visual">
     <pose>
-     0 0.0726 -0.2942 0 -0 3.14159
+     0 0.0726 -0.2942 0 -0 -3.14159
     </pose>
     <geometry>
      <mesh>
@@ -1504,7 +1504,7 @@
    </inertial>
    <collision name="RFootmot_collision">
     <pose>
-     0 0.0726 -0.0932 0 -0 3.14159
+     0 0.0726 -0.0932 0 -0 -3.14159
     </pose>
     <geometry>
      <mesh>
@@ -1519,7 +1519,7 @@
    </collision>
    <visual name="RFootmot_visual">
     <pose>
-     0 0.0726 -0.0932 0 -0 3.14159
+     0 0.0726 -0.0932 0 -0 -3.14159
     </pose>
     <geometry>
      <mesh>
