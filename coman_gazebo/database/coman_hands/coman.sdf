@@ -797,7 +797,7 @@
    </inertial>
    <collision name="LFoot_collision">
     <pose>
-     0.03 0 -0.09 0 -0 0
+     0.03 0 -0.07 0 -0 0
     </pose>
     <geometry>
      <box>
@@ -840,7 +840,7 @@
    </collision>
    <visual name="LFoot_visual">
     <pose>
-     0.03 0 -0.09 0 -0 0
+     0.03 0 -0.07 0 -0 0
     </pose>
     <geometry>
      <box>
@@ -1628,7 +1628,7 @@
    </inertial>
    <collision name="RFoot_collision">
     <pose>
-     0.03 0 -0.09 0 -0 0
+     0.03 0 -0.07 0 -0 0
     </pose>
     <geometry>
      <box>
@@ -1671,7 +1671,7 @@
    </collision>
    <visual name="RFoot_visual">
     <pose>
-     0.03 0 -0.09 0 -0 0
+     0.03 0 -0.07 0 -0 0
     </pose>
     <geometry>
      <box>
