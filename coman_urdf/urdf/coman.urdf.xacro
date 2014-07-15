@@ -17,30 +17,6 @@
 <!-- ************ MODEL CONFIGURATION ************ -->
 <xacro:include filename="$(find coman_urdf)/urdf/coman_config.urdf.xacro" />
 
-<!-- ******************** FAKE LINKS ******************** -->
-
-<!-- This links are defined in order to be compliant with http://www.ros.org/reps/rep-0120.html#coordinate-frames
-and to define the end effectors of the robot -->
-
-
-<!--  position and orientation of the leg regardless of the support body geometry -->
-  <link name="l_ankle"/>
-  <link name="r_ankle"/>
-
-<!-- position and orientation of the left leg support body. The (X,Y) plane of this frame must be coplanar with the support body contact surface. It is recommended to choose the origin as the projection of the support body origin on the contact surface. The Z coordinate of this frame should be on the ground level when standing. -->
-  <link name="l_sole"/>
-  <link name="r_sole"/>
-
-<!--  position and orientation of the leg toe body. The (X,Y) plan of this frame must be coplanar with the toe body contact surface. It is recommended to choose the origin as the projection of the body center on the contact surface. -->
-  <link name="l_toe"/>
-  <link name="r_toe"/>
-
-
-
-
-<!-- Reference frames in feet -->
-<xacro:include filename="$(find coman_urdf)/urdf/foot_reference_frame.urdf.xacro" />
-
 <!-- Head -->
 
 <link name="gaze"/>

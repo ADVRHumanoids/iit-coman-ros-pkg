@@ -19,18 +19,29 @@
 <xacro:include filename="$(find coman_urdf)/urdf/parts/torso.urdf.xacro" />
   
 <!-- ********************LEGS******************** -->
+<!-- This links are defined in order to be compliant with http://www.ros.org/reps/rep-0120.html#coordinate-frames
+and to define the end effectors of the robot -->
+
+
+<!--  position and orientation of the leg regardless of the support body geometry -->
+  <link name="l_ankle"/>
+  <link name="r_ankle"/>
+
+<!-- position and orientation of the left leg support body. The (X,Y) plane of this frame must be coplanar with the support body contact surface. It is recommended to choose the origin as the projection of the support body origin on the contact surface. The Z coordinate of this frame should be on the ground level when standing. -->
+  <link name="l_sole"/>
+  <link name="r_sole"/>
+
+<!--  position and orientation of the leg toe body. The (X,Y) plan of this frame must be coplanar with the toe body contact surface. It is recommended to choose the origin as the projection of the body center on the contact surface. -->
+  <link name="l_toe"/>
+  <link name="r_toe"/>
+
 <xacro:include filename="$(find coman_urdf)/urdf/parts/legs.urdf.xacro" />
 
-<!-- ********************ARMS******************** -->
-<xacro:include filename="$(find coman_urdf)/urdf/parts/arms.urdf.xacro" />
-
-<!-- ********************JOINTS******************** -->
-
-    <joint name="l_ankle_joint" type="fixed">
-      <parent link="LFoot"/>
-      <child link="l_ankle"/>
-      <origin xyz="0 0 0" rpy="0 0 0" />
-    </joint>
+  <joint name="l_ankle_joint" type="fixed">
+     <parent link="LFoot"/>
+     <child link="l_ankle"/>
+     <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
 
   <joint name="r_ankle_joint" type="fixed">
     <parent link="RFoot"/>
@@ -62,7 +73,13 @@
     <origin xyz="0.13 0 0" rpy="0 0 0" />
   </joint>
 
+<!-- Reference frames in feet -->
+<xacro:include filename="$(find coman_urdf)/urdf/parts/foot_reference_frame.urdf.xacro" />
 
+<!-- ********************ARMS******************** -->
+<xacro:include filename="$(find coman_urdf)/urdf/parts/arms.urdf.xacro" />
+
+<!-- ********************JOINTS******************** -->
 
 <xacro:if value="${GAZEBO_COMAN_USES_XTION}">
         <joint name="Xtion_body_joint" type="fixed">
