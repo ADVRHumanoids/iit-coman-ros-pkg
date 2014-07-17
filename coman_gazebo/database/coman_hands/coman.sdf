@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <sdf version="1.5">
- <model name="COMAN">
+ <model name="coman">
   <link name="base_link">
    <pose>
     0 0 0 0 -0 0
