@@ -18,49 +18,14 @@
 <xacro:include filename="$(find coman_urdf)/urdf/coman_config.urdf.xacro" />
 
 <!-- Head -->
-
+<!-- This links are defined in order to be compliant with http://www.ros.org/reps/rep-0120.html#coordinate-frames
+and to define the end effectors of the robot.
+The coordinate frame called gaze defines the head position and orientation. The orientation indicates in which direction the head appears to be looking regardless of any sensors (camera for instance). -->
 <link name="gaze"/>
 
 <xacro:if value="${GAZEBO_COMAN_USES_XTION}">
-	<link name ="Xtion_body">
-    <inertial>
-      <origin xyz="0.047 0.0 0.40" rpy="0 0 0"/>
-      <mass value="0.39"/>
-      <inertia ixx="0.01"  ixy="3.34E-7"  ixz="-2.66E-4" iyy="0.009" iyz="1.97E-6" izz="5.1E-4" />
-    </inertial>
-    <visual>
-      <origin xyz="-0.020281504 0.0 -0.68662053" rpy="0 0 -3.14159265359"/>
-      <geometry name="Xtion_body_visual">
-        <mesh filename="package://coman_urdf/meshes/collada/Xtion/xtion_base.dae" scale="0.03937 0.03937 0.03937" />
-      </geometry>
-    </visual>
-    <collision>
-      <origin xyz="-0.020281504 0.0 -0.68662053" rpy="0 0 -3.14159265359"/>
-      <geometry name="Xtion_body_collision">
-        <mesh filename="package://coman_urdf/meshes/collada/simple/Xtion/xtion_base.stl" scale="0.03937 0.03937 0.03937" />
-      </geometry>             
-    </collision>
-  </link>
 
-  <link name="Xtion_cam_body">
-    <inertial>
-      <origin xyz="0.0 0.0 0.0225" rpy="0 0 0"/>
-      <mass value="0.2"/>
-      <inertia ixx="0.00053"  ixy="0.0"  ixz="0.0" iyy="0.00008" iyz="0.0" izz="0.00053" />
-    </inertial>
-    <visual>
-      <origin xyz="-0.0915 0.0 -1.2778" rpy="0 0 -3.14159265359"/>
-      <geometry name="Xtion_cam_body_visual">
-        <mesh filename="package://coman_urdf/meshes/collada/Xtion/xtion_cam_body.dae" scale="0.001 0.001 0.001" />
-      </geometry>
-    </visual>
-    <collision>
-      <origin xyz="-0.0915 0.0 -1.2778" rpy="0 0 -3.14159265359"/>
-      <geometry name="Xtion_cam_body_collision">
-        <mesh filename="package://coman_urdf/meshes/collada/simple/Xtion/xtion_cam_body.stl" scale="0.001 0.001 0.001" />
-      </geometry>             
-    </collision>
-  </link>
+<xacro:include filename="$(find coman_urdf)/urdf/sensors/xtion.urdf.xacro" />
 
     <gazebo reference="gaze">
         <sensor name="openni_camera_camera" type="depth">
@@ -110,6 +75,14 @@
     </gazebo>
     
 </xacro:if>
+
+<xacro:unless value="${GAZEBO_COMAN_USES_XTION}">
+<joint name="gaze_joint" type="fixed">
+	<parent link="torso"/>
+	<child link="gaze"/>
+	<origin xyz="0 0 0.1" rpy="0 0 0" />
+</joint>
+</xacro:unless>
 
   
 

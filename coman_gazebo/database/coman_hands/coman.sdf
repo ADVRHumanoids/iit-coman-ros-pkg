@@ -2084,7 +2084,7 @@
    </collision>
    <collision name="DWYTorso_collision_Xtion_body">
     <pose>
-     -0.0202815 0 -0.686621 0 -0 3.14159
+     -0.0202815 0 -0.686621 0 -0 -3.14159
     </pose>
     <geometry>
      <mesh>
@@ -2099,7 +2099,7 @@
    </collision>
    <collision name="DWYTorso_collision_Xtion_cam_body">
     <pose>
-     -0.0205 0 -0.6868 0 -0 3.14159
+     -0.0205 0 -0.6868 0 -0 -3.14159
     </pose>
     <geometry>
      <mesh>
@@ -2129,7 +2129,7 @@
    </visual>
    <visual name="DWYTorso_visual_Xtion_body">
     <pose>
-     -0.0202815 0 -0.686621 0 -0 3.14159
+     -0.0202815 0 -0.686621 0 -0 -3.14159
     </pose>
     <geometry>
      <mesh>
@@ -2144,7 +2144,7 @@
    </visual>
    <visual name="DWYTorso_visual_Xtion_cam_body">
     <pose>
-     -0.0205 0 -0.6868 0 -0 3.14159
+     -0.0205 0 -0.6868 0 -0 -3.14159
     </pose>
     <geometry>
      <mesh>
