@@ -58,45 +58,9 @@ and to define the end effectors of the robot -->
 
 <!-- ************ HANDS ************ -->
 
-  <xacro:if value="${GAZEBO_COMAN_USES_7DOF_FOREARMS_DRC_14}">
-
-    <xacro:include filename="$(find coman_urdf)/urdf/soft_hand.urdf.xacro" />	
-
-    <xacro:if value="${GAZEBO_COMAN_USES_SOFTHANDS_DRC_sw1_14}">
-      <joint name="r_handj" type="fixed">
-        <parent link="RWrMot3"/>
-        <child link="RSoftHand"/>
-        <origin xyz="0 0 -0.07" rpy="0 0 0"/>
-      </joint>
-
-      <joint name="l_handj" type="fixed">
-        <parent link="LWrMot3"/>
-        <child link="LSoftHand"/>
-        <origin xyz="0 0 -0.07" rpy="0 0 0"/>
-      </joint>
-    </xacro:if>
-
-    <xacro:unless value="${GAZEBO_COMAN_USES_SOFTHANDS_DRC_sw1_14}">
-      <joint name="r_handj" type="revolute">
-        <parent link="RWrMot3"/>
-        <child link="RSoftHand"/>
-        <origin xyz="0 0 -0.04" rpy="0 0 0"/>
-        <axis xyz="1 0 0" />
-        <limit velocity="4.0" effort="5" lower="0.0" upper="1.57075" />
-        <dynamics friction="0" damping="3.0"/>
-      </joint>
-
-      <joint name="l_handj" type="revolute">
-        <parent link="LWrMot3"/>
-        <child link="LSoftHand"/>
-        <origin xyz="0 0 -0.04" rpy="0 0 0"/>
-        <axis xyz="1 0 0" />
-        <limit velocity="4.0" effort="5" lower="-1.57075" upper="0.0" />
-        <dynamics friction="0" damping="3.0"/>
-      </joint>
-    </xacro:unless>
-
-  </xacro:if>
+<xacro:if value="${GAZEBO_COMAN_USES_7DOF_FOREARMS_DRC_14}">
+    <xacro:include filename="$(find coman_urdf)/urdf/parts/soft_hand.urdf.xacro" />	
+</xacro:if>
 
 <!-- IMU -->
 <xacro:include filename="$(find coman_urdf)/urdf/sensors/imu.urdf.xacro"/>
