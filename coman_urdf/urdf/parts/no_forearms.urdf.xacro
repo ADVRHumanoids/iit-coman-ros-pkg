@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+<xacro:property name="Wrj1_to_FT" value="0.0568" />
+<xacro:property name="PI" value="3.14159265359" />
+<xacro:property name="PI_2" value="1.57079632679" />
+<xacro:property name="SF" value="0.03937" /> <!-- Scale factor for meshes -->
+
+<!-- ***********LINKS*********** -->
+<!-- ***********LEFT FOREARM***********-->
+
+
+    <link name ="LForearm">
+      <inertial>
+        <origin xyz="0 0 -0.085" rpy="0 0 0"/>
+        <mass value="0.263"/>
+        <inertia ixx="6.913E-4"  ixy="0.0"  ixz="0.0" iyy="6.913E-4" iyz="0.0" izz="4.0425E-5" />
+      </inertial>
+      <visual>
+        <origin xyz="-0.0055 -0.1558 -0.6175" rpy="0 0 ${PI}"/>
+        <geometry name="LForearm_visual">
+          <mesh filename="package://coman_urdf/meshes/collada/forearm_old.dae" scale="${SF} ${SF} ${SF}" />
+        </geometry>
+      </visual>
+      <collision>
+        <origin xyz="-0.0055 -0.1558 -0.6175" rpy="0 0 ${PI}"/>
+        <geometry name="LForearm_collision">
+          <mesh filename="package://coman_urdf/meshes/collada/simple/forearm_old.dae" scale="${SF} ${SF} ${SF}" />
+        </geometry>             
+      </collision>
+    </link>
+<!-- ***********RIGHT FOREARM***********-->
+
+<link name ="RForearm">
+      <inertial>
+      	<origin xyz="0 0 -0.085" rpy="0 0 0"/>
+      	<mass value="0.263"/>
+      <inertia ixx="6.913E-4"  ixy="0.0"  ixz="0.0" iyy="6.913E-4" iyz="0.0" izz="4.0425E-5" />
+    </inertial>
+      <visual>
+        <origin xyz="-0.0055 -0.1558 -0.6175" rpy="0 0 ${PI}"/>
+        <geometry name="RForearm_visual">
+          <mesh filename="package://coman_urdf/meshes/collada/forearm_old.dae" scale="${SF} ${SF} ${SF}" />
+        </geometry>
+      </visual>
+      <collision>
+        <origin xyz="-0.0055 -0.1558 -0.6175" rpy="0 0 ${PI}"/>
+        <geometry name="RForearm_collision">
+          <mesh filename="package://coman_urdf/meshes/collada/simple/forearm_old.dae" scale="${SF} ${SF} ${SF}" />
+        </geometry>             
+      </collision>
+    </link>
+
+<!-- ***********JOINTS*********** -->
+<!-- ***********LEFT FOREARM***********-->
+<joint name="LForearmPlate" type="fixed">
+        <parent link="LElb"/>
+        <child link="LForearm"/>
+        <origin xyz="-0.015 0.0 -0.05" rpy="0 0 0"/>
+</joint>
+
+<joint name="l_wrist_joint" type="fixed">
+	  <parent link="LElb"/>
+	  <child link="l_wrist"/>
+	  <origin xyz="-0.015 0 -0.22" rpy="0 0 0" />
+</joint>
+
+<!-- ***********RIGHT FOREARM***********-->
+<joint name="RForearmPlate" type="fixed">
+      <parent link="RElb"/>
+      <child link="RForearm"/>
+      <origin xyz="-0.015 0.0 -0.05" rpy="0 0 0"/>
+</joint>
+
+<joint name="r_wrist_joint" type="fixed">
+	<parent link="RElb"/>
+	<child link="r_wrist"/>
+	<origin xyz="-0.015 0 -0.22" rpy="0 0 0" />
+</joint>
+
+</robot>

@@ -1,14 +1,6 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
-    <xacro:if value="${GAZEBO_COMAN_USES_ROS}">
-      <gazebo>
-        <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
-          <robotNamespace>/COMAN</robotNamespace>
-        </plugin>
-      </gazebo>
-    </xacro:if>
-
 <!-- contact model for foot surface -->
    <gazebo reference="LFoot">
      <kp>1000000.0</kp>

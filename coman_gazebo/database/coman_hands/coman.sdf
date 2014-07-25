@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <sdf version="1.5">
- <model name="COMAN">
+ <model name="coman">
   <link name="base_link">
    <pose>
     0 0 0 0 -0 0
@@ -35,7 +35,7 @@
    </inertial>
    <collision name="base_link_collision_Waist">
     <pose>
-     0 0 -0.52 0 -0 3.14159
+     0 0 -0.52 0 -0 -3.14159
     </pose>
     <geometry>
      <mesh>
@@ -50,7 +50,7 @@
    </collision>
    <visual name="base_link_visual_Waist">
     <pose>
-     0 0 -0.52 0 -0 3.14159
+     0 0 -0.52 0 -0 -3.14159
     </pose>
     <geometry>
      <mesh>
@@ -65,7 +65,7 @@
    </visual>
    <visual name="base_link_visual_imu_link">
     <pose>
-     -0.072 -0.0068 0.044 3.14159 2.65359e-06 3.14159
+     -0.072 -0.0068 0.044 3.14159 -2.06823e-13 3.14159
     </pose>
     <geometry>
      <box>
@@ -109,7 +109,7 @@
      </yarpConfigurationFile>
     </plugin>
     <pose>
-     -0.072 -0.0068 0.044 3.14159 2.65359e-06 3.14159
+     -0.072 -0.0068 0.044 3.14159 -2.06823e-13 3.14159
     </pose>
    </sensor>
   </link>
@@ -147,7 +147,7 @@
    </inertial>
    <collision name="LHipMot_collision">
     <pose>
-     0 -0.023 -0.52 0 -0 3.14159
+     0 -0.023 -0.52 0 -0 -3.14159
     </pose>
     <geometry>
      <mesh>
@@ -162,7 +162,7 @@
    </collision>
    <visual name="LHipMot_visual">
     <pose>
-     0 -0.023 -0.52 0 -0 3.14159
+     0 -0.023 -0.52 0 -0 -3.14159
     </pose>
     <geometry>
      <mesh>
@@ -277,7 +277,7 @@
    </inertial>
    <collision name="LThighUpLeg_collision">
     <pose>
-     0 -0.0726 -0.52 0 -0 3.14159
+     0 -0.0726 -0.52 0 -0 -3.14159
     </pose>
     <geometry>
      <mesh>
@@ -292,7 +292,7 @@
    </collision>
    <visual name="LThighUpLeg_visual">
     <pose>
-     0 -0.0726 -0.52 0 -0 3.14159
+     0 -0.0726 -0.52 0 -0 -3.14159
     </pose>
     <geometry>
      <mesh>
@@ -407,7 +407,7 @@
    </inertial>
    <collision name="LThighLowLeg_collision">
     <pose>
-     0 -0.0726 -0.4176 0 -0 3.14159
+     0 -0.0726 -0.4176 0 -0 -3.14159
     </pose>
     <geometry>
      <mesh>
@@ -422,7 +422,7 @@
    </collision>
    <visual name="LThighLowLeg_visual">
     <pose>
-     0 -0.0726 -0.4176 0 -0 3.14159
+     0 -0.0726 -0.4176 0 -0 -3.14159
     </pose>
     <geometry>
      <mesh>
@@ -537,7 +537,7 @@
    </inertial>
    <collision name="LLowLeg_collision">
     <pose>
-     0 -0.0726 -0.2942 0 -0 3.14159
+     0 -0.0726 -0.2942 0 -0 -3.14159
     </pose>
     <geometry>
      <mesh>
@@ -552,7 +552,7 @@
    </collision>
    <visual name="LLowLeg_visual">
     <pose>
-     0 -0.0726 -0.2942 0 -0 3.14159
+     0 -0.0726 -0.2942 0 -0 -3.14159
     </pose>
     <geometry>
      <mesh>
@@ -667,7 +667,7 @@
    </inertial>
    <collision name="LFootmot_collision">
     <pose>
-     0 -0.0726 -0.0932 0 -0 3.14159
+     0 -0.0726 -0.0932 0 -0 -3.14159
     </pose>
     <geometry>
      <mesh>
@@ -682,7 +682,7 @@
    </collision>
    <visual name="LFootmot_visual">
     <pose>
-     0 -0.0726 -0.0932 0 -0 3.14159
+     0 -0.0726 -0.0932 0 -0 -3.14159
     </pose>
     <geometry>
      <mesh>
@@ -797,7 +797,7 @@
    </inertial>
    <collision name="LFoot_collision">
     <pose>
-     0.03 0 -0.09 0 -0 0
+     0.03 0 -0.07 0 -0 0
     </pose>
     <geometry>
      <box>
@@ -840,7 +840,7 @@
    </collision>
    <visual name="LFoot_visual">
     <pose>
-     0.03 0 -0.09 0 -0 0
+     0.03 0 -0.07 0 -0 0
     </pose>
     <geometry>
      <box>
@@ -978,7 +978,7 @@
    </inertial>
    <collision name="RHipMot_collision">
     <pose>
-     0 0.023 -0.52 0 -0 3.14159
+     0 0.023 -0.52 0 -0 -3.14159
     </pose>
     <geometry>
      <mesh>
@@ -993,7 +993,7 @@
    </collision>
    <visual name="RHipMot_visual">
     <pose>
-     0 0.023 -0.52 0 -0 3.14159
+     0 0.023 -0.52 0 -0 -3.14159
     </pose>
     <geometry>
      <mesh>
@@ -1108,7 +1108,7 @@
    </inertial>
    <collision name="RThighUpLeg_collision">
     <pose>
-     0 0.0726 -0.52 0 -0 3.14159
+     0 0.0726 -0.52 0 -0 -3.14159
     </pose>
     <geometry>
      <mesh>
@@ -1123,7 +1123,7 @@
    </collision>
    <visual name="RThighUpLeg_visual">
     <pose>
-     0 0.0726 -0.52 0 -0 3.14159
+     0 0.0726 -0.52 0 -0 -3.14159
     </pose>
     <geometry>
      <mesh>
@@ -1238,7 +1238,7 @@
    </inertial>
    <collision name="RThighLowLeg_collision">
     <pose>
-     0 0.0726 -0.4176 0 -0 3.14159
+     0 0.0726 -0.4176 0 -0 -3.14159
     </pose>
     <geometry>
      <mesh>
@@ -1253,7 +1253,7 @@
    </collision>
    <visual name="RThighLowLeg_visual">
     <pose>
-     0 0.0726 -0.4176 0 -0 3.14159
+     0 0.0726 -0.4176 0 -0 -3.14159
     </pose>
     <geometry>
      <mesh>
@@ -1368,7 +1368,7 @@
    </inertial>
    <collision name="RLowLeg_collision">
     <pose>
-     0 0.0726 -0.2942 0 -0 3.14159
+     0 0.0726 -0.2942 0 -0 -3.14159
     </pose>
     <geometry>
      <mesh>
@@ -1383,7 +1383,7 @@
    </collision>
    <visual name="RLowLeg_visual">
     <pose>
-     0 0.0726 -0.2942 0 -0 3.14159
+     0 0.0726 -0.2942 0 -0 -3.14159
     </pose>
     <geometry>
      <mesh>
@@ -1498,7 +1498,7 @@
    </inertial>
    <collision name="RFootmot_collision">
     <pose>
-     0 0.0726 -0.0932 0 -0 3.14159
+     0 0.0726 -0.0932 0 -0 -3.14159
     </pose>
     <geometry>
      <mesh>
@@ -1513,7 +1513,7 @@
    </collision>
    <visual name="RFootmot_visual">
     <pose>
-     0 0.0726 -0.0932 0 -0 3.14159
+     0 0.0726 -0.0932 0 -0 -3.14159
     </pose>
     <geometry>
      <mesh>
@@ -1628,7 +1628,7 @@
    </inertial>
    <collision name="RFoot_collision">
     <pose>
-     0.03 0 -0.09 0 -0 0
+     0.03 0 -0.07 0 -0 0
     </pose>
     <geometry>
      <box>
@@ -1671,7 +1671,7 @@
    </collision>
    <visual name="RFoot_visual">
     <pose>
-     0.03 0 -0.09 0 -0 0
+     0.03 0 -0.07 0 -0 0
     </pose>
     <geometry>
      <box>
@@ -1809,7 +1809,7 @@
    </inertial>
    <collision name="DWL_collision">
     <pose>
-     -0.0202815 0 -0.639121 0 -0 3.14159
+     -0.0202815 0 -0.639121 0 -0 -3.14159
     </pose>
     <geometry>
      <mesh>
@@ -1824,7 +1824,7 @@
    </collision>
    <visual name="DWL_visual">
     <pose>
-     -0.0202815 0 -0.639121 0 -0 3.14159
+     -0.0202815 0 -0.639121 0 -0 -3.14159
     </pose>
     <geometry>
      <mesh>
@@ -1939,7 +1939,7 @@
    </inertial>
    <collision name="DWS_collision">
     <pose>
-     -0.0202815 0 -0.639121 0 -0 3.14159
+     -0.0202815 0 -0.639121 0 -0 -3.14159
     </pose>
     <geometry>
      <mesh>
@@ -1954,7 +1954,7 @@
    </collision>
    <visual name="DWS_visual">
     <pose>
-     -0.0202815 0 -0.639121 0 -0 3.14159
+     -0.0202815 0 -0.639121 0 -0 -3.14159
     </pose>
     <geometry>
      <mesh>
@@ -2069,7 +2069,7 @@
    </inertial>
    <collision name="DWYTorso_collision">
     <pose>
-     -0.0202815 0 -0.686621 0 -0 3.14159
+     -0.0202815 0 -0.686621 0 -0 -3.14159
     </pose>
     <geometry>
      <mesh>
@@ -2084,7 +2084,7 @@
    </collision>
    <collision name="DWYTorso_collision_Xtion_body">
     <pose>
-     -0.0202815 0 -0.686621 0 -0 3.14159
+     -0.0202815 0 -0.686621 0 -0 -3.14159
     </pose>
     <geometry>
      <mesh>
@@ -2099,7 +2099,7 @@
    </collision>
    <collision name="DWYTorso_collision_Xtion_cam_body">
     <pose>
-     -0.0205 0 -0.6868 0 -0 3.14159
+     -0.0205 0 -0.6868 0 -0 -3.14159
     </pose>
     <geometry>
      <mesh>
@@ -2114,7 +2114,7 @@
    </collision>
    <visual name="DWYTorso_visual">
     <pose>
-     -0.0202815 0 -0.686621 0 -0 3.14159
+     -0.0202815 0 -0.686621 0 -0 -3.14159
     </pose>
     <geometry>
      <mesh>
@@ -2129,7 +2129,7 @@
    </visual>
    <visual name="DWYTorso_visual_Xtion_body">
     <pose>
-     -0.0202815 0 -0.686621 0 -0 3.14159
+     -0.0202815 0 -0.686621 0 -0 -3.14159
     </pose>
     <geometry>
      <mesh>
@@ -2144,7 +2144,7 @@
    </visual>
    <visual name="DWYTorso_visual_Xtion_cam_body">
     <pose>
-     -0.0205 0 -0.6868 0 -0 3.14159
+     -0.0205 0 -0.6868 0 -0 -3.14159
     </pose>
     <geometry>
      <mesh>
@@ -2157,6 +2157,9 @@
      </mesh>
     </geometry>
    </visual>
+   <gravity>
+    1
+   </gravity>
    <velocity_decay>
     <linear>
      0
@@ -2165,6 +2168,111 @@
      0
     </angular>
    </velocity_decay>
+   <self_collide>
+    0
+   </self_collide>
+   <sensor name="openni_camera_camera" type="depth">
+    <always_on>
+     1
+    </always_on>
+    <visualize>
+     1
+    </visualize>
+    <camera name="__default__">
+     <horizontal_fov>
+      1.047
+     </horizontal_fov>
+     <image>
+      <width>
+       640
+      </width>
+      <height>
+       480
+      </height>
+      <format>
+       R8G8B8
+      </format>
+     </image>
+     <depth_camera>
+      <output>
+       depths
+      </output>
+     </depth_camera>
+     <clip>
+      <near>
+       0.1
+      </near>
+      <far>
+       100
+      </far>
+     </clip>
+    </camera>
+    <plugin filename="libgazebo_ros_openni_kinect.so" name="camera_controller">
+     <alwaysOn>
+      true
+     </alwaysOn>
+     <updateRate>
+      10.0
+     </updateRate>
+     <cameraName>
+      camera
+     </cameraName>
+     <frameName>
+      camera_link
+     </frameName>
+     <imageTopicName>
+      rgb/image_raw
+     </imageTopicName>
+     <depthImageTopicName>
+      depth/image_raw
+     </depthImageTopicName>
+     <pointCloudTopicName>
+      depth/points
+     </pointCloudTopicName>
+     <cameraInfoTopicName>
+      rgb/camera_info
+     </cameraInfoTopicName>
+     <depthImageCameraInfoTopicName>
+      depth/camera_info
+     </depthImageCameraInfoTopicName>
+     <pointCloudCutoff>
+      0.4
+     </pointCloudCutoff>
+     <hackBaseline>
+      0.07
+     </hackBaseline>
+     <distortionK1>
+      0.0
+     </distortionK1>
+     <distortionK2>
+      0.0
+     </distortionK2>
+     <distortionK3>
+      0.0
+     </distortionK3>
+     <distortionT1>
+      0.0
+     </distortionT1>
+     <distortionT2>
+      0.0
+     </distortionT2>
+     <CxPrime>
+      0.0
+     </CxPrime>
+     <Cx>
+      0.0
+     </Cx>
+     <Cy>
+      0.0
+     </Cy>
+     <focalLength>
+      0.0
+     </focalLength>
+    </plugin>
+    <pose>
+     0.086 0 0.613 0 -0 0
+    </pose>
+   </sensor>
   </link>
   <joint name="WaistYaw" type="revolute">
    <child>
@@ -2259,7 +2367,7 @@
    </inertial>
    <collision name="LShp_collision">
     <pose>
-     -0.005305 -0.0825 -0.844329 0 -0 3.14159
+     -0.005305 -0.0825 -0.844329 0 -0 -3.14159
     </pose>
     <geometry>
      <mesh>
@@ -2274,7 +2382,7 @@
    </collision>
    <visual name="LShp_visual">
     <pose>
-     -0.005305 -0.0825 -0.844329 0 -0 3.14159
+     -0.005305 -0.0825 -0.844329 0 -0 -3.14159
     </pose>
     <geometry>
      <mesh>
@@ -2389,7 +2497,7 @@
    </inertial>
    <collision name="LShr_collision">
     <pose>
-     -0.005305 -0.1558 -0.844329 0 -0 3.14159
+     -0.005305 -0.1558 -0.844329 0 -0 -3.14159
     </pose>
     <geometry>
      <mesh>
@@ -2404,7 +2512,7 @@
    </collision>
    <visual name="LShr_visual">
     <pose>
-     -0.005305 -0.1558 -0.844329 0 -0 3.14159
+     -0.005305 -0.1558 -0.844329 0 -0 -3.14159
     </pose>
     <geometry>
      <mesh>
@@ -2519,7 +2627,7 @@
    </inertial>
    <collision name="LShy_collision">
     <pose>
-     -0.005305 -0.1558 -0.799521 0 -0 3.14159
+     -0.005305 -0.1558 -0.799521 0 -0 -3.14159
     </pose>
     <geometry>
      <mesh>
@@ -2534,7 +2642,7 @@
    </collision>
    <visual name="LShy_visual">
     <pose>
-     -0.005305 -0.1558 -0.799521 0 -0 3.14159
+     -0.005305 -0.1558 -0.799521 0 -0 -3.14159
     </pose>
     <geometry>
      <mesh>
@@ -3310,7 +3418,7 @@
    </inertial>
    <collision name="RShp_collision">
     <pose>
-     -0.005305 0.0825 -0.844329 0 -0 3.14159
+     -0.005305 0.0825 -0.844329 0 -0 -3.14159
     </pose>
     <geometry>
      <mesh>
@@ -3325,7 +3433,7 @@
    </collision>
    <visual name="RShp_visual">
     <pose>
-     -0.005305 0.0825 -0.844329 0 -0 3.14159
+     -0.005305 0.0825 -0.844329 0 -0 -3.14159
     </pose>
     <geometry>
      <mesh>
@@ -3440,7 +3548,7 @@
    </inertial>
    <collision name="RShr_collision">
     <pose>
-     -0.005305 0.1558 -0.844329 0 -0 3.14159
+     -0.005305 0.1558 -0.844329 0 -0 -3.14159
     </pose>
     <geometry>
      <mesh>
@@ -3455,7 +3563,7 @@
    </collision>
    <visual name="RShr_visual">
     <pose>
-     -0.005305 0.1558 -0.844329 0 -0 3.14159
+     -0.005305 0.1558 -0.844329 0 -0 -3.14159
     </pose>
     <geometry>
      <mesh>
@@ -3570,7 +3678,7 @@
    </inertial>
    <collision name="RShy_collision">
     <pose>
-     -0.005305 0.1558 -0.799521 0 -0 3.14159
+     -0.005305 0.1558 -0.799521 0 -0 -3.14159
     </pose>
     <geometry>
      <mesh>
@@ -3585,7 +3693,7 @@
    </collision>
    <visual name="RShy_visual">
     <pose>
-     -0.005305 0.1558 -0.799521 0 -0 3.14159
+     -0.005305 0.1558 -0.799521 0 -0 -3.14159
     </pose>
     <geometry>
      <mesh>

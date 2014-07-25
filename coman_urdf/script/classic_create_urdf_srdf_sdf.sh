@@ -11,7 +11,7 @@
     echo "Creating sdf of coman_robot.urdf..."
     gzsdf print coman_robot.urdf > coman.sdf
 
-    python ../script/gazebowtf.py coman.gazebo.wtf coman_config.urdf.xacro > coman2.sdf
+    python ../script/gazebowtf.py wtf/coman.gazebo.wtf coman_config.urdf.xacro > coman2.sdf
 
     mv coman2.sdf coman.sdf
 
