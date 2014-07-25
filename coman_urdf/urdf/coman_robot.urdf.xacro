@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<robot xmlns:xacro="http://ros.org/wiki/xacro" name="COMAN">
+<robot xmlns:xacro="http://ros.org/wiki/xacro" name="coman">
   <!--
   ROS urdf definition of the COMAN humanoid robot by Istituto Italiano di Tecnologia
   
@@ -10,14 +10,16 @@
   -->
   <xacro:include filename="$(find coman_urdf)/urdf/coman.urdf.xacro" />
 
-  <xacro:include filename="$(find coman_urdf)/urdf/microstrain_3dmgx2_imu.gazebo.xacro" />
-  <xacro:if value="$(optenv GAZEBO_COMAN_USES_ROS false)">
-  	<xacro:include filename="$(find coman_urdf)/urdf/coman_transmission.urdf.xacro" /> 
+  <xacro:include filename="$(find coman_urdf)/urdf/gazebo/microstrain_3dmgx2_imu.gazebo.xacro" />
+
+  <xacro:include filename="$(find coman_urdf)/urdf/gazebo/coman.gazebo.xacro" />
+
+  <xacro:if value="${GAZEBO_COMAN_USES_XTION}">
+	<xacro:include filename="$(find coman_urdf)/urdf/gazebo/openni_kinect.gazebo.xacro" />
   </xacro:if>
-  <xacro:include filename="$(find coman_urdf)/urdf/coman.gazebo.xacro" />
 
 <!-- YARP PLUGINS for GAZEBO SIMULATION -->
-  <xacro:include filename="$(find coman_urdf)/urdf/yarp_control.gazebo.xacro" />
+  <xacro:include filename="$(find coman_urdf)/urdf/gazebo/yarp_control.gazebo.xacro" />
 
   <origin xyz="0.0 0.0 0.521" rpy="0 0 0" />
 </robot>

@@ -62,7 +62,7 @@ EOF
             echo "Creating sdf of coman_robot.urdf.xacro"
             rosrun xacro xacro.py coman_robot.urdf.xacro > coman_robot.urdf
             gzsdf print coman_robot.urdf > coman.sdf
-            python ../script/gazebowtf.py coman.gazebo.wtf coman_config.urdf.xacro > coman2.sdf
+            python ../script/gazebowtf.py wtf/coman.gazebo.wtf coman_config.urdf.xacro > coman2.sdf
             mv coman2.sdf coman.sdf
             rm coman_robot.urdf
             echo "...sdf correctly created!"
