@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro" name="coman">
+
+  <xacro:include filename="$(find coman_urdf)/urdf/coman.urdf.xacro" />
+
+  <xacro:include filename="$(find drc_shared)/urdf/floating_base.urdf.xacro" />
+
+  <joint name="floating_base_joint" type="fixed">
+	<parent link="floating_base_l6"/>
+	<child link="base_link"/>
+	<origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>  
+
+</robot>
