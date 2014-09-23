@@ -3334,14 +3334,14 @@
    </parent>
    <axis>
     <xyz>
-     1 0 0
+     -1 0 0
     </xyz>
     <limit>
      <lower>
-      -1.57075
+      0
      </lower>
      <upper>
-      0
+      1.57075
      </upper>
      <effort>
       5
