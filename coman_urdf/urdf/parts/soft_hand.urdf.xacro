@@ -122,8 +122,8 @@
         <parent link="LWrMot3"/>
         <child link="LSoftHand"/>
         <origin xyz="0 0 -0.04" rpy="0 0 0"/>
-        <axis xyz="1 0 0" />
-        <limit velocity="4.0" effort="5" lower="-1.57075" upper="0.0" />
+        <axis xyz="-1 0 0" />
+        <limit velocity="4.0" effort="5" lower="0.0" upper="1.57075" />
         <dynamics friction="0" damping="3.0"/>
 </joint>
 
