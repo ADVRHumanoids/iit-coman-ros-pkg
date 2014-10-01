@@ -5,6 +5,10 @@ SCRIPT_ROOT=$(dirname $(readlink --canonicalize --no-newline $BASH_SOURCE))
 cd $SCRIPT_ROOT
 cd ../urdf
 
+# check for Gazebo4 gz
+IS_GZSDF_GAZEBO4=true;
+type gz >/dev/null 2>&1 || { IS_GZSDF_GAZEBO4=false; }
+
 if [ -d config ]; then
 
     echo "Regenerating database.config for coman_gazebo"
@@ -61,7 +65,11 @@ EOF
 
             echo "Creating sdf of coman_robot.urdf.xacro"
             rosrun xacro xacro.py coman_robot.urdf.xacro > coman_robot.urdf
-            gzsdf print coman_robot.urdf > coman.sdf
+	    if [ $IS_GZSDF_GAZEBO4 == true ]; then
+            	gz sdf --print coman_robot.urdf > coman.sdf
+	    else
+                gzsdf print coman_robot.urdf > coman.sdf
+            fi
             python ../script/gazebowtf.py wtf/coman.gazebo.wtf coman_config.urdf.xacro > coman2.sdf
             mv coman2.sdf coman.sdf
             rm coman_robot.urdf

@@ -1,3 +1,7 @@
+    # check for Gazebo4 gz
+    IS_GZSDF_GAZEBO4=true;
+    type gz >/dev/null 2>&1 || { IS_GZSDF_GAZEBO4=false; }
+
     cd ../urdf
 
     echo "Creating bare urdf of coman.urdf.xacro"
@@ -9,7 +13,11 @@
     echo "...urdf correctly created!"
 
     echo "Creating sdf of coman_robot.urdf..."
-    gzsdf print coman_robot.urdf > coman.sdf
+    if [ $IS_GZSDF_GAZEBO4 == true ]; then
+    	gz sdf --print coman_robot.urdf > coman.sdf
+    else
+	gzsdf print coman_robot.urdf > coman.sdf
+    fi
 
     python ../script/gazebowtf.py wtf/coman.gazebo.wtf coman_config.urdf.xacro > coman2.sdf
 

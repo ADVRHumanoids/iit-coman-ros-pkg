@@ -213,6 +213,12 @@
      <damping>
       3
      </damping>
+     <spring_reference>
+      0
+     </spring_reference>
+     <spring_stiffness>
+      0
+     </spring_stiffness>
     </dynamics>
     <use_parent_model_frame>
      1
@@ -343,6 +349,12 @@
      <damping>
       3
      </damping>
+     <spring_reference>
+      0
+     </spring_reference>
+     <spring_stiffness>
+      0
+     </spring_stiffness>
     </dynamics>
     <use_parent_model_frame>
      1
@@ -473,6 +485,12 @@
      <damping>
       3
      </damping>
+     <spring_reference>
+      0
+     </spring_reference>
+     <spring_stiffness>
+      0
+     </spring_stiffness>
     </dynamics>
     <use_parent_model_frame>
      1
@@ -603,6 +621,12 @@
      <damping>
       3
      </damping>
+     <spring_reference>
+      0
+     </spring_reference>
+     <spring_stiffness>
+      0
+     </spring_stiffness>
     </dynamics>
     <use_parent_model_frame>
      1
@@ -733,6 +757,12 @@
      <damping>
       3
      </damping>
+     <spring_reference>
+      0
+     </spring_reference>
+     <spring_stiffness>
+      0
+     </spring_stiffness>
     </dynamics>
     <use_parent_model_frame>
      1
@@ -900,6 +930,12 @@
      <damping>
       3
      </damping>
+     <spring_reference>
+      0
+     </spring_reference>
+     <spring_stiffness>
+      0
+     </spring_stiffness>
     </dynamics>
     <use_parent_model_frame>
      1
@@ -1050,6 +1086,12 @@
      <damping>
       3
      </damping>
+     <spring_reference>
+      0
+     </spring_reference>
+     <spring_stiffness>
+      0
+     </spring_stiffness>
     </dynamics>
     <use_parent_model_frame>
      1
@@ -1180,6 +1222,12 @@
      <damping>
       3
      </damping>
+     <spring_reference>
+      0
+     </spring_reference>
+     <spring_stiffness>
+      0
+     </spring_stiffness>
     </dynamics>
     <use_parent_model_frame>
      1
@@ -1310,6 +1358,12 @@
      <damping>
       3
      </damping>
+     <spring_reference>
+      0
+     </spring_reference>
+     <spring_stiffness>
+      0
+     </spring_stiffness>
     </dynamics>
     <use_parent_model_frame>
      1
@@ -1440,6 +1494,12 @@
      <damping>
       3
      </damping>
+     <spring_reference>
+      0
+     </spring_reference>
+     <spring_stiffness>
+      0
+     </spring_stiffness>
     </dynamics>
     <use_parent_model_frame>
      1
@@ -1570,6 +1630,12 @@
      <damping>
       3
      </damping>
+     <spring_reference>
+      0
+     </spring_reference>
+     <spring_stiffness>
+      0
+     </spring_stiffness>
     </dynamics>
     <use_parent_model_frame>
      1
@@ -1737,6 +1803,12 @@
      <damping>
       3
      </damping>
+     <spring_reference>
+      0
+     </spring_reference>
+     <spring_stiffness>
+      0
+     </spring_stiffness>
     </dynamics>
     <use_parent_model_frame>
      1
@@ -1887,6 +1959,12 @@
      <damping>
       3
      </damping>
+     <spring_reference>
+      0
+     </spring_reference>
+     <spring_stiffness>
+      0
+     </spring_stiffness>
     </dynamics>
     <use_parent_model_frame>
      1
@@ -2017,6 +2095,12 @@
      <damping>
       3
      </damping>
+     <spring_reference>
+      0
+     </spring_reference>
+     <spring_stiffness>
+      0
+     </spring_stiffness>
     </dynamics>
     <use_parent_model_frame>
      1
@@ -2147,6 +2231,12 @@
      <damping>
       3
      </damping>
+     <spring_reference>
+      0
+     </spring_reference>
+     <spring_stiffness>
+      0
+     </spring_stiffness>
     </dynamics>
     <use_parent_model_frame>
      1
@@ -2277,6 +2367,12 @@
      <damping>
       3
      </damping>
+     <spring_reference>
+      0
+     </spring_reference>
+     <spring_stiffness>
+      0
+     </spring_stiffness>
     </dynamics>
     <use_parent_model_frame>
      1
@@ -2407,6 +2503,12 @@
      <damping>
       3
      </damping>
+     <spring_reference>
+      0
+     </spring_reference>
+     <spring_stiffness>
+      0
+     </spring_stiffness>
     </dynamics>
     <use_parent_model_frame>
      1
@@ -2537,6 +2639,12 @@
      <damping>
       3
      </damping>
+     <spring_reference>
+      0
+     </spring_reference>
+     <spring_stiffness>
+      0
+     </spring_stiffness>
     </dynamics>
     <use_parent_model_frame>
      1
@@ -2697,6 +2805,12 @@
      <damping>
       3
      </damping>
+     <spring_reference>
+      0
+     </spring_reference>
+     <spring_stiffness>
+      0
+     </spring_stiffness>
     </dynamics>
     <use_parent_model_frame>
      1
@@ -2827,6 +2941,12 @@
      <damping>
       3
      </damping>
+     <spring_reference>
+      0
+     </spring_reference>
+     <spring_stiffness>
+      0
+     </spring_stiffness>
     </dynamics>
     <use_parent_model_frame>
      1
@@ -2957,6 +3077,12 @@
      <damping>
       3
      </damping>
+     <spring_reference>
+      0
+     </spring_reference>
+     <spring_stiffness>
+      0
+     </spring_stiffness>
     </dynamics>
     <use_parent_model_frame>
      1
@@ -3087,6 +3213,12 @@
      <damping>
       3
      </damping>
+     <spring_reference>
+      0
+     </spring_reference>
+     <spring_stiffness>
+      0
+     </spring_stiffness>
     </dynamics>
     <use_parent_model_frame>
      1
@@ -3247,6 +3379,12 @@
      <damping>
       3
      </damping>
+     <spring_reference>
+      0
+     </spring_reference>
+     <spring_stiffness>
+      0
+     </spring_stiffness>
     </dynamics>
     <use_parent_model_frame>
      1
