@@ -2993,6 +2993,14 @@
       </uri>
      </mesh>
     </geometry>
+    <surface>
+     <contact>
+      <ode/>
+     </contact>
+     <friction>
+      <ode/>
+     </friction>
+    </surface>
    </collision>
    <visual name="LElb_visual">
     <pose>
@@ -3004,11 +3012,24 @@
        1 1 1
       </scale>
       <uri>
-       model://coman_urdf/meshes/collada/forearms/elbow.dae
+       model://coman_urdf/meshes/collada/forearms/elbow.stl
       </uri>
      </mesh>
     </geometry>
+    <material>
+     <script>
+      <name>
+       Gazebo/DarkGrey
+      </name>
+      <uri>
+       __default__
+      </uri>
+     </script>
+    </material>
    </visual>
+   <gravity>
+    1
+   </gravity>
    <velocity_decay>
     <linear>
      0
@@ -3017,6 +3038,9 @@
      0
     </angular>
    </velocity_decay>
+   <self_collide>
+    0
+   </self_collide>
   </link>
   <joint name="LElbj" type="revolute">
    <child>
@@ -3584,6 +3608,14 @@
       </uri>
      </mesh>
     </geometry>
+    <surface>
+     <contact>
+      <ode/>
+     </contact>
+     <friction>
+      <ode/>
+     </friction>
+    </surface>
    </collision>
    <visual name="RShp_visual">
     <pose>
@@ -3595,11 +3627,24 @@
        0.03937 0.03937 0.03937
       </scale>
       <uri>
-       model://coman_urdf/meshes/collada/asm0001_collada_24_prt.dae
+       model://coman_urdf/meshes/collada/rarm0.stl
       </uri>
      </mesh>
     </geometry>
+    <material>
+     <script>
+      <name>
+       Gazebo/DarkGrey
+      </name>
+      <uri>
+       __default__
+      </uri>
+     </script>
+    </material>
    </visual>
+   <gravity>
+    1
+   </gravity>
    <velocity_decay>
     <linear>
      0
@@ -3608,6 +3653,9 @@
      0
     </angular>
    </velocity_decay>
+   <self_collide>
+    0
+   </self_collide>
   </link>
   <joint name="RShSag" type="revolute">
    <child>
@@ -3720,6 +3768,14 @@
       </uri>
      </mesh>
     </geometry>
+    <surface>
+     <contact>
+      <ode/>
+     </contact>
+     <friction>
+      <ode/>
+     </friction>
+    </surface>
    </collision>
    <visual name="RShr_visual">
     <pose>
@@ -3731,11 +3787,24 @@
        0.03937 0.03937 0.03937
       </scale>
       <uri>
-       model://coman_urdf/meshes/collada/asm0001_collada_23_prt.dae
+       model://coman_urdf/meshes/collada/rarm1.stl
       </uri>
      </mesh>
     </geometry>
+    <material>
+     <script>
+      <name>
+       Gazebo/DarkGrey
+      </name>
+      <uri>
+       __default__
+      </uri>
+     </script>
+    </material>
    </visual>
+   <gravity>
+    1
+   </gravity>
    <velocity_decay>
     <linear>
      0
@@ -3744,6 +3813,9 @@
      0
     </angular>
    </velocity_decay>
+   <self_collide>
+    0
+   </self_collide>
   </link>
   <joint name="RShLat" type="revolute">
    <child>
@@ -3856,6 +3928,14 @@
       </uri>
      </mesh>
     </geometry>
+    <surface>
+     <contact>
+      <ode/>
+     </contact>
+     <friction>
+      <ode/>
+     </friction>
+    </surface>
    </collision>
    <visual name="RShy_visual">
     <pose>
@@ -3867,11 +3947,24 @@
        0.03937 0.03937 0.03937
       </scale>
       <uri>
-       model://coman_urdf/meshes/collada/asm0001_collada_22_prt.dae
+       model://coman_urdf/meshes/collada/rarm2.stl
       </uri>
      </mesh>
     </geometry>
+    <material>
+     <script>
+      <name>
+       Gazebo/DarkGrey
+      </name>
+      <uri>
+       __default__
+      </uri>
+     </script>
+    </material>
    </visual>
+   <gravity>
+    1
+   </gravity>
    <velocity_decay>
     <linear>
      0
@@ -3880,6 +3973,9 @@
      0
     </angular>
    </velocity_decay>
+   <self_collide>
+    0
+   </self_collide>
   </link>
   <joint name="RShYaw" type="revolute">
    <child>
@@ -3992,6 +4088,14 @@
       </uri>
      </mesh>
     </geometry>
+    <surface>
+     <contact>
+      <ode/>
+     </contact>
+     <friction>
+      <ode/>
+     </friction>
+    </surface>
    </collision>
    <visual name="RElb_visual">
     <pose>
@@ -4003,11 +4107,24 @@
        1 1 1
       </scale>
       <uri>
-       model://coman_urdf/meshes/collada/forearms/elbow.dae
+       model://coman_urdf/meshes/collada/forearms/elbow.stl
       </uri>
      </mesh>
     </geometry>
+    <material>
+     <script>
+      <name>
+       Gazebo/DarkGrey
+      </name>
+      <uri>
+       __default__
+      </uri>
+     </script>
+    </material>
    </visual>
+   <gravity>
+    1
+   </gravity>
    <velocity_decay>
     <linear>
      0
@@ -4016,6 +4133,9 @@
      0
     </angular>
    </velocity_decay>
+   <self_collide>
+    0
+   </self_collide>
   </link>
   <joint name="RElbj" type="revolute">
    <child>

@@ -16,8 +16,9 @@
     </inertial>
     <visual>
       <origin xyz="-0.005305 0.0825 -0.844329" rpy="0 0 ${PI}"/>
+      <material name="dark_grey"/>
       <geometry name="RShp_visual">
-        <mesh filename="package://coman_urdf/meshes/collada/asm0001_collada_24_prt.dae" scale="${SF} ${SF} ${SF}" />
+        <mesh filename="package://coman_urdf/meshes/collada/rarm0.stl" scale="${SF} ${SF} ${SF}" />
       </geometry>
     </visual>
     <collision>
@@ -36,8 +37,9 @@
     </inertial>
     <visual>
       <origin xyz="-0.005305 0.1558 -0.844329" rpy="0 0 ${PI}"/>
+      <material name="dark_grey"/>
       <geometry name="RShr_visual">
-        <mesh filename="package://coman_urdf/meshes/collada/asm0001_collada_23_prt.dae" scale="${SF} ${SF} ${SF}" />
+        <mesh filename="package://coman_urdf/meshes/collada/rarm1.stl" scale="${SF} ${SF} ${SF}" />
       </geometry>
     </visual>
     <collision>
@@ -56,8 +58,9 @@
     </inertial>
     <visual>
       <origin xyz="-0.005305 0.1558 -0.79952053" rpy="0 0 ${PI}"/>
+      <material name="dark_grey"/>
       <geometry name="RShy_visual">
-        <mesh filename="package://coman_urdf/meshes/collada/asm0001_collada_22_prt.dae" scale="${SF} ${SF} ${SF}" />
+        <mesh filename="package://coman_urdf/meshes/collada/rarm2.stl" scale="${SF} ${SF} ${SF}" />
       </geometry>
     </visual>
     <collision>
@@ -76,8 +79,9 @@
         </inertial>
         <visual>
           <origin xyz="0 0 0" rpy="-1.570796326795 1.570796326795 0"/>
+          <material name="dark_grey"/>
           <geometry name="RElb_visual">
-            <mesh filename="package://coman_urdf/meshes/collada/forearms/elbow.dae" scale="1.0 1.0 1.0" />
+            <mesh filename="package://coman_urdf/meshes/collada/forearms/elbow.stl" scale="1.0 1.0 1.0" />
           </geometry>
         </visual>
         <collision>
@@ -157,8 +161,9 @@
         </inertial>
         <visual>
           <origin xyz="0 0 0" rpy="-1.570796326795 1.570796326795 0"/>
+          <material name="dark_grey"/>
           <geometry name="LElb_visual">
-            <mesh filename="package://coman_urdf/meshes/collada/forearms/elbow.dae" scale="1.0 1.0 1.0" />
+            <mesh filename="package://coman_urdf/meshes/collada/forearms/elbow.stl" scale="1.0 1.0 1.0" />
           </geometry>
         </visual>
         <collision>
