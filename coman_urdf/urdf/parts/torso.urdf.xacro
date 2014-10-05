@@ -27,8 +27,10 @@ The coordinate frame called base_link is rigidly attached to the robot root body
     </inertial>
     <visual>
       <origin xyz="0 0 ${base_link_z_translation}" rpy="0 0 ${PI}"/>
+      <material name="dark_grey"/>
       <geometry name="Waist_visual">
-        <mesh filename="package://coman_urdf/meshes/collada/asm0001_collada_07_prt.dae" scale="${SF} ${SF} ${SF}"/>
+        <!--mesh filename="package://coman_urdf/meshes/collada/asm0001_collada_07_prt.dae" scale="${SF} ${SF} ${SF}"/-->
+        <mesh filename="package://coman_urdf/meshes/collada/torso0.stl" scale="${SF} ${SF} ${SF}"/>
       </geometry>
     </visual> 
     <collision>
