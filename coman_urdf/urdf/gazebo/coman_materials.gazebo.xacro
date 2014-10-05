@@ -4,5 +4,14 @@
 <gazebo reference="Waist">
   <material>Gazebo/DarkGrey</material>
 </gazebo>
+<gazebo reference="DWL">
+  <material>Gazebo/DarkGrey</material>
+</gazebo>
+<gazebo reference="DWS">
+  <material>Gazebo/DarkGrey</material>
+</gazebo>
+<gazebo reference="DWYTorso">
+  <material>Gazebo/Red</material>
+</gazebo>
   
 </robot>

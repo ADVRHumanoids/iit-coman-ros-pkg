@@ -29,7 +29,6 @@ The coordinate frame called base_link is rigidly attached to the robot root body
       <origin xyz="0 0 ${base_link_z_translation}" rpy="0 0 ${PI}"/>
       <material name="dark_grey"/>
       <geometry name="Waist_visual">
-        <!--mesh filename="package://coman_urdf/meshes/collada/asm0001_collada_07_prt.dae" scale="${SF} ${SF} ${SF}"/-->
         <mesh filename="package://coman_urdf/meshes/collada/torso0.stl" scale="${SF} ${SF} ${SF}"/>
       </geometry>
     </visual> 
@@ -49,8 +48,9 @@ The coordinate frame called base_link is rigidly attached to the robot root body
     </inertial>
     <visual>
       <origin xyz="-0.020281504 0 -0.63912053" rpy="0 0 ${PI}"/>
+      <material name="dark_grey"/>
       <geometry name="DWL_visual">
-        <mesh filename="package://coman_urdf/meshes/collada/asm0001_collada_09_prt.dae" scale="${SF} ${SF} ${SF}" />
+        <mesh filename="package://coman_urdf/meshes/collada/torso1.stl" scale="${SF} ${SF} ${SF}" />
       </geometry>
     </visual>
     <collision>
@@ -69,8 +69,9 @@ The coordinate frame called base_link is rigidly attached to the robot root body
     </inertial>
     <visual>
       <origin xyz="-0.020281504 0 -0.63912053" rpy="0 0 ${PI}"/>
+      <material name="dark_grey"/>
       <geometry name="DWS_visual">
-        <mesh filename="package://coman_urdf/meshes/collada/asm0001_collada_08_prt.dae" scale="${SF} ${SF} ${SF}" />
+        <mesh filename="package://coman_urdf/meshes/collada/torso2.stl" scale="${SF} ${SF} ${SF}" />
       </geometry>
     </visual>
     <collision>
@@ -89,8 +90,9 @@ The coordinate frame called base_link is rigidly attached to the robot root body
     </inertial>
     <visual>
       <origin xyz="-0.020281504 0.0 -0.68662053" rpy="0 0 ${PI}"/>
+      <material name="red"/>
       <geometry name="DWYTorso_visual">
-        <mesh filename="package://coman_urdf/meshes/collada/asm0001_collada_10_prt.dae" scale="${SF} ${SF} ${SF}" />
+        <mesh filename="package://coman_urdf/meshes/collada/torso3.stl" scale="${SF} ${SF} ${SF}" />
       </geometry>
     </visual>
     <collision>
