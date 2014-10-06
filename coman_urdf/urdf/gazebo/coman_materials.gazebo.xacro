@@ -27,7 +27,15 @@
   <material>Gazebo/DarkGrey</material>
 </gazebo>
 
-
+<gazebo reference="LShp">
+  <material>Gazebo/DarkGrey</material>
+</gazebo>
+<gazebo reference="LShr">
+  <material>Gazebo/DarkGrey</material>
+</gazebo>
+<gazebo reference="LShy">
+  <material>Gazebo/DarkGrey</material>
+</gazebo>
 <gazebo reference="LElb">
   <material>Gazebo/DarkGrey</material>
 </gazebo>

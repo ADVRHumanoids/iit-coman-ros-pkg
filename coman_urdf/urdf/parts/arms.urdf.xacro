@@ -101,8 +101,9 @@
     </inertial>
     <visual>
       <origin xyz="-0.005305 -0.0825 -0.844329" rpy="0 0 ${PI}"/>
+      <material name="dark_grey"/>
       <geometry name="LShp_visual">
-        <mesh filename="package://coman_urdf/meshes/collada/asm0001_collada_14_prt.dae" scale="${SF} ${SF} ${SF}" />
+        <mesh filename="package://coman_urdf/meshes/collada/larm0.stl" scale="${SF} ${SF} ${SF}" />
       </geometry>
     </visual>
     <collision>
@@ -121,8 +122,9 @@
     </inertial>
     <visual>
       <origin xyz="-0.005305 -0.1558 -0.844329" rpy="0 0 ${PI}"/>
+      <material name="dark_grey"/>
       <geometry name="LShr_visual">
-        <mesh filename="package://coman_urdf/meshes/collada/asm0001_collada_13_prt.dae" scale="${SF} ${SF} ${SF}" />
+        <mesh filename="package://coman_urdf/meshes/collada/larm1.stl" scale="${SF} ${SF} ${SF}" />
       </geometry>
     </visual>
     <collision>
@@ -141,8 +143,9 @@
     </inertial>
     <visual>
       <origin xyz="-0.005305 -0.1558 -0.79952053" rpy="0 0 ${PI}"/>
+      <material name="dark_grey"/>
       <geometry name="LShy_visual">
-        <mesh filename="package://coman_urdf/meshes/collada/asm0001_collada_12_prt.dae" scale="${SF} ${SF} ${SF}" />
+        <mesh filename="package://coman_urdf/meshes/collada/larm2.stl" scale="${SF} ${SF} ${SF}" />
       </geometry>
     </visual>
     <collision>
