@@ -149,8 +149,9 @@
     </inertial>
     <visual>
       <origin xyz="0.0 -0.023 -0.52" rpy="0 0 ${PI}"/>
+      <material name="dark_grey"/>
       <geometry name="RHipMot_visual">
-        <mesh filename="package://coman_urdf/meshes/collada/asm0001_collada_06_prt.dae" scale="${SF} ${SF} ${SF}" />
+        <mesh filename="package://coman_urdf/meshes/collada/lleg0.stl" scale="${SF} ${SF} ${SF}" />
       </geometry>
     </visual>
     <collision>
@@ -169,8 +170,9 @@
     </inertial>
     <visual>
       <origin xyz="0.0 -0.0726 -0.52" rpy="0 0 ${PI}"/>
+      <material name="dark_grey"/>
       <geometry name="LThighUpLeg_visual">
-        <mesh filename="package://coman_urdf/meshes/collada/asm0001_collada_05_prt.dae" scale="${SF} ${SF} ${SF}" />
+        <mesh filename="package://coman_urdf/meshes/collada/lleg1.stl" scale="${SF} ${SF} ${SF}" />
       </geometry>
     </visual>
     <collision>
