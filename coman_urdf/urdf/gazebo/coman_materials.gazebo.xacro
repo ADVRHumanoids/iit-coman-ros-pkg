@@ -40,5 +40,22 @@
   <material>Gazebo/DarkGrey</material>
 </gazebo>
 
-  
+<gazebo reference="RHipMot">
+  <material>Gazebo/DarkGrey</material>
+</gazebo>  
+<gazebo reference="RThighUpLeg">
+  <material>Gazebo/DarkGrey</material>
+</gazebo>
+<gazebo reference="RThighLowLeg">
+  <material>Gazebo/DarkGrey</material>
+</gazebo>
+<gazebo reference="RLowLeg">
+  <material>Gazebo/DarkGrey</material>
+</gazebo>
+<gazebo reference="RFootmot">
+  <material>Gazebo/DarkGrey</material>
+</gazebo>
+
+
+
 </robot>
