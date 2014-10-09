@@ -3162,6 +3162,14 @@
       <ode/>
      </friction>
     </surface>
+    <surface>
+     <contact>
+      <ode/>
+     </contact>
+     <friction>
+      <ode/>
+     </friction>
+    </surface>
    </collision>
    <visual name="LElb_visual">
     <pose>
@@ -3198,11 +3206,29 @@
        0.03937 0.03937 0.03937
       </scale>
       <uri>
-       model://coman_urdf/meshes/collada/forearm_old.dae
+       model://coman_urdf/meshes/collada/forearm_old.stl
       </uri>
      </mesh>
     </geometry>
+    <material>
+     <script>
+      <name>
+       Gazebo/DarkGrey
+      </name>
+      <uri>
+       __default__
+      </uri>
+     </script>
+    </material>
    </visual>
+   <velocity_decay>
+    <linear>
+     0
+    </linear>
+    <angular>
+     0
+    </angular>
+   </velocity_decay>
    <gravity>
     1
    </gravity>
@@ -3840,6 +3866,14 @@
       <ode/>
      </friction>
     </surface>
+    <surface>
+     <contact>
+      <ode/>
+     </contact>
+     <friction>
+      <ode/>
+     </friction>
+    </surface>
    </collision>
    <visual name="RElb_visual">
     <pose>
@@ -3876,11 +3910,29 @@
        0.03937 0.03937 0.03937
       </scale>
       <uri>
-       model://coman_urdf/meshes/collada/forearm_old.dae
+       model://coman_urdf/meshes/collada/forearm_old.stl
       </uri>
      </mesh>
     </geometry>
+    <material>
+     <script>
+      <name>
+       Gazebo/DarkGrey
+      </name>
+      <uri>
+       __default__
+      </uri>
+     </script>
+    </material>
    </visual>
+   <velocity_decay>
+    <linear>
+     0
+    </linear>
+    <angular>
+     0
+    </angular>
+   </velocity_decay>
    <gravity>
     1
    </gravity>

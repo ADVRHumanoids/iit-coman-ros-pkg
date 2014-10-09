@@ -3465,6 +3465,14 @@
       </uri>
      </mesh>
     </geometry>
+    <surface>
+     <contact>
+      <ode/>
+     </contact>
+     <friction>
+      <ode/>
+     </friction>
+    </surface>
    </collision>
    <visual name="LForearm_visual">
     <pose>
@@ -3480,7 +3488,20 @@
       </uri>
      </mesh>
     </geometry>
+    <material>
+     <script>
+      <name>
+       Gazebo/DarkGrey
+      </name>
+      <uri>
+       __default__
+      </uri>
+     </script>
+    </material>
    </visual>
+   <gravity>
+    1
+   </gravity>
    <velocity_decay>
     <linear>
      0
@@ -3489,6 +3510,9 @@
      0
     </angular>
    </velocity_decay>
+   <self_collide>
+    0
+   </self_collide>
   </link>
   <joint name="LForearmPlate" type="revolute">
    <child>
@@ -4660,6 +4684,14 @@
       </uri>
      </mesh>
     </geometry>
+    <surface>
+     <contact>
+      <ode/>
+     </contact>
+     <friction>
+      <ode/>
+     </friction>
+    </surface>
    </collision>
    <visual name="RForearm_visual">
     <pose>
@@ -4675,7 +4707,20 @@
       </uri>
      </mesh>
     </geometry>
+    <material>
+     <script>
+      <name>
+       Gazebo/DarkGrey
+      </name>
+      <uri>
+       __default__
+      </uri>
+     </script>
+    </material>
    </visual>
+   <gravity>
+    1
+   </gravity>
    <velocity_decay>
     <linear>
      0
@@ -4684,6 +4729,9 @@
      0
     </angular>
    </velocity_decay>
+   <self_collide>
+    0
+   </self_collide>
   </link>
   <joint name="RForearmPlate" type="revolute">
    <child>

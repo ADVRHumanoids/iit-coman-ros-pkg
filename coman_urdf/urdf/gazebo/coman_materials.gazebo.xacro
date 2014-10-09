@@ -26,6 +26,9 @@
 <gazebo reference="RElb">
   <material>Gazebo/DarkGrey</material>
 </gazebo>
+<gazebo reference="RForearm">
+  <material>Gazebo/DarkGrey</material>
+</gazebo>
 
 <gazebo reference="LShp">
   <material>Gazebo/DarkGrey</material>
@@ -37,6 +40,9 @@
   <material>Gazebo/DarkGrey</material>
 </gazebo>
 <gazebo reference="LElb">
+  <material>Gazebo/DarkGrey</material>
+</gazebo>
+<gazebo reference="LForearm">
   <material>Gazebo/DarkGrey</material>
 </gazebo>
 
