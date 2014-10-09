@@ -62,5 +62,14 @@
 <gazebo reference="LThighUpLeg">
   <material>Gazebo/DarkGrey</material>
 </gazebo>
+<gazebo reference="LThighLowLeg">
+  <material>Gazebo/DarkGrey</material>
+</gazebo>
+<gazebo reference="LLowLeg">
+  <material>Gazebo/DarkGrey</material>
+</gazebo>
+<gazebo reference="LFootmot">
+  <material>Gazebo/DarkGrey</material>
+</gazebo>
 
 </robot>

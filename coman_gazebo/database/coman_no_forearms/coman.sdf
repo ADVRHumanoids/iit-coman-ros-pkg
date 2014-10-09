@@ -505,6 +505,14 @@
       </uri>
      </mesh>
     </geometry>
+    <surface>
+     <contact>
+      <ode/>
+     </contact>
+     <friction>
+      <ode/>
+     </friction>
+    </surface>
    </collision>
    <visual name="LThighLowLeg_visual">
     <pose>
@@ -516,11 +524,24 @@
        0.03937 0.03937 0.03937
       </scale>
       <uri>
-       model://coman_urdf/meshes/collada/asm0001_collada_04_prt.dae
+       model://coman_urdf/meshes/collada/lleg2.stl
       </uri>
      </mesh>
     </geometry>
+    <material>
+     <script>
+      <name>
+       Gazebo/DarkGrey
+      </name>
+      <uri>
+       __default__
+      </uri>
+     </script>
+    </material>
    </visual>
+   <gravity>
+    1
+   </gravity>
    <velocity_decay>
     <linear>
      0
@@ -529,6 +550,9 @@
      0
     </angular>
    </velocity_decay>
+   <self_collide>
+    0
+   </self_collide>
   </link>
   <joint name="LHipYaw" type="revolute">
    <child>
@@ -641,6 +665,14 @@
       </uri>
      </mesh>
     </geometry>
+    <surface>
+     <contact>
+      <ode/>
+     </contact>
+     <friction>
+      <ode/>
+     </friction>
+    </surface>
    </collision>
    <visual name="LLowLeg_visual">
     <pose>
@@ -652,11 +684,24 @@
        0.03937 0.03937 0.03937
       </scale>
       <uri>
-       model://coman_urdf/meshes/collada/asm0001_collada_03_prt.dae
+       model://coman_urdf/meshes/collada/lleg3.stl
       </uri>
      </mesh>
     </geometry>
+    <material>
+     <script>
+      <name>
+       Gazebo/DarkGrey
+      </name>
+      <uri>
+       __default__
+      </uri>
+     </script>
+    </material>
    </visual>
+   <gravity>
+    1
+   </gravity>
    <velocity_decay>
     <linear>
      0
@@ -665,6 +710,9 @@
      0
     </angular>
    </velocity_decay>
+   <self_collide>
+    0
+   </self_collide>
   </link>
   <joint name="LKneeSag" type="revolute">
    <child>
@@ -777,6 +825,14 @@
       </uri>
      </mesh>
     </geometry>
+    <surface>
+     <contact>
+      <ode/>
+     </contact>
+     <friction>
+      <ode/>
+     </friction>
+    </surface>
    </collision>
    <visual name="LFootmot_visual">
     <pose>
@@ -788,11 +844,24 @@
        0.03937 0.03937 0.03937
       </scale>
       <uri>
-       model://coman_urdf/meshes/collada/asm0001_collada_02_prt.dae
+       model://coman_urdf/meshes/collada/lleg4.stl
       </uri>
      </mesh>
     </geometry>
+    <material>
+     <script>
+      <name>
+       Gazebo/DarkGrey
+      </name>
+      <uri>
+       __default__
+      </uri>
+     </script>
+    </material>
    </visual>
+   <gravity>
+    1
+   </gravity>
    <velocity_decay>
     <linear>
      0
@@ -801,6 +870,9 @@
      0
     </angular>
    </velocity_decay>
+   <self_collide>
+    0
+   </self_collide>
   </link>
   <joint name="LAnkLat" type="revolute">
    <child>
