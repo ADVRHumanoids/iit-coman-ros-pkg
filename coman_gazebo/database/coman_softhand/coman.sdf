@@ -3833,6 +3833,14 @@
       <ode/>
      </friction>
     </surface>
+    <surface>
+     <contact>
+      <ode/>
+     </contact>
+     <friction>
+      <ode/>
+     </friction>
+    </surface>
    </collision>
    <visual name="LWrMot3_visual">
     <pose>
@@ -3869,11 +3877,29 @@
        0.1 0.1 0.1
       </scale>
       <uri>
-       model://coman_urdf/meshes/collada/forearms/L_soft_hand_open_lowpoly.dae
+       model://coman_urdf/meshes/collada/forearms/Lsofthand_fix.stl
       </uri>
      </mesh>
     </geometry>
+    <material>
+     <script>
+      <name>
+       Gazebo/DarkGrey
+      </name>
+      <uri>
+       __default__
+      </uri>
+     </script>
+    </material>
    </visual>
+   <velocity_decay>
+    <linear>
+     0
+    </linear>
+    <angular>
+     0
+    </angular>
+   </velocity_decay>
    <gravity>
     1
    </gravity>
@@ -5008,6 +5034,14 @@
       <ode/>
      </friction>
     </surface>
+    <surface>
+     <contact>
+      <ode/>
+     </contact>
+     <friction>
+      <ode/>
+     </friction>
+    </surface>
    </collision>
    <visual name="RWrMot3_visual">
     <pose>
@@ -5044,11 +5078,29 @@
        0.1 0.1 0.1
       </scale>
       <uri>
-       model://coman_urdf/meshes/collada/forearms/R_soft_hand_open_lowpoly.dae
+       model://coman_urdf/meshes/collada/forearms/Rsofthand_fix.stl
       </uri>
      </mesh>
     </geometry>
+    <material>
+     <script>
+      <name>
+       Gazebo/DarkGrey
+      </name>
+      <uri>
+       __default__
+      </uri>
+     </script>
+    </material>
    </visual>
+   <velocity_decay>
+    <linear>
+     0
+    </linear>
+    <angular>
+     0
+    </angular>
+   </velocity_decay>
    <gravity>
     1
    </gravity>

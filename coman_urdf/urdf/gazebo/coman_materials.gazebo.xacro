@@ -35,6 +35,9 @@
 <gazebo reference="RWrMot3">
   <material>Gazebo/Grey</material>
 </gazebo>
+<gazebo reference="RSoftHand">
+  <material>Gazebo/DarkGrey</material>
+</gazebo>
 
 <gazebo reference="LShp">
   <material>Gazebo/DarkGrey</material>
@@ -56,6 +59,9 @@
 </gazebo>
 <gazebo reference="LWrMot3">
   <material>Gazebo/Grey</material>
+</gazebo>
+<gazebo reference="LSoftHand">
+  <material>Gazebo/DarkGrey</material>
 </gazebo>
 
 
