@@ -29,6 +29,12 @@
 <gazebo reference="RForearm">
   <material>Gazebo/DarkGrey</material>
 </gazebo>
+<gazebo reference="RWrMot2">
+  <material>Gazebo/Grey</material>
+</gazebo>
+<gazebo reference="RWrMot3">
+  <material>Gazebo/Grey</material>
+</gazebo>
 
 <gazebo reference="LShp">
   <material>Gazebo/DarkGrey</material>
@@ -45,6 +51,13 @@
 <gazebo reference="LForearm">
   <material>Gazebo/DarkGrey</material>
 </gazebo>
+<gazebo reference="LWrMot2">
+  <material>Gazebo/Grey</material>
+</gazebo>
+<gazebo reference="LWrMot3">
+  <material>Gazebo/Grey</material>
+</gazebo>
+
 
 <gazebo reference="RHipMot">
   <material>Gazebo/DarkGrey</material>

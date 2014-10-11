@@ -3484,7 +3484,7 @@
        0.1 0.1 0.1
       </scale>
       <uri>
-       model://coman_urdf/meshes/collada/forearms/forearm_lowpoly.dae
+       model://coman_urdf/meshes/collada/forearms/forearm0.stl
       </uri>
      </mesh>
     </geometry>
@@ -3642,6 +3642,14 @@
       </uri>
      </mesh>
     </geometry>
+    <surface>
+     <contact>
+      <ode/>
+     </contact>
+     <friction>
+      <ode/>
+     </friction>
+    </surface>
    </collision>
    <visual name="LWrMot2_visual">
     <pose>
@@ -3653,11 +3661,24 @@
        0.001 0.001 0.001
       </scale>
       <uri>
-       model://coman_urdf/meshes/collada/forearms/fa_asm_3_right_sw0001.dae
+       model://coman_urdf/meshes/collada/forearms/forearm1.stl
       </uri>
      </mesh>
     </geometry>
+    <material>
+     <script>
+      <name>
+       Gazebo/Grey
+      </name>
+      <uri>
+       __default__
+      </uri>
+     </script>
+    </material>
    </visual>
+   <gravity>
+    1
+   </gravity>
    <velocity_decay>
     <linear>
      0
@@ -3666,6 +3687,9 @@
      0
     </angular>
    </velocity_decay>
+   <self_collide>
+    0
+   </self_collide>
   </link>
   <joint name="LWrj1" type="revolute">
    <child>
@@ -3778,6 +3802,14 @@
       </uri>
      </mesh>
     </geometry>
+    <surface>
+     <contact>
+      <ode/>
+     </contact>
+     <friction>
+      <ode/>
+     </friction>
+    </surface>
    </collision>
    <collision name="LWrMot3_collision_LSoftHand">
     <pose>
@@ -3793,6 +3825,14 @@
       </uri>
      </mesh>
     </geometry>
+    <surface>
+     <contact>
+      <ode/>
+     </contact>
+     <friction>
+      <ode/>
+     </friction>
+    </surface>
    </collision>
    <visual name="LWrMot3_visual">
     <pose>
@@ -3804,10 +3844,20 @@
        0.001 0.001 0.001
       </scale>
       <uri>
-       model://coman_urdf/meshes/collada/forearms/fa_hand_interface_rig_sw0001.dae
+       model://coman_urdf/meshes/collada/forearms/forearm2.stl
       </uri>
      </mesh>
     </geometry>
+    <material>
+     <script>
+      <name>
+       Gazebo/Grey
+      </name>
+      <uri>
+       __default__
+      </uri>
+     </script>
+    </material>
    </visual>
    <visual name="LWrMot3_visual_LSoftHand">
     <pose>
@@ -3824,6 +3874,9 @@
      </mesh>
     </geometry>
    </visual>
+   <gravity>
+    1
+   </gravity>
    <velocity_decay>
     <linear>
      0
@@ -3832,6 +3885,9 @@
      0
     </angular>
    </velocity_decay>
+   <self_collide>
+    0
+   </self_collide>
   </link>
   <joint name="LWrj2" type="revolute">
    <child>
@@ -4603,7 +4659,7 @@
        0.1 0.1 0.1
       </scale>
       <uri>
-       model://coman_urdf/meshes/collada/forearms/forearm_lowpoly.dae
+       model://coman_urdf/meshes/collada/forearms/forearm0.stl
       </uri>
      </mesh>
     </geometry>
@@ -4761,6 +4817,14 @@
       </uri>
      </mesh>
     </geometry>
+    <surface>
+     <contact>
+      <ode/>
+     </contact>
+     <friction>
+      <ode/>
+     </friction>
+    </surface>
    </collision>
    <visual name="RWrMot2_visual">
     <pose>
@@ -4772,11 +4836,24 @@
        0.001 0.001 0.001
       </scale>
       <uri>
-       model://coman_urdf/meshes/collada/forearms/fa_asm_3_right_sw0001.dae
+       model://coman_urdf/meshes/collada/forearms/forearm1.stl
       </uri>
      </mesh>
     </geometry>
+    <material>
+     <script>
+      <name>
+       Gazebo/Grey
+      </name>
+      <uri>
+       __default__
+      </uri>
+     </script>
+    </material>
    </visual>
+   <gravity>
+    1
+   </gravity>
    <velocity_decay>
     <linear>
      0
@@ -4785,6 +4862,9 @@
      0
     </angular>
    </velocity_decay>
+   <self_collide>
+    0
+   </self_collide>
   </link>
   <joint name="RWrj1" type="revolute">
    <child>
@@ -4897,6 +4977,14 @@
       </uri>
      </mesh>
     </geometry>
+    <surface>
+     <contact>
+      <ode/>
+     </contact>
+     <friction>
+      <ode/>
+     </friction>
+    </surface>
    </collision>
    <collision name="RWrMot3_collision_RSoftHand">
     <pose>
@@ -4912,6 +5000,14 @@
       </uri>
      </mesh>
     </geometry>
+    <surface>
+     <contact>
+      <ode/>
+     </contact>
+     <friction>
+      <ode/>
+     </friction>
+    </surface>
    </collision>
    <visual name="RWrMot3_visual">
     <pose>
@@ -4923,10 +5019,20 @@
        0.001 0.001 0.001
       </scale>
       <uri>
-       model://coman_urdf/meshes/collada/forearms/fa_hand_interface_rig_sw0001.dae
+       model://coman_urdf/meshes/collada/forearms/forearm2.stl
       </uri>
      </mesh>
     </geometry>
+    <material>
+     <script>
+      <name>
+       Gazebo/Grey
+      </name>
+      <uri>
+       __default__
+      </uri>
+     </script>
+    </material>
    </visual>
    <visual name="RWrMot3_visual_RSoftHand">
     <pose>
@@ -4943,6 +5049,9 @@
      </mesh>
     </geometry>
    </visual>
+   <gravity>
+    1
+   </gravity>
    <velocity_decay>
     <linear>
      0
@@ -4951,6 +5060,9 @@
      0
     </angular>
    </velocity_decay>
+   <self_collide>
+    0
+   </self_collide>
   </link>
   <joint name="RWrj2" type="revolute">
    <child>
