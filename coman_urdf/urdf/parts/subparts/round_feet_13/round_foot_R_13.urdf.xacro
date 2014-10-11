@@ -9,8 +9,9 @@
       </inertial>
       <visual>
         <origin xyz="0.0 0.0726 -0.0932" rpy="0 0 -3.14159265359"/>
+        <material name="dark_grey"/>
         <geometry name="RFoot_visual">
-          <mesh filename="package://coman_urdf/meshes/collada/asm0001_collada_15_prt.dae" scale="0.03937 0.03937 0.03937" />
+          <mesh filename="package://coman_urdf/meshes/collada/Rfoot.stl" scale="0.03937 0.03937 0.03937" />
         </geometry>
       </visual>
       <collision>

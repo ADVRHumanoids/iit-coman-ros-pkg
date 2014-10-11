@@ -858,6 +858,16 @@
       </uri>
      </script>
     </material>
+    <material>
+     <script>
+      <name>
+       Gazebo/DarkGrey
+      </name>
+      <uri>
+       __default__
+      </uri>
+     </script>
+    </material>
    </visual>
    <gravity>
     1
@@ -1013,6 +1023,14 @@
       </ode>
      </friction>
     </surface>
+    <surface>
+     <contact>
+      <ode/>
+     </contact>
+     <friction>
+      <ode/>
+     </friction>
+    </surface>
    </collision>
    <visual name="LFoot_visual">
     <pose>
@@ -1025,7 +1043,25 @@
       </size>
      </box>
     </geometry>
+    <material>
+     <script>
+      <name>
+       Gazebo/DarkGrey
+      </name>
+      <uri>
+       __default__
+      </uri>
+     </script>
+    </material>
    </visual>
+   <velocity_decay>
+    <linear>
+     0
+    </linear>
+    <angular>
+     0
+    </angular>
+   </velocity_decay>
    <gravity>
     1
    </gravity>
@@ -1845,6 +1881,16 @@
       </uri>
      </script>
     </material>
+    <material>
+     <script>
+      <name>
+       Gazebo/DarkGrey
+      </name>
+      <uri>
+       __default__
+      </uri>
+     </script>
+    </material>
    </visual>
    <gravity>
     1
@@ -2000,6 +2046,14 @@
       </ode>
      </friction>
     </surface>
+    <surface>
+     <contact>
+      <ode/>
+     </contact>
+     <friction>
+      <ode/>
+     </friction>
+    </surface>
    </collision>
    <visual name="RFoot_visual">
     <pose>
@@ -2012,7 +2066,25 @@
       </size>
      </box>
     </geometry>
+    <material>
+     <script>
+      <name>
+       Gazebo/DarkGrey
+      </name>
+      <uri>
+       __default__
+      </uri>
+     </script>
+    </material>
    </visual>
+   <velocity_decay>
+    <linear>
+     0
+    </linear>
+    <angular>
+     0
+    </angular>
+   </velocity_decay>
    <gravity>
     1
    </gravity>

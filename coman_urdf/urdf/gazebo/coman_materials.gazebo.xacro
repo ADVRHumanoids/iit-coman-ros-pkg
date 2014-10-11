@@ -80,6 +80,9 @@
 <gazebo reference="RFootmot">
   <material>Gazebo/DarkGrey</material>
 </gazebo>
+<gazebo reference="RFoot">
+  <material>Gazebo/DarkGrey</material>
+</gazebo>
 
 <gazebo reference="LHipMot">
   <material>Gazebo/DarkGrey</material>
@@ -96,5 +99,10 @@
 <gazebo reference="LFootmot">
   <material>Gazebo/DarkGrey</material>
 </gazebo>
+<gazebo reference="LFoot">
+  <material>Gazebo/DarkGrey</material>
+</gazebo>
+
+
 
 </robot>
