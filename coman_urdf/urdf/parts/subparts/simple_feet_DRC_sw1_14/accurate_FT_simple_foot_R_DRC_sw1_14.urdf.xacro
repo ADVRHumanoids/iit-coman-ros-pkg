@@ -12,9 +12,7 @@
      <geometry>
        <box size="0.2 0.1 0.04" />
      </geometry>
-     <material name="Cyan">
-       <color rgba="0 1.0 1.0 1.0"/>
-     </material>
+     <material name="dark_gray"/>
    </visual>
    <collision>
      <origin xyz="0.03 0 -0.01" rpy="0 0 0"/>
