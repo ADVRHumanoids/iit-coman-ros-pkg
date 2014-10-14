@@ -74,7 +74,10 @@ EOF
             cd ../../coman_srdf/srdf
             rosrun xacro xacro.py coman.srdf.xacro > ${model_filename}.srdf 
             echo "...created ${model_filename}.srdf!"
-            
+            echo "...copying srdf folder into urdf folder"
+	    cd ..
+            cp -r srdf ../coman_urdf/
+
             echo 
             echo 
             echo "Complete! Enjoy ${model_name} ver ${model_version} in GAZEBO!"
