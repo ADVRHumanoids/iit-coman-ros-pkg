@@ -3845,14 +3845,6 @@
       </size>
      </box>
     </geometry>
-    <surface>
-     <contact>
-      <ode/>
-     </contact>
-     <friction>
-      <ode/>
-     </friction>
-    </surface>
    </collision>
    <visual name="LSoftHand_visual">
     <pose>
@@ -3865,20 +3857,7 @@
       </size>
      </box>
     </geometry>
-    <material>
-     <script>
-      <name>
-       Gazebo/DarkGrey
-      </name>
-      <uri>
-       __default__
-      </uri>
-     </script>
-    </material>
    </visual>
-   <gravity>
-    1
-   </gravity>
    <velocity_decay>
     <linear>
      0
@@ -3887,9 +3866,6 @@
      0
     </angular>
    </velocity_decay>
-   <self_collide>
-    0
-   </self_collide>
   </link>
   <joint name="l_handj" type="revolute">
    <child>
@@ -5136,14 +5112,6 @@
       </size>
      </box>
     </geometry>
-    <surface>
-     <contact>
-      <ode/>
-     </contact>
-     <friction>
-      <ode/>
-     </friction>
-    </surface>
    </collision>
    <visual name="RSoftHand_visual">
     <pose>
@@ -5156,20 +5124,7 @@
       </size>
      </box>
     </geometry>
-    <material>
-     <script>
-      <name>
-       Gazebo/DarkGrey
-      </name>
-      <uri>
-       __default__
-      </uri>
-     </script>
-    </material>
    </visual>
-   <gravity>
-    1
-   </gravity>
    <velocity_decay>
     <linear>
      0
@@ -5178,9 +5133,6 @@
      0
     </angular>
    </velocity_decay>
-   <self_collide>
-    0
-   </self_collide>
   </link>
   <joint name="r_handj" type="revolute">
    <child>

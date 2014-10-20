@@ -13,7 +13,7 @@
     <visual>
       <origin xyz="-0.020281504 0.0 -0.68662053" rpy="0 0 ${PI}"/>
       <geometry name="Xtion_body_visual">
-        <mesh filename="package://coman_urdf/meshes/collada/Xtion/xtion_base.dae" scale="0.03937 0.03937 0.03937" />
+        <mesh filename="package://coman_urdf/meshes/collada/Xtion/xtion_base.stl" scale="0.03937 0.03937 0.03937" />
       </geometry>
     </visual>
     <collision>
@@ -33,7 +33,7 @@
     <visual>
       <origin xyz="-0.0915 0.0 -1.2778" rpy="0 0 ${PI}"/>
       <geometry name="Xtion_cam_body_visual">
-        <mesh filename="package://coman_urdf/meshes/collada/Xtion/xtion_cam_body.dae" scale="0.001 0.001 0.001" />
+        <mesh filename="package://coman_urdf/meshes/collada/Xtion/xtion_cam_body.stl" scale="0.001 0.001 0.001" />
       </geometry>
     </visual>
     <collision>

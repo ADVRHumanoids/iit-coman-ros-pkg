@@ -29,15 +29,19 @@
 <gazebo reference="RForearm">
   <material>Gazebo/DarkGrey</material>
 </gazebo>
-<gazebo reference="RWrMot2">
-  <material>Gazebo/Grey</material>
-</gazebo>
-<gazebo reference="RWrMot3">
-  <material>Gazebo/Grey</material>
-</gazebo>
-<gazebo reference="RSoftHand">
-  <material>Gazebo/DarkGrey</material>
-</gazebo>
+<xacro:if value="${GAZEBO_COMAN_USES_7DOF_FOREARMS_DRC_14}">
+  <gazebo reference="RWrMot2">
+    <material>Gazebo/Grey</material>
+  </gazebo>
+  <gazebo reference="RWrMot3">
+    <material>Gazebo/Grey</material>
+  </gazebo>
+  <xacro:if value="${GAZEBO_COMAN_USES_SOFTHANDS_DRC_sw1_14}">
+    <gazebo reference="RSoftHand">
+      <material>Gazebo/DarkGrey</material>
+    </gazebo>
+  </xacro:if>
+</xacro:if>
 
 <gazebo reference="LShp">
   <material>Gazebo/DarkGrey</material>
@@ -54,16 +58,19 @@
 <gazebo reference="LForearm">
   <material>Gazebo/DarkGrey</material>
 </gazebo>
-<gazebo reference="LWrMot2">
-  <material>Gazebo/Grey</material>
-</gazebo>
-<gazebo reference="LWrMot3">
-  <material>Gazebo/Grey</material>
-</gazebo>
-<gazebo reference="LSoftHand">
-  <material>Gazebo/DarkGrey</material>
-</gazebo>
-
+<xacro:if value="${GAZEBO_COMAN_USES_7DOF_FOREARMS_DRC_14}">
+  <gazebo reference="LWrMot2">
+    <material>Gazebo/Grey</material>
+  </gazebo>
+  <gazebo reference="LWrMot3">
+    <material>Gazebo/Grey</material>
+  </gazebo>
+  <xacro:if value="${GAZEBO_COMAN_USES_SOFTHANDS_DRC_sw1_14}">
+    <gazebo reference="LSoftHand">
+      <material>Gazebo/DarkGrey</material>
+    </gazebo>
+  </xacro:if>
+</xacro:if>
 
 <gazebo reference="RHipMot">
   <material>Gazebo/DarkGrey</material>
