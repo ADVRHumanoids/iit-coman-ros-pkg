@@ -17,8 +17,9 @@
     </inertial>
     <visual>
       <origin xyz="0.0 0.023 -0.52" rpy="0 0 ${PI}"/>
+      <material name="dark_grey"/>
       <geometry name="RHipMot_visual">
-        <mesh filename="package://coman_urdf/meshes/collada/asm0001_collada_20_prt.dae" scale="${SF} ${SF} ${SF}" />
+        <mesh filename="package://coman_urdf/meshes/collada/rleg0.stl" scale="${SF} ${SF} ${SF}" />
       </geometry>
     </visual>
     <collision>
@@ -37,8 +38,9 @@
     </inertial>
     <visual>
       <origin xyz="0.0 0.0726 -0.52" rpy="0 0 ${PI}"/>
+      <material name="dark_grey"/>
       <geometry name="RThighUpLeg_visual">
-        <mesh filename="package://coman_urdf/meshes/collada/asm0001_collada_19_prt.dae" scale="${SF} ${SF} ${SF}" />
+        <mesh filename="package://coman_urdf/meshes/collada/rleg1.stl" scale="${SF} ${SF} ${SF}" />
       </geometry>
     </visual>
     <collision>
@@ -57,8 +59,9 @@
     </inertial>
     <visual>
       <origin xyz="0.0 0.0726 -0.4176" rpy="0 0 ${PI}"/>
+      <material name="dark_grey"/>
       <geometry name="RThighLowLeg_visual">
-        <mesh filename="package://coman_urdf/meshes/collada/asm0001_collada_18_prt.dae" scale="${SF} ${SF} ${SF}" />
+        <mesh filename="package://coman_urdf/meshes/collada/rleg2.stl" scale="${SF} ${SF} ${SF}" />
       </geometry>
     </visual>
     <collision>
@@ -77,8 +80,9 @@
     </inertial>
     <visual>
       <origin xyz="0.0 0.0726 -0.2942" rpy="0 0 ${PI}"/>
+      <material name="dark_grey"/>
       <geometry name="RLowLeg_visual">
-        <mesh filename="package://coman_urdf/meshes/collada/asm0001_collada_17_prt.dae" scale="${SF} ${SF} ${SF}" />
+        <mesh filename="package://coman_urdf/meshes/collada/rleg3.stl" scale="${SF} ${SF} ${SF}" />
       </geometry>
     </visual>
     <collision>
@@ -97,8 +101,9 @@
     </inertial>
     <visual>
       <origin xyz="0.0 0.0726 -0.0932" rpy="0 0 ${PI}"/>
+      <material name="dark_grey"/>
       <geometry name="RFootmot_visual">
-        <mesh filename="package://coman_urdf/meshes/collada/asm0001_collada_16_prt.dae" scale="${SF} ${SF} ${SF}" />
+        <mesh filename="package://coman_urdf/meshes/collada/rleg4.stl" scale="${SF} ${SF} ${SF}" />
       </geometry>
     </visual>
     <collision>
@@ -144,8 +149,9 @@
     </inertial>
     <visual>
       <origin xyz="0.0 -0.023 -0.52" rpy="0 0 ${PI}"/>
+      <material name="dark_grey"/>
       <geometry name="RHipMot_visual">
-        <mesh filename="package://coman_urdf/meshes/collada/asm0001_collada_06_prt.dae" scale="${SF} ${SF} ${SF}" />
+        <mesh filename="package://coman_urdf/meshes/collada/lleg0.stl" scale="${SF} ${SF} ${SF}" />
       </geometry>
     </visual>
     <collision>
@@ -164,8 +170,9 @@
     </inertial>
     <visual>
       <origin xyz="0.0 -0.0726 -0.52" rpy="0 0 ${PI}"/>
+      <material name="dark_grey"/>
       <geometry name="LThighUpLeg_visual">
-        <mesh filename="package://coman_urdf/meshes/collada/asm0001_collada_05_prt.dae" scale="${SF} ${SF} ${SF}" />
+        <mesh filename="package://coman_urdf/meshes/collada/lleg1.stl" scale="${SF} ${SF} ${SF}" />
       </geometry>
     </visual>
     <collision>
@@ -184,8 +191,9 @@
     </inertial>
     <visual>
       <origin xyz="0.0 -0.0726 -0.4176" rpy="0 0 ${PI}"/>
+      <material name="dark_grey"/>
       <geometry name="LThighLowLeg_visual">
-        <mesh filename="package://coman_urdf/meshes/collada/asm0001_collada_04_prt.dae" scale="${SF} ${SF} ${SF}" />
+        <mesh filename="package://coman_urdf/meshes/collada/lleg2.stl" scale="${SF} ${SF} ${SF}" />
       </geometry>
     </visual>
     <collision>
@@ -204,8 +212,9 @@
     </inertial>
     <visual>
       <origin xyz="0.0 -0.0726 -0.2942" rpy="0 0 ${PI}"/>
+      <material name="dark_grey"/>
       <geometry name="LLowLeg_visual">
-        <mesh filename="package://coman_urdf/meshes/collada/asm0001_collada_03_prt.dae" scale="${SF} ${SF} ${SF}" />
+        <mesh filename="package://coman_urdf/meshes/collada/lleg3.stl" scale="${SF} ${SF} ${SF}" />
       </geometry>
     </visual>
     <collision>
@@ -224,8 +233,9 @@
     </inertial>
     <visual>
       <origin xyz="0.0 -0.0726 -0.0932" rpy="0 0 ${PI}"/>
+      <material name="dark_grey"/>
       <geometry name="LFootmot_visual">
-        <mesh filename="package://coman_urdf/meshes/collada/asm0001_collada_02_prt.dae" scale="${SF} ${SF} ${SF}" />
+        <mesh filename="package://coman_urdf/meshes/collada/lleg4.stl" scale="${SF} ${SF} ${SF}" />
       </geometry>
     </visual>
     <collision>

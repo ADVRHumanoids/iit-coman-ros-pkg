@@ -20,8 +20,9 @@
         </inertial>
         <visual>
           <origin xyz="0 0 ${0.015 + Wrj1_to_FT}" rpy="3.14159265359 0 1.570796326795"/>
+          <material name="dark_grey"/>
           <geometry name="LForearm_visual">
-            <mesh filename="package://coman_urdf/meshes/collada/forearms/forearm_lowpoly.dae" scale="0.1 0.1 0.1" />
+            <mesh filename="package://coman_urdf/meshes/collada/forearms/forearm0.stl" scale="0.1 0.1 0.1" />
           </geometry>
         </visual>
         <collision>
@@ -42,8 +43,9 @@
         </inertial>
         <visual>
           <origin xyz="0.025 0 0" rpy="0 1.570796326795 3.14159265359"/>
+          <material name="grey"/>
           <geometry name="LWrMot2_visual">
-            <mesh filename="package://coman_urdf/meshes/collada/forearms/fa_asm_3_right_sw0001.dae" scale="0.001 0.001 0.001" />
+            <mesh filename="package://coman_urdf/meshes/collada/forearms/forearm1.stl" scale="0.001 0.001 0.001" />
           </geometry>
         </visual>
         <collision>
@@ -64,8 +66,9 @@
         </inertial>
         <visual>
           <origin xyz="0.025 -0.012 -0.02" rpy="0 3.14159265359 1.570796326795"/>
+          <material name="grey"/>
           <geometry name="LWrMot3_visual">
-            <mesh filename="package://coman_urdf/meshes/collada/forearms/fa_hand_interface_rig_sw0001.dae" scale="0.001 0.001 0.001" />
+            <mesh filename="package://coman_urdf/meshes/collada/forearms/forearm2.stl" scale="0.001 0.001 0.001" />
           </geometry>
         </visual>
         <collision>
@@ -89,8 +92,9 @@
         </inertial>
         <visual>
           <origin xyz="0 0 ${0.015 + Wrj1_to_FT}" rpy="3.14159265359 0 1.570796326795"/>
+          <material name="dark_grey"/>
           <geometry name="RForearm_visual">
-            <mesh filename="package://coman_urdf/meshes/collada/forearms/forearm_lowpoly.dae" scale="0.1 0.1 0.1" />
+            <mesh filename="package://coman_urdf/meshes/collada/forearms/forearm0.stl" scale="0.1 0.1 0.1" />
           </geometry>
         </visual>
         <collision>
@@ -111,8 +115,9 @@
         </inertial>
         <visual>
           <origin xyz="0.025 0 0" rpy="0 1.570796326795 3.14159265359"/>
+          <material name="grey"/>
           <geometry name="RWrMot2_visual">
-            <mesh filename="package://coman_urdf/meshes/collada/forearms/fa_asm_3_right_sw0001.dae" scale="0.001 0.001 0.001" />
+            <mesh filename="package://coman_urdf/meshes/collada/forearms/forearm1.stl" scale="0.001 0.001 0.001" />
           </geometry>
         </visual>
         <collision>
@@ -133,8 +138,9 @@
         </inertial>
         <visual>
           <origin xyz="0.025 -0.012 -0.02" rpy="0 3.14159265359 1.570796326795"/>
+          <material name="grey"/>
           <geometry name="RWrMot3_visual">
-            <mesh filename="package://coman_urdf/meshes/collada/forearms/fa_hand_interface_rig_sw0001.dae" scale="0.001 0.001 0.001" />
+            <mesh filename="package://coman_urdf/meshes/collada/forearms/forearm2.stl" scale="0.001 0.001 0.001" />
           </geometry>
         </visual>
         <collision>
