@@ -13,38 +13,35 @@
   <!--JOINTS: When a joint is specified, the child link of that joint (which will always exist) is automatically included-->
   <!--CHAINS: When a chain is specified, all the links along the chain (including endpoints) are included in the group. Additionally, all the joints that are parents to included links are also included. This means that joints along the chain and the parent joint of the base link are included in the group-->
   <!--SUBGROUPS: Groups can also be formed by referencing to already defined group names-->
+  <group name="base">
+    <link name="Waist"/>
+  </group>
+  <group name="sensors">
+    <joint name="l_ankle_joint"/>
+    <joint name="r_ankle_joint"/>
+  </group>
   <group name="left_arm">
-    <joint name="LShSag"/>
-    <joint name="LShLat"/>
-    <joint name="LShYaw"/>
-    <joint name="LElbj"/>
+    <chain base_link="DWYTorso" tip_link="l_wrist"/>
   </group>
   <group name="right_arm">
-    <joint name="RShSag"/>
-    <joint name="RShLat"/>
-    <joint name="RShYaw"/>
-    <joint name="RElbj"/>
+    <chain base_link="DWYTorso" tip_link="r_wrist"/>
   </group>
   <group name="left_leg">
-    <joint name="LHipSag"/>
-    <joint name="LHipLat"/>
-    <joint name="LHipYaw"/>
-    <joint name="LKneeSag"/>
-    <joint name="LAnkLat"/>
-    <joint name="LAnkSag"/>
+    <chain base_link="Waist" tip_link="l_sole"/>
   </group>
   <group name="right_leg">
-    <joint name="RHipSag"/>
-    <joint name="RHipLat"/>
-    <joint name="RHipYaw"/>
-    <joint name="RKneeSag"/>
-    <joint name="RAnkLat"/>
-    <joint name="RAnkSag"/>
+    <chain base_link="Waist" tip_link="r_sole"/>
   </group>
   <group name="torso">
-    <joint name="WaistLat"/>
-    <joint name="WaistSag"/>
-    <joint name="WaistYaw"/>
+    <chain base_link="Waist" tip_link="DWYTorso"/>
+  </group>
+  <group name="chains">
+    <!--THIS HAS TO BE THE LAST GROUP IN THE FILE -->
+    <group name="left_arm"/>
+    <group name="right_arm"/>
+    <group name="left_leg"/>
+    <group name="right_leg"/>
+    <group name="torso"/>
   </group>
 </robot>
 
