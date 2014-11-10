@@ -5,6 +5,8 @@
      <param name="robot_description" command="$(find xacro)/xacro.py '$(find coman_urdf)/urdf/coman.urdf.xacro'" />
      <param name="robot_description_semantic" textfile="$(find coman_srdf)/srdf/coman.srdf" />   
      <param name="use_gui" value="$(arg gui)"/>
+     <param name="rate" value="50.0"/>
+     
         
      <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
 

@@ -2511,29 +2511,29 @@
    </pose>
    <inertial>
     <pose>
-     -0.0358501 1.8286e-05 0.117557 0 -0 0
+     -0.028128 1.67341e-05 0.147671 0 -0 0
     </pose>
     <mass>
-     6.36172
+     6.95172
     </mass>
     <inertia>
      <ixx>
-      0.0340893
+      0.118619
      </ixx>
      <ixy>
-      -9.83086e-06
+      -8.59855e-06
      </ixy>
      <ixz>
-      -0.000756493
+      -0.0191304
      </ixz>
      <iyy>
-      0.0301174
+      0.117743
      </iyy>
      <iyz>
-      6.24438e-06
+      1.17175e-05
      </iyz>
      <izz>
-      0.0252966
+      0.0308825
      </izz>
     </inertia>
    </inertial>
@@ -2548,6 +2548,52 @@
       </scale>
       <uri>
        model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_10_prt.stl
+      </uri>
+     </mesh>
+    </geometry>
+    <surface>
+     <contact>
+      <ode/>
+     </contact>
+     <friction>
+      <ode/>
+     </friction>
+    </surface>
+   </collision>
+   <collision name="DWYTorso_collision_Xtion_body">
+    <pose>
+     -0.0202815 0 -0.686621 0 -0 -3.14159
+    </pose>
+    <geometry>
+     <mesh>
+      <scale>
+       0.03937 0.03937 0.03937
+      </scale>
+      <uri>
+       model://coman_urdf/meshes/collada/simple/Xtion/xtion_base.stl
+      </uri>
+     </mesh>
+    </geometry>
+    <surface>
+     <contact>
+      <ode/>
+     </contact>
+     <friction>
+      <ode/>
+     </friction>
+    </surface>
+   </collision>
+   <collision name="DWYTorso_collision_Xtion_cam_body">
+    <pose>
+     -0.0205 0 -0.6868 0 -0 -3.14159
+    </pose>
+    <geometry>
+     <mesh>
+      <scale>
+       0.001 0.001 0.001
+      </scale>
+      <uri>
+       model://coman_urdf/meshes/collada/simple/Xtion/xtion_cam_body.stl
       </uri>
      </mesh>
     </geometry>
@@ -2585,6 +2631,44 @@
      </script>
     </material>
    </visual>
+   <visual name="DWYTorso_visual_Xtion_body">
+    <pose>
+     -0.0202815 0 -0.686621 0 -0 -3.14159
+    </pose>
+    <geometry>
+     <mesh>
+      <scale>
+       0.03937 0.03937 0.03937
+      </scale>
+      <uri>
+       model://coman_urdf/meshes/collada/Xtion/xtion_base.stl
+      </uri>
+     </mesh>
+    </geometry>
+   </visual>
+   <visual name="DWYTorso_visual_Xtion_cam_body">
+    <pose>
+     -0.0205 0 -0.6868 0 -0 -3.14159
+    </pose>
+    <geometry>
+     <mesh>
+      <scale>
+       0.001 0.001 0.001
+      </scale>
+      <uri>
+       model://coman_urdf/meshes/collada/Xtion/xtion_cam_body.stl
+      </uri>
+     </mesh>
+    </geometry>
+   </visual>
+   <velocity_decay>
+    <linear>
+     0
+    </linear>
+    <angular>
+     0
+    </angular>
+   </velocity_decay>
    <gravity>
     1
    </gravity>
@@ -2599,6 +2683,108 @@
    <self_collide>
     0
    </self_collide>
+   <sensor name="openni_camera_camera" type="depth">
+    <always_on>
+     1
+    </always_on>
+    <visualize>
+     1
+    </visualize>
+    <camera name="__default__">
+     <horizontal_fov>
+      1.047
+     </horizontal_fov>
+     <image>
+      <width>
+       640
+      </width>
+      <height>
+       480
+      </height>
+      <format>
+       R8G8B8
+      </format>
+     </image>
+     <depth_camera>
+      <output>
+       depths
+      </output>
+     </depth_camera>
+     <clip>
+      <near>
+       0.1
+      </near>
+      <far>
+       100
+      </far>
+     </clip>
+    </camera>
+    <plugin filename="libgazebo_ros_openni_kinect.so" name="camera_controller">
+     <alwaysOn>
+      true
+     </alwaysOn>
+     <updateRate>
+      10.0
+     </updateRate>
+     <cameraName>
+      camera
+     </cameraName>
+     <frameName>
+      camera_link
+     </frameName>
+     <imageTopicName>
+      rgb/image_raw
+     </imageTopicName>
+     <depthImageTopicName>
+      depth/image_raw
+     </depthImageTopicName>
+     <pointCloudTopicName>
+      depth/points
+     </pointCloudTopicName>
+     <cameraInfoTopicName>
+      rgb/camera_info
+     </cameraInfoTopicName>
+     <depthImageCameraInfoTopicName>
+      depth/camera_info
+     </depthImageCameraInfoTopicName>
+     <pointCloudCutoff>
+      0.4
+     </pointCloudCutoff>
+     <hackBaseline>
+      0.07
+     </hackBaseline>
+     <distortionK1>
+      0.0
+     </distortionK1>
+     <distortionK2>
+      0.0
+     </distortionK2>
+     <distortionK3>
+      0.0
+     </distortionK3>
+     <distortionT1>
+      0.0
+     </distortionT1>
+     <distortionT2>
+      0.0
+     </distortionT2>
+     <CxPrime>
+      0.0
+     </CxPrime>
+     <Cx>
+      0.0
+     </Cx>
+     <Cy>
+      0.0
+     </Cy>
+     <focalLength>
+      0.0
+     </focalLength>
+    </plugin>
+    <pose>
+     0.086 0 0.613 0 -0 0
+    </pose>
+   </sensor>
   </link>
   <joint name="WaistYaw" type="revolute">
    <child>
