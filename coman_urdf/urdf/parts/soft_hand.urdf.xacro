@@ -3,8 +3,21 @@
 
 <xacro:if value="${GAZEBO_COMAN_USES_SOFTHANDS_DRC_sw1_14}">
 
-<!-- LINKS -->
-<link name="RSoftHand">
+  <xacro:include filename="$(find soft_hand_description)/model/soft_hand.urdf.xacro"/>
+
+  <!-- RIGHT HAND -->
+  <xacro:soft_hand parent="RWrMot3" name="RSoftHand" withAdaptiveTransmission="true" useMimicTag="true" left="false">
+    <origin xyz="0.0 0.0 -0.038" rpy="3.141592 0 1.5707"/>
+  </xacro:soft_hand>
+
+  <!-- LEFT HAND -->
+  <xacro:soft_hand parent="LWrMot3" name="LSoftHand" withAdaptiveTransmission="true" useMimicTag="true" left="true">
+    <origin xyz="0.0 -0.0 -0.038" rpy="3.141592 0 -1.5707"/>
+  </xacro:soft_hand>
+
+  <!-- Keeping all as backup -->
+  <!-- LINKS 
+  <link name="RSoftHand">
     <inertial>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <mass value="0.3"/>
@@ -16,13 +29,13 @@
       <geometry name="RSoftHand_visual">
         <mesh filename="package://coman_urdf/meshes/collada/forearms/Rsofthand_fix.stl" scale="0.1 0.1 0.1" />
       </geometry>
-   </visual>
-   <collision>
+    </visual>
+    <collision>
       <origin xyz="0 0.01 -0.04" rpy="0 0 3.14159265359"/>
       <geometry name="RSoftHand_collision">
         <mesh filename="package://coman_urdf/meshes/collada/simple/forearms/R_soft_hand_open.stl" scale="1E-3 1E-3 1E-3" />
       </geometry>
-   </collision>
+    </collision>
   </link>
 
   <link name="LSoftHand">
@@ -45,8 +58,9 @@
       </geometry>
    </collision>
   </link>
+  -->
 
-<!-- JOINTS -->
+  <!-- JOINTS 
   <joint name="r_handj" type="fixed">
         <parent link="RWrMot3"/>
         <child link="RSoftHand"/>
@@ -58,6 +72,7 @@
         <child link="LSoftHand"/>
         <origin xyz="0 0 -0.07" rpy="0 0 0"/>
   </joint>
+  -->
 </xacro:if>
 
 <xacro:unless value="${GAZEBO_COMAN_USES_SOFTHANDS_DRC_sw1_14}">
