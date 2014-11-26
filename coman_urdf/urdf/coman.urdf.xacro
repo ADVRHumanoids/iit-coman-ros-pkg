@@ -62,7 +62,9 @@ and to define the end effectors of the robot -->
 <!-- ************ HANDS ************ -->
 
 <xacro:if value="${GAZEBO_COMAN_USES_7DOF_FOREARMS_DRC_14}">
-    <xacro:include filename="$(find coman_urdf)/urdf/parts/soft_hand.urdf.xacro" />	
+    <xacro:include filename="$(find coman_urdf)/urdf/parts/soft_hand.urdf.xacro" />
+    <!-- Reference frames in hands -->
+    <xacro:include filename="$(find coman_urdf)/urdf/parts/hand_reference_frame.urdf.xacro" />	
 </xacro:if>
 
 <!-- IMU -->

@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+	<xacro:property name="x_positive" value="0.04" />
+	<xacro:property name="x_negative" value="-0.04" />
+	<xacro:property name="z_positive" value="0.03" />
+	<xacro:property name="z_negative" value="-0.03" />
+
+        <xacro:macro name="reference_frame_hand" params="parent name x z">
+	<!-- macro for one reference frame in hand -->
+		<link name="${name}_link"/>
+
+		<joint name="${name}_joint" type="fixed">
+			<origin xyz="${x} 0 ${z}" rpy="0 0 0" />
+			<parent link="${parent}"/>
+			<child link="${name}_link"/>
+		</joint>
+	</xacro:macro>
+
+	<xacro:macro name="references_frame_hand" params="parent name">
+	<!-- macro for reference frames in hand -->
+		<xacro:reference_frame_hand parent="${parent}" name="${name}_upper_right" x="${x_positive}" z="${z_negative}" />
+		<xacro:reference_frame_hand parent="${parent}" name="${name}_upper_left" x="${x_positive}" z="${z_positive}" />
+		<xacro:reference_frame_hand parent="${parent}" name="${name}_lower_right" x="${x_negative}" z="${z_negative}" />
+		<xacro:reference_frame_hand parent="${parent}" name="${name}_lower_left" x="${x_negative}" z="${z_positive}" />	
+	</xacro:macro>
+
+	<xacro:references_frame_hand parent="LSoftHand" name="l_hand"/>
+	<xacro:references_frame_hand parent="RSoftHand" name="r_hand"/>
+
+</robot>

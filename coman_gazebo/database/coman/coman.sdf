@@ -263,6 +263,9 @@
      <damping>
       3
      </damping>
+     <friction>
+      0
+     </friction>
      <spring_reference>
       0
      </spring_reference>
@@ -423,6 +426,9 @@
      <damping>
       3
      </damping>
+     <friction>
+      0
+     </friction>
      <spring_reference>
       0
      </spring_reference>
@@ -583,6 +589,9 @@
      <damping>
       3
      </damping>
+     <friction>
+      0
+     </friction>
      <spring_reference>
       0
      </spring_reference>
@@ -743,6 +752,9 @@
      <damping>
       3
      </damping>
+     <friction>
+      0
+     </friction>
      <spring_reference>
       0
      </spring_reference>
@@ -913,6 +925,9 @@
      <damping>
       3
      </damping>
+     <friction>
+      0
+     </friction>
      <spring_reference>
       0
      </spring_reference>
@@ -1106,6 +1121,9 @@
      <damping>
       3
      </damping>
+     <friction>
+      0
+     </friction>
      <spring_reference>
       0
      </spring_reference>
@@ -1286,6 +1304,9 @@
      <damping>
       3
      </damping>
+     <friction>
+      0
+     </friction>
      <spring_reference>
       0
      </spring_reference>
@@ -1446,6 +1467,9 @@
      <damping>
       3
      </damping>
+     <friction>
+      0
+     </friction>
      <spring_reference>
       0
      </spring_reference>
@@ -1606,6 +1630,9 @@
      <damping>
       3
      </damping>
+     <friction>
+      0
+     </friction>
      <spring_reference>
       0
      </spring_reference>
@@ -1766,6 +1793,9 @@
      <damping>
       3
      </damping>
+     <friction>
+      0
+     </friction>
      <spring_reference>
       0
      </spring_reference>
@@ -1936,6 +1966,9 @@
      <damping>
       3
      </damping>
+     <friction>
+      0
+     </friction>
      <spring_reference>
       0
      </spring_reference>
@@ -2129,6 +2162,9 @@
      <damping>
       3
      </damping>
+     <friction>
+      0
+     </friction>
      <spring_reference>
       0
      </spring_reference>
@@ -2309,6 +2345,9 @@
      <damping>
       3
      </damping>
+     <friction>
+      0
+     </friction>
      <spring_reference>
       0
      </spring_reference>
@@ -2469,6 +2508,9 @@
      <damping>
       3
      </damping>
+     <friction>
+      0
+     </friction>
      <spring_reference>
       0
      </spring_reference>
@@ -2815,6 +2857,9 @@
      <damping>
       3
      </damping>
+     <friction>
+      0
+     </friction>
      <spring_reference>
       0
      </spring_reference>
@@ -2975,6 +3020,9 @@
      <damping>
       3
      </damping>
+     <friction>
+      0
+     </friction>
      <spring_reference>
       0
      </spring_reference>
@@ -3135,6 +3183,9 @@
      <damping>
       3
      </damping>
+     <friction>
+      0
+     </friction>
      <spring_reference>
       0
      </spring_reference>
@@ -3295,6 +3346,9 @@
      <damping>
       3
      </damping>
+     <friction>
+      0
+     </friction>
      <spring_reference>
       0
      </spring_reference>
@@ -3455,6 +3509,9 @@
      <damping>
       3
      </damping>
+     <friction>
+      0
+     </friction>
      <spring_reference>
       0
      </spring_reference>
@@ -3615,6 +3672,9 @@
      <damping>
       0.03
      </damping>
+     <friction>
+      0
+     </friction>
      <spring_reference>
       0
      </spring_reference>
@@ -3792,6 +3852,9 @@
      <damping>
       0.03
      </damping>
+     <friction>
+      0
+     </friction>
      <spring_reference>
       0
      </spring_reference>
@@ -4016,6 +4079,9 @@
      <damping>
       0.03
      </damping>
+     <friction>
+      0
+     </friction>
      <spring_reference>
       0
      </spring_reference>
@@ -4176,6 +4242,9 @@
      <damping>
       3
      </damping>
+     <friction>
+      0
+     </friction>
      <spring_reference>
       0
      </spring_reference>
@@ -4336,6 +4405,9 @@
      <damping>
       3
      </damping>
+     <friction>
+      0
+     </friction>
      <spring_reference>
       0
      </spring_reference>
@@ -4496,6 +4568,9 @@
      <damping>
       3
      </damping>
+     <friction>
+      0
+     </friction>
      <spring_reference>
       0
      </spring_reference>
@@ -4656,6 +4731,9 @@
      <damping>
       3
      </damping>
+     <friction>
+      0
+     </friction>
      <spring_reference>
       0
      </spring_reference>
@@ -4816,6 +4894,9 @@
      <damping>
       0.03
      </damping>
+     <friction>
+      0
+     </friction>
      <spring_reference>
       0
      </spring_reference>
@@ -4993,6 +5074,9 @@
      <damping>
       0.03
      </damping>
+     <friction>
+      0
+     </friction>
      <spring_reference>
       0
      </spring_reference>
@@ -5217,6 +5301,9 @@
      <damping>
       0.03
      </damping>
+     <friction>
+      0
+     </friction>
      <spring_reference>
       0
      </spring_reference>
