@@ -185,7 +185,7 @@
     <child link="RShp"/>
     <origin xyz="-0.014976503999999998 -0.0825 0.15770847" rpy="0 0 0" />
     <axis xyz="0 1 0" />
-    <limit velocity="4.0" effort="50" lower="-3.4034" upper="1.6581" />
+    <limit effort="200" lower="-3.14" upper="3.14" velocity="4.0"/>
     <dynamics friction="0" damping="3.0"/>
 </joint>
 
@@ -194,7 +194,7 @@
     <child link="RShr"/>
     <origin xyz="0.0 -0.07329999999999999 0.0" rpy="0 0 0" />
     <axis xyz="1 0 0" />
-    <limit velocity="4.0" effort="50" lower="-2.094" upper="0.31415" />
+    <limit effort="200" lower="-3.14" upper="3.14" velocity="4.0"/>
     <dynamics friction="0" damping="3.0"/>
 </joint>
 
@@ -203,7 +203,7 @@
     <child link="RShy"/>
     <origin xyz="0.0 0.0 -0.04480846999999999" rpy="0 0 0" />
     <axis xyz="0 0 1" />
-    <limit velocity="4.0" effort="50" lower="-1.5708" upper="1.5708" />
+    <limit effort="200" lower="-3.14" upper="3.14" velocity="4.0"/>
     <dynamics friction="0" damping="3.0"/> 
 </joint>
 
@@ -212,7 +212,7 @@
     <child link="RElb"/>
     <origin xyz="0.015 0.0 -0.13519152999999998" rpy="0 0 0" />
     <axis xyz="0 1 0" />
-    <limit velocity="4.0" effort="50" lower="-2.3562" upper="0.0" />
+    <limit effort="200" lower="-3.14" upper="3.14" velocity="4.0"/>
     <dynamics friction="0" damping="3.0"/>
   </joint>
 
@@ -222,7 +222,7 @@
     <child link="LShp"/>
     <origin xyz="-0.014976503999999998 0.0825 0.15770847" rpy="0 0 0" />
     <axis xyz="0 1 0" />
-    <limit velocity="4.0" effort="50" lower="-3.4034" upper="1.6581" />
+    <limit effort="200" lower="-3.14" upper="3.14" velocity="4.0"/>
     <dynamics friction="0" damping="3.0"/>
 </joint>
 
@@ -231,7 +231,7 @@
     <child link="LShr"/>
     <origin xyz="0.0 0.07329999999999999 0.0" rpy="0 0 0" />
     <axis xyz="1 0 0" />
-    <limit velocity="4.0" effort="50" lower="-0.31415" upper="2.094" />
+    <limit effort="200" lower="-3.14" upper="3.14" velocity="4.0"/>
     <dynamics friction="0" damping="3.0"/>
 </joint>
 
@@ -240,7 +240,7 @@
     <child link="LShy"/>
     <origin xyz="0.0 0.0 -0.04480846999999999" rpy="0 0 0" />
     <axis xyz="0 0 1" />
-    <limit velocity="4.0" effort="50" lower="-1.5708" upper="1.5708" />
+    <limit effort="200" lower="-3.14" upper="3.14" velocity="4.0"/>
     <dynamics friction="0" damping="3.0"/>
 </joint>
 
@@ -249,7 +249,7 @@
     <child link="LElb"/>
     <origin xyz="0.015 0.0 -0.13519152999999998" rpy="0 0 0" />
     <axis xyz="0 1 0" />
-    <limit velocity="4.0" effort="50" lower="-2.3562" upper="0.0" />
+    <limit effort="200" lower="-3.14" upper="3.14" velocity="4.0"/>
     <dynamics friction="0" damping="3.0"/>
   </joint>
 

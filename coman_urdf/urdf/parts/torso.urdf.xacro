@@ -121,7 +121,7 @@ The coordinate frame called base_link is rigidly attached to the robot root body
     <child link="DWL"/>
     <origin xyz="0.020281504 0 0.11912053" rpy="0 0 0" />
     <axis xyz="${cos_20} 0 ${sin_20}" />
-    <limit velocity="4.0" effort="50" lower="-0.5236" upper="0.5235" />
+    <limit effort="200" lower="-3.14" upper="3.14" velocity="4.0"/>
     <!-- dynamics friction="0" damping="0.3"/ -->
     <dynamics friction="0" damping="3.0"/> 
 </joint>
@@ -131,7 +131,7 @@ The coordinate frame called base_link is rigidly attached to the robot root body
     <child link="DWS"/>
     <origin xyz="0 0 0" rpy="0 0 0" />
     <axis xyz="0 1 0" />
-    <limit velocity="4.0" effort="50" lower="-0.3491" upper="0.8727" />
+    <limit effort="200" lower="-3.14" upper="3.14" velocity="4.0"/>
     <dynamics friction="0" damping="3.0"/>
   </joint>
 
@@ -140,7 +140,7 @@ The coordinate frame called base_link is rigidly attached to the robot root body
     <child link="DWYTorso"/>
     <origin xyz="0 0 0.04749999" rpy="0 0 0" />
     <axis xyz="0 0 1" />
-    <limit velocity="4.0" effort="50" lower="-1.3963" upper="1.3962" />
+    <limit effort="200" lower="-3.14" upper="3.14" velocity="4.0"/>
     <dynamics friction="0" damping="3.0"/>
   </joint>
 
