@@ -1,11 +1,6 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
-	<xacro:property name="x_positive" value="0.13" />
-	<xacro:property name="x_negative" value="-0.07" />
-	<xacro:property name="y_positive" value="0.05" />
-	<xacro:property name="y_negative" value="-0.05" />
-
         <xacro:macro name="reference_frame_foot" params="parent name x y">
 	<!-- macro for one reference frame in foot -->
 		<link name="${name}_link"/>
@@ -19,10 +14,10 @@
 
 	<xacro:macro name="references_frame_foot" params="parent name">
 	<!-- macro for reference frames in foot -->
-		<xacro:reference_frame_foot parent="${parent}" name="${name}_upper_right" x="${x_positive}" y="${y_negative}" />
-		<xacro:reference_frame_foot parent="${parent}" name="${name}_upper_left" x="${x_positive}" y="${y_positive}" />
-		<xacro:reference_frame_foot parent="${parent}" name="${name}_lower_right" x="${x_negative}" y="${y_negative}" />
-		<xacro:reference_frame_foot parent="${parent}" name="${name}_lower_left" x="${x_negative}" y="${y_positive}" />	
+		<xacro:reference_frame_foot parent="${parent}" name="${name}_upper_right" x="0.13" y="-0.05" />
+		<xacro:reference_frame_foot parent="${parent}" name="${name}_upper_left" x="0.13" y="0.05" />
+		<xacro:reference_frame_foot parent="${parent}" name="${name}_lower_right" x="-0.07" y="-0.05" />
+		<xacro:reference_frame_foot parent="${parent}" name="${name}_lower_left" x="-0.07" y="0.05" />	
 	</xacro:macro>
 
 	<xacro:references_frame_foot parent="l_sole" name="l_foot"/>
