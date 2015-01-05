@@ -16,15 +16,25 @@
   <group name="base">
     <link name="Waist"/>
   </group>
-  <group name="sensors">
-    <joint name="l_ankle_joint"/>
-    <joint name="r_ankle_joint"/>
+  <group name="imu_sensors">
+    <!-- NEAREST JOINT TO IMU -->
+    <joint name="WaistSag"/>
   </group>
   <group name="left_arm">
     <chain base_link="DWYTorso" tip_link="l_wrist"/>
   </group>
   <group name="right_arm">
     <chain base_link="DWYTorso" tip_link="r_wrist"/>
+  </group>
+  <group name="force_torque_sensors">
+    <!--<joint name="LAnkSag"/>
+            <joint name="RAnkSag"/>
+            <joint name="LForearmPlate"/>
+            <joint name="RForearmPlate"/>-->
+    <joint name="l_ankle_joint"/>
+    <joint name="r_ankle_joint"/>
+    <joint name="l_wrist_joint"/>
+    <joint name="r_wrist_joint"/>
   </group>
   <group name="left_leg">
     <chain base_link="Waist" tip_link="l_sole"/>
