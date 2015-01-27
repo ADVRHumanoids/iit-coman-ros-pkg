@@ -8,7 +8,9 @@
      <param name="rate" value="50.0"/>
      
         
-     <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
+     <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
+     <param name="publish_default_efforts" value="True"/>
+     </node>
 
     <!-- start robot state publisher -->
     <node pkg="robot_state_publisher" type="state_publisher" name="robot_state_publisher" output="screen" >
