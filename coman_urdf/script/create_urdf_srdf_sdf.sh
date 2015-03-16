@@ -83,9 +83,24 @@ EOF
             rosrun xacro xacro.py coman.srdf.xacro > ${model_filename}.srdf 
             echo "...created ${model_filename}.srdf!"
             echo "...copying srdf folder into urdf folder"
-	    cd ..
+	        cd ..
             cp -r srdf ../coman_urdf/
 
+            
+            cd $SCRIPT_ROOT
+
+            HAS_MOVEIT_CDC=true;
+            type moveit_compute_default_collisions >/dev/null 2>&1 || { HAS_MOVEIT_CDC=false; }
+
+            if [ $HAS_MOVEIT_CDC == true ]; then
+                echo
+                echo "computing default allowed collision detection matrix for ${model_filename}..."
+                moveit_compute_default_collisions --urdf_path ../urdf/${model_filename}.urdf --srdf_path ../../coman_srdf/srdf/${model_filename}.srdf
+            else
+                echo "skipping computation of default allowed collision detection matrix"
+            fi
+
+            
             echo 
             echo 
             echo "Complete! Enjoy ${model_name} ver ${model_version} in GAZEBO!"
@@ -96,6 +111,7 @@ EOF
     done
 
     cd $SCRIPT_ROOT
+
     cd ../urdf
     
     echo "</models>" >> ../../coman_gazebo/database/database.config
