@@ -33,7 +33,7 @@
      </izz>
     </inertia>
    </inertial>
-   <collision name="base_link_collision_Waist">
+   <collision name="base_link_collision">
     <pose>
      0 0 -0.52 0 -0 -3.14159
     </pose>
@@ -47,16 +47,8 @@
       </uri>
      </mesh>
     </geometry>
-    <surface>
-     <contact>
-      <ode/>
-     </contact>
-     <friction>
-      <ode/>
-     </friction>
-    </surface>
    </collision>
-   <visual name="base_link_visual_Waist">
+   <visual name="base_link_visual">
     <pose>
      0 0 -0.52 0 -0 -3.14159
     </pose>
@@ -66,22 +58,12 @@
        0.03937 0.03937 0.03937
       </scale>
       <uri>
-       model://coman_urdf/meshes/collada/torso0.stl
+       model://coman_urdf/meshes/Waist.STL
       </uri>
      </mesh>
     </geometry>
-    <material>
-     <script>
-      <name>
-       Gazebo/DarkGrey
-      </name>
-      <uri>
-       __default__
-      </uri>
-     </script>
-    </material>
    </visual>
-   <visual name="base_link_visual_imu_link">
+   <visual name="base_link_visual_base_link_1">
     <pose>
      -0.072 -0.0068 0.044 3.14159 -2.06823e-13 3.14159
     </pose>
@@ -93,25 +75,11 @@
      </box>
     </geometry>
    </visual>
-   <velocity_decay>
-    <linear>
-     0
-    </linear>
-    <angular>
-     0
-    </angular>
-   </velocity_decay>
+   <velocity_decay/>
    <gravity>
     1
    </gravity>
-   <velocity_decay>
-    <linear>
-     0
-    </linear>
-    <angular>
-     0
-    </angular>
-   </velocity_decay>
+   <velocity_decay/>
    <self_collide>
     0
    </self_collide>
@@ -222,14 +190,7 @@
    <gravity>
     1
    </gravity>
-   <velocity_decay>
-    <linear>
-     0
-    </linear>
-    <angular>
-     0
-    </angular>
-   </velocity_decay>
+   <velocity_decay/>
    <self_collide>
     0
    </self_collide>
@@ -385,14 +346,7 @@
    <gravity>
     1
    </gravity>
-   <velocity_decay>
-    <linear>
-     0
-    </linear>
-    <angular>
-     0
-    </angular>
-   </velocity_decay>
+   <velocity_decay/>
    <self_collide>
     0
    </self_collide>
@@ -548,14 +502,7 @@
    <gravity>
     1
    </gravity>
-   <velocity_decay>
-    <linear>
-     0
-    </linear>
-    <angular>
-     0
-    </angular>
-   </velocity_decay>
+   <velocity_decay/>
    <self_collide>
     0
    </self_collide>
@@ -711,14 +658,7 @@
    <gravity>
     1
    </gravity>
-   <velocity_decay>
-    <linear>
-     0
-    </linear>
-    <angular>
-     0
-    </angular>
-   </velocity_decay>
+   <velocity_decay/>
    <self_collide>
     0
    </self_collide>
@@ -884,14 +824,7 @@
    <gravity>
     1
    </gravity>
-   <velocity_decay>
-    <linear>
-     0
-    </linear>
-    <angular>
-     0
-    </angular>
-   </velocity_decay>
+   <velocity_decay/>
    <self_collide>
     0
    </self_collide>
@@ -1069,25 +1002,11 @@
      </script>
     </material>
    </visual>
-   <velocity_decay>
-    <linear>
-     0
-    </linear>
-    <angular>
-     0
-    </angular>
-   </velocity_decay>
+   <velocity_decay/>
    <gravity>
     1
    </gravity>
-   <velocity_decay>
-    <linear>
-     0
-    </linear>
-    <angular>
-     0
-    </angular>
-   </velocity_decay>
+   <velocity_decay/>
    <self_collide>
     0
    </self_collide>
@@ -1263,14 +1182,7 @@
    <gravity>
     1
    </gravity>
-   <velocity_decay>
-    <linear>
-     0
-    </linear>
-    <angular>
-     0
-    </angular>
-   </velocity_decay>
+   <velocity_decay/>
    <self_collide>
     0
    </self_collide>
@@ -1426,14 +1338,7 @@
    <gravity>
     1
    </gravity>
-   <velocity_decay>
-    <linear>
-     0
-    </linear>
-    <angular>
-     0
-    </angular>
-   </velocity_decay>
+   <velocity_decay/>
    <self_collide>
     0
    </self_collide>
@@ -1589,14 +1494,7 @@
    <gravity>
     1
    </gravity>
-   <velocity_decay>
-    <linear>
-     0
-    </linear>
-    <angular>
-     0
-    </angular>
-   </velocity_decay>
+   <velocity_decay/>
    <self_collide>
     0
    </self_collide>
@@ -1752,14 +1650,7 @@
    <gravity>
     1
    </gravity>
-   <velocity_decay>
-    <linear>
-     0
-    </linear>
-    <angular>
-     0
-    </angular>
-   </velocity_decay>
+   <velocity_decay/>
    <self_collide>
     0
    </self_collide>
@@ -1925,14 +1816,7 @@
    <gravity>
     1
    </gravity>
-   <velocity_decay>
-    <linear>
-     0
-    </linear>
-    <angular>
-     0
-    </angular>
-   </velocity_decay>
+   <velocity_decay/>
    <self_collide>
     0
    </self_collide>
@@ -2110,25 +1994,11 @@
      </script>
     </material>
    </visual>
-   <velocity_decay>
-    <linear>
-     0
-    </linear>
-    <angular>
-     0
-    </angular>
-   </velocity_decay>
+   <velocity_decay/>
    <gravity>
     1
    </gravity>
-   <velocity_decay>
-    <linear>
-     0
-    </linear>
-    <angular>
-     0
-    </angular>
-   </velocity_decay>
+   <velocity_decay/>
    <self_collide>
     0
    </self_collide>
@@ -2304,14 +2174,7 @@
    <gravity>
     1
    </gravity>
-   <velocity_decay>
-    <linear>
-     0
-    </linear>
-    <angular>
-     0
-    </angular>
-   </velocity_decay>
+   <velocity_decay/>
    <self_collide>
     0
    </self_collide>
@@ -2467,14 +2330,7 @@
    <gravity>
     1
    </gravity>
-   <velocity_decay>
-    <linear>
-     0
-    </linear>
-    <angular>
-     0
-    </angular>
-   </velocity_decay>
+   <velocity_decay/>
    <self_collide>
     0
    </self_collide>
@@ -2630,14 +2486,7 @@
    <gravity>
     1
    </gravity>
-   <velocity_decay>
-    <linear>
-     0
-    </linear>
-    <angular>
-     0
-    </angular>
-   </velocity_decay>
+   <velocity_decay/>
    <self_collide>
     0
    </self_collide>
@@ -2793,14 +2642,7 @@
    <gravity>
     1
    </gravity>
-   <velocity_decay>
-    <linear>
-     0
-    </linear>
-    <angular>
-     0
-    </angular>
-   </velocity_decay>
+   <velocity_decay/>
    <self_collide>
     0
    </self_collide>
@@ -2956,14 +2798,7 @@
    <gravity>
     1
    </gravity>
-   <velocity_decay>
-    <linear>
-     0
-    </linear>
-    <angular>
-     0
-    </angular>
-   </velocity_decay>
+   <velocity_decay/>
    <self_collide>
     0
    </self_collide>
@@ -3119,14 +2954,7 @@
    <gravity>
     1
    </gravity>
-   <velocity_decay>
-    <linear>
-     0
-    </linear>
-    <angular>
-     0
-    </angular>
-   </velocity_decay>
+   <velocity_decay/>
    <self_collide>
     0
    </self_collide>
@@ -3282,14 +3110,7 @@
    <gravity>
     1
    </gravity>
-   <velocity_decay>
-    <linear>
-     0
-    </linear>
-    <angular>
-     0
-    </angular>
-   </velocity_decay>
+   <velocity_decay/>
    <self_collide>
     0
    </self_collide>
@@ -3445,14 +3266,7 @@
    <gravity>
     1
    </gravity>
-   <velocity_decay>
-    <linear>
-     0
-    </linear>
-    <angular>
-     0
-    </angular>
-   </velocity_decay>
+   <velocity_decay/>
    <self_collide>
     0
    </self_collide>
@@ -3625,14 +3439,7 @@
    <gravity>
     1
    </gravity>
-   <velocity_decay>
-    <linear>
-     0
-    </linear>
-    <angular>
-     0
-    </angular>
-   </velocity_decay>
+   <velocity_decay/>
    <self_collide>
     0
    </self_collide>
@@ -3788,14 +3595,7 @@
    <gravity>
     1
    </gravity>
-   <velocity_decay>
-    <linear>
-     0
-    </linear>
-    <angular>
-     0
-    </angular>
-   </velocity_decay>
+   <velocity_decay/>
    <self_collide>
     0
    </self_collide>
@@ -3924,14 +3724,6 @@
      </box>
     </geometry>
    </visual>
-   <velocity_decay>
-    <linear>
-     0
-    </linear>
-    <angular>
-     0
-    </angular>
-   </velocity_decay>
   </link>
   <joint name="l_handj" type="revolute">
    <child>
@@ -4084,14 +3876,7 @@
    <gravity>
     1
    </gravity>
-   <velocity_decay>
-    <linear>
-     0
-    </linear>
-    <angular>
-     0
-    </angular>
-   </velocity_decay>
+   <velocity_decay/>
    <self_collide>
     0
    </self_collide>
@@ -4247,14 +4032,7 @@
    <gravity>
     1
    </gravity>
-   <velocity_decay>
-    <linear>
-     0
-    </linear>
-    <angular>
-     0
-    </angular>
-   </velocity_decay>
+   <velocity_decay/>
    <self_collide>
     0
    </self_collide>
@@ -4410,14 +4188,7 @@
    <gravity>
     1
    </gravity>
-   <velocity_decay>
-    <linear>
-     0
-    </linear>
-    <angular>
-     0
-    </angular>
-   </velocity_decay>
+   <velocity_decay/>
    <self_collide>
     0
    </self_collide>
@@ -4573,14 +4344,7 @@
    <gravity>
     1
    </gravity>
-   <velocity_decay>
-    <linear>
-     0
-    </linear>
-    <angular>
-     0
-    </angular>
-   </velocity_decay>
+   <velocity_decay/>
    <self_collide>
     0
    </self_collide>
@@ -4736,14 +4500,7 @@
    <gravity>
     1
    </gravity>
-   <velocity_decay>
-    <linear>
-     0
-    </linear>
-    <angular>
-     0
-    </angular>
-   </velocity_decay>
+   <velocity_decay/>
    <self_collide>
     0
    </self_collide>
@@ -4916,14 +4673,7 @@
    <gravity>
     1
    </gravity>
-   <velocity_decay>
-    <linear>
-     0
-    </linear>
-    <angular>
-     0
-    </angular>
-   </velocity_decay>
+   <velocity_decay/>
    <self_collide>
     0
    </self_collide>
@@ -5079,14 +4829,7 @@
    <gravity>
     1
    </gravity>
-   <velocity_decay>
-    <linear>
-     0
-    </linear>
-    <angular>
-     0
-    </angular>
-   </velocity_decay>
+   <velocity_decay/>
    <self_collide>
     0
    </self_collide>
@@ -5215,14 +4958,6 @@
      </box>
     </geometry>
    </visual>
-   <velocity_decay>
-    <linear>
-     0
-    </linear>
-    <angular>
-     0
-    </angular>
-   </velocity_decay>
   </link>
   <joint name="r_handj" type="revolute">
    <child>

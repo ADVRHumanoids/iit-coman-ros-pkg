@@ -4,41 +4,15 @@
 <xacro:property name="PI" value="3.14159265359" />
 <xacro:property name="PI_2" value="1.57079632679" />
 <xacro:property name="SF" value="0.03937" /> <!-- Scale factor for meshes -->
-<xacro:property name="base_link_z_translation" value="-0.52" />
 <xacro:property name="cos_20" value="0.93969262078" />
 <xacro:property name="sin_20" value="0.34202014332" />
 
 
 <!-- LINKS -->
-<!-- This links are defined in order to be compliant with http://www.ros.org/reps/rep-0120.html#coordinate-frames
-and to define the end effectors of the robot
-
-The coordinate frame called base_link is rigidly attached to the robot root body. It is recommended to choose the robot waist as its root body. The base_link can be attached to the root in any arbitrary position or orientation; for every hardware platform there will be a different place on the base that provides an obvious point of reference. Note that REP 103 [1] specifies a preferred orientation for frames. -->
-<link name="base_link"/>
 
 <!-- The coordinate frame called torso is attached to the lowest body of the model which is a parent of l_gripper, r_gripper and gaze. -->
  <link name="torso"/>
 
-<link name="Waist">
-    <inertial>
-      <origin xyz="-0.026391145 -5.8216364E-4 0.052632312" rpy="0.0 0.0 0.0"/>
-      <mass value="1.8008695"/>
-      <inertia ixx="0.0051032982"  ixy="-5.7170981E-5"  ixz="0.0016920543" iyy="0.006241636" iyz="1.7225949E-5" izz="0.0024517762" />
-    </inertial>
-    <visual>
-      <origin xyz="0 0 ${base_link_z_translation}" rpy="0 0 ${PI}"/>
-      <material name="dark_grey"/>
-      <geometry name="Waist_visual">
-        <mesh filename="package://coman_urdf/meshes/collada/torso0.stl" scale="${SF} ${SF} ${SF}"/>
-      </geometry>
-    </visual> 
-    <collision>
-      <origin xyz="0 0 ${base_link_z_translation}" rpy="0 0 ${PI}"/>
-      <geometry name="Waist_collision">
-        <mesh filename="package://coman_urdf/meshes/collada/simple/simple_asm0001_collada_07_prt.stl" scale="${SF} ${SF} ${SF}"/>
-      </geometry>             
-    </collision>   
-</link>
 
   <link name ="DWL">
     <inertial>
@@ -104,11 +78,6 @@ The coordinate frame called base_link is rigidly attached to the robot root body
   </link>
 
 <!-- JOINTS -->
-<joint name="base_joint" type="fixed">
-    <parent link="base_link"/>
-    <child link="Waist"/>
-    <origin xyz="0 0 0" rpy="0 0 0" />
-</joint>
 
 <joint name="torso_joint" type="fixed">
     <parent link="DWYTorso"/>

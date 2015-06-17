@@ -33,7 +33,7 @@
      </izz>
     </inertia>
    </inertial>
-   <collision name="base_link_collision_Waist">
+   <collision name="base_link_collision">
     <pose>
      0 0 -0.52 0 -0 -3.14159
     </pose>
@@ -47,16 +47,8 @@
       </uri>
      </mesh>
     </geometry>
-    <surface>
-     <contact>
-      <ode/>
-     </contact>
-     <friction>
-      <ode/>
-     </friction>
-    </surface>
    </collision>
-   <visual name="base_link_visual_Waist">
+   <visual name="base_link_visual">
     <pose>
      0 0 -0.52 0 -0 -3.14159
     </pose>
@@ -66,22 +58,12 @@
        0.03937 0.03937 0.03937
       </scale>
       <uri>
-       model://coman_urdf/meshes/collada/torso0.stl
+       model://coman_urdf/meshes/Waist.STL
       </uri>
      </mesh>
     </geometry>
-    <material>
-     <script>
-      <name>
-       Gazebo/DarkGrey
-      </name>
-      <uri>
-       __default__
-      </uri>
-     </script>
-    </material>
    </visual>
-   <visual name="base_link_visual_imu_link">
+   <visual name="base_link_visual_base_link_1">
     <pose>
      -0.072 -0.0068 0.044 3.14159 -2.06823e-13 3.14159
     </pose>
@@ -93,25 +75,11 @@
      </box>
     </geometry>
    </visual>
-   <velocity_decay>
-    <linear>
-     0
-    </linear>
-    <angular>
-     0
-    </angular>
-   </velocity_decay>
+   <velocity_decay/>
    <gravity>
     1
    </gravity>
-   <velocity_decay>
-    <linear>
-     0
-    </linear>
-    <angular>
-     0
-    </angular>
-   </velocity_decay>
+   <velocity_decay/>
    <self_collide>
     0
    </self_collide>
@@ -222,14 +190,7 @@
    <gravity>
     1
    </gravity>
-   <velocity_decay>
-    <linear>
-     0
-    </linear>
-    <angular>
-     0
-    </angular>
-   </velocity_decay>
+   <velocity_decay/>
    <self_collide>
     0
    </self_collide>
@@ -385,14 +346,7 @@
    <gravity>
     1
    </gravity>
-   <velocity_decay>
-    <linear>
-     0
-    </linear>
-    <angular>
-     0
-    </angular>
-   </velocity_decay>
+   <velocity_decay/>
    <self_collide>
     0
    </self_collide>
@@ -548,14 +502,7 @@
    <gravity>
     1
    </gravity>
-   <velocity_decay>
-    <linear>
-     0
-    </linear>
-    <angular>
-     0
-    </angular>
-   </velocity_decay>
+   <velocity_decay/>
    <self_collide>
     0
    </self_collide>
@@ -711,14 +658,7 @@
    <gravity>
     1
    </gravity>
-   <velocity_decay>
-    <linear>
-     0
-    </linear>
-    <angular>
-     0
-    </angular>
-   </velocity_decay>
+   <velocity_decay/>
    <self_collide>
     0
    </self_collide>
@@ -884,14 +824,7 @@
    <gravity>
     1
    </gravity>
-   <velocity_decay>
-    <linear>
-     0
-    </linear>
-    <angular>
-     0
-    </angular>
-   </velocity_decay>
+   <velocity_decay/>
    <self_collide>
     0
    </self_collide>
@@ -1069,25 +1002,11 @@
      </script>
     </material>
    </visual>
-   <velocity_decay>
-    <linear>
-     0
-    </linear>
-    <angular>
-     0
-    </angular>
-   </velocity_decay>
+   <velocity_decay/>
    <gravity>
     1
    </gravity>
-   <velocity_decay>
-    <linear>
-     0
-    </linear>
-    <angular>
-     0
-    </angular>
-   </velocity_decay>
+   <velocity_decay/>
    <self_collide>
     0
    </self_collide>
@@ -1263,14 +1182,7 @@
    <gravity>
     1
    </gravity>
-   <velocity_decay>
-    <linear>
-     0
-    </linear>
-    <angular>
-     0
-    </angular>
-   </velocity_decay>
+   <velocity_decay/>
    <self_collide>
     0
    </self_collide>
@@ -1426,14 +1338,7 @@
    <gravity>
     1
    </gravity>
-   <velocity_decay>
-    <linear>
-     0
-    </linear>
-    <angular>
-     0
-    </angular>
-   </velocity_decay>
+   <velocity_decay/>
    <self_collide>
     0
    </self_collide>
@@ -1589,14 +1494,7 @@
    <gravity>
     1
    </gravity>
-   <velocity_decay>
-    <linear>
-     0
-    </linear>
-    <angular>
-     0
-    </angular>
-   </velocity_decay>
+   <velocity_decay/>
    <self_collide>
     0
    </self_collide>
@@ -1752,14 +1650,7 @@
    <gravity>
     1
    </gravity>
-   <velocity_decay>
-    <linear>
-     0
-    </linear>
-    <angular>
-     0
-    </angular>
-   </velocity_decay>
+   <velocity_decay/>
    <self_collide>
     0
    </self_collide>
@@ -1925,14 +1816,7 @@
    <gravity>
     1
    </gravity>
-   <velocity_decay>
-    <linear>
-     0
-    </linear>
-    <angular>
-     0
-    </angular>
-   </velocity_decay>
+   <velocity_decay/>
    <self_collide>
     0
    </self_collide>
@@ -2110,25 +1994,11 @@
      </script>
     </material>
    </visual>
-   <velocity_decay>
-    <linear>
-     0
-    </linear>
-    <angular>
-     0
-    </angular>
-   </velocity_decay>
+   <velocity_decay/>
    <gravity>
     1
    </gravity>
-   <velocity_decay>
-    <linear>
-     0
-    </linear>
-    <angular>
-     0
-    </angular>
-   </velocity_decay>
+   <velocity_decay/>
    <self_collide>
     0
    </self_collide>
@@ -2304,14 +2174,7 @@
    <gravity>
     1
    </gravity>
-   <velocity_decay>
-    <linear>
-     0
-    </linear>
-    <angular>
-     0
-    </angular>
-   </velocity_decay>
+   <velocity_decay/>
    <self_collide>
     0
    </self_collide>
@@ -2467,14 +2330,7 @@
    <gravity>
     1
    </gravity>
-   <velocity_decay>
-    <linear>
-     0
-    </linear>
-    <angular>
-     0
-    </angular>
-   </velocity_decay>
+   <velocity_decay/>
    <self_collide>
     0
    </self_collide>
@@ -2602,7 +2458,7 @@
      </friction>
     </surface>
    </collision>
-   <collision name="DWYTorso_collision_Xtion_body">
+   <collision name="DWYTorso_collision_DWYTorso_1">
     <pose>
      -0.0202815 0 -0.686621 0 -0 -3.14159
     </pose>
@@ -2625,7 +2481,7 @@
      </friction>
     </surface>
    </collision>
-   <collision name="DWYTorso_collision_Xtion_cam_body">
+   <collision name="DWYTorso_collision_DWYTorso_2">
     <pose>
      -0.0205 0 -0.6868 0 -0 -3.14159
     </pose>
@@ -2673,7 +2529,7 @@
      </script>
     </material>
    </visual>
-   <visual name="DWYTorso_visual_Xtion_body">
+   <visual name="DWYTorso_visual_DWYTorso_1">
     <pose>
      -0.0202815 0 -0.686621 0 -0 -3.14159
     </pose>
@@ -2687,8 +2543,18 @@
       </uri>
      </mesh>
     </geometry>
+    <material>
+     <script>
+      <name>
+       Gazebo/Red
+      </name>
+      <uri>
+       __default__
+      </uri>
+     </script>
+    </material>
    </visual>
-   <visual name="DWYTorso_visual_Xtion_cam_body">
+   <visual name="DWYTorso_visual_DWYTorso_2">
     <pose>
      -0.0205 0 -0.6868 0 -0 -3.14159
     </pose>
@@ -2702,26 +2568,22 @@
       </uri>
      </mesh>
     </geometry>
+    <material>
+     <script>
+      <name>
+       Gazebo/Red
+      </name>
+      <uri>
+       __default__
+      </uri>
+     </script>
+    </material>
    </visual>
-   <velocity_decay>
-    <linear>
-     0
-    </linear>
-    <angular>
-     0
-    </angular>
-   </velocity_decay>
+   <velocity_decay/>
    <gravity>
     1
    </gravity>
-   <velocity_decay>
-    <linear>
-     0
-    </linear>
-    <angular>
-     0
-    </angular>
-   </velocity_decay>
+   <velocity_decay/>
    <self_collide>
     0
    </self_collide>
@@ -2979,14 +2841,7 @@
    <gravity>
     1
    </gravity>
-   <velocity_decay>
-    <linear>
-     0
-    </linear>
-    <angular>
-     0
-    </angular>
-   </velocity_decay>
+   <velocity_decay/>
    <self_collide>
     0
    </self_collide>
@@ -3142,14 +2997,7 @@
    <gravity>
     1
    </gravity>
-   <velocity_decay>
-    <linear>
-     0
-    </linear>
-    <angular>
-     0
-    </angular>
-   </velocity_decay>
+   <velocity_decay/>
    <self_collide>
     0
    </self_collide>
@@ -3305,14 +3153,7 @@
    <gravity>
     1
    </gravity>
-   <velocity_decay>
-    <linear>
-     0
-    </linear>
-    <angular>
-     0
-    </angular>
-   </velocity_decay>
+   <velocity_decay/>
    <self_collide>
     0
    </self_collide>
@@ -3468,14 +3309,7 @@
    <gravity>
     1
    </gravity>
-   <velocity_decay>
-    <linear>
-     0
-    </linear>
-    <angular>
-     0
-    </angular>
-   </velocity_decay>
+   <velocity_decay/>
    <self_collide>
     0
    </self_collide>
@@ -3631,14 +3465,7 @@
    <gravity>
     1
    </gravity>
-   <velocity_decay>
-    <linear>
-     0
-    </linear>
-    <angular>
-     0
-    </angular>
-   </velocity_decay>
+   <velocity_decay/>
    <self_collide>
     0
    </self_collide>
@@ -3811,14 +3638,7 @@
    <gravity>
     1
    </gravity>
-   <velocity_decay>
-    <linear>
-     0
-    </linear>
-    <angular>
-     0
-    </angular>
-   </velocity_decay>
+   <velocity_decay/>
    <self_collide>
     0
    </self_collide>
@@ -3946,7 +3766,7 @@
      </friction>
     </surface>
    </collision>
-   <collision name="LWrMot3_collision_LSoftHand">
+   <collision name="LWrMot3_collision_LWrMot3_1">
     <pose>
      0.007 -0.012 -0.11 0 -0 1.5708
     </pose>
@@ -3960,14 +3780,6 @@
       </uri>
      </mesh>
     </geometry>
-    <surface>
-     <contact>
-      <ode/>
-     </contact>
-     <friction>
-      <ode/>
-     </friction>
-    </surface>
     <surface>
      <contact>
       <ode/>
@@ -4002,7 +3814,7 @@
      </script>
     </material>
    </visual>
-   <visual name="LWrMot3_visual_LSoftHand">
+   <visual name="LWrMot3_visual_LWrMot3_1">
     <pose>
      0.007 -0.012 -0.11 -1.5708 5.55112e-17 1.5708
     </pose>
@@ -4019,7 +3831,7 @@
     <material>
      <script>
       <name>
-       Gazebo/DarkGrey
+       Gazebo/Grey
       </name>
       <uri>
        __default__
@@ -4027,25 +3839,11 @@
      </script>
     </material>
    </visual>
-   <velocity_decay>
-    <linear>
-     0
-    </linear>
-    <angular>
-     0
-    </angular>
-   </velocity_decay>
+   <velocity_decay/>
    <gravity>
     1
    </gravity>
-   <velocity_decay>
-    <linear>
-     0
-    </linear>
-    <angular>
-     0
-    </angular>
-   </velocity_decay>
+   <velocity_decay/>
    <self_collide>
     0
    </self_collide>
@@ -4201,14 +3999,7 @@
    <gravity>
     1
    </gravity>
-   <velocity_decay>
-    <linear>
-     0
-    </linear>
-    <angular>
-     0
-    </angular>
-   </velocity_decay>
+   <velocity_decay/>
    <self_collide>
     0
    </self_collide>
@@ -4364,14 +4155,7 @@
    <gravity>
     1
    </gravity>
-   <velocity_decay>
-    <linear>
-     0
-    </linear>
-    <angular>
-     0
-    </angular>
-   </velocity_decay>
+   <velocity_decay/>
    <self_collide>
     0
    </self_collide>
@@ -4527,14 +4311,7 @@
    <gravity>
     1
    </gravity>
-   <velocity_decay>
-    <linear>
-     0
-    </linear>
-    <angular>
-     0
-    </angular>
-   </velocity_decay>
+   <velocity_decay/>
    <self_collide>
     0
    </self_collide>
@@ -4690,14 +4467,7 @@
    <gravity>
     1
    </gravity>
-   <velocity_decay>
-    <linear>
-     0
-    </linear>
-    <angular>
-     0
-    </angular>
-   </velocity_decay>
+   <velocity_decay/>
    <self_collide>
     0
    </self_collide>
@@ -4853,14 +4623,7 @@
    <gravity>
     1
    </gravity>
-   <velocity_decay>
-    <linear>
-     0
-    </linear>
-    <angular>
-     0
-    </angular>
-   </velocity_decay>
+   <velocity_decay/>
    <self_collide>
     0
    </self_collide>
@@ -5033,14 +4796,7 @@
    <gravity>
     1
    </gravity>
-   <velocity_decay>
-    <linear>
-     0
-    </linear>
-    <angular>
-     0
-    </angular>
-   </velocity_decay>
+   <velocity_decay/>
    <self_collide>
     0
    </self_collide>
@@ -5168,7 +4924,7 @@
      </friction>
     </surface>
    </collision>
-   <collision name="RWrMot3_collision_RSoftHand">
+   <collision name="RWrMot3_collision_RWrMot3_1">
     <pose>
      0 0.01 -0.11 0 -0 -3.14159
     </pose>
@@ -5182,14 +4938,6 @@
       </uri>
      </mesh>
     </geometry>
-    <surface>
-     <contact>
-      <ode/>
-     </contact>
-     <friction>
-      <ode/>
-     </friction>
-    </surface>
     <surface>
      <contact>
       <ode/>
@@ -5224,7 +4972,7 @@
      </script>
     </material>
    </visual>
-   <visual name="RWrMot3_visual_RSoftHand">
+   <visual name="RWrMot3_visual_RWrMot3_1">
     <pose>
      0.007 0.01 -0.11 -1.5708 -0 -3.14159
     </pose>
@@ -5241,7 +4989,7 @@
     <material>
      <script>
       <name>
-       Gazebo/DarkGrey
+       Gazebo/Grey
       </name>
       <uri>
        __default__
@@ -5249,25 +4997,11 @@
      </script>
     </material>
    </visual>
-   <velocity_decay>
-    <linear>
-     0
-    </linear>
-    <angular>
-     0
-    </angular>
-   </velocity_decay>
+   <velocity_decay/>
    <gravity>
     1
    </gravity>
-   <velocity_decay>
-    <linear>
-     0
-    </linear>
-    <angular>
-     0
-    </angular>
-   </velocity_decay>
+   <velocity_decay/>
    <self_collide>
     0
    </self_collide>

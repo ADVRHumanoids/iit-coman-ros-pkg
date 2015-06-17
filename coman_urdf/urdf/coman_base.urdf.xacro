@@ -13,6 +13,41 @@
   Velocity and effort limits are fake!
 -->
 
+<xacro:property name="PI" value="3.14159265359" />
+
+<!-- This links are defined in order to be compliant with http://www.ros.org/reps/rep-0120.html#coordinate-frames
+and to define the end effectors of the robot
+
+The coordinate frame called base_link is rigidly attached to the robot root body. It is recommended to choose the robot waist as its root body. The base_link can be attached to the root in any arbitrary position or orientation; for every hardware platform there will be a different place on the base that provides an obvious point of reference. Note that REP 103 [1] specifies a preferred orientation for frames. -->
+<link name="base_link"/>
+
+<link name="Waist">
+    <inertial>
+      <origin xyz="-0.026391145 -5.8216364E-4 0.052632312" rpy="0.0 0.0 0.0"/>
+      <mass value="1.8008695"/>
+      <inertia ixx="0.0051032982"  ixy="-5.7170981E-5"  ixz="0.0016920543" iyy="0.006241636" iyz="1.7225949E-5" izz="0.0024517762" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 -0.52" rpy="0 0 ${PI}"/>
+      <material name="dark_grey"/>
+      <geometry name="Waist_visual">
+        <mesh filename="package://coman_urdf/meshes/Waist.STL" scale="0.03937 0.03937 0.03937"/>
+      </geometry>
+    </visual> 
+    <collision>
+      <origin xyz="0 0 -0.52" rpy="0 0 ${PI}"/>
+      <geometry name="Waist_collision">
+        <mesh filename="package://coman_urdf/meshes/simple/Waist.STL" scale="0.03937 0.03937 0.03937"/>
+      </geometry>             
+    </collision>   
+</link>
+
+<joint name="base_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="Waist"/>
+    <origin xyz="0 0 0" rpy="0 0 0" />
+</joint>
+
 <!-- ********************TORSO******************** -->
 
 <!-- first real link of the robot, inertial reference frame -->
