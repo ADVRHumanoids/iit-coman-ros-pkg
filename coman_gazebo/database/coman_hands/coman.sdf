@@ -146,10 +146,10 @@
     <geometry>
      <mesh>
       <scale>
-       0.03937 0.03937 0.03937
+       0.03937 -0.03937 0.03937
       </scale>
       <uri>
-       model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_06_prt.stl
+       model://coman_urdf/meshes/simple/Leg0.STL
       </uri>
      </mesh>
     </geometry>
@@ -169,10 +169,10 @@
     <geometry>
      <mesh>
       <scale>
-       0.03937 0.03937 0.03937
+       0.03937 -0.03937 0.03937
       </scale>
       <uri>
-       model://coman_urdf/meshes/collada/lleg0.stl
+       model://coman_urdf/meshes/Leg0.STL
       </uri>
      </mesh>
     </geometry>
@@ -302,10 +302,10 @@
     <geometry>
      <mesh>
       <scale>
-       0.03937 0.03937 0.03937
+       0.03937 -0.03937 0.03937
       </scale>
       <uri>
-       model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_05_prt.stl
+       model://coman_urdf/meshes/simple/Leg1.STL
       </uri>
      </mesh>
     </geometry>
@@ -325,10 +325,10 @@
     <geometry>
      <mesh>
       <scale>
-       0.03937 0.03937 0.03937
+       0.03937 -0.03937 0.03937
       </scale>
       <uri>
-       model://coman_urdf/meshes/collada/lleg1.stl
+       model://coman_urdf/meshes/Leg1.STL
       </uri>
      </mesh>
     </geometry>
@@ -458,10 +458,10 @@
     <geometry>
      <mesh>
       <scale>
-       0.03937 0.03937 0.03937
+       0.03937 -0.03937 0.03937
       </scale>
       <uri>
-       model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_04_prt.stl
+       model://coman_urdf/meshes/simple/Leg2.STL
       </uri>
      </mesh>
     </geometry>
@@ -481,10 +481,10 @@
     <geometry>
      <mesh>
       <scale>
-       0.03937 0.03937 0.03937
+       0.03937 -0.03937 0.03937
       </scale>
       <uri>
-       model://coman_urdf/meshes/collada/lleg2.stl
+       model://coman_urdf/meshes/Leg2.STL
       </uri>
      </mesh>
     </geometry>
@@ -614,10 +614,10 @@
     <geometry>
      <mesh>
       <scale>
-       0.03937 0.03937 0.03937
+       0.03937 -0.03937 0.03937
       </scale>
       <uri>
-       model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_03_prt.stl
+       model://coman_urdf/meshes/simple/Leg3.STL
       </uri>
      </mesh>
     </geometry>
@@ -637,10 +637,10 @@
     <geometry>
      <mesh>
       <scale>
-       0.03937 0.03937 0.03937
+       0.03937 -0.03937 0.03937
       </scale>
       <uri>
-       model://coman_urdf/meshes/collada/lleg3.stl
+       model://coman_urdf/meshes/Leg3.STL
       </uri>
      </mesh>
     </geometry>
@@ -770,10 +770,10 @@
     <geometry>
      <mesh>
       <scale>
-       0.03937 0.03937 0.03937
+       0.03937 -0.03937 0.03937
       </scale>
       <uri>
-       model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_02_prt.stl
+       model://coman_urdf/meshes/simple/Leg4.STL
       </uri>
      </mesh>
     </geometry>
@@ -793,10 +793,10 @@
     <geometry>
      <mesh>
       <scale>
-       0.03937 0.03937 0.03937
+       0.03937 -0.03937 0.03937
       </scale>
       <uri>
-       model://coman_urdf/meshes/collada/lleg4.stl
+       model://coman_urdf/meshes/Leg4.STL
       </uri>
      </mesh>
     </geometry>
@@ -1141,7 +1141,7 @@
        0.03937 0.03937 0.03937
       </scale>
       <uri>
-       model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_20_prt.stl
+       model://coman_urdf/meshes/simple/Leg0.STL
       </uri>
      </mesh>
     </geometry>
@@ -1164,7 +1164,7 @@
        0.03937 0.03937 0.03937
       </scale>
       <uri>
-       model://coman_urdf/meshes/collada/rleg0.stl
+       model://coman_urdf/meshes/Leg0.STL
       </uri>
      </mesh>
     </geometry>
@@ -1297,7 +1297,7 @@
        0.03937 0.03937 0.03937
       </scale>
       <uri>
-       model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_19_prt.stl
+       model://coman_urdf/meshes/simple/Leg1.STL
       </uri>
      </mesh>
     </geometry>
@@ -1320,7 +1320,7 @@
        0.03937 0.03937 0.03937
       </scale>
       <uri>
-       model://coman_urdf/meshes/collada/rleg1.stl
+       model://coman_urdf/meshes/Leg1.STL
       </uri>
      </mesh>
     </geometry>
@@ -1453,7 +1453,7 @@
        0.03937 0.03937 0.03937
       </scale>
       <uri>
-       model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_18_prt.stl
+       model://coman_urdf/meshes/simple/Leg2.STL
       </uri>
      </mesh>
     </geometry>
@@ -1476,7 +1476,7 @@
        0.03937 0.03937 0.03937
       </scale>
       <uri>
-       model://coman_urdf/meshes/collada/rleg2.stl
+       model://coman_urdf/meshes/Leg2.STL
       </uri>
      </mesh>
     </geometry>
@@ -1609,7 +1609,7 @@
        0.03937 0.03937 0.03937
       </scale>
       <uri>
-       model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_17_prt.stl
+       model://coman_urdf/meshes/simple/Leg3.STL
       </uri>
      </mesh>
     </geometry>
@@ -1632,7 +1632,7 @@
        0.03937 0.03937 0.03937
       </scale>
       <uri>
-       model://coman_urdf/meshes/collada/rleg3.stl
+       model://coman_urdf/meshes/Leg3.STL
       </uri>
      </mesh>
     </geometry>
@@ -1765,7 +1765,7 @@
        0.03937 0.03937 0.03937
       </scale>
       <uri>
-       model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_16_prt.stl
+       model://coman_urdf/meshes/simple/Leg4.STL
       </uri>
      </mesh>
     </geometry>
@@ -1788,7 +1788,7 @@
        0.03937 0.03937 0.03937
       </scale>
       <uri>
-       model://coman_urdf/meshes/collada/rleg4.stl
+       model://coman_urdf/meshes/Leg4.STL
       </uri>
      </mesh>
     </geometry>
