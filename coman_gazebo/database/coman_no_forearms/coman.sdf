@@ -43,7 +43,7 @@
        0.03937 0.03937 0.03937
       </scale>
       <uri>
-       model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_07_prt.stl
+       model://coman_urdf/meshes/simple/Waist.STL
       </uri>
      </mesh>
     </geometry>
@@ -2145,7 +2145,7 @@
        0.03937 0.03937 0.03937
       </scale>
       <uri>
-       model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_09_prt.stl
+       model://coman_urdf/meshes/simple/Torso1.STL
       </uri>
      </mesh>
     </geometry>
@@ -2168,7 +2168,7 @@
        0.03937 0.03937 0.03937
       </scale>
       <uri>
-       model://coman_urdf/meshes/collada/torso1.stl
+       model://coman_urdf/meshes/Torso1.STL
       </uri>
      </mesh>
     </geometry>
@@ -2301,7 +2301,7 @@
        0.03937 0.03937 0.03937
       </scale>
       <uri>
-       model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_08_prt.stl
+       model://coman_urdf/meshes/simple/Torso2.STL
       </uri>
      </mesh>
     </geometry>
@@ -2324,7 +2324,7 @@
        0.03937 0.03937 0.03937
       </scale>
       <uri>
-       model://coman_urdf/meshes/collada/torso2.stl
+       model://coman_urdf/meshes/Torso2.STL
       </uri>
      </mesh>
     </geometry>
@@ -2457,7 +2457,7 @@
        0.03937 0.03937 0.03937
       </scale>
       <uri>
-       model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_10_prt.stl
+       model://coman_urdf/meshes/simple/Torso3.STL
       </uri>
      </mesh>
     </geometry>
@@ -2480,7 +2480,7 @@
        0.03937 0.03937 0.03937
       </scale>
       <uri>
-       model://coman_urdf/meshes/collada/torso3.stl
+       model://coman_urdf/meshes/Torso3.STL
       </uri>
      </mesh>
     </geometry>
