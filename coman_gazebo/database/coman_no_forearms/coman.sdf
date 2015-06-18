@@ -1,4018 +1,2139 @@
-<?xml version="1.0" encoding="utf-8"?>
-<sdf version="1.5">
- <model name="coman">
-  <link name="base_link">
-   <pose>
-    0 0 0 0 -0 0
-   </pose>
-   <inertial>
-    <pose>
-     -0.026643 -0.0006165 0.0525846 0 -0 0
-    </pose>
-    <mass>
-     1.81087
-    </mass>
-    <inertia>
-     <ixx>
-      0.00510542
-     </ixx>
-     <ixy>
-      -5.99912e-05
-     </ixy>
-     <ixz>
-      0.00168814
-     </ixz>
-     <iyy>
-      0.00626406
-     </iyy>
-     <iyz>
-      1.66922e-05
-     </iyz>
-     <izz>
-      0.00247385
-     </izz>
-    </inertia>
-   </inertial>
-   <collision name="base_link_collision">
-    <pose>
-     0 0 -0.52 0 -0 -3.14159
-    </pose>
-    <geometry>
-     <mesh>
-      <scale>
-       0.03937 0.03937 0.03937
-      </scale>
-      <uri>
-       model://coman_urdf/meshes/simple/Waist.STL
-      </uri>
-     </mesh>
-    </geometry>
-   </collision>
-   <visual name="base_link_visual">
-    <pose>
-     0 0 -0.52 0 -0 -3.14159
-    </pose>
-    <geometry>
-     <mesh>
-      <scale>
-       0.03937 0.03937 0.03937
-      </scale>
-      <uri>
-       model://coman_urdf/meshes/Waist.STL
-      </uri>
-     </mesh>
-    </geometry>
-   </visual>
-   <visual name="base_link_visual_base_link_1">
-    <pose>
-     -0.072 -0.0068 0.044 3.14159 -2.06823e-13 3.14159
-    </pose>
-    <geometry>
-     <box>
-      <size>
-       0.01 0.01 0.01
-      </size>
-     </box>
-    </geometry>
-   </visual>
-   <velocity_decay/>
-   <gravity>
-    1
-   </gravity>
-   <velocity_decay/>
-   <self_collide>
-    0
-   </self_collide>
-   <sensor name="imu_sensor" type="imu">
-    <always_on>
-     1
-    </always_on>
-    <update_rate>
-     1000
-    </update_rate>
-    <visualize>
-     1
-    </visualize>
-    <topic>
-     __default_topic__
-    </topic>
-    <imu/>
-    <plugin filename="libgazebo_yarp_imu.so" name="coman_yarp_gazebo_plugin_IMU">
-     <yarpConfigurationFile>
-      model://coman_urdf/conf/coman/coman_gazebo_inertial.ini
-     </yarpConfigurationFile>
+<sdf version='1.5'>
+  <model name='coman'>
+    <link name='base_link'>
+      <pose>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>-0.026643 -0.0006165 0.0525846 0 -0 0</pose>
+        <mass>1.81087</mass>
+        <inertia>
+          <ixx>0.00510542</ixx>
+          <ixy>-5.99912e-05</ixy>
+          <ixz>0.00168814</ixz>
+          <iyy>0.00626406</iyy>
+          <iyz>1.66922e-05</iyz>
+          <izz>0.00247385</izz>
+        </inertia>
+      </inertial>
+      <collision name='base_link_collision'>
+        <pose>0 0 -0.52 0 -0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>0.03937 0.03937 0.03937</scale>
+            <uri>model://coman_urdf/meshes/simple/Waist.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='base_link_visual'>
+        <pose>0 0 -0.52 0 -0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>0.03937 0.03937 0.03937</scale>
+            <uri>model://coman_urdf/meshes/Waist.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_link_visual_base_link_1'>
+        <pose>-0.072 -0.0068 0.044 3.14159 -2.06823e-13 3.14159</pose>
+        <geometry>
+          <box>
+            <size>0.01 0.01 0.01</size>
+          </box>
+        </geometry>
+      </visual>
+      <velocity_decay/>
+      <gravity>1</gravity>
+      <velocity_decay/>
+      <self_collide>0</self_collide>
+      <sensor name='imu_sensor' type='imu'>
+        <always_on>1</always_on>
+        <update_rate>1000</update_rate>
+        <visualize>1</visualize>
+        <topic>__default_topic__</topic>
+        <imu/>
+        <plugin name='coman_yarp_gazebo_plugin_IMU' filename='libgazebo_yarp_imu.so'>
+          <yarpConfigurationFile>model://coman_urdf/conf/coman/coman_gazebo_inertial.ini</yarpConfigurationFile>
+        </plugin>
+        <pose>-0.072 -0.0068 0.044 3.14159 -2.06823e-13 3.14159</pose>
+      </sensor>
+    </link>
+    <link name='LHipMot'>
+      <pose>0 0.023 0 0 -0 0</pose>
+      <inertial>
+        <pose>-0.000326968 0.0235873 -0.000264965 0 -0 0</pose>
+        <mass>0.892582</mass>
+        <inertia>
+          <ixx>0.000476723</ixx>
+          <ixy>3.99366e-06</ixy>
+          <ixz>-2.48026e-06</ixz>
+          <iyy>0.000545804</iyy>
+          <iyz>3.33896e-06</iyz>
+          <izz>0.000512686</izz>
+        </inertia>
+      </inertial>
+      <collision name='LHipMot_collision'>
+        <pose>0 -0.023 -0.52 0 -0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>0.03937 -0.03937 0.03937</scale>
+            <uri>model://coman_urdf/meshes/simple/Leg0.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='LHipMot_visual'>
+        <pose>0 -0.023 -0.52 0 -0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>0.03937 -0.03937 0.03937</scale>
+            <uri>model://coman_urdf/meshes/Leg0.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/DarkGrey</name>
+            <uri>__default__</uri>
+          </script>
+        </material>
+      </visual>
+      <gravity>1</gravity>
+      <velocity_decay/>
+      <self_collide>0</self_collide>
+    </link>
+    <joint name='LHipSag' type='revolute'>
+      <child>LHipMot</child>
+      <parent>base_link</parent>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-1.9199</lower>
+          <upper>0.7854</upper>
+          <effort>50</effort>
+          <velocity>4</velocity>
+        </limit>
+        <dynamics>
+          <damping>3</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+      <physics>
+        <provide_feedback>1</provide_feedback>
+        <ode>
+          <provide_feedback>1</provide_feedback>
+          <implicit_spring_damper>1</implicit_spring_damper>
+          <cfm_damping>1</cfm_damping>
+          <limit>
+            <cfm>0</cfm>
+            <erp>0.2</erp>
+          </limit>
+        </ode>
+      </physics>
+    </joint>
+    <link name='LThighUpLeg'>
+      <pose>0 0.0726 0 0 -0 0</pose>
+      <inertial>
+        <pose>0.00125916 0.0168964 -0.0589033 0 -0 0</pose>
+        <mass>1.02461</mass>
+        <inertia>
+          <ixx>0.000916572</ixx>
+          <ixy>1.44499e-06</ixy>
+          <ixz>-1.6685e-05</ixz>
+          <iyy>0.0010485</iyy>
+          <iyz>-2.54929e-05</iyz>
+          <izz>0.000686372</izz>
+        </inertia>
+      </inertial>
+      <collision name='LThighUpLeg_collision'>
+        <pose>0 -0.0726 -0.52 0 -0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>0.03937 -0.03937 0.03937</scale>
+            <uri>model://coman_urdf/meshes/simple/Leg1.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='LThighUpLeg_visual'>
+        <pose>0 -0.0726 -0.52 0 -0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>0.03937 -0.03937 0.03937</scale>
+            <uri>model://coman_urdf/meshes/Leg1.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/DarkGrey</name>
+            <uri>__default__</uri>
+          </script>
+        </material>
+      </visual>
+      <gravity>1</gravity>
+      <velocity_decay/>
+      <self_collide>0</self_collide>
+    </link>
+    <joint name='LHipLat' type='revolute'>
+      <child>LThighUpLeg</child>
+      <parent>LHipMot</parent>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-0.4363</lower>
+          <upper>1.0472</upper>
+          <effort>50</effort>
+          <velocity>4</velocity>
+        </limit>
+        <dynamics>
+          <damping>3</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+      <physics>
+        <provide_feedback>1</provide_feedback>
+        <ode>
+          <provide_feedback>1</provide_feedback>
+          <implicit_spring_damper>1</implicit_spring_damper>
+          <cfm_damping>1</cfm_damping>
+          <limit>
+            <cfm>0</cfm>
+            <erp>0.2</erp>
+          </limit>
+        </ode>
+      </physics>
+    </joint>
+    <link name='LThighLowLeg'>
+      <pose>0 0.0726 -0.1024 0 -0 0</pose>
+      <inertial>
+        <pose>0.000987201 -0.000670373 -0.0757168 0 -0 0</pose>
+        <mass>1.70011</mass>
+        <inertia>
+          <ixx>0.00389795</ixx>
+          <ixy>-1.78024e-06</ixy>
+          <ixz>2.64033e-05</ixz>
+          <iyy>0.00393608</iyy>
+          <iyz>-4.52271e-05</iyz>
+          <izz>0.000902187</izz>
+        </inertia>
+      </inertial>
+      <collision name='LThighLowLeg_collision'>
+        <pose>0 -0.0726 -0.4176 0 -0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>0.03937 -0.03937 0.03937</scale>
+            <uri>model://coman_urdf/meshes/simple/Leg2.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='LThighLowLeg_visual'>
+        <pose>0 -0.0726 -0.4176 0 -0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>0.03937 -0.03937 0.03937</scale>
+            <uri>model://coman_urdf/meshes/Leg2.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/DarkGrey</name>
+            <uri>__default__</uri>
+          </script>
+        </material>
+      </visual>
+      <gravity>1</gravity>
+      <velocity_decay/>
+      <self_collide>0</self_collide>
+    </link>
+    <joint name='LHipYaw' type='revolute'>
+      <child>LThighLowLeg</child>
+      <parent>LThighUpLeg</parent>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-0.8727</lower>
+          <upper>0.8727</upper>
+          <effort>50</effort>
+          <velocity>4</velocity>
+        </limit>
+        <dynamics>
+          <damping>3</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+      <physics>
+        <provide_feedback>1</provide_feedback>
+        <ode>
+          <provide_feedback>1</provide_feedback>
+          <implicit_spring_damper>1</implicit_spring_damper>
+          <cfm_damping>1</cfm_damping>
+          <limit>
+            <cfm>0</cfm>
+            <erp>0.2</erp>
+          </limit>
+        </ode>
+      </physics>
+    </joint>
+    <link name='LLowLeg'>
+      <pose>0 0.0726 -0.2258 0 -0 0</pose>
+      <inertial>
+        <pose>0.00246127 0.00530996 -0.0859895 0 -0 0</pose>
+        <mass>1.40982</mass>
+        <inertia>
+          <ixx>0.0040604</ixx>
+          <ixy>-1.12272e-05</ixy>
+          <ixz>1.2261e-05</ixz>
+          <iyy>0.00400565</iyy>
+          <iyz>-0.000518992</iyz>
+          <izz>0.00124141</izz>
+        </inertia>
+      </inertial>
+      <collision name='LLowLeg_collision'>
+        <pose>0 -0.0726 -0.2942 0 -0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>0.03937 -0.03937 0.03937</scale>
+            <uri>model://coman_urdf/meshes/simple/Leg3.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='LLowLeg_visual'>
+        <pose>0 -0.0726 -0.2942 0 -0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>0.03937 -0.03937 0.03937</scale>
+            <uri>model://coman_urdf/meshes/Leg3.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/DarkGrey</name>
+            <uri>__default__</uri>
+          </script>
+        </material>
+      </visual>
+      <gravity>1</gravity>
+      <velocity_decay/>
+      <self_collide>0</self_collide>
+    </link>
+    <joint name='LKneeSag' type='revolute'>
+      <child>LLowLeg</child>
+      <parent>LThighLowLeg</parent>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-0.1745</lower>
+          <upper>1.9199</upper>
+          <effort>50</effort>
+          <velocity>4</velocity>
+        </limit>
+        <dynamics>
+          <damping>3</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+      <physics>
+        <provide_feedback>1</provide_feedback>
+        <ode>
+          <provide_feedback>1</provide_feedback>
+          <implicit_spring_damper>1</implicit_spring_damper>
+          <cfm_damping>1</cfm_damping>
+          <limit>
+            <cfm>0</cfm>
+            <erp>0.2</erp>
+          </limit>
+        </ode>
+      </physics>
+    </joint>
+    <link name='LFootmot'>
+      <pose>0 0.0726 -0.4268 0 -0 0</pose>
+      <inertial>
+        <pose>0.000880673 0.000922249 0.000230385 0 -0 0</pose>
+        <mass>0.729921</mass>
+        <inertia>
+          <ixx>0.000320344</ixx>
+          <ixy>-7.63463e-06</ixy>
+          <ixz>2.54302e-07</ixz>
+          <iyy>0.000365844</iyy>
+          <iyz>3.68893e-06</iyz>
+          <izz>0.000360652</izz>
+        </inertia>
+      </inertial>
+      <collision name='LFootmot_collision'>
+        <pose>0 -0.0726 -0.0932 0 -0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>0.03937 -0.03937 0.03937</scale>
+            <uri>model://coman_urdf/meshes/simple/Leg4.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='LFootmot_visual'>
+        <pose>0 -0.0726 -0.0932 0 -0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>0.03937 -0.03937 0.03937</scale>
+            <uri>model://coman_urdf/meshes/Leg4.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/DarkGrey</name>
+            <uri>__default__</uri>
+          </script>
+        </material>
+        <material>
+          <script>
+            <name>Gazebo/DarkGrey</name>
+            <uri>__default__</uri>
+          </script>
+        </material>
+      </visual>
+      <gravity>1</gravity>
+      <velocity_decay/>
+      <self_collide>0</self_collide>
+    </link>
+    <joint name='LAnkLat' type='revolute'>
+      <child>LFootmot</child>
+      <parent>LLowLeg</parent>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-0.6109</lower>
+          <upper>0.6109</upper>
+          <effort>50</effort>
+          <velocity>4</velocity>
+        </limit>
+        <dynamics>
+          <damping>3</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+      <physics>
+        <provide_feedback>1</provide_feedback>
+        <ode>
+          <provide_feedback>1</provide_feedback>
+          <implicit_spring_damper>1</implicit_spring_damper>
+          <cfm_damping>1</cfm_damping>
+          <limit>
+            <cfm>0</cfm>
+            <erp>0.2</erp>
+          </limit>
+        </ode>
+      </physics>
+    </joint>
+    <link name='LFoot'>
+      <pose>0 0.0726 -0.4268 0 -0 0</pose>
+      <inertial>
+        <pose>0.0096921 0.00904602 -0.0430623 0 -0 0</pose>
+        <mass>0.666467</mass>
+        <inertia>
+          <ixx>0.00129448</ixx>
+          <ixy>9.23877e-05</ixy>
+          <ixz>0.000200801</ixz>
+          <iyy>0.00158518</iyy>
+          <iyz>-0.000275993</iyz>
+          <izz>0.00133268</izz>
+        </inertia>
+      </inertial>
+      <collision name='LFoot_collision'>
+        <pose>0 -0.0726 -0.0932 0 -0 3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>0.03937 -0.03937 0.03937</scale>
+            <uri>model://coman_urdf/meshes/simple/RoundFoot.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <kp>1e+06</kp>
+              <kd>100</kd>
+              <max_vel>1</max_vel>
+              <min_depth>0</min_depth>
+            </ode>
+          </contact>
+          <friction>
+            <ode>
+              <mu>1</mu>
+              <mu2>1</mu2>
+              <fdir1>1 0 0</fdir1>
+            </ode>
+          </friction>
+        </surface>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='LFoot_visual'>
+        <pose>0 -0.0726 -0.0932 0 -0 3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>0.03937 -0.03937 0.03937</scale>
+            <uri>model://coman_urdf/meshes/RoundFoot.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/DarkGrey</name>
+            <uri>__default__</uri>
+          </script>
+        </material>
+      </visual>
+      <velocity_decay/>
+      <gravity>1</gravity>
+      <velocity_decay/>
+      <self_collide>0</self_collide>
+    </link>
+    <joint name='LAnkSag' type='revolute'>
+      <child>LFoot</child>
+      <parent>LFootmot</parent>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-1.2217</lower>
+          <upper>1.2217</upper>
+          <effort>50</effort>
+          <velocity>4</velocity>
+        </limit>
+        <dynamics>
+          <damping>3</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+      <physics>
+        <provide_feedback>1</provide_feedback>
+        <ode>
+          <provide_feedback>1</provide_feedback>
+          <implicit_spring_damper>1</implicit_spring_damper>
+          <cfm_damping>1</cfm_damping>
+          <limit>
+            <cfm>0</cfm>
+            <erp>0.2</erp>
+          </limit>
+        </ode>
+      </physics>
+      <sensor name='left_leg' type='force_torque'>
+        <force_torque>
+          <frame>sensor</frame>
+          <measure_direction>child_to_parent</measure_direction>
+        </force_torque>
+        <always_on>1</always_on>
+        <visualize>1</visualize>
+        <update_rate>1000</update_rate>
+        <pose>0 0 -0.065 0 -0 0</pose>
+        <plugin name='LAnkSag_FT_plugin' filename='libgazebo_yarp_forcetorque.so'>
+          <yarpConfigurationFile>model://coman_urdf/conf/coman/coman_gazebo_left_leg_ft.ini</yarpConfigurationFile>
+        </plugin>
+      </sensor>
+    </joint>
+    <link name='RHipMot'>
+      <pose>0 -0.023 0 0 -0 0</pose>
+      <inertial>
+        <pose>-0.000326968 -0.0235873 -0.000264965 0 -0 0</pose>
+        <mass>0.892582</mass>
+        <inertia>
+          <ixx>0.000476723</ixx>
+          <ixy>-3.99366e-06</ixy>
+          <ixz>-2.48026e-06</ixz>
+          <iyy>0.000545804</iyy>
+          <iyz>-3.33896e-06</iyz>
+          <izz>0.000512686</izz>
+        </inertia>
+      </inertial>
+      <collision name='RHipMot_collision'>
+        <pose>0 0.023 -0.52 0 -0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>0.03937 0.03937 0.03937</scale>
+            <uri>model://coman_urdf/meshes/simple/Leg0.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='RHipMot_visual'>
+        <pose>0 0.023 -0.52 0 -0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>0.03937 0.03937 0.03937</scale>
+            <uri>model://coman_urdf/meshes/Leg0.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/DarkGrey</name>
+            <uri>__default__</uri>
+          </script>
+        </material>
+      </visual>
+      <gravity>1</gravity>
+      <velocity_decay/>
+      <self_collide>0</self_collide>
+    </link>
+    <joint name='RHipSag' type='revolute'>
+      <child>RHipMot</child>
+      <parent>base_link</parent>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-1.9199</lower>
+          <upper>0.7854</upper>
+          <effort>50</effort>
+          <velocity>4</velocity>
+        </limit>
+        <dynamics>
+          <damping>3</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+      <physics>
+        <provide_feedback>1</provide_feedback>
+        <ode>
+          <provide_feedback>1</provide_feedback>
+          <implicit_spring_damper>1</implicit_spring_damper>
+          <cfm_damping>1</cfm_damping>
+          <limit>
+            <cfm>0</cfm>
+            <erp>0.2</erp>
+          </limit>
+        </ode>
+      </physics>
+    </joint>
+    <link name='RThighUpLeg'>
+      <pose>0 -0.0726 0 0 -0 0</pose>
+      <inertial>
+        <pose>0.00125916 -0.0168964 -0.0589033 0 -0 0</pose>
+        <mass>1.02461</mass>
+        <inertia>
+          <ixx>0.000916572</ixx>
+          <ixy>-1.44499e-06</ixy>
+          <ixz>-1.6685e-05</ixz>
+          <iyy>0.0010485</iyy>
+          <iyz>2.54929e-05</iyz>
+          <izz>0.000686372</izz>
+        </inertia>
+      </inertial>
+      <collision name='RThighUpLeg_collision'>
+        <pose>0 0.0726 -0.52 0 -0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>0.03937 0.03937 0.03937</scale>
+            <uri>model://coman_urdf/meshes/simple/Leg1.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='RThighUpLeg_visual'>
+        <pose>0 0.0726 -0.52 0 -0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>0.03937 0.03937 0.03937</scale>
+            <uri>model://coman_urdf/meshes/Leg1.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/DarkGrey</name>
+            <uri>__default__</uri>
+          </script>
+        </material>
+      </visual>
+      <gravity>1</gravity>
+      <velocity_decay/>
+      <self_collide>0</self_collide>
+    </link>
+    <joint name='RHipLat' type='revolute'>
+      <child>RThighUpLeg</child>
+      <parent>RHipMot</parent>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-1.0472</lower>
+          <upper>0.4363</upper>
+          <effort>50</effort>
+          <velocity>4</velocity>
+        </limit>
+        <dynamics>
+          <damping>3</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+      <physics>
+        <provide_feedback>1</provide_feedback>
+        <ode>
+          <provide_feedback>1</provide_feedback>
+          <implicit_spring_damper>1</implicit_spring_damper>
+          <cfm_damping>1</cfm_damping>
+          <limit>
+            <cfm>0</cfm>
+            <erp>0.2</erp>
+          </limit>
+        </ode>
+      </physics>
+    </joint>
+    <link name='RThighLowLeg'>
+      <pose>0 -0.0726 -0.1024 0 -0 0</pose>
+      <inertial>
+        <pose>0.000987201 0.000670373 -0.0757168 0 -0 0</pose>
+        <mass>1.70011</mass>
+        <inertia>
+          <ixx>0.00389795</ixx>
+          <ixy>1.78024e-06</ixy>
+          <ixz>2.64033e-05</ixz>
+          <iyy>0.00393608</iyy>
+          <iyz>4.52271e-05</iyz>
+          <izz>0.000902187</izz>
+        </inertia>
+      </inertial>
+      <collision name='RThighLowLeg_collision'>
+        <pose>0 0.0726 -0.4176 0 -0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>0.03937 0.03937 0.03937</scale>
+            <uri>model://coman_urdf/meshes/simple/Leg2.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='RThighLowLeg_visual'>
+        <pose>0 0.0726 -0.4176 0 -0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>0.03937 0.03937 0.03937</scale>
+            <uri>model://coman_urdf/meshes/Leg2.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/DarkGrey</name>
+            <uri>__default__</uri>
+          </script>
+        </material>
+      </visual>
+      <gravity>1</gravity>
+      <velocity_decay/>
+      <self_collide>0</self_collide>
+    </link>
+    <joint name='RHipYaw' type='revolute'>
+      <child>RThighLowLeg</child>
+      <parent>RThighUpLeg</parent>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-0.8727</lower>
+          <upper>0.8727</upper>
+          <effort>50</effort>
+          <velocity>4</velocity>
+        </limit>
+        <dynamics>
+          <damping>3</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+      <physics>
+        <provide_feedback>1</provide_feedback>
+        <ode>
+          <provide_feedback>1</provide_feedback>
+          <implicit_spring_damper>1</implicit_spring_damper>
+          <cfm_damping>1</cfm_damping>
+          <limit>
+            <cfm>0</cfm>
+            <erp>0.2</erp>
+          </limit>
+        </ode>
+      </physics>
+    </joint>
+    <link name='RLowLeg'>
+      <pose>0 -0.0726 -0.2258 0 -0 0</pose>
+      <inertial>
+        <pose>0.00246127 -0.00530996 -0.0859895 0 -0 0</pose>
+        <mass>1.40982</mass>
+        <inertia>
+          <ixx>0.0040604</ixx>
+          <ixy>1.12272e-05</ixy>
+          <ixz>1.2261e-05</ixz>
+          <iyy>0.00400565</iyy>
+          <iyz>0.000518992</iyz>
+          <izz>0.00124141</izz>
+        </inertia>
+      </inertial>
+      <collision name='RLowLeg_collision'>
+        <pose>0 0.0726 -0.2942 0 -0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>0.03937 0.03937 0.03937</scale>
+            <uri>model://coman_urdf/meshes/simple/Leg3.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='RLowLeg_visual'>
+        <pose>0 0.0726 -0.2942 0 -0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>0.03937 0.03937 0.03937</scale>
+            <uri>model://coman_urdf/meshes/Leg3.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/DarkGrey</name>
+            <uri>__default__</uri>
+          </script>
+        </material>
+      </visual>
+      <gravity>1</gravity>
+      <velocity_decay/>
+      <self_collide>0</self_collide>
+    </link>
+    <joint name='RKneeSag' type='revolute'>
+      <child>RLowLeg</child>
+      <parent>RThighLowLeg</parent>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-0.1745</lower>
+          <upper>1.9199</upper>
+          <effort>50</effort>
+          <velocity>4</velocity>
+        </limit>
+        <dynamics>
+          <damping>3</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+      <physics>
+        <provide_feedback>1</provide_feedback>
+        <ode>
+          <provide_feedback>1</provide_feedback>
+          <implicit_spring_damper>1</implicit_spring_damper>
+          <cfm_damping>1</cfm_damping>
+          <limit>
+            <cfm>0</cfm>
+            <erp>0.2</erp>
+          </limit>
+        </ode>
+      </physics>
+    </joint>
+    <link name='RFootmot'>
+      <pose>0 -0.0726 -0.4268 0 -0 0</pose>
+      <inertial>
+        <pose>0.000880673 -0.000922249 0.000230385 0 -0 0</pose>
+        <mass>0.729921</mass>
+        <inertia>
+          <ixx>0.000320344</ixx>
+          <ixy>7.63463e-06</ixy>
+          <ixz>2.54302e-07</ixz>
+          <iyy>0.000365844</iyy>
+          <iyz>-3.68893e-06</iyz>
+          <izz>0.000360652</izz>
+        </inertia>
+      </inertial>
+      <collision name='RFootmot_collision'>
+        <pose>0 0.0726 -0.0932 0 -0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>0.03937 0.03937 0.03937</scale>
+            <uri>model://coman_urdf/meshes/simple/Leg4.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='RFootmot_visual'>
+        <pose>0 0.0726 -0.0932 0 -0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>0.03937 0.03937 0.03937</scale>
+            <uri>model://coman_urdf/meshes/Leg4.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/DarkGrey</name>
+            <uri>__default__</uri>
+          </script>
+        </material>
+        <material>
+          <script>
+            <name>Gazebo/DarkGrey</name>
+            <uri>__default__</uri>
+          </script>
+        </material>
+      </visual>
+      <gravity>1</gravity>
+      <velocity_decay/>
+      <self_collide>0</self_collide>
+    </link>
+    <joint name='RAnkLat' type='revolute'>
+      <child>RFootmot</child>
+      <parent>RLowLeg</parent>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-0.6109</lower>
+          <upper>0.6109</upper>
+          <effort>50</effort>
+          <velocity>4</velocity>
+        </limit>
+        <dynamics>
+          <damping>3</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+      <physics>
+        <provide_feedback>1</provide_feedback>
+        <ode>
+          <provide_feedback>1</provide_feedback>
+          <implicit_spring_damper>1</implicit_spring_damper>
+          <cfm_damping>1</cfm_damping>
+          <limit>
+            <cfm>0</cfm>
+            <erp>0.2</erp>
+          </limit>
+        </ode>
+      </physics>
+    </joint>
+    <link name='RFoot'>
+      <pose>0 -0.0726 -0.4268 0 -0 0</pose>
+      <inertial>
+        <pose>0.0096921 -0.00904602 -0.0430623 0 -0 0</pose>
+        <mass>0.666467</mass>
+        <inertia>
+          <ixx>0.00129448</ixx>
+          <ixy>-9.23877e-05</ixy>
+          <ixz>0.000200801</ixz>
+          <iyy>0.00158518</iyy>
+          <iyz>0.000275993</iyz>
+          <izz>0.00133268</izz>
+        </inertia>
+      </inertial>
+      <collision name='RFoot_collision'>
+        <pose>0 0.0726 -0.0932 0 -0 3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>0.03937 0.03937 0.03937</scale>
+            <uri>model://coman_urdf/meshes/simple/RoundFoot.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <kp>1e+06</kp>
+              <kd>100</kd>
+              <max_vel>1</max_vel>
+              <min_depth>0</min_depth>
+            </ode>
+          </contact>
+          <friction>
+            <ode>
+              <mu>1</mu>
+              <mu2>1</mu2>
+              <fdir1>1 0 0</fdir1>
+            </ode>
+          </friction>
+        </surface>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='RFoot_visual'>
+        <pose>0 0.0726 -0.0932 0 -0 3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>0.03937 0.03937 0.03937</scale>
+            <uri>model://coman_urdf/meshes/RoundFoot.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/DarkGrey</name>
+            <uri>__default__</uri>
+          </script>
+        </material>
+      </visual>
+      <velocity_decay/>
+      <gravity>1</gravity>
+      <velocity_decay/>
+      <self_collide>0</self_collide>
+    </link>
+    <joint name='RAnkSag' type='revolute'>
+      <child>RFoot</child>
+      <parent>RFootmot</parent>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-1.2217</lower>
+          <upper>1.2217</upper>
+          <effort>50</effort>
+          <velocity>4</velocity>
+        </limit>
+        <dynamics>
+          <damping>3</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+      <physics>
+        <provide_feedback>1</provide_feedback>
+        <ode>
+          <provide_feedback>1</provide_feedback>
+          <implicit_spring_damper>1</implicit_spring_damper>
+          <cfm_damping>1</cfm_damping>
+          <limit>
+            <cfm>0</cfm>
+            <erp>0.2</erp>
+          </limit>
+        </ode>
+      </physics>
+      <sensor name='right_leg' type='force_torque'>
+        <force_torque>
+          <frame>sensor</frame>
+          <measure_direction>child_to_parent</measure_direction>
+        </force_torque>
+        <always_on>1</always_on>
+        <visualize>1</visualize>
+        <update_rate>1000</update_rate>
+        <pose>0 0 -0.065 0 -0 0</pose>
+        <plugin name='RAnkSag_FT_plugin' filename='libgazebo_yarp_forcetorque.so'>
+          <yarpConfigurationFile>model://coman_urdf/conf/coman/coman_gazebo_right_leg_ft.ini</yarpConfigurationFile>
+        </plugin>
+      </sensor>
+    </joint>
+    <link name='DWL'>
+      <pose>0.0202815 0 0.119121 0 -0 0</pose>
+      <inertial>
+        <pose>0.000429997 -0.00976503 0.0330112 0 -0 0</pose>
+        <mass>0.545888</mass>
+        <inertia>
+          <ixx>0.000971266</ixx>
+          <ixy>-7.21012e-07</ixy>
+          <ixz>1.14401e-06</ixz>
+          <iyy>0.000746867</iyy>
+          <iyz>-0.000174509</iyz>
+          <izz>0.000621962</izz>
+        </inertia>
+      </inertial>
+      <collision name='DWL_collision'>
+        <pose>-0.0202815 0 -0.639121 0 -0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>0.03937 0.03937 0.03937</scale>
+            <uri>model://coman_urdf/meshes/simple/Torso1.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='DWL_visual'>
+        <pose>-0.0202815 0 -0.639121 0 -0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>0.03937 0.03937 0.03937</scale>
+            <uri>model://coman_urdf/meshes/Torso1.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/DarkGrey</name>
+            <uri>__default__</uri>
+          </script>
+        </material>
+      </visual>
+      <gravity>1</gravity>
+      <velocity_decay/>
+      <self_collide>0</self_collide>
+    </link>
+    <joint name='WaistLat' type='revolute'>
+      <child>DWL</child>
+      <parent>base_link</parent>
+      <axis>
+        <xyz>0.939693 0 0.34202</xyz>
+        <limit>
+          <lower>-0.5236</lower>
+          <upper>0.5235</upper>
+          <effort>50</effort>
+          <velocity>4</velocity>
+        </limit>
+        <dynamics>
+          <damping>3</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+      <physics>
+        <provide_feedback>1</provide_feedback>
+        <ode>
+          <provide_feedback>1</provide_feedback>
+          <implicit_spring_damper>1</implicit_spring_damper>
+          <cfm_damping>1</cfm_damping>
+          <limit>
+            <cfm>0</cfm>
+            <erp>0.2</erp>
+          </limit>
+        </ode>
+      </physics>
+    </joint>
+    <link name='DWS'>
+      <pose>0.0202815 0 0.119121 0 -0 0</pose>
+      <inertial>
+        <pose>-0.00212734 0.00335752 -0.00100769 0 -0 0</pose>
+        <mass>0.753984</mass>
+        <inertia>
+          <ixx>0.000340933</ixx>
+          <ixy>-6.212e-06</ixy>
+          <ixz>-1.38635e-06</ixz>
+          <iyy>0.000395819</iyy>
+          <iyz>1.44302e-06</iyz>
+          <izz>0.000374498</izz>
+        </inertia>
+      </inertial>
+      <collision name='DWS_collision'>
+        <pose>-0.0202815 0 -0.639121 0 -0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>0.03937 0.03937 0.03937</scale>
+            <uri>model://coman_urdf/meshes/simple/Torso2.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='DWS_visual'>
+        <pose>-0.0202815 0 -0.639121 0 -0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>0.03937 0.03937 0.03937</scale>
+            <uri>model://coman_urdf/meshes/Torso2.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/DarkGrey</name>
+            <uri>__default__</uri>
+          </script>
+        </material>
+      </visual>
+      <gravity>1</gravity>
+      <velocity_decay/>
+      <self_collide>0</self_collide>
+    </link>
+    <joint name='WaistSag' type='revolute'>
+      <child>DWS</child>
+      <parent>DWL</parent>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-0.3491</lower>
+          <upper>0.8727</upper>
+          <effort>50</effort>
+          <velocity>4</velocity>
+        </limit>
+        <dynamics>
+          <damping>3</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+      <physics>
+        <provide_feedback>1</provide_feedback>
+        <ode>
+          <provide_feedback>1</provide_feedback>
+          <implicit_spring_damper>1</implicit_spring_damper>
+          <cfm_damping>1</cfm_damping>
+          <limit>
+            <cfm>0</cfm>
+            <erp>0.2</erp>
+          </limit>
+        </ode>
+      </physics>
+    </joint>
+    <link name='DWYTorso'>
+      <pose>0.0202815 0 0.166621 0 -0 0</pose>
+      <inertial>
+        <pose>-0.0358501 1.8286e-05 0.117557 0 -0 0</pose>
+        <mass>6.36172</mass>
+        <inertia>
+          <ixx>0.0340893</ixx>
+          <ixy>-9.83086e-06</ixy>
+          <ixz>-0.000756493</ixz>
+          <iyy>0.0301174</iyy>
+          <iyz>6.24438e-06</iyz>
+          <izz>0.0252966</izz>
+        </inertia>
+      </inertial>
+      <collision name='DWYTorso_collision'>
+        <pose>-0.0202815 0 -0.686621 0 -0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>0.03937 0.03937 0.03937</scale>
+            <uri>model://coman_urdf/meshes/simple/Torso3.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='DWYTorso_visual'>
+        <pose>-0.0202815 0 -0.686621 0 -0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>0.03937 0.03937 0.03937</scale>
+            <uri>model://coman_urdf/meshes/Torso3.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Red</name>
+            <uri>__default__</uri>
+          </script>
+        </material>
+      </visual>
+      <gravity>1</gravity>
+      <velocity_decay/>
+      <self_collide>0</self_collide>
+    </link>
+    <joint name='WaistYaw' type='revolute'>
+      <child>DWYTorso</child>
+      <parent>DWS</parent>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-1.3963</lower>
+          <upper>1.3962</upper>
+          <effort>50</effort>
+          <velocity>4</velocity>
+        </limit>
+        <dynamics>
+          <damping>3</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+      <physics>
+        <provide_feedback>1</provide_feedback>
+        <ode>
+          <provide_feedback>1</provide_feedback>
+          <implicit_spring_damper>1</implicit_spring_damper>
+          <cfm_damping>1</cfm_damping>
+          <limit>
+            <cfm>0</cfm>
+            <erp>0.2</erp>
+          </limit>
+        </ode>
+      </physics>
+    </joint>
+    <link name='LShp'>
+      <pose>0.005305 0.0825 0.324329 0 -0 0</pose>
+      <inertial>
+        <pose>0.00995006 0.038682 0.000164469 0 -0 0</pose>
+        <mass>0.567822</mass>
+        <inertia>
+          <ixx>0.000783375</ixx>
+          <ixy>-0.000190358</ixy>
+          <ixz>-3.00377e-06</ixz>
+          <iyy>0.000633999</iyy>
+          <iyz>-4.38408e-06</iyz>
+          <izz>0.00100805</izz>
+        </inertia>
+      </inertial>
+      <collision name='LShp_collision'>
+        <pose>-0.005305 -0.0825 -0.844329 0 -0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>0.03937 0.03937 0.03937</scale>
+            <uri>model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_14_prt.stl</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='LShp_visual'>
+        <pose>-0.005305 -0.0825 -0.844329 0 -0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>0.03937 0.03937 0.03937</scale>
+            <uri>model://coman_urdf/meshes/collada/larm0.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/DarkGrey</name>
+            <uri>__default__</uri>
+          </script>
+        </material>
+      </visual>
+      <gravity>1</gravity>
+      <velocity_decay/>
+      <self_collide>0</self_collide>
+    </link>
+    <joint name='LShSag' type='revolute'>
+      <child>LShp</child>
+      <parent>DWYTorso</parent>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-3.4034</lower>
+          <upper>1.6581</upper>
+          <effort>50</effort>
+          <velocity>4</velocity>
+        </limit>
+        <dynamics>
+          <damping>3</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+      <physics>
+        <provide_feedback>1</provide_feedback>
+        <ode>
+          <provide_feedback>1</provide_feedback>
+          <implicit_spring_damper>1</implicit_spring_damper>
+          <cfm_damping>1</cfm_damping>
+          <limit>
+            <cfm>0</cfm>
+            <erp>0.2</erp>
+          </limit>
+        </ode>
+      </physics>
+    </joint>
+    <link name='LShr'>
+      <pose>0.005305 0.1558 0.324329 0 -0 0</pose>
+      <inertial>
+        <pose>-0.00389367 -2.20222e-06 -0.0048616 0 -0 0</pose>
+        <mass>0.776838</mass>
+        <inertia>
+          <ixx>0.000458129</ixx>
+          <ixy>2.41111e-07</ixy>
+          <ixz>9.25212e-06</ixz>
+          <iyy>0.000430892</iyy>
+          <iyz>4.7217e-07</iyz>
+          <izz>0.000341749</izz>
+        </inertia>
+      </inertial>
+      <collision name='LShr_collision'>
+        <pose>-0.005305 -0.1558 -0.844329 0 -0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>0.03937 0.03937 0.03937</scale>
+            <uri>model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_13_prt.stl</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='LShr_visual'>
+        <pose>-0.005305 -0.1558 -0.844329 0 -0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>0.03937 0.03937 0.03937</scale>
+            <uri>model://coman_urdf/meshes/collada/larm1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/DarkGrey</name>
+            <uri>__default__</uri>
+          </script>
+        </material>
+      </visual>
+      <gravity>1</gravity>
+      <velocity_decay/>
+      <self_collide>0</self_collide>
+    </link>
+    <joint name='LShLat' type='revolute'>
+      <child>LShr</child>
+      <parent>LShp</parent>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-0.31415</lower>
+          <upper>2.094</upper>
+          <effort>50</effort>
+          <velocity>4</velocity>
+        </limit>
+        <dynamics>
+          <damping>3</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+      <physics>
+        <provide_feedback>1</provide_feedback>
+        <ode>
+          <provide_feedback>1</provide_feedback>
+          <implicit_spring_damper>1</implicit_spring_damper>
+          <cfm_damping>1</cfm_damping>
+          <limit>
+            <cfm>0</cfm>
+            <erp>0.2</erp>
+          </limit>
+        </ode>
+      </physics>
+    </joint>
+    <link name='LShy'>
+      <pose>0.005305 0.1558 0.279521 0 -0 0</pose>
+      <inertial>
+        <pose>0.00227142 0.00710915 -0.0574552 0 -0 0</pose>
+        <mass>1.04623</mass>
+        <inertia>
+          <ixx>0.00309346</ixx>
+          <ixy>-6.67028e-05</ixy>
+          <ixz>0.000302223</ixz>
+          <iyy>0.00291816</iyy>
+          <iyz>0.000526637</iyz>
+          <izz>0.000808304</izz>
+        </inertia>
+      </inertial>
+      <collision name='LShy_collision'>
+        <pose>-0.005305 -0.1558 -0.799521 0 -0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>0.03937 0.03937 0.03937</scale>
+            <uri>model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_12_prt.stl</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='LShy_visual'>
+        <pose>-0.005305 -0.1558 -0.799521 0 -0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>0.03937 0.03937 0.03937</scale>
+            <uri>model://coman_urdf/meshes/collada/larm2.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/DarkGrey</name>
+            <uri>__default__</uri>
+          </script>
+        </material>
+      </visual>
+      <gravity>1</gravity>
+      <velocity_decay/>
+      <self_collide>0</self_collide>
+    </link>
+    <joint name='LShYaw' type='revolute'>
+      <child>LShy</child>
+      <parent>LShr</parent>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-1.5708</lower>
+          <upper>1.5708</upper>
+          <effort>50</effort>
+          <velocity>4</velocity>
+        </limit>
+        <dynamics>
+          <damping>3</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+      <physics>
+        <provide_feedback>1</provide_feedback>
+        <ode>
+          <provide_feedback>1</provide_feedback>
+          <implicit_spring_damper>1</implicit_spring_damper>
+          <cfm_damping>1</cfm_damping>
+          <limit>
+            <cfm>0</cfm>
+            <erp>0.2</erp>
+          </limit>
+        </ode>
+      </physics>
+    </joint>
+    <link name='LElb'>
+      <pose>0.020305 0.1558 0.144329 0 -0 0</pose>
+      <inertial>
+        <pose>-0.00486569 0.000660325 -0.0402808 0 -0 0</pose>
+        <mass>0.896069</mass>
+        <inertia>
+          <ixx>0.00425727</ixx>
+          <ixy>-2.22737e-06</ixy>
+          <ixz>-0.000367138</ixz>
+          <iyy>0.00434716</iyy>
+          <iyz>-2.12396e-05</iyz>
+          <izz>0.00029761</izz>
+        </inertia>
+      </inertial>
+      <collision name='LElb_collision'>
+        <pose>0 0 0 -1.57079 1.57079 -2.65361e-06</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://coman_urdf/meshes/collada/simple/forearms/elbow.stl</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='LElb_collision_LElb_1'>
+        <pose>-0.0205 -0.1558 -0.6675 0 -0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>0.03937 0.03937 0.03937</scale>
+            <uri>model://coman_urdf/meshes/collada/simple/forearm_old.dae</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='LElb_visual'>
+        <pose>0 0 0 -1.57079 1.57079 -2.65361e-06</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://coman_urdf/meshes/collada/forearms/elbow.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/DarkGrey</name>
+            <uri>__default__</uri>
+          </script>
+        </material>
+      </visual>
+      <visual name='LElb_visual_LElb_1'>
+        <pose>-0.0205 -0.1558 -0.6675 0 -0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>0.03937 0.03937 0.03937</scale>
+            <uri>model://coman_urdf/meshes/collada/forearm_old.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/DarkGrey</name>
+            <uri>__default__</uri>
+          </script>
+        </material>
+      </visual>
+      <velocity_decay/>
+      <gravity>1</gravity>
+      <velocity_decay/>
+      <self_collide>0</self_collide>
+    </link>
+    <joint name='LElbj' type='revolute'>
+      <child>LElb</child>
+      <parent>LShy</parent>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-2.3562</lower>
+          <upper>0</upper>
+          <effort>50</effort>
+          <velocity>4</velocity>
+        </limit>
+        <dynamics>
+          <damping>3</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+      <physics>
+        <provide_feedback>1</provide_feedback>
+        <ode>
+          <provide_feedback>1</provide_feedback>
+          <implicit_spring_damper>1</implicit_spring_damper>
+          <cfm_damping>1</cfm_damping>
+          <limit>
+            <cfm>0</cfm>
+            <erp>0.2</erp>
+          </limit>
+        </ode>
+      </physics>
+    </joint>
+    <link name='RShp'>
+      <pose>0.005305 -0.0825 0.324329 0 -0 0</pose>
+      <inertial>
+        <pose>0.00995006 -0.038682 0.000164469 0 -0 0</pose>
+        <mass>0.567822</mass>
+        <inertia>
+          <ixx>0.000783375</ixx>
+          <ixy>0.000190358</ixy>
+          <ixz>-3.00377e-06</ixz>
+          <iyy>0.000633999</iyy>
+          <iyz>4.38408e-06</iyz>
+          <izz>0.00100805</izz>
+        </inertia>
+      </inertial>
+      <collision name='RShp_collision'>
+        <pose>-0.005305 0.0825 -0.844329 0 -0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>0.03937 0.03937 0.03937</scale>
+            <uri>model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_24_prt.stl</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='RShp_visual'>
+        <pose>-0.005305 0.0825 -0.844329 0 -0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>0.03937 0.03937 0.03937</scale>
+            <uri>model://coman_urdf/meshes/collada/rarm0.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/DarkGrey</name>
+            <uri>__default__</uri>
+          </script>
+        </material>
+      </visual>
+      <gravity>1</gravity>
+      <velocity_decay/>
+      <self_collide>0</self_collide>
+    </link>
+    <joint name='RShSag' type='revolute'>
+      <child>RShp</child>
+      <parent>DWYTorso</parent>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-3.4034</lower>
+          <upper>1.6581</upper>
+          <effort>50</effort>
+          <velocity>4</velocity>
+        </limit>
+        <dynamics>
+          <damping>3</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+      <physics>
+        <provide_feedback>1</provide_feedback>
+        <ode>
+          <provide_feedback>1</provide_feedback>
+          <implicit_spring_damper>1</implicit_spring_damper>
+          <cfm_damping>1</cfm_damping>
+          <limit>
+            <cfm>0</cfm>
+            <erp>0.2</erp>
+          </limit>
+        </ode>
+      </physics>
+    </joint>
+    <link name='RShr'>
+      <pose>0.005305 -0.1558 0.324329 0 -0 0</pose>
+      <inertial>
+        <pose>-0.00389367 2.20222e-06 -0.0048616 0 -0 0</pose>
+        <mass>0.776838</mass>
+        <inertia>
+          <ixx>0.000458129</ixx>
+          <ixy>-2.41111e-07</ixy>
+          <ixz>9.25212e-06</ixz>
+          <iyy>0.000430892</iyy>
+          <iyz>-4.7217e-07</iyz>
+          <izz>0.000341749</izz>
+        </inertia>
+      </inertial>
+      <collision name='RShr_collision'>
+        <pose>-0.005305 0.1558 -0.844329 0 -0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>0.03937 0.03937 0.03937</scale>
+            <uri>model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_23_prt.stl</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='RShr_visual'>
+        <pose>-0.005305 0.1558 -0.844329 0 -0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>0.03937 0.03937 0.03937</scale>
+            <uri>model://coman_urdf/meshes/collada/rarm1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/DarkGrey</name>
+            <uri>__default__</uri>
+          </script>
+        </material>
+      </visual>
+      <gravity>1</gravity>
+      <velocity_decay/>
+      <self_collide>0</self_collide>
+    </link>
+    <joint name='RShLat' type='revolute'>
+      <child>RShr</child>
+      <parent>RShp</parent>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-2.094</lower>
+          <upper>0.31415</upper>
+          <effort>50</effort>
+          <velocity>4</velocity>
+        </limit>
+        <dynamics>
+          <damping>3</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+      <physics>
+        <provide_feedback>1</provide_feedback>
+        <ode>
+          <provide_feedback>1</provide_feedback>
+          <implicit_spring_damper>1</implicit_spring_damper>
+          <cfm_damping>1</cfm_damping>
+          <limit>
+            <cfm>0</cfm>
+            <erp>0.2</erp>
+          </limit>
+        </ode>
+      </physics>
+    </joint>
+    <link name='RShy'>
+      <pose>0.005305 -0.1558 0.279521 0 -0 0</pose>
+      <inertial>
+        <pose>0.00227142 -0.00710915 -0.0574552 0 -0 0</pose>
+        <mass>1.04623</mass>
+        <inertia>
+          <ixx>0.00309346</ixx>
+          <ixy>6.67028e-05</ixy>
+          <ixz>0.000302223</ixz>
+          <iyy>0.00291816</iyy>
+          <iyz>-0.000526637</iyz>
+          <izz>0.000808304</izz>
+        </inertia>
+      </inertial>
+      <collision name='RShy_collision'>
+        <pose>-0.005305 0.1558 -0.799521 0 -0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>0.03937 0.03937 0.03937</scale>
+            <uri>model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_22_prt.stl</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='RShy_visual'>
+        <pose>-0.005305 0.1558 -0.799521 0 -0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>0.03937 0.03937 0.03937</scale>
+            <uri>model://coman_urdf/meshes/collada/rarm2.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/DarkGrey</name>
+            <uri>__default__</uri>
+          </script>
+        </material>
+      </visual>
+      <gravity>1</gravity>
+      <velocity_decay/>
+      <self_collide>0</self_collide>
+    </link>
+    <joint name='RShYaw' type='revolute'>
+      <child>RShy</child>
+      <parent>RShr</parent>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-1.5708</lower>
+          <upper>1.5708</upper>
+          <effort>50</effort>
+          <velocity>4</velocity>
+        </limit>
+        <dynamics>
+          <damping>3</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+      <physics>
+        <provide_feedback>1</provide_feedback>
+        <ode>
+          <provide_feedback>1</provide_feedback>
+          <implicit_spring_damper>1</implicit_spring_damper>
+          <cfm_damping>1</cfm_damping>
+          <limit>
+            <cfm>0</cfm>
+            <erp>0.2</erp>
+          </limit>
+        </ode>
+      </physics>
+    </joint>
+    <link name='RElb'>
+      <pose>0.020305 -0.1558 0.144329 0 -0 0</pose>
+      <inertial>
+        <pose>-0.00486569 -0.000660325 -0.0402808 0 -0 0</pose>
+        <mass>0.896069</mass>
+        <inertia>
+          <ixx>0.00425727</ixx>
+          <ixy>2.22737e-06</ixy>
+          <ixz>-0.000367138</ixz>
+          <iyy>0.00434716</iyy>
+          <iyz>2.12396e-05</iyz>
+          <izz>0.00029761</izz>
+        </inertia>
+      </inertial>
+      <collision name='RElb_collision'>
+        <pose>0 0 0 -1.57079 1.57079 -2.65361e-06</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://coman_urdf/meshes/collada/simple/forearms/elbow.stl</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='RElb_collision_RElb_1'>
+        <pose>-0.0205 -0.1558 -0.6675 0 -0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>0.03937 0.03937 0.03937</scale>
+            <uri>model://coman_urdf/meshes/collada/simple/forearm_old.dae</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='RElb_visual'>
+        <pose>0 0 0 -1.57079 1.57079 -2.65361e-06</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://coman_urdf/meshes/collada/forearms/elbow.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/DarkGrey</name>
+            <uri>__default__</uri>
+          </script>
+        </material>
+      </visual>
+      <visual name='RElb_visual_RElb_1'>
+        <pose>-0.0205 -0.1558 -0.6675 0 -0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>0.03937 0.03937 0.03937</scale>
+            <uri>model://coman_urdf/meshes/collada/forearm_old.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/DarkGrey</name>
+            <uri>__default__</uri>
+          </script>
+        </material>
+      </visual>
+      <velocity_decay/>
+      <gravity>1</gravity>
+      <velocity_decay/>
+      <self_collide>0</self_collide>
+    </link>
+    <joint name='RElbj' type='revolute'>
+      <child>RElb</child>
+      <parent>RShy</parent>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-2.3562</lower>
+          <upper>0</upper>
+          <effort>50</effort>
+          <velocity>4</velocity>
+        </limit>
+        <dynamics>
+          <damping>3</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+      <physics>
+        <provide_feedback>1</provide_feedback>
+        <ode>
+          <provide_feedback>1</provide_feedback>
+          <implicit_spring_damper>1</implicit_spring_damper>
+          <cfm_damping>1</cfm_damping>
+          <limit>
+            <cfm>0</cfm>
+            <erp>0.2</erp>
+          </limit>
+        </ode>
+      </physics>
+    </joint>
+    <static>0</static>
+    <plugin name='coman_yarp_gazebo_plugin_torso' filename='libgazebo_yarp_controlboard.so'>
+      <yarpConfigurationFile>model://coman_urdf/conf/coman/coman_gazebo_torso.ini</yarpConfigurationFile>
+      <initialConfiguration>0.0 0.0 0.0</initialConfiguration>
     </plugin>
-    <pose>
-     -0.072 -0.0068 0.044 3.14159 -2.06823e-13 3.14159
-    </pose>
-   </sensor>
-  </link>
-  <link name="LHipMot">
-   <pose>
-    0 0.023 0 0 -0 0
-   </pose>
-   <inertial>
-    <pose>
-     -0.000326968 0.0235873 -0.000264965 0 -0 0
-    </pose>
-    <mass>
-     0.892582
-    </mass>
-    <inertia>
-     <ixx>
-      0.000476723
-     </ixx>
-     <ixy>
-      3.99366e-06
-     </ixy>
-     <ixz>
-      -2.48026e-06
-     </ixz>
-     <iyy>
-      0.000545804
-     </iyy>
-     <iyz>
-      3.33896e-06
-     </iyz>
-     <izz>
-      0.000512686
-     </izz>
-    </inertia>
-   </inertial>
-   <collision name="LHipMot_collision">
-    <pose>
-     0 -0.023 -0.52 0 -0 -3.14159
-    </pose>
-    <geometry>
-     <mesh>
-      <scale>
-       0.03937 -0.03937 0.03937
-      </scale>
-      <uri>
-       model://coman_urdf/meshes/simple/Leg0.STL
-      </uri>
-     </mesh>
-    </geometry>
-    <surface>
-     <contact>
-      <ode/>
-     </contact>
-     <friction>
-      <ode/>
-     </friction>
-    </surface>
-   </collision>
-   <visual name="LHipMot_visual">
-    <pose>
-     0 -0.023 -0.52 0 -0 -3.14159
-    </pose>
-    <geometry>
-     <mesh>
-      <scale>
-       0.03937 -0.03937 0.03937
-      </scale>
-      <uri>
-       model://coman_urdf/meshes/Leg0.STL
-      </uri>
-     </mesh>
-    </geometry>
-    <material>
-     <script>
-      <name>
-       Gazebo/DarkGrey
-      </name>
-      <uri>
-       __default__
-      </uri>
-     </script>
-    </material>
-   </visual>
-   <gravity>
-    1
-   </gravity>
-   <velocity_decay/>
-   <self_collide>
-    0
-   </self_collide>
-  </link>
-  <joint name="LHipSag" type="revolute">
-   <child>
-    LHipMot
-   </child>
-   <parent>
-    base_link
-   </parent>
-   <axis>
-    <xyz>
-     0 1 0
-    </xyz>
-    <limit>
-     <lower>
-      -1.9199
-     </lower>
-     <upper>
-      0.7854
-     </upper>
-     <effort>
-      50
-     </effort>
-     <velocity>
-      4
-     </velocity>
-    </limit>
-    <dynamics>
-     <damping>
-      3
-     </damping>
-     <friction>
-      0
-     </friction>
-     <spring_reference>
-      0
-     </spring_reference>
-     <spring_stiffness>
-      0
-     </spring_stiffness>
-    </dynamics>
-    <use_parent_model_frame>
-     1
-    </use_parent_model_frame>
-   </axis>
-   <physics>
-    <provide_feedback>
-     1
-    </provide_feedback>
-    <ode>
-     <provide_feedback>
-      1
-     </provide_feedback>
-     <implicit_spring_damper>
-      1
-     </implicit_spring_damper>
-     <cfm_damping>
-      1
-     </cfm_damping>
-     <limit>
-      <cfm>
-       0
-      </cfm>
-      <erp>
-       0.2
-      </erp>
-     </limit>
-    </ode>
-   </physics>
-  </joint>
-  <link name="LThighUpLeg">
-   <pose>
-    0 0.0726 0 0 -0 0
-   </pose>
-   <inertial>
-    <pose>
-     0.00125916 0.0168964 -0.0589033 0 -0 0
-    </pose>
-    <mass>
-     1.02461
-    </mass>
-    <inertia>
-     <ixx>
-      0.000916572
-     </ixx>
-     <ixy>
-      1.44499e-06
-     </ixy>
-     <ixz>
-      -1.6685e-05
-     </ixz>
-     <iyy>
-      0.0010485
-     </iyy>
-     <iyz>
-      -2.54929e-05
-     </iyz>
-     <izz>
-      0.000686372
-     </izz>
-    </inertia>
-   </inertial>
-   <collision name="LThighUpLeg_collision">
-    <pose>
-     0 -0.0726 -0.52 0 -0 -3.14159
-    </pose>
-    <geometry>
-     <mesh>
-      <scale>
-       0.03937 -0.03937 0.03937
-      </scale>
-      <uri>
-       model://coman_urdf/meshes/simple/Leg1.STL
-      </uri>
-     </mesh>
-    </geometry>
-    <surface>
-     <contact>
-      <ode/>
-     </contact>
-     <friction>
-      <ode/>
-     </friction>
-    </surface>
-   </collision>
-   <visual name="LThighUpLeg_visual">
-    <pose>
-     0 -0.0726 -0.52 0 -0 -3.14159
-    </pose>
-    <geometry>
-     <mesh>
-      <scale>
-       0.03937 -0.03937 0.03937
-      </scale>
-      <uri>
-       model://coman_urdf/meshes/Leg1.STL
-      </uri>
-     </mesh>
-    </geometry>
-    <material>
-     <script>
-      <name>
-       Gazebo/DarkGrey
-      </name>
-      <uri>
-       __default__
-      </uri>
-     </script>
-    </material>
-   </visual>
-   <gravity>
-    1
-   </gravity>
-   <velocity_decay/>
-   <self_collide>
-    0
-   </self_collide>
-  </link>
-  <joint name="LHipLat" type="revolute">
-   <child>
-    LThighUpLeg
-   </child>
-   <parent>
-    LHipMot
-   </parent>
-   <axis>
-    <xyz>
-     1 0 0
-    </xyz>
-    <limit>
-     <lower>
-      -0.4363
-     </lower>
-     <upper>
-      1.0472
-     </upper>
-     <effort>
-      50
-     </effort>
-     <velocity>
-      4
-     </velocity>
-    </limit>
-    <dynamics>
-     <damping>
-      3
-     </damping>
-     <friction>
-      0
-     </friction>
-     <spring_reference>
-      0
-     </spring_reference>
-     <spring_stiffness>
-      0
-     </spring_stiffness>
-    </dynamics>
-    <use_parent_model_frame>
-     1
-    </use_parent_model_frame>
-   </axis>
-   <physics>
-    <provide_feedback>
-     1
-    </provide_feedback>
-    <ode>
-     <provide_feedback>
-      1
-     </provide_feedback>
-     <implicit_spring_damper>
-      1
-     </implicit_spring_damper>
-     <cfm_damping>
-      1
-     </cfm_damping>
-     <limit>
-      <cfm>
-       0
-      </cfm>
-      <erp>
-       0.2
-      </erp>
-     </limit>
-    </ode>
-   </physics>
-  </joint>
-  <link name="LThighLowLeg">
-   <pose>
-    0 0.0726 -0.1024 0 -0 0
-   </pose>
-   <inertial>
-    <pose>
-     0.000987201 -0.000670373 -0.0757168 0 -0 0
-    </pose>
-    <mass>
-     1.70011
-    </mass>
-    <inertia>
-     <ixx>
-      0.00389795
-     </ixx>
-     <ixy>
-      -1.78024e-06
-     </ixy>
-     <ixz>
-      2.64033e-05
-     </ixz>
-     <iyy>
-      0.00393608
-     </iyy>
-     <iyz>
-      -4.52271e-05
-     </iyz>
-     <izz>
-      0.000902187
-     </izz>
-    </inertia>
-   </inertial>
-   <collision name="LThighLowLeg_collision">
-    <pose>
-     0 -0.0726 -0.4176 0 -0 -3.14159
-    </pose>
-    <geometry>
-     <mesh>
-      <scale>
-       0.03937 -0.03937 0.03937
-      </scale>
-      <uri>
-       model://coman_urdf/meshes/simple/Leg2.STL
-      </uri>
-     </mesh>
-    </geometry>
-    <surface>
-     <contact>
-      <ode/>
-     </contact>
-     <friction>
-      <ode/>
-     </friction>
-    </surface>
-   </collision>
-   <visual name="LThighLowLeg_visual">
-    <pose>
-     0 -0.0726 -0.4176 0 -0 -3.14159
-    </pose>
-    <geometry>
-     <mesh>
-      <scale>
-       0.03937 -0.03937 0.03937
-      </scale>
-      <uri>
-       model://coman_urdf/meshes/Leg2.STL
-      </uri>
-     </mesh>
-    </geometry>
-    <material>
-     <script>
-      <name>
-       Gazebo/DarkGrey
-      </name>
-      <uri>
-       __default__
-      </uri>
-     </script>
-    </material>
-   </visual>
-   <gravity>
-    1
-   </gravity>
-   <velocity_decay/>
-   <self_collide>
-    0
-   </self_collide>
-  </link>
-  <joint name="LHipYaw" type="revolute">
-   <child>
-    LThighLowLeg
-   </child>
-   <parent>
-    LThighUpLeg
-   </parent>
-   <axis>
-    <xyz>
-     0 0 1
-    </xyz>
-    <limit>
-     <lower>
-      -0.8727
-     </lower>
-     <upper>
-      0.8727
-     </upper>
-     <effort>
-      50
-     </effort>
-     <velocity>
-      4
-     </velocity>
-    </limit>
-    <dynamics>
-     <damping>
-      3
-     </damping>
-     <friction>
-      0
-     </friction>
-     <spring_reference>
-      0
-     </spring_reference>
-     <spring_stiffness>
-      0
-     </spring_stiffness>
-    </dynamics>
-    <use_parent_model_frame>
-     1
-    </use_parent_model_frame>
-   </axis>
-   <physics>
-    <provide_feedback>
-     1
-    </provide_feedback>
-    <ode>
-     <provide_feedback>
-      1
-     </provide_feedback>
-     <implicit_spring_damper>
-      1
-     </implicit_spring_damper>
-     <cfm_damping>
-      1
-     </cfm_damping>
-     <limit>
-      <cfm>
-       0
-      </cfm>
-      <erp>
-       0.2
-      </erp>
-     </limit>
-    </ode>
-   </physics>
-  </joint>
-  <link name="LLowLeg">
-   <pose>
-    0 0.0726 -0.2258 0 -0 0
-   </pose>
-   <inertial>
-    <pose>
-     0.00246127 0.00530996 -0.0859895 0 -0 0
-    </pose>
-    <mass>
-     1.40982
-    </mass>
-    <inertia>
-     <ixx>
-      0.0040604
-     </ixx>
-     <ixy>
-      -1.12272e-05
-     </ixy>
-     <ixz>
-      1.2261e-05
-     </ixz>
-     <iyy>
-      0.00400565
-     </iyy>
-     <iyz>
-      -0.000518992
-     </iyz>
-     <izz>
-      0.00124141
-     </izz>
-    </inertia>
-   </inertial>
-   <collision name="LLowLeg_collision">
-    <pose>
-     0 -0.0726 -0.2942 0 -0 -3.14159
-    </pose>
-    <geometry>
-     <mesh>
-      <scale>
-       0.03937 -0.03937 0.03937
-      </scale>
-      <uri>
-       model://coman_urdf/meshes/simple/Leg3.STL
-      </uri>
-     </mesh>
-    </geometry>
-    <surface>
-     <contact>
-      <ode/>
-     </contact>
-     <friction>
-      <ode/>
-     </friction>
-    </surface>
-   </collision>
-   <visual name="LLowLeg_visual">
-    <pose>
-     0 -0.0726 -0.2942 0 -0 -3.14159
-    </pose>
-    <geometry>
-     <mesh>
-      <scale>
-       0.03937 -0.03937 0.03937
-      </scale>
-      <uri>
-       model://coman_urdf/meshes/Leg3.STL
-      </uri>
-     </mesh>
-    </geometry>
-    <material>
-     <script>
-      <name>
-       Gazebo/DarkGrey
-      </name>
-      <uri>
-       __default__
-      </uri>
-     </script>
-    </material>
-   </visual>
-   <gravity>
-    1
-   </gravity>
-   <velocity_decay/>
-   <self_collide>
-    0
-   </self_collide>
-  </link>
-  <joint name="LKneeSag" type="revolute">
-   <child>
-    LLowLeg
-   </child>
-   <parent>
-    LThighLowLeg
-   </parent>
-   <axis>
-    <xyz>
-     0 1 0
-    </xyz>
-    <limit>
-     <lower>
-      -0.1745
-     </lower>
-     <upper>
-      1.9199
-     </upper>
-     <effort>
-      50
-     </effort>
-     <velocity>
-      4
-     </velocity>
-    </limit>
-    <dynamics>
-     <damping>
-      3
-     </damping>
-     <friction>
-      0
-     </friction>
-     <spring_reference>
-      0
-     </spring_reference>
-     <spring_stiffness>
-      0
-     </spring_stiffness>
-    </dynamics>
-    <use_parent_model_frame>
-     1
-    </use_parent_model_frame>
-   </axis>
-   <physics>
-    <provide_feedback>
-     1
-    </provide_feedback>
-    <ode>
-     <provide_feedback>
-      1
-     </provide_feedback>
-     <implicit_spring_damper>
-      1
-     </implicit_spring_damper>
-     <cfm_damping>
-      1
-     </cfm_damping>
-     <limit>
-      <cfm>
-       0
-      </cfm>
-      <erp>
-       0.2
-      </erp>
-     </limit>
-    </ode>
-   </physics>
-  </joint>
-  <link name="LFootmot">
-   <pose>
-    0 0.0726 -0.4268 0 -0 0
-   </pose>
-   <inertial>
-    <pose>
-     0.000880673 0.000922249 0.000230385 0 -0 0
-    </pose>
-    <mass>
-     0.729921
-    </mass>
-    <inertia>
-     <ixx>
-      0.000320344
-     </ixx>
-     <ixy>
-      -7.63463e-06
-     </ixy>
-     <ixz>
-      2.54302e-07
-     </ixz>
-     <iyy>
-      0.000365844
-     </iyy>
-     <iyz>
-      3.68893e-06
-     </iyz>
-     <izz>
-      0.000360652
-     </izz>
-    </inertia>
-   </inertial>
-   <collision name="LFootmot_collision">
-    <pose>
-     0 -0.0726 -0.0932 0 -0 -3.14159
-    </pose>
-    <geometry>
-     <mesh>
-      <scale>
-       0.03937 -0.03937 0.03937
-      </scale>
-      <uri>
-       model://coman_urdf/meshes/simple/Leg4.STL
-      </uri>
-     </mesh>
-    </geometry>
-    <surface>
-     <contact>
-      <ode/>
-     </contact>
-     <friction>
-      <ode/>
-     </friction>
-    </surface>
-   </collision>
-   <visual name="LFootmot_visual">
-    <pose>
-     0 -0.0726 -0.0932 0 -0 -3.14159
-    </pose>
-    <geometry>
-     <mesh>
-      <scale>
-       0.03937 -0.03937 0.03937
-      </scale>
-      <uri>
-       model://coman_urdf/meshes/Leg4.STL
-      </uri>
-     </mesh>
-    </geometry>
-    <material>
-     <script>
-      <name>
-       Gazebo/DarkGrey
-      </name>
-      <uri>
-       __default__
-      </uri>
-     </script>
-    </material>
-    <material>
-     <script>
-      <name>
-       Gazebo/DarkGrey
-      </name>
-      <uri>
-       __default__
-      </uri>
-     </script>
-    </material>
-   </visual>
-   <gravity>
-    1
-   </gravity>
-   <velocity_decay/>
-   <self_collide>
-    0
-   </self_collide>
-  </link>
-  <joint name="LAnkLat" type="revolute">
-   <child>
-    LFootmot
-   </child>
-   <parent>
-    LLowLeg
-   </parent>
-   <axis>
-    <xyz>
-     1 0 0
-    </xyz>
-    <limit>
-     <lower>
-      -0.6109
-     </lower>
-     <upper>
-      0.6109
-     </upper>
-     <effort>
-      50
-     </effort>
-     <velocity>
-      4
-     </velocity>
-    </limit>
-    <dynamics>
-     <damping>
-      3
-     </damping>
-     <friction>
-      0
-     </friction>
-     <spring_reference>
-      0
-     </spring_reference>
-     <spring_stiffness>
-      0
-     </spring_stiffness>
-    </dynamics>
-    <use_parent_model_frame>
-     1
-    </use_parent_model_frame>
-   </axis>
-   <physics>
-    <provide_feedback>
-     1
-    </provide_feedback>
-    <ode>
-     <provide_feedback>
-      1
-     </provide_feedback>
-     <implicit_spring_damper>
-      1
-     </implicit_spring_damper>
-     <cfm_damping>
-      1
-     </cfm_damping>
-     <limit>
-      <cfm>
-       0
-      </cfm>
-      <erp>
-       0.2
-      </erp>
-     </limit>
-    </ode>
-   </physics>
-  </joint>
-  <link name="LFoot">
-   <pose>
-    0 0.0726 -0.4268 0 -0 0
-   </pose>
-   <inertial>
-    <pose>
-     0.0096921 0.00904602 -0.0430623 0 -0 0
-    </pose>
-    <mass>
-     0.666467
-    </mass>
-    <inertia>
-     <ixx>
-      0.00129448
-     </ixx>
-     <ixy>
-      9.23877e-05
-     </ixy>
-     <ixz>
-      0.000200801
-     </ixz>
-     <iyy>
-      0.00158518
-     </iyy>
-     <iyz>
-      -0.000275993
-     </iyz>
-     <izz>
-      0.00133268
-     </izz>
-    </inertia>
-   </inertial>
-   <collision name="LFoot_collision">
-    <pose>
-     0 -0.0726 -0.0932 0 -0 3.14159
-    </pose>
-    <geometry>
-     <mesh>
-      <scale>
-       0.03937 0.03937 0.03937
-      </scale>
-      <uri>
-       model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_01_prt.stl
-      </uri>
-     </mesh>
-    </geometry>
-    <surface>
-     <contact>
-      <ode>
-       <kp>
-        1e+06
-       </kp>
-       <kd>
-        100
-       </kd>
-       <max_vel>
-        1
-       </max_vel>
-       <min_depth>
-        0
-       </min_depth>
-      </ode>
-     </contact>
-     <friction>
-      <ode>
-       <mu>
-        1
-       </mu>
-       <mu2>
-        1
-       </mu2>
-       <fdir1>
-        1 0 0
-       </fdir1>
-      </ode>
-     </friction>
-    </surface>
-    <surface>
-     <contact>
-      <ode/>
-     </contact>
-     <friction>
-      <ode/>
-     </friction>
-    </surface>
-   </collision>
-   <visual name="LFoot_visual">
-    <pose>
-     0 -0.0726 -0.0932 0 -0 3.14159
-    </pose>
-    <geometry>
-     <mesh>
-      <scale>
-       0.03937 0.03937 0.03937
-      </scale>
-      <uri>
-       model://coman_urdf/meshes/collada/Lfoot.stl
-      </uri>
-     </mesh>
-    </geometry>
-    <material>
-     <script>
-      <name>
-       Gazebo/DarkGrey
-      </name>
-      <uri>
-       __default__
-      </uri>
-     </script>
-    </material>
-   </visual>
-   <velocity_decay/>
-   <gravity>
-    1
-   </gravity>
-   <velocity_decay/>
-   <self_collide>
-    0
-   </self_collide>
-  </link>
-  <joint name="LAnkSag" type="revolute">
-   <child>
-    LFoot
-   </child>
-   <parent>
-    LFootmot
-   </parent>
-   <axis>
-    <xyz>
-     0 1 0
-    </xyz>
-    <limit>
-     <lower>
-      -1.2217
-     </lower>
-     <upper>
-      1.2217
-     </upper>
-     <effort>
-      50
-     </effort>
-     <velocity>
-      4
-     </velocity>
-    </limit>
-    <dynamics>
-     <damping>
-      3
-     </damping>
-     <friction>
-      0
-     </friction>
-     <spring_reference>
-      0
-     </spring_reference>
-     <spring_stiffness>
-      0
-     </spring_stiffness>
-    </dynamics>
-    <use_parent_model_frame>
-     1
-    </use_parent_model_frame>
-   </axis>
-   <physics>
-    <provide_feedback>
-     1
-    </provide_feedback>
-    <ode>
-     <provide_feedback>
-      1
-     </provide_feedback>
-     <implicit_spring_damper>
-      1
-     </implicit_spring_damper>
-     <cfm_damping>
-      1
-     </cfm_damping>
-     <limit>
-      <cfm>
-       0
-      </cfm>
-      <erp>
-       0.2
-      </erp>
-     </limit>
-    </ode>
-   </physics>
-   <sensor name="left_leg" type="force_torque">
-    <!--<sensor type="force_torque" name="LAnkSag_FT">-->
-    <always_on>
-     true
-    </always_on>
-    <visualize>
-     true
-    </visualize>
-    <update_rate>
-     1000
-    </update_rate>
-    <pose>
-     0 0 -0.065 0 0 0
-    </pose>
-    <plugin filename="libgazebo_yarp_forcetorque.so" name="LAnkSag_FT_plugin">
-     <yarpConfigurationFile>
-      model://coman_urdf/conf/coman/coman_gazebo_left_leg_ft.ini
-     </yarpConfigurationFile>
+    <plugin name='coman_yarp_gazebo_plugin_torso_speed' filename='libgazebo_yarp_jointsensors.so'>
+      <yarpConfigurationFile>model://coman_urdf/conf/coman/coman_gazebo_torso_speed.ini</yarpConfigurationFile>
     </plugin>
-   </sensor>
-  </joint>
-  <link name="RHipMot">
-   <pose>
-    0 -0.023 0 0 -0 0
-   </pose>
-   <inertial>
-    <pose>
-     -0.000326968 -0.0235873 -0.000264965 0 -0 0
-    </pose>
-    <mass>
-     0.892582
-    </mass>
-    <inertia>
-     <ixx>
-      0.000476723
-     </ixx>
-     <ixy>
-      -3.99366e-06
-     </ixy>
-     <ixz>
-      -2.48026e-06
-     </ixz>
-     <iyy>
-      0.000545804
-     </iyy>
-     <iyz>
-      -3.33896e-06
-     </iyz>
-     <izz>
-      0.000512686
-     </izz>
-    </inertia>
-   </inertial>
-   <collision name="RHipMot_collision">
-    <pose>
-     0 0.023 -0.52 0 -0 -3.14159
-    </pose>
-    <geometry>
-     <mesh>
-      <scale>
-       0.03937 0.03937 0.03937
-      </scale>
-      <uri>
-       model://coman_urdf/meshes/simple/Leg0.STL
-      </uri>
-     </mesh>
-    </geometry>
-    <surface>
-     <contact>
-      <ode/>
-     </contact>
-     <friction>
-      <ode/>
-     </friction>
-    </surface>
-   </collision>
-   <visual name="RHipMot_visual">
-    <pose>
-     0 0.023 -0.52 0 -0 -3.14159
-    </pose>
-    <geometry>
-     <mesh>
-      <scale>
-       0.03937 0.03937 0.03937
-      </scale>
-      <uri>
-       model://coman_urdf/meshes/Leg0.STL
-      </uri>
-     </mesh>
-    </geometry>
-    <material>
-     <script>
-      <name>
-       Gazebo/DarkGrey
-      </name>
-      <uri>
-       __default__
-      </uri>
-     </script>
-    </material>
-   </visual>
-   <gravity>
-    1
-   </gravity>
-   <velocity_decay/>
-   <self_collide>
-    0
-   </self_collide>
-  </link>
-  <joint name="RHipSag" type="revolute">
-   <child>
-    RHipMot
-   </child>
-   <parent>
-    base_link
-   </parent>
-   <axis>
-    <xyz>
-     0 1 0
-    </xyz>
-    <limit>
-     <lower>
-      -1.9199
-     </lower>
-     <upper>
-      0.7854
-     </upper>
-     <effort>
-      50
-     </effort>
-     <velocity>
-      4
-     </velocity>
-    </limit>
-    <dynamics>
-     <damping>
-      3
-     </damping>
-     <friction>
-      0
-     </friction>
-     <spring_reference>
-      0
-     </spring_reference>
-     <spring_stiffness>
-      0
-     </spring_stiffness>
-    </dynamics>
-    <use_parent_model_frame>
-     1
-    </use_parent_model_frame>
-   </axis>
-   <physics>
-    <provide_feedback>
-     1
-    </provide_feedback>
-    <ode>
-     <provide_feedback>
-      1
-     </provide_feedback>
-     <implicit_spring_damper>
-      1
-     </implicit_spring_damper>
-     <cfm_damping>
-      1
-     </cfm_damping>
-     <limit>
-      <cfm>
-       0
-      </cfm>
-      <erp>
-       0.2
-      </erp>
-     </limit>
-    </ode>
-   </physics>
-  </joint>
-  <link name="RThighUpLeg">
-   <pose>
-    0 -0.0726 0 0 -0 0
-   </pose>
-   <inertial>
-    <pose>
-     0.00125916 -0.0168964 -0.0589033 0 -0 0
-    </pose>
-    <mass>
-     1.02461
-    </mass>
-    <inertia>
-     <ixx>
-      0.000916572
-     </ixx>
-     <ixy>
-      -1.44499e-06
-     </ixy>
-     <ixz>
-      -1.6685e-05
-     </ixz>
-     <iyy>
-      0.0010485
-     </iyy>
-     <iyz>
-      2.54929e-05
-     </iyz>
-     <izz>
-      0.000686372
-     </izz>
-    </inertia>
-   </inertial>
-   <collision name="RThighUpLeg_collision">
-    <pose>
-     0 0.0726 -0.52 0 -0 -3.14159
-    </pose>
-    <geometry>
-     <mesh>
-      <scale>
-       0.03937 0.03937 0.03937
-      </scale>
-      <uri>
-       model://coman_urdf/meshes/simple/Leg1.STL
-      </uri>
-     </mesh>
-    </geometry>
-    <surface>
-     <contact>
-      <ode/>
-     </contact>
-     <friction>
-      <ode/>
-     </friction>
-    </surface>
-   </collision>
-   <visual name="RThighUpLeg_visual">
-    <pose>
-     0 0.0726 -0.52 0 -0 -3.14159
-    </pose>
-    <geometry>
-     <mesh>
-      <scale>
-       0.03937 0.03937 0.03937
-      </scale>
-      <uri>
-       model://coman_urdf/meshes/Leg1.STL
-      </uri>
-     </mesh>
-    </geometry>
-    <material>
-     <script>
-      <name>
-       Gazebo/DarkGrey
-      </name>
-      <uri>
-       __default__
-      </uri>
-     </script>
-    </material>
-   </visual>
-   <gravity>
-    1
-   </gravity>
-   <velocity_decay/>
-   <self_collide>
-    0
-   </self_collide>
-  </link>
-  <joint name="RHipLat" type="revolute">
-   <child>
-    RThighUpLeg
-   </child>
-   <parent>
-    RHipMot
-   </parent>
-   <axis>
-    <xyz>
-     1 0 0
-    </xyz>
-    <limit>
-     <lower>
-      -1.0472
-     </lower>
-     <upper>
-      0.4363
-     </upper>
-     <effort>
-      50
-     </effort>
-     <velocity>
-      4
-     </velocity>
-    </limit>
-    <dynamics>
-     <damping>
-      3
-     </damping>
-     <friction>
-      0
-     </friction>
-     <spring_reference>
-      0
-     </spring_reference>
-     <spring_stiffness>
-      0
-     </spring_stiffness>
-    </dynamics>
-    <use_parent_model_frame>
-     1
-    </use_parent_model_frame>
-   </axis>
-   <physics>
-    <provide_feedback>
-     1
-    </provide_feedback>
-    <ode>
-     <provide_feedback>
-      1
-     </provide_feedback>
-     <implicit_spring_damper>
-      1
-     </implicit_spring_damper>
-     <cfm_damping>
-      1
-     </cfm_damping>
-     <limit>
-      <cfm>
-       0
-      </cfm>
-      <erp>
-       0.2
-      </erp>
-     </limit>
-    </ode>
-   </physics>
-  </joint>
-  <link name="RThighLowLeg">
-   <pose>
-    0 -0.0726 -0.1024 0 -0 0
-   </pose>
-   <inertial>
-    <pose>
-     0.000987201 0.000670373 -0.0757168 0 -0 0
-    </pose>
-    <mass>
-     1.70011
-    </mass>
-    <inertia>
-     <ixx>
-      0.00389795
-     </ixx>
-     <ixy>
-      1.78024e-06
-     </ixy>
-     <ixz>
-      2.64033e-05
-     </ixz>
-     <iyy>
-      0.00393608
-     </iyy>
-     <iyz>
-      4.52271e-05
-     </iyz>
-     <izz>
-      0.000902187
-     </izz>
-    </inertia>
-   </inertial>
-   <collision name="RThighLowLeg_collision">
-    <pose>
-     0 0.0726 -0.4176 0 -0 -3.14159
-    </pose>
-    <geometry>
-     <mesh>
-      <scale>
-       0.03937 0.03937 0.03937
-      </scale>
-      <uri>
-       model://coman_urdf/meshes/simple/Leg2.STL
-      </uri>
-     </mesh>
-    </geometry>
-    <surface>
-     <contact>
-      <ode/>
-     </contact>
-     <friction>
-      <ode/>
-     </friction>
-    </surface>
-   </collision>
-   <visual name="RThighLowLeg_visual">
-    <pose>
-     0 0.0726 -0.4176 0 -0 -3.14159
-    </pose>
-    <geometry>
-     <mesh>
-      <scale>
-       0.03937 0.03937 0.03937
-      </scale>
-      <uri>
-       model://coman_urdf/meshes/Leg2.STL
-      </uri>
-     </mesh>
-    </geometry>
-    <material>
-     <script>
-      <name>
-       Gazebo/DarkGrey
-      </name>
-      <uri>
-       __default__
-      </uri>
-     </script>
-    </material>
-   </visual>
-   <gravity>
-    1
-   </gravity>
-   <velocity_decay/>
-   <self_collide>
-    0
-   </self_collide>
-  </link>
-  <joint name="RHipYaw" type="revolute">
-   <child>
-    RThighLowLeg
-   </child>
-   <parent>
-    RThighUpLeg
-   </parent>
-   <axis>
-    <xyz>
-     0 0 1
-    </xyz>
-    <limit>
-     <lower>
-      -0.8727
-     </lower>
-     <upper>
-      0.8727
-     </upper>
-     <effort>
-      50
-     </effort>
-     <velocity>
-      4
-     </velocity>
-    </limit>
-    <dynamics>
-     <damping>
-      3
-     </damping>
-     <friction>
-      0
-     </friction>
-     <spring_reference>
-      0
-     </spring_reference>
-     <spring_stiffness>
-      0
-     </spring_stiffness>
-    </dynamics>
-    <use_parent_model_frame>
-     1
-    </use_parent_model_frame>
-   </axis>
-   <physics>
-    <provide_feedback>
-     1
-    </provide_feedback>
-    <ode>
-     <provide_feedback>
-      1
-     </provide_feedback>
-     <implicit_spring_damper>
-      1
-     </implicit_spring_damper>
-     <cfm_damping>
-      1
-     </cfm_damping>
-     <limit>
-      <cfm>
-       0
-      </cfm>
-      <erp>
-       0.2
-      </erp>
-     </limit>
-    </ode>
-   </physics>
-  </joint>
-  <link name="RLowLeg">
-   <pose>
-    0 -0.0726 -0.2258 0 -0 0
-   </pose>
-   <inertial>
-    <pose>
-     0.00246127 -0.00530996 -0.0859895 0 -0 0
-    </pose>
-    <mass>
-     1.40982
-    </mass>
-    <inertia>
-     <ixx>
-      0.0040604
-     </ixx>
-     <ixy>
-      1.12272e-05
-     </ixy>
-     <ixz>
-      1.2261e-05
-     </ixz>
-     <iyy>
-      0.00400565
-     </iyy>
-     <iyz>
-      0.000518992
-     </iyz>
-     <izz>
-      0.00124141
-     </izz>
-    </inertia>
-   </inertial>
-   <collision name="RLowLeg_collision">
-    <pose>
-     0 0.0726 -0.2942 0 -0 -3.14159
-    </pose>
-    <geometry>
-     <mesh>
-      <scale>
-       0.03937 0.03937 0.03937
-      </scale>
-      <uri>
-       model://coman_urdf/meshes/simple/Leg3.STL
-      </uri>
-     </mesh>
-    </geometry>
-    <surface>
-     <contact>
-      <ode/>
-     </contact>
-     <friction>
-      <ode/>
-     </friction>
-    </surface>
-   </collision>
-   <visual name="RLowLeg_visual">
-    <pose>
-     0 0.0726 -0.2942 0 -0 -3.14159
-    </pose>
-    <geometry>
-     <mesh>
-      <scale>
-       0.03937 0.03937 0.03937
-      </scale>
-      <uri>
-       model://coman_urdf/meshes/Leg3.STL
-      </uri>
-     </mesh>
-    </geometry>
-    <material>
-     <script>
-      <name>
-       Gazebo/DarkGrey
-      </name>
-      <uri>
-       __default__
-      </uri>
-     </script>
-    </material>
-   </visual>
-   <gravity>
-    1
-   </gravity>
-   <velocity_decay/>
-   <self_collide>
-    0
-   </self_collide>
-  </link>
-  <joint name="RKneeSag" type="revolute">
-   <child>
-    RLowLeg
-   </child>
-   <parent>
-    RThighLowLeg
-   </parent>
-   <axis>
-    <xyz>
-     0 1 0
-    </xyz>
-    <limit>
-     <lower>
-      -0.1745
-     </lower>
-     <upper>
-      1.9199
-     </upper>
-     <effort>
-      50
-     </effort>
-     <velocity>
-      4
-     </velocity>
-    </limit>
-    <dynamics>
-     <damping>
-      3
-     </damping>
-     <friction>
-      0
-     </friction>
-     <spring_reference>
-      0
-     </spring_reference>
-     <spring_stiffness>
-      0
-     </spring_stiffness>
-    </dynamics>
-    <use_parent_model_frame>
-     1
-    </use_parent_model_frame>
-   </axis>
-   <physics>
-    <provide_feedback>
-     1
-    </provide_feedback>
-    <ode>
-     <provide_feedback>
-      1
-     </provide_feedback>
-     <implicit_spring_damper>
-      1
-     </implicit_spring_damper>
-     <cfm_damping>
-      1
-     </cfm_damping>
-     <limit>
-      <cfm>
-       0
-      </cfm>
-      <erp>
-       0.2
-      </erp>
-     </limit>
-    </ode>
-   </physics>
-  </joint>
-  <link name="RFootmot">
-   <pose>
-    0 -0.0726 -0.4268 0 -0 0
-   </pose>
-   <inertial>
-    <pose>
-     0.000880673 -0.000922249 0.000230385 0 -0 0
-    </pose>
-    <mass>
-     0.729921
-    </mass>
-    <inertia>
-     <ixx>
-      0.000320344
-     </ixx>
-     <ixy>
-      7.63463e-06
-     </ixy>
-     <ixz>
-      2.54302e-07
-     </ixz>
-     <iyy>
-      0.000365844
-     </iyy>
-     <iyz>
-      -3.68893e-06
-     </iyz>
-     <izz>
-      0.000360652
-     </izz>
-    </inertia>
-   </inertial>
-   <collision name="RFootmot_collision">
-    <pose>
-     0 0.0726 -0.0932 0 -0 -3.14159
-    </pose>
-    <geometry>
-     <mesh>
-      <scale>
-       0.03937 0.03937 0.03937
-      </scale>
-      <uri>
-       model://coman_urdf/meshes/simple/Leg4.STL
-      </uri>
-     </mesh>
-    </geometry>
-    <surface>
-     <contact>
-      <ode/>
-     </contact>
-     <friction>
-      <ode/>
-     </friction>
-    </surface>
-   </collision>
-   <visual name="RFootmot_visual">
-    <pose>
-     0 0.0726 -0.0932 0 -0 -3.14159
-    </pose>
-    <geometry>
-     <mesh>
-      <scale>
-       0.03937 0.03937 0.03937
-      </scale>
-      <uri>
-       model://coman_urdf/meshes/Leg4.STL
-      </uri>
-     </mesh>
-    </geometry>
-    <material>
-     <script>
-      <name>
-       Gazebo/DarkGrey
-      </name>
-      <uri>
-       __default__
-      </uri>
-     </script>
-    </material>
-    <material>
-     <script>
-      <name>
-       Gazebo/DarkGrey
-      </name>
-      <uri>
-       __default__
-      </uri>
-     </script>
-    </material>
-   </visual>
-   <gravity>
-    1
-   </gravity>
-   <velocity_decay/>
-   <self_collide>
-    0
-   </self_collide>
-  </link>
-  <joint name="RAnkLat" type="revolute">
-   <child>
-    RFootmot
-   </child>
-   <parent>
-    RLowLeg
-   </parent>
-   <axis>
-    <xyz>
-     1 0 0
-    </xyz>
-    <limit>
-     <lower>
-      -0.6109
-     </lower>
-     <upper>
-      0.6109
-     </upper>
-     <effort>
-      50
-     </effort>
-     <velocity>
-      4
-     </velocity>
-    </limit>
-    <dynamics>
-     <damping>
-      3
-     </damping>
-     <friction>
-      0
-     </friction>
-     <spring_reference>
-      0
-     </spring_reference>
-     <spring_stiffness>
-      0
-     </spring_stiffness>
-    </dynamics>
-    <use_parent_model_frame>
-     1
-    </use_parent_model_frame>
-   </axis>
-   <physics>
-    <provide_feedback>
-     1
-    </provide_feedback>
-    <ode>
-     <provide_feedback>
-      1
-     </provide_feedback>
-     <implicit_spring_damper>
-      1
-     </implicit_spring_damper>
-     <cfm_damping>
-      1
-     </cfm_damping>
-     <limit>
-      <cfm>
-       0
-      </cfm>
-      <erp>
-       0.2
-      </erp>
-     </limit>
-    </ode>
-   </physics>
-  </joint>
-  <link name="RFoot">
-   <pose>
-    0 -0.0726 -0.4268 0 -0 0
-   </pose>
-   <inertial>
-    <pose>
-     0.0096921 -0.00904602 -0.0430623 0 -0 0
-    </pose>
-    <mass>
-     0.666467
-    </mass>
-    <inertia>
-     <ixx>
-      0.00129448
-     </ixx>
-     <ixy>
-      -9.23877e-05
-     </ixy>
-     <ixz>
-      0.000200801
-     </ixz>
-     <iyy>
-      0.00158518
-     </iyy>
-     <iyz>
-      0.000275993
-     </iyz>
-     <izz>
-      0.00133268
-     </izz>
-    </inertia>
-   </inertial>
-   <collision name="RFoot_collision">
-    <pose>
-     0 0.0726 -0.0932 0 -0 3.14159
-    </pose>
-    <geometry>
-     <mesh>
-      <scale>
-       0.03937 0.03937 0.03937
-      </scale>
-      <uri>
-       model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_15_prt.stl
-      </uri>
-     </mesh>
-    </geometry>
-    <surface>
-     <contact>
-      <ode>
-       <kp>
-        1e+06
-       </kp>
-       <kd>
-        100
-       </kd>
-       <max_vel>
-        1
-       </max_vel>
-       <min_depth>
-        0
-       </min_depth>
-      </ode>
-     </contact>
-     <friction>
-      <ode>
-       <mu>
-        1
-       </mu>
-       <mu2>
-        1
-       </mu2>
-       <fdir1>
-        1 0 0
-       </fdir1>
-      </ode>
-     </friction>
-    </surface>
-    <surface>
-     <contact>
-      <ode/>
-     </contact>
-     <friction>
-      <ode/>
-     </friction>
-    </surface>
-   </collision>
-   <visual name="RFoot_visual">
-    <pose>
-     0 0.0726 -0.0932 0 -0 3.14159
-    </pose>
-    <geometry>
-     <mesh>
-      <scale>
-       0.03937 0.03937 0.03937
-      </scale>
-      <uri>
-       model://coman_urdf/meshes/collada/Rfoot.stl
-      </uri>
-     </mesh>
-    </geometry>
-    <material>
-     <script>
-      <name>
-       Gazebo/DarkGrey
-      </name>
-      <uri>
-       __default__
-      </uri>
-     </script>
-    </material>
-   </visual>
-   <velocity_decay/>
-   <gravity>
-    1
-   </gravity>
-   <velocity_decay/>
-   <self_collide>
-    0
-   </self_collide>
-  </link>
-  <joint name="RAnkSag" type="revolute">
-   <child>
-    RFoot
-   </child>
-   <parent>
-    RFootmot
-   </parent>
-   <axis>
-    <xyz>
-     0 1 0
-    </xyz>
-    <limit>
-     <lower>
-      -1.2217
-     </lower>
-     <upper>
-      1.2217
-     </upper>
-     <effort>
-      50
-     </effort>
-     <velocity>
-      4
-     </velocity>
-    </limit>
-    <dynamics>
-     <damping>
-      3
-     </damping>
-     <friction>
-      0
-     </friction>
-     <spring_reference>
-      0
-     </spring_reference>
-     <spring_stiffness>
-      0
-     </spring_stiffness>
-    </dynamics>
-    <use_parent_model_frame>
-     1
-    </use_parent_model_frame>
-   </axis>
-   <physics>
-    <provide_feedback>
-     1
-    </provide_feedback>
-    <ode>
-     <provide_feedback>
-      1
-     </provide_feedback>
-     <implicit_spring_damper>
-      1
-     </implicit_spring_damper>
-     <cfm_damping>
-      1
-     </cfm_damping>
-     <limit>
-      <cfm>
-       0
-      </cfm>
-      <erp>
-       0.2
-      </erp>
-     </limit>
-    </ode>
-   </physics>
-   <sensor name="right_leg" type="force_torque">
-    <!--<sensor type="force_torque" name="RAnkSag_FT">-->
-    <always_on>
-     true
-    </always_on>
-    <visualize>
-     true
-    </visualize>
-    <update_rate>
-     1000
-    </update_rate>
-    <pose>
-     0 0 -0.065 0 0 0
-    </pose>
-    <plugin filename="libgazebo_yarp_forcetorque.so" name="RAnkSag_FT_plugin">
-     <yarpConfigurationFile>
-      model://coman_urdf/conf/coman/coman_gazebo_right_leg_ft.ini
-     </yarpConfigurationFile>
+    <plugin name='coman_yarp_gazebo_plugin_torso_torque' filename='libgazebo_yarp_jointsensors.so'>
+      <yarpConfigurationFile>model://coman_urdf/conf/coman/coman_gazebo_torso_torque.ini</yarpConfigurationFile>
     </plugin>
-   </sensor>
-  </joint>
-  <link name="DWL">
-   <pose>
-    0.0202815 0 0.119121 0 -0 0
-   </pose>
-   <inertial>
-    <pose>
-     0.000429997 -0.00976503 0.0330112 0 -0 0
-    </pose>
-    <mass>
-     0.545888
-    </mass>
-    <inertia>
-     <ixx>
-      0.000971266
-     </ixx>
-     <ixy>
-      -7.21012e-07
-     </ixy>
-     <ixz>
-      1.14401e-06
-     </ixz>
-     <iyy>
-      0.000746867
-     </iyy>
-     <iyz>
-      -0.000174509
-     </iyz>
-     <izz>
-      0.000621962
-     </izz>
-    </inertia>
-   </inertial>
-   <collision name="DWL_collision">
-    <pose>
-     -0.0202815 0 -0.639121 0 -0 -3.14159
-    </pose>
-    <geometry>
-     <mesh>
-      <scale>
-       0.03937 0.03937 0.03937
-      </scale>
-      <uri>
-       model://coman_urdf/meshes/simple/Torso1.STL
-      </uri>
-     </mesh>
-    </geometry>
-    <surface>
-     <contact>
-      <ode/>
-     </contact>
-     <friction>
-      <ode/>
-     </friction>
-    </surface>
-   </collision>
-   <visual name="DWL_visual">
-    <pose>
-     -0.0202815 0 -0.639121 0 -0 -3.14159
-    </pose>
-    <geometry>
-     <mesh>
-      <scale>
-       0.03937 0.03937 0.03937
-      </scale>
-      <uri>
-       model://coman_urdf/meshes/Torso1.STL
-      </uri>
-     </mesh>
-    </geometry>
-    <material>
-     <script>
-      <name>
-       Gazebo/DarkGrey
-      </name>
-      <uri>
-       __default__
-      </uri>
-     </script>
-    </material>
-   </visual>
-   <gravity>
-    1
-   </gravity>
-   <velocity_decay/>
-   <self_collide>
-    0
-   </self_collide>
-  </link>
-  <joint name="WaistLat" type="revolute">
-   <child>
-    DWL
-   </child>
-   <parent>
-    base_link
-   </parent>
-   <axis>
-    <xyz>
-     0.939693 0 0.34202
-    </xyz>
-    <limit>
-     <lower>
-      -0.5236
-     </lower>
-     <upper>
-      0.5235
-     </upper>
-     <effort>
-      50
-     </effort>
-     <velocity>
-      4
-     </velocity>
-    </limit>
-    <dynamics>
-     <damping>
-      3
-     </damping>
-     <friction>
-      0
-     </friction>
-     <spring_reference>
-      0
-     </spring_reference>
-     <spring_stiffness>
-      0
-     </spring_stiffness>
-    </dynamics>
-    <use_parent_model_frame>
-     1
-    </use_parent_model_frame>
-   </axis>
-   <physics>
-    <provide_feedback>
-     1
-    </provide_feedback>
-    <ode>
-     <provide_feedback>
-      1
-     </provide_feedback>
-     <implicit_spring_damper>
-      1
-     </implicit_spring_damper>
-     <cfm_damping>
-      1
-     </cfm_damping>
-     <limit>
-      <cfm>
-       0
-      </cfm>
-      <erp>
-       0.2
-      </erp>
-     </limit>
-    </ode>
-   </physics>
-  </joint>
-  <link name="DWS">
-   <pose>
-    0.0202815 0 0.119121 0 -0 0
-   </pose>
-   <inertial>
-    <pose>
-     -0.00212734 0.00335752 -0.00100769 0 -0 0
-    </pose>
-    <mass>
-     0.753984
-    </mass>
-    <inertia>
-     <ixx>
-      0.000340933
-     </ixx>
-     <ixy>
-      -6.212e-06
-     </ixy>
-     <ixz>
-      -1.38635e-06
-     </ixz>
-     <iyy>
-      0.000395819
-     </iyy>
-     <iyz>
-      1.44302e-06
-     </iyz>
-     <izz>
-      0.000374498
-     </izz>
-    </inertia>
-   </inertial>
-   <collision name="DWS_collision">
-    <pose>
-     -0.0202815 0 -0.639121 0 -0 -3.14159
-    </pose>
-    <geometry>
-     <mesh>
-      <scale>
-       0.03937 0.03937 0.03937
-      </scale>
-      <uri>
-       model://coman_urdf/meshes/simple/Torso2.STL
-      </uri>
-     </mesh>
-    </geometry>
-    <surface>
-     <contact>
-      <ode/>
-     </contact>
-     <friction>
-      <ode/>
-     </friction>
-    </surface>
-   </collision>
-   <visual name="DWS_visual">
-    <pose>
-     -0.0202815 0 -0.639121 0 -0 -3.14159
-    </pose>
-    <geometry>
-     <mesh>
-      <scale>
-       0.03937 0.03937 0.03937
-      </scale>
-      <uri>
-       model://coman_urdf/meshes/Torso2.STL
-      </uri>
-     </mesh>
-    </geometry>
-    <material>
-     <script>
-      <name>
-       Gazebo/DarkGrey
-      </name>
-      <uri>
-       __default__
-      </uri>
-     </script>
-    </material>
-   </visual>
-   <gravity>
-    1
-   </gravity>
-   <velocity_decay/>
-   <self_collide>
-    0
-   </self_collide>
-  </link>
-  <joint name="WaistSag" type="revolute">
-   <child>
-    DWS
-   </child>
-   <parent>
-    DWL
-   </parent>
-   <axis>
-    <xyz>
-     0 1 0
-    </xyz>
-    <limit>
-     <lower>
-      -0.3491
-     </lower>
-     <upper>
-      0.8727
-     </upper>
-     <effort>
-      50
-     </effort>
-     <velocity>
-      4
-     </velocity>
-    </limit>
-    <dynamics>
-     <damping>
-      3
-     </damping>
-     <friction>
-      0
-     </friction>
-     <spring_reference>
-      0
-     </spring_reference>
-     <spring_stiffness>
-      0
-     </spring_stiffness>
-    </dynamics>
-    <use_parent_model_frame>
-     1
-    </use_parent_model_frame>
-   </axis>
-   <physics>
-    <provide_feedback>
-     1
-    </provide_feedback>
-    <ode>
-     <provide_feedback>
-      1
-     </provide_feedback>
-     <implicit_spring_damper>
-      1
-     </implicit_spring_damper>
-     <cfm_damping>
-      1
-     </cfm_damping>
-     <limit>
-      <cfm>
-       0
-      </cfm>
-      <erp>
-       0.2
-      </erp>
-     </limit>
-    </ode>
-   </physics>
-  </joint>
-  <link name="DWYTorso">
-   <pose>
-    0.0202815 0 0.166621 0 -0 0
-   </pose>
-   <inertial>
-    <pose>
-     -0.0358501 1.8286e-05 0.117557 0 -0 0
-    </pose>
-    <mass>
-     6.36172
-    </mass>
-    <inertia>
-     <ixx>
-      0.0340893
-     </ixx>
-     <ixy>
-      -9.83086e-06
-     </ixy>
-     <ixz>
-      -0.000756493
-     </ixz>
-     <iyy>
-      0.0301174
-     </iyy>
-     <iyz>
-      6.24438e-06
-     </iyz>
-     <izz>
-      0.0252966
-     </izz>
-    </inertia>
-   </inertial>
-   <collision name="DWYTorso_collision">
-    <pose>
-     -0.0202815 0 -0.686621 0 -0 -3.14159
-    </pose>
-    <geometry>
-     <mesh>
-      <scale>
-       0.03937 0.03937 0.03937
-      </scale>
-      <uri>
-       model://coman_urdf/meshes/simple/Torso3.STL
-      </uri>
-     </mesh>
-    </geometry>
-    <surface>
-     <contact>
-      <ode/>
-     </contact>
-     <friction>
-      <ode/>
-     </friction>
-    </surface>
-   </collision>
-   <visual name="DWYTorso_visual">
-    <pose>
-     -0.0202815 0 -0.686621 0 -0 -3.14159
-    </pose>
-    <geometry>
-     <mesh>
-      <scale>
-       0.03937 0.03937 0.03937
-      </scale>
-      <uri>
-       model://coman_urdf/meshes/Torso3.STL
-      </uri>
-     </mesh>
-    </geometry>
-    <material>
-     <script>
-      <name>
-       Gazebo/Red
-      </name>
-      <uri>
-       __default__
-      </uri>
-     </script>
-    </material>
-   </visual>
-   <gravity>
-    1
-   </gravity>
-   <velocity_decay/>
-   <self_collide>
-    0
-   </self_collide>
-  </link>
-  <joint name="WaistYaw" type="revolute">
-   <child>
-    DWYTorso
-   </child>
-   <parent>
-    DWS
-   </parent>
-   <axis>
-    <xyz>
-     0 0 1
-    </xyz>
-    <limit>
-     <lower>
-      -1.3963
-     </lower>
-     <upper>
-      1.3962
-     </upper>
-     <effort>
-      50
-     </effort>
-     <velocity>
-      4
-     </velocity>
-    </limit>
-    <dynamics>
-     <damping>
-      3
-     </damping>
-     <friction>
-      0
-     </friction>
-     <spring_reference>
-      0
-     </spring_reference>
-     <spring_stiffness>
-      0
-     </spring_stiffness>
-    </dynamics>
-    <use_parent_model_frame>
-     1
-    </use_parent_model_frame>
-   </axis>
-   <physics>
-    <provide_feedback>
-     1
-    </provide_feedback>
-    <ode>
-     <provide_feedback>
-      1
-     </provide_feedback>
-     <implicit_spring_damper>
-      1
-     </implicit_spring_damper>
-     <cfm_damping>
-      1
-     </cfm_damping>
-     <limit>
-      <cfm>
-       0
-      </cfm>
-      <erp>
-       0.2
-      </erp>
-     </limit>
-    </ode>
-   </physics>
-  </joint>
-  <link name="LShp">
-   <pose>
-    0.005305 0.0825 0.324329 0 -0 0
-   </pose>
-   <inertial>
-    <pose>
-     0.00995006 0.038682 0.000164469 0 -0 0
-    </pose>
-    <mass>
-     0.567822
-    </mass>
-    <inertia>
-     <ixx>
-      0.000783375
-     </ixx>
-     <ixy>
-      -0.000190358
-     </ixy>
-     <ixz>
-      -3.00377e-06
-     </ixz>
-     <iyy>
-      0.000633999
-     </iyy>
-     <iyz>
-      -4.38408e-06
-     </iyz>
-     <izz>
-      0.00100805
-     </izz>
-    </inertia>
-   </inertial>
-   <collision name="LShp_collision">
-    <pose>
-     -0.005305 -0.0825 -0.844329 0 -0 -3.14159
-    </pose>
-    <geometry>
-     <mesh>
-      <scale>
-       0.03937 0.03937 0.03937
-      </scale>
-      <uri>
-       model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_14_prt.stl
-      </uri>
-     </mesh>
-    </geometry>
-    <surface>
-     <contact>
-      <ode/>
-     </contact>
-     <friction>
-      <ode/>
-     </friction>
-    </surface>
-   </collision>
-   <visual name="LShp_visual">
-    <pose>
-     -0.005305 -0.0825 -0.844329 0 -0 -3.14159
-    </pose>
-    <geometry>
-     <mesh>
-      <scale>
-       0.03937 0.03937 0.03937
-      </scale>
-      <uri>
-       model://coman_urdf/meshes/collada/larm0.stl
-      </uri>
-     </mesh>
-    </geometry>
-    <material>
-     <script>
-      <name>
-       Gazebo/DarkGrey
-      </name>
-      <uri>
-       __default__
-      </uri>
-     </script>
-    </material>
-   </visual>
-   <gravity>
-    1
-   </gravity>
-   <velocity_decay/>
-   <self_collide>
-    0
-   </self_collide>
-  </link>
-  <joint name="LShSag" type="revolute">
-   <child>
-    LShp
-   </child>
-   <parent>
-    DWYTorso
-   </parent>
-   <axis>
-    <xyz>
-     0 1 0
-    </xyz>
-    <limit>
-     <lower>
-      -3.4034
-     </lower>
-     <upper>
-      1.6581
-     </upper>
-     <effort>
-      50
-     </effort>
-     <velocity>
-      4
-     </velocity>
-    </limit>
-    <dynamics>
-     <damping>
-      3
-     </damping>
-     <friction>
-      0
-     </friction>
-     <spring_reference>
-      0
-     </spring_reference>
-     <spring_stiffness>
-      0
-     </spring_stiffness>
-    </dynamics>
-    <use_parent_model_frame>
-     1
-    </use_parent_model_frame>
-   </axis>
-   <physics>
-    <provide_feedback>
-     1
-    </provide_feedback>
-    <ode>
-     <provide_feedback>
-      1
-     </provide_feedback>
-     <implicit_spring_damper>
-      1
-     </implicit_spring_damper>
-     <cfm_damping>
-      1
-     </cfm_damping>
-     <limit>
-      <cfm>
-       0
-      </cfm>
-      <erp>
-       0.2
-      </erp>
-     </limit>
-    </ode>
-   </physics>
-  </joint>
-  <link name="LShr">
-   <pose>
-    0.005305 0.1558 0.324329 0 -0 0
-   </pose>
-   <inertial>
-    <pose>
-     -0.00389367 -2.20222e-06 -0.0048616 0 -0 0
-    </pose>
-    <mass>
-     0.776838
-    </mass>
-    <inertia>
-     <ixx>
-      0.000458129
-     </ixx>
-     <ixy>
-      2.41111e-07
-     </ixy>
-     <ixz>
-      9.25212e-06
-     </ixz>
-     <iyy>
-      0.000430892
-     </iyy>
-     <iyz>
-      4.7217e-07
-     </iyz>
-     <izz>
-      0.000341749
-     </izz>
-    </inertia>
-   </inertial>
-   <collision name="LShr_collision">
-    <pose>
-     -0.005305 -0.1558 -0.844329 0 -0 -3.14159
-    </pose>
-    <geometry>
-     <mesh>
-      <scale>
-       0.03937 0.03937 0.03937
-      </scale>
-      <uri>
-       model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_13_prt.stl
-      </uri>
-     </mesh>
-    </geometry>
-    <surface>
-     <contact>
-      <ode/>
-     </contact>
-     <friction>
-      <ode/>
-     </friction>
-    </surface>
-   </collision>
-   <visual name="LShr_visual">
-    <pose>
-     -0.005305 -0.1558 -0.844329 0 -0 -3.14159
-    </pose>
-    <geometry>
-     <mesh>
-      <scale>
-       0.03937 0.03937 0.03937
-      </scale>
-      <uri>
-       model://coman_urdf/meshes/collada/larm1.stl
-      </uri>
-     </mesh>
-    </geometry>
-    <material>
-     <script>
-      <name>
-       Gazebo/DarkGrey
-      </name>
-      <uri>
-       __default__
-      </uri>
-     </script>
-    </material>
-   </visual>
-   <gravity>
-    1
-   </gravity>
-   <velocity_decay/>
-   <self_collide>
-    0
-   </self_collide>
-  </link>
-  <joint name="LShLat" type="revolute">
-   <child>
-    LShr
-   </child>
-   <parent>
-    LShp
-   </parent>
-   <axis>
-    <xyz>
-     1 0 0
-    </xyz>
-    <limit>
-     <lower>
-      -0.31415
-     </lower>
-     <upper>
-      2.094
-     </upper>
-     <effort>
-      50
-     </effort>
-     <velocity>
-      4
-     </velocity>
-    </limit>
-    <dynamics>
-     <damping>
-      3
-     </damping>
-     <friction>
-      0
-     </friction>
-     <spring_reference>
-      0
-     </spring_reference>
-     <spring_stiffness>
-      0
-     </spring_stiffness>
-    </dynamics>
-    <use_parent_model_frame>
-     1
-    </use_parent_model_frame>
-   </axis>
-   <physics>
-    <provide_feedback>
-     1
-    </provide_feedback>
-    <ode>
-     <provide_feedback>
-      1
-     </provide_feedback>
-     <implicit_spring_damper>
-      1
-     </implicit_spring_damper>
-     <cfm_damping>
-      1
-     </cfm_damping>
-     <limit>
-      <cfm>
-       0
-      </cfm>
-      <erp>
-       0.2
-      </erp>
-     </limit>
-    </ode>
-   </physics>
-  </joint>
-  <link name="LShy">
-   <pose>
-    0.005305 0.1558 0.279521 0 -0 0
-   </pose>
-   <inertial>
-    <pose>
-     0.00227142 0.00710915 -0.0574552 0 -0 0
-    </pose>
-    <mass>
-     1.04623
-    </mass>
-    <inertia>
-     <ixx>
-      0.00309346
-     </ixx>
-     <ixy>
-      -6.67028e-05
-     </ixy>
-     <ixz>
-      0.000302223
-     </ixz>
-     <iyy>
-      0.00291816
-     </iyy>
-     <iyz>
-      0.000526637
-     </iyz>
-     <izz>
-      0.000808304
-     </izz>
-    </inertia>
-   </inertial>
-   <collision name="LShy_collision">
-    <pose>
-     -0.005305 -0.1558 -0.799521 0 -0 -3.14159
-    </pose>
-    <geometry>
-     <mesh>
-      <scale>
-       0.03937 0.03937 0.03937
-      </scale>
-      <uri>
-       model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_12_prt.stl
-      </uri>
-     </mesh>
-    </geometry>
-    <surface>
-     <contact>
-      <ode/>
-     </contact>
-     <friction>
-      <ode/>
-     </friction>
-    </surface>
-   </collision>
-   <visual name="LShy_visual">
-    <pose>
-     -0.005305 -0.1558 -0.799521 0 -0 -3.14159
-    </pose>
-    <geometry>
-     <mesh>
-      <scale>
-       0.03937 0.03937 0.03937
-      </scale>
-      <uri>
-       model://coman_urdf/meshes/collada/larm2.stl
-      </uri>
-     </mesh>
-    </geometry>
-    <material>
-     <script>
-      <name>
-       Gazebo/DarkGrey
-      </name>
-      <uri>
-       __default__
-      </uri>
-     </script>
-    </material>
-   </visual>
-   <gravity>
-    1
-   </gravity>
-   <velocity_decay/>
-   <self_collide>
-    0
-   </self_collide>
-  </link>
-  <joint name="LShYaw" type="revolute">
-   <child>
-    LShy
-   </child>
-   <parent>
-    LShr
-   </parent>
-   <axis>
-    <xyz>
-     0 0 1
-    </xyz>
-    <limit>
-     <lower>
-      -1.5708
-     </lower>
-     <upper>
-      1.5708
-     </upper>
-     <effort>
-      50
-     </effort>
-     <velocity>
-      4
-     </velocity>
-    </limit>
-    <dynamics>
-     <damping>
-      3
-     </damping>
-     <friction>
-      0
-     </friction>
-     <spring_reference>
-      0
-     </spring_reference>
-     <spring_stiffness>
-      0
-     </spring_stiffness>
-    </dynamics>
-    <use_parent_model_frame>
-     1
-    </use_parent_model_frame>
-   </axis>
-   <physics>
-    <provide_feedback>
-     1
-    </provide_feedback>
-    <ode>
-     <provide_feedback>
-      1
-     </provide_feedback>
-     <implicit_spring_damper>
-      1
-     </implicit_spring_damper>
-     <cfm_damping>
-      1
-     </cfm_damping>
-     <limit>
-      <cfm>
-       0
-      </cfm>
-      <erp>
-       0.2
-      </erp>
-     </limit>
-    </ode>
-   </physics>
-  </joint>
-  <link name="LElb">
-   <pose>
-    0.020305 0.1558 0.144329 0 -0 0
-   </pose>
-   <inertial>
-    <pose>
-     -0.00486569 0.000660325 -0.0402808 0 -0 0
-    </pose>
-    <mass>
-     0.896069
-    </mass>
-    <inertia>
-     <ixx>
-      0.00425727
-     </ixx>
-     <ixy>
-      -2.22737e-06
-     </ixy>
-     <ixz>
-      -0.000367138
-     </ixz>
-     <iyy>
-      0.00434716
-     </iyy>
-     <iyz>
-      -2.12396e-05
-     </iyz>
-     <izz>
-      0.00029761
-     </izz>
-    </inertia>
-   </inertial>
-   <collision name="LElb_collision">
-    <pose>
-     0 0 0 -1.57079 1.57079 -2.65361e-06
-    </pose>
-    <geometry>
-     <mesh>
-      <scale>
-       1 1 1
-      </scale>
-      <uri>
-       model://coman_urdf/meshes/collada/simple/forearms/elbow.stl
-      </uri>
-     </mesh>
-    </geometry>
-    <surface>
-     <contact>
-      <ode/>
-     </contact>
-     <friction>
-      <ode/>
-     </friction>
-    </surface>
-   </collision>
-   <collision name="LElb_collision_LElb_1">
-    <pose>
-     -0.0205 -0.1558 -0.6675 0 -0 -3.14159
-    </pose>
-    <geometry>
-     <mesh>
-      <scale>
-       0.03937 0.03937 0.03937
-      </scale>
-      <uri>
-       model://coman_urdf/meshes/collada/simple/forearm_old.dae
-      </uri>
-     </mesh>
-    </geometry>
-    <surface>
-     <contact>
-      <ode/>
-     </contact>
-     <friction>
-      <ode/>
-     </friction>
-    </surface>
-   </collision>
-   <visual name="LElb_visual">
-    <pose>
-     0 0 0 -1.57079 1.57079 -2.65361e-06
-    </pose>
-    <geometry>
-     <mesh>
-      <scale>
-       1 1 1
-      </scale>
-      <uri>
-       model://coman_urdf/meshes/collada/forearms/elbow.stl
-      </uri>
-     </mesh>
-    </geometry>
-    <material>
-     <script>
-      <name>
-       Gazebo/DarkGrey
-      </name>
-      <uri>
-       __default__
-      </uri>
-     </script>
-    </material>
-   </visual>
-   <visual name="LElb_visual_LElb_1">
-    <pose>
-     -0.0205 -0.1558 -0.6675 0 -0 -3.14159
-    </pose>
-    <geometry>
-     <mesh>
-      <scale>
-       0.03937 0.03937 0.03937
-      </scale>
-      <uri>
-       model://coman_urdf/meshes/collada/forearm_old.stl
-      </uri>
-     </mesh>
-    </geometry>
-    <material>
-     <script>
-      <name>
-       Gazebo/DarkGrey
-      </name>
-      <uri>
-       __default__
-      </uri>
-     </script>
-    </material>
-   </visual>
-   <velocity_decay/>
-   <gravity>
-    1
-   </gravity>
-   <velocity_decay/>
-   <self_collide>
-    0
-   </self_collide>
-  </link>
-  <joint name="LElbj" type="revolute">
-   <child>
-    LElb
-   </child>
-   <parent>
-    LShy
-   </parent>
-   <axis>
-    <xyz>
-     0 1 0
-    </xyz>
-    <limit>
-     <lower>
-      -2.3562
-     </lower>
-     <upper>
-      0
-     </upper>
-     <effort>
-      50
-     </effort>
-     <velocity>
-      4
-     </velocity>
-    </limit>
-    <dynamics>
-     <damping>
-      3
-     </damping>
-     <friction>
-      0
-     </friction>
-     <spring_reference>
-      0
-     </spring_reference>
-     <spring_stiffness>
-      0
-     </spring_stiffness>
-    </dynamics>
-    <use_parent_model_frame>
-     1
-    </use_parent_model_frame>
-   </axis>
-   <physics>
-    <provide_feedback>
-     1
-    </provide_feedback>
-    <ode>
-     <provide_feedback>
-      1
-     </provide_feedback>
-     <implicit_spring_damper>
-      1
-     </implicit_spring_damper>
-     <cfm_damping>
-      1
-     </cfm_damping>
-     <limit>
-      <cfm>
-       0
-      </cfm>
-      <erp>
-       0.2
-      </erp>
-     </limit>
-    </ode>
-   </physics>
-  </joint>
-  <link name="RShp">
-   <pose>
-    0.005305 -0.0825 0.324329 0 -0 0
-   </pose>
-   <inertial>
-    <pose>
-     0.00995006 -0.038682 0.000164469 0 -0 0
-    </pose>
-    <mass>
-     0.567822
-    </mass>
-    <inertia>
-     <ixx>
-      0.000783375
-     </ixx>
-     <ixy>
-      0.000190358
-     </ixy>
-     <ixz>
-      -3.00377e-06
-     </ixz>
-     <iyy>
-      0.000633999
-     </iyy>
-     <iyz>
-      4.38408e-06
-     </iyz>
-     <izz>
-      0.00100805
-     </izz>
-    </inertia>
-   </inertial>
-   <collision name="RShp_collision">
-    <pose>
-     -0.005305 0.0825 -0.844329 0 -0 -3.14159
-    </pose>
-    <geometry>
-     <mesh>
-      <scale>
-       0.03937 0.03937 0.03937
-      </scale>
-      <uri>
-       model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_24_prt.stl
-      </uri>
-     </mesh>
-    </geometry>
-    <surface>
-     <contact>
-      <ode/>
-     </contact>
-     <friction>
-      <ode/>
-     </friction>
-    </surface>
-   </collision>
-   <visual name="RShp_visual">
-    <pose>
-     -0.005305 0.0825 -0.844329 0 -0 -3.14159
-    </pose>
-    <geometry>
-     <mesh>
-      <scale>
-       0.03937 0.03937 0.03937
-      </scale>
-      <uri>
-       model://coman_urdf/meshes/collada/rarm0.stl
-      </uri>
-     </mesh>
-    </geometry>
-    <material>
-     <script>
-      <name>
-       Gazebo/DarkGrey
-      </name>
-      <uri>
-       __default__
-      </uri>
-     </script>
-    </material>
-   </visual>
-   <gravity>
-    1
-   </gravity>
-   <velocity_decay/>
-   <self_collide>
-    0
-   </self_collide>
-  </link>
-  <joint name="RShSag" type="revolute">
-   <child>
-    RShp
-   </child>
-   <parent>
-    DWYTorso
-   </parent>
-   <axis>
-    <xyz>
-     0 1 0
-    </xyz>
-    <limit>
-     <lower>
-      -3.4034
-     </lower>
-     <upper>
-      1.6581
-     </upper>
-     <effort>
-      50
-     </effort>
-     <velocity>
-      4
-     </velocity>
-    </limit>
-    <dynamics>
-     <damping>
-      3
-     </damping>
-     <friction>
-      0
-     </friction>
-     <spring_reference>
-      0
-     </spring_reference>
-     <spring_stiffness>
-      0
-     </spring_stiffness>
-    </dynamics>
-    <use_parent_model_frame>
-     1
-    </use_parent_model_frame>
-   </axis>
-   <physics>
-    <provide_feedback>
-     1
-    </provide_feedback>
-    <ode>
-     <provide_feedback>
-      1
-     </provide_feedback>
-     <implicit_spring_damper>
-      1
-     </implicit_spring_damper>
-     <cfm_damping>
-      1
-     </cfm_damping>
-     <limit>
-      <cfm>
-       0
-      </cfm>
-      <erp>
-       0.2
-      </erp>
-     </limit>
-    </ode>
-   </physics>
-  </joint>
-  <link name="RShr">
-   <pose>
-    0.005305 -0.1558 0.324329 0 -0 0
-   </pose>
-   <inertial>
-    <pose>
-     -0.00389367 2.20222e-06 -0.0048616 0 -0 0
-    </pose>
-    <mass>
-     0.776838
-    </mass>
-    <inertia>
-     <ixx>
-      0.000458129
-     </ixx>
-     <ixy>
-      -2.41111e-07
-     </ixy>
-     <ixz>
-      9.25212e-06
-     </ixz>
-     <iyy>
-      0.000430892
-     </iyy>
-     <iyz>
-      -4.7217e-07
-     </iyz>
-     <izz>
-      0.000341749
-     </izz>
-    </inertia>
-   </inertial>
-   <collision name="RShr_collision">
-    <pose>
-     -0.005305 0.1558 -0.844329 0 -0 -3.14159
-    </pose>
-    <geometry>
-     <mesh>
-      <scale>
-       0.03937 0.03937 0.03937
-      </scale>
-      <uri>
-       model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_23_prt.stl
-      </uri>
-     </mesh>
-    </geometry>
-    <surface>
-     <contact>
-      <ode/>
-     </contact>
-     <friction>
-      <ode/>
-     </friction>
-    </surface>
-   </collision>
-   <visual name="RShr_visual">
-    <pose>
-     -0.005305 0.1558 -0.844329 0 -0 -3.14159
-    </pose>
-    <geometry>
-     <mesh>
-      <scale>
-       0.03937 0.03937 0.03937
-      </scale>
-      <uri>
-       model://coman_urdf/meshes/collada/rarm1.stl
-      </uri>
-     </mesh>
-    </geometry>
-    <material>
-     <script>
-      <name>
-       Gazebo/DarkGrey
-      </name>
-      <uri>
-       __default__
-      </uri>
-     </script>
-    </material>
-   </visual>
-   <gravity>
-    1
-   </gravity>
-   <velocity_decay/>
-   <self_collide>
-    0
-   </self_collide>
-  </link>
-  <joint name="RShLat" type="revolute">
-   <child>
-    RShr
-   </child>
-   <parent>
-    RShp
-   </parent>
-   <axis>
-    <xyz>
-     1 0 0
-    </xyz>
-    <limit>
-     <lower>
-      -2.094
-     </lower>
-     <upper>
-      0.31415
-     </upper>
-     <effort>
-      50
-     </effort>
-     <velocity>
-      4
-     </velocity>
-    </limit>
-    <dynamics>
-     <damping>
-      3
-     </damping>
-     <friction>
-      0
-     </friction>
-     <spring_reference>
-      0
-     </spring_reference>
-     <spring_stiffness>
-      0
-     </spring_stiffness>
-    </dynamics>
-    <use_parent_model_frame>
-     1
-    </use_parent_model_frame>
-   </axis>
-   <physics>
-    <provide_feedback>
-     1
-    </provide_feedback>
-    <ode>
-     <provide_feedback>
-      1
-     </provide_feedback>
-     <implicit_spring_damper>
-      1
-     </implicit_spring_damper>
-     <cfm_damping>
-      1
-     </cfm_damping>
-     <limit>
-      <cfm>
-       0
-      </cfm>
-      <erp>
-       0.2
-      </erp>
-     </limit>
-    </ode>
-   </physics>
-  </joint>
-  <link name="RShy">
-   <pose>
-    0.005305 -0.1558 0.279521 0 -0 0
-   </pose>
-   <inertial>
-    <pose>
-     0.00227142 -0.00710915 -0.0574552 0 -0 0
-    </pose>
-    <mass>
-     1.04623
-    </mass>
-    <inertia>
-     <ixx>
-      0.00309346
-     </ixx>
-     <ixy>
-      6.67028e-05
-     </ixy>
-     <ixz>
-      0.000302223
-     </ixz>
-     <iyy>
-      0.00291816
-     </iyy>
-     <iyz>
-      -0.000526637
-     </iyz>
-     <izz>
-      0.000808304
-     </izz>
-    </inertia>
-   </inertial>
-   <collision name="RShy_collision">
-    <pose>
-     -0.005305 0.1558 -0.799521 0 -0 -3.14159
-    </pose>
-    <geometry>
-     <mesh>
-      <scale>
-       0.03937 0.03937 0.03937
-      </scale>
-      <uri>
-       model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_22_prt.stl
-      </uri>
-     </mesh>
-    </geometry>
-    <surface>
-     <contact>
-      <ode/>
-     </contact>
-     <friction>
-      <ode/>
-     </friction>
-    </surface>
-   </collision>
-   <visual name="RShy_visual">
-    <pose>
-     -0.005305 0.1558 -0.799521 0 -0 -3.14159
-    </pose>
-    <geometry>
-     <mesh>
-      <scale>
-       0.03937 0.03937 0.03937
-      </scale>
-      <uri>
-       model://coman_urdf/meshes/collada/rarm2.stl
-      </uri>
-     </mesh>
-    </geometry>
-    <material>
-     <script>
-      <name>
-       Gazebo/DarkGrey
-      </name>
-      <uri>
-       __default__
-      </uri>
-     </script>
-    </material>
-   </visual>
-   <gravity>
-    1
-   </gravity>
-   <velocity_decay/>
-   <self_collide>
-    0
-   </self_collide>
-  </link>
-  <joint name="RShYaw" type="revolute">
-   <child>
-    RShy
-   </child>
-   <parent>
-    RShr
-   </parent>
-   <axis>
-    <xyz>
-     0 0 1
-    </xyz>
-    <limit>
-     <lower>
-      -1.5708
-     </lower>
-     <upper>
-      1.5708
-     </upper>
-     <effort>
-      50
-     </effort>
-     <velocity>
-      4
-     </velocity>
-    </limit>
-    <dynamics>
-     <damping>
-      3
-     </damping>
-     <friction>
-      0
-     </friction>
-     <spring_reference>
-      0
-     </spring_reference>
-     <spring_stiffness>
-      0
-     </spring_stiffness>
-    </dynamics>
-    <use_parent_model_frame>
-     1
-    </use_parent_model_frame>
-   </axis>
-   <physics>
-    <provide_feedback>
-     1
-    </provide_feedback>
-    <ode>
-     <provide_feedback>
-      1
-     </provide_feedback>
-     <implicit_spring_damper>
-      1
-     </implicit_spring_damper>
-     <cfm_damping>
-      1
-     </cfm_damping>
-     <limit>
-      <cfm>
-       0
-      </cfm>
-      <erp>
-       0.2
-      </erp>
-     </limit>
-    </ode>
-   </physics>
-  </joint>
-  <link name="RElb">
-   <pose>
-    0.020305 -0.1558 0.144329 0 -0 0
-   </pose>
-   <inertial>
-    <pose>
-     -0.00486569 -0.000660325 -0.0402808 0 -0 0
-    </pose>
-    <mass>
-     0.896069
-    </mass>
-    <inertia>
-     <ixx>
-      0.00425727
-     </ixx>
-     <ixy>
-      2.22737e-06
-     </ixy>
-     <ixz>
-      -0.000367138
-     </ixz>
-     <iyy>
-      0.00434716
-     </iyy>
-     <iyz>
-      2.12396e-05
-     </iyz>
-     <izz>
-      0.00029761
-     </izz>
-    </inertia>
-   </inertial>
-   <collision name="RElb_collision">
-    <pose>
-     0 0 0 -1.57079 1.57079 -2.65361e-06
-    </pose>
-    <geometry>
-     <mesh>
-      <scale>
-       1 1 1
-      </scale>
-      <uri>
-       model://coman_urdf/meshes/collada/simple/forearms/elbow.stl
-      </uri>
-     </mesh>
-    </geometry>
-    <surface>
-     <contact>
-      <ode/>
-     </contact>
-     <friction>
-      <ode/>
-     </friction>
-    </surface>
-   </collision>
-   <collision name="RElb_collision_RElb_1">
-    <pose>
-     -0.0205 -0.1558 -0.6675 0 -0 -3.14159
-    </pose>
-    <geometry>
-     <mesh>
-      <scale>
-       0.03937 0.03937 0.03937
-      </scale>
-      <uri>
-       model://coman_urdf/meshes/collada/simple/forearm_old.dae
-      </uri>
-     </mesh>
-    </geometry>
-    <surface>
-     <contact>
-      <ode/>
-     </contact>
-     <friction>
-      <ode/>
-     </friction>
-    </surface>
-   </collision>
-   <visual name="RElb_visual">
-    <pose>
-     0 0 0 -1.57079 1.57079 -2.65361e-06
-    </pose>
-    <geometry>
-     <mesh>
-      <scale>
-       1 1 1
-      </scale>
-      <uri>
-       model://coman_urdf/meshes/collada/forearms/elbow.stl
-      </uri>
-     </mesh>
-    </geometry>
-    <material>
-     <script>
-      <name>
-       Gazebo/DarkGrey
-      </name>
-      <uri>
-       __default__
-      </uri>
-     </script>
-    </material>
-   </visual>
-   <visual name="RElb_visual_RElb_1">
-    <pose>
-     -0.0205 -0.1558 -0.6675 0 -0 -3.14159
-    </pose>
-    <geometry>
-     <mesh>
-      <scale>
-       0.03937 0.03937 0.03937
-      </scale>
-      <uri>
-       model://coman_urdf/meshes/collada/forearm_old.stl
-      </uri>
-     </mesh>
-    </geometry>
-    <material>
-     <script>
-      <name>
-       Gazebo/DarkGrey
-      </name>
-      <uri>
-       __default__
-      </uri>
-     </script>
-    </material>
-   </visual>
-   <velocity_decay/>
-   <gravity>
-    1
-   </gravity>
-   <velocity_decay/>
-   <self_collide>
-    0
-   </self_collide>
-  </link>
-  <joint name="RElbj" type="revolute">
-   <child>
-    RElb
-   </child>
-   <parent>
-    RShy
-   </parent>
-   <axis>
-    <xyz>
-     0 1 0
-    </xyz>
-    <limit>
-     <lower>
-      -2.3562
-     </lower>
-     <upper>
-      0
-     </upper>
-     <effort>
-      50
-     </effort>
-     <velocity>
-      4
-     </velocity>
-    </limit>
-    <dynamics>
-     <damping>
-      3
-     </damping>
-     <friction>
-      0
-     </friction>
-     <spring_reference>
-      0
-     </spring_reference>
-     <spring_stiffness>
-      0
-     </spring_stiffness>
-    </dynamics>
-    <use_parent_model_frame>
-     1
-    </use_parent_model_frame>
-   </axis>
-   <physics>
-    <provide_feedback>
-     1
-    </provide_feedback>
-    <ode>
-     <provide_feedback>
-      1
-     </provide_feedback>
-     <implicit_spring_damper>
-      1
-     </implicit_spring_damper>
-     <cfm_damping>
-      1
-     </cfm_damping>
-     <limit>
-      <cfm>
-       0
-      </cfm>
-      <erp>
-       0.2
-      </erp>
-     </limit>
-    </ode>
-   </physics>
-  </joint>
-  <static>
-   0
-  </static>
-  <plugin filename="libgazebo_yarp_controlboard.so" name="coman_yarp_gazebo_plugin_torso">
-   <yarpConfigurationFile>
-    model://coman_urdf/conf/coman/coman_gazebo_torso.ini
-   </yarpConfigurationFile>
-   <initialConfiguration>
-    0.0 0.0 0.0
-   </initialConfiguration>
-  </plugin>
-  <plugin filename="libgazebo_yarp_jointsensors.so" name="coman_yarp_gazebo_plugin_torso_speed">
-   <yarpConfigurationFile>
-    model://coman_urdf/conf/coman/coman_gazebo_torso_speed.ini
-   </yarpConfigurationFile>
-  </plugin>
-  <plugin filename="libgazebo_yarp_jointsensors.so" name="coman_yarp_gazebo_plugin_torso_torque">
-   <yarpConfigurationFile>
-    model://coman_urdf/conf/coman/coman_gazebo_torso_torque.ini
-   </yarpConfigurationFile>
-  </plugin>
-  <plugin filename="libgazebo_yarp_controlboard.so" name="coman_yarp_gazebo_plugin_left_leg">
-   <yarpConfigurationFile>
-    model://coman_urdf/conf/coman/coman_gazebo_left_leg.ini
-   </yarpConfigurationFile>
-   <initialConfiguration>
-    0.0 0.0 0.0 0.0 0.0 0.0
-   </initialConfiguration>
-  </plugin>
-  <plugin filename="libgazebo_yarp_jointsensors.so" name="coman_yarp_gazebo_plugin_left_leg_speed">
-   <yarpConfigurationFile>
-    model://coman_urdf/conf/coman/coman_gazebo_left_leg_speed.ini
-   </yarpConfigurationFile>
-  </plugin>
-  <plugin filename="libgazebo_yarp_jointsensors.so" name="coman_yarp_gazebo_plugin_left_leg_torque">
-   <yarpConfigurationFile>
-    model://coman_urdf/conf/coman/coman_gazebo_left_leg_torque.ini
-   </yarpConfigurationFile>
-  </plugin>
-  <plugin filename="libgazebo_yarp_controlboard.so" name="coman_yarp_gazebo_plugin_right_leg">
-   <yarpConfigurationFile>
-    model://coman_urdf/conf/coman/coman_gazebo_right_leg.ini
-   </yarpConfigurationFile>
-   <initialConfiguration>
-    0.0 0.0 0.0 0.0 0.0 0.0
-   </initialConfiguration>
-  </plugin>
-  <plugin filename="libgazebo_yarp_jointsensors.so" name="coman_yarp_gazebo_plugin_right_leg_speed">
-   <yarpConfigurationFile>
-    model://coman_urdf/conf/coman/coman_gazebo_right_leg_speed.ini
-   </yarpConfigurationFile>
-  </plugin>
-  <plugin filename="libgazebo_yarp_jointsensors.so" name="coman_yarp_gazebo_plugin_right_leg_torque">
-   <yarpConfigurationFile>
-    model://coman_urdf/conf/coman/coman_gazebo_right_leg_torque.ini
-   </yarpConfigurationFile>
-  </plugin>
-  <plugin filename="libgazebo_yarp_controlboard.so" name="coman_yarp_gazebo_plugin_left_arm">
-   <yarpConfigurationFile>
-    model://coman_urdf/conf/coman_no_forearms/coman_gazebo_left_arm.ini
-   </yarpConfigurationFile>
-   <initialConfiguration>
-    0.0 0.17 0.0 0.0
-   </initialConfiguration>
-  </plugin>
-  <plugin filename="libgazebo_yarp_jointsensors.so" name="coman_yarp_gazebo_plugin_left_arm_speed">
-   <yarpConfigurationFile>
-    model://coman_urdf/conf/coman_no_forearms/coman_gazebo_left_arm_speed.ini
-   </yarpConfigurationFile>
-  </plugin>
-  <plugin filename="libgazebo_yarp_jointsensors.so" name="coman_yarp_gazebo_plugin_left_arm_torque">
-   <yarpConfigurationFile>
-    model://coman_urdf/conf/coman_no_forearms/coman_gazebo_left_arm_torque.ini
-   </yarpConfigurationFile>
-  </plugin>
-  <plugin filename="libgazebo_yarp_controlboard.so" name="coman_yarp_gazebo_plugin_right_arm">
-   <yarpConfigurationFile>
-    model://coman_urdf/conf/coman_no_forearms/coman_gazebo_right_arm.ini
-   </yarpConfigurationFile>
-   <initialConfiguration>
-    0.0 -0.17 0.0 0.0
-   </initialConfiguration>
-  </plugin>
-  <plugin filename="libgazebo_yarp_jointsensors.so" name="coman_yarp_gazebo_plugin_right_arm_speed">
-   <yarpConfigurationFile>
-    model://coman_urdf/conf/coman_no_forearms/coman_gazebo_right_arm_speed.ini
-   </yarpConfigurationFile>
-  </plugin>
-  <plugin filename="libgazebo_yarp_jointsensors.so" name="coman_yarp_gazebo_plugin_right_arm_torque">
-   <yarpConfigurationFile>
-    model://coman_urdf/conf/coman_no_forearms/coman_gazebo_right_arm_torque.ini
-   </yarpConfigurationFile>
-  </plugin>
-  <plugin filename="libgazebo_yarp_externalwrench.so" name="coman_yarp_gazebo_plugin_external_wrench"/>
-  <pose>
-   0 0 0.521 0 -0 0
-  </pose>
- </model>
+    <plugin name='coman_yarp_gazebo_plugin_left_leg' filename='libgazebo_yarp_controlboard.so'>
+      <yarpConfigurationFile>model://coman_urdf/conf/coman/coman_gazebo_left_leg.ini</yarpConfigurationFile>
+      <initialConfiguration>0.0 0.0 0.0 0.0 0.0 0.0</initialConfiguration>
+    </plugin>
+    <plugin name='coman_yarp_gazebo_plugin_left_leg_speed' filename='libgazebo_yarp_jointsensors.so'>
+      <yarpConfigurationFile>model://coman_urdf/conf/coman/coman_gazebo_left_leg_speed.ini</yarpConfigurationFile>
+    </plugin>
+    <plugin name='coman_yarp_gazebo_plugin_left_leg_torque' filename='libgazebo_yarp_jointsensors.so'>
+      <yarpConfigurationFile>model://coman_urdf/conf/coman/coman_gazebo_left_leg_torque.ini</yarpConfigurationFile>
+    </plugin>
+    <plugin name='coman_yarp_gazebo_plugin_right_leg' filename='libgazebo_yarp_controlboard.so'>
+      <yarpConfigurationFile>model://coman_urdf/conf/coman/coman_gazebo_right_leg.ini</yarpConfigurationFile>
+      <initialConfiguration>0.0 0.0 0.0 0.0 0.0 0.0</initialConfiguration>
+    </plugin>
+    <plugin name='coman_yarp_gazebo_plugin_right_leg_speed' filename='libgazebo_yarp_jointsensors.so'>
+      <yarpConfigurationFile>model://coman_urdf/conf/coman/coman_gazebo_right_leg_speed.ini</yarpConfigurationFile>
+    </plugin>
+    <plugin name='coman_yarp_gazebo_plugin_right_leg_torque' filename='libgazebo_yarp_jointsensors.so'>
+      <yarpConfigurationFile>model://coman_urdf/conf/coman/coman_gazebo_right_leg_torque.ini</yarpConfigurationFile>
+    </plugin>
+    <plugin name='coman_yarp_gazebo_plugin_left_arm' filename='libgazebo_yarp_controlboard.so'>
+      <yarpConfigurationFile>model://coman_urdf/conf/coman_no_forearms/coman_gazebo_left_arm.ini</yarpConfigurationFile>
+      <initialConfiguration>0.0 0.17 0.0 0.0</initialConfiguration>
+    </plugin>
+    <plugin name='coman_yarp_gazebo_plugin_left_arm_speed' filename='libgazebo_yarp_jointsensors.so'>
+      <yarpConfigurationFile>model://coman_urdf/conf/coman_no_forearms/coman_gazebo_left_arm_speed.ini</yarpConfigurationFile>
+    </plugin>
+    <plugin name='coman_yarp_gazebo_plugin_left_arm_torque' filename='libgazebo_yarp_jointsensors.so'>
+      <yarpConfigurationFile>model://coman_urdf/conf/coman_no_forearms/coman_gazebo_left_arm_torque.ini</yarpConfigurationFile>
+    </plugin>
+    <plugin name='coman_yarp_gazebo_plugin_right_arm' filename='libgazebo_yarp_controlboard.so'>
+      <yarpConfigurationFile>model://coman_urdf/conf/coman_no_forearms/coman_gazebo_right_arm.ini</yarpConfigurationFile>
+      <initialConfiguration>0.0 -0.17 0.0 0.0</initialConfiguration>
+    </plugin>
+    <plugin name='coman_yarp_gazebo_plugin_right_arm_speed' filename='libgazebo_yarp_jointsensors.so'>
+      <yarpConfigurationFile>model://coman_urdf/conf/coman_no_forearms/coman_gazebo_right_arm_speed.ini</yarpConfigurationFile>
+    </plugin>
+    <plugin name='coman_yarp_gazebo_plugin_right_arm_torque' filename='libgazebo_yarp_jointsensors.so'>
+      <yarpConfigurationFile>model://coman_urdf/conf/coman_no_forearms/coman_gazebo_right_arm_torque.ini</yarpConfigurationFile>
+    </plugin>
+    <plugin name='coman_yarp_gazebo_plugin_external_wrench' filename='libgazebo_yarp_externalwrench.so'/>
+    <pose>0 0 0.521 0 -0 0</pose>
+  </model>
 </sdf>

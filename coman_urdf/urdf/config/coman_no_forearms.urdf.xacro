@@ -10,19 +10,11 @@
 ##  FEET SELECTION
 ##
 ##
-## options:
-## 1) round feet
-## 2) simple feet
 ##
 ####################################################
-# TODO checks (must be mutually exclusive)
 -->
 
-<!-- 1) round feet -->
-<xacro:property name="GAZEBO_COMAN_USES_ROUND_FEET_13" value="true" />
-
-<!-- 2) simple feet -->
-<xacro:property name="GAZEBO_COMAN_USES_SIMPLE_FEET_DRC_sw1_14" value="false" />
+<xacro:property name="GAZEBO_COMAN_USES_ROUND_FEET" value="true" />
 
 
 <!--
@@ -31,93 +23,11 @@
 ##  FOREARMS & HANDS SELECTION
 ##
 ##
-## options:
-## 1) no forearms
-## 2) 7dof forearms
-## 3) 7dof forearms + soft hands
-##
 ####################################################
-# TODO: checks (must be mutually exclusive).. eventually, a menu!... documentation!
-#       at the moment just the only combinations that work are:
 --> 
-<!-- 1) NO_FOREARMS -->
 
-<xacro:property name="GAZEBO_COMAN_USES_NO_FOREARMS" value="true" />
-<xacro:property name="GAZEBO_COMAN_USES_7DOF_FOREARMS_DRC_14" value="false" />
-<xacro:property name="GAZEBO_COMAN_USES_SOFTHANDS_DRC_sw1_14" value="false" />
-
-
-<!-- 2) 7DOFS_FOREARMS -->
-<!--
-<xacro:property name="GAZEBO_COMAN_USES_NO_FOREARMS" value="false" />
-<xacro:property name="GAZEBO_COMAN_USES_7DOF_FOREARMS_DRC_14" value="true" />
-<xacro:property name="GAZEBO_COMAN_USES_SOFTHANDS_DRC_sw1_14" value="false" />
--->
-
-<!-- 3) 7DOFS_FOREARMS + SOFT_HANDS -->
-<!--
-<xacro:property name="GAZEBO_COMAN_USES_NO_FOREARMS" value="false" />
-<xacro:property name="GAZEBO_COMAN_USES_7DOF_FOREARMS_DRC_14" value="true" />
-<xacro:property name="GAZEBO_COMAN_USES_SOFTHANDS_DRC_sw1_14" value="true" />
--->
-
-<!--
-####################################################
-##
-##  MIDDLEWARE SELECTION
-##
-##
-## options:
-#  notice how, regardless of the middleware selected
-#  a bare version of the robot is created (.urdf)
-#  1) yarp
-#	The robot is created using yarp plugins for
-#	the IMU and F/T sensors. The controlboard
-#	plugins used to control joints and get
-#	encoder and torque information are to be
-#	inserted using the .world file, where the
-#	initial configuration for the joints can
-#	be specified (for example, look at the 
-#	worlds folder)
-#  2) ros
-#	The sdf is created including ros plugins
-#
-##
-####################################################
-#
-# 1) yarp
-#
--->
-<xacro:property name="GAZEBO_COMAN_USES_ROS" value="false" />
-
-<!--
-#
-# 2) ros
-#
--->
-<xacro:property name="GAZEBO_COMAN_USES_YARP" value="true" />
-
-<!--
-####################################################
-##
-##  F/T SELECTION
-##
-##
-## options:
-## 1) accurate (ft sensors located at exact spot)
-#	FT sensors are defined as children of 
-#	underactuated joints, added specifically 
-#	to create a frame for accurate reading, 
-#	and to take into account the bias given
-#	by the sensor's inertia. 
-## 2) non-accurate (ft sensors at the nearest joint)
-##
-####################################################
-#
-# 1/2 (true/false) 
-#
--->
-<xacro:property name="GAZEBO_COMAN_USES_ACCURATE_FT" value="false" />
+<xacro:property name="GAZEBO_COMAN_USES_FOREARMS" value="false" />
+<xacro:property name="GAZEBO_COMAN_USES_SOFTHANDS" value="false" />
 
 <!--
 ####################################################

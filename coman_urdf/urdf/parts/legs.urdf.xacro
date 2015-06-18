@@ -114,31 +114,50 @@
     </collision>
   </link>
 
-<xacro:unless value="${GAZEBO_COMAN_USES_ACCURATE_FT}">
-    <xacro:if value="${GAZEBO_COMAN_USES_ROUND_FEET_13}">
-      <xacro:include filename="$(find coman_urdf)/urdf/parts/subparts/round_feet_13/round_foot_R_13.urdf.xacro" />
-    </xacro:if>
-    <xacro:if value="${GAZEBO_COMAN_USES_SIMPLE_FEET_DRC_sw1_14}">
-      <xacro:include filename="$(find coman_urdf)/urdf/parts/subparts/simple_feet_DRC_sw1_14/simple_foot_R_DRC_sw1_14.urdf.xacro" />
-    </xacro:if>
-  </xacro:unless>
-
-  <xacro:if value="${GAZEBO_COMAN_USES_ACCURATE_FT}">
-    <link name ="RFootFTSensor">
+  <xacro:if value="${GAZEBO_COMAN_USES_ROUND_FEET}">
+    <link name ="RFoot">
       <inertial>
-        <origin xyz="0.0 -0.0 -0.0325" rpy="0 0 0"/>
-        <mass value="0.280"/>
-        <inertia ixx="0.0012944808"  ixy="0.0"  ixz="2.0080105E-4" iyy="0.0015851846" iyz="2.7599327E-4" izz="0.0013326766" />
+        <origin xyz="0.00969210464 -0.0090460227 -0.043062308" rpy="0 0 0"/>
+        <mass value="0.66646684"/>
+        <inertia ixx="0.0012944808"  ixy="-9.2387693E-5"  ixz="2.0080105E-4" iyy="0.0015851846" iyz="2.7599327E-4" izz="0.0013326766" />
       </inertial>
+      <visual>
+        <origin xyz="0.0 0.0726 -0.0932" rpy="0 0 -3.14159265359"/>
+        <material name="dark_grey"/>
+        <geometry name="RFoot_visual">
+          <mesh filename="package://coman_urdf/meshes/RoundFoot.STL" scale="0.03937 0.03937 0.03937" />
+        </geometry>
+      </visual>
+      <collision>
+        <origin xyz="0.0 0.0726 -0.0932" rpy="0 0 -3.14159265359"/>
+        <geometry name="RFoot_collision">
+          <mesh filename="package://coman_urdf/meshes/simple/RoundFoot.STL" scale="0.03937 0.03937 0.03937" />
+        </geometry>             
+      </collision>
     </link>
-
-    <xacro:if value="${GAZEBO_COMAN_USES_ROUND_FEET_13}">
-      <xacro:include filename="$(find coman_urdf)/urdf/parts/subparts/round_feet_13/accurate_FT_round_foot_R_13.urdf.xacro" />
-    </xacro:if>
-    <xacro:if value="${GAZEBO_COMAN_USES_SIMPLE_FEET_DRC_sw1_14}">
-      <xacro:include filename="$(find coman_urdf)/urdf/parts/subparts/simple_feet_DRC_sw1_14/accurate_FT_simple_foot_R_DRC_sw1_14.urdf.xacro" />
-    </xacro:if>
   </xacro:if>
+  <xacro:unless value="${GAZEBO_COMAN_USES_ROUND_FEET}">
+    <link name ="RFoot">
+      <inertial>
+        <origin xyz="0.00969210464 -0.0090460227 -0.043062308" rpy="0 0 0"/>
+        <mass value="0.66646684"/>
+        <inertia ixx="0.0012944808"  ixy="-9.2387693E-5"  ixz="2.0080105E-4" iyy="0.0015851846" iyz="2.7599327E-4" izz="0.0013326766" />
+      </inertial>
+    <visual>
+     <origin xyz="0.03 0 -0.07" rpy="0 0 0" />
+     <geometry>
+       <box size="0.2 0.1 0.04" />
+     </geometry>
+     <material name="dark_gray"/>
+   </visual>
+   <collision>
+     <origin xyz="0.03 0 -0.07" rpy="0 0 0"/>
+     <geometry>
+       <box size="0.2 0.1 0.04" />
+     </geometry>
+   </collision>
+  </link>
+  </xacro:unless>
 
 <!-- ********************LEFT LEG******************** -->
   <link name ="LHipMot">
@@ -246,34 +265,51 @@
     </collision>
   </link>
 
-  <xacro:unless value="${GAZEBO_COMAN_USES_ACCURATE_FT}">  
-    <xacro:if value="${GAZEBO_COMAN_USES_ROUND_FEET_13}">
-      <xacro:include filename="$(find coman_urdf)/urdf/parts/subparts/round_feet_13/round_foot_L_13.urdf.xacro" />
-    </xacro:if>
-    <xacro:if value="${GAZEBO_COMAN_USES_SIMPLE_FEET_DRC_sw1_14}">
-      <xacro:include filename="$(find coman_urdf)/urdf/parts/subparts/simple_feet_DRC_sw1_14/simple_foot_L_DRC_sw1_14.urdf.xacro" />
-    </xacro:if>
-  </xacro:unless>
-
-  <xacro:if value="${GAZEBO_COMAN_USES_ACCURATE_FT}">
-    <link name ="LFootFTSensor">
+  <xacro:if value="${GAZEBO_COMAN_USES_ROUND_FEET}">
+    <link name ="LFoot">
       <inertial>
-        <origin xyz="0.0 -0.0 -0.0325" rpy="0 0 0"/>
-        <mass value="0.280"/>
-        <inertia ixx="0.0012944808"  ixy="-9.2387693E-5"  ixz="2.0080105E-4" iyy="0.0015851846" iyz="2.7599327E-4" izz="0.0013326766" />
+        <origin xyz="0.0096921046 0.0090460227 -0.043062308" rpy="0 0 0"/>
+        <mass value="0.66646684"/>
+        <inertia ixx="0.0012944808"  ixy="9.2387693E-5"  ixz="2.0080105E-4" iyy="0.0015851846" iyz="-2.7599327E-4" izz="0.0013326766" />
       </inertial>
+      <visual>
+        <origin xyz="0.0 -0.0726 -0.0932" rpy="0 0 -3.14159265359"/>
+        <material name="dark_grey"/>
+        <geometry name="LFoot_visual">
+          <mesh filename="package://coman_urdf/meshes/RoundFoot.STL" scale="0.03937 -0.03937 0.03937" />
+        </geometry>
+      </visual>
+      <collision>
+        <origin xyz="0.0 -0.0726 -0.0932" rpy="0 0 -3.14159265359"/>
+        <geometry name="LFoot_collision">
+          <mesh filename="package://coman_urdf/meshes/simple/RoundFoot.STL" scale="0.03937 -0.03937 0.03937" />
+        </geometry>             
+      </collision>
     </link>
-
-    <xacro:if value="${GAZEBO_COMAN_USES_ROUND_FEET_13}">
-      <xacro:include filename="$(find coman_urdf)/urdf/parts/subparts/round_feet_13/accurate_FT_round_foot_L_13.urdf.xacro" />
-    </xacro:if>
-    <xacro:if value="${GAZEBO_COMAN_USES_SIMPLE_FEET_DRC_sw1_14}">
-      <xacro:include filename="$(find coman_urdf)/urdf/parts/subparts/simple_feet_DRC_sw1_14/accurate_FT_simple_foot_L_DRC_sw1_14.urdf.xacro" />
-    </xacro:if>
   </xacro:if>
-
-
-
+  <xacro:unless value="${GAZEBO_COMAN_USES_ROUND_FEET}">
+    <link name ="LFoot">
+      <inertial>
+        <origin xyz="0.0096921046 0.0090460227 -0.043062308" rpy="0 0 0"/>
+        <mass value="0.66646684"/>
+        <inertia ixx="0.0012944808"  ixy="9.2387693E-5"  ixz="2.0080105E-4" iyy="0.0015851846" iyz="-2.7599327E-4" izz="0.0013326766" />
+      </inertial>
+      <visual>
+       <origin xyz="0.03 0 -0.07" rpy="0 0 0" />
+       <geometry>
+         <box size="0.2 0.1 0.04" />
+       </geometry>
+       <material name="dark_gray"/>
+     </visual>
+     <collision>
+       <origin xyz="0.03 0 -0.07" rpy="0 0 0"/>
+       <geometry>
+         <box size="0.2 0.1 0.04" />
+       </geometry>
+     </collision>
+    </link>
+  </xacro:unless>
+  
 <!-- JOINTS -->
 
 <!-- ********************RIGHT LEG******************** -->
@@ -323,37 +359,14 @@
     <dynamics friction="0" damping="3.0"/> 
   </joint>
 
- <xacro:unless value="${GAZEBO_COMAN_USES_ACCURATE_FT}">
-    <joint name="RAnkSag" type="revolute">
+  <joint name="RAnkSag" type="revolute">
       <parent link="RFootmot"/>
       <child link="RFoot"/>
       <origin xyz="0.0 0.0 0.0" rpy="0 0 0" />
       <axis xyz="0 1 0" />
       <limit velocity="4.0" effort="50" lower="-1.2217" upper="1.2217" />
       <dynamics friction="0" damping="3.0"/>
-    </joint>
-  </xacro:unless>
-
-  <xacro:if value="${GAZEBO_COMAN_USES_ACCURATE_FT}">
-    <joint name="RAnkSag" type="revolute">
-      <parent link="RFootmot"/>
-      <child link="RFootFTSensor"/>
-      <origin xyz="0.0 0.0 0.0" rpy="0 0 0" />
-      <axis xyz="0 1 0" />
-      <limit velocity="4.0" effort="50" lower="-1.2217" upper="1.2217" />
-      <dynamics friction="0" damping="3.0"/>
-    </joint>
-
-    <joint name="RAnkSagFT" type="revolute">
-      <parent link="RFootFTSensor"/>
-      <child link="RFoot"/>
-      <origin xyz="0.0 0.0 -0.065" rpy="0 0 0" />
-      <axis xyz="0 1 0" />
-      <limit velocity="0.0" effort="0" lower="-0.0" upper="0.0" />
-      <dynamics friction="0" damping="3.0"/>
-    </joint>
-  </xacro:if>
-
+  </joint>
 
 <!-- ********************LEFT LEG******************** -->
 
@@ -402,36 +415,13 @@
     <dynamics friction="0" damping="3.0"/>
   </joint>
 
-<xacro:unless value="${GAZEBO_COMAN_USES_ACCURATE_FT}">
-    <joint name="LAnkSag" type="revolute">
+  <joint name="LAnkSag" type="revolute">
       <parent link="LFootmot"/>
       <child link="LFoot"/>
       <origin xyz="0.0 0.0 0.0" rpy="0 0 0" />
       <axis xyz="0 1 0" />
       <limit velocity="4.0" effort="50" lower="-1.2217" upper="1.2217" />
       <dynamics friction="0" damping="3.0"/>
-    </joint>
-  </xacro:unless>
-
-  <xacro:if value="${GAZEBO_COMAN_USES_ACCURATE_FT}">
-    <joint name="LAnkSag" type="revolute">
-      <parent link="LFootmot"/>
-      <child link="LFootFTSensor"/>
-      <origin xyz="0.0 0.0 0.0" rpy="0 0 0" />
-      <axis xyz="0 1 0" />
-      <limit velocity="4.0" effort="50" lower="-1.2217" upper="1.2217" />
-      <dynamics friction="0" damping="3.0"/>
-    </joint>
-
-    <joint name="LAnkSagFT" type="revolute">
-      <parent link="LFootFTSensor"/>
-      <child link="LFoot"/>
-      <origin xyz="0.0 0.0 -0.065" rpy="0 0 0" />
-      <axis xyz="0 1 0" />
-      <limit velocity="0.0" effort="0" lower="-0.0" upper="0.0" />
-      <dynamics friction="0" damping="3.0"/>
-    </joint>
-  </xacro:if>
-
+  </joint>
 
 </robot>
