@@ -1481,8 +1481,8 @@
         <pose>-0.005305 -0.0825 -0.844329 0 -0 -3.14159</pose>
         <geometry>
           <mesh>
-            <scale>0.03937 0.03937 0.03937</scale>
-            <uri>model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_14_prt.stl</uri>
+            <scale>0.03937 -0.03937 0.03937</scale>
+            <uri>model://coman_urdf/meshes/simple/Arm0.STL</uri>
           </mesh>
         </geometry>
         <surface>
@@ -1498,8 +1498,8 @@
         <pose>-0.005305 -0.0825 -0.844329 0 -0 -3.14159</pose>
         <geometry>
           <mesh>
-            <scale>0.03937 0.03937 0.03937</scale>
-            <uri>model://coman_urdf/meshes/collada/larm0.stl</uri>
+            <scale>0.03937 -0.03937 0.03937</scale>
+            <uri>model://coman_urdf/meshes/Arm0.STL</uri>
           </mesh>
         </geometry>
         <material>
@@ -1563,8 +1563,8 @@
         <pose>-0.005305 -0.1558 -0.844329 0 -0 -3.14159</pose>
         <geometry>
           <mesh>
-            <scale>0.03937 0.03937 0.03937</scale>
-            <uri>model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_13_prt.stl</uri>
+            <scale>0.03937 -0.03937 0.03937</scale>
+            <uri>model://coman_urdf/meshes/simple/Arm1.STL</uri>
           </mesh>
         </geometry>
         <surface>
@@ -1580,8 +1580,8 @@
         <pose>-0.005305 -0.1558 -0.844329 0 -0 -3.14159</pose>
         <geometry>
           <mesh>
-            <scale>0.03937 0.03937 0.03937</scale>
-            <uri>model://coman_urdf/meshes/collada/larm1.stl</uri>
+            <scale>0.03937 -0.03937 0.03937</scale>
+            <uri>model://coman_urdf/meshes/Arm1.STL</uri>
           </mesh>
         </geometry>
         <material>
@@ -1645,8 +1645,8 @@
         <pose>-0.005305 -0.1558 -0.799521 0 -0 -3.14159</pose>
         <geometry>
           <mesh>
-            <scale>0.03937 0.03937 0.03937</scale>
-            <uri>model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_12_prt.stl</uri>
+            <scale>0.03937 -0.03937 0.03937</scale>
+            <uri>model://coman_urdf/meshes/simple/Arm2.STL</uri>
           </mesh>
         </geometry>
         <surface>
@@ -1662,8 +1662,8 @@
         <pose>-0.005305 -0.1558 -0.799521 0 -0 -3.14159</pose>
         <geometry>
           <mesh>
-            <scale>0.03937 0.03937 0.03937</scale>
-            <uri>model://coman_urdf/meshes/collada/larm2.stl</uri>
+            <scale>0.03937 -0.03937 0.03937</scale>
+            <uri>model://coman_urdf/meshes/Arm2.STL</uri>
           </mesh>
         </geometry>
         <material>
@@ -1728,7 +1728,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://coman_urdf/meshes/collada/simple/forearms/elbow.stl</uri>
+            <uri>model://coman_urdf/meshes/simple/Elbow.STL</uri>
           </mesh>
         </geometry>
         <surface>
@@ -1745,7 +1745,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://coman_urdf/meshes/collada/forearms/elbow.stl</uri>
+            <uri>model://coman_urdf/meshes/Elbow.STL</uri>
           </mesh>
         </geometry>
         <material>
@@ -2102,7 +2102,7 @@
         <geometry>
           <mesh>
             <scale>0.03937 0.03937 0.03937</scale>
-            <uri>model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_24_prt.stl</uri>
+            <uri>model://coman_urdf/meshes/simple/Arm0.STL</uri>
           </mesh>
         </geometry>
         <surface>
@@ -2119,7 +2119,7 @@
         <geometry>
           <mesh>
             <scale>0.03937 0.03937 0.03937</scale>
-            <uri>model://coman_urdf/meshes/collada/rarm0.stl</uri>
+            <uri>model://coman_urdf/meshes/Arm0.STL</uri>
           </mesh>
         </geometry>
         <material>
@@ -2184,7 +2184,7 @@
         <geometry>
           <mesh>
             <scale>0.03937 0.03937 0.03937</scale>
-            <uri>model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_23_prt.stl</uri>
+            <uri>model://coman_urdf/meshes/simple/Arm1.STL</uri>
           </mesh>
         </geometry>
         <surface>
@@ -2201,7 +2201,7 @@
         <geometry>
           <mesh>
             <scale>0.03937 0.03937 0.03937</scale>
-            <uri>model://coman_urdf/meshes/collada/rarm1.stl</uri>
+            <uri>model://coman_urdf/meshes/Arm1.STL</uri>
           </mesh>
         </geometry>
         <material>
@@ -2266,7 +2266,7 @@
         <geometry>
           <mesh>
             <scale>0.03937 0.03937 0.03937</scale>
-            <uri>model://coman_urdf/meshes/collada/simple/simple_asm0001_collada_22_prt.stl</uri>
+            <uri>model://coman_urdf/meshes/simple/Arm2.STL</uri>
           </mesh>
         </geometry>
         <surface>
@@ -2283,7 +2283,7 @@
         <geometry>
           <mesh>
             <scale>0.03937 0.03937 0.03937</scale>
-            <uri>model://coman_urdf/meshes/collada/rarm2.stl</uri>
+            <uri>model://coman_urdf/meshes/Arm2.STL</uri>
           </mesh>
         </geometry>
         <material>
@@ -2348,7 +2348,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://coman_urdf/meshes/collada/simple/forearms/elbow.stl</uri>
+            <uri>model://coman_urdf/meshes/simple/Elbow.STL</uri>
           </mesh>
         </geometry>
         <surface>
@@ -2365,7 +2365,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://coman_urdf/meshes/collada/forearms/elbow.stl</uri>
+            <uri>model://coman_urdf/meshes/Elbow.STL</uri>
           </mesh>
         </geometry>
         <material>
