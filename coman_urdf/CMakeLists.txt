@@ -1,30 +1,24 @@
-cmake_minimum_required(VERSION 2.4.6)
-include($ENV{ROS_ROOT}/core/rosbuild/rosbuild.cmake)
+cmake_minimum_required(VERSION 2.8)
+PROJECT(IITComanRosPkg)
 
-# Set the build type.  Options are:
-#  Coverage       : w/ debug symbols, w/o optimization, w/ code-coverage
-#  Debug          : w/ debug symbols, w/o optimization
-#  Release        : w/o debug symbols, w/ optimization
-#  RelWithDebInfo : w/ debug symbols, w/ optimization
-#  MinSizeRel     : w/o debug symbols, w/ optimization, stripped binaries
-#set(ROS_BUILD_TYPE RelWithDebInfo)
+add_custom_target(  acm
+                    COMMAND ${CMAKE_SOURCE_DIR}/coman_urdf/script/create_acm.sh)
 
-rosbuild_init()
+add_custom_target(	remove_old_coman_urdf_gazebo ALL
+    				COMMAND ${CMAKE_COMMAND} -E remove_directory 
+        			"~/.gazebo/models/coman_urdf/")
 
-#set the default path for built executables to the "bin" directory
-set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
-#set the default path for built libraries to the "lib" directory
-set(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)
+add_custom_target(  remove_old_coman_gazebo ALL
+                    COMMAND ${CMAKE_COMMAND} -E remove_directory 
+                    "~/.gazebo/models/coman/")
 
-#uncomment if you have defined messages
-#rosbuild_genmsg()
-#uncomment if you have defined services
-#rosbuild_gensrv()
+add_custom_target(  compile_urdf_sdf ALL
+                    COMMAND ${CMAKE_SOURCE_DIR}/coman_urdf/script/create_urdf_srdf_sdf.sh coman)
 
-#common commands for building c++ executables and libraries
-#rosbuild_add_library(${PROJECT_NAME} src/example.cpp)
-#target_link_libraries(${PROJECT_NAME} another_library)
-#rosbuild_add_boost_directories()
-#rosbuild_link_boost(${PROJECT_NAME} thread)
-#rosbuild_add_executable(example examples/example.cpp)
-#target_link_libraries(example ${PROJECT_NAME})
+if(CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT)
+    add_custom_target(	copy_coman_gazebo ALL
+        				COMMAND ${CMAKE_COMMAND} -E copy_directory 
+            			"${PROJECT_SOURCE_DIR}/coman_gazebo/sdf/" 
+            			"~/.gazebo/models/coman/"
+            			DEPENDS remove_old_coman_gazebo)
+endif()
