@@ -1,0 +1,18 @@
+<launch>
+     <arg name="gui" default="true" />
+
+     <!-- send the coman robot XML to param server -->
+     <param name="robot_description" command="$(find xacro)/xacro.py '$(find coman_urdf)/urdf/coman_capsules.rviz'" />
+     <param name="robot_description_semantic" textfile="$(find coman_srdf)/srdf/coman.srdf" />   
+     <param name="use_gui" value="$(arg gui)"/>
+        
+     <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" >
+     <param name="publish_default_efforts" type="boolean" value="True" />
+    </node>
+
+    <!-- start robot state publisher -->
+    <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" output="screen" >
+        <param name="publish_frequency" type="double" value="250.0" />
+    </node> 
+
+</launch>

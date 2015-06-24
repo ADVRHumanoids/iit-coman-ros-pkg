@@ -1,6 +1,9 @@
 cmake_minimum_required(VERSION 2.8)
 PROJECT(iit-coman-ros-pkg)
 
+add_custom_target(  acm
+                    COMMAND ${CMAKE_SOURCE_DIR}/coman_urdf/script/create_acm.sh coman)
+
 add_custom_target(	remove_old_coman_urdf_gazebo ALL
     				COMMAND ${CMAKE_COMMAND} -E remove_directory 
         			"~/.gazebo/models/coman_urdf/")
