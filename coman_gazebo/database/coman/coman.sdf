@@ -1893,11 +1893,11 @@
         </surface>
       </collision>
       <collision name='LWrMot3_collision_LWrMot3_1'>
-        <pose>0.007 -0.012 -0.11 0 -0 1.5708</pose>
+        <pose>0.007 -0.01 -0.11 0 -0 0</pose>
         <geometry>
           <mesh>
-            <scale>0.001 0.001 0.001</scale>
-            <uri>model://coman_urdf/meshes/collada/simple/forearms/L_soft_hand_open.stl</uri>
+            <scale>-0.001 0.001 0.001</scale>
+            <uri>model://coman_urdf/meshes/simple/SoftHandOpen.STL</uri>
           </mesh>
         </geometry>
         <surface>
@@ -1925,11 +1925,11 @@
         </material>
       </visual>
       <visual name='LWrMot3_visual_LWrMot3_1'>
-        <pose>0.007 -0.012 -0.11 -1.5708 5.55112e-17 1.5708</pose>
+        <pose>0.007 -0.01 -0.11 -1.5708 0 0</pose>
         <geometry>
           <mesh>
-            <scale>0.1 0.1 0.1</scale>
-            <uri>model://coman_urdf/meshes/collada/forearms/Lsofthand_fix.stl</uri>
+            <scale>-0.1 0.1 0.1</scale>
+            <uri>model://coman_urdf/meshes/SoftHandOpen.STL</uri>
           </mesh>
         </geometry>
         <material>
@@ -2517,7 +2517,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://coman_urdf/meshes/collada/simple/forearms/R_soft_hand_open.stl</uri>
+            <uri>model://coman_urdf/meshes/simple/SoftHandOpen.STL</uri>
           </mesh>
         </geometry>
         <surface>
@@ -2549,7 +2549,7 @@
         <geometry>
           <mesh>
             <scale>0.1 0.1 0.1</scale>
-            <uri>model://coman_urdf/meshes/collada/forearms/Rsofthand_fix.stl</uri>
+            <uri>model://coman_urdf/meshes/SoftHandOpen.STL</uri>
           </mesh>
         </geometry>
         <material>
