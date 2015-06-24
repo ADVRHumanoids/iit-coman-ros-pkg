@@ -1703,7 +1703,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://coman_urdf/meshes/collada/simple/forearms/forearm.stl</uri>
+            <uri>model://coman_urdf/meshes/simple/Forearm0.STL</uri>
           </mesh>
         </geometry>
         <surface>
@@ -1720,7 +1720,7 @@
         <geometry>
           <mesh>
             <scale>0.1 0.1 0.1</scale>
-            <uri>model://coman_urdf/meshes/collada/forearms/forearm0.stl</uri>
+            <uri>model://coman_urdf/meshes/Forearm0.STL</uri>
           </mesh>
         </geometry>
         <material>
@@ -1798,7 +1798,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://coman_urdf/meshes/collada/simple/forearms/simple_fa_asm_3_right_sw0001.stl</uri>
+            <uri>model://coman_urdf/meshes/simple/Forearm1.STL</uri>
           </mesh>
         </geometry>
         <surface>
@@ -1815,7 +1815,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://coman_urdf/meshes/collada/forearms/forearm1.stl</uri>
+            <uri>model://coman_urdf/meshes/Forearm1.STL</uri>
           </mesh>
         </geometry>
         <material>
@@ -1880,7 +1880,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://coman_urdf/meshes/collada/simple/forearms/simple_fa_hand_interface_rig_sw0001.stl</uri>
+            <uri>model://coman_urdf/meshes/simple/Forearm2.STL</uri>
           </mesh>
         </geometry>
         <surface>
@@ -1897,7 +1897,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://coman_urdf/meshes/collada/forearms/forearm2.stl</uri>
+            <uri>model://coman_urdf/meshes/Forearm2.STL</uri>
           </mesh>
         </geometry>
         <material>
@@ -2353,7 +2353,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://coman_urdf/meshes/collada/simple/forearms/forearm.stl</uri>
+            <uri>model://coman_urdf/meshes/simple/Forearm0.STL</uri>
           </mesh>
         </geometry>
         <surface>
@@ -2370,7 +2370,7 @@
         <geometry>
           <mesh>
             <scale>0.1 0.1 0.1</scale>
-            <uri>model://coman_urdf/meshes/collada/forearms/forearm0.stl</uri>
+            <uri>model://coman_urdf/meshes/Forearm0.STL</uri>
           </mesh>
         </geometry>
         <material>
@@ -2448,7 +2448,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://coman_urdf/meshes/collada/simple/forearms/simple_fa_asm_3_right_sw0001.stl</uri>
+            <uri>model://coman_urdf/meshes/simple/Forearm1.STL</uri>
           </mesh>
         </geometry>
         <surface>
@@ -2465,7 +2465,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://coman_urdf/meshes/collada/forearms/forearm1.stl</uri>
+            <uri>model://coman_urdf/meshes/Forearm1.STL</uri>
           </mesh>
         </geometry>
         <material>
@@ -2530,7 +2530,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://coman_urdf/meshes/collada/simple/forearms/simple_fa_hand_interface_rig_sw0001.stl</uri>
+            <uri>model://coman_urdf/meshes/simple/Forearm2.STL</uri>
           </mesh>
         </geometry>
         <surface>
@@ -2547,7 +2547,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://coman_urdf/meshes/collada/forearms/forearm2.stl</uri>
+            <uri>model://coman_urdf/meshes/Forearm2.STL</uri>
           </mesh>
         </geometry>
         <material>
