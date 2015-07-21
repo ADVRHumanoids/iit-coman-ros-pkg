@@ -51,17 +51,34 @@ and to define the end effectors of the robot -->
 <link name="l_wrist"/>
 <link name="r_wrist"/>
 
-<xacro:if value="${GAZEBO_COMAN_USES_NO_FOREARMS}">
-    <xacro:include filename="$(find coman_urdf)/urdf/parts/no_forearms.urdf.xacro" />
-</xacro:if>
 
-<xacro:if value="${GAZEBO_COMAN_USES_7DOF_FOREARMS_DRC_14}">
-    <xacro:include filename="$(find coman_urdf)/urdf/parts/7DOF_forearms_DRC_14.urdf.xacro" />
+<xacro:if value="${GAZEBO_COMAN_USES_FOREARMS}">
+    <xacro:include filename="$(find coman_urdf)/urdf/parts/forearms.urdf.xacro" />
+
+    <link name="l_arm_ft"/>
+    <link name="r_arm_ft"/>
+
+    <joint name="l_arm_ft_joint" type="fixed">
+      <parent link="LForearm"/>
+      <child link="l_arm_ft"/>
+      <origin xyz="0 0 0" rpy="0 0 0" /> 
+    </joint>
+
+    <joint name="r_arm_ft_joint" type="fixed">
+      <parent link="RForearm"/>
+      <child link="r_arm_ft"/>
+      <origin xyz="0 0 0" rpy="0 0 0" /> 
+    </joint>
 </xacro:if>
+<xacro:unless value="${GAZEBO_COMAN_USES_FOREARMS}">
+    <xacro:include filename="$(find coman_urdf)/urdf/parts/no_forearms.urdf.xacro" />
+</xacro:unless>
+
+
 
 <!-- ************ HANDS ************ -->
 
-<xacro:if value="${GAZEBO_COMAN_USES_7DOF_FOREARMS_DRC_14}">
+<xacro:if value="${GAZEBO_COMAN_USES_FOREARMS}">
     <xacro:include filename="$(find coman_urdf)/urdf/parts/soft_hand.urdf.xacro" />
     <!-- Reference frames in hands -->
     <xacro:include filename="$(find coman_urdf)/urdf/parts/hand_reference_frame.urdf.xacro" />	

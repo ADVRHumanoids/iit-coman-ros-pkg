@@ -20,7 +20,7 @@
     <!-- NEAREST JOINT TO IMU -->
         <joint name="WaistSag"/>
     </group>
-    <xacro:if value="${GAZEBO_COMAN_USES_7DOF_FOREARMS_DRC_14}">
+    <xacro:if value="${GAZEBO_COMAN_USES_FOREARMS}">
         <group name="left_arm">
             <chain base_link="DWYTorso" tip_link="l_wrist"/>
         </group>
@@ -38,7 +38,7 @@
             <joint name="r_wrist_joint"/>
         </group>
     </xacro:if>
-    <xacro:unless value="${GAZEBO_COMAN_USES_7DOF_FOREARMS_DRC_14}">
+    <xacro:unless value="${GAZEBO_COMAN_USES_FOREARMS}">
         <group name="left_arm">
             <chain base_link="DWYTorso" tip_link="l_wrist"/>
         </group>

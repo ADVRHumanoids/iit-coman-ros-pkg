@@ -20,13 +20,13 @@
         <origin xyz="-0.0055 -0.1558 -0.6175" rpy="0 0 ${PI}"/>
         <material name="dark_grey"/>
         <geometry name="LForearm_visual">
-          <mesh filename="package://coman_urdf/meshes/collada/forearm_old.stl" scale="${SF} ${SF} ${SF}" />
+          <mesh filename="package://coman_urdf/meshes/ForearmOld.STL" scale="${SF} ${SF} ${SF}" />
         </geometry>
       </visual>
       <collision>
         <origin xyz="-0.0055 -0.1558 -0.6175" rpy="0 0 ${PI}"/>
         <geometry name="LForearm_collision">
-          <mesh filename="package://coman_urdf/meshes/collada/simple/forearm_old.dae" scale="${SF} ${SF} ${SF}" />
+          <mesh filename="package://coman_urdf/meshes/simple/ForearmOld.STL" scale="${SF} ${SF} ${SF}" />
         </geometry>             
       </collision>
     </link>
@@ -42,13 +42,13 @@
         <origin xyz="-0.0055 -0.1558 -0.6175" rpy="0 0 ${PI}"/>
         <material name="dark_grey"/>
         <geometry name="RForearm_visual">
-          <mesh filename="package://coman_urdf/meshes/collada/forearm_old.stl" scale="${SF} ${SF} ${SF}" />
+          <mesh filename="package://coman_urdf/meshes/ForearmOld.STL" scale="${SF} ${SF} ${SF}" />
         </geometry>
       </visual>
       <collision>
         <origin xyz="-0.0055 -0.1558 -0.6175" rpy="0 0 ${PI}"/>
         <geometry name="RForearm_collision">
-          <mesh filename="package://coman_urdf/meshes/collada/simple/forearm_old.dae" scale="${SF} ${SF} ${SF}" />
+          <mesh filename="package://coman_urdf/meshes/simple/ForearmOld.STL" scale="${SF} ${SF} ${SF}" />
         </geometry>             
       </collision>
     </link>

@@ -1,0 +1,223 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+  
+<!-- distance from last motor to FT sensor 
+		The value needs to be subtracted to the *FOrearmPlate joint z origin,
+		and in order to be compensated in the following joint and link,
+		it neeeds to be added in return to the following joint (*Wrj1) z origin
+		and to the z displacement of mass, visual and collision of *Forearm -->
+<xacro:property name="Wrj1_to_FT" value="0.0568" />
+<!-- ****************LINKS**************** -->
+<!-- ****************LEFT FOREARM**************** -->
+
+      <!-- ## WRONG NUMBERS FOR INERTIAL!!! FIX THEM!! ## -->
+      <!-- In ROBOTRAN this link is named LFARM -->
+      <link name ="LForearm">
+        <inertial>
+          <origin xyz="0 0 ${-0.085 + Wrj1_to_FT}" rpy="0 0 0"/>
+          <mass value="0.93351655"/>
+          <inertia ixx="0.001"  ixy="0.0"  ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001" />
+        </inertial>
+        <visual>
+          <origin xyz="0 0 ${0.015 + Wrj1_to_FT}" rpy="3.14159265359 0 1.570796326795"/>
+          <material name="dark_grey"/>
+          <geometry name="LForearm_visual">
+            <mesh filename="package://coman_urdf/meshes/Forearm0.STL" scale="0.1 0.1 0.1" />
+          </geometry>
+        </visual>
+        <collision>
+          <origin xyz="0 0 ${0.015 + Wrj1_to_FT}" rpy="0 3.14159265359 1.570796326795"/>
+          <geometry name="LForearm_collision">
+            <mesh filename="package://coman_urdf/meshes/simple/Forearm0.STL" scale="1.0 1.0 1.0" />
+          </geometry>             
+        </collision>
+      </link>
+
+      <!-- ## WRONG NUMBERS FOR INERTIAL!!! FIX THEM!! ## -->
+      <!-- Here I have used the inertia of a full cylinder with r = 0.02 [m] and h = 0.07 [m] -->
+      <link name="LWrMot2">
+        <inertial>
+          <origin xyz="0 0 0" rpy="0 0 0"/>
+          <mass value="0.26070556"/>
+          <inertia ixx="0.000132"  ixy="0"  ixz="0" iyy="0.000132" iyz="0" izz="5.213E-5" />
+        </inertial>
+        <visual>
+          <origin xyz="0.025 0 0" rpy="0 1.570796326795 3.14159265359"/>
+          <material name="grey"/>
+          <geometry name="LWrMot2_visual">
+            <mesh filename="package://coman_urdf/meshes/Forearm1.STL" scale="0.001 0.001 0.001" />
+          </geometry>
+        </visual>
+        <collision>
+          <origin xyz="0.025 0 0" rpy="0 1.570796326795 3.14159265359"/>
+          <geometry name="LWrMot2_collision">
+            <mesh filename="package://coman_urdf/meshes/simple/Forearm1.STL" scale="0.001 0.001 0.001" />
+          </geometry>             
+        </collision>
+      </link>
+
+      <!-- ## WRONG NUMBERS FOR INERTIAL!!! FIX THEM!! ## -->
+      <!-- Here I have used the inertia of a concave cylinder with r = 0.02 [m] -->
+      <link name="LWrMot3">
+        <inertial>
+          <origin xyz="0 0 0" rpy="0 0 0"/>
+          <mass value="0.054007518"/>
+          <inertia ixx="2.16E-5"  ixy="0"  ixz="0" iyy="2.16E-5" iyz="0" izz="2.16E-5" />
+        </inertial>
+        <visual>
+          <origin xyz="0.025 -0.012 -0.02" rpy="0 3.14159265359 1.570796326795"/>
+          <material name="grey"/>
+          <geometry name="LWrMot3_visual">
+            <mesh filename="package://coman_urdf/meshes/Forearm2.STL" scale="0.001 0.001 0.001" />
+          </geometry>
+        </visual>
+        <collision>
+          <origin xyz="0.025 -0.012 -0.02" rpy="0 3.14159265359 1.570796326795"/>
+          <geometry name="LWrMot3_collision">
+            <mesh filename="package://coman_urdf/meshes/simple/Forearm2.STL" scale="0.001 0.001 0.001" />
+          </geometry>             
+        </collision>
+      </link>
+
+<!-- ****************RIGHT FOREARM**************** --> 
+
+
+      <!-- ## WRONG NUMBERS FOR INERTIAL!!! FIX THEM!! ## -->
+      <!-- In ROBOTRAN this link is named RFArm -->
+      <link name ="RForearm">
+        <inertial>
+          <origin xyz="0 0 ${-0.085 + Wrj1_to_FT}" rpy="0 0 0"/>
+          <mass value="0.93351655"/>
+          <inertia ixx="0.001"  ixy="0.0"  ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001" />
+        </inertial>
+        <visual>
+          <origin xyz="0 0 ${0.015 + Wrj1_to_FT}" rpy="3.14159265359 0 1.570796326795"/>
+          <material name="dark_grey"/>
+          <geometry name="RForearm_visual">
+            <mesh filename="package://coman_urdf/meshes/Forearm0.STL" scale="0.1 0.1 0.1" />
+          </geometry>
+        </visual>
+        <collision>
+          <origin xyz="0 0 ${0.015 + Wrj1_to_FT}" rpy="0 3.14159265359 1.570796326795"/>
+          <geometry name="RForearm_collision">
+            <mesh filename="package://coman_urdf/meshes/simple/Forearm0.STL" scale="1.0 1.0 1.0" />
+          </geometry>             
+        </collision>
+      </link>
+
+      <!-- ## WRONG NUMBERS FOR INERTIAL!!! FIX THEM!! ## -->
+      <!-- Here I have used the inertia of a full cylinder with r = 0.02 [m] and h = 0.07 [m] -->
+      <link name="RWrMot2">
+        <inertial>
+          <origin xyz="0 0 0" rpy="0 0 0"/>
+          <mass value="0.26070556"/>
+          <inertia ixx="0.000132"  ixy="0"  ixz="0" iyy="0.000132" iyz="0" izz="5.213E-5" />
+        </inertial>
+        <visual>
+          <origin xyz="0.025 0 0" rpy="0 1.570796326795 3.14159265359"/>
+          <material name="grey"/>
+          <geometry name="RWrMot2_visual">
+            <mesh filename="package://coman_urdf/meshes/Forearm1.STL" scale="0.001 0.001 0.001" />
+          </geometry>
+        </visual>
+        <collision>
+          <origin xyz="0.025 0 0" rpy="0 1.570796326795 3.14159265359"/>
+          <geometry name="RWrMot2_collision">
+            <mesh filename="package://coman_urdf/meshes/simple/Forearm1.STL" scale="0.001 0.001 0.001" />
+          </geometry>             
+        </collision>
+      </link>
+
+      <!-- ## WRONG NUMBERS FOR INERTIAL!!! FIX THEM!! ## -->
+      <!-- Here I have used the inertia of a concave cylinder with r = 0.02 [m] -->
+      <link name="RWrMot3">
+        <inertial>
+          <origin xyz="0 0 0" rpy="0 0 0"/>
+          <mass value="0.054007518"/>
+          <inertia ixx="2.16E-5"  ixy="0"  ixz="0" iyy="2.16E-5" iyz="0" izz="2.16E-5" />
+        </inertial>
+        <visual>
+          <origin xyz="0.025 -0.012 -0.02" rpy="0 3.14159265359 1.570796326795"/>
+          <material name="grey"/>
+          <geometry name="RWrMot3_visual">
+            <mesh filename="package://coman_urdf/meshes/Forearm2.STL" scale="0.001 0.001 0.001" />
+          </geometry>
+        </visual>
+        <collision>
+          <origin xyz="0.025 -0.012 -0.02" rpy="0 3.14159265359 1.570796326795"/>
+          <geometry name="RWrMot3_collision">
+            <mesh filename="package://coman_urdf/meshes/simple/Forearm2.STL" scale="0.001 0.001 0.001" />
+          </geometry>             
+        </collision>
+      </link> 
+
+<!-- ****************JOINTS**************** -->
+<!-- ****************LEFT FOREARM**************** -->
+<joint name="LForearmPlate" type="revolute">
+    <parent link="LElb"/>
+    <child link="LForearm"/>
+    <origin xyz="-0.015 0.0 ${-0.051 - Wrj1_to_FT}" rpy="0 0 0"/>
+    <axis xyz="0 0 1" />
+    <limit velocity="4.0" effort="5" lower="-1.5708" upper="1.5708" />
+    <dynamics friction="0" damping="0.03"/>
+  </joint>
+
+  <joint name="LWrj1" type="revolute">
+    <parent link="LForearm"/>
+    <child link="LWrMot2"/>
+    <origin xyz="0 0 ${-0.14368 + Wrj1_to_FT}" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <limit velocity="4.0" effort="5" lower="-0.524" upper="0.524" />
+    <dynamics friction="0" damping="0.03"/>
+  </joint>
+
+  <joint name="LWrj2" type="revolute">
+    <parent link="LWrMot2"/>
+    <child link="LWrMot3"/>
+    <origin xyz="0 0 0.0" rpy="0 0 0"/>
+    <axis xyz="1 0 0"/>
+    <limit velocity="4.0" effort="5" lower="-0.785375" upper="1.395" />
+    <dynamics friction="0" damping="0.03"/>
+  </joint>
+
+  <joint name="l_wrist_joint" type="fixed">
+     <parent link="LWrMot3"/>
+     <child link="l_wrist"/>
+     <origin xyz="0 0 0" rpy="0 0 0" />
+   </joint>
+
+<!-- ****************RIGHT FOREARM**************** -->
+<joint name="RForearmPlate" type="revolute">
+    <parent link="RElb"/>
+    <child link="RForearm"/>
+    <origin xyz="-0.015 0.0 ${-0.051 - Wrj1_to_FT}" rpy="0 0 0"/>
+    <axis xyz="0 0 1" />
+    <limit velocity="4.0" effort="5" lower="-1.5708" upper="1.5708" />
+    <dynamics friction="0" damping="0.03"/>
+  </joint>
+
+  <joint name="RWrj1" type="revolute">
+    <parent link="RForearm"/>
+    <child link="RWrMot2"/>
+    <origin xyz="0 0 ${-0.14368 + Wrj1_to_FT}" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <limit velocity="4.0" effort="5" lower="-0.524" upper="0.524" />
+    <dynamics friction="0" damping="0.03"/>
+  </joint>
+
+  <joint name="RWrj2" type="revolute">
+    <parent link="RWrMot2"/>
+    <child link="RWrMot3"/>
+    <origin xyz="0 0 0.0" rpy="0 0 0"/>
+    <axis xyz="1 0 0"/>
+    <limit velocity="4.0" effort="5" lower="-1.395" upper="0.785375" />
+    <dynamics friction="0" damping="0.03"/>
+  </joint>
+
+  <joint name="r_wrist_joint" type="fixed">
+      <parent link="RWrMot3"/>
+      <child link="r_wrist"/>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+
+</robot>

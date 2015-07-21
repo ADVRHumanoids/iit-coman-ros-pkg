@@ -11,26 +11,6 @@
   
   -->
 
-  <xacro:if value="$(optenv GAZEBO_COMAN_USES_ROS false)">
-    <gazebo>
-        <plugin name="quadrotor_imu_sim" filename="libhector_gazebo_ros_imu.so">
-          <updateRate>100.0</updateRate>
-          <bodyName>imu_link</bodyName>
-          <topicName>COMAN/raw_imu</topicName>
-          <rpyOffsets>0 0 0</rpyOffsets> <!-- deprecated -->
-          <gaussianNoise>0</gaussianNoise>  <!-- deprecated -->
-          <accelDrift>0.5 0.5 0.5</accelDrift>
-          <accelGaussianNoise>0.35 0.35 0.3</accelGaussianNoise>
-          <rateDrift>0.1 0.1 0.1</rateDrift>
-          <rateGaussianNoise>0.05 0.05 0.015</rateGaussianNoise>
-          <headingDrift>0.1</headingDrift>
-          <headingGaussianNoise>0.05</headingGaussianNoise>
-        </plugin>
-      </gazebo>  
-  </xacro:if>
-
-
-  <xacro:if value="$(optenv GAZEBO_COMAN_USES_YARP true)">
     <gazebo reference="imu_link">
         <sensor name="imu_sensor" type="imu">
          <always_on>1</always_on>
@@ -61,6 +41,5 @@
          </plugin>
         </sensor>
        </gazebo>
-  </xacro:if>
 
 </robot>

@@ -45,7 +45,7 @@
 </plugin>
 
 <!-- ARMS -->
-<xacro:if value="${GAZEBO_COMAN_USES_7DOF_FOREARMS_DRC_14}">
+<xacro:if value="${GAZEBO_COMAN_USES_FOREARMS}">
 	<plugin name="coman_yarp_gazebo_plugin_left_arm" filename="libgazebo_yarp_controlboard.so">
 		<yarpConfigurationFile>model://coman_urdf/conf/coman/coman_gazebo_left_arm.ini</yarpConfigurationFile>
 		<initialConfiguration>0.0 0.17 0.0 0.0 0.0 0.0 0.0</initialConfiguration>
@@ -74,7 +74,7 @@
 
 
 	<!-- HANDS -->
-	<xacro:unless value="${GAZEBO_COMAN_USES_SOFTHANDS_DRC_sw1_14}">
+	<xacro:unless value="${GAZEBO_COMAN_USES_SOFTHANDS}">
 		<plugin name="coman_yarp_gazebo_plugin_left_hand" filename="libgazebo_yarp_controlboard.so">
 			<yarpConfigurationFile>model://coman_urdf/conf/coman/coman_gazebo_left_hand.ini</yarpConfigurationFile>
 			<initialConfiguration>0.0</initialConfiguration>
@@ -86,7 +86,7 @@
 	</xacro:unless>
 </xacro:if>
 
-<xacro:if value="${GAZEBO_COMAN_USES_NO_FOREARMS}">
+<xacro:unless value="${GAZEBO_COMAN_USES_FOREARMS}">
 	<plugin name="coman_yarp_gazebo_plugin_left_arm" filename="libgazebo_yarp_controlboard.so">
 		<yarpConfigurationFile>model://coman_urdf/conf/coman_no_forearms/coman_gazebo_left_arm.ini</yarpConfigurationFile>
 		<initialConfiguration>0.0 0.17 0.0 0.0</initialConfiguration>
@@ -112,7 +112,7 @@
     <plugin name="coman_yarp_gazebo_plugin_right_arm_torque" filename="libgazebo_yarp_jointsensors.so">
         <yarpConfigurationFile>model://coman_urdf/conf/coman_no_forearms/coman_gazebo_right_arm_torque.ini</yarpConfigurationFile>
     </plugin>
-</xacro:if>
+</xacro:unless>
 
 <!-- Plugin to apply external wrenches to the robot -->
 <plugin name="coman_yarp_gazebo_plugin_external_wrench" filename="libgazebo_yarp_externalwrench.so"/>

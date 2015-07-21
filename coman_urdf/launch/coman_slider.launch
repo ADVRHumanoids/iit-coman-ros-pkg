@@ -13,7 +13,7 @@
      </node>
 
     <!-- start robot state publisher -->
-    <node pkg="robot_state_publisher" type="state_publisher" name="robot_state_publisher" output="screen" >
+    <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" output="screen" >
         <param name="publish_frequency" type="double" value="250.0" />
     </node> 
 

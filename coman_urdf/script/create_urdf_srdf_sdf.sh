@@ -1,5 +1,24 @@
 #!/bin/bash
 
+RED='\033[0;31m'
+PURPLE='\033[0;35m'
+GREEN='\033[0;32m'
+ORANGE='\033[0;33m'
+YELLOW='\033[1;33m'
+NC='\033[0m'
+
+if [ "$#" -lt 1 ]; then
+       printf "${RED}No robot name argument passed!${NC}" 
+       echo 
+       echo "Try something like:"
+       echo "./create_urdf_srdf_sdf.sh coman"
+       exit
+fi
+
+robot_name="$1"
+printf "Robot Name is ${GREEN}${robot_name}${NC}"
+echo
+
 # this way the script can be called from any directory
 SCRIPT_ROOT=$(dirname $(readlink --canonicalize --no-newline $BASH_SOURCE))
 cd $SCRIPT_ROOT
@@ -11,12 +30,12 @@ type gz >/dev/null 2>&1 || { IS_GZSDF_GAZEBO4=false; }
 
 if [ -d config ]; then
 
-    echo "Regenerating database.config for coman_gazebo"
+    echo "Regenerating database.config for ${robot_name}_gazebo"
 
-cat > ../../coman_gazebo/database/database.config << EOF
+cat > ../../${robot_name}_gazebo/database/database.config << EOF
 <?xml version='1.0'?>
 <database>
-<name>Coman Gazebo Database</name>
+<name>$robot_name Gazebo Database</name>
 <license>Creative Commons Attribution 3.0 Unported</license>
 <models>
 EOF
@@ -32,17 +51,17 @@ EOF
             model_filename=$(basename $i ".urdf.xacro")
             echo "${model_filename} configures model ${model_name}, version ${model_version}"
 
-            cp $i coman_config.urdf.xacro
-            mkdir -p ../../coman_gazebo/database/$model_filename
-            echo "<uri>file://${model_filename}</uri>" >> ../../coman_gazebo/database/database.config
+            cp $i ${robot_name}_config.urdf.xacro
+            mkdir -p ../../${robot_name}_gazebo/database/$model_filename
+            echo "<uri>file://${model_filename}</uri>" >> ../../${robot_name}_gazebo/database/database.config
 
-rm -f ../../coman_gazebo/database/$model_filename/model.config                    
-cat >> ../../coman_gazebo/database/$model_filename/model.config << EOF
+rm -f ../../${robot_name}_gazebo/database/$model_filename/model.config                    
+cat >> ../../${robot_name}_gazebo/database/$model_filename/model.config << EOF
 <?xml version="1.0"?>
 <model>
   <name>$model_name</name>
   <version>$model_version</version>
-  <sdf version='1.4'>coman.sdf</sdf>
+  <sdf version='1.4'>${robot_name}.sdf</sdf>
 
   <author>
    <name>Enrico Mingo</name>
@@ -50,61 +69,73 @@ cat >> ../../coman_gazebo/database/$model_filename/model.config << EOF
   </author>
 
   <description>
-    Simulation of the COMAN Humanoid Robot from IIT.
+    Simulation of the $robot_name Humanoid Robot from IIT.
   </description>
 </model>
 EOF
                     
-            cp ../../coman_gazebo/database/$model_filename/model.config ../../coman_gazebo/database/$model_filename/manifest.xml
-            cp ../../coman_gazebo/database/$model_filename/model.config ../../coman_gazebo/database/$model_filename/${model_filename}.config
+            cp ../../${robot_name}_gazebo/database/$model_filename/model.config ../../${robot_name}_gazebo/database/$model_filename/manifest.xml
+            cp ../../${robot_name}_gazebo/database/$model_filename/model.config ../../${robot_name}_gazebo/database/$model_filename/${model_filename}.config
 
 
-            echo "Creating bare urdf of coman.urdf.xacro ..."
-            rosrun xacro xacro.py coman.urdf.xacro > ${model_filename}.urdf
-            echo "...${model_filename}.urdf correctly created!"
+            printf "${PURPLE}Creating bare urdf of ${robot_name}.urdf.xacro ...${NC}\n"
+            rosrun xacro xacro.py ${robot_name}.urdf.xacro > ${model_filename}.urdf
+            printf "${GREEN}...${model_filename}.urdf correctly created!${NC}\n"
+            echo
+            echo
 
-            echo "Creating sdf of coman_robot.urdf.xacro"
-            rosrun xacro xacro.py coman_robot.urdf.xacro > coman_robot.urdf
-	    if [ $IS_GZSDF_GAZEBO4 == true ]; then
-            	gz sdf --print coman_robot.urdf > coman.sdf
-	    else
-                gzsdf print coman_robot.urdf > coman.sdf
+            printf "${PURPLE}Creating capsule urdf of ${robot_name}.urdf.xacro ...${NC}\n"
+            robot_capsule_urdf ${model_filename}.urdf --output
+            printf "${GREEN}...${model_filename}_capsules.urdf correctly created!${NC}\n"
+            echo
+            echo
+
+            printf "${PURPLE}Creating sdf of ${robot_name}_robot.urdf.xacro${NC}\n"
+            rosrun xacro xacro.py ${robot_name}_robot.urdf.xacro > ${robot_name}_robot.urdf
+            if [ $IS_GZSDF_GAZEBO4 == true ]; then
+            	gz sdf --print ${robot_name}_robot.urdf > ${robot_name}.sdf
+	        else
+                gzsdf print ${robot_name}_robot.urdf > ${robot_name}.sdf
             fi
-            python ../script/gazebowtf.py wtf/coman.gazebo.wtf coman_config.urdf.xacro > coman2.sdf
-            mv coman2.sdf coman.sdf
-            rm coman_robot.urdf
-            echo "...sdf correctly created!"
-
-            echo "Installing robot model in coman_gazebo/${model_filename}"
-            mv coman.sdf ../../coman_gazebo/database/${model_filename}/
-
-            echo "Creating srdf from coman.srdf.xacro"
-            cd ../../coman_srdf/srdf
-            rosrun xacro xacro.py coman.srdf.xacro > ${model_filename}.srdf 
-            echo "...created ${model_filename}.srdf!"
-            echo "...copying srdf folder into urdf folder"
-	        cd ..
-            cp -r srdf ../coman_urdf/
-
             
+            rm ${robot_name}_robot.urdf
+            printf "${GREEN}...sdf correctly created!${NC}\n"
+            echo
+            echo
+
+            echo "Installing robot model in ${robot_name}_gazebo/${model_filename}"
+            mv ${robot_name}.sdf ../../${robot_name}_gazebo/database/${model_filename}/
+            echo
+            echo
+
+            printf "${PURPLE}Creating srdf from ${robot_name}.srdf.xacro${NC}\n"
+            cd ../../${robot_name}_srdf/srdf
+            rosrun xacro xacro.py ${robot_name}.srdf.xacro > ${model_filename}.srdf 
+            printf "${GREEN}...created ${model_filename}.srdf!${NC}\n"
+            echo
+            echo
+
+            printf "${PURPLE}Creating capsule srdf of ${robot_name}.srdf.xacro ...${NC}\n"
+            cp ${model_filename}.srdf ${model_filename}_capsules.srdf
+            printf "${GREEN}...${model_filename}_capsules.srdf correctly created!${NC}\n"
+            echo
+            echo
+            
+
             cd $SCRIPT_ROOT
 
-            HAS_MOVEIT_CDC=true;
-            type moveit_compute_default_collisions >/dev/null 2>&1 || { HAS_MOVEIT_CDC=false; }
+            echo
+            ./load_acm.py ../../${robot_name}_srdf/srdf/${model_filename}.srdf --output
+            ./load_acm.py ../../${robot_name}_srdf/srdf/${model_filename}_capsules.srdf --output
+            printf "${RED}skipping computation of default allowed collision detection matrix${NC}\n"
+            printf "${YELLOW}Please make sure the ACM are up-to-date by running ${ORANGE}make acm${YELLOW} in the model build folder${NC}\n"
 
-            if [ $HAS_MOVEIT_CDC == true ]; then
-                echo
-                echo "computing default allowed collision detection matrix for ${model_filename}..."
-                moveit_compute_default_collisions --urdf_path ../urdf/${model_filename}.urdf --srdf_path ../../coman_srdf/srdf/${model_filename}.srdf
-            else
-                echo "skipping computation of default allowed collision detection matrix"
-            fi
 
-            
             echo 
-            echo 
-            echo "Complete! Enjoy ${model_name} ver ${model_version} in GAZEBO!"
-            echo "If the model requires it, remember to check ../../coman_gazebo/${model_filename}/conf/"
+            echo
+            echo
+            printf "${GREEN}Complete! Enjoy ${model_name} ver ${model_version} in GAZEBO!${NC}\n"
+            echo "If the model requires it, remember to check ../../${robot_name}_gazebo/${model_filename}/conf/"
             echo
             echo
         fi
@@ -114,19 +145,25 @@ EOF
 
     cd ../urdf
     
-    echo "</models>" >> ../../coman_gazebo/database/database.config
-    echo "</database>" >> ../../coman_gazebo/database/database.config
+    echo "</models>" >> ../../${robot_name}_gazebo/database/database.config
+    echo "</database>" >> ../../${robot_name}_gazebo/database/database.config
     
     unset i
+
+    printf "${PURPLE}Creating capsule urdf (for visualization) of ${robot_name}_capsules.urdf ...${NC}\n"
+    robot_capsule_urdf_to_rviz ${robot_name}_capsules.urdf --output
+    printf "${GREEN}...${robot_name}_capsules.rviz correctly created! You can use view it by calling roslaunch ${robot_name}_urdf ${robot_name}_capsules_slider.launch${NC}\n"
+    echo
+    echo
     
-    rm coman_config.urdf.xacro
-    mkdir -p ../../coman_gazebo/database/coman_urdf/
-    cp -r ../meshes/ ../../coman_gazebo/database/coman_urdf/
-    cp -r ../../coman_gazebo/sdf/conf ../../coman_gazebo/database/coman_urdf
+    rm ${robot_name}_config.urdf.xacro
+    mkdir -p ../../${robot_name}_gazebo/database/${robot_name}_urdf/
+    cp -r ../meshes/ ../../${robot_name}_gazebo/database/${robot_name}_urdf/
+    cp -r ../../${robot_name}_gazebo/sdf/conf ../../${robot_name}_gazebo/database/${robot_name}_urdf
 else
     echo "Error: could not find config folder in the urdf path"
 fi
 
 cd $SCRIPT_ROOT
 cd ../urdf
-cp config/coman.urdf.xacro coman_config.urdf.xacro
+cp config/${robot_name}.urdf.xacro ${robot_name}_config.urdf.xacro

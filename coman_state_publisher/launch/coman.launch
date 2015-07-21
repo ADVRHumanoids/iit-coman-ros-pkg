@@ -1,9 +1,0 @@
-<launch>
-
-    <!-- start coman state publisher -->
-    <node pkg="coman_state_publisher" type="coman_state_publisher" name="coman_state_publisher" output="screen" >
-    </node>
-
-    <include file="$(find coman_urdf)/launch/coman.launch" />
-
-</launch>
