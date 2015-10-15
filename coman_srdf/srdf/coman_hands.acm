@@ -68,7 +68,7 @@
   <disable_collisions link1="LElb" link2="RShp" reason="Never"/>
   <disable_collisions link1="LElb" link2="RShr" reason="Never"/>
   <disable_collisions link1="LElb" link2="RShy" reason="Never"/>
-  <disable_collisions link1="LElb" link2="RThighUpLeg" reason="Never"/>
+  <disable_collisions link1="LElb" link2="imu_link" reason="Never"/>
   <disable_collisions link1="LFoot" link2="LFootmot" reason="Adjacent"/>
   <disable_collisions link1="LFoot" link2="LHipMot" reason="Never"/>
   <disable_collisions link1="LFoot" link2="LThighLowLeg" reason="Never"/>
@@ -84,6 +84,7 @@
   <disable_collisions link1="LFootmot" link2="RHipMot" reason="Never"/>
   <disable_collisions link1="LFootmot" link2="RShp" reason="Never"/>
   <disable_collisions link1="LFootmot" link2="RShr" reason="Never"/>
+  <disable_collisions link1="LFootmot" link2="RThighUpLeg" reason="Never"/>
   <disable_collisions link1="LFootmot" link2="Waist" reason="Never"/>
   <disable_collisions link1="LFootmot" link2="imu_link" reason="Never"/>
   <disable_collisions link1="LForearm" link2="LHipMot" reason="Default"/>
@@ -174,7 +175,6 @@
   <disable_collisions link1="LThighUpLeg" link2="RHipMot" reason="Never"/>
   <disable_collisions link1="LThighUpLeg" link2="RShp" reason="Never"/>
   <disable_collisions link1="LThighUpLeg" link2="RShr" reason="Never"/>
-  <disable_collisions link1="LThighUpLeg" link2="RShy" reason="Never"/>
   <disable_collisions link1="LThighUpLeg" link2="Waist" reason="Default"/>
   <disable_collisions link1="LThighUpLeg" link2="imu_link" reason="Never"/>
   <disable_collisions link1="LWrMot2" link2="LWrMot3" reason="Adjacent"/>
@@ -191,6 +191,7 @@
   <disable_collisions link1="RFoot" link2="RFootmot" reason="Adjacent"/>
   <disable_collisions link1="RFoot" link2="RHipMot" reason="Never"/>
   <disable_collisions link1="RFoot" link2="RShp" reason="Never"/>
+  <disable_collisions link1="RFoot" link2="RShr" reason="Never"/>
   <disable_collisions link1="RFoot" link2="RThighLowLeg" reason="Never"/>
   <disable_collisions link1="RFoot" link2="RThighUpLeg" reason="Never"/>
   <disable_collisions link1="RFoot" link2="Waist" reason="Never"/>
