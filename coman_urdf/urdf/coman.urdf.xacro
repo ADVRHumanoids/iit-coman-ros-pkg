@@ -75,6 +75,21 @@ and to define the end effectors of the robot -->
 </xacro:unless>
 
 
+    <link name="l_leg_ft"/>
+    <link name="r_leg_ft"/>
+
+    <joint name="l_leg_ft_joint" type="fixed">
+      <parent link="LFoot"/>
+      <child link="l_leg_ft"/>
+      <origin xyz="0 0 -0.065" rpy="0 0 0" /> 
+    </joint>
+
+    <joint name="r_leg_ft_joint" type="fixed">
+      <parent link="RFoot"/>
+      <child link="r_leg_ft"/>
+      <origin xyz="0 0 -0.065" rpy="0 0 0" /> 
+    </joint>
+
 
 <!-- ************ HANDS ************ -->
 
