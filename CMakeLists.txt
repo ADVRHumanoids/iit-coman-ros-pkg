@@ -22,3 +22,7 @@ if(CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT)
             			"~/.gazebo/models/coman/"
             			DEPENDS remove_old_coman_gazebo)
 endif()
+
+# install urdf and srdf folders in the correct path
+install(DIRECTORY coman_urdf/urdf/ DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robots/coman/urdf") #FILES_MATCHING PATTERN "*.urdf / .srdf"
+install(DIRECTORY coman_srdf/srdf/ DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robots/coman/srdf") #FILES_MATCHING PATTERN "*.urdf / .srdf"
