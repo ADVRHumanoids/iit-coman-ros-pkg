@@ -20,7 +20,8 @@
 <joint name="imu_joint" type="fixed">
     <parent link="Waist"/>
     <child link="imu_link"/>
-    <origin xyz="-0.072 -0.0068 0.044" rpy="0 ${PI} 0"/>
+    <!--origin xyz="-0.072 -0.0068 0.044" rpy="0 ${PI} 0"/-->
+    <origin xyz="-0.072 -0.0068 0.044" rpy="0 0 0"/>
 </joint>
 
 </robot>

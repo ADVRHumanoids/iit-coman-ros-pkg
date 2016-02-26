@@ -18,7 +18,7 @@
     </group>
     <group name="imu_sensors">
     <!-- NEAREST JOINT TO IMU -->
-        <joint name="WaistSag"/>
+        <link name="imu_link"/>
     </group>
     <xacro:if value="${GAZEBO_COMAN_USES_FOREARMS}">
         <group name="left_arm">
