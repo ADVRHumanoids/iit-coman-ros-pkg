@@ -66,4 +66,6 @@
         <group name="right_leg"/>
         <group name="torso"/>
     </group>
+
+    <xacro:include filename="$(find coman_urdf)/urdf/gazebo/rtt_gazebo.gazebo.xacro" />   
 </robot>

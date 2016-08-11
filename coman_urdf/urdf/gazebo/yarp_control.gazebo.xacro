@@ -75,6 +75,8 @@
 <!-- Plugin to apply external wrenches to the robot -->
 <plugin name="coman_yarp_gazebo_plugin_external_wrench" filename="libgazebo_yarp_externalwrench.so"/>
 
+<plugin name="coman_show_model_com" filename="libgazebo_yarp_showmodelcom.so"/>
+
 </gazebo>
 
 </robot>
