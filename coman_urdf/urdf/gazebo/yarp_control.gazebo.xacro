@@ -9,13 +9,7 @@
 	<initialConfiguration>0.0 0.0 0.0</initialConfiguration>
 </plugin>
 
-<plugin name="coman_yarp_gazebo_plugin_torso_speed" filename="libgazebo_yarp_jointsensors.so">
-    <yarpConfigurationFile>model://coman_urdf/conf/coman/coman_gazebo_torso_speed.ini</yarpConfigurationFile>
-</plugin>
 
-<plugin name="coman_yarp_gazebo_plugin_torso_torque" filename="libgazebo_yarp_jointsensors.so">
-    <yarpConfigurationFile>model://coman_urdf/conf/coman/coman_gazebo_torso_torque.ini</yarpConfigurationFile>
-</plugin>
 
 <!-- LEGS -->
 <plugin name="coman_yarp_gazebo_plugin_left_leg" filename="libgazebo_yarp_controlboard.so">
@@ -23,26 +17,14 @@
         <initialConfiguration>0.0 0.0 0.0 0.0 0.0 0.0</initialConfiguration>
 </plugin>
 
-<plugin name="coman_yarp_gazebo_plugin_left_leg_speed" filename="libgazebo_yarp_jointsensors.so">
-	<yarpConfigurationFile>model://coman_urdf/conf/coman/coman_gazebo_left_leg_speed.ini</yarpConfigurationFile>
-</plugin>
 
-<plugin name="coman_yarp_gazebo_plugin_left_leg_torque" filename="libgazebo_yarp_jointsensors.so">
-    <yarpConfigurationFile>model://coman_urdf/conf/coman/coman_gazebo_left_leg_torque.ini</yarpConfigurationFile>
-</plugin>
 
 <plugin name="coman_yarp_gazebo_plugin_right_leg" filename="libgazebo_yarp_controlboard.so">
 	<yarpConfigurationFile>model://coman_urdf/conf/coman/coman_gazebo_right_leg.ini</yarpConfigurationFile>
         <initialConfiguration>0.0 0.0 0.0 0.0 0.0 0.0</initialConfiguration>
 </plugin>
 
-<plugin name="coman_yarp_gazebo_plugin_right_leg_speed" filename="libgazebo_yarp_jointsensors.so">
-    <yarpConfigurationFile>model://coman_urdf/conf/coman/coman_gazebo_right_leg_speed.ini</yarpConfigurationFile>
-</plugin>
 
-<plugin name="coman_yarp_gazebo_plugin_right_leg_torque" filename="libgazebo_yarp_jointsensors.so">
-    <yarpConfigurationFile>model://coman_urdf/conf/coman/coman_gazebo_right_leg_torque.ini</yarpConfigurationFile>
-</plugin>
 
 <!-- ARMS -->
 <xacro:if value="${GAZEBO_COMAN_USES_FOREARMS}">
@@ -51,26 +33,14 @@
 		<initialConfiguration>0.0 0.17 0.0 0.0 0.0 0.0 0.0</initialConfiguration>
 	</plugin>
 
-    <plugin name="coman_yarp_gazebo_plugin_left_arm_speed" filename="libgazebo_yarp_jointsensors.so">
-        <yarpConfigurationFile>model://coman_urdf/conf/coman/coman_gazebo_left_arm_speed.ini</yarpConfigurationFile>
-    </plugin>
 
-    <plugin name="coman_yarp_gazebo_plugin_left_arm_torque" filename="libgazebo_yarp_jointsensors.so">
-        <yarpConfigurationFile>model://coman_urdf/conf/coman/coman_gazebo_left_arm_torque.ini</yarpConfigurationFile>
-    </plugin>
 
 	<plugin name="coman_yarp_gazebo_plugin_right_arm" filename="libgazebo_yarp_controlboard.so">
 		<yarpConfigurationFile>model://coman_urdf/conf/coman/coman_gazebo_right_arm.ini</yarpConfigurationFile>
 		<initialConfiguration>0.0 -0.17 0.0 0.0 0.0 0.0 0.0</initialConfiguration>
 	</plugin>
 
-    <plugin name="coman_yarp_gazebo_plugin_right_arm_speed" filename="libgazebo_yarp_jointsensors.so">
-        <yarpConfigurationFile>model://coman_urdf/conf/coman/coman_gazebo_right_arm_speed.ini</yarpConfigurationFile>
-    </plugin>
 
-    <plugin name="coman_yarp_gazebo_plugin_right_arm_torque" filename="libgazebo_yarp_jointsensors.so">
-        <yarpConfigurationFile>model://coman_urdf/conf/coman/coman_gazebo_right_arm_torque.ini</yarpConfigurationFile>
-    </plugin>
 
 
 	<!-- HANDS -->
@@ -92,26 +62,14 @@
 		<initialConfiguration>0.0 0.17 0.0 0.0</initialConfiguration>
 	</plugin>
 
-    <plugin name="coman_yarp_gazebo_plugin_left_arm_speed" filename="libgazebo_yarp_jointsensors.so">
-        <yarpConfigurationFile>model://coman_urdf/conf/coman_no_forearms/coman_gazebo_left_arm_speed.ini</yarpConfigurationFile>
-    </plugin>
 
-    <plugin name="coman_yarp_gazebo_plugin_left_arm_torque" filename="libgazebo_yarp_jointsensors.so">
-        <yarpConfigurationFile>model://coman_urdf/conf/coman_no_forearms/coman_gazebo_left_arm_torque.ini</yarpConfigurationFile>
-    </plugin>
 
 	<plugin name="coman_yarp_gazebo_plugin_right_arm" filename="libgazebo_yarp_controlboard.so">
 		<yarpConfigurationFile>model://coman_urdf/conf/coman_no_forearms/coman_gazebo_right_arm.ini</yarpConfigurationFile>
 		<initialConfiguration>0.0 -0.17 0.0 0.0</initialConfiguration>
 	</plugin>
 
-    <plugin name="coman_yarp_gazebo_plugin_right_arm_speed" filename="libgazebo_yarp_jointsensors.so">
-        <yarpConfigurationFile>model://coman_urdf/conf/coman_no_forearms/coman_gazebo_right_arm_speed.ini</yarpConfigurationFile>
-    </plugin>
 
-    <plugin name="coman_yarp_gazebo_plugin_right_arm_torque" filename="libgazebo_yarp_jointsensors.so">
-        <yarpConfigurationFile>model://coman_urdf/conf/coman_no_forearms/coman_gazebo_right_arm_torque.ini</yarpConfigurationFile>
-    </plugin>
 </xacro:unless>
 
 <!-- Plugin to apply external wrenches to the robot -->
