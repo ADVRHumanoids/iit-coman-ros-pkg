@@ -15,6 +15,20 @@
        <controller type="JointTorqueCtrl"/>
 </rtt-gazebo>
 
+<xacro:unless value="${GAZEBO_COMAN_USES_SOFTHANDS}">
+<rtt-gazebo reference="left_hand">
+       <controller type="JointPositionCtrl">
+              <gains reference="l_handj" P="10." D="0.01" I="0."/>
+       </controller>
+</rtt-gazebo>
+
+<rtt-gazebo reference="right_hand">
+       <controller type="JointPositionCtrl">
+              <gains reference="r_handj" P="10." D="0.01" I="0."/>
+       </controller>
+</rtt-gazebo>
+</xacro:unless>
+
 <rtt-gazebo reference="right_arm">
        <controller type="JointPositionCtrl">
               <gains reference="RShSag" P="1000." D="0.1" I="0."/>

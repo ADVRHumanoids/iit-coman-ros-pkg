@@ -91,6 +91,7 @@ EOF
             echo
 
             printf "${PURPLE}Creating sdf of ${robot_name}_robot.urdf.xacro${NC}\n"
+            rosrun xacro xacro.py ${robot_name}_robot.urdf.xacro > ${model_filename}_robot.urdf
             rosrun xacro xacro.py ${robot_name}_robot.urdf.xacro > ${robot_name}_robot.urdf
             if [ $IS_GZSDF_GAZEBO4 == true ]; then
             	gz sdf --print ${robot_name}_robot.urdf > ${robot_name}.sdf

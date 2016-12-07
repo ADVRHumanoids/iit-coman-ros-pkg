@@ -31,37 +31,10 @@
 <!--
 ####################################################
 ##
-##  MIDDLEWARE SELECTION
-##
-##
-## options:
-#  notice how, regardless of the middleware selected
-#  a bare version of the robot is created (.urdf)
-#  1) yarp
-#	The robot is created using yarp plugins for
-#	the IMU and F/T sensors. The controlboard
-#	plugins used to control joints and get
-#	encoder and torque information are to be
-#	inserted using the .world file, where the
-#	initial configuration for the joints can
-#	be specified (for example, look at the 
-#	worlds folder)
-#  2) ros
-#	The sdf is created including ros plugins
-#
-##
+##  USE YARP
 ####################################################
-#
-# 1) yarp
-#
 -->
-<xacro:property name="GAZEBO_COMAN_USES_ROS" value="false" />
 
-<!--
-#
-# 2) ros
-#
--->
 <xacro:property name="GAZEBO_COMAN_USES_YARP" value="true" />
 
 <!--

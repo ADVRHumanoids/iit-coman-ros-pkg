@@ -21,6 +21,15 @@
     <!-- NEAREST JOINT TO IMU -->
         <link name="imu_link"/>
     </group>
+    <xacro:unless value="${GAZEBO_COMAN_USES_SOFTHANDS}">
+       <group name="left_hand">
+           <chain base_link="LWrMot3" tip_link="LSoftHand"/>
+       </group>
+       <group name="right_hand">
+           <chain base_link="RWrMot3" tip_link="RSoftHand"/>
+       </group>
+    </xacro:unless>
+
     <xacro:if value="${GAZEBO_COMAN_USES_FOREARMS}">
         <group name="left_arm">
             <chain base_link="DWYTorso" tip_link="l_wrist"/>
@@ -65,6 +74,10 @@
         <group name="left_leg"/>
         <group name="right_leg"/>
         <group name="torso"/>
+<xacro:unless value="${GAZEBO_COMAN_USES_SOFTHANDS}">
+        <group name="left_hand"/>
+        <group name="right_hand"/>
+</xacro:unless>
     </group>
 
     <xacro:include filename="$(find coman_urdf)/urdf/gazebo/rtt_gazebo.gazebo.xacro" />   
