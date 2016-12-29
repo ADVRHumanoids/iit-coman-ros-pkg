@@ -21,8 +21,8 @@
 <!-- YARP PLUGINS for GAZEBO SIMULATION -->
   <xacro:if value="${GAZEBO_COMAN_USES_YARP}">
        <xacro:include filename="$(find coman_urdf)/urdf/gazebo/yarp_control.gazebo.xacro" />
-       <xacro:include filename="$(find coman_urdf)/urdf/gazebo/force_torque.gazebo.xacro" />
   </xacro:if>
+  <xacro:include filename="$(find coman_urdf)/urdf/gazebo/force_torque.gazebo.xacro" />
 
   <xacro:include filename="$(find coman_urdf)/urdf/gazebo/coman_materials.gazebo.xacro" />
   <origin xyz="0.0 0.0 0.521" rpy="0 0 0" />

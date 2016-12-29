@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<robot name="/home/enrico/walkman/drc/IITComanRosPkg/coman_urdf/meshes/simple/Waist.STL">
+<robot name="/home/enrico/robotology-superbuild/robots/IITComanRosPkg/coman_urdf/meshes/simple/Waist.STL">
   <link name="0.03937_0.03937_0.03937">
     <collision>
       <origin xyz="-0.033316845 1.75687099931e-05 0.0599415" rpy="3.14124868221 -0.455217322454 0.00148505249957"/>
