@@ -116,7 +116,7 @@
     <provideFeedback>true</provideFeedback>
    </gazebo>
     <xacro:unless value="${GAZEBO_COMAN_USES_SOFTHANDS}">
-      <gazebo reference="r_handj">
+      <gazebo reference="r_handj2">
         <implicitSpringDamper>1</implicitSpringDamper>
         <provideFeedback>true</provideFeedback>
       </gazebo>
@@ -154,7 +154,7 @@
     <provideFeedback>true</provideFeedback>
    </gazebo>
     <xacro:unless value="${GAZEBO_COMAN_USES_SOFTHANDS}">
-      <gazebo reference="l_handj">
+      <gazebo reference="l_handj2">
         <implicitSpringDamper>1</implicitSpringDamper>
         <provideFeedback>true</provideFeedback>
       </gazebo>

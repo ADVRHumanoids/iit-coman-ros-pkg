@@ -18,13 +18,13 @@
 <xacro:unless value="${GAZEBO_COMAN_USES_SOFTHANDS}">
 <rtt-gazebo reference="left_hand">
        <controller type="JointPositionCtrl">
-              <gains reference="l_handj" P="10." D="0.01" I="0."/>
+              <gains reference="l_handj2" P="10." D="0.01" I="0."/>
        </controller>
 </rtt-gazebo>
 
 <rtt-gazebo reference="right_hand">
        <controller type="JointPositionCtrl">
-              <gains reference="r_handj" P="10." D="0.01" I="0."/>
+              <gains reference="r_handj2" P="10." D="0.01" I="0."/>
        </controller>
 </rtt-gazebo>
 </xacro:unless>
