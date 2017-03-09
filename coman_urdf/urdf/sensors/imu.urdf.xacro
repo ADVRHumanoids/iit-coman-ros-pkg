@@ -2,6 +2,7 @@
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
 <xacro:property name="PI" value="3.14159265359" />
+<xacro:property name="PI_2" value="1.57079632679" />
 
 <link name="imu_link">
     <inertial>
@@ -21,7 +22,7 @@
     <parent link="Waist"/>
     <child link="imu_link"/>
     <!--origin xyz="-0.072 -0.0068 0.044" rpy="0 ${PI} 0"/-->
-    <origin xyz="-0.072 -0.0068 0.044" rpy="0 0 0"/>
+    <origin xyz="-0.072 -0.0068 0.044" rpy="${PI_2} 0 ${PI_2}"/>
 </joint>
 
 </robot>
