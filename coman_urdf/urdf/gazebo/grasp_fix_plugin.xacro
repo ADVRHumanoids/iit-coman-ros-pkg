@@ -9,7 +9,7 @@
 			<gripper_link>RWrMot3</gripper_link>
 			<gripper_link>RSoftHandFingers</gripper_link>
 		</arm>
-                <arm>
+              <arm>
 			<arm_name>LArm</arm_name>
 			<palm_link>LWrMot2</palm_link>
 			<gripper_link>LWrMot3</gripper_link>

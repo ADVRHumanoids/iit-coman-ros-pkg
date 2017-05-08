@@ -18,9 +18,9 @@
 	<xacro:include filename="$(find coman_urdf)/urdf/gazebo/openni_kinect.gazebo.xacro" />
   </xacro:if>
 
-  <xacro:unless value="${GAZEBO_COMAN_USES_SOFTHANDS}">
+  <xacro:if value="${GAZEBO_COMAN_USES_ROS_GRASPFIX}">
 	<xacro:include filename="$(find coman_urdf)/urdf/gazebo/grasp_fix_plugin.xacro" />
-  </xacro:unless>
+  </xacro:if>
 
 <!-- YARP PLUGINS for GAZEBO SIMULATION -->
   <xacro:if value="${GAZEBO_COMAN_USES_YARP}">

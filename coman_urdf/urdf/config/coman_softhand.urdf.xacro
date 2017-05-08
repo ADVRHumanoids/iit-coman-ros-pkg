@@ -56,4 +56,20 @@
 -->
 <xacro:property name="GAZEBO_COMAN_USES_XTION" value="false" />
 
+<!--
+####################################################
+##
+##  USE GRASPFIX (IN ROS)
+####################################################
+-->
+<xacro:property name="GAZEBO_COMAN_USES_ROS_GRASPFIX" value="false" />
+
+<!--
+####################################################
+##
+##  USE ROS for IMU
+####################################################
+-->
+<xacro:property name="GAZEBO_COMAN_USES_ROS_IMU" value="false" />
+
 </robot>

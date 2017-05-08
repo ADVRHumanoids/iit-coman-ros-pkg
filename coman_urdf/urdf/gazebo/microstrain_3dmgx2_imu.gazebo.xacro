@@ -10,7 +10,22 @@
   This file groups files to use COMAN in GAZEBO
   
   -->
+<xacro:if value="${GAZEBO_COMAN_USES_ROS_IMU}">
+<gazebo>
+       <plugin name="imu_plugin" filename="libgazebo_ros_imu.so"> <!-- For now we use this...to change with the commented one in future-->
+       <!--plugin name="imu_plugin" filename="libgazebo_ros_imu_sensor.so"--> 
+              <alwaysOn>true</alwaysOn> 
+              <bodyName>imu_link</bodyName>
+              <frameName>imu_link</frameName> 
+              <topicName>imu</topicName> 
+              <serviceName>imu_service</serviceName> 
+              <gaussianNoise>0.0</gaussianNoise> 
+              <updateRate>20.0</updateRate> 
+       </plugin>
+</gazebo>
+</xacro:if>
 
+<xacro:unless value="${GAZEBO_COMAN_USES_ROS_IMU}">
     <gazebo reference="imu_link">
         <sensor name="imu_sensor" type="imu">
          <always_on>1</always_on>
@@ -43,5 +58,6 @@
 </xacro:if>
         </sensor>
        </gazebo>
+</xacro:unless>
 
 </robot>

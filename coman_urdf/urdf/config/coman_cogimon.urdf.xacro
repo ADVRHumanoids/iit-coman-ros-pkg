@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://ros.org/wiki/xacro" name="COMAN">
 
-<xacro:property name="model_name" value="IIT Coman" />
-<xacro:property name="model_version" value="1.0" />
+<xacro:property name="model_name" value="IIT Coman COGIMON" />
+<xacro:property name="model_version" value="0.1" />
 
 <!--
 ####################################################
@@ -16,7 +16,6 @@
 
 <xacro:property name="GAZEBO_COMAN_USES_ROUND_FEET" value="false" />
 
-
 <!--
 ####################################################
 ##
@@ -27,7 +26,7 @@
 --> 
 
 <xacro:property name="GAZEBO_COMAN_USES_FOREARMS" value="true" />
-<xacro:property name="GAZEBO_COMAN_USES_SOFTHANDS" value="false" />
+<xacro:property name="GAZEBO_COMAN_USES_SOFTHANDS" value="true" />
 
 <!--
 ####################################################
@@ -36,7 +35,7 @@
 ####################################################
 -->
 
-<xacro:property name="GAZEBO_COMAN_USES_YARP" value="true" />
+<xacro:property name="GAZEBO_COMAN_USES_YARP" value="false" />
 
 <!--
 ####################################################
@@ -71,6 +70,6 @@
 ##  USE ROS for IMU
 ####################################################
 -->
-<xacro:property name="GAZEBO_COMAN_USES_ROS_IMU" value="false" />
+<xacro:property name="GAZEBO_COMAN_USES_ROS_IMU" value="true" />
 
 </robot>
