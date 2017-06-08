@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://ros.org/wiki/xacro" name="COMAN">
 
-<xacro:property name="model_name" value="IIT Coman COGIMON" />
+<xacro:property name="model_name" value="IIT Coman Xtion" />
 <xacro:property name="model_version" value="0.1" />
 
 <!--
@@ -26,7 +26,7 @@
 --> 
 
 <xacro:property name="GAZEBO_COMAN_USES_FOREARMS" value="true" />
-<xacro:property name="GAZEBO_COMAN_USES_SOFTHANDS" value="false" />
+<xacro:property name="GAZEBO_COMAN_USES_SOFTHANDS" value="true" />
 
 <!--
 ####################################################
@@ -54,7 +54,7 @@
 # 1/2 (true/false) 
 #
 -->
-<xacro:property name="GAZEBO_COMAN_USES_XTION" value="false" />
+<xacro:property name="GAZEBO_COMAN_USES_XTION" value="true" />
 
 <!--
 ####################################################

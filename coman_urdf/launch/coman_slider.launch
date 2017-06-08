@@ -2,8 +2,8 @@
      <arg name="gui" default="true" />
 
      <!-- send the coman robot XML to param server -->
-     <param name="robot_description" command="$(find xacro)/xacro.py '$(find coman_urdf)/urdf/coman_hands.urdf'" />
-     <param name="robot_description_semantic" textfile="$(find coman_srdf)/srdf/coman_hands.srdf" />   
+     <param name="robot_description" command="$(find xacro)/xacro.py '$(find coman_urdf)/urdf/coman.urdf'" />
+     <param name="robot_description_semantic" textfile="$(find coman_srdf)/srdf/coman.srdf" />   
      <param name="use_gui" value="$(arg gui)"/>
      <param name="rate" value="50.0"/>
      
