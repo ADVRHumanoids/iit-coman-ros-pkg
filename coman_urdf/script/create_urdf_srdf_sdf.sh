@@ -99,6 +99,11 @@ EOF
                 gzsdf print ${robot_name}_robot.urdf > ${robot_name}.sdf
             fi
             
+	    if [ ${robot_name} = ${model_filename} ];
+	    then
+		printf "${GREEN} changing ${model_filename}_robot.urdf name to _${model_filename}_robot.urdf\n"
+		rosrun xacro xacro.py ${robot_name}_robot.urdf.xacro > _${model_filename}_robot.urdf		
+	    fi
             rm ${robot_name}_robot.urdf
             printf "${GREEN}...sdf correctly created!${NC}\n"
             echo
