@@ -36,7 +36,16 @@
 ####################################################
 -->
 
-<xacro:property name="GAZEBO_COMAN_USES_YARP" value="true" />
+<xacro:property name="GAZEBO_COMAN_USES_YARP" value="false" />
+
+<!--
+####################################################
+##
+##  USE XBOT
+####################################################
+-->
+
+<xacro:property name="GAZEBO_COMAN_USES_XBOT" value="true" />
 
 <!--
 ####################################################

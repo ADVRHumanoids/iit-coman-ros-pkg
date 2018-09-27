@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+<gazebo>
+    <plugin name="xbot_plugin_handler" filename="libGazeboXBotPlugin.so">
+       <path_to_config_file></path_to_config_file>
+    </plugin>
+</gazebo>
+
+</robot>
