@@ -48,6 +48,13 @@ The coordinate frame called base_link is rigidly attached to the robot root body
     <origin xyz="0 0 0" rpy="0 0 0" />
 </joint>
 
+  <link name="world"/>
+  <joint name="reference" type="floating">
+    <parent link="world"/>
+    <child link="base_link"/>
+  </joint>
+
+
 <!-- ********************TORSO******************** -->
 
 <!-- first real link of the robot, inertial reference frame -->
