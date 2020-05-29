@@ -11,11 +11,11 @@ if __name__ == '__main__':
   if len(sys.argv) < 3:
     print 'Error: correct usage is get_model_params file_name property_name'
   else:
-    robot_config_file = open(sys.argv[1])
-    soup_robot_config = BeautifulSoup(robot_config_file,"xml")
+    bigman_config_file = open(sys.argv[1])
+    soup_bigman_config = BeautifulSoup(bigman_config_file,"xml")
 
     try:
-      config_el = soup_robot_config.find(attrs={"name": sys.argv[2]})
+      config_el = soup_bigman_config.find(attrs={"name": sys.argv[2]})
       if config_el and config_el.has_attr('value'):
         print config_el['value']
 

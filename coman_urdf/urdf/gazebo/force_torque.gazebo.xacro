@@ -11,7 +11,7 @@ and we will add a revolute joint between foot_flange and sensor and a fixed join
 
 	<xacro:if value="${GAZEBO_COMAN_USES_FOREARMS}">
               <gazebo reference="RForearmPlate">
-	              <sensor type="force_torque" name="right_arm">
+	              <sensor type="force_torque" name="right_arm_ft">
 		              <force_torque>
                                    <frame>sensor</frame>
                                    <measure_direction>child_to_parent</measure_direction>
@@ -29,7 +29,7 @@ and we will add a revolute joint between foot_flange and sensor and a fixed join
 	       </gazebo>
 
               <gazebo reference="LForearmPlate">
-	              <sensor type="force_torque" name="left_arm">
+	              <sensor type="force_torque" name="left_arm_ft">
 		              <force_torque>
                                    <frame>sensor</frame>
                                    <measure_direction>child_to_parent</measure_direction>
@@ -49,7 +49,7 @@ and we will add a revolute joint between foot_flange and sensor and a fixed join
 
 
        <gazebo reference="LAnkSag">
-		<sensor type="force_torque" name="left_leg">
+		<sensor type="force_torque" name="left_leg_ft">
                      <force_torque>
                        <frame>sensor</frame>
                        <measure_direction>child_to_parent</measure_direction>     
@@ -67,7 +67,7 @@ and we will add a revolute joint between foot_flange and sensor and a fixed join
 	</gazebo>
 
 	<gazebo reference="RAnkSag">
-		<sensor type="force_torque" name="right_leg">
+		<sensor type="force_torque" name="right_leg_ft">
                      <force_torque>
                        <frame>sensor</frame>
                        <measure_direction>child_to_parent</measure_direction>

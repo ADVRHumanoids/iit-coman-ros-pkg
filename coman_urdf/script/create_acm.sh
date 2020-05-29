@@ -11,7 +11,7 @@ if [ "$#" -lt 1 ]; then
        printf "${RED}No robot name argument passed!${NC}" 
        echo 
        echo "Try something like:"
-       echo "./create_urdf_srdf_sdf.sh coman"
+       echo "./create_urdf_srdf_sdf.sh cogimon"
        exit
 fi
 
