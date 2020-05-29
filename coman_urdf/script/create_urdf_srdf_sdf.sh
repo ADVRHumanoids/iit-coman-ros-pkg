@@ -79,7 +79,7 @@ EOF
 
 
             printf "${PURPLE}Creating bare urdf of ${robot_name}.urdf.xacro ...${NC}\n"
-            rosrun xacro xacro.py ${robot_name}.urdf.xacro > ${model_filename}.urdf
+            rosrun xacro xacro --check-order ${robot_name}.urdf.xacro > ${model_filename}.urdf
             printf "${GREEN}...${model_filename}.urdf correctly created!${NC}\n"
             echo
             echo
@@ -91,8 +91,8 @@ EOF
             echo
 
             printf "${PURPLE}Creating sdf of ${robot_name}_robot.urdf.xacro${NC}\n"
-            rosrun xacro xacro.py ${robot_name}_robot.urdf.xacro > ${model_filename}_robot.urdf
-            rosrun xacro xacro.py ${robot_name}_robot.urdf.xacro > ${robot_name}_robot.urdf
+            rosrun xacro xacro --check-order ${robot_name}_robot.urdf.xacro > ${model_filename}_robot.urdf
+            rosrun xacro xacro --check-order ${robot_name}_robot.urdf.xacro > ${robot_name}_robot.urdf
             if [ $IS_GZSDF_GAZEBO4 == true ]; then
             	gz sdf --print ${robot_name}_robot.urdf > ${robot_name}.sdf
 	        else
@@ -102,7 +102,7 @@ EOF
 	    if [ ${robot_name} = ${model_filename} ];
 	    then
 		printf "${GREEN} changing ${model_filename}_robot.urdf name to _${model_filename}_robot.urdf\n"
-		rosrun xacro xacro.py ${robot_name}_robot.urdf.xacro > _${model_filename}_robot.urdf		
+		rosrun xacro xacro --check-order ${robot_name}_robot.urdf.xacro > _${model_filename}_robot.urdf		
 	    fi
             rm ${robot_name}_robot.urdf
             printf "${GREEN}...sdf correctly created!${NC}\n"
@@ -116,7 +116,7 @@ EOF
 
             printf "${PURPLE}Creating srdf from ${robot_name}.srdf.xacro${NC}\n"
             cd ../../${robot_name}_srdf/srdf
-            rosrun xacro xacro.py ${robot_name}.srdf.xacro > ${model_filename}.srdf 
+            rosrun xacro xacro --check-order ${robot_name}.srdf.xacro > ${model_filename}.srdf 
             printf "${GREEN}...created ${model_filename}.srdf!${NC}\n"
             echo
             echo
@@ -141,7 +141,6 @@ EOF
             echo
             echo
             printf "${GREEN}Complete! Enjoy ${model_name} ver ${model_version} in GAZEBO!${NC}\n"
-            echo "If the model requires it, remember to check ../../${robot_name}_gazebo/${model_filename}/conf/"
             echo
             echo
         fi
@@ -165,7 +164,6 @@ EOF
     rm ${robot_name}_config.urdf.xacro
     mkdir -p ../../${robot_name}_gazebo/database/${robot_name}_urdf/
     cp -r ../meshes/ ../../${robot_name}_gazebo/database/${robot_name}_urdf/
-    cp -r ../../${robot_name}_gazebo/sdf/conf ../../${robot_name}_gazebo/database/${robot_name}_urdf
 else
     echo "Error: could not find config folder in the urdf path"
 fi

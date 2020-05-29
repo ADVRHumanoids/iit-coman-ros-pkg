@@ -1,0 +1,35 @@
+XBotCore:
+  config_path: "robots/iit-coman-ros-pkg/coman_config/coman.yaml"
+
+XBotInterface:
+  urdf_path: "robots/iit-coman-ros-pkg/coman_urdf/urdf/coman.urdf"
+  srdf_path: "robots/iit-coman-ros-pkg/coman_srdf/srdf/coman.srdf"
+  joint_map_path: "robots/iit-coman-ros-pkg/coman_config/coman_joint_map.yaml"
+
+RobotInterface:
+  framework_name: "ROS"
+
+ModelInterface:
+  model_type: "RBDL"
+  is_model_floating_base: "true"
+  
+MasterCommunicationInterface:
+  framework_name: "ROS"
+
+XBotRTPlugins:
+  plugins: ["HomingExample"] 
+  io_plugins: []
+  
+NRTPlugins:
+  plugins: [] 
+  
+TransmissionPlugins:
+  plugins: [] 
+  
+WebServer:
+  enable: "false"
+  address: "127.0.0.1"
+  port: "8081"
+
+SimulationOptions:
+  verbose_mode: "true"    
