@@ -180,7 +180,7 @@
   </group_state-->
 	</xacro:if>
 
-    <xacro:include filename="$(find coman_urdf)/urdf/gazebo/rtt_gazebo.gazebo.xacro" />   
+    <!--xacro:include filename="$(find coman_urdf)/urdf/gazebo/rtt_gazebo.gazebo.xacro" /-->   
 
 
 
