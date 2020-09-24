@@ -112,7 +112,7 @@
     <joint name="LKneeSag" value="0.8076545504729606"/>
     <joint name="LAnkSag" value="-0.4695127574050335"/>
     <joint name="LAnkLat" value="0.0012525979207698662"/>
-  </group_state>
+  </group_state><!-- VSAM HOMING -->
 
 
 <!--group_state group="chains" name="home">
