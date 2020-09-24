@@ -65,7 +65,7 @@
 # 1/2 (true/false) 
 #
 -->
-<xacro:property name="GAZEBO_COMAN_USES_XTION" value="false" />
+<xacro:property name="GAZEBO_COMAN_USES_XTION" value="true" />
 
 <!--
 ####################################################
