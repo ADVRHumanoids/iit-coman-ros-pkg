@@ -110,6 +110,13 @@
   <material>Gazebo/DarkGrey</material>
 </gazebo>
 
-
+<xacro:if value="${GAZEBO_COMAN_USES_XTION}">
+  <gazebo reference="Xtion_body">
+    <material>Gazebo/DarkGrey</material>
+  </gazebo>
+  <gazebo reference="Xtion_cam_body">
+    <material>Gazebo/Grey</material>
+  </gazebo>
+</xacro:if>
 
 </robot>
