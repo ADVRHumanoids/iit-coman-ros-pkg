@@ -27,11 +27,6 @@
        <xacro:include filename="$(find coman_urdf)/urdf/gazebo/yarp_control.gazebo.xacro" />
   </xacro:if>
 
-
-  <xacro:if value="${GAZEBO_COMAN_USES_XBOTCORE}" >
-  	<xacro:include filename="$(find cogimon_urdf)/urdf/gazebo/xbot_control.gazebo.xacro" />
-  </xacro:if>
-
   <xacro:include filename="$(find coman_urdf)/urdf/gazebo/force_torque.gazebo.xacro" />
   
   <!-- XBOT PLUGINS for GAZEBO SIMULATION -->

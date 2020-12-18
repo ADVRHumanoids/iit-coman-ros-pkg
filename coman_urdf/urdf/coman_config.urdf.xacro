@@ -45,7 +45,7 @@
 ####################################################
 -->
 
-<xacro:property name="GAZEBO_COMAN_USES_XBOTCORE" value="true" />
+<xacro:property name="GAZEBO_COMAN_USES_XBOT" value="true" />
 
 
 <!--

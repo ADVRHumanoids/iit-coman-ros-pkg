@@ -80,7 +80,7 @@
 </xacro:unless>
     </group>
 
-	<xacro:if value="${GAZEBO_COMAN_USES_XBOTCORE}">
+	<xacro:if value="${GAZEBO_COMAN_USES_XBOT}">
 		<group_state group="chains" name="home">
         <joint name="WaistLat" value="0.0"/>
         <joint name="WaistSag" value="0.0"/>
