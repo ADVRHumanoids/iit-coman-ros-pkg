@@ -3,7 +3,55 @@
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
 <gazebo>
-    <plugin name="xbot_plugin_handler" filename="libGazeboXBotPlugin.so"/>
+
+    <plugin name="xbot2_link_state_sensor" filename="libxbot2_gz_link_state_sensor.so">
+        <links>
+            <link name="base_link"/>
+        </links>
+    </plugin>
+    
+    <plugin name="xbot2_gz_ft_server" filename="libxbot2_gz_ft_server.so"/>
+    
+    <plugin name="xbot2_gz_imu_server" filename="libxbot2_gz_imu_server.so"/>
+    
+    <plugin name="xbot2_gz_joint_server" filename="libxbot2_gz_joint_server.so">
+        <pid>
+            <gain name="small_mot"  p="100"  d="5"/>
+            <gain name="med_mot"  p="500"  d="10"/>
+            <gain name="bigl_mot"  p="2000"  d="20"/>
+
+            <pid name="WaistLat" profile="bigl_mot"/>
+            <pid name="WaistSag" profile="bigl_mot"/>
+            <pid name="WaistYaw" profile="bigl_mot"/>
+            <pid name="RHipSag" profile="bigl_mot"/>
+            <pid name="RHipLat" profile="bigl_mot"/>
+            <pid name="RHipYaw" profile="bigl_mot"/>
+            <pid name="RKneeSag" profile="bigl_mot"/>
+            <pid name="RAnkLat" profile="med_mot"/>
+            <pid name="RAnkSag" profile="med_mot"/>
+            <pid name="LHipSag" profile="bigl_mot"/>
+            <pid name="LHipLat" profile="bigl_mot"/>
+            <pid name="LHipYaw" profile="bigl_mot"/>
+            <pid name="LKneeSag" profile="bigl_mot"/>
+            <pid name="LAnkLat" profile="med_mot"/>
+            <pid name="LAnkSag" profile="med_mot"/>
+            <pid name="RShSag" profile="med_mot"/>
+            <pid name="RShLat" profile="med_mot"/>
+            <pid name="RShYaw" profile="med_mot"/>
+            <pid name="RElbj" profile="med_mot"/>
+            <pid name="LShSag" profile="med_mot"/>
+            <pid name="LShLat" profile="med_mot"/>
+            <pid name="LShYaw" profile="med_mot"/>
+            <pid name="LElbj" profile="med_mot"/>
+            <pid name="LForearmPlate" profile="small_motor"/>
+            <pid name="LWrj1" profile="small_motor"/>
+            <pid name="LWrj2" profile="small_motor"/>
+            <pid name="RForearmPlate" profile="small_motor"/>
+            <pid name="RWrj1" profile="small_motor"/>
+            <pid name="RWrj2" profile="small_motor"/>  
+        </pid>
+    </plugin>
+
 </gazebo>
 
 </robot>

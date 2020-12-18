@@ -1,0 +1,47 @@
+XBotInterface:
+  urdf_path: $(rospack find coman_urdf)/urdf/coman.urdf
+  srdf_path: $(rospack find coman_srdf)/srdf/coman.srdf
+
+ModelInterface:
+  model_type: "RBDL"
+  is_model_floating_base: "true"
+
+
+## XBot2-related configuration
+
+# hal
+xbotcore_device_configs:
+  sim: $(rospack find coman_config)/hal/coman_sim.yaml
+  dummy: $(rospack find coman_config)/hal/coman_dummy.yaml
+
+
+# threads
+xbotcore_threads:
+    rt_main:  {sched: fifo , prio: 60, period: 0.001, core_id: 2}
+    nrt_main: {sched: other, prio: 0 , period: 0.005}
+
+
+# plugins
+xbotcore_plugins:
+
+    homing:
+        thread: rt_main
+        type: homing_example
+
+    ros_io: {thread: nrt_main, type: ros_io}
+
+    ros_control: {thread: nrt_main, type: ros_control}
+    
+
+# global parameters
+xbotcore_param:
+    /jm/tx_filter_autostart: {value: true, type: bool}
+    /jm/tx_filter_cutoff: {value: 2.0, type: double}
+    /jm/enable_safety: {value: false, type: bool}
+
+
+
+
+
+
+
