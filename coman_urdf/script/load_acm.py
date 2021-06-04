@@ -57,6 +57,6 @@ if __name__ == '__main__':
         new_srdf = srdf.toxml()
 
     if args.output:
-        file(args.srdf_file.name, 'w').write(new_srdf)
+        open(args.srdf_file.name, 'w').write(new_srdf)
     else:
         print(new_srdf)
