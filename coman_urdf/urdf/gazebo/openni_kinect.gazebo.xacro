@@ -2,12 +2,12 @@
 
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
-<gazebo reference="gaze">
+<gazebo reference="Xtion_cam_body">
         <sensor name="openni_camera_camera" type="depth">
           <always_on>1</always_on>
           <visualize>1</visualize>
 
-          <camera name="__default__">
+	  <camera name="__default__">
             <horizontal_fov>1.047</horizontal_fov>
             <image>
               <width>640</width>

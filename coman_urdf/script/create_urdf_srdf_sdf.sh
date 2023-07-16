@@ -79,7 +79,7 @@ EOF
 
 
             printf "${PURPLE}Creating bare urdf of ${robot_name}.urdf.xacro ...${NC}\n"
-            rosrun xacro xacro --check-order ${robot_name}.urdf.xacro > ${model_filename}.urdf
+            rosrun xacro xacro ${robot_name}.urdf.xacro > ${model_filename}.urdf
             printf "${GREEN}...${model_filename}.urdf correctly created!${NC}\n"
             echo
             echo
@@ -91,8 +91,8 @@ EOF
             echo
 
             printf "${PURPLE}Creating sdf of ${robot_name}_robot.urdf.xacro${NC}\n"
-            rosrun xacro xacro --check-order ${robot_name}_robot.urdf.xacro > ${model_filename}_robot.urdf
-            rosrun xacro xacro --check-order ${robot_name}_robot.urdf.xacro > ${robot_name}_robot.urdf
+            rosrun xacro xacro ${robot_name}_robot.urdf.xacro > ${model_filename}_robot.urdf
+            rosrun xacro xacro ${robot_name}_robot.urdf.xacro > ${robot_name}_robot.urdf
             if [ $IS_GZSDF_GAZEBO4 == true ]; then
             	gz sdf --print ${robot_name}_robot.urdf > ${robot_name}.sdf
 	        else
@@ -102,7 +102,7 @@ EOF
 	    if [ ${robot_name} = ${model_filename} ];
 	    then
 		printf "${GREEN} changing ${model_filename}_robot.urdf name to _${model_filename}_robot.urdf\n"
-		rosrun xacro xacro --check-order ${robot_name}_robot.urdf.xacro > _${model_filename}_robot.urdf		
+		rosrun xacro xacro ${robot_name}_robot.urdf.xacro > _${model_filename}_robot.urdf		
 	    fi
             rm ${robot_name}_robot.urdf
             printf "${GREEN}...sdf correctly created!${NC}\n"
@@ -116,7 +116,7 @@ EOF
 
             printf "${PURPLE}Creating srdf from ${robot_name}.srdf.xacro${NC}\n"
             cd ../../${robot_name}_srdf/srdf
-            rosrun xacro xacro --check-order ${robot_name}.srdf.xacro > ${model_filename}.srdf 
+            rosrun xacro xacro ${robot_name}.srdf.xacro > ${model_filename}.srdf 
             printf "${GREEN}...created ${model_filename}.srdf!${NC}\n"
             echo
             echo

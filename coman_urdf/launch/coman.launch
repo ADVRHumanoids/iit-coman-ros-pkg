@@ -1,8 +1,7 @@
 <launch>
 
      <!-- send the coman robot XML to param server -->
-     <!--param name="robot_description" command="$(find xacro)/xacro.py '$(find coman_urdf)/urdf/coman.urdf.xacro'" /-->
-     <param name="robot_description" command="$(find xacro)/xacro.py '$(find coman_urdf)/urdf/coman.urdf'" />
+     <param name="robot_description" command="$(find xacro)/xacro '$(find coman_urdf)/urdf/coman.urdf.xacro'" />
      
      <!-- send the coman robot XML to param server -->
     <param name="robot_description_semantic" textfile="$(find coman_srdf)/srdf/coman.srdf" />   

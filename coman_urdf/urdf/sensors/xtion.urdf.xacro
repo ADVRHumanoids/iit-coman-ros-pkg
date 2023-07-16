@@ -44,6 +44,8 @@
     </collision>
 </link>
 
+<link name="camera_link"/>
+
 <!-- JOINTS -->
 <joint name="Xtion_body_joint" type="fixed">
 	<parent link="DWYTorso"/>
@@ -67,11 +69,11 @@
 	<origin xyz="0.015 0 0.022" rpy="0 0 0" />
 </joint>
 
-<!--joint name="camera_link_joint" type="fixed">
-    		<parent link="gaze"/>
-    		<child link="camera_link"/-->
-    		<!--origin xyz="0.004 0.06 0.019" rpy="0.00 0.003 0.0" /--> <!--Real xtion pro live-->
-        <!--origin xyz="0.0 0.0 0.0" rpy="-1.57 0.0 -1.57" /--> <!--Simulated xtion pro live-->
-  	<!--/joint-->
+<joint name="camera_link_joint" type="fixed">
+	<parent link="Xtion_cam_body"/>
+	<child link="camera_link"/>
+	<!--origin xyz="0.004 0.06 0.019" rpy="0.00 0.003 0.0" /--> <!--Real xtion pro live-->
+	<origin xyz="0.0 0.0 0.0" rpy="-1.57 0.0 -1.57" /> <!--Simulated xtion pro live-->
+</joint>
 
 </robot>

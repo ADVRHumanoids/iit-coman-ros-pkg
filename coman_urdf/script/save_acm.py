@@ -51,6 +51,6 @@ if __name__ == '__main__':
     pretty_print = lambda data: '\n'.join([line for line in minidom.parseString(srdf).toprettyxml(indent=' '*2).split('\n') if line.strip()])
     srdf = pretty_print(srdf)
     if args.output:
-        file(acm_file, 'w').write(srdf)
+        open(acm_file, 'w').write(srdf)
     else:
         print(srdf)
